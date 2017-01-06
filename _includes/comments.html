@@ -1,0 +1,23 @@
+{% capture commentid %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
+{% if site.data[commentid] %}
+<h2 id="comments">Commentaires</h2>
+<div class="comments">
+    {% for comment in site.data[commentid] %}
+        <div id="comment-{{ comment.id }}" class="comment{% if (comment.pingback) %}-pingback{% elsif (comment.author == '®om') %}-rom{% endif %}" />
+            <div class="comment-author">
+                {% if (comment.author-url) %}<a href="{{comment.author-url}}">{% endif %}
+                {{ comment.author }}
+                {% if (comment.author-url) %}</a>{% endif %}
+            </div>
+            <div class="comment-date">
+                <a href="#comment-{{ comment.id }}">
+                    {{ comment.date | date: "%-d %B %Y, %H:%M" }}
+                </a>
+            </div>
+            <div class="comment-contents">
+                {{ comment.contents | liquify | markdownify }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}

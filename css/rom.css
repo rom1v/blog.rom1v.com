@@ -26,3 +26,40 @@ img {
 .center {
     text-align: center;
 }
+
+.comments {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
+.comment-contents {
+    margin-top: 1em;
+}
+
+.comment {
+    margin-top: 1em;
+    padding: 1em;
+    background: #f8f8f8;
+}
+
+.comment-rom {
+    margin-top: 1em;
+    padding: 1em;
+    background: #e8e8e8;
+}
+
+.comment-pingback {
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-date a {
+    font-size: 0.7em;
+    font-style: italic;
+    color: #888;
+}
