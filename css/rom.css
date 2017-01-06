@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+code {
+    font-size: 75%;
+}
+
+pre {
+    font-size: .7rem;
+}
+
+img {
+    display: inline;
+    margin: 0;
+}
+
+.pagination-item {
+    border: medium none;
+}
+
+.index-post-title {
+  font-size: 1.2rem;
+}
+
+.center {
+    text-align: center;
+}
