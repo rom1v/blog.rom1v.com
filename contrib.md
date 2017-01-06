@@ -3,6 +3,7 @@ layout: page
 title: Contributions
 date: 2013-01-03 15:59:57+00:00
 order: 2
+permalink: contrib/
 ---
 
 Une liste des quelques contributions que j'ai effectuées sur des projets libres,

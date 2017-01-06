@@ -3,6 +3,7 @@ layout: page
 title: Index
 date: 2010-05-28 12:51:00+02:00
 order: 1
+permalink: index/
 ---
 
 ## Développement

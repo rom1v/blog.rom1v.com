@@ -3,6 +3,7 @@ layout: page
 title: À propos
 date: 2009-01-29 16:51:00+01:00
 order: 4
+permalink: about/
 ---
 
 Ceci est mon blog personnel.

@@ -3,6 +3,7 @@ layout: page
 title: CV
 date: 2016-11-25 21:25:00+01:00
 order: 3
+permalink: cv/
 ---
 
 
