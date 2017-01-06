@@ -1,0 +1,12 @@
+- id: 1
+  author: olivier
+  date: 2009-09-05 14:30:37+02:00
+  contents: |
+    Concernant le port 25 chez Orange, j'ai appelé un conseillé technique
+    d'Orange sur ce problème parce qu'aucun personnel présent dans les agences
+    n'était au courant de cela. Il semblerait que le filtrage soit présent
+    uniquement pour les livebox et que celà soit désactivable dans la
+    configuration avancée de la livebox. Donc pas de soucis apparemment si vous
+    avez une connexion orange mais sans livebox. N'ayant pas de livebox je n'ai
+    pas pu vérifier si on pouvait effectivement désactiver ce filtrage. Quoi
+    qu'il en soit, il y a bien un problème de ce côté là quand même

@@ -1,0 +1,89 @@
+- id: 1
+  author: Jopa
+  date: 2008-11-25 22:48:00+01:00
+  contents: |
+    C'est vrai que Synergy est vraiment un bon petit outil !!!
+
+    Il existe un petit utilitaire graphique qui simplifie encore plus la
+    configuration : Quicksynergy
+
+    <http://www.jopa.fr/index.php/2008/11/24/partage_clavier_souris_synergy/>
+
+- id: 2
+  author: compte0
+  date: 2008-11-26 09:57:00+01:00
+  contents: |
+    je connaissais synergy mais merci pour tout les options. Une petite
+    remarque, sur ton réseau local tu peux utiliser des noms de domaines en
+    .local, genre rom-desktop.local (avahi doit être activé et c'est moins
+    propore aue de modifier le hosts, mais plus simple).
+
+    Par contre chiffré le flux synergy par ssh , c'est cool quand tes postes
+    sont sur un unix-like, mais sur windows, comment on fait???
+
+- id: 3
+  author: Guizmo.7
+  date: 2008-11-26 17:21:00+01:00
+  contents: |
+    Merci pour cet outil, il a l'air très pratique !
+
+    (Juste une petite erreur : dans la partie démarrer automatiquement, il
+    manque un s à "echo 'synergy**s**' \>\> .gnomerc". Ce n'est pas grave du
+    tout mais ça empêche le copié-collé pour les feignants ...)
+- id: 4
+  author: ®om
+  date: 2008-11-26 18:51:00+01:00
+  contents: |
+    Pour chiffrer le flux par ssh, sous Windows tu as putty (mais je connais
+    peu, je sais que ça marche).
+
+    Merci Guizmo.7, j'ai rectifié (et j'ai rajouté `~/` devant `.gnomerc`
+    aussi).
+- id: 5
+  author: ResuX
+  author-url: http://www.resux.net
+  date: 2009-02-02 11:53:43+01:00
+  contents: |
+    Merci pour les explications, c'est terrible de passer d'un écran à un autre
+    comme ça. J'adore ;-)
+- id: 6
+  author: Stephb
+  author-url: http://sbarcik.free.fr
+  date: 2010-01-14 13:24:38+02:00
+  contents: |
+    Sympa l'article sur un logiciel qui m'est indispensable tous les jours au
+    bureau. Je l'utilise sur 3 ordi en simultané ;-)
+- id: 7
+  author: jean-luc
+  date: 2010-04-29 17:20:07+01:00
+  contents: |
+    Bonjour,
+
+    D'abord félicitation pour l'article. Je suis utilisateur de ce produit
+    vraiment formidable. Mon problème est le suivant :
+
+    j'ai 3 pc. Ils sont disposés comme suit :
+
+        Client2----Client1-----Serveur
+
+    Je me retrouve donc avec deux pc a gauche
+
+    le passage entre le serveur et le client 1 et vice et versa se fait sans
+    problème. Par contre, dès que je vais sur le client 2 je suis bloqué. Ma
+    souris et mon clavier reste obstinément attachés à ce client.
+
+    Seule solution : arrêter synergy sur ce client pour pouvoir retrouver la
+    main
+
+    Quelqu'un a -t-il une idée ?
+
+    Merci d'avance
+- id: 8
+  author: jean-luc
+  date: 2010-05-03 12:41:18+01:00
+  contents: |
+    Je me réponds à moi même. Cela peux toujours servir. en fait, dans le
+    paramétrage serveur, il faut deux lignes par machine, une pour définir la
+    machine qui est à droite, une autre pour la machine qui est à gauche et ceci
+    même si ces deux machines sont de chaque coté d'un client. (Ce qui était mon
+    cas).

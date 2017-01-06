@@ -1,0 +1,67 @@
+- id: 1
+  author: kurokame
+  date: 2010-03-30 06:24:05+01:00
+  contents: |
+    Hello ®om, cette guerre contre la gratuité afin d'instaurer le règne
+    marchand à chaque instant de nos existences n'est pas seulement l'apanage du
+    logiciel. Voici 2 liens qui exposent les fondements de cette guerre, par une
+    personne qui la vit ou vécu très probablement de l'intérieur, et les points
+    commun avec ce domaine ne sont pas si rare :
+
+    <http://www.article11.info/spip/spip.php?article745>
+
+    <http://www.article11.info/spip/spip.php?article748>
+
+    Bonnes lectures.
+- id: 2
+  author: Kasi
+  date: 2010-03-30 08:04:09+01:00
+  contents: |
+    Merci pour l'interview, elle est intéressante.
+
+    Concernant la balise audio, je ne sais pas si c'est un paramètre de réglage
+    ou un bug lié à WordPress mais on ne peut pas régler le volume, c'est on/off
+    :).
+- id: 3
+  author: antistress
+  author-url: http://libre-ouvert.toile-libre.org/
+  date: 2010-03-30 10:40:51+01:00
+  contents: |
+    Bienvenue du côté de la balise multimédia
+
+    J'ai fait le même choix que toi : mon blog est valide XHTML 1 sauf quand je
+    mets sauvagement la balise HTML5 mais les navigateurs ne sont pas gênés pour
+    autant, à titre transitoire c'est mieux que Flash de touts façons (j'ai pas
+    les compétences pour faire un thème htlm5 et ceux qui ont été créés ne me
+    plaisent pas)
+- id: 4
+  author: antistress
+  author-url: http://libre-ouvert.toile-libre.org/
+  date: 2010-03-30 10:41:40+01:00
+  contents: |
+    Kasi : Firefox 3.5 a un bug sur le lecteur audio corrigé dans la 3.6
+- id: 5
+  author: "Tweets that mention Partager n’est pas voler ! « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/trackback?utm_source=pingback&amp;utm_campaign=L1&amp;url=http://blog.rom1v.com/2010/03/partager-nest-pas-voler/
+  date: 2010-03-30 19:28:14+01:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by Hobbestigrou. Hobbestigrou said:
+    Partager n'est pas voler ! http://tinyurl.com/yb5sad3 [...]
+- id: 6
+  author: Jeremy
+  author-url: http://walken.unix-dream.org
+  date: 2010-04-03 17:28:39+01:00
+  contents: |
+    Kasi : clique sur le lecteur et utilise les flèches de ton clavier ( haut et
+    bas ).
+- id: 7
+  author: Bobink
+  date: 2010-08-21 23:08:57+02:00
+  contents: |
+    Pour garder la validité, tu peux utiliser la balise object pour inclure une
+    page html5 qui contiendra la fameuse balise audio
+
+    Il y a peut-être un moyen pour créer cette inclusion directement dans le
+    code sans passer par une page externe, mais je ne sais pas trop comment
+    faire. Si quelqu'un a une solution, je suis preneur.

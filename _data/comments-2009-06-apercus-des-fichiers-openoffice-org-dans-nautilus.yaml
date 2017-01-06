@@ -1,0 +1,222 @@
+
+- id: 1
+  author: M.i.B
+  date: 2009-06-30 22:49:22+02:00
+  contents: |
+    Merci pour cette astuce, mais tu peux aussi installer le paquet
+    [libgsf-bin](apt://libgsf-bin).
+
+    Tu auras aussi les aperçus pour les formats microsoft office.
+- id: 2
+  author: ®om
+  date: 2009-06-30 22:56:10+02:00
+  contents: |
+    OK, merci de la précision, je le rajoute dans le billet.
+
+    Il ne fait QUE les formats Microsoft Office ce paquet?
+
+    (a priori oui j'ai essayé avant de faire ce que j'ai décrit dans le billet,
+    ça fonctionnait pas pour les .odt)
+- id: 3
+  author: M.i.B
+  date: 2009-06-30 23:09:48+02:00
+  contents: |
+    ça fonctionne avec les .odt, .doc, .xls, .ods, je n'ai pas fais d'autre
+    comme modif sauf installer ce paquet.
+
+    Vois la doc de Nautilus
+
+    <http://doc.ubuntu-fr.org/nautilus#apercu_des_fichiers_openoffice.org>
+
+    au fait je ne suis pas un traite mais je recois toujours des documents dans
+    ces formats
+- id: 4
+  author: ®om
+  date: 2009-06-30 23:39:51+02:00
+  contents: |
+    Ah oui effectivement, **libgsf-bin** fonctionne, il faut redémarrer la
+    session (pas seulement tuer nautilus).
+
+    Par contre j'ai enregistré un .doc avec open-office, je n'ai pas l'aperçu.
+    Mais bon ça fonctionne bien avec .odt et .ods, c'est pas mal :)
+
+    Du coup, j'ai bien raccourci mon billet \\o/
+- id: 5
+  author: frafa
+  author-url: http://liveusb.info/
+  date: 2009-07-01 01:58:21+02:00
+  contents: |
+    Merci! adopté :) libgsf-bin
+- id: 6
+  author: Agathe
+  date: 2009-07-01 06:45:15+02:00
+  contents: |
+    il faut effacer les fichiers contenus dans home/MonNom/.thumbnails/fail
+
+    afin de régénérer les aperçus qui ont foiré.
+- id: 7
+  author: Pfff
+  author-url: http://www.webynux.net
+  date: 2009-07-01 07:30:35+02:00
+  contents: |
+    Merci pour l'astuce
+- id: 8
+  author: Ulhume
+  author-url: http://artisan.karma-lab.net
+  date: 2009-07-01 08:21:29+02:00
+  contents: |
+    Tu n'aurais pas du virer ta première version car libgsf ne fonctionne pas
+    correctement sur toutes les plateformes (sur la mienne - mandriva 2009.0 64
+    bits - rien à faire) C'est d'ailleurs pas un hasard s'il n'est pas installé
+    en standard j'imagine.
+
+    Pour comprendre la mécanique interne j'avais écris ce billet
+    (<http://artisan.karma-lab.net/node/1719>) justement sur les ODF.
+- id: 9
+  author: ®om
+  date: 2009-07-01 09:52:09+02:00
+  contents: |
+    @[**Ulhume**](#comment-8)
+
+    Je copie la première version ici pour en avoir une trace.
+
+    Si le paquet **libgsf-bin** n'existe pas dans votre distribution, vous
+    pouvez faire (l'équivalent de) :
+
+        wget http://dl.rom1v.com/ooo/ooo2{.schemas,-thumbnailer}
+        sudo install ooo2-thumbnailer /usr/bin
+        sudo cp ooo2.schemas /usr/share/gconf/schemas
+        gconftool-2 --install-schema-file /usr/share/gconf/schemas/ooo2.schemas
+
+    Il faut ensuite relancer **nautilus** :
+
+        nautilus -q
+
+    Si les icônes sur le bureau ne reviennent pas, faites :
+
+        nautilus -n &
+
+    C'est un peu moins complet que `libgsf-bin` cependant, il y a moins d'entrées
+    dans **gconf**.
+- id: 10
+  author: obrowny
+  date: 2009-07-01 10:47:31+02:00
+  contents: |
+    euh j'ai fait mon sudo apt-get install libgsf-bin et ça ne marche pas pour
+    moi. Même après reboot niet... j'ai remis le theme human au cas ou mais non.
+    Y a t'il un délai de génération des vignettes?
+- id: 11
+  author: ®om
+  date: 2009-07-01 11:14:49+02:00
+  contents: |
+    @[**obrowny**](#comment-10)
+
+    Essaye de virer ton répertoire `~/.thumbnails/fail`, voire `~/.thumbnails` si ça ne
+    fonctionne pas :
+
+        rm -rf ~/.thumbnails/fail
+        rm -rf ~/.thumbnails
+- id: 12
+  author: Bristow
+  date: 2009-07-01 11:35:48+02:00
+  contents: |
+    Nickel merci ;)
+- id: 13
+  author: obrowny
+  date: 2009-07-01 12:45:51+02:00
+  contents: |
+    non rien de plus en dégageant .thumbnails.
+- id: 14
+  author: korbé
+  date: 2009-07-01 13:37:19+02:00
+  contents: |
+    Sympa ça, mais pourquoi c'est pas installé de base?
+
+    Surtout pour 254kb.
+
+    Bon, on a l'aperçu des documents et des fichiers audio.
+
+    Mais quelqu'un sais comment on fait pour avoir l'aperçu des fichiers vidéo?
+- id: 15
+  author: zoom
+  date: 2009-07-01 14:04:23+02:00
+  contents: |
+    bonjour, sous jaunty libgsf-bin est déja installé mais par contre je n'ai
+    toujours pas d aperçu :(
+- id: 16
+  author: ®om
+  date: 2009-07-01 14:17:13+02:00
+  contents: |
+    @[**zoom**](#comment-15)
+
+    Il n'est pas installé par défaut en tout cas.
+
+    Lance `gconf-editor`, qu'y a-t-il dans
+    `/desktop/gnome/thumbnailers/application@vnd.oasis.opendocument.text/command`?
+- id: 17
+  author: zoom
+  date: 2009-07-01 20:41:13+02:00
+  contents: |
+    @[**®om**](#comment-16)
+
+    donc j'ai gsf-office-thumbnailer -i %i -o %o -s %s
+
+    et enable coché ...
+- id: 18
+  author: ®om
+  date: 2009-07-01 20:48:17+02:00
+  contents: |
+    @[**zoom**](#comment-17)
+
+    Et dans nautilus, Édition → Préférences → Aperçu, tout est bien configuré?
+- id: 19
+  author: zoom
+  date: 2009-07-01 22:16:45+02:00
+  contents: |
+    et oui ... merci de t interesser à mon cas :)
+- id: 20
+  author: zoom
+  date: 2009-07-01 22:20:20+02:00
+  contents: |
+    ~~~
+    $ gsf-office-thumbnailer -i Bureau/CV_rectif.odt -o test -s 10
+    calling convert 'test.OADZVU' +matte -thumbnail 10x10 png:'test'
+    error: Failed to execute child process "convert" (No such file or directory)
+    ~~~
+
+    j'ai testé ça aussi ...
+- id: 21
+  author: ®om
+  date: 2009-07-01 22:31:52+02:00
+  contents: |
+    @[**zoom**](#comment-20)
+
+    Installe `imagemagick`.
+
+    *J'ai rajouté aussi cette précision dans l'article (j'ai testé sans
+    `imagemagick` effectivement ça ne fonctionne pas)…*
+
+    ***EDIT :** `libgsf-bin` devrait dépendre d'`imagemagick` : [rapport de
+    bug](https://bugs.launchpad.net/ubuntu/+source/libgsf/+bug/147540).*
+- id: 22
+  author: zoom
+  date: 2009-07-03 00:37:26+02:00
+  contents: |
+    haaa parfait c'était bien ça j'ai installé imagemagick effacé le dossier
+    .thumbnails et ça fonctionne tres bien. Merci de m'avoir aidé et d'avoir pu
+    un peu échanger avec toi depuis le temps que je te lis ça fait plaisir :)
+- id: 23
+  author: melanie
+  date: 2010-05-09 01:44:51+01:00
+  contents: |
+    Bonjour,
+
+    Ce message est assez vieux, mais je me demandais si vous aviez d'aussi bons
+    résultats sous Lucid. Auparavant, j'avais des vignettes sur 90% de mes
+    powerpoints mais maintenant, j'ai plutôt des icones grisées de lesquelles on
+    peut à peine deviner quelle est la page principale. Pour les fichiers
+    openoffice, aucun problème.
+
+    merci
+
+    melanie

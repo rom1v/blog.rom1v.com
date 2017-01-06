@@ -1,0 +1,155 @@
+- id: 1
+  author: Kane
+  date: 2010-01-06 20:44:28+02:00
+  contents: |
+    Simplement génial !
+
+    Je vais bientôt me prendre un Ve-Hotech, histoire de dé-engooglé ma femme et
+    moi... C'est le genre de "truc" qui vont m'être vitaux.
+- id: 2
+  author: Vincent-Xavier JUMEL
+  date: 2010-01-06 20:59:57+02:00
+  contents: |
+    Pourquoi ne pas utiliser une solution documentée et standardisée telle que
+    sieve ?
+- id: 3
+  author: ®om
+  date: 2010-01-06 21:10:17+02:00
+  contents: |
+    > @[**Vincent-Xavier JUMEL**](#comment-2)
+    >
+    > Pourquoi ne pas utiliser une solution documentée et standardisée telle que
+    > sieve ?
+
+    En voulant mettre en place le filtrage de mails sur le serveur, j'hésitais
+    entre procmail et sieve, et ne connaissant ni l'un ni l'autre, il fallait en
+    choisir un.
+
+    Peux-tu me dire les avantages et les inconvénients de sieve par rapport à
+    procmail?
+- id: 4
+  author: Desidia
+  author-url: http://www.k1ka.be/desidia/
+  date: 2010-01-06 22:37:26+02:00
+  contents: |
+    Est-ce que ce serveur est chez un hébergeur, ou bien est-ce une machine
+    allumée chez toi en permanence ? Dans ce dernier cas, as-tu une IP fixe ?
+
+    Sinon, j'utilise aussi procmail pour le tri de mes mails, mais sur mon poste
+    de travail, sans passer par un MTA comme Postfix. Un bon vieux fetchmail
+    peut aussi être configuré pour transmettre les mails à cet utilitaire.
+
+    Mais il est vrai que j'utilise Mutt comme client mail, je ne pense pas que
+    cette méthode soit compatible avec un client plus moderne comme Thunderbird.
+
+    Maintenant, il serait honnête de préciser que la syntaxe des .procmailrc est
+    loin d'être limpide :-) Heureusement, il y a de nombreux tutos sur le web,
+    et la page de man procmailex, que tout le monde oublie.
+- id: 5
+  author: ®om
+  date: 2010-01-07 10:36:39+02:00
+  contents: |
+    Mon serveur est sur [une machine chez moi][blog], j'ai une IP fixe.
+
+    [blog]: {% post_url 2009-01-31-nouveau-blog-100-libre %}
+
+    Merci pour l'astuce `man procmailex`.
+- id: 6
+  author: billux
+  author-url: http://billux13.servhome.org
+  date: 2010-01-07 22:23:04+02:00
+  contents: |
+    > @[**®om**](#comment-4)
+    >
+    > En voulant mettre en place le filtrage de mails sur le serveur, j'hésitais
+    > entre procmail et sieve, et ne connaissant ni l'un ni l'autre, il fallait
+    > en choisir un. Peux-tu me dire les avantages et les inconvénients de sieve
+    > par rapport à procmail?
+
+    De mon point de vue, sieve est beaucoup plus simple que procmail. Il se
+    limite au trie de courrier et puis c'est tout. Du coup la syntaxe est
+    beaucoup plus simple, même intuitive je dirais (un exemple :
+    <http://www.systemx.fr/linux/cyrus/sieve/sieve.html>).
+
+    Du fait qu'il soit standardisé, plusieurs serveurs (dovecot, cyrus IMAP…)
+    implémente le protocole manageSieve qui permet d'éditer les scripts sieve
+    depuis ton client mail (au moins thunderbird et kmail le supporte). Toujours
+    pratique car je me rend compte que je suis toujours a ajouter/modifier mes
+    filtres.
+
+    Par contre, quand je l'ai mis en place, j'ai trouvé très peu de doc sur le
+    sujet (par rapport à procmail).
+- id: 7
+  author: Guyome
+  date: 2010-01-08 16:47:01+02:00
+  contents: |
+    Alors pour utiliser sieve il faut que ce soit dovecot (ou autre) qui délivre
+    les mails, ce qui demande quelques modification de la configuration du MTA.
+    Après les règles sont contenues dans un fichier dans le home des
+    utilisateurs.
+
+    Pour exemple (ubuntu/postfix/dovecot/pas d'utilisateur virtuel),
+
+    tu ajoutes
+
+        mailbox_command = /usr/lib/dovecot/deliver
+
+    dans `/etc/postfix/main.cf`
+
+    puis tu modifies /etc/dovecot/dovecot.conf comme suit
+
+        protocol lda {
+            mail_plugins = cmusieve
+        }
+
+    et il te restre à mettre les règle que tu veux dans `~/.dovecot.sieve`.
+
+    Ps: j'ai eu quelque pb de droits avec les logs
+- id: 8
+  author: jozzy-online
+  date: 2010-02-26 08:31:05+02:00
+  contents: |
+    beaucoup appris
+- id: 9
+  author: 'Filtrer les spams sur un serveur mail (SpamAssassin) &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2010/03/filtrer-les-spams-sur-un-serveur-mail-spamassassin/
+  date: 2010-03-25 23:27:02+01:00
+  pingback: true
+  contents: |
+    [...] et d’ajouter la règle suivante dans ~/.procmailrc (plus d’infos) :
+    [...]
+- id: 10
+  author: VIncent-Xavier JUMEL
+  date: 2010-07-27 23:25:18+02:00
+  contents: |
+    > @[**billux**](#comment-6)
+    >
+    > De mon point de vue, sieve est beaucoup plus simple que procmail. Il se
+    > limite au trie de courrier et puis c'est tout. Du coup la syntaxe est
+    > beaucoup plus simple, même intuitive je dirais (un exemple :
+    > <http://www.systemx.fr/linux/cyrus/sieve/sieve.html>). Du fait qu'il soit
+    > standardisé, plusieurs serveurs (dovecot, cyrus IMAP…) implémente le
+    > protocole manageSieve qui permet d'éditer les scripts sieve depuis ton
+    > client mail (au moins thunderbird et kmail le supporte). Toujours pratique
+    > car je me rend compte que je suis toujours a ajouter/modifier mes filtres.
+    > Par contre, quand je l'ai mis en place, j'ai trouvé très peu de doc sur le
+    > sujet (par rapport à procmail).
+
+    La lecture des RFC donne ce qu'il faut savoir pour créer des règles :)
+- id: 11
+  author: 'TUTO Anti-spam – SpamAssassin | Admin Reso'
+  author-url: http://www.adminreseau.fr/?p=555
+  date: 2011-01-06 18:13:11+01:00
+  pingback: true
+  contents: |
+    [...] et d’ajouter la règle suivante dans ~/.procmailrc (plus d’infos) :
+    [...]
+- id: 12
+  author: 'TUTO serveur de mail sous Ubuntu (postfix) | Admin Reso'
+  author-url: http://www.adminreseau.fr/tuto-serveur-de-mail-sous-ubuntu-postfix/
+  date: 2012-04-06 12:35:06+01:00
+  pingback: true
+  contents: |
+    [...] trouver des fonctionnalités à mettre en place (un webmail tel
+    que RoundCube, un anti-spam, le tri des mails sur le serveur,
+    une authentification [...]

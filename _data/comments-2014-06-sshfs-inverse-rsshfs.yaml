@@ -1,0 +1,160 @@
+- id: 1
+  author: erdnaxeli
+  date: 2014-06-16 12:32:16+02:00
+  contents: |
+    Pas mal. Ce que j'aimerais bien, c'est un outils pour utiliser une connexion
+    ssh déjà existante.
+
+    Je m'explique avec un exemple. Je me suis connecté sur une machine, et je
+    voudrais copier un fichier du serveur vers ma machine (ou vice versa). Je
+    pourrais ouvrir un autre terminal et lancer un scp, mais comme je suis un
+    gros flemmard je me dis que vu que j'ai déjà une connexion ssh, je pourrais
+    faire simple un :
+
+        scp --using-current-connexion monfichier mamachine:monfichier
+
+    ou équivalent dans le shell distant.
+
+    Je me pencherais dessus un jour (peut être).
+- id: 2
+  author: erdnaxeli
+  date: 2014-06-16 12:44:26+02:00
+  contents: |
+    Bon en fait j'aurais pu chercher un peu : <http://zssh.sourceforge.net/>.
+- id: 3
+  author: tata yoyo
+  date: 2014-06-16 16:35:20+02:00
+  contents: |
+    salut, j'aime bien l'idée mais cela ne marche pas chez moi avec l'erreur
+
+        fuse: unknown option `slave'
+
+    sur la machine locale c'est une archlinux avec fuse 2.9.3-2 et la machine
+    distante une ubuntu 12.04 avec fuse 2.8.6
+
+    ++
+- id: 4
+  author: tata yoyo
+  date: 2014-06-16 16:39:57+02:00
+  contents: |
+    ca semble venir du sshfs (version 2.3) de l'ubuntu qui ne connait pas cette
+    option. si je la retire du script rssfs j'ai l'erreur
+
+        read: Connection reset by peer
+
+- id: 5
+  author: ®om
+  date: 2014-06-16 18:11:39+02:00
+  contents: |
+    > @[**tata yoyo**](#comment-3)
+    >
+    > salut, j'aime bien l'idée mais cela ne marche pas chez moi avec l'erreur
+    > 
+    >     fuse: unknown option `slave'
+    > 
+    > sur la machine locale c'est une archlinux avec fuse 2.9.3-2 et la machine
+    > distante une ubuntu 12.04 avec fuse 2.8.6
+
+    Il te faut l'option `slave` sur la machine distante, chez moi j'ai la
+    2.9.0 (*Debian Wheezy*).
+- id: 6
+  author: ®om
+  date: 2014-06-16 18:17:30+02:00
+  contents: |
+    > @[**erdnaxeli**](#comment-2)
+    >
+    > Bon en fait j'aurais pu chercher un peu : <http://zssh.sourceforge.net/>.
+
+    Ah, sympa !
+- id: 7
+  author: bellard
+  author-url: http://www.slitaz.org
+  date: 2014-06-16 19:25:26+02:00
+  contents: |
+    Bientôt dans slitaz...
+
+    <http://hg.slitaz.org/wok/rev/c2a6bbd5b24f#l2.4>
+- id: 8
+  author: ®om
+  date: 2014-06-16 22:38:43+02:00
+  contents: |
+    @[**bellard**](#comment-7)
+    J'aime ton idée d'utiliser un fichier *fifo* à la place de `dpipe`, ça
+    permet de supprimer la dépendance vers le paquet `vde2`. J'ai donc fait la
+    même [modif][].
+
+    [modif]: https://github.com/rom1v/rsshfs/commit/440a3577a41eed0ed8fdd136e85e5a18daea76a6
+
+    Par contre, je ne sais pas si tu as testé [ton
+    script](http://hg.slitaz.org/wok/file/c2a6bbd5b24f/sshfs-fuse/stuff/rsshfs),
+    mais il ne fonctionne pas. Remplacer sur la ligne 8 `case "$2"` par `case
+    "$1"` résout le problème.
+
+    Aussi, ton découpage de `rhost` et `rpath` ne fonctionne pas si le chemin
+    distant contient un "`:`" (je te l'accorde, c'est rare).
+- id: 9
+  author: bellard
+  author-url: http://www.slitaz.org
+  date: 2014-06-16 22:59:38+02:00
+  contents: |
+    C'est corrigé, merci.
+
+    <http://hg.slitaz.org/wok/rev/c176489f467b>
+
+    <http://hg.slitaz.org/wok/raw-file/c176489f467b/sshfs-fuse/stuff/rsshfs>
+- id: 10
+  author: ®om
+  date: 2014-06-16 23:30:59+02:00
+  contents: |
+    @[**bellard**](#comment-9)
+    Il [reste](http://hg.slitaz.org/wok/rev/c176489f467b) un problème avec le
+    "`:`" : s'il n'est pas présent, le chemin prend la même valeur que le nom du
+    serveur. Par exemple :
+
+        rsshfs /local/folder server
+
+    va monter `/local/folder` dans `server:server`. J'avais passé un peu de
+    temps à trouver une commande en une ligne qui marchait dans tous ces cas,
+    mais ton script n'est pas en *Bash* ;-)
+- id: 11
+  author: bellard
+  author-url: http://www.slitaz.org
+  date: 2014-06-17 10:54:36+02:00
+  contents: |
+    1- Comment comprendre
+
+        rsshfs /local/folder server
+
+    y aurait-il un remote path par défaut ?
+
+    2- [sftp-server
+    -R](http://hg.slitaz.org/wok/raw-file/tip/sshfs-fuse/stuff/rsshfs) permet de
+    ne plus dépendre du bon fonctionnement de '-o ro' avec le sshfs distant.
+- id: 12
+  author: ®om
+  date: 2014-06-17 14:26:48+02:00
+  contents: |
+    > @[**bellard**](#comment-11)
+    >
+    > 1- Comment comprendre
+    >
+    >     rsshfs /local/folder server`
+    >
+    > y aurait-il un remote path par défaut ?
+
+    En théorie, ça devrait renvoyer une erreur. Néanmoins, mon script le
+    comprend comme :
+
+        rsshfs /local/folder server:
+
+    c'est-à-dire le répertoire `HOME` de l'utilisateur (ce qui va renvoyer une
+    erreur car il n'est probablement pas vide).
+
+    > @[**bellard**](#comment-11)
+    > 2- [sftp-server
+    > -R](http://hg.slitaz.org/wok/raw-file/tip/sshfs-fuse/stuff/rsshfs) permet
+    > de ne plus dépendre du bon fonctionnement de '-o ro' avec le sshfs
+    > distant.
+
+    Merci, je ne connaissais pas. Je l'ai
+    [implémenté](https://github.com/rom1v/rsshfs/commit/643f92613b56a8cb9793dce77c003e638d83aed9).

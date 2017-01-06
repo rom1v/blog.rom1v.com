@@ -1,0 +1,22 @@
+- id: 1
+  author: tof
+  date: 2008-10-11 13:27:00+01:00
+  contents: |
+    Adopté!
+
+    Merci, je cherchais un petit outil comme ça pour envoyer des bouts de code;)
+- id: 2
+  author: Tiesto
+  date: 2008-10-22 20:31:00+01:00
+  contents: |
+    Hello
+
+    Je vois que tu connais bien le bash.
+
+    Tu n'aurais pas quelques conseils à me donner pour apprendre de bonnes
+    bases?
+- id: 3
+  author: ®om
+  date: 2008-10-22 20:59:00+01:00
+  contents: |
+    <http://abs.traduc.org/abs-5.3-fr/> ;)

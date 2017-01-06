@@ -1,0 +1,348 @@
+- id: 1
+  author: Fred
+  date: 2013-08-14 18:49:54+02:00
+  contents: |
+    Une sauvegarde complète par mois et une incrémentale chaque jour ? Du coup,
+    si votre complète est corrompue pour une raison X ou Y, vous perdez un mois
+    complet de backup. Je crains aussi un peu le temps de restauration de
+    l'incrémentale 29 (la veille de la nouvelle complète, en général quand on a
+    la poisse, on a l'a pour de bon).
+
+    Signé un adepte de la méthode barbare (une complète par jour :p)
+- id: 2
+  author: arno
+  date: 2013-08-14 21:21:39+02:00
+  contents: |
+    Très intéressant, merci ; ça semble correspondre à ce que je veux faire
+    :)
+
+    Je pense que je ferai une complète tous les 10 jours par cron, et des
+    différentielles entre.
+
+    Par contre, j'ai une question : un conseil pour la partie "sauvegarde
+    distante" ? J'envisage d'installer un raspberry pi chez quelqu'un de ma
+    famille, mais ça ne me paraît pas adapté, pour une simple solution de backup
+    distant…
+
+    À moins de l'utiliser en redondance avec le mien, mais comment fait-on ça ?
+- id: 3
+  author: Cascador
+  date: 2013-08-15 07:54:19+02:00
+  contents: |
+    Hello All,
+
+    Tout à fait d'accord avec Fred, je trouve que la mode de s'amuser avec des
+    sauvegardes différentielles/incrémentales est une absurdité (je ne dis pas
+    ça méchamment of course). J'ai souvent l'impression que les particuliers se
+    basent sur les pratiques des professionnels alors que ce n'est pas du tout
+    les mêmes contraintes.
+
+    Professionnellement, je fais comme Fred càd sauvegarde complète dans 98
+    % des cas :
+
+     - C'est simple à restaurer, il y a tout et la simplicité est trop souvent
+    un critère négligée. Tu sauvegardes simplement, tu débugges ton script et
+    tes problèmes de sauvegarde simplement et enfin (le plus important de tous)
+    tu fais des tests de restauration simplement (et du coup plus
+    souvent/régulièrement)
+     - Si tu as un problème le jeudi avec ton serveur alors que tu fais des
+    sauvegardes incrémentales, il faut que tu remontes ta complète du vendredi
+    précédent ou du mois précédent pour recharger ensuite tous les jours
+    écoulés. What the fuck ? En entreprise, c'est une blague, bonjour la perte
+    de temps et si tu as une seule sauvegarde échouée entre les deux dates :
+    Game Over !
+     - Dernier argument, ça reste complexe de gérer une restauration à base
+    d'une complète + les autres différentielles (on se dit toujours facile avec
+    des données mais lorsque tu as une base SQL ou une base Exchange à remonter
+    avec complète + différentielles, tu es tout de suite bien moins serein). Ne
+    nous le cachons pas, la sauvegarde est entrée dans les moeurs même chez les
+    particuliers, ce qui est évidemment une très bonne chose. Cependant, la
+    pierre angulaire d'une bonne sauvegarde c'est de tester la restauration et
+    ça, 1 personne sur 2 ne le fait pas (y compris chez les professionnels) donc
+    autant que ce soit le plus simple et compréhensif possible
+
+    @Rom1 : Super tuto sur Duplicity !
+
+    @arno : Je suppose que tu
+    t'es penché sur les sauvegardes dans le cloud ? Ca commence à devenir
+    intéressant (CrashPlan, SugarSync)
+
+    Tcho !
+- id: 4
+  author: arno
+  date: 2013-08-15 09:03:08+02:00
+  contents: |
+    @Cascador : non, je ne connaissais pas. Mais ça ne m'inspire pas plus
+    confiance que gdrive ou skytruc : sans doute à tort, je préfère savoir où
+    sont physiquement mes données (dans la famille ou chez un ami), même si
+    elles sont chiffrées...
+- id: 5
+  author: ®om
+  date: 2013-08-15 13:11:37+02:00
+  contents: |
+    > @[**Cascador**](#comment-3)
+    >
+    > Professionnellement, je fais comme Fred càd sauvegarde complète dans 98
+    > % des cas :
+    >
+    >  - C'est simple à restaurer, il y a tout et la simplicité est trop souvent
+    > un critère négligée. […]
+    >  - Si tu as un problème le jeudi avec ton serveur alors que tu fais des
+    > sauvegardes incrémentales, il faut que tu remontes ta complète du vendredi
+    > précédent ou du mois précédent pour recharger ensuite tous les jours
+    > écoulés. What the fuck ?
+
+    La restauration par *duplicity* est transparente que tu utilises des
+    sauvegardes incrémentales ou non.
+
+    > @[**Fred**](#comment-1)
+    >
+    > Je crains aussi un peu le temps de restauration de
+    > l'incrémentale 29 (la veille de la nouvelle complète, en général quand on
+    > a la poisse, on a l'a pour de bon).
+
+    Je viens de comparer la restauration du 31 juillet (donc 1 complète avec 30
+    incrémentales) avec celle du 1er août (1 complète seule) :
+
+        time duplicity restore -t 2013-08-01T12:00:00+02:00 \
+          file:///var/backups/duplicity/ restore1/
+        time duplicity restore -t 2013-07-31T12:00:00+02:00 \
+          file:///var/backups/duplicity/ restore2/
+
+    La complète a mis **5mn06s**. La complète avec 30 incrémentales, **7mn49s**.
+    Donc on s'en fiche, ça reste rapide (la restauration est un événement rare).
+
+    À côté de ça, 15Mio par jour au lieu de 1.4Gio c'est appréciable (surtout à
+    transférer sur des machines distantes avec une connexion ADSL) !
+
+    > @[**Fred**](#comment-1)
+    >
+    > Du coup, si votre complète est corrompue pour une raison X ou Y, vous
+    > perdez un mois complet de backup.
+
+    Oui. C'est un risque que je prends (j'ai confiance en *duplicity*), la
+    différence de taille entre les sauvegardes incrémentales et complètes étant
+    vraiment importante. Le risque reste cependant mesuré : je n'ai pas tant de
+    données qui changent d'un mois sur l'autre sur mon serveur.
+
+    > @[**Cascador**](#comment-3)
+    >
+    > Dernier argument, ça reste complexe de gérer une restauration à base d'une
+    > complète + les autres différentielles (on se dit toujours facile avec des
+    > données mais lorsque tu as une base SQL ou une base Exchange à remonter
+    > avec complète + différentielles, tu es tout de suite bien moins serein).
+
+    C'est justement un gros point fort de *duplicity* (comme je l'explique dans
+    le billet). Si les bases de données ne sont pas trop grosses (si tu as 600Go
+    de données, ce n'est pas la peine), tu peux éviter de gérer manuellement les
+    sauvegardes incrémentales des bases de données : dans chaque version tu mets
+    un *dump* complet et *duplicity* ne sauvegardera que les blocs différents.
+
+    > @[**arno**](#comment-2)
+    >
+    > Par contre, j'ai une question : un conseil pour la partie "sauvegarde
+    > distante" ? J'envisage d'installer un raspberry pi chez quelqu'un de ma
+    > famille, mais ça ne me paraît pas adapté, pour une simple solution de
+    > backup distant…
+    >
+    > À moins de l'utiliser en redondance avec le mien, mais comment fait-on ça
+    > ?
+
+    Un *Raspberry π* ferait très bien l'affaire je pense (de préférence avec un
+    disque dur). Personnellement, je récupère les backups sur mon pc perso avec
+    `rsync`, puis je redispatche vers d'autres machines.
+- id: 6
+  author: Logicos
+  author-url: http://reload.eez.fr
+  date: 2013-08-15 13:31:52+02:00
+  contents: |
+    Salut tous!
+
+    Bah j'utilise "dar" pour faire des backups.
+
+    Full tout les dimanches, Incrémental les autres jours.
+
+    Mais le plus marrant, c'est que je balance mes backups (chiffrés) sur
+    <http://dl.free.fr> ...
+
+    Il reste 1 mois minimum bien au chaud sur les serveurs de Free, et je suis
+    notifié par mail de chaque transfert.
+
+    A+
+- id: 7
+  author: Fred
+  date: 2013-08-15 17:59:24+02:00
+  contents: |
+    Merci pour les précisions. Je vais quand même faire mon lourdingue en disant
+    que pour 1,4 Go de données, on peut faire du backup complet quotidien :p
+
+    Mon credo est de dire que le stockage ne coûte pas cher,
+    sauf si vous voulez du stockage rapide (SSD, disques à 15k tours,
+    SAN...). Côté pro, j'ai 1,2 To de données à gérer (fichiers, boites
+    mail, multiples BDD) et je fais quand même du complet chaque jour pour
+    pas très cher (dans un contexte perso, ça peut être vécu autrement) avec
+    rsync. Par contre, je commence à atteindre un cap côté performances et
+    synchro des scripts des différents serveurs, du coup je me fais ma
+    petite veille sur des outils comme celui-ci
+
+    > La complète a mis **5mn06s**. La complète avec 30 incrémentales,
+    > **7mn49s**. Donc on s'en fiche, ça reste rapide (la restauration est un
+    > événement rare).
+
+    A peu près 50% plus lent avec 29x15 Mo d'incrémentales. Curieux de voir si
+    quelqu'un a des stats avec de plus gros volumes. En tout cas, merci pour ces
+    infos, très instructif.
+
+    > C'est simple à restaurer, il y a tout et la simplicité est
+    trop souvent un critère négligée.
+
+     Ah, voilà un commentaire qui me fait bien plaisir. C'est beaucoup de
+    travail de faire des choses simples et efficaces :)
+- id: 8
+  author: François
+  author-url: http://www.sciunto.org
+  date: 2013-08-15 21:12:57+02:00
+  contents: |
+    Pour ma part, je fais des sauvegardes pseudo-incrémentales avec des
+    liens en dur.
+
+    Ca ressemble en tant qu'utilisateur à du non incrémentale, mais pour le
+    disque c'est bel et bien de l'incrémental. Si une sauvegarde plante, on ne
+    brise pas les autres sauvegardes.
+- id: 9
+  author: Cascador
+  date: 2013-08-16 09:55:10+02:00
+  contents: |
+    Hello All,
+
+    Je persiste et signe comme Fred et je donne modestement mon
+    point de vue sur ce que tu pourrais faire :
+
+     - Tu met en place une rotation de tes sauvegardes (càd une copie des
+    données que tu souhaites sauvegarder avec une gestion dans le temps) sur les
+    3 derniers jours sur ton serveur en local. Tu utilises une variable comme ça
+    `DATE="$(date +"%d-%m-%Y" )"` dans le nom de tes répertoires (ça va te
+    donner 16-08-2013, 17-08-2013 etc.) puis toujours dans le même script tu
+    purges les dossiers plus vieux de 3 jours (`find $DEST_BACKUP -maxdepth 1
+    -type d -mtime +3 -exec rm -frv {} \;`)
+     - Second script du côté de ton poste à ton domicile, tu synchronises
+    toujours le même dossier du côté de chez toi et du côté de ton serveur dédié
+    ainsi les différences sont minimes (comme si tu faisais une sauvegarde
+    incrémentale ou différentielle) mais tu as une sauvegarde complète de chaque
+    côté (c'est du mirroring quoi). Je pense que tu l'auras compris mais du côté
+    de ton domicile le nom du dossier de ta sauvegarde ne bougera jamais et du
+    côté de ton serveur dédié, tu utilises la variable DATE pour faire la
+    sauvegarde. Tu reprends ton premier script et tu met en place une rotation
+    sur 7 jours sur ton poste en local
+     - Troisième script (ultra-simple donc inutile de crier lol), tu copies les
+    dossiers en "matchant" avec cp le nom de tes dossiers 01-, 08-, 15-, 22-,
+    29- afin d'avoir un dossier avec tes sauvegardes hebdomadaires (sauvegardes
+    du premier jour de chaque mois, du 8 de chaque mois etc.). Ca donnera `cp
+    -pR $DEST_BACKUP'/'$NOM_BACKUP'_01-* $WEEKLY_BACKUP'/'`
+
+    Pour résumer :
+     - Tu as une tâche cron sur ton serveur dédié et 2 tâches cron sur ton poste
+    à ton domicile
+     - Tu as 3 sauvegardes complètes sur ton serveur en local (soit moins de 5
+    Go). Tu as 7 sauvegardes complètes sur ton poste à ton domicile pour les 7
+    derniers jours (soit moins de 10 Go) ainsi que 4 sauvegardes complètes pour
+    les 4 dernières semaines (soit moins de 6 Go)
+     - Tu as des scripts simples (avec des outils ultra-connus comme cp, rsync
+    ou duplicity) et réutilisables pour d'autres serveurs
+     - Tu as une méthode de sauvegarde 4 étoiles, increvable, facile à restaurer
+     - Tu peux évidemment te passer du troisième script
+     - Tout cela en ne consommant pas beaucoup d'espace sur tes machines et en
+    minimisant le trafic réseau (dans ce cas via internet) pour la sauvegarde
+    distante à ton domicile
+
+    Tcho !
+- id: 10
+  author: ®om
+  date: 2013-08-16 13:58:25+02:00
+  contents: |
+    @[**Cascador**](#comment-9) En résumé, tu proposes d'écrire manuellement une
+    solution de sauvegardes non incrémentales et non
+    chiffrées. Pour quels avantages ?
+
+    J'utilisais un peu de genre de scripts manuels avant d'utiliser *duplicity*…
+    D'ailleurs, de mémoire, c'est un peu ce que font
+    [rdiff-backup](http://rdiff-backup.nongnu.org/) et
+    [rsnapshot](http://www.rsnapshot.org/).
+- id: 11
+  author: Linux | Pearltrees
+  author-url: http://www.pearltrees.com/chronos83/linux/id8778614#pearl86966394&amp;show=reveal,6
+  date: 2013-08-18 05:02:55+02:00
+  pingback: true
+  contents: |
+    […] Duplicity : des backups incrémentaux chiffrés […]
+- id: 12
+  author: sybix
+  date: 2013-08-19 21:41:05+02:00
+  contents: |
+    o/
+
+    Juste pour dire que GPG est vraiment une meilleurs solution.
+
+    Effectivement le chiffrement asymétrique te demande deux fichiers. Une clefs
+    publique et une clefs privé. Si tu génère ta paire de clefs sur la machine
+    qui te sers a stocker les backup. Tu transfère seulement la clef publique
+    sur le serveur. La clef publique sers à chiffrer les données pour la clef
+    privé, mais ne pourras pas les déchiffrer. Et il est plus dure de casser une
+    clef gpg que de brute forcer un chiffrement symétrique. Bien entendu, il
+    faut quand même avoir la possibilité de sauvegarder au moins la clefs privé,
+    si tu prends en compte que le serveur de backup peux être défaillant en même
+    temps qu'un incident sur le serveur principal.
+- id: 13
+  author: ®om
+  date: 2013-08-19 21:58:31+02:00
+  contents: |
+    > @[**sybix**](#comment-12)
+    >
+    > Juste pour dire que GPG est vraiment une meilleurs solution.
+
+    Pour être précis, qu'on utilise le chiffrement symétrique ou asymétrique
+    ici, il s'agit toujours de `gpg` (avant d'écrire ce billet je croyais aussi
+    que `gpg` ne supportait que l'asymétrique).
+
+    > @[**sybix**](#comment-12)
+    > 
+    >  Tu transfère seulement la clef publique sur le serveur.
+
+    En fait, le serveur a également besoin de la clé privée. D'abord parce qu'il
+    signe les backups (apparemment, *duplicity* ne permet pas de chiffrer sans
+    signer), ensuite parce pour une sauvegarde incrémentale il a besoin de lire
+    les anciens backups (à vérifier quand même, peut-être qu'il garde des
+    données non chiffrées en cache).
+- id: 14
+  author: eniefaC
+  author-url: http://eniefac.me/
+  date: 2013-08-23 22:17:18+02:00
+  contents: |
+    Bonsoir,
+
+    Pour ceux qui souhaitent utiliser duplicity sans trop mettre les mains dans
+    le cambouis, il y a [duply](http://duply.net/), une surcouche pour
+    duplicity.
+
+    Cela permet notamment de gérer facilement des profils et l'export des
+    données via de nombreux protocoles.
+
+    Je l'utilise personnellement pour gérer les backups de ma dédibox vers
+    l'espace FTP de backup proposé par mon hébergeur, cela fonctionne
+    parfaitement bien !
+
+    Très bon article !
+- id: 15
+  author: Faites vos backups avec duplicity et duply - eniefaC&#039;s Blog
+  author-url: http://eniefac.me/2013/backups-avec-duplicity-duply
+  date: 2013-08-24 15:54:01+02:00
+  pingback: true
+  contents: |
+    […] faisant ma ronde habituelle sur le planet Ubuntu, je suis tombé sur
+    un article de Romain Vimont détaillant l'utilisation de duplicity, que
+    j'utilise actuellement […]
+- id: 16
+  author: grou
+  date: 2013-08-29 21:54:48+02:00
+  contents: |
+    Très bon article, merci pour ces infos :)

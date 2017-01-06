@@ -1,0 +1,208 @@
+- id: 1
+  author: Kooothor
+  author-url: http://www.flood.fr
+  date: 2011-06-24 20:49:46+02:00
+  contents: |
+    <http://i.imgur.com/j9QEz.png> :/
+- id: 2
+  author: ®om
+  date: 2011-06-24 21:33:12+02:00
+  contents: |
+    @[**Kooothor**](#comment-1)
+    Tu as des `\\` au lieu de `\` sur ta capture d'écran…
+- id: 3
+  author: Fugitif
+  date: 2011-06-25 13:35:09+02:00
+  contents: |
+
+    {% highlight bash %}
+    php -r "echo urldecode(\"$(zcat -f /var/log/apache2/*|grep 'http://www\.google\.\w*/'|grep -o '[?&]q=[^&"]*'|cut -c4-)\");"|sort|uniq -c
+    {% endhighlight %}
+
+        bash: /usr/bin/php: Liste d'arguments trop longue
+
+    Marche po
+- id: 4
+  author: Fugitif
+  date: 2011-06-25 13:36:25+02:00
+  contents: |
+    Par contre
+
+    {% highlight bash %}
+    php5 -r "echo urldecode(\"$(cat /var/log/apache2/access.log |grep 'http://www\.google\.\w*/'|grep -o '[?&]q=[^&"]*'|cut -c4-)\");"|sort|uniq -c
+    {% endhighlight %}
+
+    marche très bien
+- id: 5
+  author: ®om
+  date: 2011-06-25 14:04:58+02:00
+  contents: |
+    @[**Fugitif**](#comment-4)
+    Qu'est-ce qui est important comme changement entre tes deux commandes ?
+    `php5` au lieu de `php` ou le fait de ne lire qu'un seul fichier de log ?
+
+    Et la commande donnée à la fin du billet fonctionne-t-elle mieux ?
+- id: 6
+  author: Leto2
+  date: 2011-06-25 15:36:26+02:00
+  contents: |
+    Pour réduire un peu la taille, remplacer "`zcat truc|grep machin`" par
+    "`zgrep machin truc`" ;-)
+- id: 7
+  author: ®om
+  date: 2011-06-25 19:54:25+02:00
+  contents: |
+    @[**Leto2**](#comment-6)
+    Merci, j'ai remplacé dans le billet, ça fait gagner 7 caractères (et j'ai
+    appris quelque chose ^^).
+- id: 8
+  author: Fugitif
+  date: 2011-06-26 12:58:41+02:00
+  contents: |
+    C'est pas l'ajout du `php5` qui arrange les choses, mais le faite de ne
+    prendre en compte qu'un seul log de apache2. Chez moi j'ai modifier
+    logrotate pour garder 52 fichiers en .gz, donc pas mal de boulot pour
+    `zgrep`.
+
+    De toutes façon `/usr/bin/php` sur Ubuntu 10.04 n'est qu'un lien vers
+    `/etc/alternatives/php` qui est lui même un lien vers `/usr/bin/php5`
+
+    La 2ème commande fonctionne mieux, mais serai plus lisible avec un
+    `|sort -nr` à la fin pour afficher les recherches les plus utiliser en
+    premier.
+
+    Là c'est trier par ordre alphabétique.
+- id: 9
+  author: Francis
+  date: 2011-06-28 10:31:11+02:00
+  contents: |
+    Je dis peut-être une connerie, mais en mettant `*` à la place de
+    "`http://`", qui ne sert pas a grand chose ?
+- id: 10
+  author: Fugitif
+  date: 2011-06-28 21:45:41+02:00
+  contents: |
+    @Francis
+
+    Ta commande ne fonctionne pas, par contre
+
+    {% highlight bash %}
+    zgrep 'www\.google\.\w*/' /var/log/apache2/*|grep -o '[?&]q=[^&"]*'|cut -c4-|echo -e $(sed 's/$/\\n/;s/+/ /g;s/%/\\x/g')|sort|uniq -c
+    {% endhighlight %}
+
+    fonctionne.
+
+    Un `http://` en moins :-)
+- id: 11
+  author: lekant
+  date: 2011-06-30 17:07:28+02:00
+  contents: |
+    HS : Tu sais que ton post arrive en première page de la recherche "google
+    plus" ? :D
+- id: 12
+  author: ®om
+  date: 2011-06-30 17:10:17+02:00
+  contents: |
+    @lekant
+
+    En recherchant quoi ? La chaîne de caractères "google plus" ?
+
+    Si oui, c'est sans doute parce que tu es logué avec ton compte *Google*, et
+    qu'il fait le lien avec ton *Google reader*. Car chez moi ce n'est pas le
+    cas ^^
+
+    À ce sujet, lire [Le risque de l'individualisation de
+    l'internet](http://www.internetactu.net/2011/06/13/le-risque-de-lindividualisation-de-linternet/).
+
+
+- id: 13
+  author: lekant
+  date: 2011-06-30 17:18:34+02:00
+  contents: |
+    "google plus"
+
+    tout simplement.
+- id: 14
+  author: Fugitif
+  date: 2011-06-30 17:40:08+02:00
+  contents: |
+    @lekant
+
+    la recherche "google plus" ne mène pas ici
+
+    Je vois d'ailleurs pas le lien entre google+ et se blog lol
+- id: 15
+  author: lekant
+  date: 2011-06-30 18:29:40+02:00
+  contents: |
+    Google orienterait ses recherches en fonction des partages Greader? vu que
+    je partage souvent ce qu'il y a sur ce blog... eh bien au temps pour moi
+- id: 16
+  author: Fugitif
+  date: 2011-07-01 01:15:36+02:00
+  contents: |
+    La publicité ciblé c'est pas nouveau chez Google.
+- id: 17
+  author: St3f
+  date: 2011-07-10 22:14:07+02:00
+  contents: |
+    > Par contre, cette commande ne fonctionne pas correctement si l'on rajoute
+    > |less (on ne peut pas se déplacer avec haut et bas), je ne sais pas trop
+    > pourquoi ni comment le résoudre (si certains ont une idée)
+
+    IDEE :: Est-ce que ceci te convient ?
+
+    {% highlight bash %}
+    ( zgrep 'www\.google\.\w*/' /var/log/apache2/*|grep -o '[?&]q=[^&"]*'|cut -c4-|echo -e $(sed 's/$/\\n/;s/+/ /g;s/%/\\x/g')|sort|uniq -c) | less
+    {% endhighlight %}
+
+    En fait les parenthèses vont permettre au shell de créer un nouveau
+    processus dans lequel sera effectuée ta commande et une fois ce processus
+    terminé, le résultat sera finalement renvoyé dans l' entrée standard de
+    less. Il est possible que rien ne se passe à l'écran pendant que le
+    processus s'exécute, cependant des qu'il sera terminé le résultat sera lu
+    (ligne par ligne ce qui est plus souple pour les tres gros fichiers) par
+    less.
+- id: 18
+  author: ®om
+  date: 2011-07-10 22:36:08+02:00
+  contents: |
+    @[**St3f**](#comment-17)
+
+    Ce n'était pas la commande que tu as utilisée entre les parenthèses qui ne
+    fonctionnait pas avec `less`, mais celle avec `php`.
+
+    Ceci étant dit, j'ai appliqué le principe à cette commande :
+
+    {% highlight bash %}
+    (php -r "echo urldecode(\"$(zgrep 'http://www\.google\.\w*/' /var/log/apache2/*|grep -o '[?&]q=[^&"]*'|cut -c4-)\");"|sort|uniq -c)|less
+    {% endhighlight %}
+
+    et ça ne fonctionne pas mieux avec `less`.
+
+    Mais bon, de toute façon la première commande que j'ai donnée avec `php` est
+    à éviter, elle ne fonctionne que si le nombre de recherches est très faible.
+- id: 19
+  author: St3f
+  date: 2011-07-10 23:51:07+02:00
+  contents: |
+    Au temps pour moi ...
+
+    C'est vrai que j'ai lu (un peu trop vite sûrement ;) ) les commentaires et
+    avait cru comprendre que la commande (que j' ai mis entre parenthèse dans
+    mon dernier post) était celle qui fonctionnait mais, que son résultat
+    n'était pas lu correctement avec "less"...
+
+    Désolé. Cela dit, peut-être que ma bourde aura servie à quelque lecteur :)
+
+    @+!
+- id: 20
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2011-10-21 15:34:13+02:00
+  contents: |
+    Sympa.
+
+    Je m'en sert pour mon proxy.
+
+    Par contre j'aimerai sortir les IP avec...

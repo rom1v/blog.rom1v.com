@@ -1,0 +1,115 @@
+- id: 1
+  author: Jeyg
+  author-url: http://jeyg.info
+  date: 2012-06-02 15:14:41+01:00
+  contents: |
+    gksu wireshark marche très bien aussi x)
+- id: 2
+  author: Jeyg
+  author-url: http://jeyg.info
+  date: 2012-06-02 15:16:33+01:00
+  contents: |
+    Il existe kdesudo également, mais jamais essayé (bien qu'étant sous KDE).
+- id: 3
+  author: ®om
+  date: 2012-06-02 15:23:35+01:00
+  contents: |
+    @[Jeyg](#comment-2)
+
+    Ah oui, effectivement, avec `kdesudo` les applications graphiques se lancent
+    en *root*…
+
+    Mais c'est quand même à éviter !
+- id: 4
+  author: Gounlaf
+  date: 2012-06-02 16:07:26+01:00
+  contents: |
+    La technique *"Autoriser les utilisateurs non-root"* ne fonctionne pas sous
+    Ubuntu : `/usr/bin/dumpcap` ne veut pas s'exécuter pour les non-root
+
+    Une solution ? (autre que `sudo wireshark`).
+
+    Merci d'avance !
+- id: 5
+  author: ®om
+  date: 2012-06-02 17:52:29+01:00
+  contents: |
+    @[**Gounlaf**](#comment-4)
+    La seconde méthode permet de n'utiliser que *Wireshark non-root*, sans
+    passer par `dumpcap` en ligne de commande (qui lui nécessite d'être *root*).
+- id: 6
+  author: Gounlaf
+  date: 2012-06-02 17:54:56+01:00
+  contents: |
+    @®om : en fait, il fallait que je me reconnecte pour que l'ajout au groupe
+    soit réellement pris en compte ... Donc tout est bon maintenant =)
+
+    C'est bien pratique !
+- id: 7
+  author: siger
+  date: 2012-06-02 18:38:10+01:00
+  contents: |
+    n'y a il pas un risque à autoriser les non-root à utiliser ce genre de
+    programme ? Vu les infos qu'on peut y lire ...
+- id: 8
+  author: erdnaxeli
+  date: 2012-06-02 22:41:45+01:00
+  contents: |
+    J'ai jamais compris l'intérêt de gksu et consors. Sur ma gentoo un "sudo
+    wireshark" fonctionne parfaitement, et j'en suis ravi.
+- id: 9
+  author: miam
+  date: 2012-06-03 11:11:20+01:00
+  contents: |
+    Bonjour,
+
+    Je vous renvois vers deux billets de blog expliquant l'utilisation des linux
+    capabilities pour exécuter wireshark en mode utilisateur.
+
+    <http://www.inetdoc.net/articles/wireshark-as-user/index.html>
+
+    <http://packetlife.net/blog/2010/mar/19/sniffing-wireshark-non-root-user/>
+
+    J'ai testé cette procédure sur ubuntu donc il n' y a aucune raison pour
+    qu'elles ne fonctionnent pas sous debian.
+- id: 10
+  author: Vincent Bernat
+  author-url: http://vincent.bernat.im/fr/
+  date: 2012-06-03 14:02:16+01:00
+  contents: |
+    Personnellement, j'utilise `tcpdump` ainsi :
+
+    {% highlight bash %}
+    sudo tcpdump -pni eth0 -s0 -U -w - | wireshark -k -i -
+    {% endhighlight %}
+
+    Un p'tit ssh et cela permet de capturer des données sur une machine
+    distante.
+- id: 11
+  author: ®om
+  date: 2012-06-04 09:09:55+01:00
+  contents: |
+    @[**Vincent Bernat**](#comment-10)
+    Génial !
+- id: 12
+  author: Nono&#8217;s Vrac 70 &laquo; m0le&#039;o&#039;blog
+  author-url: http://blog.m0le.net/2012/06/07/nonos-vrac-70/
+  date: 2012-06-07 21:02:28+01:00
+  pingback: true
+  contents: |
+    [...] Wirewhark sous debian, bon, honte à moi, mais je le lançais en root il
+    y a quelques années [...]
+- id: 13
+  author: GuiGui&#039;s show &raquo; En vrac
+  author-url: http://www.guiguishow.info/2012/08/03/en-vrac-2/
+  date: 2012-08-03 00:30:52+01:00
+  pingback: true
+  contents: |
+    [...] ®om nous parle d'une autre méthode qui consiste à autoriser les
+    membres d'un groupe d'utilisateurs bien défini à capturer les paquets. [...]
+- id: 14
+  author: Anthony Charrier
+  author-url: http://www.ac-log.fr/
+  date: 2012-08-11 17:43:53+01:00
+  contents: |
+    Excellente la solution de @Vincent Bernat !

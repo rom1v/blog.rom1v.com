@@ -1,0 +1,112 @@
+- id: 1
+  author: Anonymous
+  date: 2008-09-13 16:39:00+01:00
+  contents: |
+    La presentation est bien faites.. Merci
+
+    (Il y a juste qu'en cryptologie en utilise les mots "Chiffrer/Déchiffrer" et
+    nons pas "Crypter".
+
+    Sinon rien a voir, avec quoi as tu fais les slides (et mis en pdf) ? Je n'ai
+    pas trouvé avec OpenOffice pour mettre en autre les petits trucs cliquables
+    en bas a droite... ? Mais peut etre justement a tu utiliser autre chose ?
+
+    Merci
+- id: 2
+  author: Anonymous
+  date: 2008-09-13 16:42:00+01:00
+  contents: |
+    je vois bien qu'il y a une histoire de LaTeX au moins pour le pdf..mais si
+    tu peux m'en dire +...
+
+    Merci
+- id: 3
+  author: ®om
+  date: 2008-09-13 17:21:00+01:00
+  contents: |
+    Effectivement, on dit "chiffrer". D'ailleurs, j'ai bien employé le bon terme sur
+    mon billet [encfs][], je viens de corriger dans les 2 pdf. J'ai mis à jour les
+    liens.
+
+    [encfs]: {% post_url 2008-08-27-encfs-repertoire-chiffre-par-mot-de-passe %}
+
+    J'ai effectivement utilisé LaTeX.
+- id: 4
+  author: Anonymous
+  date: 2008-09-13 18:23:00+01:00
+  contents: |
+    Merci pour cette réponse rapide ;)
+- id: 5
+  author: utodeb
+  date: 2008-09-16 21:08:00+01:00
+  contents: |
+    oups j'avais mal lu un truc mais la 2 ème partie de mon 1er message est
+    toujours valable ;-)
+
+    En fait apparement filezilla le gère avec pageant mais j'ai pas encore
+    réussi ;-)
+
+    Ps : y a moyen de éditer les commentaires ?
+
+    ++
+- id: 6
+  author: Hugo
+  date: 2008-11-21 16:33:00+01:00
+  contents: |
+    Existe-t-il un moyen de monter un répertoire distant (sshfs) avec un client
+    qui est sous Windows ?
+- id: 7
+  author: Amigos
+  date: 2008-12-15 22:33:00+01:00
+  contents: |
+    **Merci bien pour ce document !**
+
+    c'est vraiment ce que je chrcher à apprendre sur le ssh :)
+- id: 8
+  author: "®om&#8217;s blog &raquo; Utilisez une sortie son d&#8217;un autre PC avec Ubuntu 8.04 !"
+  author-url: http://blog.rom1v.com/2008/09/utilisez-une-sortie-son-dun-autre-pc-avec-ubuntu-804/
+  date: 2009-01-31 11:56:44+01:00
+  pingback: true
+  contents: |
+    [...] ma présentation de SSH (au chapitre 5), j’expliquais comment exécuter
+    un lecteur audio à distance, en ayant [...]
+- id: 9
+  author: "®om&#8217;s blog &raquo; PulseAudio et X-forwarding : trouver le serveur de son"
+  author-url: http://blog.rom1v.com/2008/09/pulseaudio-et-x-forwarding-trouver-le-serveur-de-son/
+  date: 2009-01-31 12:14:00+01:00
+  pingback: true
+  contents: |
+    [...] présenté comment exécuter un lecteur audio à distance, en ayant son
+    affichage localement (présentation de SSH, chapitre [...]
+- id: 10
+  author: rihab
+  date: 2009-02-08 17:06:22+01:00
+  contents: |
+    j'ai un problème de configuration de réseau sur ubuntu.j'ai dejà connecté
+    mon ordinateur à un autre ordinateur et j'effectue une addresse ip pour
+    chaque machine.je fais un ping sur l'autre machine cava s'effectue avec
+    succés.mais lorsque j'essaye d'avoir l'autre machine sur le réseau de mon
+    ordinateur rien n'a eté affiché
+- id: 11
+  author: lolowood
+  date: 2009-03-19 09:59:09+01:00
+  contents: |
+    Merci beaucoup pour ce document clair et explicite.
+
+    Est-il possible de remettre à disposition les sources .tex car la
+    présentation est vraiment très réussie et le lien donné précédemment ne
+    fonctionne plus.
+
+    Encore merci !
+- id: 12
+  author: ®om
+  date: 2009-03-20 07:28:38+01:00
+  contents: |
+    Voilà, j'ai rajouté les sources tex dans le billet.
+- id: 13
+  author: "Authentification automatique à un réseau WiFi avec NetworkManager &#8211; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2011/07/authentification-automatique-a-un-reseau-wifi-avec-networkmanager/
+  date: 2011-07-31 13:43:43+02:00
+  pingback: true
+  contents: |
+    [...] Vous trouverez plus d’infos sur mon billet concernant SSH. [...]

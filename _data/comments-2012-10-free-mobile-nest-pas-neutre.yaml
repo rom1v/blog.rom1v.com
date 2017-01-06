@@ -1,0 +1,723 @@
+- id: 1
+  author: Galuel
+  author-url: http://www.creationmonetaire.info
+  date: 2012-10-17 13:56:11+02:00
+  contents: |
+    Bien vu !
+- id: 2
+  author: ben
+  date: 2012-10-17 14:25:32+02:00
+  contents: |
+    > Il reste à vérifier si cela se produit aussi sur une antenne Free (mais je
+    > n'en capte jamais).
+
+    Oui, c'est un point important imho :)
+- id: 3
+  author: Kyriog
+  author-url: http://blog.keuse.fr/cglapa
+  date: 2012-10-17 15:01:51+02:00
+  contents: |
+    Intéressant. Je suis pour ma part régulièrement connecté sur une antenne
+    Free Mobile (source Freenge) sur mon Galaxy Nexus (Android 4.1).
+
+    Si ça t'intéresse, tu peux prendre contact avec moi (par mail ou XMPP à
+    l'adresse de contact de ce commentaire) pour que l'on vérifie si c'est aussi
+    bridé sur une antenne Free Mobile.
+- id: 4
+  author: Kyriog
+  author-url: http://blog.keuse.fr/cglapa
+  date: 2012-10-17 15:17:14+02:00
+  contents: |
+    Je complète mon précédent commentaire (tu pourras les fusionner si tu veux),
+    je viens de tester avec une antenne Free Mobile en téléchargeant des
+    fichiers générés de la même façon que toi sur mon serveur auto-hébergé, et
+    le débit ne semble pas bridé : <http://paste.keuse.fr/view/37280cb2.html>
+
+    Il est à noté que le faible débit en réception est du au fait que le reste
+    du débit en envoi sur ma ligne ADSL est déjà utilisé.
+
+    Sur ta connexion, ça ne semble pas non plus bridé :
+    <http://paste.keuse.fr/view/b5bd7542.html>
+
+    Je réessaierai ce soir.
+- id: 5
+  author: ®om
+  date: 2012-10-17 15:29:53+02:00
+  contents: |
+    @[**Kyriog**](#comment-4)
+    En étant connecté sur une antenne *Orange*, j'ai fait le test sur ton
+    serveur, je suis aussi bridé pour les fichiers multimédia (3Ko/s pour le
+    `.mp4`, 40Ko/s pour le `.pdf`).
+
+    À partir d'une antenne *Free* sur nos deux serveurs, tu n'as donc aucun
+    bridage. À partir d'une antenne *Orange* sur nos deux serveurs, le bridage
+    est constaté.
+
+    Il semblerait donc que ce soit le réseau d'*Orange* qui bride (ils feraient
+    du [DPI](http://fr.wikipedia.org/wiki/Deep_packet_inspection) sur le trafic
+    des utilisateurs de *Free Mobile* ?).
+
+    Cela demande à être confirmé par d'autres témoignages.
+- id: 6
+  author: funnoam
+  date: 2012-10-17 15:35:42+02:00
+  contents: |
+    Merci d'avoir fait circulé l'info rom !
+
+    ;)
+
+    Finalement, malgré toutes les critiques sur l'aduf, je suis content que ça
+    circule correctement sur pas mal de site.
+- id: 7
+  author: AzrieL
+  date: 2012-10-17 15:56:38+02:00
+  contents: |
+    Il pourrait être intelligent, vu les résultats des différents tests, de
+    modifier le titre ou bien d'éditer l'article. En l'état ça fait un peu
+    "troll" tout ça :)
+- id: 8
+  author: Patrice
+  author-url: http://forum-windows.com
+  date: 2012-10-17 16:21:35+02:00
+  contents: |
+    Il n'y a pas que les "fichiers multimédias" de bridés sur Freemobile ...
+
+    Je constate depuis un bon moment par exemple que de mon côté étrangement la
+    navigation sur les sites internet de "Google" ou "Facebook" est d'une
+    lenteur abominable ... voir même totalement impossible, alors que la
+    navigation sur n'importe quel autre site est d'une rapidité et d'une
+    fluidité exemplaire.
+
+    Résultat la simple utilisation du moteur de recherche de Google devient un
+    calvaire, (ne parlons pas de Google Play ou Youtube) ... La navigation sur
+    Facebook: pareil, quasi impossible, d'une lenteur abominable.
+
+    Et ceci alors que ma connexion 3G+ (sur antenne Orange) est excellente au
+    niveau signal, et que des "SpeedTest" me donne toujours des résultats entre
+    3,5 et 5 Mbps (entre 450 kB/s et 640 kB/s donc) et un ping aux alentours de
+    120ms.
+
+    Il est clair que l'utilisation est même bridée selon les sites visités !
+
+    Les sites à succès et donc gourmand comme Google et Facebook sont donc
+    également clairement visé par un bridage !!!
+- id: 9
+  author: Roman Le Négrate
+  date: 2012-10-17 16:23:58+02:00
+  contents: |
+    @Rom & Kyriog
+
+    Ca explique tout. Merci pour ces infos très utiles !
+- id: 10
+  author: badmaniak
+  date: 2012-10-17 16:51:04+02:00
+  contents: |
+    Merci pour la confirmation, n'ayant pas d'antenne Free à proximité, j'ai
+    régulièrement des débits médiocre, voir impossible de se connecté sur
+    certains site, le seul moment ou la connexion est bonne c'est lors du
+    passage en FreeWifiSecure :-(
+- id: 11
+  author: André Casu (@casuandre)
+  author-url: https://plus.google.com/u/0/116256463399348085444/posts
+  date: 2012-10-17 19:18:32+02:00
+  contents: |
+    Idem pour moi, sans test, la différence de chargement entre les sites est
+    flagrante chez Free mais chez Orange j'avais déjà ce gros doute o\_O
+- id: 12
+  author: bogue
+  date: 2012-10-17 21:25:08+02:00
+  contents: |
+    Modeste retour de mon côté :
+
+    Je constate que lorsque l'on visite un site sécurisé (https), c'est
+    anormalement plus long qu'un site non sécurisé.
+
+    J'espère que Free prendra en compte ce problème qui demeure récurrent ces
+    derniers temps.
+- id: 13
+  author: XaS
+  date: 2012-10-17 22:50:30+02:00
+  contents: |
+    Mesure comparative Antennes Orange/Free (Antibes, 06, France)
+
+    **ANTENNE ORANGE :**
+
+        xas@linuxmint ~/Bureau $ for ext in avi oga; do wget http://squeeknet.fr/random.$ext; done
+        --2012-10-17 22:39:41--  http://squeeknet.fr/random.avi
+        Resolving squeeknet.fr (squeeknet.fr)... 88.191.132.199
+        Connecting to squeeknet.fr (squeeknet.fr)|88.191.132.199|:80... connected.
+        HTTP request sent, awaiting response... 200 OK
+        Length: 2048000 (2,0M) [video/x-msvideo]
+        Saving to: `random.avi.1'
+
+        100%[===========================================================================>] 2 048 000   28,3K/s   in 79s     
+
+        2012-10-17 22:41:02 (25,3 KB/s) - `random.avi.1' saved [2048000/2048000]
+
+        --2012-10-17 22:41:02--  http://squeeknet.fr/random.oga
+        Resolving squeeknet.fr (squeeknet.fr)... 88.191.132.199
+        Connecting to squeeknet.fr (squeeknet.fr)|88.191.132.199|:80... connected.
+        HTTP request sent, awaiting response... 200 OK
+        Length: 2048000 (2,0M) [audio/ogg]
+        Saving to: `random.oga'
+
+        100%[===========================================================================>] 2 048 000    378K/s   in 8,6s    
+
+        2012-10-17 22:41:12 (232 KB/s) - `random.oga' saved [2048000/2048000]
+
+    **ANTENNE FREE :**
+
+        xas@linuxmint ~/Bureau $ for ext in avi oga; do wget http://squeeknet.fr/random.$ext; done
+        --2012-10-17 22:45:44--  http://squeeknet.fr/random.avi
+        Resolving squeeknet.fr (squeeknet.fr)... 88.191.132.199
+        Connecting to squeeknet.fr (squeeknet.fr)|88.191.132.199|:80... connected.
+        HTTP request sent, awaiting response... 200 OK
+        Length: 2048000 (2,0M) [video/x-msvideo]
+        Saving to: `random.avi.3'
+
+        100%[============================================================================================================>] 2 048 000    255K/s   in 8,6s    
+
+        2012-10-17 22:45:53 (233 KB/s) - `random.avi.3' saved [2048000/2048000]
+
+        --2012-10-17 22:45:53--  http://squeeknet.fr/random.oga
+        Resolving squeeknet.fr (squeeknet.fr)... 88.191.132.199
+        Connecting to squeeknet.fr (squeeknet.fr)|88.191.132.199|:80... connected.
+        HTTP request sent, awaiting response... 200 OK
+        Length: 2048000 (2,0M) [audio/ogg]
+        Saving to: `random.oga.2'
+
+        100%[============================================================================================================>] 2 048 000    275K/s   in 10s     
+
+        2012-10-17 22:46:10 (199 KB/s) - `random.oga.2' saved [2048000/2048000]
+- id: 14
+  author: Gilles
+  author-url: http://gilles.wittezaele.fr/blog/
+  date: 2012-10-17 23:45:03+02:00
+  contents: |
+    Donc le coupable serait Orange ?
+
+    Bizarre que Free n'ait rien dit, vu le prix qu'il paye à Orange.
+
+    Ou alors c'est fait exprès...
+- id: 15
+  author: Lu
+  date: 2012-10-18 00:08:50+02:00
+  contents: |
+    Testé sur une chaîne 100 % Free (dedibox / freemobile / antenne Free) ça
+    donne ça :
+    <https://plus.google.com/u/0/113381222271163241055/posts/5atmCSgpXuw>
+
+    Il y a un souci, moins extrême que ce qu'a vu Rom1V, mais il y a quelque
+    chose.
+- id: 16
+  author: Fabimaru
+  date: 2012-10-18 00:16:15+02:00
+  contents: |
+    > Donc le coupable serait Orange ?
+
+    Free a déjà été condamné pour avoir bridé en ADSL le p2p des abonnés
+    non-dégroupés. Alors pourquoi pas la même rengaine?
+
+    <http://www.numerama.com/magazine/21575-free-condamne-pour-avoir-bride-le-debit-d-acces-non-degroupes.html>
+- id: 17
+  author: Arkanosis
+  author-url: http://arkanosis.net/
+  date: 2012-10-18 01:08:19+02:00
+  contents: |
+    Je viens de tester avec Orange (100 % Orange — pas Free passant par Orange)
+    et j'ai un débit d'environ 44 kio/s quelle que soit l'extension. Serveur aux
+    US, téléphone à moins de 10 km de Paris, UMTS (pas d'HSDPA avec mon vieux
+    téléphone), essai à 1 h 00 CEST.
+- id: 18
+  author: ®om
+  date: 2012-10-18 06:52:10+02:00
+  contents: |
+    Merci de vos retours.
+
+    Il apparaît donc clairement que le bridage ne se produit chez *Free Mobile*
+    que sur des antennes *Orange*.
+
+    Plusieurs hypothèses :
+
+     * *Orange* a décidé de brider les clients de *Free* lorsqu'ils utilisent
+       ses antennes ;
+     * *Free* a décidé de brider ses clients lorsqu'ils sont sur une antenne
+       *Orange* afin de limiter le coût de l'itinérance (le montant qu'il doit
+       payer à *Orange*) ;
+     - *Free* et *Orange* se sont mis d'accord et ce bridage fait partie de
+       leur accord d'itinérance.
+- id: 19
+  author: Bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-10-18 08:52:03+02:00
+  contents: |
+    Bonjour à tous.
+
+    Voici mes constatations:
+
+    <http://blog.info16.fr/index.php?article55/debit-free-mobile-constat>
+- id: 20
+  author: dhoko
+  author-url: http://colibri-libre.org
+  date: 2012-10-18 13:24:52+02:00
+  contents: |
+    Un des soucis que je connais chez eux, c'est la quasi nulle connectivité
+    data. Chez FreeMobile en 2G = no connexion data. 3G une connexion data ultra
+    lente, et souvent nulle ou quasi nulle les 3/4 du temps (impossible de
+    charger une page ou autre avec). 3G+ c'est très très lent (charger une page
+    demande beaucoup de temps, une TL twitter aussi) mais ça "fonctionne".
+
+    Je capte à fond une antenne Free chez moi. La différence est trop faible
+    pour être constaté.
+
+    Neutralité maintenant, les débits aussi nul sont constaté en temps normal,
+    hors j'ai mis un VPN sur mon android et ho miracle j'ai du débit et quel
+    débit:
+
+    <http://twitter.com/dhoko_/status/258243712231038977/photo/1>
+
+    Ici c'est assez représentatif de la moyenne du 1Mbit/s en 3G+ (aucun débit
+    ou presque, je rame à atteindre le 1ko/s en DDL avec la 3G). En 3G+ avec VPN
+    je peux aisément regarder une vidéo Youtube en 3G, télécharger des apps &co.
+    Bref tout ce que je ne peux faire qu'en Wifi habituellement.
+
+    (Ma connexion 3G+ en VPN est proche d'une ligne ADSL à 6Mbs ce qui est
+    excellent, quand je regarde une vidéo ou autre, sinon on à une moyenne à
+    1Mb).
+
+    J'ai envie de dire WTF, en VPN je surf parfaitement, comme en wifi c'est
+    royal. Sans le VPN c'est la préhistoire.
+
+    Cette situation dure depuis 2 semaines. Je suis sur Paris.
+
+    Avant ça fonctionnait, lentement sur Paris rapidement ailleurs mais ça
+    fonctionnait. Sauf Youtube (à moins de mettre le VPN).
+- id: 21
+  author: Bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-10-18 15:19:48+02:00
+  contents: |
+    test 2 à 14h30
+
+    Cette fois le bridage est présent.
+
+    Mise à jour de mon billet.
+
+    <http://blog.info16.fr/index.php?article55/debit-free-mobile-constat>
+- id: 22
+  author: ®om
+  date: 2012-10-18 19:15:20+02:00
+  contents: |
+    Quelques nouveaux petits tests.
+
+    Tout d'abord, je me suis aperçu par hasard que les fichiers sans extension
+    (`random`) subissaient le même bridage que les fichiers multimédia
+    concernés.
+
+    Ensuite, le protocole *HTTPS* est lui aussi bridé, dans son intégralité
+    (puisque l'opérateur ne peut pas savoir ce qui transite) :
+
+        requête HTTP transmise, en attente de la réponse...200 OKLongueur: 2048000 (2,0M) [audio/ogg]Sauvegarde en : «random.oga» 2% [                                    ] 40 960      1,17K/s  eta 27m 49s
+
+    Il est en pratique inutilisable.
+
+    Par contre le SSH passe normalement :
+
+        $ scp monserveur:random.mp4 /tmp/random.mp4                                    100% 2000KB  71.4KB/s   00:28
+- id: 23
+  author: boutrosdu93
+  date: 2012-10-18 21:52:44+02:00
+  contents: |
+    ceux qui disent c'est orange, encore des gens qui n'ont rien compris on aura
+    beau le repeter 100 fois voue n'etes pas tres doué, peut etre faudrait
+    retourner au tricotage ou la couture.
+
+    les antennes orange ne font que renvoyer les connexions vers le coeur de
+    reseau free qui lui gere le traffic
+
+    <http://forum.hardware.fr/hfr/gsmgpspda/operateur/mobile-commenter-qualite-sujet_23814_184.htm>
+
+    > Je crois que tu confonds plusieurs notions. Le VPN ne permet pas de
+    > masquer l'identité du client, il permet de masquer le service... C'est une
+    > surcouche applicative, l'identification de l'abonné se fait bien avant.
+    >
+    > Orange vend de la data à Free, ils n'ont aucune raison de brider. Free
+    > paye de la data à Orange, et s'ils ont une demande supérieure à ce qu'ils
+    > achètent à Orange, ça sature et les débits s'écroulent. Si ils veulent
+    > réduire la demande sans modifier leur offre Internet (qui est leur image
+    > de marque : 16€/20€ pour tout compris et 3Go de fair use utilisable sur
+    > tous les protocoles, bref, la liberté et tout et tout), ils sont obligés
+    > de réduire dans certaines zones l'utilisation de certains services très
+    > consommateurs de bande passante, pour laisser de la place pour les autres
+    > services.
+    >
+    > Par exemple, youtube est le service qui consomme le plus, mais aussi le
+    > plus inutile (tu peux t'en passer plus facilement que les mails ou les
+    > réseaux sociaux) =\> s'ils le brident, peu de personnes vont raler, mais
+    > ils vont récupérer beaucoup de bande passante pour les utilisateurs
+    > "normaux". Si un utilisateur dans une zone "bridée" passe par un VPN, Free
+    > ne pourra détecter de quel type de service il s'agit, et ne le bridera pas
+    > comme si c'était du youtube.
+    >
+    > Ceci dit, j'ai l'impression que tout ce que je pourrais t'expliquer
+    > là-dessus ne te conviendra jamais, tu zapperas et reviendras encore à la
+    > charge 2 pages plus tard... Mais corrige-moi si je me trompe.
+- id: 24
+  author: Lambert
+  date: 2012-10-18 22:36:09+02:00
+  contents: |
+    Je confirme que les téléchargements pour écouter de la musique sur spotify
+    ou Uwall.tv sont au ralenti......La retransmission musicale s'interrompt
+    souvent car le telechargement ne suit pas....
+
+    Mais impossible de savoir sur quelle antenne Orange ou Free
+- id: 25
+  author: Roman Le Négrate
+  date: 2012-10-19 09:53:36+02:00
+  contents: |
+    Pour savoir sur quel réseau le téléphone est connecté, il existe plusieurs
+    applications pour Android, dont :
+
+     * [Agrume
+    Libre](https://play.google.com/store/apps/details?id=com.miglysoft.freemobile&hl=en)
+    (la meilleure selon moi)
+     * [Frenge](https://play.google.com/store/apps/details?id=com.jbl.freenge&hl=en)
+     * [Antenne
+    FreeMobile](https://play.google.com/store/apps/details?id=com.wire.freemobile.roaming&hl=en)
+- id: 26
+  author: Eusebe
+  date: 2012-10-20 08:28:50+02:00
+  contents: |
+    Il serait souhaitable de changer le titre, étant donnée la conclusion, sinon
+    ça fait un peu racolleur ;-)
+- id: 27
+  author: Bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-10-20 09:56:26+02:00
+  contents: |
+    Bizarrement aujourd'hui samedi, pas de bridage et vous ?
+
+    Le Week-end end, il bride pas histoire que ce soit pas trop visible ? :)
+- id: 28
+  author: funnoam
+  date: 2012-10-20 13:19:29+02:00
+  contents: |
+    Oui, je viens de tester en HTTPS, en HTTP, des fichiers MP4, MP4, ZIP, rien
+    n'est bridé, Spotify est utilisable (enfin!!!!) et tout est rapide.
+
+    Je peux même visionner des vidéos youtube en 3G, c'est dire...
+- id: 29
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-10-20 14:25:23+02:00
+  contents: |
+    Je suis en train de faire un test toute les 30 minutes
+
+    On peut suivre l'évolution du débit sur la courbe sur mon billet :
+
+    <http://blog.info16.fr/index.php?article55/debit-free-mobile-constat#c1350735782-1>
+
+    L'explication la plus probable est un bridage de frère pour éviter de payer
+    du peering a FT
+
+    Mais ce que je pige pas c'est pourquoi se baser sur les extensions de
+    fichiers...
+
+    100Mo que se soit en PDF ou en ogv c'est la même chose...
+- id: 30
+  author: ®om
+  date: 2012-10-20 15:37:22+02:00
+  contents: |
+    @[**Bartounet**](#comment-27) @[**funnoam**](#comment-28)
+    Chez moi, rien n'a changé, c'est toujours bridé en fonction de l'extension
+    (testé à l'instant, à 15h30). Êtes-vous sûrs d'être toujours sur une antenne
+    *Orange* ?
+
+    @[**Eusebe**](#comment-26)
+    Que proposes-tu ? Pour moi, le titre est toujours valable...
+- id: 31
+  author: Bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-10-20 15:40:32+02:00
+  contents: |
+    Pour ma part y a qu'un antenne... je suis en campagne.
+- id: 32
+  author: Eusebe
+  date: 2012-10-20 16:12:42+02:00
+  contents: |
+    @®om: quelque chose du genre "l'itinérance de Free chez Orange n'est pas
+    neutre". On voit bien que cette absence de neutralité n'est pas par la
+    volonté de Free puisqu'ils l'accordent sur leur réseau... La faute est bien
+    chez Orange.
+- id: 33
+  author: ®om
+  date: 2012-10-20 16:26:27+02:00
+  contents: |
+    @[**Eusebe**](#comment-32) :
+
+    Pour moi, il y a [3 hypothèses](#comment-18) pour l'origine de cette
+    décision : soit *Free*, soit *Orange*, soit les deux.
+
+    On ne peut pas, à l'heure actuelle, affirmer que ça vient d'*Orange*, *a
+    fortiori* exclusivement.
+- id: 34
+  author: Bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-10-20 16:30:10+02:00
+  contents: |
+    Pourquoi la faute à Orange ?
+
+    A mon avis c'est plutot Free qui est en cause.
+
+    Il ne veulent pas payer le peering c'est tout...
+- id: 35
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-10-21 08:54:33+02:00
+  contents: |
+    Mise a jour du billet : [débit free mobile pour les fichiers
+    multimedia](http://blog.info16.fr/index.php?article55/debit-free-mobile-constat)
+
+    Courbe du débit sur 24h \#monblog \#freemobile
+- id: 36
+  author: Free
+  author-url: http://www.forfaitfree.com
+  date: 2012-10-23 16:22:41+02:00
+  contents: |
+    Bonne nouvelle, l'ARCEP semble se pencher sur le sujet. Reste à savoir quand
+    la situation va pouvoir être débloquée...
+- id: 37
+  author: Demellayer
+  date: 2012-10-24 19:05:32+02:00
+  contents: |
+    Depuis des semaines (aout 2012) je désespère avec la bande passante chez
+    FREE, mais en ADSL.
+
+    Ce soir,j e procède à des mises à jour des applications Final Cut Pro et
+    Adobe en parallèle afin de pousser au max.
+
+    En regardant le débit moyen sur la console de ma Freebox 180 KB/s
+
+    En me connectant en VPN depuis un serveur situé à Bale en CH, mon débit
+    moyen passe à 490 KB/s.
+
+    FREE ne bride peut être pas, mais en fonction du routage effectué le débit
+    change du simple au double voir plus.
+
+    DSLAM CH74 Hte Savoie
+- id: 38
+  author: Alex
+  date: 2012-10-27 17:19:53+02:00
+  contents: |
+    Malheureusement depuis maintenant un moment chez Free ça devient un gros
+    bordel.
+
+    Je suis abonné chez Free en ADSL depuis 2005 dans différents logements et
+    DSLAM et chez Free Mobile depuis mai dernier.
+
+    Je suis aussi abonné à Spotify Premium.
+
+    Depuis environ 6 mois j'ai de nombreuses difficultés à utiliser ce dernier
+    en soirée, tout comme Youtube.
+
+    Sauf après 1h et avant 9h il est souvent impossible de regarder une vidéo
+    sur Youtube (en 320p), même en laissant charger ...
+
+    Et ça c'est en ADSL, quand je passe sur ma connexion 3G Free Mobile (et en
+    passant par une antenne Free Mobile à deux pas de chez moi) je peux utiliser
+    Youtube sans problème à toute heure ainsi que Spotify ...
+
+    Bien que j'ai souvent des problèmes de connectivité en 3G.
+
+    Il serait temps que Free se bouge le cul, bien qu'ils aient des différents
+    avec Google les clients n'ont pas à en ressentir les effets. On paye pour un
+    service.
+- id: 39
+  author: Roman Le Négrate
+  author-url: http://roman.lenegrate.me
+  date: 2012-10-28 12:39:00+02:00
+  contents: |
+    Tout à fait d'accord. J'ai actuellement Freebox + Free Mobile mais je suis
+    frustré des deux côtés pour les raisons que tu as évoquées (et autres). Je
+    ne vois pas la situation s'arranger de si tôt et le silence habituel de Free
+    me pèse sérieusement. Personnellement, je change d'abonnement téléphone
+    \*et\* ADSL : Joe Mobile pour tester, et OVH ADSL Pro -- voir en particulier
+    [cette page](http://www.ovh.fr/adsl/pro.xml) sous Fonctionnalités \>
+    Connexion ADSL \> L'ADSL sans limite | Neutralité du net.
+- id: 40
+  author: JA
+  date: 2012-11-06 10:06:47+01:00
+  contents: |
+    Génial, merci bartounet pour ces tests !
+
+    Effectivement, je rame depuis quelques temps, le bridage est drastique,
+    accès impossible à google play en particulier, pratique lorsqu'on vient de
+    réinstaller son téléphone!
+
+    Reste plus qu'à créer une application type speed test un peu plus élaborée
+    qui reproduit les tests que tu as fait de manière régulière et qui trace les
+    résultats en fonction de l'antenne (free/itinérance orange/autre
+    opérateur..). Les résultats seront plus oposables que des tests non
+    réguliers faits par un seul opérateur et permettraient d'avoir de vraies
+    statistiques..
+
+    Dommage, si Free ne communique pas dessus, c'est que cela lui causerait
+    beaucoup de tort.. ce qu'il y a derrière doit être sérieux.
+
+    Alors entre installer un VPN et changer d'opérateur le temps que le tout
+    soit résolu, je me tâte..
+
+    See you, bravo en tout cas!
+- id: 41
+  author: Roman Le Négrate
+  author-url: http://roman.lenegrate.me
+  date: 2012-11-06 11:33:44+01:00
+  contents: |
+    Pour info, j'ai basculé vers Joe Mobile et c'est nickel. Je (re)découvre la
+    3G (HSPA+ la plupart du temps). Enfin accès à Maps, Facebook, YouTube, Gmail
+    (j'y avais accès chez Free mais très lent), et même Spotify !
+
+    Idem concernant le passage de Free ADSL à OVH pack ADSL Pro : ~ même débit,
+    stable, mais surtout, enfin du vrai YouTube non bridé à toute heure.
+
+    Comblé des deux côtés. J'ai un peu casqué en frais de résiliation et mois en
+    cours perdu, mais franchement ça valait le coup. L'épisode Freebox + Free
+    Mobile aura eu deux effets bénéfiques, ceci-dit : instaurer des tarifs
+    honnêtes chez la concurrence, et me faire grandement apprécier les débits
+    non bridés une fois retourné chez cette concurrence ;-)
+- id: 42
+  author: JA
+  date: 2012-11-06 12:00:55+01:00
+  contents: |
+    Pour résumer, aujourd'hui je paye 38 € pour freebox optique + 16 € forfait
+    télécom, les deux bridés. Le contrat n'est pas rempli, c'est très agaçant.
+
+    J'ai calculé avec mon historique de conso qu'avec zéro forfait je paierai en
+    moyenne 15€ de téléphone et avec une box SFR optique 23€ (promos en cours à
+    Paris, et frais de résiliation offerts).
+
+    Soit 648 € pour Free et 456 € chez concurrent : Free est +50% plus cher pour
+    mon utilisation. Je suis donc le pigeon.
+
+    PS : j'ai toujours supporté Free mais quand on touche au coeur du service,
+    on risque de s'en mordre les doigts après. En plus je suis un peu agacé car
+    j'ai attendu 1 mois et demi après plusieurs soucis avec Free pour avoir mon
+    accès internet. La je perds mon temps sur mon mobile pour comprendre
+    pourquoi ça ne marche pas, puis sur les forums, puis je compare les offres..
+    Si on chiffrait ça en dommages-intérets, Free m'apporte plus de soucis que
+    de services.
+- id: 43
+  author: Neptune
+  date: 2012-11-18 18:52:47+01:00
+  contents: |
+    Prend un petit serveur VPN qui est fiable ce qui te débridera
+- id: 44
+  author: JA
+  date: 2012-11-19 14:32:17+01:00
+  contents: |
+    merci, j'ai résolu le problème en allant chez un concurrent. Je reviendrai
+    quand ça fonctionnera mieux..
+- id: 45
+  author: TeT
+  date: 2012-11-19 19:33:33+01:00
+  contents: |
+    Bravo pour ce test. Je me contentais de SpeedTest pour confirmer mon débit
+    mais effectivement c'est plus malin de fonctionner par extensions. Qui plus
+    est le fichier étant parfaitement identique, le test en devient encore plus
+    probant.
+
+    Je suis un fervent défenseur de Free en général, mais je dois bien admettre
+    que le manque de transparence sur ce bridage (grossier en plus) m'irite
+    énormément.
+
+    Je vais donc passer à la concurrence moi aussi...
+
+    PS: Je suis abonné premium Spotify, le service est INUTILISABLE sur une
+    antenne orange.
+
+    Alors bon, je veux bien être patient, mais 9.99€ par mois pour attendre que
+    Free dimensionne correctement son infrastructure réseau, c'est plus
+    possible.
+
+    Sosh donc... (et passage à 2Go de data, moins mais plus neutre)
+- id: 46
+  author: Mr Xhark
+  author-url: http://blogmotion.fr
+  date: 2012-11-26 18:59:34+01:00
+  contents: |
+    Attention à ne pas confondre neutralité et QoS dans certains commentaires.
+
+    Il y a aussi les histoires de peering avec Google (qui touche le Play Store,
+    YouTube, Google Music, etc.)
+
+    De mon côté je me suis aperçu que Free devait mettre une très forte QoS
+    prioritaire sur les tests SpeedTest, car ils sont toujours bon! y compris
+    quand on a un débit \<56k ... étrange non ? :)
+- id: 47
+  author: Vincent
+  date: 2013-01-10 14:25:06+01:00
+  contents: |
+    > Sur mon téléphone avec Android 4.11, connecté au réseau Free Mobile (sur
+    > une antenne d'Orange)
+
+    Comment faire pour savoir à quelle antenne on est connecté et à quel
+    opérateur elle appartient?
+- id: 48
+  author: ®om
+  date: 2013-01-10 14:32:24+01:00
+  contents: |
+    @[**Vincent**](#comment-47)
+    Il y a des applications qui te permettent de savoir. Moi j'utilise une
+    méthode beaucoup plus rustique : j'appelle le `000`.
+
+    La réponse est soit :
+
+    > **Free Mobile**, bonjour. Le numéro que vous avez composé n'est pas
+    > attribué...
+
+    Soit :
+
+    > **Orange** vous informe que le numéro demandé n'est pas attribué...
+- id: 49
+  author: Vincent
+  date: 2013-01-10 14:36:47+01:00
+  contents: |
+    Merci mais ni le `000` ni le `0` ne fonctionnent sur mon Nexus. Le téléphone
+    fait "bip" et raccorche.
+- id: 50
+  author: ®om
+  date: 2013-01-10 14:41:14+01:00
+  contents: |
+    @[**Vincent**](#comment-49) :
+
+    Effectivement, ça fait pareil sur le téléphone d'un collègue qui a
+    *Cyanogen*.
+
+    Par contre, nous venons d'essayer, en composant le `06 00 00 00 00`, ça
+    répond bien (en disant que le numéro n'est pas attribué).
+- id: 51
+  author: Vincent
+  date: 2013-01-10 14:46:21+01:00
+  contents: |
+    J'ai ICS standard fourni par Samsung.
+
+    Ça d'indique pas l'opérateur: "Le numéro que vous avez demandé etc."
+
+    Il doit sûrement exister une appli pour ça.
+- id: 52
+  author: Kyriog
+  author-url: http://blog.keuse.fr/cglapa
+  date: 2013-01-10 14:48:11+01:00
+  contents: |
+    @Vincent : Pour ma part, j'utilise
+    <https://play.google.com/store/apps/details?id=org.pixmob.freemobile.netstat>
+    :)
+
+- id: 53
+  author: Vincent
+  date: 2013-01-10 14:55:47+01:00
+  contents: |
+    Merci je vais regarder
+
+    De toute façon, j'en ai assez de ne pas pouvoir consulter le web à Paris
+    donc je vais passer chez BT en attendant que Free ait assez d'antennes ici.

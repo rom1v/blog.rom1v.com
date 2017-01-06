@@ -1,0 +1,29 @@
+- id: 1
+  author: Gardouille
+  author-url: http://links.gardouille.fr/
+  date: 2014-02-16 11:09:47+01:00
+  contents: |
+    Cool merci pour cette découverte :)
+
+    À part d'éventuelles présentations à réaliser, peu d'intérêt de faire du Latex
+    pour moi (pas de rédaction hors wiki ^^). À tester sous peu.
+- id: 2
+  author: Rolinh
+  author-url: http://blog.rolinh.ch/
+  date: 2014-02-16 11:19:33+01:00
+  contents: |
+    Super article, très intéressant. Merci. :-)
+- id: 3
+  author: 'Pandoc: simplify Beamer/LaTeX with markdown | Deimosfr Blog'
+  author-url: http://blog.deimos.fr/2014/02/26/pandoc-simplify-beamerlatex-with-markdown/
+  date: 2014-02-26 12:07:05+01:00
+  pingback: true
+  contents: |
+    […] discover it with the post of ®om's blog. Thanks to him […]
+- id: 4
+  author: Twicedd
+  author-url: http://ucoin.io
+  date: 2014-04-07 14:05:18+02:00
+  contents: |
+    Super intéressant, je vais adopter tout ça pour ma prochaine présentation !
+    Merci !

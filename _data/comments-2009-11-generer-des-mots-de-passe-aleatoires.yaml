@@ -1,0 +1,79 @@
+- id: 1
+  author: Tite-Live
+  date: 2009-11-22 14:43:10+02:00
+  contents: |
+    Génial ! :)
+- id: 2
+  author: Blaque
+  date: 2009-11-22 17:54:48+02:00
+  contents: |
+    apg génère des mots de passe aléatoires et mémorisables aisément puisque
+    prononçables. Un exemple de sortie :
+
+        slappy:~# apg
+        Please enter some random data (only first 16 are significant)
+        (eg. your old password):>
+        jipAtwurb4 (jip-A-twurb-FOUR)
+        RynVers6Dry (Ryn-Vers-SIX-Dry)
+        nagBorimned4 (nag-Bor-im-ned-FOUR)
+        Crehimad8 (Cre-him-ad-EIGHT)
+        finIabphid0 (fin-Iab-phid-ZERO)
+        ciWeujonsUc2 (ci-Weuj-ons-Uc-TWO)
+- id: 3
+  author: koilito
+  date: 2009-11-27 21:47:34+02:00
+  contents: |
+    On peut également lui donner un fichier qui servira à produire le hash, de
+    manière à générer toujours les mêmes mots de passe.
+
+        pwgen -H /monfichier.txt
+
+    Cela a l'avantage de permettre de retrouver le mot de passe, mais danger car
+    cela devient une faille potentielle
+- id: 4
+  author: 'Ubuntu Server : sites web | Le weblog de Vanaryon'
+  author-url: http://www.vanaryon.tk/2010/02/ubuntu-server-sites-web/
+  date: 2010-03-17 15:40:00+02:00
+  pingback: true
+  contents: |
+    [...] en définir un fort pour plus de sécurité. Si vous n'avez pas d'idée de
+    phrase de passe, lisez ce billet vous expliquant comment installer pwgen
+    pour en générer [...]
+- id: 5
+  author: Spleen
+  date: 2011-09-02 04:21:14+02:00
+  contents: |
+    Bonjour, en faisant joujou avec pwgen pour génèrer des clés WPA2 de 63
+    caractères, j'ai été confronter à un problème. Certain caractère spéciaux ne
+    sont pas pris en compte pour le protocole WPA... Est-il possible de
+    spécifier des caractères spéciaux précis à pwgen ? Dans un fichier de conf
+    peut-être ? Merci.
+- id: 6
+  author: 'Tiny Tiny RSS : auto-hébergement des flux RSS &#8211; ®om&#039;s blog'
+  author-url: http://blog.rom1v.com/2011/06/tiny-tiny-rss-auto-hebergement-des-flux-rss/
+  date: 2011-11-01 13:44:48+02:00
+  pingback: true
+  contents: |
+    [...] Puis créer un utilisateur flux avec les droits sur cette base (on
+    pourra générer son mot de passe grâce à pwgen) : [...]
+- id: 7
+  author: kleim
+  date: 2012-02-29 11:47:09+01:00
+  contents: |
+    @Spleen Pas besoin de pwgen pour ça ! Ça se fait en bash ;)
+
+    {% highlight bash %}
+    < /dev/urandom tr -dc A-F0-9 | head -c63
+    {% endhighlight %}
+
+    (d'après une astuce de TuxPlanet :
+    <http://www.tux-planet.fr/generer-des-mots-de-passe-aleatoires-sous-linux/>)
+- id: 8
+  author: 'Ubuntu Server : sites web | Wilibre'
+  author-url: http://wilibre.homelinux.net/ubuntu-server-sites-web/
+  date: 2012-12-16 12:10:39+01:00
+  pingback: true
+  contents: |
+    [...] un fort pour plus de sécurité. Si vous n’avez pas d’idée de phrase de
+    passe, lisez ce billet vous expliquant comment installer pwgen pour en
+    générer aléatoirement.Ensuite, allons-y pour la [...]

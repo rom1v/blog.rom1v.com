@@ -1,0 +1,1108 @@
+- id: 1
+  author: pjanoo
+  author-url: http://www.colibrix.info
+  date: 2009-08-17 02:38:17+02:00
+  contents: |
+    J'ai fait la même chose mais sous Debian; par contre j'ai une connexion
+    sécurisée pour lire mes messages via roundcube. Je suis allergique au fait
+    de devoir taper mon mot de passe en clair via internet. J'ai aussi mis un
+    anti-spam, antivirus, jukebox (via jinzora), openfire (serveur jabber),
+    c'est que du bonheur
+- id: 2
+  author: mahikeulbody
+  date: 2009-08-17 08:47:41+02:00
+  contents: |
+    J'ai aussi fait ça à une époque, jusqu'à ce que je me rende compte que ça
+    m'obligeait à laisser un ordi allumé 24h/24. Alors, entre maîtrise de ses
+    données et gaspillage énergétique\* j'ai choisi...
+
+    \* un serveur "public" consomme aussi, bien sûr, mais beaucoup moins par
+    "individu" car il est mutualisé.
+- id: 3
+  author: Julien
+  date: 2009-08-17 09:52:33+02:00
+  contents: |
+    Arf c'est quand même encore trop compliqué pour que je fasse le grand pas!
+
+    Mais sympa l'article;)
+- id: 4
+  author: ropib
+  date: 2009-08-17 10:03:51+02:00
+  contents: |
+    Certes, c'est toujours utile.
+
+    Par contre il me semble que se libérer c'est justement de ne pas héberger
+    tout ça, c'est cesser d'être contraint par la nécessité de prendre en charge
+    tout ce qui fait que nous pouvons être reconnus par les autres (les données
+    dites "personnelles"). En ce qui concerne les mails il s'agit de flux qui
+    nous sont destinés mais il n'y a aucune libération à devoir prendre en
+    charge tout le processus de diffusion. L'internet libre n'est certainement
+    l'identification stricte d'une communication 1-1, bien au contraire.
+- id: 5
+  author: krs
+  date: 2009-08-17 11:39:14+02:00
+  contents: |
+    Un exemple d'installation et de conf d'un anti-spam serait intéressant.
+
+    Ca peut aller si on a que notre adresse e-mail, mais dès que l'on a quelques
+    utilisateur, ça devient vite l'horreur. Spamassassin me laisse passer 30% du
+    spam environ et la charge serveur que ça occasionne parfois est non
+    négligeable.
+- id: 6
+  author: davandg
+  date: 2009-08-17 11:55:52+02:00
+  contents: |
+    Que ce passe-t-il lorsque l'ordinateur/la connexion internet est
+    indisponible ?
+
+    Le mail est renvoyé au destinataire ?
+- id: 7
+  author: Minishooter
+  date: 2009-08-17 12:09:55+02:00
+  contents: |
+    Joli article, je compte installer un serveur mail sur mon serveur Debian
+    dans peu de temps. Malheureusement, je suis chez Orange, et toutes les
+    sorties SMTP (mise à part pas celui d'Orange) sont bloquées... :/
+
+    Si quelqu'un a une solution pour contrer cette restriction, je suis preneur,
+    j'ai penser à faire passer ça dans un tunnel par HTTP ou SSH (ce que je ne
+    sais absolument pas faire...), c'est possible?
+- id: 8
+  author: mahikeulbody
+  date: 2009-08-17 13:33:16+02:00
+  contents: |
+    @davandg: Le serveur SMTP expéditeur va réessayer plusieurs fois à quelques
+    heures (jours ?) d'intervalle. Le problème c'est quand on part en vacances:
+    soit on laisse l'ordi allumé (=\> gaspillage énergétique), soit on le laisse
+    éteint (=\> mails renvoyés à l'expéditeur).
+
+- id: 9
+  author: ®om
+  date: 2009-08-17 14:26:26+02:00
+  contents: |
+    > @[**ropib**](#comment-4)
+    >
+    > Par contre il me semble que se libérer c'est justement de ne pas héberger
+    > tout ça, c'est cesser d'être contraint par la nécessité de prendre en
+    > charge tout ce qui fait que nous pouvons être reconnus par les autres (les
+    > données dites "personnelles").
+
+    Faire héberger ses mails par quelqu'un, c'est de la facilité.
+
+    Les héberger soi-même, c'est de l'indépendance.
+
+    Considérerions-nous être plus libre si nous n'avions pas à gérer nos comptes
+    en banque parce que quelqu'un le fait pour nous ?
+
+    Considérerions-nous être plus libre si nous n'avions pas à nous déplacer
+    pour aller voter si quelqu'un le fait pour nous ?
+
+    La notion d'indépendance me semble plus proche de "liberté" que celle de
+    "facilité", qui ne représente que la liberté de ne pas avoir à faire...
+
+    Je ne dis pas que tous les arguments sont en faveur de l'hébergement perso,
+    la "facilité" pèse beaucoup dans la balance face au respect de la vie
+    privée...
+
+    > @[**ropib**](#comment-4)
+    >
+    > L'internet libre n'est certainement l'identification stricte d'une
+    > communication 1-1, bien au contraire.
+
+    L'internet libre (et l'internet tout court), c'est quand c'est la périphérie
+    qui possède l'intelligence et le contenu, contrairement au minitel où tout
+    est centralisé et accédé par des terminaux passifs.
+- id: 10
+  author: Julien
+  date: 2009-08-17 14:39:05+02:00
+  contents: |
+    Je pense qu'il faut savoir trouver l'équilibre entre la gain et le risque
+    d'un hébergement sous-traité ou non.
+
+    Pour les emails, sachant que nos conversations vont vers des personnes sous
+    Gmail et co. google a toujours accès indirectement à notre vie privée :(.
+    Son déploiement lui permet même de reconstituer je pense une bonne partie de
+    nos contacts sans même que l'on soit client chez eux.
+
+    Je suis très intéresse par des articles sur la mise en place d'un serveur
+    sécurisé, et la lute contre les spams. Si vous avec des liens je suis
+    preneur.
+
+    Est il possible d'avoir une gestion des contacts à la facebook, c'est à dire
+    pouvoir taguer nos contacts pour en faire des listes (tag et non catégorie
+    pour assurer une transversalité des groupes).
+
+    Merci
+- id: 11
+  author: ®om
+  date: 2009-08-17 14:40:10+02:00
+  contents: |
+    > @[**davandg**](#comment-6)
+    >
+    > Que ce passe-t-il lorsque l'ordinateur/la connexion internet est
+    > indisponible ?
+    >
+    > Le mail est renvoyé au destinataire ?
+
+    Les serveurs SMTP retentent d'envoyer le message généralement durant 48
+    heures... Au-delà, évidemment, il n'y a pas de magie, pas de serveur, pas de
+    mails.
+
+    > @[**mahikeulbody**](#comment-2)
+    >
+    > J'ai aussi fait ça à une époque, jusqu'à ce que je me rende compte que ça
+    > m'obligeait à laisser un ordi allumé 24h/24. Alors, entre maîtrise de ses
+    > données et gaspillage énergétique\* j'ai choisi…
+    >
+    > \* un serveur "public" consomme aussi, bien sûr, mais beaucoup moins par
+    > "individu" car il est mutualisé.
+
+    Il faut mettre en place une machine allumée 24 heures sur 24 qui ne consomme
+    presque rien (pas une grosse tour avec 15 ventilos). C'est pour ça que j'ai
+    choisi une eeebox (qui est encore trop puissante pour ce qu'elle fait, mais
+    bon).
+
+    Le top, ce serait que tous ces mini-serveurs (apache, postfix, dovecot...),
+    qui demandent la puissance d'une calculatrice, soient intégrées aux
+    Freeboxes et autres Machinboxes : aucune consommation supplémentaire.
+- id: 12
+  author: Dof
+  author-url: http://www.daupheus.com/
+  date: 2009-08-17 14:45:55+02:00
+  contents: |
+    Salut Rom !
+
+    Génial ton article !
+
+    Rajoute un spamassassin, amavis, courrier-imaps, de l'https et un petit
+    squirrelmail et un fail2ban pour bannir les auth failure ! et tu as la
+    solution que j'utilise actuellement ! Si tu as besoin d'un coup de main, je
+    suis dispo sur Jabber !
+
+    Continue comme ça ;p
+- id: 13
+  author: Dof
+  author-url: http://www.daupheus.com/
+  date: 2009-08-17 14:50:48+02:00
+  contents: |
+    A aussi :
+
+    Pense à changer ta reverse aussi car certain MX check si l'ip qui a envoyé
+    le mail à un bon reverse.
+
+    Tu peux faire ça dans ton panel sur ta freebox.
+
+    Sinon tu risques de perdre des mails ou que ça n'arrive pas à ton
+    destinataire.
+- id: 14
+  author: Julien
+  date: 2009-08-17 17:15:12+02:00
+  contents: |
+    J'ai trouvé cette vidéo d'Opéra Unite.
+
+    Elle reprend bien la philosophie contre le minitel 2.0 je trouve:
+
+    <http://www.youtube.com/watch?v=D5hr-6cw4M8>
+- id: 15
+  author: animo
+  date: 2009-08-17 17:57:31+02:00
+  contents: |
+    "apache le mini-serveur demande la puissance d'une calculatrice"
+
+    hahaha j'ai bien rit...
+
+    Sérieusement, pour ceux que ça tente un vds sera toujours une meilleur
+    solution pour éviter la tour qui consomme 24/24 à la maison.
+- id: 16
+  author: Bertrand
+  date: 2009-08-17 18:30:25+02:00
+  contents: |
+    Bonjour,
+
+    cet article est très bien pour décrire comment monter un service de mail,
+    par contre pour ce qui est de la motivation il y a une nuance à apporter
+    AMHA.
+
+    Exemple du blog: vous dite que c'est du contenu qui ne doit pas être hébergé
+    ailleurs.
+
+    Il me semble qu'on a tout intérêt à avoir un hébergement pour son blog (et
+    mail, etc), *à la condition de pouvoir obtenir ses données à tout moment*.
+
+    Pourquoi est-ce intéressant:
+
+     * pas de souci de disponibilité
+     * partage de l'énergie
+     * tout est prêt à servir
+
+    Dans ce cas, la bonne solution est plutôt un backup régulier des données
+    (par exemple un export XML du blog, ou un dump direct de la base de
+    données). A cette seule condition les données ne sont pas captives, et donc
+    il n'y a pas de problème de liberté.
+
+    Pour le cas du mail par exemple, un simple accès IMAP permet de garder le
+    contrôle de l'accès à vos données: vous êtes en effet alors capable de
+    migrer l'intégralité de vos mails d'un hébergeur vers un autre, sans rendre
+    de comptes au premier hébergeur.
+
+    Le vrai souci AMA est de pouvoir et d'avoir mis en place une sauvegarde
+    régulière des données hébergées par des tiers et d'être capable si besoin
+    d'exploiter ces sauvegardes pour réinjecter les données ailleurs (en
+    auto-hébergement ou non); et donc de bien choisir ses hébergeurs au départ.
+
+    (après c'est toujours intéressant de savoir monter soi-même ce genre de
+    service, évidemment)
+- id: 17
+  author: ®om
+  date: 2009-08-17 20:23:25+02:00
+  contents: |
+    > @[**Minishooter**](#comment-7)
+    >
+    > Malheureusement, je suis chez Orange, et toutes les sorties SMTP (mise à
+    > part pas celui d'Orange) sont bloquées... :/
+
+    Les opérateurs ont décidé de permettre le filtrage du port 25 afin d'éviter
+    que des millions de machines zombies envoient du spam…
+
+    Cependant, cette configuration doit être désactivable (sur la Freebox elle
+    l'est par exemple).
+
+    Dans le cas contraire, c'est une atteinte importante à la neutralité du
+    réseau, et je te conseille de contacter ton opérateur (pour leur demander
+    d'ouvrir le port 25 sur ta box, en leur expliquant le pourquoi). Merci de
+    nous donner les retours si c'est le cas :-)
+- id: 18
+  author: ®om
+  date: 2009-08-17 21:03:04+02:00
+  contents: |
+    > @[**Bertrand**](#comment-16)
+    >
+    >Il me semble qu'on a tout intérêt à avoir un hébergement pour son blog (et
+    > mail, etc), *à la condition de pouvoir obtenir ses données à tout moment*.
+
+    Il y a deux types de données hébergées : des données publiques (blog) et des
+    données privées (mail).
+
+    Dans les deux cas, comme tu le rappelles, une condition nécessaire à la
+    liberté numérique est d'avoir le contrôle de ses données (pouvoir récupérer
+    les données à tout moment, dans le format voulu, et pouvoir supprimer une
+    donnée dès qu'on en a envie…).
+
+    Mais il y a pour chacun des cas une autre condition importante.
+
+    Dans le cas des données privées, c'est le fait d'être le seul à avoir accès
+    techniquement à ses données (et à ceux à qui on l'autorise, évidemment). Un
+    serveur de mails hébergé autre part pourra être techniquement consulté par
+    le prestataire (de sa propre initiative ou non, par exemple à la demande du
+    gouvernement dans des pays non libres). Par techniquement, j'entends "sans
+    piratage" : les données sont là, des personnes sont susceptibles de les lire
+    très facilement.
+
+    Dans le cas des données publiques, c'est le contraire : ce n'est plus une
+    possibilité de lecture non désirée, c'est une possibilité d'interdiction.
+    Prenons l'exemple du blog, quelqu'un publie un article ne plaisant pas à une
+    personne "influente". Cette personne menace le prestataire de porter
+    plainte, celui-ci ne va pas s'embêter à déterminer si ce qui a été dit
+    rentre dans le cadre de la liberté de la presse ou dans celui de la
+    calomnie : il va couper l'accès. Surtout dans les pays moins libres. Il est
+    donc important d'être le seul à avoir accès au bouton qui déconnecte les
+    contenus.
+
+    > @[**Bertrand**](#comment-16)
+    >
+    > Pourquoi est-ce intéressant:
+    >
+    >  * pas de souci de disponibilité
+    >  * partage de l'énergie
+    >  * tout est prêt à servir
+
+    Tu as tout-à-fait raison, déléguer la gestion de ses contenus a certains
+    avantages indéniables (sinon ça ne marcherait pas aussi bien que ça, et 99%
+    de la population ne confierait pas toutes ses données personnelles à des
+    hébergeurs).
+
+    Pour l'énergie, c'est une vraie question, mais un faux problème : il
+    suffirait d'un peu de volonté de la part des opérateurs pour faire tourner
+    un apache sur toutes les MachinBoxes, afin de remettre l'intelligence à la
+    périphérie. Ces boxes sont de toute façon allumées 24h/24.
+- id: 19
+  author: Regala
+  date: 2009-08-18 12:32:08+02:00
+  contents: |
+    @Rom: apache est loin d'être léger, et ce serait un scandale de l'embarquer
+    dans une quelconque box. y a plus léger ET plus performant maintenant :)
+
+    sinon la solution d'utiliser un serveur dédié quelconque (kimsufi ou dedibox
+    ou ...) c le meilleur compromis entre "je veux pas qu'il y ait un pc qui
+    tourne 24/24 chez oim" et "j'héberge mes mails".
+- id: 20
+  author: ®om
+  date: 2009-08-18 12:58:24+02:00
+  contents: |
+    Quand je dis "apache", j'entendais un serveur http quelconque pour que toute
+    personne puisse héberger son site ou son blog.
+
+    Tu penses à quoi quand tu dis "plus léger ET plus performant" ? Et quelles
+    sont les contreparties (sécurité, stabilité...) ?
+- id: 21
+  author: dan
+  date: 2009-08-18 13:45:28+02:00
+  contents: |
+    bonjour
+
+    Alors moi j'aimerais savoir,
+
+    as tu une solution pour récupérer tes mails sur pda par exemple ?
+
+    j'utilisais avant zarafa (qui lui synchronise, mail, calendrier, et taches),
+    mais le soucis, c'est qu'il gère lui même les mails (dans sa base) et du
+    coup, pas de répertoire /maildir et donc, va lui faire apprendre les spams
+    par exemple....
+
+    Alors qu'avec un répertoire /maildir, ben une simple commande (j'men
+    souviens pu, mais du style spamassasin -ham ou spamassin -spam....) et hop,
+    il apprend....
+
+    Alors saurais-tu par le plus grand des hazard interstéllaire, si il existe
+    une autre solution (free et opensource of course) pour avoir les mails, un
+    webmail ET une synchro avec mobile (mail + calendrier + tache)
+
+    Opengoo ou egroupware doivent le faire je pense avec funambol, mais si tu
+    sais comment les configurer...j'suis preneur ! lol ! (et encore, ca doit
+    synchro les mails, mais pas le calendrier et taches)
+
+    sinon z-push le fait aussi en dehors de zarafa, mais juste les emails, et
+    moi je veux tout...email ET calendrier ET taches loool !
+
+    wouai...j'suis gavé chiant ! :)
+- id: 22
+  author: Regala
+  date: 2009-08-18 13:46:11+02:00
+  contents: |
+    cherokee, ou lighttpd: les performances sont globalement les mêmes, voire
+    meilleures. et l'empreinte mémoire est décente :p
+
+    sinon niveau stabilité, cherokee n'a pas encore de v1.0 releasée, mais ça
+    approche, et la stabilité est largement au rendez-vous.
+
+    Quant à Lighttpd, il a eu le temps de faire ses preuves et de se faire sa
+    place en tant qu'alternative sérieuse à Apache.
+
+    Pour moi, à part pour faire du tomcat (et encore), l'une des seules raisons
+    d'utiliser Apache serait d'avoir un dépôt SVN qu'on veut partager en
+    http+webdav (protocole non recommandé par Collab et la team SVN quand même).
+    Ou d'avoir une appli web qui tourne avec mod\_perl exclusivement. Les
+    alternatives supportent très bien les reverse-proxy ou FCGI/SCGI/WSCGI....
+- id: 23
+  author: Regala
+  date: 2009-08-18 13:51:46+02:00
+  contents: |
+    Pour ce qui est de la sécurité, je fais confiance aux développeurs de
+    Cherokee ou Lighttpd, pour faire en sorte d'avoir moins de failles qu'Apache
+    :) (avec un codebase supportant quasiment les mêmes
+    protocoles/standards/bla/etc, mais au moins 10 fois plus petit, c'est plus
+    facile d'éviter les bourdes :))
+- id: 24
+  author: G.
+  date: 2009-08-18 15:52:21+02:00
+  contents: |
+    Je pense qu'il faut avoir 2 connexions internet avant de se lancer dans ce
+    type de projet.
+
+    Et pour la conso des machines peut etre que l'avenir est dans ce genre de
+    machines qui consomment 5W :
+    <http://www.silicon.fr/fr/news/2009/02/25/marvell_lance_un_serveur_de_la_taille_d_une_prise_de_courant>
+- id: 25
+  author: PaulK
+  date: 2009-08-18 16:12:18+02:00
+  contents: |
+    Bonjour et bravo pour cet article.
+
+    J'envisage moi aussi d'acheter une eeebox pour m'héberger mon
+    /site/blog/jabber/mail et ainsi contribuer à un internet acentré.
+
+    Pour info, une eeebox consomme moins de 20W, soit autant qu'une Freebox HD.
+    Pour le retour de mail en cas de serveur pas allumé 24/24, on peut toujours
+    s'arranger avec un ami pour fournir un serveur de messagerie secondaire.
+
+    De toute manière, les \*Box contiennent pour la plupart un serveur web pour
+    les configurer, et je trouve dommage qu'ils ne permettent pas d'employer ce
+    serveur pour autre chose (héberger son blog perso...).
+
+    Sinon, ajouter SASL à postfix peut être pas mal, d'autant plus que Dovecot
+    le propose.
+
+    Pour plus d'infos à propos de l'auto-hébergement (infos techniques), je vous
+    conseille le site <http://wiki.auto-hebergement.fr/>. (Il détaille
+    d'ailleurs également la configuration Posfix+Dovecot.)
+- id: 26
+  author: Benjamin Bayart
+  author-url: http://www.fdn.fr
+  date: 2009-08-18 19:30:03+02:00
+  contents: |
+    @Minishooter (et aux autres)
+
+    Effectivement, Orange filtre le port 25, ce qui va vous empêcher de monter
+    un serveur de messagerie simple et classique.
+
+    Plusieurs pistes intéressantes:
+
+     * changer de FAI pour faire appel aux services de quelqu'un qui ne filtre
+    pas (oui, hein, mauvais fournisseur, changer fournisseur, méthode simple);
+     * quand on ne peut pas, monter un tunnel pour récupérer, via ce tunnel, un
+    accès non filtré (FDN devrait fournir ce type de service dans quelques
+    temps), c'est techniquement un peu pénible, mais ca contourne à peu près
+    tout;
+     * essayer en utilisant le protocole submission plutôt que SMTP, mais ca ne
+    va pas vous avancer beaucoup, tous les serveurs à l'autre bout ne parlent
+    pas cette langue là, il faudra donc que vous ayez un smarthost (une machine
+    qui accepte votre courrier pour le relayer sur le net).
+
+    Enfin, le meilleur pour la fin, il reste ma piste préférée. Votre FAI est
+    non-neutre vis à vis du réseau, sans raison valable (l'excuse officielle,
+    c'est l'envoi de SPAM, or vous n'en envoyez pas, ayant éradiqué votre
+    dernier Windows tout crevu de virus). Il se trouve que ce problème concerne
+    directement les services de l'ARCEP. En effet, en dehors de problèmes
+    annexes (concurrence, tromperie sur la marchandise, etc) c'est une atteinte
+    à la neutralité du réseau, qui se trouve être une obligation que les
+    opérateurs doivent respecter, et que l'ARCEP doit leur faire respecter.
+
+    Les pistes sont sans doute à chercher du côté de:
+
+     * <http://www.telecom-infoconso.fr/j-ai-un-probleme-avec/pratiques-commerciales-abusives/recours-possibles-contre-mon-operateur-ou-fournisseur.html>
+     * <http://www.mediateur-telecom.fr/>
+- id: 27
+  author: Arkhee
+  date: 2009-08-18 20:22:45+02:00
+  contents: |
+    Sur le principe d'héberger son propre serveur de mails, au delà de la
+    considération purement technique qui inciterait à gérer son mail en
+    mutualisé ou à la limite en privé/dédié chez un hébergeur, il y a quand même
+    une question sécuritaire : les serveurs Linux étant fortement représentés
+    pour le web et la messagerie (et à juste titre vu la qualité des services
+    apportés !), ils sont donc aussi fortement attaqué ! Il suffit de peu de
+    failles ou d'un serveur insuffisamment protégé, ou incorrectement paramétré
+    (par exemple en laissant le serveur en relai ouvert) pour que le serveur de
+    mail serve de relai pour toute une floppée de spams ! Que le serveur ait été
+    piraté ou non.
+
+    Ca n'engage que moi, mais je pense qu'une part importante du spam que nous
+    recevons est envoyé depuis des dédiés mal sécurisés qui sont partiellement
+    contrôlés par des spammeurs. Il en suffit de peu pour faire du dégât, vu la
+    bande passante !
+
+    Donc dans l'idée, bien, mais la sécurisation d'un serveur de mail est
+    complexe, et ça ne peut pas être l'affaire d'un débutant.
+
+    Par ailleurs je recommanderais de laisser la gestion du nom de domaine au
+    registrar, et de ne pas le faire sur son propre serveur, sauf cas
+    spécifiques (nom de domaine accessible uniquement en réseau local par
+    exemple).
+
+    Maintenant je dirai que pour héberger soi-même ses mails, il faut que ce
+    soit pour des considérations idéologiques fortes.
+
+    Selon moi les critiques sur la vie privée sont un peu excessive : d'une part
+    car le traitement des données privées est soumis à des règles, mêmes aux
+    états-unis, et d'autre part la quantité d'informations est telle qu'elle
+    empêche l'extraction de connaissance.
+
+    Echellon est censé scrutter nos vies, ils n'ont pas remarqué qu'un attentat
+    se préparait le 11 septembre ...
+- id: 28
+  author: ®om
+  date: 2009-08-18 20:42:34+01:00
+  contents: |
+    Merci de ton point de vue.
+
+    Concernant la transformation du serveur en zombie envoyeur de spam, je pense
+    qu'une petite vérification de temps en temps des mails envoyés peut suffire
+    à le détecter :
+
+        cat /var/log/mail.log | grep relay
+
+    Non?
+- id: 29
+  author: Arkhee
+  date: 2009-08-18 22:52:18+02:00
+  contents: |
+    Il y a de l'idée ;) Mais je pense que cette ligne de commande devrait être
+    un peu affinée. Je l'ai lancée sur serveur assez utilisé et le résultat
+    n'est pas humainement traitable : dès qu'un serveur devient assez utilisé,
+    il génère beaucoup d'attrait et reçoit pas mal de spam non relayé, mais qui
+    peut encombrer le serveur si les bons filtres et les bonnes redirections
+    (spam =\> poubelle, genre ...) ne sont pas en place.
+
+    Pendant les premières semaines cela sera peu visible, mais après quelques
+    temps, il devient connu que les ports de messagerie de cette ip sont ouverts
+    et les tentatives de connexion sont plus nombreuses.
+
+    Bref, mon avis pour ceux qui veulent tenter l'aventure : le niveau technique
+    requis n'est pas insurmontable au "geek du dimanche" ;) Mais un serveur mail
+    requiert du suivi sur le long terme.
+- id: 30
+  author: meuced
+  author-url: http://eyes.neuneuil.com/
+  date: 2009-08-22 13:37:14+02:00
+  contents: |
+    Très sympa comme billet.
+
+    Ca me rappelle l'époque où j'étais chez Nerim, avec ip fixe. J'avais monté
+    mon propre serveur qui faisait partage de cnx internet, serveur web, serveur
+    mail avec spamassassin et d'autres bricoles. C'était un pentium 100mhz, mon
+    1er pc qui datait de 1996. Un bon recyclage.
+
+    C'était efficace comme solution, et je n'avais pas de pertes de mails car
+    Nerim offrait un mx backup : en d'indispo de mon serveur mail pendant style
+    5 ou 7 jours, les mails étaient reçus par le mx backup de nerim qui tentait
+    régulièrement de renvoyer le mail au mx principal (le mien).
+
+    Totale indépendance, pas de tierce fournisseur qui possède mes données (sauf
+    pour le mx backup, mais bon...).
+
+    Par contre, il faut savoir faire face aux aspects d'administration de la
+    solution : pannes matérielles, problèmes logiciels, etc... Quand ça marche,
+    c'est bien, quand ça marche pas et si on a du temps, c'est bien, mais quand
+    on commence à avoir une certaine vie sociale bien occupée, c'est plus dur.
+
+    J'en suis donc venu au bout d'un moment (ça a coïncidé avec un changement de
+    FAI) à laisser tomber tout ça et à mettre en place des solutions plus
+    simples et moins chronophage : redirection des mails de mon domaine vers un
+    email "générique" style gmail ou free.fr, utilisation de pages persos
+    gratuites, et plus récemment location d'une dedibox pour mettre en place
+    certains sites web et autres trucs.
+
+    en résumé : monter son propre serveur de mail, c'est une super expérience
+    pour bien comprendre comment tout ça fonctionne, mais sur le long terme
+    c'est pas très viable à moins de monter un "réseau" de serveurs mails avec
+    plusieurs potes avec d'avoir de la redondance au maximum. Ainsi, si problème
+    chez l'un, bin ça passe chez l'autre et pas de pertes, et on a moins la
+    pression pour réparer.
+- id: 31
+  author: ®om
+  date: 2009-08-22 21:38:25+02:00
+  contents: |
+    > @[**meuced**](#comment-30)
+    >
+    > C'était efficace comme solution, et je n'avais pas de pertes de mails car
+    > Nerim offrait un mx backup : en d'indispo de mon serveur mail pendant
+    > style 5 ou 7 jours, les mails étaient reçus par le mx backup de nerim qui
+    > tentait régulièrement de renvoyer le mail au mx principal (le mien).
+
+    Tu sais comment mettre ça en place chez Gandi?
+
+    J'ai mis en MX secondaire un de leur serveur, mais je ne sais pas comment
+    récupérer les mails qui vont dessus (et encore moins comment faire pour
+    qu'il les renvoie sur mon serveur dès qu'il est de nouveau dispo).
+- id: 32
+  author: JoyeuxDrille
+  date: 2009-08-27 09:13:17+02:00
+  contents: |
+    Bonjour
+
+    je viens de lire et d'apprécier l'ensemble du tuto et l'ensemble de vos
+    commentaires.
+
+    Je souhaite utiliser HYLAFAX comme serveur de fax. Or, Postfix - suivant
+    l'ensemble des docs mis en ma possession - est un passage obligé.
+
+    Je ne souhaite pas faire de gestion de mails mais j'apprécie de recevoir mes
+    fax sur une adresse courriel pour gérer l'information lors de mes
+    déplacements.
+
+    Or je ne trouve pas de tuto qui me permette de configurer correctement
+    l'ensemble des points.
+
+    Etant derrière une freebox, je me heurte à plusieurs problèmes de
+    configuration.
+
+    Si quelqu'un avait soit un tuto sous la main soit des liens je serai
+    preneur.
+
+    Merci par avance
+
+    Ma config est Ubuntu904
+
+    Bonne journée
+- id: 33
+  author: Emmanuel
+  date: 2009-09-02 16:25:12+02:00
+  contents: |
+    > @[**®om**](#comment-28)
+    >
+    >     cat /var/log/mail.log | grep relay
+
+        grep relay /var/log/mail.info
+
+    C'est largement suffisant.
+- id: 34
+  author: Ford Prefect
+  date: 2009-09-03 06:37:41+02:00
+  contents: |
+    Bonjour
+
+    Je suis tombé ici au hasard de ma navigation.
+
+    Le point qui m'interpelle est la question de la consommation des ordinateurs
+    personnels
+
+    Celle ci est a 99,9% convertie en chaleur et pour ma part pendant
+
+    au moins 6 mois par an je ne pense pas que ce soit un gachi.
+
+    Par contre remplacer tous ces ordinateurs harmonieusement
+
+    repartits par d'enormes serveurs entassés dans un local inhabité qu'il est
+    imperatif de climatiser en est un.
+
+    Avec internet (ou part le 0,1% manquant) on peut meme envisager que la
+    charge de travail de certains PC l'été soit transferée
+
+    sur ceux qui sont en hiver mais la je reve :-)
+
+    Grossierement l'été je fait du P2P sur un petit PC.
+
+    Et l'hiver je fais des Divx avec 4 grosses bécanes pour lui donner
+
+    du grain a moudre.En plus je regarde ceux telechargés l'été avec
+
+    un TV dont 100% de la consommation part en chaleur.
+- id: 35
+  author: Nicolas
+  author-url: http://www.sicard.name
+  date: 2009-09-22 08:25:58+02:00
+  contents: |
+    Très bonne démarche pédaguogique et démocratique ! Seulement il existe une
+    distrib spécialisée qui fait ça super bien : sme
+    <http://wiki.contribs.org/Main_Page>.
+
+    Tu as tout et c'est installé en moins de 20 mn : http, smtp, pop(s)/imap(s),
+    dns, dhcp, ftp, samba, webmail, cms (joomla!, wordpress),....
+
+    Si tu installes ça sur un pc basse conso, ça coute un peu plus qu'en hébergé
+    mais pas trop.
+
+    @+
+
+    Nicolas
+- id: 36
+  author: Xorax
+  author-url: http://www.xorax.info/
+  date: 2009-09-24 14:40:48+02:00
+  contents: |
+    Très bonne démarche.
+
+    Après il reste quand même l'antispam et faut dire que la dessus les soluces
+    libres sont acceptable mais tout de même pas à la hauteur de gmail par
+    exemple.
+
+    Un petit webmail gratos en sup bien connu : [zimbra](http://www.zimbra.com/)
+
+    D'ailleurs en parlant d'antispam si quelqu'un trouve quelque chose qui
+    ressemble à akismet en libre je prend :)
+- id: 37
+  author: RizThon
+  date: 2009-09-25 12:02:56+02:00
+  contents: |
+    Ce serait bien en effet de mettre un OpenWRT <http://openwrt.org/> sur nos
+    boxes...mais bon niveau puissance (au moins pour la Freebox v5 que j'ai),
+    c'est pas vraiment ça...quand le mode routeur est lancé et qu'il faut gérer
+    plein de connexions en même temps, ça rame pas mal et le débit chute.
+- id: 38
+  author: marc
+  author-url: http://www.kataplop.net
+  date: 2009-09-27 13:21:00+02:00
+  contents: |
+    pour avoir longtemps tout hébergé sur un petit ordi à faible conso derrière
+    des freebox, j'en suis revenu. La raison simple est que ça demande du temps,
+    de l'argent et de la motivation.
+
+    Les lignes adsl tombent en panne, l'electricité se coupe, le matériel tombe
+    en panne... Mon petit ordi ne permet d'avoir qu'un disque 2"5, donc adieu la
+    redondance. Le disque crash, c'est arrachage de cheveux. L'envoie de mails
+    pose aussi des soucis, car souvent, je passais en spam.
+
+    Avoir une machine allumée 24/7 chez soi oblige a toujours laisser le
+    courant, même lorsqu'on part pour une longue durée.
+
+    Bref, j'ai passé beaucoup de temps. Maintenant, j'ai une solution "hybride"
+    en passant par un hébergement chez gandi. Je continu d'être totalement
+    maitre de mes données, mais sans les problèmes matériels. Je me repose aussi
+    sur leurs serveurs de mails, même si je pourrais tout refaire chez moi.
+- id: 39
+  author: "Ajouter l&#8217;authentification SMTP sur un serveur mail &laquo; ®om&#39;s blog"
+  author-url: http://blog.rom1v.com/2010/01/ajouter-lauthentification-smtp-sur-un-serveur-mail/
+  date: 2010-01-02 22:24:22+02:00
+  pingback: true
+  contents: |
+    [...] Ce billet vient compléter mon premier billet concernant l’installation
+    d’un serveur mail sur Ubuntu Server. [...]
+- id: 40
+  author: Guizmo.7
+  author-url: http://Drupal.GuillaumeG.eu
+  date: 2010-01-19 11:38:49+02:00
+  contents: |
+    Je n'ai pas trouvé la partie ou tu expliques les créations de certificats.
+
+    Tu as du recopier les lignes de la doc d'Ubuntu non ?
+- id: 41
+  author: ®om
+  date: 2010-01-19 11:50:27+02:00
+  contents: |
+    > @[**Guizmo.7**](#comment-40)
+    >
+    > Je n'ai pas trouvé la partie ou tu expliques les créations de certificats.
+
+    C'est parce que sur **Ubuntu Server** les certificats existent déjà (ils
+    sont générés lors de l'installation).
+- id: 42
+  author: Guizmo.7
+  author-url: http://Drupal.GuillaumeG.eu
+  date: 2010-01-19 13:22:34+02:00
+  contents: |
+    > @[**®om**](#comment-41)
+    >
+    > C'est parce que sur **Ubuntu Server** les certificats existent déjà (ils
+    > sont générés lors de l'installation).
+
+    Ha d'accord je vois : tu choisis la facilité !
+- id: 43
+  author: TuxP
+  author-url: http://blog.tuxp.fr
+  date: 2010-02-02 15:05:26+02:00
+  contents: |
+    > pour avoir longtemps tout hébergé sur un petit ordi à faible conso
+    > derrière des freebox, j'en suis revenu. La raison simple est que ça
+    > demande du temps, de l'argent et de la motivation.
+    >
+    > Les lignes adsl tombent en panne, l'electricité se coupe, le matériel
+    > tombe en panne… Mon petit ordi ne permet d'avoir qu'un disque 2″5, donc
+    > adieu la redondance. Le disque crash, c'est arrachage de cheveux.
+
+    +1, la disponibilité du service nécessite de la redondance au niveau des
+    équipements (et pas seulement du raid) et cela s'avère souvent assez
+    couteux. Confier la gestion de ses mails a une simple eeebox me paraît pour
+    le moins osé. Par contre, mettre un place une répli à l'aide de fetchmail
+    est une solution intéressante. Mais si le besoin premier est de ne pas
+    laisser trainer ses mail chez un fournisseur (google au hasard), il est bien
+    plus prudent de passer par un hébergeur, dont c'est le métier.
+- id: 44
+  author: "Serveur SMTP opérationnel, et bugtracker en place &laquo; Le blog d&#39;Asmoth"
+  author-url: http://blog.asmoth.net/?p=14
+  date: 2010-02-12 14:24:18+02:00
+  pingback: true
+  contents: |
+    [...] si vous êtes sur les dns d'Orange, bien entendu, sinon, vous devrez
+    mettre l'adresse IP. Voici les deux liens qui m'ont permis d'y arriver.
+    Merci également à Vaur et [...]
+- id: 45
+  author: Etienne
+  author-url: http://arrakeen.net/
+  date: 2010-03-09 12:50:24+02:00
+  contents: |
+    Tiens, intéressant, j'ai l'impression de me lire ;)
+
+    Ça fait maintenant environ 10 ans que j'héberge mes mails/blogs/photos/etc.
+
+    Effectivement, ça prend du temps... et de l'argent. Mais pour moi c'est
+    important. Et pis ça m'amuse, na.
+
+    Aujourd'hui j'ai un système relativement stable et suffisamment redondant
+    (onduleur, RAID5 + MX backup chez mes parents + rsnapshot toutes les 4h sur
+    un boitier séparé, et bientôt un rsnapshot a distance).
+
+    Pour ce qui de la consommation, j'ai mon RAID5 (4 disques de 1.5To 5400rpm,
+    1 disque 80Go 2.5" que je vais remplacer par un SSD 8Go d'Aspire One, le
+    tout base sur un atom 330), freebox, routeur et boitier de sauvegarde (WD
+    White Book World Edition, avec une petite NSLU2 dessus :)). Donc ça suce
+    mais ça reste acceptable.
+
+    Sinon, je suis sous Ubuntu Server, LAMP et Zarafa avec Z-Push pour mon
+    iPhone. Mais je cherche un autre groupware, utilisant maildir pour le backup
+    incrémental, avec des briques facilement administrables (pas comme Zimbra ou
+    SoGo), une intégration décente avec Evolution ou Mail.App et une émulation
+    activesync complète. Des idées ? ;)
+- id: 46
+  author: "Filtrer les spams sur un serveur mail (SpamAssassin) &laquo; ®om&#39;s blog"
+  author-url: http://blog.rom1v.com/2010/03/filtrer-les-spams-sur-un-serveur-mail-spamassassin/
+  date: 2010-03-25 23:26:09+01:00
+  pingback: true
+  contents: |
+    [...] précédents billets sur l’auto-hébergement des mails : Hébergez vos
+    mails sur Ubuntu Server (et libérez-vous) Installer un webmail (RoundCube)
+    sur Ubuntu Server Ajouter l'authentification SMTP sur un serveur [...]
+- id: 47
+  author: Same
+  date: 2010-09-13 15:39:36+02:00
+  contents: |
+    Bonjour et merci pour ce tuto (ainsi que celui sur l'authentification SMTP)
+    qui m'ont permis de mettre en place un serveur de messagerie, impeccable !
+
+    Mes remarques :
+
+    Je n'avais pas la commande maildirmake, j'ai donc installé le paquet
+    courier-imap qui a, apparemment, écrasé la conf / le fonctionnement de
+    dovecot, que j'ai rétabli par un sudo apt-get install dovecot-imapd
+
+    A la ligne "protocols" de dovecot.conf, j'ai laissé "imap imaps", j'imagine
+    que c'est grâce à cela que la connexion IMAP par SSL est possible,
+    corrigez-moi si je me trompe.
+
+    Enfin, la seule chose qui m'a déstabilisée était d'attendre la propagation
+    DNS pour smtp.mondomaine.fr et pendant environ 24 heures j'étais incapable
+    d'envoyer des mails vers mon serveur ailleurs que depuis ce dernier :)
+
+    Merci encore et j'espère que mes quelques remarques pourront servir à
+    d'autres.
+- id: 48
+  author: ®om
+  date: 2010-09-13 16:35:29+02:00
+  contents: |
+    > @[**Same**](#comment-47)
+    >
+    > Je n'avais pas la commande maildirmake, j'ai donc installé le paquet
+    > courier-imap qui a, apparemment, écrasé la conf / le fonctionnement de
+    > dovecot, que j'ai rétabli par un sudo apt-get install dovecot-imapd
+
+    Il existe `maildirmake.dovecot` (je viens d'ailleurs de corriger le billet)
+    livré avec `dovecot`.
+
+    > @[**Same**](#comment-47)
+    >
+    > A la ligne "protocols" de dovecot.conf, j'ai laissé "imap imaps",
+    > j'imagine que c'est grâce à cela que la connexion IMAP par SSL est
+    > possible, corrigez-moi si je me trompe.
+
+    Tout à fait. Moi je n'ai pas activé `imaps`, car j'utilise IMAP par TLS
+    (c'est chiffré aussi, mais sur le même port qu'IMAP).
+- id: 49
+  author: "Adapter roundcube pour Gmail et son propre serveur - Autobloguant"
+  author-url: http://www.autobloguant.tk/?p=115
+  date: 2010-10-01 22:13:39+01:59
+  pingback: true
+  contents: |
+    [...] Partie serveur de mail : Hébergez vos mails sur Ubuntu Server [...]
+- id: 50
+  author: Same
+  date: 2010-10-05 12:30:54+02:00
+  contents: |
+    Bonjour, je reviens vers ce post par rapport à IMAPS ou comment installer un
+    certificat SSL pour dovecot.
+
+    Le crédit en revient à ce lien
+    <http://www.credentia.cc/certs/howto/dovecot.html>
+
+    Pour les non-anglophones et pour une idée éventuelle de billet je vais
+    expliquer les points clés :
+
+    Si vous avez suivi le tuto de Rom pour la mise en place de serveurs Postfix
+    et dovecot, il vous faudra obtenir un certificat pour imap.votredomaine.com
+    (et non votredomaine.com tout court)
+
+    On vous fournira alors deux fichiers : le certificat proprement dit
+    `xxx.cert` et une clé privée RSA `xxx.key`, il faudra placer ces fichiers
+    sur votre serveur à ces deux endroits :
+
+        /etc/ssl/certs/xxx.cert/etc/ssl/private/xxx.key
+
+    Les deux fichiers peuvent être renommés à loisir mais placez bien le
+    certificat dans `certs/` et la clé privée dans `private/`
+
+    Pour la suite, quelques commandes de droits sur la clé :
+
+        sudo chown root /etc/ssl/private/xxx.key
+        sudo chmod 600 /etc/ssl/private/xxx.key
+
+    Dernier point, éditez le fichier `/etc/dovecot/dovecot.conf` en modifiant
+    les lignes comme suit :
+
+        protocols = imaps
+        ssl_disable = no
+        ssl_cert_file = /etc/ssl/certs/xxx.cert
+        ssl_key_file = /etc/ssl/private/xxx.key
+
+    Redémarrez dovecot et votre certificat SSL est en place
+
+        sudo /etc/init.d/dovecot restart
+
+    Pour la configuration client, idem que dans ce tuto sauf que vous choisirez
+    d'utiliser SSL avec le port 993.
+
+    Voilà ça prend deux minutes et ça permet (notamment dans Mail sous Mac) de
+    ne plus avoir l'avertissement d'un serveur de mail "auto-signé", ce qui fait
+    plus pro pour des clients éventuels.
+
+    J'espère que ça servira à certains, @+ !
+
+    Same
+- id: 51
+  author: "Trier ses mails directement sur le serveur (procmail) &laquo; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2010/01/trier-ses-mails-directement-sur-le-serveur-procmail/
+  date: 2010-12-01 22:19:15+01:00
+  pingback: true
+  contents: |
+    [...] la continuité des articles consacrés à l’auto-hébergement des mails,
+    je vais présenter quelque chose que je voulais mettre en place depuis un
+    moment : le tri du [...]
+- id: 52
+  author: Manu1400
+  date: 2011-01-27 21:56:39+01:00
+  contents: |
+    <http://www.bortzmeyer.org/mx-secondaire.html> Article "Un MX secondaire
+    est-il vraiment utile ?"
+- id: 53
+  author: "Installer Ubuntu Server sur un Shuttle XS35 &laquo; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2011/06/installer-ubuntu-server-sur-un-shuttle-xs35/
+  date: 2011-06-07 00:37:11+02:00
+  pingback: true
+  contents: |
+    [...] tout est OK, on peut maintenant installer le serveur mail.
+    Mots-clefs :gnu/linux, serveur, ubuntu Category: Astuces, planet-libre, puf
+    [...]
+- id: 54
+  author: Mathieu
+  date: 2011-07-30 12:59:21+02:00
+  contents: |
+    Bonjour,
+
+    Merci pour le tuto. C'est exactement ce que je cherchais :) J'ai également
+    suivi le tuto d'authentification smtp.
+
+    Cependant je n'arrives pas à me connecter avec client de messagerie.
+
+    pour se connecter dans le tuto, tu indiques imap.rom1v.com et smtp.rom1v.com
+
+    Je pense que mon soucis viens des DNS :
+
+        mail.zilat.fr [A] ip publique du serveur
+        .zilat.fr [MX 10] mail.zilat.fr
+
+    Que dois-je alors utiliser en envoi et en réception ? Avez vous une
+    meilleure solution.
+
+    Autre question. Le tuto parle d'ouvrir les ports pop3 pos3s et imaps.
+    Pourquoi puisque on ne les utilise pas ?
+
+    Merci
+- id: 55
+  author: ®om
+  date: 2011-07-30 19:52:42+02:00
+  contents: |
+    > @[**Mathieu**](#comment-54)
+    >
+    > Cependant je n'arrives pas à me connecter avec client de messagerie.
+    >
+    > pour se connecter dans le tuto, tu indiques imap.rom1v.com et
+    > smtp.rom1v.com
+    >
+    > Je pense que mon soucis viens des DNS :
+    >
+    >     mail.zilat.fr [A] ip publique du serveur
+    >     .zilat.fr [MX 10] mail.zilat.fr
+    >
+    > Que dois-je alors utiliser en envoi et en réception ? Avez vous une
+    > meilleure solution.
+
+    Personnellement, j'utilise l'interface simplifiée de mon gestionnaire de
+    noms de domaines pour gérer tout ça.
+
+    Voici ce que j'ai (pour la partie qui nous intéresse ici) :
+
+        Nom  Type  Valeur
+        @    A     Mon adresse IPv4
+        @    AAAA  Mon adresse IPv6
+        smtp CNAME @
+        @    MX    smtp.rom1v.com
+
+    En gros, le `MX` de `rom1v.com` pointe sur l'adresse d'un sous-domaine
+    `smtp.rom1v.com`. Ce sous-domaine est défini comme un champ
+    [`CNAME`](http://en.wikipedia.org/wiki/CNAME_record) (ça pourrait tout aussi
+    bien être un champ `A` ou `AAAA` contenant l'IP directement).
+
+    Mais les sous-domaines `smtp.` et `imap.`, dans ce contexte, c'est juste
+    pour faire joli, vu qu'en pratique chez moi ils pointent vers la même
+    adresse que `rom1v.com`. Tu peux donc utiliser ton nom de domaine
+    directement sans t'embêter avec ça, si tu veux faire simple.
+
+    > @[**Mathieu**](#comment-54)
+    >
+    > Le tuto parle d'ouvrir les ports pop3 pos3s et imaps. Pourquoi puisque on
+    > ne les utilise pas ?
+
+    Le tuto indique qu'il faut ouvrir les bons ports sur le routeur, et il
+    rappelle les ports par défaut de chacun des protocoles liés à l'e-mail. Mais
+    tu as raison, en pratique si on ne met en place que l'IMAP, les autres ne
+    servent pas (c'est juste pour les avoir à disposition rapidement)…
+- id: 56
+  author: Mathieu
+  date: 2011-07-30 20:28:04+02:00
+  contents: |
+    Je te remercie pour ces éclaircissements. Ma configuration dns est donc Ok
+    mais maintenant j'ai compris :-). J'en ai profité pour refaire la
+    configuration dns avec des smtp et imap. Tu as raison c'est plus joli.
+
+    J'ai tout qui marche en local sur le serveur. Pour utiliser les smtp.dom et
+    imap.dom il me reste juste à attendre patiemment demain matin que OVH met à
+    jour tout le bazar.
+- id: 57
+  author: "Tiny Tiny RSS : auto-hébergement des flux RSS &#8211; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2011/06/tiny-tiny-rss-auto-hebergement-des-flux-rss/
+  date: 2011-11-02 17:54:09+02:00
+  pingback: true
+  contents: |
+    [...] principe. Comme pour le blog ou les mails, autant auto-héberger son
+    propre contenu, qui n’a rien à faire [...]
+- id: 58
+  author: "Ubuntu Server : introduction | Wilibre"
+  author-url: http://wilibre.homelinux.net/ubuntu-server-introduction/
+  date: 2011-11-09 15:44:12+02:00
+  pingback: true
+  contents: |
+    [...] de voir). Une eeeBox d’Asus me semble convenable pour héberger des
+    sites et faire office de serveur mail, Jabber (rom1v en fait l’expérience).
+    De plus, cette petite boîte ne consomme que 14W au [...]
+- id: 59
+  author: Filo-47
+  date: 2012-01-01 02:03:24+01:00
+  contents: |
+    Bonjour pour moi j'ai suivi toutes vos indications du tuto lorsque que je
+    passe au client l'outils mailutils ne retourne aucune erreur ( en local, en
+    lan ou as distance ), pourtant aucun éléments dans /home/filo/Maildir/new
+    J'ai tout de même continuer vers évolution ( je n'ai fait que le local ) et
+    il me demande de certifié une clé puis mon mot de passe et "Erreur durant
+    Examen des dossiers dans « Serveur IMAP filo". Déconnecté du serveur de
+    manière inattendue : Connexion ré-initialisée par le correspondant"
+
+    Pourquoi et surtout que puis-je comprendre de cetteerreur ?
+- id: 60
+  author: "Héberger un serveur Jabber simplement (prosody) &#8211; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2012/01/heberger-un-serveur-jabber-simplement-prosody/
+  date: 2012-04-30 08:10:28+01:00
+  pingback: true
+  contents: |
+    [...] adresse Jabber sera ainsi la même que mon adresse mail (rom suivi de
+    [...]
+- id: 61
+  author: Pierre-Loup
+  author-url: http://www.geekend.fr
+  date: 2012-07-21 11:01:32+01:00
+  contents: |
+    Merci !!!
+
+    Super article. C'est tellement difficile de trouver un guide pas à pas
+    accessible pour se créer un serveur mail à la maison ! Je viens juste de
+    tester l'envoi de mails de ma boite Gmail et ca fonctionne nickel !
+
+    Merci encore, je vais continuer la conf un peu plus tard ;)
+- id: 62
+  author: Gaelone
+  date: 2012-11-14 15:05:02+01:00
+  contents: |
+    Salut !
+
+    Si vous voulez un petit serveur qui ne consomme quasiment rien, il y a le
+    Rapsberry PI, c'est largement suffisant pour ce genre d'utilisation !
+
+    <http://www.raspberrypi.org/>
+
+    Gaelone \<.

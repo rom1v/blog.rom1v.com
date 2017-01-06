@@ -1,0 +1,162 @@
+- id: 1
+  author: Il Palazzo-sama
+  author-url: http://johotogoshinentai.wordpress.com/
+  date: 2009-12-20 23:05:15+02:00
+  contents: |
+    Je suis fan. XD
+
+    Mais je vais éviter de l'utiliser pour ça, en fait. Ne serait-ce que pour
+    garder une chance de battre mes propres records. ^^'
+- id: 2
+  author: Edouard
+  author-url: http://www.ensta.fr/~garnier
+  date: 2009-12-21 00:52:28+02:00
+  contents: |
+    C'est cool ce truc :)
+- id: 3
+  author: Yann
+  date: 2009-12-21 01:17:23+02:00
+  contents: |
+    Ce truc est génial, un grand merci! BIen utile pour du debug :)
+- id: 4
+  author: Billou
+  author-url: http://artisanat-numerique.fr
+  date: 2009-12-21 03:02:07+02:00
+  contents: |
+    C'est vrai que c'est assez sympathique, à tester pour le fun !
+
+    J'ai testé avec World Of Goo, ça fonctionne du tonnerre, mais pas en ligne
+    (évidemment ;) ), Lbreakout2 a une fonction empêchant la triche, quand on
+    modifie le score, il revient à ce qu'il était initialement, et pour
+    chromium-bsu, ça fonctionne bien, et en faisant peter le score à 1000 millions,
+    ça fait "bugger" le jeu et permet de rester invincible durant la montée du
+    compteur du score (et ça dure plus longtemps qu'un niveau). :)
+
+    Bien pour faire joujou mais faut pas en abuser, ça casse tout sinon :)
+- id: 5
+  author: Kervala
+  author-url: http://kervala.net
+  date: 2009-12-21 11:08:03+02:00
+  contents: |
+    Ah, ça me fait penser à Gamewizard sous DOS :) C'était exactement le même
+    principe, ça me rappelle de bons souvenirs :p
+
+    Merci pour l'astuce :)
+- id: 6
+  author: Indyana
+  date: 2009-12-21 11:15:00+02:00
+  contents: |
+    C'est nul!
+
+    Tout logiciel permettant de tricher n'offre aucun intérêt pour les
+    joueurs!..L'intérêt d'un jeu c'est vaincre la difficulté, si il y a moyen et
+    envie de la contourner, pourquoi jouer?...
+- id: 7
+  author: ®om
+  date: 2009-12-21 11:42:06+02:00
+  contents: |
+    @[**Indyana**](#comment-6)
+    Ce qui est intéressant, ce n'est pas de tricher, c'est de savoir comment
+    faire techniquement (ce qui est un but en soi)…
+
+    Ça a un autre intérêt, celui de prendre conscience qu'il est toujours
+    possible d'avoir la main sur un programme exécuté localement, et que la
+    sécurité ne peut pas être apportée en fournissant un binaire à
+    l'utilisateur.
+- id: 8
+  author: Logos
+  date: 2009-12-21 12:13:14+02:00
+  contents: |
+    Lol, super sympa comme utilisation...
+
+    Euhhh, ca marcherait pour changer la variable solde créditeur de mon compte
+    en banque???
+
+    Laquelle variable pourra être trouvé au fur et à mesure des dépenses faites?
+
+    =====\>[/] (parti très très loin)
+- id: 9
+  author: djib
+  author-url: http://djib.fr/
+  date: 2009-12-21 14:55:46+02:00
+  contents: |
+    Indyana, ce genre d'outil peut être très pratique. Tu peux typiquement
+    modifier la FOV (champ de vision) si tu as la chance de posséder un écran
+    très large pas adapté au format standard des jeux. ®om je me demande par
+    contre comment un programme est capable de travailler dans l'espace mémoire
+    d'un autre sans qu'il n'y ait de protection par l'OS…
+- id: 10
+  author: Gligli
+  date: 2009-12-21 15:08:00+02:00
+  contents: |
+    > @[**djib**](#comment-9)
+    >
+    > je me demande par contre comment un programme est capable de travailler
+    > dans l'espace mémoire d'un autre sans qu'il n'y ait de protection par
+    > l'OS…
+
+    C'est pour ça qu'il faut le lancer en root ;)
+- id: 11
+  author: wido
+  date: 2009-12-21 15:52:40+02:00
+  contents: |
+    Salut, je viens de le compiler (arch)
+
+    ça fonctionne du tonnerre,
+
+    mais il te manque quelque commande comme la fonction
+
+    "list"
+
+    pour afficher les variables
+
+    ou pour simplifier la recherche du pid:
+
+    {% highlight bash %}
+    scanmem --pid $(pidof ton_programme)
+    {% endhighlight %}
+
+    <http://taviso.decsystem.org/scanmem.html>
+
+    et une petite démo sur le jeu "robots":
+
+    <http://taviso.decsystem.org/smdemo.html> (animation en flash)
+
+    @Gligli, sous ma distribution, je n'ai pas besoin de le lancer en root :)
+- id: 12
+  author: djib
+  author-url: http://djib.fr/
+  date: 2009-12-21 17:11:50+02:00
+  contents: |
+    Effectivement ®om, tout s'explique ;)
+- id: 13
+  author: mikedafunk
+  author-url: http://mikedafunk.over-blog.org
+  date: 2009-12-26 21:24:38+02:00
+  contents: |
+    Sympa, ça m'a rappellé l'Amiga.
+
+    j'y avais un action replay software qui me permettait de tricher dans les
+    jeu, mais aussi de récupérer les banques d'images et les musiques présentes
+    en ram..
+
+    ça m'a donné envie de tricher avec les jeux en flash (histoire de rigoler
+    sur facebook)
+
+    Vu que ça n'a pas fonctionné, j'ai cherché un autre moyen, je viens de
+    tomber sur le module firefox tamper data, je teste...
+
+    A+
+- id: 14
+  author: B-boy Silver
+  date: 2010-01-18 16:22:27+02:00
+  contents: |
+    coucou tout le monde je vient de découvrir scanmem, et j'ai voulus essayer
+    sur firefox mais au moment de taper la value de mon score il analyse et me
+    dit qu'il y en a 0 quelqu'un aurait-il une solution a ce problème
+- id: 15
+  author: Ouranos
+  date: 2010-04-18 09:22:58+01:00
+  contents: |
+    Ça peut marcher avec des émus ? Sous VisualBoyAdvance, il trouve toujours 2
+    valeurs, donc je peux pas éditer...

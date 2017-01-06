@@ -1,0 +1,304 @@
+- id: 1
+  author: nicolas
+  date: 2014-07-20 23:50:21+02:00
+  contents: |
+    Merci beaucoup
+
+    cela m'interesse vivement, j'ai cependant une question, j'utilise
+    quotidiennement un logiciel pour synchroniser ma clef usb et certains
+    dossiers sur mon disque dur, j'utilise synkron, est-il toujours possible de
+    réaliser la synchronisation si la clef et les dossiers sur le disque dur
+    sont chiffrés?
+
+    merci pour ta réponse. Cordialement
+- id: 2
+  author: Snipe2004
+  date: 2014-07-21 00:26:36+02:00
+  contents: |
+    Très intéressant, mais quid d'un branchement sur un PC Windows ? Mac
+    accessoirement ? Le disque est-il lisible, déchiffrable?
+- id: 3
+  author: ®om
+  date: 2014-07-21 00:42:47+02:00
+  contents: |
+    > @[**nicolas**](#comment-1)
+    >
+    > est-il toujours possible de réaliser la synchronisation si la clef et
+    les dossiers sur le disque dur sont chiffrés?
+
+    Une fois déchiffré et monté dans un dossier (`/media/mydisk` ici), pour
+    l'outil de synchronisation, tout se passe comme si le disque n'était pas
+    chiffré.
+
+    > @[**Snipe2004**](#comment-2)
+    >
+    > Très intéressant, mais quid d'un branchement sur un PC Windows ? Mac
+    > accessoirement ? Le disque est-il lisible, déchiffrable?
+
+    Win-quoi ? MAC, comme l'adresse ? ;-)
+
+    Wikipedia dit qu'il y a des implémentations.
+
+    Mais je ne suis définitivement pas la bonne personne pour renseigner sur
+    Windows ou MAC (le jour où j'utilise ça, c'est qu'il y a un gros problème).
+- id: 4
+  author: Snipe2004
+  date: 2014-07-21 00:52:17+02:00
+  contents: |
+    Oui, moi aussi, mais parfois mes données voyagent vers des gens moins
+    exigeants que moi ^^ Merci cependant !
+- id: 5
+  author: cep
+  author-url: http://blog-libre.org/
+  date: 2014-07-21 08:52:00+02:00
+  contents: |
+    > Et je n'ai pas trouvé de solution pour permettre le luksOpen par un
+    utilisateur (non-root)
+
+    Pourquoi ne pas retenir Cryptkeeper, plus simple d'utilisation, ce qui est
+    pratique avec une clé usb et pour qu'il puisse être utiliser sans les droits
+    root :
+
+        adduser votre_user fuse
+
+    Accessoirement on peut l'utiliser avec Windows
+
+    <http://blog-libre.org/post/2014/04/01/cryptkeeper-encfs-chiffrer-linux-windows-interface-graphique>
+- id: 6
+  author: ®om
+  date: 2014-07-21 09:04:17+02:00
+  contents: |
+    > @[**cep**](#comment-5)
+    >
+    > Pourquoi ne pas retenir Cryptkeeper, plus simple d'utilisation
+
+    Ici, `dm-crypt` effectue le chiffrement directement au niveau des blocs.
+
+    Visiblement, _CryptKeeper_ est une interface pour [encfs][], qui effectue un
+    chiffrement en espace utilisateur au-dessus du système de fichiers. C'est
+    très pratique, mais les [performances][] s'en ressentent.
+
+    [encfs]: {% post_url 2008-08-27-encfs-repertoire-chiffre-par-mot-de-passe %}
+    [performances]: http://www.linuxuser.co.uk/reviews/the-best-file-encryption-software-in-open-source/3
+
+    Et il y a des effets de bord sur les stats des fichiers : il me semble qu'un
+    `rsync` vers un répertoire chiffré avec `encfs` considère que tous les
+    fichiers ont changé (pour l'éviter, il faut utiliser l'option `-c`, qui rend
+    le processus beaucoup plus long car il calcule le checksum de chaque
+    fichier).
+
+    Autre argument : une fois configuré, LUKS est très bien intégré au système,
+    sans logiciel supplémentaire.
+- id: 7
+  author: cep
+  author-url: http://blog-libre.org/
+  date: 2014-07-21 09:26:10+02:00
+  contents: |
+    Oui, je suis tout à fait d'accord sur l'ensemble si l'on recherche avant
+    tout la performance et, probablement, une meilleure sécurité.
+
+    En outre encfs a été retiré des dépôts Debian Jessie en raison de bugs non
+    corrigés.
+
+    Cryptkeeper s'impose essentiellement pour son utilisation simple et la
+    possibilité de l'utiliser avec windows.
+- id: 8
+  author: Macaque
+  date: 2014-07-21 17:51:56+02:00
+  contents: |
+    Sous gnome (en tout cas avec archlinux), on peut utiliser l'utilitaire
+    graphique "Disques".
+
+    Et avec le gnome-keyring on peut sauvegarder la passphrase pour que le
+    montage soit complètement automatique sur ce poste.
+- id: 9
+  author: Cascador
+  date: 2014-07-21 18:29:32+02:00
+  contents: |
+    Hello,
+
+    Concernant "je n'ai pas trouvé de solution pour permettre le luksOpen par
+    un utilisateur (non-root) en ligne de commande" : Tu ne veux pas le mettre
+    dans `/etc/sudoers` (en passant par `sudo visudo` évidemment) ?
+
+    Concernant la ligne
+
+        sudo dd if=/dev/zero of=/dev/XXX bs=4k
+
+    tu peux remplacer `bs=4k` par `bs=4M`, ça ira plus vite.
+- id: 10
+  author: ®om
+  date: 2014-07-21 19:58:01+02:00
+  contents: |
+    > @[**Cascador**](#comment-9)
+    >
+    > Tu ne veux pas le mettre dans `/etc/sudoers` ?
+
+    Je n'édite jamais ce fichier. Qu'écrirais-tu ?
+
+    Sinon, un script avec le bit [setuid][] devrait fonctionner aussi.
+
+    [setuid]: http://www.tuxation.com/setuid-on-shell-scripts.html
+
+    Mais j'aimerais plutôt savoir comment fait _Thunar_ pour monter le disque
+    sans être `root` (et sans modifier `sudoers`), pour faire la même chose en
+    ligne de commande.
+
+    > @[**Cascador**](#comment-9)
+    >
+    > tu peux remplacer `bs=4k` par `bs=4M`, ça ira plus vite.
+
+    En fait, je pense que non (j'ai remplacé `4k` (4000) par `4K` (4096)) :
+
+        $ time dd if=/dev/zero of=test bs=4K count=200000
+        200000+0 enregistrements lus
+        200000+0 enregistrements écrits
+        819200000 octets (819 MB) copiés, 13,1437 s, 62,3 MB/s
+
+        real    0m13.291s
+        user    0m0.024s
+        sys 0m0.992s
+
+        time dd if=/dev/zero of=test bs=4M count=200
+        200+0 enregistrements lus
+        200+0 enregistrements écrits
+        838860800 octets (839 MB) copiés, 13,054 s, 64,3 MB/s
+
+        real    0m13.232s
+        user    0m0.000s
+        sys 0m1.024s
+
+    Par contre, `4K`, c'est mieux qu'une valeur inférieure :
+
+        $ time dd if=/dev/zero of=test bs=1K count=800000
+        800000+0 enregistrements lus
+        800000+0 enregistrements écrits
+        819200000 octets (819 MB) copiés, 13,7981 s, 59,4 MB/s
+
+        real    0m13.966s
+        user    0m0.052s
+        sys 0m1.820s
+
+    Sur mon système, si je regarde la valeur de [`_SC_PAGESIZE`][pagesize] :
+
+    [pagesize]: http://en.wikipedia.org/wiki/Page_%28computer_memory%29#Unix_and_POSIX-based_operating_systems
+
+    {% highlight c %}
+    #include <stdio.h>
+    #include <unistd.h> /* sysconf(3) */
+    
+    int main(void) {
+        printf("The page size for this system is %ld bytes.\n",
+               sysconf(_SC_PAGESIZE)); /* _SC_PAGE_SIZE is OK too. */
+        return 0;
+    }
+    {% endhighlight %}
+
+    J'obtiens :
+
+        The page size for this system is 4096 bytes.
+
+    Ça change peut-être quelque chose sur d'autres architectures…
+- id: 11
+  author: Cascador
+  date: 2014-07-21 20:34:14+02:00
+  contents: |
+    La valeur de bs dépend de plusieurs facteurs dont ton disque dur (ou SSD),
+    le noyau, la distribution etc.
+
+    Le meilleur moyen de connaître la valeur idéale est de faire des benchmarks
+    bref intérêt limité mais si tu as 2 mn, testes avec des valeurs comme 2M et
+    4M pour voir.
+
+    Concernant le fichier /etc/sudoers, il s'édite avec sudo visudo mais si tu
+    n'as pas l'habitude de faire des modifications dans ce fichier, je préfère
+    éviter de donner des commandes à l'arrache car c'est un des fichiers les
+    plus sensibles du système.
+
+    Un bon point de départ :
+    <http://ilostmynotes.blogspot.fr/2011/05/howto-mount-remote-luks-encrypted.html>
+- id: 12
+  author: APLU
+  author-url: https://www.aplu.fr/v2
+  date: 2014-07-22 17:18:33+02:00
+  contents: |
+    Tu devrais effacer le disque après avoir fait le chiffrement plutôt que
+    avant, de cette façon la totalité du disque à l'air de contenir des données
+    aléatoires.
+
+    Avec ta solution, il possible de trouver les secteurs utilisés (même si ils
+    reste chiffrés) et donc d'avoir une idée de la quantité de donnée.
+
+    Tout ça expliqué mieux que moi dans la FAQ de cryptsetup :-)
+- id: 13
+  author: ®om
+  date: 2014-07-22 17:45:08+02:00
+  contents: |
+    @[**APLU**](#comment-12)
+    Merci, la [FAQ de cryptsetup][] est très intéressante. Je vais continuer de
+    la lire.
+
+    [FAQ de cryptsetup]: https://code.google.com/p/cryptsetup/wiki/FrequentlyAskedQuestions
+
+    En fait, je viens de comprendre que ça résout deux problèmes différents.
+
+    Dans la [section 5.3][], ils disent :
+
+    [section 5.3]: https://code.google.com/p/cryptsetup/wiki/FrequentlyAskedQuestions#5._Security_Aspects
+
+    > If you just create a filesystem on it, most of the old data will still be
+    > there. If the old data is sensitive, you should overwrite it before
+    > encrypting.
+
+    Pour protéger les anciennes données (en les supprimant), il faut écraser
+    avant le chiffrement.
+
+    > In any case, not initializing will leave the old data there until the
+    > specific sector gets written. That may enable an attacker to determine how
+    > much and where on the partition data was written. If you think this is a
+    > risk, **you can prevent this by overwriting the encrypted device** (here
+    > assumed to be named "e1") with zeros…
+
+    Et pour protéger les futures données (ou au moins quelques informations,
+    comme leur taille), il faut écraser **après** le chiffrement.
+
+    Ou alors, écrire `/dev/urandom` sur la partition non-chiffrée ?
+
+    Là où il peut y avoir un risque aussi (mais qu'on écrase avant ou après le
+    chiffrement), c'est avec la gestion des secteurs défectueux (qui ne seront
+    pas réécrits), ou pire les SSD qui écrivent où ils veulent.
+- id: 14
+  author: Xanatos
+  date: 2014-08-08 10:52:10+02:00
+  contents: |
+    Bonjour,
+
+    article intéressant et détaillé, je me demandais la chose suivante: quid de
+    la cohabitation d'une partition chiffrée avec LUKS et d'autres systèmes de
+    fichiers ? Il y a une méthodologie particulière à appliquer ?
+- id: 15
+  author: ®om
+  date: 2014-08-08 14:40:19+02:00
+  contents: |
+    @[**Xanatos**](#comment-14)
+    LUKS/cryptsetup et les systèmes de fichiers sont deux choses différentes.
+
+    LUKS te permet d'avoir une partition `/dev/mapper/quelquechose` qui se
+    comporte comme une partition "normale" (non chiffrée), sauf que physiquement
+    elle sera chiffrée. Dans celle-ci, tu mets le système de fichiers que tu
+    veux.
+- id: 16
+  author: true
+  date: 2014-11-10 11:21:40+02:00
+  contents: |
+    Pourquoi ne pas, simplement, utiliser Truecrypt?
+- id: 17
+  author: ®om
+  date: 2014-11-10 11:38:29+02:00
+  contents: |
+    @[**true**](#comment-16)
+    Quelques éléments de réponse :
+
+     * [Analysis: Is there a backdoor in Truecrypt? Is Truecrypt a CIA honeypot?](http://www.privacylover.com/encryption/analysis-is-there-a-backdoor-in-truecrypt-is-truecrypt-a-cia-honeypot/)
+     * [Résumé de l'affaire TrueCrypt](http://linuxfr.org/news/resume-de-l-affaire-truecrypt)
+     * [License and source model](https://en.wikipedia.org/wiki/TrueCrypt#License_and_source_model)

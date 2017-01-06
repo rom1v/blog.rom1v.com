@@ -1,0 +1,1507 @@
+- id: 1
+  author: edgydog
+  date: 2010-08-01 08:23:26+02:00
+  contents: |
+    Magnifique article et qui plus est très instructif.
+
+    De toute façon, l'Histoire a prouvé que forcer les êtres humains à faire ce
+    dont ils n'avaient pas envie n'amenait rien de bon, au contraire.
+
+    Le gouvernement espère forcer les utilisateurs à consommer plus en leur
+    bloquant l'accès aux moyens illégaux.
+
+    Pour la dernière anecdote concernant les box ADSL c'est lamentable d'en
+    arriver là, c'est comme le directeur qui accuse ses employés sans jamais
+    remettre lui ou sa politique commerciale en question.
+- id: 2
+  author: kim
+  date: 2010-08-01 10:11:54+02:00
+  contents: |
+    tu te trompes sur la partie "un logiciel impossible" : rien n'empêche le
+    logiciel, au moment où tu l'installes, d'avoir en "post installation" une
+    section "génération d'une paire de clés".
+
+    Le reste de l'analyse est plus ou moins juste : tu te retrouves quoiqu'il
+    arrive avec les clés utiles au chiffrement et à la signature des journaux,
+    d'une manière ou d'une autre (que ce soit sur disque ou en RAM), donc dès
+    que tu les auras récupérées, tu pourras effectivement faire ce que bon te
+    semble "tant que le logiciel ne tourne pas".
+
+    En effet si par exemple tu essayes de modifier le fichier alors même que le
+    soft tourne, on peut imaginer un mécanisme de détection de corruption
+    (checksum du fichier courant, ou plus bêtement nombre de lignes), et là ça
+    devient "plus chiant" à falsifier (j'ai pas dit impossible).
+
+    Enfin, un mouchard peut être libre, il en existe déjà (par exemple ceux qui
+    collectent des infos sur le hardware pour les envoyer à des listes, qui
+    permettent d'en savoir plus sur le support d'une CGU avec des drivers
+    libres, c'est des mouchards).
+
+    Par contre, de par la nature du libre, c'est complètement con de faire
+    reposer une sécurité sur un mouchard libre :)
+- id: 3
+  author: ®om
+  date: 2010-08-01 10:22:13+02:00
+  contents: |
+    > @[**kim**](#comment-2)
+    >
+    > tu te trompes sur la partie « un logiciel impossible » : rien n'empêche le
+    > logiciel, au moment où tu l'installes, d'avoir en « post installation »
+    > une section « génération d'une paire de clés ».
+
+    Et qu'est-ce que ça change qu'une paire de clé soit générée par le logiciel
+    après l'installation ?
+
+    > @[**kim**](#comment-2)
+    >
+    > si par exemple tu essayes de modifier le fichier alors même que le soft
+    > tourne, on peut imaginer un mécanisme de détection de corruption (checksum
+    > du fichier courant, ou plus bêtement nombre de lignes), et là ça devient
+    > « plus chiant » à falsifier (j'ai pas dit impossible).
+
+    Le démarrage et l'arrêt du logiciel est sous le contrôle de l'internaute (le
+    titulaire de la ligne), si c'est lui qui veut falsifier le journal, aucun
+    problème. C'est le cas typique : un internaute veut télécharger des fichiers
+    protégés par le droit d'auteur, il désactive son mouchard, mais ne veut pas
+    que ça soit écrit dans les logs.
+
+    > @[**kim**](#comment-2)
+    >
+    > Enfin, un mouchard peut être libre, il en existe déjà (par exemple ceux
+    > qui collectent des infos sur le hardware pour les envoyer à des listes,
+    > qui permettent d'en savoir plus sur le support d'une CGU avec des drivers
+    > libres, c'est des mouchards).
+
+    Les exemples que tu donnes ne sont pas des mouchards qui surveillent **les
+    utilisateurs** (qui voudraient lui cacher quelque chose).
+- id: 4
+  author: "Tweets that mention Le logiciel HADOPI est impossible « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/blog.rom1v.com/2010/08/le-logiciel-hadopi-est-impossible/?utm_source=pingback&amp;utm_campaign=L2
+  date: 2010-08-01 10:45:01+02:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by loque humaine, regis rome. regis
+    rome said: Le logiciel HADOPI impossible : http://bit.ly/cVp3K5 [...]
+- id: 5
+  author: gnuzer
+  author-url: http://gnuzer.legtux.org
+  date: 2010-08-01 11:25:27+02:00
+  contents: |
+    À mon avis il y'a deux raisons possibles à vouloir créer un journal en clair
+    et un journal chiffré. Soit l'HADOPI ne veut pas que quelqu'un qui aurait
+    intercepté le journal lors de l'échange puisse le lire (mais dans ce cas
+    l'utilisation d'un protocole de communication chiffré n'est-elle pas
+    suffisante ?), soit elle ne veut pas que l'abonné lui-même sache ce qu'il
+    y'a dans ce journal chiffré. En effet, étant donné que le mouchard est
+    propriétaire, quelle garantie a-t'on que ce qui est dans le journal chiffré
+    correspond bien au contenu du journal en clair ?
+- id: 6
+  author: ®om
+  date: 2010-08-01 11:39:57+02:00
+  contents: |
+    > @[**gnuzer**](#comment-5)
+    >
+    > soit elle ne veut pas que l'abonné lui-même sache ce qu'il y'a dans ce
+    > journal chiffré. En effet, étant donné que le mouchard est propriétaire,
+    > quelle garantie a-t'on que ce qui est dans le journal chiffré correspond
+    > bien au contenu du journal en clair ?
+
+    Il est écrit dans les spécifications (page 5) que les deux versions sont
+    identiques lors de leur génération :
+
+    > Élément 4 : Double journalisation (version normale en clair et version
+    > sécurisée ; **les deux versions sont identiques**, sauf si la version en
+    > clair est manipulée)
+
+    Il ne devrait donc y avoir aucun contenu "secret" dans la version
+    "sécurisée".
+- id: 7
+  author: gnuzer
+  author-url: http://gnuzer.legtux.org
+  date: 2010-08-01 11:53:03+02:00
+  contents: |
+    @®om : notre garantie, c'est la garantie gouvernementale, quoi.
+- id: 8
+  author: jp.fox
+  author-url: http://www.jpfox.fr/
+  date: 2010-08-01 12:16:04+02:00
+  contents: |
+    Tant que les box n'ont pas de système de contrôle, il suffira d'avoir un
+    2eme PC avec le mouchard pendant que le 1er, sans mouchard, télécharge et de
+    fournir la log du 2eme en cas d'inculpation... c'est débile ce système !
+- id: 9
+  author: Il Palazzo-sama
+  author-url: http://johotogoshinentai.wordpress.com/
+  date: 2010-08-01 12:47:07+02:00
+  contents: |
+    > les moyens ne sont pas reconnus comme un 3malware" par les antivirus du
+    > marché
+
+    Il suffit donc de rajouter méthodiquement les logiciels proposés à la base
+    de donnée de ClamAV pour qu'ils soient systématiquement recalés ? :p
+- id: 10
+  author: vinz
+  date: 2010-08-01 12:51:02+02:00
+  contents: |
+    Une machine virtuelle ?
+- id: 11
+  author: vinz
+  date: 2010-08-01 12:54:24+02:00
+  contents: |
+    > @[**Il Palazzo-sama**](#comment-9)
+    >
+    > > les moyens ne sont pas reconnus comme un "malware" par les antivirus du
+    > > marché
+    >
+    > Il suffit donc de rajouter méthodiquement les logiciels proposés à la base
+    > de donnée de ClamAV pour qu'ils soient systématiquement recalés ? :p
+
+    Ils obligeront les AV à interdire ce genre de régles
+- id: 12
+  author: logicos
+  author-url: http://www.thierry-jaouen.fr/logicos
+  date: 2010-08-01 15:02:57+02:00
+  contents: |
+    Quid des vpn ?
+
+    Il faudrait aussi interdire les reseaux chiffrés ?
+
+    Et aussi interdire certains protocoles ?
+
+    La "bonne" solution, c'est l'ipad pour tous. Plus besoin du gouvernement
+    pour filtrer: Apple ou Goog s'en charge pour eux.
+
+    Ca deviendra plus clair lorsque les fournisseurs Internet et de i-Box,
+    seront aussi des revendeur de contenu sous copyright.
+
+    Ca va vite s'accelerer lorsque que Google TV va arriver ( 1 ou 2 ans?).
+
+    Et vive la Liberté. ;)
+- id: 13
+  author: Dd
+  author-url: http://bydorian.com
+  date: 2010-08-01 16:27:08+02:00
+  contents: |
+    Je suis déçu, mon logiciel de sécurisation ne répond pas aux critères de
+    l'HADOPI :
+
+    {% highlight bash %}
+    while 1
+      killall -9 transmission
+      killall -9 mldonkey
+      killall -9 edonkey
+      killall -9 edonkey
+      killall -9 *bittorent*
+    end
+    {% endhighlight %}
+- id: 14
+  author: gnuzer
+  author-url: http://gnuzer.legtux.org
+  date: 2010-08-01 16:58:12+02:00
+  contents: |
+    @Dd : Haha, j'avais failli l'oublier celui-là ! :-D
+
+    Mais comme je l'avais dit dans mon (vieux) post sur l'HADOPI, il était peu
+    probable que le logiciel de sécurisation soit un logiciel de ce type. Si on
+    veut lutter contre le téléchargement illégal à l'aide d'un soft, il est à
+    mon avis beaucoup plus simple de surveiller que d'interdire.
+- id: 15
+  author: gnuzer
+  author-url: http://gnuzer.legtux.org
+  date: 2010-08-01 17:32:03+02:00
+  contents: |
+    Je ne suis pas sûr que le "droit de contrôle de son ordinateur" soit
+    comparable à la neutralité du net... Le "droit de contrôle de son
+    ordinateur", c'est en fait une des composantes de l'éthique hacker, qui se
+    concrétise dans des mouvements comme celui du logiciel libre. Donc d'une
+    certaine manière, l'existence du droit de contrôle de son ordinateur est
+    plus ou moins garantie par l'existence de l'éthique hacker.
+
+    En revanche la neutralité du net dépend de services fournis à une grande
+    quantité de personnes, donc placés entre les mains de personnes puissantes
+    (FAI, opérateurs). La communauté hacker ne pouvant pas garantir la
+    neutralité du net, on fait appel aux hommes politiques pour le faire (Ce qui
+    se discute d'ailleurs. Après tout, en chiffrant tout et en créant plein de
+    petits FAI associatifs, il est peut-être possible de garantir un net neutre,
+    faudrait étudier la question.)
+
+    Bref, tout ça pour dire que le "droit de contrôle" de son ordinateur, à mon
+    avis, c'est comme "les droits de l'internaute" du PPF : c'est une utopie.
+    Déjà que la neutralité du net, ça veut pas dire grand chose pour le citoyen
+    comme pour le politique lambda, j'ose à peine imaginer ce que doit leur
+    évoquer le "droit de contrôle de son ordinateur"...
+
+    D'autant plus que je ne vois pas ce que les ordinateurs ont de plus que les
+    autres appareils (enfin si, la complexité, sûrement) : pourquoi ne pas créer
+    tout simplement un "droit de contrôle" de l'utilisateur sur tous les
+    appareils qu'il achète ? Tout simplement parce que nous sommes dans un
+    système économique libéral : si du jour au lendemain les commerçants ont
+    interdiction d'être malhonnêtes avec leurs clients, c'est toute l'économie
+    que l'on connaît qui s'effondre.
+- id: 16
+  author: Gilles Misrahi
+  date: 2010-08-01 18:52:30+02:00
+  contents: |
+    Ca picole beaucoup rue du Texel
+- id: 17
+  author: gege2061
+  author-url: http://gege2061.homecomputing.fr
+  date: 2010-08-01 18:55:05+02:00
+  contents: |
+    @gnuzer : effectivement du moment que le logiciel est contrôlé par
+    l'utilisateur ça ne pose pas de soucis, comme pour le contrôle parental, par
+    exemple.
+
+    Concernant le système de cryptage, du moment que l'on possède la version en
+    clair et la version cryptée, je me pose des questions quant à la difficulté
+    de retrouver la clés...
+- id: 18
+  author: ®om
+  date: 2010-08-01 19:12:18+02:00
+  contents: |
+    > @[**gnuzer**](#comment-15)
+    >
+    > Je ne suis pas sûr que le "droit de contrôle de son ordinateur" soit
+    > comparable à la neutralité du net... Le "droit de contrôle de son
+    > ordinateur", c'est en fait une des composantes de l'éthique hacker, qui se
+    > concrétise dans des mouvements comme celui du logiciel libre. Donc d'une
+    > certaine manière, l'existence du droit de contrôle de son ordinateur est
+    > plus ou moins garantie par l'existence de l'éthique hacker.
+
+    Justement, elle n'est pas garantie pour l'immense majorité de la population.
+    Par exemple, le fait qu'*Apple* décide ce que tu aies le droit d'exécuter
+    sur ta machine, qu'ils puissent supprimer à distance un contenu acheté
+    (comme *Google*), ce n'est pas acceptable. Même si certains arrivent à
+    jailbreaker leur téléphone ou leur tablette, ça reste un contrôle abusif du
+    reste de la population.
+
+    Par ailleurs, l'installation d'un logiciel de filtrage dans la box hors du
+    contrôle des utilisateurs pose exactement le même problème que les atteintes
+    à la neutralité du net : que le FAI bloque tel ou tel protocole sur son
+    réseau ou qu'il oblige à utiliser un logiciel de filtrage dans la box qui
+    bloque ce protocole, au final pour l'utilisateur ça revient au même.
+
+    > @[**gnuzer**](#comment-15)
+    >
+    > D'autant plus que je ne vois pas ce que les ordinateurs ont de plus que
+    > les autres appareils (enfin si, la complexité, sûrement) : pourquoi ne pas
+    > créer tout simplement un "droit de contrôle" de l'utilisateur sur tous les
+    > appareils qu'il achète ?
+
+    C'est effectivement une question à laquelle il faut être capable de
+    répondre. Pour l'instant je ne sais pas. Mais je pense que par exemple une
+    imprimante devrait rentrer dans le champ du matériel sur lequel on devrait
+    avoir le contrôle. Cela permettrait d'éviter que le pilote interdise
+    d'imprimer (et donc oblige à acheter une nouvelle cartouche) si une seule
+    couleur est manquante. Par exemple, il n'y a plus de bleu, je veux imprimer
+    en noir et rouge, mais le constructeur a décidé arbitrairement que je ne
+    pourrais pas (pour des raisons évidentes de profit, ça oblige à jeter le
+    rouge et le jaune restants).
+
+    Mais bon, le pire est à venir avec des choses comme GoogleTV…
+- id: 19
+  author: ®om
+  date: 2010-08-01 19:21:44+02:00
+  contents: |
+    > @[**gege2061**](#comment-17)
+    >
+    > Concernant le système de cryptage, du moment que l'on possède la version
+    > en clair et la version cryptée, je me pose des questions quant à la
+    > difficulté de retrouver la clés…
+
+    Dans le cas d'un chiffrement symétrique (la même clé sert à chiffrer et à
+    déchiffrer), si l'algorithme utilisé n'est pas cassé, on ne peut pas
+    retrouver la clé à partir du message en clair et du message chiffré (c'est
+    une des caractéristiques d'un chiffrement robuste).
+
+    Dans le cas d'un chiffrement asymétrique, la question ne se pose pas : le
+    chiffrement s'effectue avec une clé publique, donc il n'y a pas à chercher à
+    la retrouver, elle est publique (et ça ne permet pas de retrouver la clé
+    privée). C'est la signature qui s'effectue avec une clé privée, mais à
+    partir d'un message et de sa signature, on ne peut évidemment pas retrouver
+    la clé (sinon signer un message mettrait en danger la clé).
+- id: 20
+  author: gnuzer
+  author-url: http://gnuzer.legtux.org
+  date: 2010-08-01 19:42:53+02:00
+  contents: |
+    @®om : Quand je dis hacker, je ne pense pas à la définition stricte du type
+    qui bidouille tous les appareils qui lui passent sous la main parce qu'il a
+    les compétences pour le faire. Je veux plutôt parler du hacker au sens
+    large : le type qui aime la liberté et qui fait le minimum (se documenter
+    par exemple, c'est le début du hacking) pour en profiter.
+
+    C'est trivial : si tu aimes la liberté, tu n'achètes pas de Gogol-TV, de
+    Heil-Phone et tu remplaces ta MachinBox pourrie par un vrai modem-routeur
+    avec du vrai logiciel libre dedans.
+
+    C'est certainement pas du contrôle abusif de la population, mais du contrôle
+    abusif *d'une* population : celle qui juge la liberté trop peu importante
+    pour se prendre la tête à lire deux pages de doc.
+- id: 21
+  author: Mjfcolas
+  date: 2010-08-01 22:30:46+02:00
+  contents: |
+    Bon article, mais une chose m'a sauté aux yeux.
+
+    Lorsque l'on dit "Les moyens peuvent être réalisés à partir de logiciels
+    libres", le moyen en question n'est pas forcément libre. Rien n'empèche le
+    mouchard d'utiliser GPG ou de compresser les journaux dans un tar, en
+    utilisant des vrais morceaux de libre, et rester fermé
+- id: 22
+  author: ®om
+  date: 2010-08-02 07:24:01+02:00
+  contents: |
+    > @[**Mjfcolas**](#comment-21)
+    >
+    > Bon article, mais une chose m'a sauté aux yeux.
+    >
+    > Lorsque l'on dit "Les moyens peuvent être réalisés à partir de logiciels
+    > libres", le moyen en question n'est pas forcément libre. Rien n'empèche le
+    > mouchard d'utiliser GPG ou de compresser les journaux dans un tar, en
+    > utilisant des vrais morceaux de libre, et rester fermé
+
+    J'ai eu du mal à comprendre cette phrase. La première interprétation qui
+    m'est venue à l'esprit, c'est "les outils permettant de réaliser ces moyens
+    (l'IDE, le compilateur, etc.) peuvent être libres". Mais cette
+    interprétation est stupide (je ne vois pas l'intérêt de préciser cela dans
+    de telles spécifications). J'ai finalement interprété cela comme "les moyens
+    (les spécifications) peuvent être mis en œuvre par des logiciels libres".
+    Mais je pense que tu as raison, ton interprétation doit être la bonne. Je
+    mets à jour l'article pour coller à cette interprétation. Merci.
+- id: 23
+  author: Gulfstream
+  date: 2010-08-02 07:59:44+02:00
+  contents: |
+    De toutes façons, quand on considère la philisophie du système, on ne peut
+    s'empêcher de s'inquiéter de cette dérive "Orwellienne". Espionner, traquer
+    l'utilisateur deviendrait-il la norme ?
+
+    Je pense qu'il faut réagir en refusant d'installer tout produit qui "écoute"
+    vos communications d'une part, et utiliser les moyens actuels de déjouer
+    tout cela en passant par des vpn, par exemple.
+
+    IL y a déja plusieurs sites qui offrent des services fiables pour moins du
+    prix d'un paquet de clopes par mois. Moi j'utilise
+    <http://www.anti-hadopi.com> (en fraçais et le support est sympa) mais il y
+    en a plein d'autres.
+- id: 24
+  author: sil
+  date: 2010-08-02 09:33:43+02:00
+  contents: |
+    Et si le logiciel fonctionnait avec un serveur distant:
+
+    l'ordinateur envoie en direct le journal de connexion en SSL à un serveur
+    distant, le journal est crypté sur ce serveur et une copie renvoyée à
+    l'utilisateur. Ainsi, l'utilisateur n'a accès ni à la clé publique pour
+    crypter, ni à la clé privée pour signer. Bon, il reste toujours
+    l'utilisation de LiveCDs.
+- id: 25
+  author: sil
+  date: 2010-08-02 09:44:34+02:00
+  contents: |
+    Si j'avais des connaissances en informatique, je publierais un logiciel
+    HADOPI et diffuserais par des moyens détournés la solution pour contourner
+    la protection. Je garantirais ainsi le succès commercial du logiciel (un peu
+    comme les fabricants qui vendaient des lecteurs de DVD multizones aux
+    dépends de l'industrie cinématographique il y a quelques années de cela)
+- id: 26
+  author: ®om
+  date: 2010-08-02 09:56:11+02:00
+  contents: |
+    > @[**sil**](#comment-24)
+    >
+    > Ainsi, l'utilisateur n'a accès ni à la clé publique pour crypter, ni à la
+    > clé privée pour signer.
+
+    Mais c'est lui (enfin, son ordinateur) qui envoie le journal, il peut
+    envoyer n'importe quoi à faire signer au serveur...
+- id: 27
+  author: Marc
+  date: 2010-08-02 10:55:47+02:00
+  contents: |
+    Très bien vu l'article, c'est clair qu'une fois en possession des clés, même
+    plus besoin de faire tourner le logiciel espion, un simple "générateur de
+    journal" fera l'affaire pour simuler une activité dites normale :
+
+        ./creation_journal.sh
+        - date de début ? xxx
+        - date de fin ? xxx
+        - type de profil ?
+          1 - bon père de famille
+          2 - étudiant sérieux
+          3 - ...
+        ... journal disponible dans /bla/bla
+
+    Vraiment ridicule comme idée ! Pour l'avenir avec les box, je ne vois pas
+    trop l'intérêt, le cryptage des échanges se généralise (même google test un
+    accès crypté a ses serveurs), je ne vois pas trop ce que pourra faire un
+    logiciel espion dans une box qui ne verra que du contenu crypté ?
+- id: 28
+  author: Juriblogsphere
+  author-url: http://www.juriblogsphere.net
+  date: 2010-08-02 10:58:37+02:00
+  contents: |
+    Bonjour.
+
+    Découvert via Twitter, j'ai aimé la lecture de votre article.
+
+    Je ne vais pas manquer d'y faire référence dans mon billet relatif au
+    dernier décret Hadopi du 26 juillet 2010.
+
+    Cordialement.
+- id: 29
+  author: Juriblogsphere
+  author-url: http://www.juriblogsphere.net
+  date: 2010-08-02 15:38:04+02:00
+  contents: |
+    A contrario, voir le PS du [long commentaire de
+    VJM](http://linuxfr.org/comments/1149114.html#1149114) sous l'article de ce
+    jour "Michel Riguidel et la HADOPI" paru sur linuxfr.org.
+
+    ***EDIT par ®om :** je me permets d'ajouter l'url du message en question pour que
+    les internautes retrouvent facilement de quoi tu parles.*
+- id: 30
+  author: johnjohn
+  author-url: http://encoreunpartidegauche.net
+  date: 2010-08-02 19:15:11+02:00
+  contents: |
+    c'est complètement fou...
+
+    Merci pour PDF.
+
+    Il faudrait envoyer ton article à : consultation-sfh@hadopi.net
+
+    ...
+- id: 31
+  author: Marco46
+  date: 2010-08-03 10:32:24+02:00
+  contents: |
+    Je rejoins l'avis de Kim (commentaire n°2). Ce logiciel est faisable. Ou du
+    moins, la partie marquée infaisable l'est.
+
+    Il faut :
+
+     1. Que HADOPI se monte une PKI ou la confie à une entreprise habituée à
+    gérer ces problématiques, genre Verisign.
+     2. Que le logiciel HADOPI inclue une gestion de mots de passes pour entrer
+    en mode administrateur du logiciel.
+
+    Ensuite, à l'installation, on demande à l'utilisateur d'accepter de
+    considérer le certificat racine de la HADOPI comme valide, ce dernier
+    servant de base pour générer un certificat à l'utilisateur via une demande
+    PKCS\#10.
+
+    La clef privée générée peut être enregistrée dans un PKCS\#12 (un magasin de
+    certificats et de clefs privées) lequel est protégé par un mot de passe, qui
+    pourrait être celui de l'administrateur du logiciel.
+
+    La sécurité de la clef privée dépendrait alors de celle du mot de passe
+    choisi par l'utilisateur et donc pas besoin de se balader avec une clef
+    privée unique pour toute la France en dur dans l'application.
+
+    Ceci dit, une telle architecture pose des problèmes, comme par exemple le
+    fait d'obliger l'utilisateur à générer un certificat électronique. Peut être
+    que la CNIL aurait son mot à dire dans ce cas.
+
+    Bref, si j'étais éditeur de logiciel (et sans conscience), je proposerais
+    une telle architecture.
+
+    Me signaler si je dis des conneries.
+
+    Marco46
+- id: 32
+  author: ®om
+  date: 2010-08-03 10:51:52+02:00
+  contents: |
+    @Marco46 Ce que tu expliques (si j'ai bien suivi), ça permet de générer un
+    certificat par utilisateur, et c'est ce certificat qui signerait le journal
+    généré. Ça permettrait de prouver que le journal a bien été signé par le
+    certificat qui a été donné à l'utilisateur.
+
+    Mais le problème n'est pas là.
+
+    > @[**Marco46**](#comment-31)
+    >
+    > La sécurité de la clef privée dépendrait alors de celle du mot de passe
+    > choisi par l'utilisateur et donc pas besoin de se balader avec une clef
+    > privée unique pour toute la France en dur dans l'application.
+
+    Le problème, c'est que l'utilisateur (le suspect qui a envie de télécharger
+    des fichiers protégés par le droit d'auteur) peut signer n'importe quoi avec
+    cette clé (par exemple un journal où les logs indiquant la désactivation du
+    mouchard auraient été supprimées). Certes, l'HADOPI sera certaine que c'est
+    bien l'utilisateur en question qui a signé, mais elle n'aura aucun moyen de
+    savoir si ce que l'utilisateur a signé est correct.
+- id: 33
+  author: Marco46
+  date: 2010-08-03 11:25:23+02:00
+  contents: |
+    J'avais oublié à quel point cette loi était débile.
+
+    Et oui bien sûr, si l'utilisateur peut contrôler le logiciel, c'est plus un
+    logiciel espion.
+
+    Autant pour moi.
+- id: 34
+  author: 'News en vrac – BloGals'
+  author-url: http://blog.galsungen.net/?p=672
+  date: 2010-08-03 13:01:02+02:00
+  pingback: true
+  contents: |
+    [...] Le logiciel HADOPI est impossible : Un article décrivant le cahier des
+    charges pour les logiciels de surveillance de HADOPI et qui [...]
+- id: 35
+  author: Qaruk.Zurack
+  date: 2010-08-03 16:04:00+02:00
+  contents: |
+    J'ai une question, peut-être profane et hyper théorique, mais le simple fait
+    que j'y pense... Bon.
+
+    1- Le soft devra être libre : c'est d'abord un point de vue commercial, cela
+    ne change pas le fonctionnement ; mais disons qu'il est open-source : cela
+    apporterait la possibilité de comprendre en détail sa façon de chiffrer le
+    journal. Jusqu'ici, on est d'accord.
+
+    2- HADOPI ne pourra savoir que le journal chiffré est faux uniquement SI il
+    est impossible à l'utilisateur de reproduire ce chiffrage ; or avec le
+    concept de clef publique/privée que tu exposes, cela parait en effet
+    impossible à faire : l'utilisateur pourra réemploie la clef qui perd alors
+    toute valeur de garanti d'originalité de la donnée ; ou alors le code
+    utilisé avant emploi de la clef, ce qui revient au même : le journal chiffré
+    non original est contrôle par l'utilisateur.
+
+    3- SAUF.... si HADOPI fournit une version compilée personnelle à chacun du
+    produit (en plus du code source), compilation qui aurait inclu au sein même
+    de son process l'emploi d'une méthode de chiffrement non pas de la donnée,
+    mais du binaire qui chiffre la donnée, et qui intégrerait alors cette
+    signature unique et non-rétro-ingénierable au journal chiffré, ainsi
+    "signé".
+
+    C'est imaginable, mais est-ce concevable ?
+- id: 36
+  author: ®om
+  date: 2010-08-03 16:41:16+02:00
+  contents: |
+    > @[**Qaruk.Zurack**](#comment-35)
+    >
+    > 3- SAUF.... si HADOPI fournit une version compilée personnelle à chacun du
+    > produit (en plus du code source), compilation qui aurait inclu au sein même
+    > de son process l'emploi d'une méthode de chiffrement non pas de la donnée,
+    > mais du binaire qui chiffre la donnée, et qui intégrerait alors cette
+    > signature unique et non-rétro-ingénierable au journal chiffré, ainsi
+    > "signé".
+
+    Ton binaire qui chiffre n'est qu'un cas particulier d'une clé, un peu tordue
+    et pas vraiment optimale en nombre de bits.
+
+    Si ton binaire qui chiffre est lui-même chiffré (par une clé), et qu'il a
+    besoin de s'exécuter (au moins au moment pour signer le journal), c'est
+    qu'il est déchiffré à un moment ou à un autre, et donc que la clé de
+    déchiffrement est intégrée au logiciel.
+
+    On peut tourner le problème dans tous les sens, chiffrer des clés par des
+    clés par des clés, le problème restera le même : **si le mouchard est
+    capable de signer un journal sur l'ordinateur de l'utilisateur, alors
+    l'utilisateur est capable d'en faire de même** (il lui suffit de faire la
+    même chose que le mouchard).
+- id: 37
+  author: Vincent
+  date: 2010-08-03 16:45:14+02:00
+  contents: |
+    Je plusse, Je confirme et j'enfonce le clou: ce logiciel est infaisable (tel
+    que présenté).
+
+    Le journal est *signé localement*. Donc, les informations (clef+algorithme)
+    nécessaires à sa signature sont locales. Donc, l'utilisateur peut y accéder.
+    Bien sûr, la clef sera plus ou moins bien cachée, partagée par tous ou
+    générée en post-installation... Mais dans tous les cas, disponible sur votre
+    machine. Alors, pourquoi se gêner ?
+
+    Plus exactement, la description du biniou fait penser à un kernel thread ou
+    un pseudo-driver (NKE, tun/tap), relié à un process userland via mach-port,
+    socket ou shmem, où se loge l'algo de prise de décision. Ca ne vous rappelle
+    pas le natd d'ipchains ? C'est assez old-school, comme l'auteur du rapport
+    qui, à la première lecture, semble avoir techniquement perdu pied depuis
+    quelques temps déjà...
+
+    Cette conception est inefficace, et je doute que les 100Mbp/s puissent être
+    atteints avec un ordonnanceur microsoft. Et dans tous les cas, la
+    visioconférence ou les jeux en ligne verront leur réactivité gravement
+    impactée.
+
+    Quelques autres fragilités, en vrac :
+
+     * Le log, bien entendu. Une fois la clef découverte, un générateur de logs
+    certifiés conformes pourrait reconstruire un log "neutre" (une journée
+    entière sur tf1.fr). Dans le style M. Le juge, j'ai un alibi ;-)
+     * Le canal de remontée des infos passe immanquablement par un objet
+    système. Donc par un objet disponible au moins pour l'administrateur.
+    Serait-t-il crypté que le décryptage ne serait pas impossible
+    (puisqu'exécuté localement par le produit). En s'intercalant sur ce canal,
+    On pourrait imaginer construire un "hadopi-firewall", qui pourrait poser ce
+    genre de question à l'utilisateur: "Voulez-vous avertir l'Hadopi de cette
+    action ?"
+
+    Tout cela, naturellement, sans modifier l'intégrité du logiciel installé.
+
+    Pour ouvrir la discussion, on peut comparer Hadopi, les DRM et toutes ces
+    nouveaux avatars issus de ces décideurs qui ne comprennent rien au
+    progrès... à de purs objets physiques.
+
+    Lorsque vous ne voulez pas qu'un objet physique soit vu par le reste du
+    monde, vous le placez dans un coffre fort chez vous, ou dans une banque.
+    Vous viendrait-t-il à l'idée de le dupliquer à des millions d'exemplaires,
+    et à le cadenasser dans l'ordinateur de millions d'Internautes hostiles ?
+    Naturellement non !
+
+    Les DRM sont une pure foutaise. Et leurs promoteurs pourront freiner le
+    progrès, mais ne l'arrêteront pas. La révolution Gutemberg a tué la
+    profession de copiste. La photocopieuse a malmené l'édition papier, Internet
+    fera d'autres dégâts aux industries actuelles, et l'économie devra s'y
+    adapter, n'en déplaise aux lobbies qui écrivent les lois qui nous régissent.
+
+    Ils ont déjà perdu.
+- id: 38
+  author: CifeX
+  date: 2010-08-03 17:26:07+02:00
+  contents: |
+    Il y a une solution : <http://en.wikipedia.org/wiki/Homomorphic_encryption>
+
+    Mais bon, c'est pas pour tout de suite...
+- id: 39
+  author: Qaruk.Zurack
+  date: 2010-08-03 17:42:32+02:00
+  contents: |
+    > @[**®om**](#comment-36)
+    >
+    > Ton binaire qui chiffre n'est qu'un cas particulier d'une clé, un peu tordue
+    > et pas vraiment optimale en nombre de bits.
+    >
+    > Si ton binaire qui chiffre est lui-même chiffré (par une clé), et qu'il a
+    > besoin de s'exécuter (au moins au moment pour signer le journal), c'est
+    > qu'il est déchiffré à un moment ou à un autre, et donc que la clé de
+    > déchiffrement est intégrée au logiciel.
+    >
+    > On peut tourner le problème dans tous les sens, chiffrer des clés par des
+    > clés par des clés, le problème restera le même : **si le mouchard est
+    > capable de signer un journal sur l'ordinateur de l'utilisateur, alors
+    > l'utilisateur est capable d'en faire de même** (il lui suffit de faire la
+    > même chose que le mouchard).
+
+    Mais tu parles de décompilation, là ? On change de dimension de difficulté,
+    et c'est du crackage dont il s'agit.
+
+    Alors par le principe est toujours crackable, de toute façon, il est clair
+    que le soft HADOPI, comme n'importe quel autre, n'est pas envisageable, car
+    le principe n'est pas envisageable.
+
+    Mais la difficulté elle-même est ce qui rend -par exemple- le chiffrage un
+    concept de confiance : donc le soft HADOPI parfait n'est pas faisable, mais
+    on peut s'en rapprocher, au final ?
+- id: 40
+  author: ®om
+  date: 2010-08-03 17:47:16+02:00
+  contents: |
+    > @[**CifeX**](#comment-38)
+    >
+    > Il y a une solution :
+    > <http://en.wikipedia.org/wiki/Homomorphic_encryption>
+    >
+    > Mais bon, c'est pas pour tout de suite...
+
+    Ça n'a pas l'air de résoudre le problème. Ça a même l'air pire : en
+    particulier (d'après Wikipedia), il est
+    [malléable](http://en.wikipedia.org/wiki/Malleability_%28cryptography%29),
+    ce qui signifie qu'il est possible de modifier le contenu à partir du
+    message chiffré !
+
+    Mais de toute façon, l'utilisateur a accès au message AVANT qu'il ne soit
+    signé/chiffré, donc quelque soit l'algorithme utilisé, il lui donne à manger
+    ce qu'il veut.
+- id: 41
+  author: Vincent
+  date: 2010-08-03 17:51:04+02:00
+  contents: |
+    @Qaruk.Zurack: Non, il n'y a pas de solution.
+
+    Si le log est produit localement par l'application Hadopi, il pourra être
+    produit localement par une autre application.
+
+    Ici, l'important n'est pas la *méthode* de cryptage, mais le simple fait que
+    ce que réalise une application avec des données, un algo et des clefs, une
+    autre peut le faire aussi en utilisant les mêmes informations.
+
+- id: 42
+  author: ®om
+  date: 2010-08-03 17:58:55+02:00
+  contents: |
+    > @[**Qaruk.Zurack**](#comment-39)
+    >
+    > Mais tu parles de décompilation, là ? On change de dimension de difficulté,
+    > et c'est du crackage dont il s'agit.
+    > 
+    > Alors par le principe est toujours crackable, de toute façon, il est clair
+    > que le soft HADOPI, comme n'importe quel autre, n'est pas envisageable, car
+    > le principe n'est pas envisageable.
+    > 
+    > Mais la difficulté elle-même est ce qui rend -par exemple- le chiffrage un
+    > concept de confiance : donc le soft HADOPI parfait n'est pas faisable, mais
+    > on peut s'en rapprocher, au final ?
+
+    Le chiffrement asymétrique est digne de confiance uniquement parce qu'on ne
+    sait pas décomposer en un temps raisonnable un (très grand) nombre en
+    facteurs premiers, absolument pas parce que la clé serait cachée dans un
+    programme compilé. Pour le chiffrement symétrique, c'est parce qu'a priori
+    il faut essayer toutes les combinaisons (et 256 bits c'est pas envisageable
+    avant la fin de l'univers).
+
+    Le temps nécessaire pour retrouver une clé cachée dans un programme se
+    compte en jours (et il suffit qu'une seule personne la trouve et développe
+    un programme qui permette à chacun de signer un faux journal en appuyant sur
+    un bouton).
+
+    Celui pour déchiffrer un message chiffré (selon la méthode utilisée) se
+    compte plutôt en milliards d'années (sauf faille découverte dans l'algo de
+    chiffrement).
+- id: 43
+  author: Baba
+  date: 2010-08-03 20:35:36+02:00
+  contents: |
+    très intéressent cet article et je parle pas des commentaires ^^
+
+    Cependant deux p'tites questions me viennent :
+
+     * a lire vos explications sur les certificat pré enregistré etc.. ca m'a
+    beaucoup fait penser à ma télé-déclaration d'impôt.. qui me semble repose
+    sur ce système. Quelqu'un peux m'expliquer la différence entre ces systèmes
+    et pourquoi ce qui marche pour l'un ne marcherais pas pour l'autre?
+
+     * Si j'ai bien compris le journal en clair et le sécurisé contiennent les
+    mêmes infos. Le journal crypter en lui même ne peux être lu mais on peux en
+    générer des faux et les envoyer à la place? mais alors comme pour un faux
+    courrier papier on pourra le juger valide sur son contenus ET sa
+    présentation/mise en forme qui elle peut varier et ca sans avoir jamais
+    accès au journal sécurisé original je ne vois pas comment l'imaginer?..
+- id: 44
+  author: Marco46
+  date: 2010-08-03 22:11:04+02:00
+  contents: |
+    @Baba :
+
+    C'est assez simple en fait, et c'est la source de mon erreur sur mon
+    commentaire ici, la clef privée fournie dans le logiciel HADOPI est la même
+    pour tout le monde. Elle identifie le logiciel mouchard et est donc
+    nécessairement dans le logiciel pour pouvoir signer les journaux et
+    s'assurer que les journaux proviennent bien du logiciel, du bon logiciel.
+
+    Pour clarifier les choses, il existe 2 types d'algorithmes de chiffrement :
+
+     * Symétrique : une clef permet de chiffrer. La même clef sert à déchiffrer.
+    On appelle généralement cette clef une clef de session. (3DES, AES, ...)
+     * Asymétrique : C'est un couple de clef privée / publique (RSA, ...). La
+    clef publique sert à la personne voulant t'écrire un message chiffré pour
+    chiffrer. Elle est donc publique :) La clef privée sert à déchiffrer le
+    message chiffré avec la clef publique. [En fait pour envoyer un message
+    chiffré on chiffre avec l'algorithme asymétrique une clef de session d'un
+    algo symétrique car ils consomment beaucoup moins de ressources.]
+
+    Donc pour envoyer un message chiffré à toto, je récupère sa clef publique,
+    je génère une clef de session, je chiffre avec un algo symétrique (AES),
+    ensuite je chiffre la clef de session avec sa clef publique (RSA), je
+    regroupe le tout et je l'envoie. Toto récupère sa clef privée, déchiffre la
+    clef de session, puis déchiffre la message avec cette clef. Pas de problème
+    dans ce cas pour le logiciel HADOPI, la clef publique pour envoyer à
+    l'HADOPI est ... publique. Donc on s'en fout qu'elle soit dans le logiciel à
+    la base. Ceci dit, chiffrer des données tout en gardant ces mêmes données en
+    clair à côté est un peu ... bizarre comme le dit Rom (et histoire de rester
+    un minimum poli).
+
+    Pour signer un message, j'effectue un hash du message à signer (cf empreinte
+    numérique, je vais pas tout expliquer non plus ^^ ) avec un algo style
+    SHA-1. Ensuite je chiffre avec ma clef privée ce hash (seulement le hash) et
+    je groupe le résultat avec le message auquel je joins mon certificat et la
+    clef publique correspondante et j'envoie le tout. Toto qui veut vérifier que
+    c'est bien moi déchiffre le hash avec ma clef publique jointe au certificat,
+    fait un hash du message de son côté avec le même algo de hash et compare les
+    2 résultats. S'ils sont identiques alors le message est bien de moi.
+
+    Tu remarqueras qu'il y a donc 2 utilisations différentes des algorithmes
+    asymétriques selon que l'on veut chiffrer ou signer.
+
+    Dans le premier cas on utilise la clef publique du destinataire pour
+    chiffrer la clef de session ayant servi à chiffrer le message (ouf !), dans
+    le deuxième cas on utilise sa propre clef privée pour chiffrer le hash du
+    message.
+
+    C'est une propriété particulière des algorithmes asymétriques, propriété
+    mathématique que je suis incapable d'expliquer (doit falloir BAC+12 en
+    math).
+
+    Du coup, une petite aparté sur la sécurisation des données (que Mr Riguidel
+    devrait peut être lire ! :p), il faut garder à l'esprit que pour chiffrer
+    des données, il faut nécessairement une clef en bout de chaine. On ne veut
+    évidemment pas que notre certificat et son couple de clef publique / privée
+    soit facilement trouvable donc on le chiffre dans un magasin de clefs,
+    (Sinon la personne mettant la main sur le couple de clef peut signer à sa
+    guise.) généralement au format PKCS\#12, avec un algo symétrique et donc la
+    clef de session est :
+
+     * Soit saisie par l'utilisateur (genre un mot de passe), elle est donc
+    connue de l'utilisateur et il peut donc librement accéder au magasin et donc
+    librement signer ce qu'il veut. Ceci respecte l'utilisateur puisqu'il garde
+    le contrôle.
+     * Soit en dur quelque part dans les fichiers d'installation du programme ou
+    carrément en dur dans le programme, ce qui est une erreur de conception
+    majeure, puisque relativement facilement trouvable.
+
+    Pour le logiciel HADOPI, nous sommes dans le 2ème cas et on obtient le moyen
+    d'émettre des messages signés conformes avec assez peu d'efforts. Avec
+    impossibilité totale de savoir pour la HADOPI si oui ou non le message est
+    légitime ce qui entre en totale contradiction avec les buts du logiciel
+    mouchard.
+
+    Le seul degré de sécurité permettant d'empêcher l'utilisateur de connaitre
+    la clef d'accès ET d'avoir à la mettre dans le programme c'est d'utiliser un
+    support externe, généralement une carte à puce qui contient alors la clef
+    privée. Autant dire qu'il s'agit de mesures de sécurité extrêmes totalement
+    hors de portée de la HADOPI. Je les vois mal fournir une carte à puce
+    personnelle avec le logiciel mouchard. Mais peut être on y viendra. En fait
+    s'ils veulent réellement faire ce qu'ils disent ils sont obligés d'en venir
+    là. La puce implantée entre le cuir chevelu et la boite crânienne, à la
+    X-Files.
+
+    Dans le cas de ta télé-déclaration aux impôts, le certificat est généré
+    localement (clef privée + clef publique), donc chaque citoyen a son propre
+    certificat et sa propre clef qui sont stockés dans le magasin de son
+    navigateur web le tout étant sous son contrôle. Normalement, si le système
+    génère les clefs en local, l'état ne doit avoir à sa disposition QUE la clef
+    publique et les infos du certificat. Il ne peut donc pas signer à ton insu
+    une déclaration d'impôt. Tu es le seul à pouvoir le faire.
+
+    Pour t'en convaincre si tu es toujours avec moi après ce long discours, tu
+    peux aller chercher dans le magasin de clef de ton navigateur (sur Firefox
+    tu vas dans les préférences, section avancé. Affiches tes certificats ils
+    sont de mémoire dans Personnel ou Utilisateur un truc dans le genre). Tu
+    peux alors lire les informations du certificat (celui des impôts ne permet
+    que de signer et pas de se faire envoyer des messages chiffrés et sa durée
+    de validité est de 3 ans seulement) et effectuer un export du certificat et
+    de la clef privée. FF te demandera de saisir un mot de passe qui servira à
+    chiffrer le fichier magasin et tu obtiendras un fichier .p12 qui est un
+    magasin au format PKCS\#12.
+
+    Tu peux alors faire mumuse et importer ce fichier dans le magasin de ton
+    système. Sur Windows un double clic lance un utilitaire d'import. Si tu veux
+    vérifier que l'import c'est bien passé alors tu peux accéder facilement au
+    magasin via Internet Explorer dans l'onglet sécurité et contempler ton bô
+    certificat.
+
+    Je voulais répondre en 5 minutes et j'y ai passé 1 heure :) Saleté
+    d'Internet :D
+- id: 45
+  author: Marco46
+  date: 2010-08-03 22:24:21+02:00
+  contents: |
+    En fait j'ai refait la même erreur, la carte à puce tu la possèdes donc tu
+    peux signer le journal que tu veux.
+
+    C'est insoluble leur truc.
+- id: 46
+  author: Marco46
+  date: 2010-08-04 00:06:39+02:00
+  contents: |
+    Ayé j'ai trouvé ! Enfin je crois...
+
+    Il faut que le certificat et la clef privée du logiciel soient protégés dans
+    l'installation du logiciel dans un magasin P12.
+
+    Le mot de passe n'est pas présent ni dans l'installation, ni en dur dans le
+    programme, il est sur un serveur de l'éditeur du logiciel.
+
+    Le logiciel mouchard est lancé.
+
+    Il se connecte au serveur de l'éditeur en HTTPS.
+
+    Il envoie la signature du binaire en exécution (de lui même donc) (signature
+    présente dans l'installation) pour être autorisé à recevoir en retour le mot
+    de passe du magasin.
+
+    Et hop, l'accès à la clef privée pour signer les journaux est protégé. Ils
+    peuvent ensuite régulièrement changer le mot de passe en détruisant le
+    magasin et en en recréant un nouveau.
+
+    Je crois que j'ai bon là. Je vais poser un brevet à l'américaine pour faire
+    du blé sur la vie privée des gens.
+
+    Bon ya quand même un hic, c'est que si le mot de passe est compromis tout
+    s'écroule, et il faut mettre à jour 36 millions de logiciels en quelques
+    heures. Mais bon.
+- id: 47
+  author: ®om
+  date: 2010-08-04 00:23:54+02:00
+  contents: |
+    > @[**Baba**](#comment-43)
+    >
+    > a lire vos explications sur les certificat pré enregistré etc.. ca m'a
+    > beaucoup fait penser à ma télé-déclaration d'impôt.. qui me semble repose
+    > sur ce système. Quelqu'un peux m'expliquer la différence entre ces
+    > systèmes et pourquoi ce qui marche pour l'un ne marcherais pas pour
+    > l'autre?
+
+    Les certificats d'impôts ne servent (quasiment) à rien non plus, mais pour
+    une autre raison. Supposons d'abord qu'ils servent à quelque chose (pour
+    voir le fonctionnement).
+
+    Une fois que tu as généré ton certificat (une paire de clés
+    publique-privée), tu envoies la clé publique au site des impôts, qui la
+    conserve. Ainsi, quand tu signes ta déclaration avec ta clé privée, ils
+    peuvent être sûr que c'est bien **ta** clé privée qui l'a signée (et donc
+    que c'est toi). Mais ça ne permet **que** de savoir que c'est toi qui l'a
+    signée, pas d'assurer que tu as remplis correctement ta déclaration : si tu
+    dis que tu as gagné 20000€ dans l'année et que tu en as gagné 30000€, tu as
+    donné une fausse information que tu as signée. Avec le mouchard HADOPI,
+    c'est quasiment la même chose : tu peux dire que tu avais ton mouchard
+    allumé telle date à telle heure alors qu'il était éteint. Dans le premier
+    cas, c'est une fraude fiscale ; dans le second cas, c'est une protection
+    contre la surveillance. Techniquement, il y a encore une petite différence,
+    c'est qu'a priori c'est l'HADOPI qui doit signer ton journal pour en assurer
+    l'authenticité (c'est eux qui veulent valider le journal, donc en
+    fournissant la clé dans le logiciel, ils te donnent leur signature en te
+    faisant confiance, c'est là toute la faille du système), alors que pour la
+    déclaration d'impôts, c'est avec ta signature à toi (c'est toi qui valide ta
+    déclaration).
+
+    Je disais que les certificats d'impôts ne servent à rien car ils n'assurent
+    absolument pas que c'est toi qui remplis la déclaration : tu enregistres (et
+    révoque/regénère) ta clé publique uniquement à partir de numéros (de
+    télé-déclarant, et un autre je crois), donc le certificat a la même valeur
+    d'authentification que ces numéros. D'ailleurs, depuis l'année dernière, ils
+    ne sont plus obligatoires. Dans l'idéal, il faudrait que ce certificat soit
+    remis en main propre avec présentation de carte d'identité (mais là, c'est
+    un terrain dangereux, on sait ce que ça peut donner un identifiant réel pour
+    se connecter sur Internet…).
+- id: 48
+  author: ®om
+  date: 2010-08-04 00:29:17+02:00
+  contents: |
+    > @[**Baba**](#comment-43)
+    >
+    > Si j'ai bien compris le journal en clair et le sécurisé contiennent les
+    > mêmes infos. Le journal crypter en lui même ne peux être lu mais on peux
+    > en générer des faux et les envoyer à la place? mais alors comme pour un
+    > faux courrier papier on pourra le juger valide sur son contenus ET sa
+    > présentation/mise en forme qui elle peut varier et ca sans avoir jamais
+    > accès au journal sécurisé original je ne vois pas comment l'imaginer?..
+
+    Il n'est pas précisé dans les spécifications que le journal sécurisé doit
+    avoir une mise en forme différente (c'est censé être une copie du journal en
+    clair), et le fait qu'il soit chiffré est à mon avis dû à une méconnaissance
+    du système (ce qu'il faut, c'est qu'il soit **signé**).
+
+    Cependant, imaginons que ce soit le cas (et même qu'il n'y ait pas de
+    journal en clair du tout), il suffirait de récupérer le contenu du journal
+    (version sécurisée) juste avant qu'il ne soit chiffré, de l'enregistrer
+    quelque part en clair, de le modifier, puis de le chiffrer.
+- id: 49
+  author: ®om
+  date: 2010-08-04 00:37:32+02:00
+  contents: |
+    > @[**Marco46**](#comment-46)
+    >
+    > Le logiciel mouchard est lancé.
+    > 
+    > Il se connecte au serveur de l'éditeur en HTTPS.
+    > 
+    > Il envoie la signature du binaire en exécution (de lui même donc) (signature
+    > présente dans l'installation) pour être autorisé à recevoir en retour le mot
+    > de passe du magasin.
+
+    Puis tu lances ton petit programme perso.
+
+    Il se connecte au serveur de l'éditeur en HTTPS.
+
+    Il envoie la signature du mouchard pour être autorisé à recevoir en retour
+    le mot de passe du magasin.
+
+    ;-)
+
+    C'est exactement la même chose que la pseudo-protection de RTMPE par
+    *Adobe*, comme [le dénonce](http://lkcl.net/rtmp/) le développeur de
+    `rtmpdump` :
+
+    > **From Adobe's Web Site:**
+    >
+    > "(swf verification) ensures that only your SWF or AIR files can connect to
+    > your application or content on Flash Media Server."
+    >
+    > **This is false. The correct interpretation is:**
+    >
+    > "if anyone can obtain the publicly-available SWF or AIR file (or a hash of
+    > it, and knows the SWF or AIR file's size) they can also connect to your
+    > application or content."
+- id: 50
+  author: Marco46
+  date: 2010-08-04 01:08:20+02:00
+  contents: |
+    lol c'est pas faux :)
+
+    Bon alors j'ai la solution cette fois. Par contre c'est une usine à gaz et
+    je suis pas certain de la compatibilité avec la constitution, mais bon ça se
+    change une constitution.
+
+    Il faut :
+
+    1 / N'avoir le droit d'utiliser que l'UMP-OS (du proprio ça va s'en dire
+    produit par UMP-Corpo)
+
+    2 / Avoir le droit d'installer des logiciels uniquement via l'UMP-Store.
+
+    Seuls les citoyens travaillant pour l'UMP-Corpo ont le droit d'apprendre à
+    développer.
+
+    Développer en dehors de son temps de travail devient un délit voire un
+    crime, de même qu'utiliser tout outil informatique qui n'est pas produit par
+    l'UMP-Corpo.
+
+    LA, je crois qu'on est bien. Les pirates n'ont qu'à bien se tenir
+    mouahahaha, mouahahahahaha \*voix qui se perd dans la nuit ...\*
+- id: 51
+  author: Vincent
+  date: 2010-08-04 11:57:54+02:00
+  contents: |
+    @baba :**intéressant**: Quelle est la différence avec la clef de la
+    télédéclaration d'impôts ?
+
+    Techniquement, aucune. Dans les deux cas, tu as un certificat en local, tu
+    signes une information avec.
+
+    Pratiquement, il y a un fossé.
+
+    Dans un cas, tu signes *ce que tu veux* Libre à toi de faire une
+    télédéclaration fausse. **Ce que tu signes n'est pas forcément la vérité**.
+    Imaginons que ta clef soit compromise, que quelqu'un signe à ta place: un
+    coup de téléphone au percepteur, tu lui envoies copie de tes bulletins de
+    salaire, et hop, pas de problème.
+
+    Dans le second cas, tu signes (ta machine le fait, mais avec un peu de hack,
+    tu as toutes les informations pour le faire toi-même), tu signes donc un
+    document qui sera considéré par l'HADOPI **comme la vérité**.
+
+    D'où **l'erreur de débutant de Riguidel, qui confond signature et vérité**.
+    Car sur tout document, ma signature prouve que j'en suis le rédacteur, mais
+    pas que ce j'y ai écrit soit correct.
+- id: 52
+  author: MADMAX28
+  date: 2010-08-04 14:47:52+02:00
+  contents: |
+    Tout ceci est très instructif.
+
+    Merci mille fois pour les précisions
+
+    Encore une preuve du régime en place, par exemple en France, ou l'on est
+    toujours soumis aux interdictions, à la pression et à la répression, plutôt
+    qu'au bon sens et aux valeurs d'antan.
+
+    Bref...
+
+    Moi je continue à télécharger tous les jours pour mon confort personnel
+    uniquement. Tant que cela reste chez moi, les "nazis" n'ont pas à vouloir me
+    le prendre ou m'en empêcher.
+
+    Bon courage tout le monde, il en faut pour ne pas claquer des dents, des
+    fois!!
+- id: 53
+  author: goldorak
+  date: 2010-08-05 00:40:03+02:00
+  contents: |
+    Mwahahaha!...
+
+    Re!.. ;-)
+
+    Lez enfant si vous voulez savoir d'ou vient le + gros danger, renseignez
+    vous sur le concept de "Trusted Computing"
+    (http://en.wikipedia.org/wiki/Trusted\_computing), surtout les parties
+    "Memory curtaining" et "Sealed storage"..
+
+    Sympa non?.. ;-)
+
+    Bon maintenant pour vous remonter un peu le moral, il faut savoir que
+    personne (a ma connaissance) ne maitrise encore totalement ces concepts
+    (meme pas Kro\$oft et ils ont ete pourtant les initiateurs de cette
+    merde..). De + pour que le bouzin soit au minimum efficace (et
+    deployable!..) il faut avoir acces a des "toolz" et des specs assez
+    confidentielles de chez nos amis d'outre-Atlantique (en tout cas, ca risque
+    de couter bcp de sous-sous a nos vaillants editeurs de progiciel qui
+    s'aventureront sur le marche HADOPI..)
+
+    Pour simplifier, on peut partir du principe qu'il chercheront a stocker
+    leurs elements secrets dans le composant appele "TPM" (qui est en fait une
+    sorte de copro cryptographique soude sur la carte mere - comme une carte a
+    puce quoi..) et qu'ils utiliseront ce meme composant pour verifier
+    l'integrite de "l'agent de confiance HADOPI" (je vous passe les details sur
+    la "mesure d'integrite", documentez vous!.. ;-))
+
+    Or il faut savoir aussi que ce systeme ne marche vraiment que si on met en
+    place ce qu'on appele une "chaine de demarrage de confiance"
+    bios-\>bootloader-\>kernel/hyperviseur (ca c'est la version "statique", il
+    existe aussi une variante "dynamique" mais encore une fois je vous passe les
+    details.. ;-))
+
+    Quoi qu'il en soit "l'agent de confiance HADOPI" devra etre tres intrusiv
+    par rapport au systeme d'exploitation de Mme. Michou, sans oublier le fait
+    qu'une grande partie du parc informatique actuel des particuliers n'est pas
+    equipe avec des TPM (mais, malheureusement, on commence a les voir
+    apparaitre de + en + ces salles bettes la, surtout dans les laptops :-/)
+
+    En conclusion : faites attention a ce que vous achetez dorenavant comme
+    matos informatique!.. (quoi que je pense que bientot on n'aura + le choix,
+    et pire encore l'agent hadopi va se retrouver dans le bios EFI et mandate
+    par le gouvernement pour les cartes mere vendues en France..)
+
+    Jouissez de la liberte et faites vous des stock de matos informatique "non
+    trusted computing compliant" tant qu'il est encore temps, des temps
+    difficilles s'annoncent.. ;-)
+- id: 54
+  author: Grossbaaffe
+  date: 2010-08-08 08:45:02+02:00
+  contents: |
+    Houlala ! J'ai l'impression que les concepts de base de la crypto sont un
+    peu-flous dans certaines tetes.
+
+    De façon générale, le recours a des
+    technique de crypto répond à trois type de besoin :
+
+     * Garantir la CONFIDENTIALITE d'un document : le document crypté n'est
+    lisible que par celui qui connait la clé permettant de le lire
+     * Garantir l'INTEGRITE d'un ocument : pour modifier le document crypter, il
+    faut etre capable de le décrypter au préalable et de la recrypter ensuite,
+    ce qui supose la connaissance des clés nécessaires
+     * Garantir l'ORIGINE d'un document : Si un lecteur parvient a dechifrer un
+    document crypté, ça garanti que l'auteur du document connaissait la clé
+    nécessaire a son cryptage.
+
+    Vous remarquerez que la crypto n'aporte pas de garantie sur l'identité de
+    l'auteur ou du lecteur, mais juste sur le fait qu'ils connaissent les clés
+    de crypages. D'ou le problème de garantir la sécurité du partage des clés
+    qui est au coeur de tout système de crypage. Avec un système de cryptage
+    classique, "symétrique", utilisant la même clé pour crypter et décrypter, ce
+    problème est un véritable cauchemard, puisque vous devez utiliser des clés
+    différentes pour communiquer avec chacun de vos interlocuteur, et qu'il faut
+    transmettre sa clé a chaque interlocuteur en garantissant la confidentialité
+    de la transmission... avec un un cryptage untilisant une clé qui doit avoir
+    été échangée entre les deux interlocuteurs selon un protocole securisé ...
+    la poule ne fini pas de pondre des oeufs dont naissent des poules qui
+    pondent des oeufs! Le seul moyen de transférer les clés de façon sure est de
+    le faire de façon extra informatique, en s'assurant de l'identité de la
+    personne a qui on remet la clé. En langage crypto, on dit que la
+    communication entre deux personnes via un cryptage symérique n'est possible
+    que si les deux personnes connaisennt toutes deux un "secret partagé" (la
+    clé).
+
+    Le cryptage asymétrique qui est a la base du certificat des impots, et
+    de touts les autres certificats, permet de simplifier un peu ce problème du
+    partage intial du secret. Ce type d'algorithme fait intervenir deux clés
+    différentes : la clé privée et la clé publique. La connaissance de la clé
+    publique ne doit permettre en aucune façon de retrouver la clé privée
+    correspondante, et un document crypté avec la clé publique doit pouvoir etre
+    lu avec la clé privée, et inversement, un document crypté avec la clé
+    publique peut etre lu avec la clé privée. Concretement, ca permet de générer
+    un couple de clé prive/publique, une bonne fois pour toute, et de distribuer
+    la clé publique correspondante aux gens avec qui on veut correspondre.
+
+    \- pour garantir la confidentialité, il faut crypter le document avec la clé
+    publique de son destinataire. Lui seul connait la clé privée qui permet de
+    le lire.
+
+    \- pour garantir l'intégrité et l'origine du document, il suffit de le
+    crypter avec sa clé privée. Le destinataire s'assurera que vous etes bien
+    l'auteur du document en le décryptant avec votre clé publique. (Dans la
+    pratique, on peut se contenté de générer un somme de controle de type MD5 et
+    de crypter uniquement la somme de controle). Ca revient à signer le document
+    électroniquement.
+
+    \- on peut tres faire un double cryptage pour signer le document et assurer
+    sa confidentialité.
+
+    Dans la pratique on utilise un mixte de crypto symétrique et asymétrique
+    (cryptage assymétrique d'une clé de session et cryptage symétrique du
+    document avec la clé de session) pour alléger un peu les calculs. Le
+    criptage assymétrique nécessite une quantité de calculs tout simplement
+    effarante.
+
+    Petite note pour ®om : la difficulté
+    de factoriser un tres grand nombre c'est la clé de RSA. DSA se fonde sur la
+    dificulté de calculer des logarithme discrets, et il existe quelques autres
+    algo mathématiques utilisables. Un coup de wikipédia et vous saurez tout,
+    tout, tout sur le sujet ! ou presque ^^
+
+    Tout le problème consiste a être sur de l'identité de la persone
+    corespondant à une clé publique. C'est normalement le rôle des autorités de
+    certification, qui vous font remplire un joli questionaire avant d'accepter
+    d'enregistrer votre certificat ( clé publique + information sur votre
+    identité) et sont censée se livrer a tout un tas de vérification quant à la
+    véracité de vos réponses (c'est ce point la que l'administration fiscale
+    traite un peu à la légère ^^). Ensuite, tout va bien... tant que vous leur
+    faite confiance ! Vos correspondants n'ont qu'a s'adresser a l'autorité de
+    certification pour obtenir vitre clé publique. Tant que celle-ci fait sont
+    boulot correctement, et que les clés privées restent privées, le sytème
+    focntionne.
+
+    Enfin, contrairement à une idée très répendue chez les béotiens en matière
+    de cryptographie, un programme compilé utilisant un algorythme propriétaire
+    ne constitue en aucun cas un cryptage fort. Désassembler le programme n'est
+    pas une tache aisée, mais ca reste beaucoup plus simple que de casser une
+    clé DSA un peu longue : quelques jours de travail contre plusieurs milliers
+    d'année au bas mot !
+
+    C'est fini pour le cours de crypto. J'espère que j'ai pas trop raconté de
+    conneries.
+
+    Pour en revenir a HADOPI, le problème n'est pas tant technique que
+    juridique. Le truc qu'il faut bien comprendre c'est que le rôle de journal
+    n'est pas de fournir de informations à HADOPI à votre insu, pour ça, ils
+    filtrent le trafic réseau. Le journal doit vous permettre de prouver que
+    vous n'avez pas eu de comportement délictueux, au cas ou vous subiriez
+    injustement les foudre de l'HADOPI parqceque votre voisin a usurpé votre
+    adress IP. Il ne s'agit en aucun cas d'un mouchard qui vous espionne, mais
+    d'un outil certifié qui doit vous permettre de prouver que vous n'avez rien
+    fait de mal. La loi baffoue alègrement le principe de la prsomption
+    d'innocence en vous mettant en demeure de prouver votre innocence si un
+    trafique réseau douteux est détecté sur votre connexion internet, mais dans
+    sa grande bonté, le legislateur nous fournit un moyen de nous prétéger des
+    abus ! Donc pour que ca fonctionne, le logiciel HADOPI doit apporter la
+    PREUVE JURIDIQUE que vous n'avez rien fait de mal. Et pour ça, pas d'autre
+    moyen que d'éplucher tous vos faits et gestes numeriques grace a ce journal
+    inviolable, inmodifiable,, etc... Et pour ca il faut que ce soit l'HADOPI
+    (par le truchement de son logiciel) et non pas l'utilisateur qui signe le
+    fameux journal. Un journal signé par l'utilisateur n'a pas pas plus de
+    valeur qu'une protestation d'innocence devant le juge. Il prouve juste que
+    l'utilisateur n'a rien fait de mal OU possede les compétences techniques
+    pour produire un faux journal.
+
+    Donc ce que demande M. Riguidel, ce n'est
+    rien d'autre qu'un logiciel incrackable, sur le quel l'utilisateur
+    injustement pointé du doigt par la machine de surveillance HADOPI pourrait
+    fonder sa défense. Chacun sais ce qu'il en est des logiciels incrackables !
+    Je ne vois pas beaucoup d'autres solutions la derniere propsée par Marco46,
+    masi dans notre beau pays (encore ? ) démocratique, je vois d'ici les
+    premieres batailles juriques où, l'accusé incapoable de produire un journal
+    le lavant de toute faute, et pour cause ^^, pourra toujours se défencre en
+    disant que le logiciel sencé le protégé fourni par l'HADOPI, a été priaté
+    par son geek de voisin qui veut se venger a cause du chat qui a fait pipi
+    sur son paillasson ^^!
+
+    Ceci-dit, ce n'est qu'un des aspect de cette specification. L'autre aspect,
+    n'est rien d'autre qu'une suite de sécurité internet classique, a
+    l'exclusion de l'antispam (Firewall, controle prental, antivirus). Et pour
+    cette part, je trouve que cette spec n'est pas mauvaise... pour tout dire,
+    je pense qu'elle promet des logiciels un bon cran au dessus de ce qu'on
+    trouve actuellement sur le marché ( Symantec et autres Norton ^^)
+- id: 55
+  author: Sanchez
+  date: 2010-08-11 15:06:08+02:00
+  contents: |
+    Il y a une possibilite offerte a tous meme sans competence. Tu cree une
+    image systeme. Tu telecharge tout ce que tu veux. Tu restaure l'image avec
+    les journaux le logiciel espion et tout et tout. Ni vu ni connu je
+    t'embrouille. Je travaille dans la protection des logiciels d'une boite. Par
+    exemple la seule chose qui nous empechera toujours d'etre sur de la
+    desinstallation d'un programme, du temps d'utilisation etc.. c'est ca. Par
+    contre on sait tres bien faire un logiciel qui detecte s'il a ete modifie et
+    reagit a ca. On peut aussi cacher le code d'un executable de facon a ce que
+    sa decompilation devienne pratiquement impossible si on combine les 2 ont
+    obtient un code impossible a pirater. On peut aussi imposer qu'un executable
+    se mette a jour automatiquement srur requete du fournisseur (surtout pour ce
+    type de logiciel par definition en ligne). Le piratage ne suivra pas les
+    modifications car soit la mise a jours se fait bien et le programme espion
+    fonctionne soit on empeche la mise a jours du programme et il reagit en
+    mettant l'utilisateur en faute. La lutte contre l'adopi ne se fera pas au
+    niveau technique mais 1er au niveau des utilisateurs en refusant tout
+    simplement d'installer le logiciel et 2eme au niveau juridique par
+    mobilisations des association de defense des consommateurs, des libertes
+    etc.. Il s'agit de luter contre l'interet personnel de quelques gros et si
+    les petits sont tres nombreux c'est jouables.
+
+    Robert
+- id: 56
+  author: liberty24
+  author-url: http://liberty24.cabanova.fr
+  date: 2010-08-23 22:33:58+02:00
+  contents: |
+    Bon, même si c'est jouable, ce qui me parait peu probable... Imaginons:
+    j'install le mouchard sur mon PC, mon hdd crame, je change le hdd, et quoi?
+    j'ai bien le droit de changer mon disc dur quands même! non? le mouchard il
+    est ou? "en a plus..." Donc methode de contournement : je clone mon hdd
+    avant de telecharger et je telecharge à souhait... Elle est pas belle la
+    vie?! si il y a un pb je donne le clone pour l'enquette!
+
+    TROP FACILE...
+
+    MERCI QUI? MERCI LIBERTY!
+- id: 57
+  author: Triangle Gnu Tech
+  date: 2010-08-24 10:00:49+02:00
+  contents: |
+    Ou ça se complique c'est avec les machines virtuelles, on peut imaginer un
+    internautes vidant le web de son contenu sous copyright fournir les fichiers
+    de justif de sa machine virtuelle?
+
+    Comme toujours le politique a un bon train de retard sur le technique...
+- id: 58
+  author: Acturus
+  author-url: http://www.actuvirus.com
+  date: 2010-11-10 22:53:20+02:00
+  contents: |
+    Au lieu de dépenser des fortunes sans nom a essayer de choper du pseudo
+    pirate, ils engageaient leurs forces contre le terrorisme, on serai déjà un
+    peu plus en paix ( et je ne parle même pas de fonds pour les personnes en
+    difficultés ou handicapées ayant cruellement besoin de soutien financier,
+    pour leurs soins ). Que de temps et d'argent perdu ! Merci Hadopipi...
+- id: 59
+  author: Zinyth
+  date: 2010-11-22 19:07:34+02:00
+  contents: |
+    Je suis globalement d'accord avec cet article : Impossible, en particulier
+    si cette application fonctionne sur la machine de l'utilisateur, sur
+    laquelle il est root / admin.
+
+    Mais... si ce système est mis en place sur les Box ? Si une puce matérielle
+    est rendue obligatoire, et que c'est cette puce qui se charge du chiffrement
+    ?
+
+    Cela rendrait beaucoup plus difficile le travail de récupération de la clé.
+    Il faudrait alors beaucoup de moyens et de compétences.
+
+    Plus compliqué, mais pas impossible : si cette puce utilisait une clé
+    différente pour chaque box ? Seule l'élite serait alors capable de
+    contourner HADOPI.
+
+    Quand on voit le temps que cela prend pour des experts, "simplement" pour
+    casser une puce TPM...
+
+    Notons qu'une box "pirate" exempte de puce ne nous protègerais pas, nous
+    serions alors présumés coupables, en l'absence de journaux...
+
+    Qu'en pensez vous ?
+- id: 60
+  author: ®om
+  date: 2010-11-23 11:40:18+01:00
+  contents: |
+    > @[**Zinyth**](#comment-59)
+    >
+    > Mais… si ce système est mis en place sur les Box ? Si une puce matérielle
+    > est rendue obligatoire, et que c'est cette puce qui se charge du
+    > chiffrement ?
+
+    Si la puce ne se charge que du chiffrement (ou plutôt de la signature),
+    **rien ne prouve la validité des journaux** (il suffit d'envoyer à la puce
+    de "faux journaux" qu'elle va signer).
+
+    Mais j'étends ta question à "si ce matériel se charge de surveiller le
+    réseau, de générer les journaux et de les chiffrer". En gros, si une boîte
+    noire, une sorte de mouchard matériel hors du contrôle de l'utilisateur,
+    faisait tout le travail. Ce cas nécessite deux concepts inacceptables.
+
+    Le premier, c'est qu'une partie du réseau informatique de l'utilisateur (en
+    l'occurrence sa box) n'est pas sous son contrôle. C'est en partie le cas sur
+    les boxes actuelles, contrairement à ce qui se faisait auparavant. C'est une
+    faille importante pour la liberté de l'utilisateur, qu'il faut corriger,
+    comme [le propose](https://cpaul.co-ment.com/text/7nPq9B8gXaa/view/) le
+    député Christian Paul :
+
+    > Aujourd'hui, n'importe quel français est libre de choisir son fournisseur
+    > d'électricité, ainsi que les équipements de raccordement au réseau. Dans
+    > un passé pas si éloigné, les internautes choisissaient leur modem
+    > (modulateur / démodulateur) et ne se voyaient pas imposer l'installation
+    > de la « box » du fournisseur d'accès retenu et de son bouquet de services
+    > associés. Cette liberté de choix, qui sera à coup sûr féconde en nouvelles
+    > offres de services, doit être retrouvée.
+
+    Le second, ce n'est ni plus ni moins de l'[informatique
+    déloyale](http://www.april.org/groupes/informatique-deloyale/) (appelée
+    incorrectement "informatique de confiance" par ses promoteurs) appliquée à
+    la box. Ce qui est évidemment intolérable.
+
+    En plus d'être une grave atteinte aux libertés publiques, tout ceci
+    coûterait extrêmement cher. Un prix que seule une dictature ne lésinant pas
+    sur les moyens serait prête à payer.
+
+    Et comme la fourniture des journaux à la justice ne permet pas de "prouver
+    son innocence", mais est tout au plus un élément pour "montrer sa bonne foi"
+    (selon la loi et les dires des membres de la HADOPI), ils ne sont ni
+    nécessaires ni suffisants pour être accusé ou innocenté. Je pense donc qu'il
+    leur faudra trouver une autre excuse (bidon) pour convaincre de mettre en
+    place un tel système.
+
+    Mais c'est une bonne occasion de rappeler que ce "combat" est surtout
+    politique avant d'être "technique" (même si l'inapplicabilité de leur projet
+    est un argument intéressant).
+
+    > Notons qu'une box « pirate » exempte de puce ne nous protègerais pas, nous
+    > serions alors présumés coupables, en l'absence de journaux…
+
+    D'après la [Déclaration des Droits de l'Homme et du Citoyen de
+    1789](http://www.assemblee-nationale.fr/histoire/dudh/1789.asp) (article
+    IX : *"Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré
+    coupable"*), non. Donc avoir un modem de son choix (ce qui est déjà
+    possible, et qui n'a rien de pirate) serait plus que nécessaire si une telle
+    puce était intégrée aux boxes "propriétaires".
+- id: 61
+  author: PolK
+  date: 2010-12-18 01:15:08+01:00
+  contents: |
+    Chapeau pour l'article, je m'en vais chercher si tu as écrit un article dans
+    le genre sur ACTA.
+- id: 62
+  author: michael
+  date: 2011-01-03 15:55:09+01:00
+  contents: |
+    je ne télécharge rien mais le problème du contournement m'amuse
+
+    si j'ai bien compris le mouchard est installé sur le PC du gars surveillé
+
+    je dispose d'un routeur qui permet l'accès internet sur autant d'ordinateurs
+    que je souhaite
+
+    j'ai 2 disques durs dans mon PC, et 2 Windows installés (pratique en cas de
+    plantage)
+
+    comment le logiciel HADOPI peut surveiller tout ça ?
+- id: 63
+  author: Paul TOTH
+  author-url: http://tothpaul.free.fr
+  date: 2011-01-13 06:32:35+01:00
+  contents: |
+    moi je me demande comme ce mouchard fera la différence entre un DVDRip et
+    des photos de vacances sur dl.free.fr ? ... Quoi ? y'a pas de photo de
+    vacances sur ce site ?!
+
+    au fait ça représente quel espace disque 1 an de journalisation ? on a le
+    droit à un crash disque ou il y a une obligation de sauvegarde ? Et si je
+    réinstalle mon système j'ai le droit de reformater mon disque ou il me faut
+    une décision de justice pour cela ?
+
+    Non, moi je pense que la solution est dans le Cloud, nos données y seraient
+    bien plus l'abris..de notre contrôle.
+- id: 64
+  author: Sebastien SEO
+  author-url: http://www.mon-seo.com
+  date: 2011-01-13 17:40:55+01:00
+  contents: |
+    La grande question que je me poste,c 'est : pourquoi ils ne vont pas vers la
+    licence globale ???? Je n'ai pas peur d'Hadopi du tout, mais cela fait déjà
+    pas mal de mois que j'utilisez Deezer et Spotify ! Et de plus en plus de
+    gens sont comme moi. Même chose pour les films et encore plus les séries.
+
+    Quand on voit des films en VOD plus cher à la location que l'achat du DVD,
+    tu te demandes vraiment où est le foutage de gueule !!
+- id: 65
+  author: Briced
+  date: 2011-04-27 01:32:26+01:00
+  contents: |
+    Paul TOTH: moi je me demande comme ce mouchard fera la différence entre un
+    DVDRip et des photos de vacances sur dl.free.fr ? … Quoi ? y'a pas de photo
+    de vacances sur ce site ?!
+
+    Pas compliqué, pareil que pour ACTA, le DPI va analyser le paquet pour voir
+    si il "ressemble" a un truc sous copyright...

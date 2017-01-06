@@ -1,0 +1,251 @@
+- id: 1
+  author: lolzzz
+  date: 2009-06-20 07:47:57+02:00
+  contents: |
+    J'ajouterais pour ceux comme moi qui n'ont pas eu le raccourcis dans le menu
+    gnome que la commande pour lancer le centre de contrôle de kde4 est tout
+    bêtement `systemsettings` :D.
+- id: 2
+  author: "Choqok pour Twitter et Identi.ca | Clapico's Blog (ou Clapico &amp; Ubuntu)"
+  author-url: http://www.clapico.com/2009/05/09/choqok-pour-twitter-et-identi-ca-2/
+  date: 2009-06-20 09:25:14+02:00
+  pingback: true
+  contents: |
+    [...] meilleure intégration de cette application KDE dans Gnome, j’ai suivi
+    l’astuce de  ®om en ouvrant une console et en tapant sudo apt-get install
+    [...]
+- id: 3
+  author: Sam101
+  date: 2009-06-20 11:04:00+02:00
+  contents: |
+    Chez moi, le panneau systemsettings reste toujours desespérament vide...
+- id: 4
+  author: daucourt
+  date: 2009-06-20 11:25:41+02:00
+  contents: |
+    Quand je lance 'systemsettings', j'ai une fenêtre vide (seul apparaît un
+    champ de recherche en haut au milieu).
+- id: 5
+  author: Lane
+  date: 2009-06-20 11:27:38+02:00
+  contents: |
+    Moi en lançant systemsettings, la fenêtre est vide, il y a juste la barre de
+    recherche en haut. Voici ce que donne le lancement de systemsettings en
+    ligne de commande :
+
+        systemsettings(5349) KServiceFactory::findServiceByDesktopPath: "findServiceByDesktopPath: not found"
+        systemsettings(5349) MainWindow::readMenu: "" Looking for children in ' "" '
+- id: 6
+  author: pxl
+  author-url: http://ubuntipsandtricks.blogspot.com/
+  date: 2009-06-20 12:45:38+02:00
+  contents: |
+    Cool ! Mon digiKam a enfin le même look que mon thème ! Merci pour l'astuce
+    :-)
+
+    Par contre y a une icône d'accessibilité qui est apparue dans mon systray
+    après avoir installé systemsettings. Pour l'enlever, il faut décocher la
+    case "Utilisez les gestes pour activer..." dans l'onglet "Gestes
+    d'activation" du menu "Accessibilité".
+- id: 7
+  author: Spmeckar
+  author-url: http://grupo.muzenza.france.free.fr
+  date: 2009-06-20 13:05:28+02:00
+  contents: |
+    Merci beaucoup pour cette info, malheureusement cela ne fonctionne pas chez
+    moi! Quand j'ouvre le panneau de configuration "System Settings", celui-ci
+    est vide! Pourtant j'ai bien tout suivi!
+
+    Serait-il possible que l'on m'aide?
+- id: 8
+  author: ®om
+  date: 2009-06-20 13:37:43+02:00
+  contents: |
+    Si après avoir installé `kdebase-workspace-bin`, votre **systemsettings** est
+    toujours vide (après un redémarrage de l'appli), exécutez la commande :
+
+        kbuildsycoca4
+
+    Ça devrait rafraîchir quelques trucs, et ça devrait fonctionner…
+- id: 9
+  author: VV666
+  date: 2009-06-20 13:48:47+02:00
+  contents: |
+    Ma seule appli' QT est Virtualbox version Sun. J'ai testé cette astuce mais
+    ça change rien, normal ?
+- id: 10
+  author: Sam101
+  date: 2009-06-20 14:48:44+02:00
+  contents: |
+    VV666 =\> Tu as paramètres Qt4 pour ça il me semble =)
+- id: 11
+  author: VV666
+  date: 2009-06-20 16:38:47+02:00
+  contents: |
+    J'ai "appliquer au application non-KDE4" coché, donc ça devrai marcher, non
+    ?
+- id: 12
+  author: Smarter
+  date: 2009-06-21 17:53:27+02:00
+  contents: |
+    VV666: install qt4-qtconfig et lance qtconfig-qt4 pour configurer les applis
+    Qt4.
+- id: 13
+  author: TheDoor
+  date: 2009-06-23 01:31:41+02:00
+  contents: |
+    Depuis que j'ai installé systemsettings et kdebase-workspace-bin je me
+    retrouve a ne plus avoir d'icon dans le appli qt4. Par exemple pour amarok
+    2.1 je n'ai plus d'icon dans les menus et partout ou il y avait des icons...
+    ils ont disparus!
+- id: 14
+  author: sebsauvage
+  author-url: http://sebsauvage.net
+  date: 2009-06-26 00:06:55+02:00
+  contents: |
+    Merci !
+
+    Ton article m'a été très utile et ça marche très bien.
+
+    (sous Ubuntu 9.04)
+- id: 15
+  author: Leyto24
+  date: 2009-06-26 11:25:15+02:00
+  contents: |
+    Bonjour etmerci pour ce tuto!
+
+    Tout marche trés bien sauf que dans le menu déroulant pour choisir le thème
+    des applis KDE, il n'y a pas l'item GTK+!!
+
+    Qu'est-ce qu'il faut que je fasse?
+- id: 16
+  author: ®om
+  date: 2009-07-05 23:44:53+02:00
+  contents: |
+    > @[**pxl**](#comment-6)
+    >
+    > Par contre y a une icône d'accessibilité qui est apparue dans mon systray
+    > après avoir installé systemsettings. Pour l'enlever, il faut décocher la
+    > case "Utilisez les gestes pour activer..." dans l'onglet "Gestes
+    > d'activation" du menu "Accessibilité".
+
+    Ou l'équivalent sous Gnome : Système → Préférences → Clavier, Accessibilité,
+    décocher « Permettre l'activation et la désactivation des fonctionnalités
+    d'accessibilité par des raccourcis clavier »
+- id: 17
+  author: ®om
+  date: 2009-07-05 23:45:16+02:00
+  contents: |
+    @[**Leyto24**](#comment-15)
+
+    Aucune idée, c'est bizarre. Tu es sous Jaunty?
+- id: 18
+  author: Nico
+  author-url: http://duboisnicolas.free.fr
+  date: 2009-07-09 15:58:40+02:00
+  contents: |
+    Merci beaucoup pour ton astuce ! Kile était limite inutilisable avec
+    l'ancien thème KDE. ;))
+- id: 19
+  author: Rob2
+  author-url: http://salledejeux.net/
+  date: 2009-08-14 11:41:51+02:00
+  contents: |
+    Merci pour l'astuce :)
+- id: 20
+  author: Zakhar
+  date: 2009-08-20 09:56:34+02:00
+  contents: |
+    > @[**Leyto24**](#comment-15)
+    >
+    > Tout marche trés bien sauf que dans le menu déroulant pour choisir le thème
+    > des applis KDE, il n'y a pas l'item GTK+!!
+
+    Idem, je n'ai pas l'item GTK+ de proposé.
+
+     Liste proposée :
+
+     * CDE
+     * Cleanlooks
+     * Motif 
+     * Oxygen (par défaut)
+     * Plastique
+     * Windows
+
+    =\> Ubuntu 8.10
+- id: 21
+  author: Zakhar
+  date: 2009-08-20 10:12:29+02:00
+  contents: |
+    Précisions, j'avais une fenêtre de réglages quasi vide, même après reboot.
+
+    J'ai appliqué la manipulation indiquée au post 7 :
+
+        kbuildsycoca4
+
+    Cela a produit une erreur (que je n'ai hélas pas copié) ou du moins un
+    warning car l'effet escompté a fonctionné, la fenêtre comporte désormais
+    plein de réglages... sauf GTK+ !
+
+    L'erreur parlait d'une incohérence avec Plasmoids, qu'il manquerait un
+    point-virgule dans un fichier de configuration...
+
+    Si je refais le kbuildsycoca4, il n'y a désormais plus d'erreur car il dit :
+
+        kbuildsycoca4(8617) kdemain: Reusing existing ksycoca
+- id: 22
+  author: Zakhar
+  date: 2009-08-20 10:21:07+02:00
+  contents: |
+    J'ai reussi à reproduire les erreurs, c'est là :
+
+    <http://forum.ubuntu-fr.org/viewtopic.php?pid=2879822#p2879822>
+- id: 23
+  author: "[Reminder] Intégration des applications KDE4 dans Gnome | La Tribune de Drakken"
+  author-url: http://www.drakken.ironie.org/wordpress/?p=257
+  date: 2009-10-02 10:13:52+02:00
+  pingback: true
+  contents: |
+    [...] bien son bureau Gnome sans devoir installer la moitié de kde comme le
+    recommande ce genre d’article. Et bien c’est très simple, il suffit d’éditer
+    votre fichier [...]
+- id: 24
+  author: drake
+  date: 2009-10-02 10:21:57+02:00
+  contents: |
+    Solution plus simple, modifier le .kde/share/config/kdeglobals et rajouter :
+
+        [General]
+        widgetStyle=gtk+
+- id: 25
+  author: Nomad
+  date: 2010-11-19 01:53:27+02:00
+  contents: |
+    Merci pour ce petit tuto, ca peu s'avérer vraiment pratique pour certaine
+    appli, je teste ca ce week end !
+- id: 26
+  author: wubijacq
+  author-url: http://www.wubijacq.com/
+  date: 2010-12-07 23:08:05+01:00
+  contents: |
+    Système =\> Préférences =\> paramètres Qt4 à l'air d'avoir disparu dans
+    Ubuntu 9.10. J'utilise le logiciel xnviewmp avec des librairies Qt
+    (multi-plateforme) et donc se serait la solution de rechange d'installer
+    systemsettings de KDE? Qt4 Designer je ne sais pas m'en servir
+- id: 27
+  author: christian.zennaro
+  author-url: http://christianzennaro.blogspot.com/
+  date: 2011-01-18 01:34:07+01:00
+  contents: |
+    Super, ca marche très très bien et ubuntu devient simple avec ce type
+    d'article. Belle journée
+- id: 28
+  author: "Configurer le thème des applications GTK sous KDE &#8211; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2012/05/configurer-le-theme-des-applications-gtk-sous-kde/
+  date: 2012-05-15 21:08:27+01:00
+  pingback: true
+  contents: |
+    [...] il y a un peu plus de 4 ans, j’ai décidé de revenir à KDE. Mais de la
+    même manière que les applications prévues pour KDE ne s’intègrent pas
+    correctement à Gnome, les applications prévues pour Gnome sont horribles sur
+    KDE : elles n’ont pas de thème [...]

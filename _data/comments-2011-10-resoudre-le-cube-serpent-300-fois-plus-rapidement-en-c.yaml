@@ -1,0 +1,440 @@
+- id: 1
+  author: egan
+  date: 2011-10-19 07:21:03+02:00
+  contents: |
+    Ce serait intéressant de voir le temps de Python quand il est interprété par
+    le JIT PyPy.
+
+    Selon les tests on peut obtenir des performances allant jusqu'à 5x celles de
+    CPython : <http://speed.pypy.org/>
+- id: 2
+  author: Samael
+  date: 2011-10-19 09:35:28+02:00
+  contents: |
+    Test très intéressant merci à toi, si tu veux pousser le test plus loin il
+    me semble qu'il est possible d'appeler du code C depuis un programme python.
+    Faire un test hybride pourrait être intéressant afin de comparer les temps
+    d'exécutions et les temps de développement.
+- id: 3
+  author: Capello
+  date: 2011-10-19 09:48:00+02:00
+  contents: |
+    Tu dis au début, qu'il y a une fonction qui ne fonctionne pas pareil entre
+    le python et le C. Serait-il possible de modifier le python pour avoir le
+    même algo exactement ? Le résultat peut-aussi bien être positif que négatif.
+    J'ai regardé un peu le code. Ce qui me saute aux yeux, c'est que tu utilises
+    `sprintf` sans protection. On peut écrire au dela du buffer, sans forcément
+    le voir. Je préfère personnellement
+    `int snprintf(buffer, size_buffer,const char *,…);` Sans oublier de lire le
+    retour de `snprintf` et de tester. En faisant bien attention à garantir le
+    code C, tu risques de perdre quelques %.
+- id: 4
+  author: plop
+  date: 2011-10-19 10:04:52+02:00
+  contents: |
+    Salut,
+
+    Interessant, mais j'aurais cependant quelques remarques sur ta manière de
+    calculer le temps d'exécution...
+
+    "time" c'est bien, mais pour mesurer des temps d'exécution autant court
+    (\<0.040s) cela ne suffit pas (dans ce cas ci). D'abord, "time" (si je me
+    souviens bien) prend en compte les changement de contexte, donc tu auras des
+    valeurs faussées.
+
+    Ensuite, sur des temps autant court, il faut au moins exécuté ton code
+    plusieurs fois (10,100,1000,10000,...), sauvez chaque temps d'exécution,
+    puis faire une moyenne afin d'avoir quelque chose de "censé".
+
+    De plus, il serait interessant de ne calculer que le temps d'exécution de
+    l'algorithme de résolution, donc sans prendre en compte les décalrations,
+    initialisations,...
+
+    Par exemple, en C, tu peux utiliser la fonction `gettimeofday()` (je te
+    laisse lire la man ;) ), qui ne compte que les "ticks" (les coups d'horloge
+    du processeur) processeur au sein du processus. Par exemple, si ton
+    algorithme dure 100 "ticks", qu'il y a un changement de contexte au milieu
+    de ton programme d'une durée de 50 "ticks", `gettimeofday()`, te retournera
+    100 et non 150.
+
+    Bref, ce n'est qu'un commentaire d'un ancien élève traumatisé par son
+    professeur de "théorie de la complexité" qui a du calculer beaucoup trop de
+    temps d'exécution d'algorithme ;)
+- id: 5
+  author: D
+  date: 2011-10-19 10:23:01+02:00
+  contents: |
+    La vitesse entre Python et C ne me surprends pas vraiment, par contre je
+    suis étonner du gain avec l'option -O3 !
+- id: 6
+  author: Fred
+  date: 2011-10-19 10:37:27+02:00
+  contents: |
+    @Plop
+
+    `gettimeofday()` ne donne pas les ticks, il donne la date donc ne prend pas
+    en compte le temps réel d'exécution du programme.
+
+    La fonction que tu conseilles est `clock()`.
+
+    @L'auteur
+
+    As-tu aussi testé le résultat avec l'optimisation `-Os` ?
+- id: 7
+  author: plop
+  date: 2011-10-19 10:56:16+02:00
+  contents: |
+    @Fred: euh oui, en effet, mes confuses, il s'agit bien de `clock()` et non
+    pas `gettimeofday()` ;)
+
+    (à voir j'ai pas été assez traumatisé par mes cours ;) )
+- id: 8
+  author: ®om
+  date: 2011-10-19 11:47:02+02:00
+  contents: |
+    > @[**Samael**](#comment-2)
+    >
+    > Test très intéressant merci à toi, si tu veux pousser le test plus loin il
+    > me semble qu'il est possible d'appeler du code C depuis un programme
+    > python. Faire un test hybride pourrait être intéressant afin de comparer
+    > les temps d'exécutions et les temps de développement.
+
+    Ici, le programme n'est composé que d'une partie calcul. Du coup, que
+    voudrais-tu écrire en *C* et que voudrais-tu écrire en *Python* ? Ça se
+    justifie dans certains cas, mais à mon avis pas ici.
+
+    > @[**Capello**](#comment-3)
+    >
+    > Tu dis au début, qu'il y a une fonction qui ne fonctionne pas pareil entre
+    > le python et le C. Serait-il possible de modifier le python pour avoir le
+    > même algo exactement ? Le résultat peut-aussi bien être positif que
+    > négatif.
+
+    Si j'ai bien compris le but de ta question, tu souhaiterais mettre en
+    évidence la différence de performances dûe à la compilation, et donc
+    supprimer tout ce qui concerne le coût de l'abstraction ?
+
+    Dans ce cas, il y aurait bien d'autres choses à modifier. Un exemple parmi
+    d'autres, en *Python* j'utilise une liste de listes de listes… pour stocker
+    les booléens (flags), alors qu'en *C* j'utilise un espace contigü en
+    mémoire. De même, la liste des vecteurs est une liste de références en
+    *Python*, alors qu'en *C* je place directement les `struct vector` dans le
+    tableau, sans déréférencement. La fonction que j'ai totalement réécrite est
+    juste un cas extrême, où en *Python* j'utilise une abstraction qui facilite
+    bien la vie (et il serait dommage de s'en passer), qu'on ne code
+    raisonnablement pas en *C* (de toute façon, la fonction en question est
+    anecdotique en temps, elle ne fait que générer les positions de départ).
+
+    Et c'est volontaire : pour comparer deux langages, il me semble plus
+    intéressant de comparer "tel que l'on code" dans ces langages (on code en
+    haut-niveau dans un langage haut-niveau, en bas-niveau dans un langage
+    bas-niveau). Cela empêche cependant de mettre de côté le coût de
+    l'abstraction.
+
+    Même si j'aimerais bien connaître la part de gains dûe à la compilation et
+    la part dûe à l'abstraction, la mesure des deux combinés me semble plus
+    pertinente.
+
+    > @[**Capello**](#comment-3)
+    >
+    > J'ai regardé un peu le code. Ce qui me saute aux yeux, c'est que tu
+    > utilises sprintf sans protection. On peut écrire au dela du buffer, sans
+    > forcément le voir. Je préfère personnellement
+    > `int snprintf(buffer, size_buffer,const char *,…);` Sans oublier de lire
+    > le retour de `snprintf` et de tester.
+
+    Tu as raison, je vais modifier.
+
+    Néanmoins, j'avais quand même choisi une taille supérieure à celle dont on a
+    raisonnablement besoin.
+
+    > @[**Capello**](#comment-3)
+    >
+    > En faisant bien attention à garantir le code C, tu risques de perdre
+    > quelques %.
+
+    Les appels à `sprintf` ne servent qu'une seule fois, pour générer la chaîne
+    de caractères décrivant la solution, quand le traitement est terminé.
+
+    > @[**Fred**](#comment-6)
+    >
+    > As-tu aussi testé le résultat avec l'optimisation `-Os` ?
+
+    Non, je n'ai pas essayé.
+- id: 9
+  author: Masterbox
+  author-url: http://utopievirtuelle.wordpress.com
+  date: 2011-10-19 11:47:55+02:00
+  contents: |
+    Je vais dans le même sens que certains commentaires, exécuter ton algorithme
+    plusieurs fois, et, est-il possible avec Python, comme en Perl, de
+    precompiler ton programme? Avec un temps d'exécution aussi court je suis sûr
+    que cette étape est longue comparativement, ce qui fausse le résultat...
+- id: 10
+  author: ®om
+  date: 2011-10-19 12:50:03+02:00
+  contents: |
+    > @[**plop**](#comment-4)
+    >
+    > Ensuite, sur des temps autant court, il faut au moins exécuté ton code
+    > plusieurs fois (10,100,1000,10000,…), sauvez chaque temps d'exécution,
+    > puis faire une moyenne afin d'avoir quelque chose de « censé ».
+
+    Pour l'exemple *R* (le plus rapide), je suis totalement d'accord. J'ai
+    inscrit les valeurs brutes donnés par `time`, mais quand il est écrit
+    `0m0.002s`, il faut comprendre "résolution instantanée", et ne pas
+    considérer la valeur elle-même. C'est d'ailleurs la raison pour laquelle je
+    n'ai pas mis le facteur de gain pour ce premier exemple, qui n'aurait aucun
+    sens. Je remplace dans le billet par "0", ça sera plus clair.
+
+    Effectivement, exécuter plusieurs fois l'algorithme permettrait de pouvoir
+    comparer les performances sur cet exemple, mais il ne me semblait pas digne
+    d'intérêt, vu que les exemples *M* et *L* fournissent des valeurs
+    utilisables telles quelles (l'exemple *L* prend 3h53 en *Python*, et 50s en
+    *C* (`-O3`).
+
+    > @[**plop**](#comment-4)
+    >
+    > Par exemple, en C, tu peux utiliser la fonction `gettimeofday()` (je te
+    > laisse lire la man ;) ), qui ne compte que les « ticks » (les coups
+    > d'horloge du processeur) processeur au sein du processus. Par exemple, si
+    > ton algorithme dure 100 « ticks », qu'il y a un changement de contexte au
+    > milieu de ton programme d'une durée de 50 « ticks », `gettimeofday()`, te
+    > retournera 100 et non 150.
+    >
+    > […]
+    >
+    > euh oui, en effet, mes confuses, il s'agit bien de `clock()` et non pas
+    > `gettimeofday()` ;)
+
+    Tout-à-fait. Cela me rappelle de vieux souvenirs, dans lesquels je ne me
+    suis pas replongé, car je n'avais pas besoin d'une telle précision (savoir
+    que c'est 372 fois plus rapide ou 368 fois seulement n'a pas beaucoup
+    d'importance, je voulais surtout l'ordre de grandeur).
+
+    > @[**D**](#comment-5)
+    >
+    > La vitesse entre Python et C ne me surprends pas vraiment, par contre je
+    > suis étonner du gain avec l'option `-O3`` !`
+    >
+    Effectivement, ça m'a un peu (agréablement) surpris aussi.
+- id: 11
+  author: G-rom
+  date: 2011-10-19 12:51:46+02:00
+  contents: |
+    > @[**®om**](#comment-8)
+    >
+    > Un exemple parmi d'autres, en Python j'utilise une liste de listes de
+    > listes… pour stocker les booléens (flags), alors qu'en C j'utilise un
+    > espace contigü en mémoire.
+
+    complexité n³ en haut niveau contre accès mémoire direct ça ne te choque pas
+    ? Je veux bien que tu compares et le langage et la manière de coder mais bon
+    là...
+- id: 12
+  author: FAb
+  date: 2011-10-19 13:15:43+02:00
+  contents: |
+    Quitte à utiliser `-O3` de gcc autant comparer avec l'équivalent de Python
+    non ? Et puis sur un aussi petit programme le temps de compilation de Python
+    n'est certainement pas négligeable... Dur d'interpréter les chiffres. Qui
+    sur une matrice beaucoup grande ?
+- id: 13
+  author: Geek87
+  date: 2011-10-19 19:50:20+02:00
+  contents: |
+    Article intéressant ! Et en Java ça donnerait quoi à votre avis ?
+- id: 14
+  author: cyan
+  date: 2011-10-21 10:34:10+02:00
+  contents: |
+    Désolé, je ne suis pas du tout convaincu par ce résultat et je n'ai pas
+    l'impression qu'il donne la juste mesure du langage en question. Hormis les
+    problèmes sur la méthode de mesure, tu vas à l'encontre des différentes
+    études sur le sujet. Les études montre un rapport de seulement x5 entre
+    python et C. Et j'ai appris, dans mon cas personnel, que souvent une lenteur
+    de python par rapport à C, était due à une mauvais manipulation de python et
+    que bien utilisé, python peut atteindre mêmes atteindre performances qu'un
+    code C (vraiment dans certain cas précis comme pour toi).
+
+    En effet, Python est certes un langage à byte-code mais les routines C
+    dessous sont optimales. Et en regardant ton code, des choses me font penser
+    que ça peut être améliorer : les quadruples boucles imbriqués par exemple en
+    python faut vraiment éviter car les boucles en python n'ont rien à voir avec
+    celles de C. As tu pensé au recours de numpy qui est justement pensé pour
+    utiliser de manière optimale des tableaux et matrices ?
+
+    bon ensuite t'as peut être pas que ça à faire, mais ça donnerait plus de
+    base à l'article qui est plus choc que réaliste à mon goût.
+- id: 15
+  author: cyan
+  date: 2011-10-21 10:37:00+02:00
+  contents: |
+    mea culpa, ça tourne autour de x8 à x10 mais pas x300
+- id: 16
+  author: ®om
+  date: 2011-10-21 11:05:42+02:00
+  contents: |
+    > @[**cyan**](#comment-14)
+    >
+    > tu vas à l'encontre des différentes études sur le sujet. Les études montre
+    > un rapport de seulement x5 entre python et C. […] mea culpa, ça tourne
+    > autour de x8 à x10 mais pas x300
+
+    Je ne vais pas à leur encontre, ni mon programme ni mon billet ne
+    contredisent les résultats de ces études (que tu donnes).
+
+    Il ne s'agit pas d'une analyse générale des performances moyennes entre *C*
+    et *Python*, mais bien des différences sur la résolution d'un problème
+    particulier (le cube-serpent), dont le cœur de l'algorithme concerne la
+    manipulation mémoire (ajouter et retirer des vecteurs d'une liste, et
+    allumer ou éteindre des booléens dans un volume).
+
+    > @[**cyan**](#comment-14)
+    >
+    > python peut atteindre mêmes atteindre performances qu'un code C
+
+    Comme je le [disais](#comment-8), je pense que pour comparer les
+    performances de deux langages, il faut coder tel qu'on le fait
+    habituellement dans ces langages.
+
+    Par exemple, dans le programme *Python*, un chemin est stocké sous forme de
+    listes de vecteurs, un vecteur étant lui-même une liste d'entiers, alors que
+    dans le programme *C*, le chemin est stocké dans un espace mémoire contigü
+    (les vecteurs les uns après les autres). Il me semble que c'est la manière
+    naturelle d'implémenter cette fonctionnalité.
+
+    Mais supposons qu'on veuille coder exactement de la même manière pour
+    "comparer". On a alors deux solutions :
+
+    -   modifier le programme *C* pour faire comme en *Python* ;
+    -   modifier le programme *Python* pour faire comme en *C*.
+
+    Dans le premier cas, on va s'embêter à écrire explicitement plein de
+    `malloc`s inutilement (ce n'est pas naturel, il va falloir "coder plus" pour
+    perdre en performances).
+
+    Dans le second cas, on va utiliser en *Python* une liste "à plat". Mais
+    alors, pour ajouter un vecteur, on n'utilise plus la fonction `append()` : à
+    la place il va falloir copier chaque composante une à une (dans une boucle).
+    Mais là encore c'est injuste, car en *C* on utilise `memcpy`. Du coup, que
+    fait-on ? On s'interdit d'utiliser `memcpy` et on fait une boucle aussi en
+    *C* ?
+
+    J'ai l'impression qu'on ne s'en sort pas, et que les résultats seraient
+    encore plus biaisés.
+
+    > @[**cyan**](#comment-14)
+    >
+    > Et en regardant ton code, des choses me font penser que ça peut être
+    > améliorer
+
+    J'en suis sûr ! Si certains sont motivés…
+
+    Moi, personnellement, j'ai répondu à la question qui me taraudait : combien
+    de fois plus rapidement mon programme *C* résoudrait le cube-serpent que mon
+    programme *Python* (juste l'ordre de grandeur m'intéressait).
+
+    > @[**cyan**](#comment-14)
+    >
+    > As tu pensé au recours de numpy qui est justement pensé pour utiliser de
+    > manière optimale des tableaux et matrices ?
+
+    Non, mais là encore, si quelqu'un veut tester, je suis intéressé par les
+    résultats ;-)
+- id: 17
+  author: Le langage C | Blog elveos
+  author-url: http://blog.elveos.org/183/le-langage-c/
+  date: 2011-10-25 18:36:11+02:00
+  pingback: true
+  contents: |
+    [...] y a quelques jours, je suis tombé sur un article révélateur de ce
+    problème, dans lequel l’auteur s’était amusé à recodé en C un algorithme
+    [...]
+- id: 18
+  author: Mac.aque
+  date: 2011-10-28 22:26:15+02:00
+  contents: |
+    Salut,
+
+    Juste une petite idée qui pourrait sans doute faire gagner un peu de temps.
+
+    Comme souvent il serait intéressant d'utiliser une sentinelle.
+
+    Ici ça pourrait permettre de réduire le nombre de comparaison à faire pour
+    détecter qu'un nouvel emplacement est valide.
+
+    Le principe est simple, il faut rajouter créer une matrice de deux unités
+    plus longues dans toutes les dimension et l'initialisé avec tous les
+    éléments sur les bords déjà utilisé.
+
+    Par exemple en dimension 2, au lieu de partir avec une matrice :
+
+        0 0 0
+        0 0 0
+        0 0 0
+
+    On commence avec une matrice :
+
+        1 1 1 1 1
+        1 0 0 0 1
+        1 0 0 0 1
+        1 0 0 0 1
+        1 1 1 1 1
+
+    Comme ça à chaque fois qu'on rajoute un élément, on a juste à tester si la
+    case est occupée et on peut supprimer les deux tests vérifiant si on a
+    dépassé d'un côté ou de l'autre la matrice.
+- id: 19
+  author: ®om
+  date: 2011-10-28 22:44:57+02:00
+  contents: |
+    @[**Mac.aque**](#comment-18):
+
+    Ah ouais, pas bête. J'avais déjà vu cette astuce pour un jeu d'échecs (faire
+    un échiquier 10×10 au lieu de 8×8, pour la même raison).
+
+    Ça doit effectivement faire gagner un peu de temps…
+- id: 20
+  author: FTG
+  author-url: http://www.lutix.org
+  date: 2011-10-29 09:05:29+02:00
+  contents: |
+    Je suis honoré qu'un de mes commentaires ait pu donner naissance à un billet
+    aussi intéressant! ;)
+
+    En fait je suis un grand fan de C/C++, même si je suis loin d'en être un
+    utilisateur expérimenté!
+- id: 21
+  author: Mac.aque
+  date: 2011-10-29 11:53:54+02:00
+  contents: |
+    Du coup j'ai essayé de faire une implémentation java.
+
+    J'utilise pas le même algo donc la comparaison du temps d'execution de vaut
+    rien, mais il a l'air assez rapide.
+
+    Ici la matrice est représentée dans un tableau unidimensionnelle de manière
+    classique (par exemple en dimension deux avec une matrice 3\*3, l'élément
+    {x,y} est à la position 3\*y+x), et comme je le proposais on rajoute une
+    deux "bordures" au début et à la fin de chaque dimension qui servent de
+    sentinelles.
+
+    La représentation du serpent est transformée en un tableau de boolean
+    indiquant pour chaque element si le prochain est dans la même direction où
+    s'il faut changer de sens.
+
+    La solution s'affiche en affichant le contenu de chaque élément de la
+    matrice. En effet à mesure que l'on progresse dans la matrice en déployant
+    le serpent on remplace la valeur de l'emplacement par l'indice de l'élément
+    du serpent. Comme cela on peut au final voir comment le serpent est
+    positionné.
+
+    Par contre l'algo ne gère pas le départ, là il part seulement d'un coin et
+    dans une seule dimension, il faudrait le modifier pour qu'il parte de toutes
+    les positions et dans toutes les directions non symétriques.
+
+    Voici le code :
+
+    *(EDIT par ®om):*
+    [`SnakeSolverHyperCube.java`](http://dl.rom1v.com/snakesolver/others/macaque/SnakeSolverHyperCube.java)

@@ -1,0 +1,182 @@
+- id: 1
+  author: Nico
+  author-url: http://carriernicolas.open-web.fr/
+  date: 2011-06-07 06:54:09+02:00
+  contents: |
+    Bonjour,
+
+    En effet, pas d'interface réseau, pour un serveur, ça craint. Ça m'était
+    arrivé avec un serveur que je voulais installer dans l'hyperviseur de MS (je
+    ne sais plus comment il s'appelle) et qui émulait une carte réseau
+    pourrie...
+
+    Sinon, tu dis "sur un ordinateur qui possède make", je pense qu'il faut
+    préciser que cet ordinateur doit avoir la même version de noyau et la même
+    architecture, sinon le module compilé sera inutilisable si je ne me trompe
+    pas.
+- id: 2
+  author: ®om
+  date: 2011-06-07 07:54:16+02:00
+  contents: |
+    @Nico
+
+    Oui, effectivement, c'est ce à quoi j'ai pensé cette nuit après avoir posté
+    ce billet. Je rajoute la précision.
+
+    Par contre, concernant la version du noyau, je ne sais pas si ça fonctionne
+    avec des versions proches (par exemple compilé sur `2.6.38-8` et installé
+    sur `2.6.38-9`.
+
+    Je ne sais pas non plus si je devrai réinstaller le pilote à chaque mise à
+    jour noyau. On verra.
+- id: 3
+  author: feNNec
+  date: 2011-06-07 09:21:58+02:00
+  contents: |
+    J'ai fait la même install mais en 10.04 (LTS), noyau 2.6.32-32-server
+    x86\_64.
+
+    même opération avec le driver jme. L'interface eth fonctionne parfaitement.
+    Le wifi lui aussi sauf qu'il genere un flux permanent sur
+    `/var/log/messages`:
+
+        main kernel: pwrdown, 0x6(BIT6)=71
+
+    Je recherche une solution...
+- id: 4
+  author: ®om
+  date: 2011-06-07 09:27:23+02:00
+  contents: |
+    @feNNec
+
+    Pour le WiFi, [j'ai lu](http://ubuntuforums.org/showthread.php?t=1577104)
+    qu'il fallait mettre à jour le bios vers la version 1.09. Je n'ai pas testé,
+    je n'en ai pas besoin.
+- id: 5
+  author: Nicolargo
+  author-url: http://blog.nicolargo.com
+  date: 2011-06-07 09:51:26+02:00
+  contents: |
+    C'est pour ces raisons que je me suis acheté une carte Ethernet fonctionnant
+    sur port USB :)
+- id: 6
+  author: feNNec
+  date: 2011-06-07 10:04:52+02:00
+  contents: |
+    Le Bios 1.09 devrait effectivement corrigé le pb, mais n'est pas officiel -
+    la dernière version du site shuttle est la même que celle embarquée: v1.08.
+
+    Autre petit souci: au repos, la temperature du cpu Atom D510 tourne entre
+    68-70°C, et n'a aucune fonction de controle power/freq ; sans ventilateur,
+    ça dépend beaucoup de la temperature ambiante (25°C sous clim chez moi)
+- id: 7
+  author: Nico
+  author-url: http://carriernicolas.open-web.fr/
+  date: 2011-06-07 19:01:39+02:00
+  contents: |
+    En fait j'ai eu ce genre de souci avec une carte wifi pcmcia et à chaque
+    mise à jour du noyau, même mineure, je devais recompiler. Après, DKMS est
+    sensé gérer ce genre de chose mais encore faut-il :
+
+     * que le pilote le gère
+     * savoir s'en servir (ce qui n'est pas du tout mon cas ;))
+- id: 8
+  author: effraie
+  author-url: http://400iso.net
+  date: 2011-07-11 20:48:14+02:00
+  contents: |
+    ça passe nickel avec une debian stable, en tt cas !
+- id: 9
+  author: Ked
+  date: 2011-08-16 16:18:08+02:00
+  contents: |
+    Salut rom!
+
+    Avec le recul, il donne quoi ce petit PC utilisé comme serveur ? (je suis en
+    train de commencer mes recherches pour m'auto-héberger et il semble convenir
+    à mes besoins !)
+- id: 10
+  author: ®om
+  date: 2011-08-16 16:21:24+02:00
+  contents: |
+    @[**Ked**](#comment-9)
+    Il fonctionne très bien une fois installé, aucun souci.
+
+    Mais c'est quand même embêtant que la carte réseau ne soit par reconnue
+    out-of-the-box, c'est un gros point noir.
+- id: 11
+  author: Steffou
+  date: 2011-08-16 19:05:07+02:00
+  contents: |
+    Salut Rom!
+
+    Comme Ked, je vais me tourner vers l'auto hébergement. Cette machine parait
+    correcte.
+
+    Mais gère-elle le RAID ?
+- id: 12
+  author: Ked
+  author-url: http://www.dorne.eu/blog
+  date: 2011-08-29 16:36:41+02:00
+  contents: |
+    Pour ceux qui hésiteraient à cause du problème de drivers réseau, sachez que
+    je n'ai pas eu ce problème avec le XS35v2 (debian stable) !
+- id: 13
+  author: 'Auto-hébergement : avec quoi ? &raquo; /home/ked'
+  author-url: http://www.dorne.eu/blog/auto-hebergement-avec-quoi/
+  date: 2011-08-30 18:54:18+02:00
+  pingback: true
+  contents: |
+    [...] Après avoir lu cet article de ®om puis celui de Comète, j’avais trouvé
+    une solution satisfaisante : un barebone Shuttle XS35v2. Il est petit,
+    silencieux, peu consommateur d’énergie et il dispose d’une bonne puissance
+    de calcul et de suffisamment de mémoire pour supporter tous les services que
+    je compte héberger. Je l’ai équipé d’un disque dur Seagate Momentus
+    7200tours/min de 500go et d’une barrette de RAM Kingston SODIMM DDR3 PC8500
+    de 2Go. Le tout m’a coûté 230€ environ (frais de port inclus). [...]
+- id: 14
+  author: FTG
+  author-url: http://www.lutix.org
+  date: 2011-09-15 17:01:25+02:00
+  contents: |
+    Euh pourquoi tu n'as pas installé une Debian et choisi toit même tes
+    services un par un ?
+- id: 15
+  author: crocefisso
+  date: 2011-11-06 17:52:08+02:00
+  contents: |
+    Pouvoir utiliser `make`, j'ai une solution plus simple : faire
+    `apt-get install make` après avoir ajouter le cd-rom d'installation à la
+    liste des sources.
+- id: 16
+  author: Aurel
+  date: 2011-12-14 08:51:07+01:00
+  contents: |
+    Le driver est-il disponible sous Ubuntu 11.10 ou est-ce toujours le même
+    problème ?
+- id: 17
+  author: Stephane
+  author-url: http://www.webstack.fr
+  date: 2012-04-28 14:47:52+01:00
+  contents: |
+    Le problème de détection de la carte réseau est toujours présent sur Ubuntu
+    12.04 LTS server.
+- id: 18
+  author: Dominique
+  date: 2012-05-04 13:31:04+01:00
+  contents: |
+    Sur 12.04 , la carte n'est pas détectée mais le module jme.ko est quand même
+    là, j'ai juste complété le /etc/network/interfaces
+- id: 19
+  author: Alain
+  date: 2012-07-17 23:04:21+01:00
+  contents: |
+    Je confirme !
+
+    la version 12.04 d'Ubuntu fonctionne ; j'ai procédé comme suit :
+
+    - installation normale (l'adaptateur réseau n'est pas reconnu)
+    - je modifie /etc/network/interfaces
+    - redémarrage
+
+    ... et miracle ! ça marche !

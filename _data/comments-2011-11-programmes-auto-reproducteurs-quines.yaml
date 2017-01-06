@@ -1,0 +1,97 @@
+- id: 1
+  author: Tshirtman
+  date: 2011-11-15 08:28:45+01:00
+  contents: |
+    Très intéressant, même si je connaissais les quines, et que j'avais lu
+    l'article de Ken Thompson il y a, quelques année, ça fais toujours du bien
+    de se rafraîchir la mémoire sur ce genre de choses, et de réfléchir a des
+    solutions. écrire un compilateur directement en assembleur n'étant pas
+    acceptable. Produire des vérificateurs de code, basé sur le même principe
+    que les compilateurs ne ferait que déplacer le problème. Faire un audit de
+    code de toutes les versions d'un compilateur, pour recompiler a chaque fois
+    la version suivante, serait une tâche absurdement lourde, et ne résoudrait
+    le problème que pour une personne. Pourtant, il est difficile d'accepter de
+    vivre avec ce problème, quand on sais que les systèmes informatiques font
+    tourner tant de systèmes critiques, et depuis le temps que l'article a été
+    écris, il n'est pas impossible que des services d'intelligence ait été tenté
+    de le faire, il suffit de mettre temporairement la bonne personne au bon
+    endroit, pour espérer voir de nombreux compilateurs contaminés dans la
+    nature quelques années plus tard.
+- id: 2
+  author: Jbar
+  author-url: http://openudc.org
+  date: 2011-11-30 11:20:25+01:00
+  contents: |
+    D'où l'importance de pouvoir tracer la génétique/l'évolution (du code
+    source) des compilateurs, tout comme on trace les races bovines, canines ...
+    etc.
+
+    Il pourrait aussi être nécessaire de pouvoir compiler le dernier gcc avec le
+    premier du nom (fait en assembleur), ou du moins de pouvoir sauter des
+    générations afin de pouvoir plus rapidement (réellement) vérifier son
+    évolution et sa "propreté".
+
+    Maintenant la prochaines étapes des quines, c'est :
+
+     * pouvoir modifier son génome, de façon "aléatoire" ou en fonction
+    d'interaction extérieur.
+     * La reproduction sexué telle qu'on la pratique est une façon de modifier
+    son génome aléatoirement, et comme la modification par interaction
+    extérieur, elle nécessite de prendre en considération une notion de temps,
+    cad une durée de vie du programme, autrement dit encore, une boucle (ou une
+    récursion).
+
+    T'as des liens ou tu nous prépares un article pour la suite ?
+- id: 3
+  author: Jbar
+  author-url: http://openudc.org
+  date: 2011-11-30 11:21:24+01:00
+  contents: |
+    tu modères à postériori ? (j'aurais préféré un captcha)
+- id: 4
+  author: ®om
+  date: 2011-11-30 11:33:25+01:00
+  contents: |
+    > @[**Jbar**](#comment-2)
+    >
+    > Il pourrait aussi être nécessaire de pouvoir compiler le dernier gcc avec
+    > le premier du nom (fait en assembleur), ou du moins de pouvoir sauter des
+    > générations afin de pouvoir plus rapidement (réellement) vérifier son
+    > évolution et sa « propreté ».
+
+    Je ne sais pas en pratique si le code source d'un compilateur récent est
+    généralement compilable avec des compilateurs de versions antérieures.
+
+    > @[**Jbar**](#comment-2)
+    >
+    > T'as des liens ou tu nous prépares un article pour la suite ?
+
+    Non, je n'ai rien de plus sur ce sujet.
+
+    Par contre, si tu trouves un moyen de les faire évoluer comme de le décrit,
+    ça m'intéresse ;-)
+
+    > @[**Jbar**](#comment-3)
+    >
+    > tu modères à postériori ? (j'aurais préféré un captcha)
+
+    Tu voulais dire *a priori*. Oui, c'est une méthode anti-spam très efficace.
+    Et je n'aime pas les captchas. Surtout pour un blog où le nombre de
+    commentaires ne nécessite pas vraiment de méthode plus évoluée.
+- id: 5
+  author: GuiGui&#039;s show &raquo; Une application miroir en C
+  author-url: http://www.guiguishow.info/2010/08/11/une-application-mirroir-en-c/
+  date: 2012-07-15 20:34:02+01:00
+  pingback: true
+  contents: |
+    [...] : Si vous voulez en savoir plus et/ou voir d'autres exemples, je vous
+    conseille ce billet : Programmes auto-reproducteurs (quines) chez Rom1v
+    Catégorie: Développement / [...]
+- id: 6
+  author: Nono&#8217;s vrac 10 &laquo; m0le&#039;o&#039;blog
+  author-url: http://blog.m0le.net/2011/11/17/nonos-vrac-10/
+  date: 2012-12-03 02:09:07+01:00
+  pingback: true
+  contents: |
+    [...] encore que la récursivité ?? Le "quines" : du code qui génère lui même
+    du code .. (En Alsacien, on a déjà le "Quines Reeves", l'acteur [...]

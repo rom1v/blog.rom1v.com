@@ -1,0 +1,252 @@
+- id: 1
+  author: Chriss
+  date: 2010-01-03 22:29:11+02:00
+  contents: |
+    Article très intéressant, j'ai moi même commandé un Android Phone qui
+    devrait arriver d'ici peu.
+
+    Du coup j'ai quelques remarques et questions.
+
+    Pour les remarques, le Milestone est aussi dispo sur WorldGSM.com en version
+    Qwerty ce qui n'est pas très gênant à mon avis. Aucun intérêt d'avoir gardé
+    une keymap classique, mais ça n'engage que moi.
+
+    A priori, on ne peut installer des applications qu'en étant Root, ce qui
+    implique de flasher la Rom de ton Androïd. As tu déjà effectué l'opération
+    et si oui, perd t'on les modifs constructeur de l'OS ?
+
+    Et dernière chose, concernant le forfait.
+
+    Est-il possible de contourner les restrictions mises en place par SFR via un
+    Proxy, un VPN, ou un tunnel SSH ?
+- id: 2
+  author: Dd
+  author-url: http://bydorian.com
+  date: 2010-01-03 22:38:12+02:00
+  contents: |
+    Ca à l'air pas mal, mais en regardant le test du Journal du Geek, je vois
+    que l'alternance des modes paysage et portrait est pas tout à fait au point.
+    Ca te le fait à toi aussi ?
+
+    Les plus geeks te diront de réinstaller un Android directement ;) .
+
+    PS : Bravo pour les trolls ;)
+- id: 3
+  author: Da Risk
+  author-url: http://dev.beem-project.com
+  date: 2010-01-03 23:07:42+02:00
+  contents: |
+    Salut et felicitations pour l'article.
+
+    J'apporte quelques petites precisions.
+
+    Il est possible d'installer des applications apk a partir de l'ordinateur en
+    utilisant le logiciel adb fournit avec le sdk android.
+
+    Je t'invite a tester aussi le client jabber BEEM qui devrait sortir
+    prochainement en version 1.0 <http://dev.beem-project.com> N'hesite pas a
+    contacter l'equipe de dev si tu veux un apk en pre\_release : - )
+
+    Dolphin Browser est un navigateur alternatif possedant de bonnes
+    fonctionalités sur android. <http://browser.mgeek.mobi/>
+- id: 4
+  author: Philippe
+  author-url: http://philippe.scoffoni.net
+  date: 2010-01-03 23:37:15+02:00
+  contents: |
+    Très franchement tous les problèmes de "neutralité" des accès, des droits de
+    ce que je peux ou ne pas faire sur mon smartphone ne m'incite vraiment pas à
+    en prendre un pour l'instant. Je fait probablement figure de dinosaure avec
+    mon vieux Nokia qui sait tous juste téléphoner et me jouer des MP3 :-)
+
+    Ce qui est inquiétant avec ces offres bridées c'est de les voir débarquer un
+    jour sur les offres ADSL. Genre le retour d'AOL.
+
+    Cependant il semblerait que les opérateurs constatent en 2009 une forte
+    baisse des consultations de leurs portails depuis les terminaux mobiles,
+    signe semble-t-il que les usagers veuillent avoir malgré tout accès au Net
+    dans sa globalité.
+
+    Merci pour le retour, mais je vais encore attendre un peu...
+- id: 5
+  author: Ned
+  date: 2010-01-04 00:05:58+02:00
+  contents: |
+    je possède un HTC Magic (aka G2) depuis 6 mois, et je confirme globalement
+    (trolls compris ;) ) ce qui est dit dans cet article.
+
+    Pour ce qui est des questions posées : J'ai flashé 3 fois mon téléphone, la
+    communauté autour des "ROM" (contenant OS et softs pré-installés) est très
+    (ré)active.
+
+    Pour ce qui est de perdre les avantages des dev du constructeur, tout dépend
+    de la version de ROM que l'utilise : certaines sont des mods de celles des
+    constructeurs, d'autres de celles d'opérateurs, d'autres issues de "purs"
+    développeurs : le choix est vaste !
+
+    les 2 forums principaux à ce sujet sont xda (anglophone) et smartphone
+    france
+- id: 6
+  author: SnowDown
+  date: 2010-01-04 06:12:25+02:00
+  contents: |
+    Le Motoroal Milestone (ou Droid) est déjà rooté:
+
+    <http://androidcommunity.com/the-droid-by-motorola-is-now-rooted-20091209/>
+- id: 7
+  author: Poischack
+  date: 2010-01-04 08:35:54+02:00
+  contents: |
+    Pour installer les apk, faut le sdk android, et utiliser ./adb install
+    fichier.apk
+
+    Je crois que cela ne necessite pas d'etre root sur le phone.
+- id: 8
+  author: Tenshu
+  author-url: http://www.tenshu.fr
+  date: 2010-01-04 08:58:27+02:00
+  contents: |
+    Je comprend tes arguments, et je fait pratiquement les même pour mon iPhone.
+    Même si tu forces largement le trait sur certaines limitations.
+
+    Par exemple qui utilise 1go de 3G en un seul mois? C'est faramineux,
+    j'utilise mon iPhone 2h par jour en navigateur dans le train et je
+    chatouille même pas 500mo. Enfin bref.
+
+    Mon humble avis tu aurais été mieux servi avec le dernier Nokia sous
+    maemo...
+- id: 9
+  author: LordPhoenix
+  author-url: http://lordphoenix.tuxfamily.org
+  date: 2010-01-04 10:37:38+02:00
+  contents: |
+    Franchement je ne suis pas surpris de ce genre de pratique de la part de
+    Google. Ils ont une définition très personnelle du terme "Open".
+
+    Il ne va bientôt nous rester que Windows Mobile pour pouvoir utiliser les
+    applications que l'on veut sans rien demander à personne… un comble quand
+    même…
+- id: 10
+  author: Oldphone user
+  date: 2010-01-04 16:06:56+02:00
+  contents: |
+    Toutes ces restrictions m'encouragent dans l'attitude "il est urgent de
+    patienter encore un peu".
+
+    Merci pour ce retour
+- id: 11
+  author: Poupoul2
+  author-url: http://pouvoir-choisir.org/logiciel-libre/
+  date: 2010-01-06 01:37:57+02:00
+  contents: |
+    Oula ! Et moi qui commençais à sérieusement lorgner sur ce jouet. J'hésitais
+    en fait entre celui-ci et le Nokia N900. Je crois que mon choix est fait. Ça
+    ne changera pas les problèmes liés à l'opérateur, mais Free n'est pas encore
+    là.
+
+    Pour ton problème de GPS chez toi, c'est tellement grand que tu aies besoin
+    du GPS pour faire ta cuisine\>ta chambre ;) ?
+- id: 12
+  author: Slash
+  date: 2010-01-06 11:30:29+02:00
+  contents: |
+    Salut,
+
+    Comme toi, j'ai acheté un Milestone, et j'ai un avis similaire. J'ai noté
+    aussi quelques bugs (connexions/déconnexions wifi, ec.). J'ai constaté un
+    problème assez gênant, et il semble que je ne sois pas le seul dans ce cas :
+    je n'arrive pas à importer les contacts de la carte SIM (SFR), pourtant la «
+    boîte à outils sim » semble fonctionner. J'ai ensuite essayé sans succès
+    avec une application tierce, mais non, on dirait que le téléphone n'arrive
+    pas à accéder correctement (d'ailleurs, dans les infos du téléphone, il me
+    met que le numéro est inconnu).
+
+    Je suis tout de même globalement satisfait -avec une pointe de déception
+    parfois-, mais j'attends avec impatience une MàJ pour corriger les petits
+    soucis.
+
+    Quant à « l'ouverture », hé bien je suis parti en me disant que c'était « le
+    moins fermé » histoire de ne pas être trop déçu.
+
+    Sinon, ce que j'apprécie vraiment, c'est le clavier physique, et c'est ce
+    qui m'a finalement décidé à l'acheter. Autre point intéressant : j'ai
+    l'impression que la batterie tient plus longtemps que celle des smartphones
+    que j'ai déjà pu voir, mais je me trompe peut-être, je n'ai pas encore
+    beaucoup joué avec.
+
+    /
+- id: 13
+  author: 'Installer une application .apk sur Android à partir d&#8217;un PC &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2010/01/installer-une-application-apk-sur-android-a-partir-dun-pc/
+  date: 2010-01-10 13:13:36+02:00
+  pingback: true
+  contents: |
+    [...] lors de mes premières impressions d’Android 2 sur le Motorola
+    Milestone, qu’il était impossible d’installer un fichier .apk sans accepter
+    les conditions [...]
+- id: 14
+  author: AlexTrial91
+  date: 2010-01-10 21:15:59+02:00
+  contents: |
+    Android, le moin pire ? Pas d'accord, Symbian est libre, Linmo est libre,
+    Openmolo est libre.
+- id: 15
+  author: Slash
+  author-url: http://Yourwebsite
+  date: 2010-01-11 14:16:20+02:00
+  contents: |
+    @AlexTrial91 >
+
+    Certes, mais j'imagine que « l'utilisabilité » rentre en compte aussi dans
+    le choix. Tu as déjà eu un FreeRunner avec OpenMoko en mains ? Mine de rien,
+    il faut un peu bidouiller avant d'avoir quelque chose de vraiment
+    fonctionnel, mais c'est « le plus libre/ouvert ».
+
+    Pareil avec Symbian (OpenSymbian maintenant) : libre oui, mais j'en suis
+    revenu pour l'utilisation et la programmation.
+
+    Dans le compromis liberté/utilisabilité, je pense qu'Android est pour le
+    moment le moins pire dans les alternatives viables/durables.
+
+    /
+- id: 16
+  author: didgant
+  date: 2010-01-12 03:07:38+02:00
+  contents: |
+    Salut, excellent merci je vai le tester dès que je rentre chez moi !
+
+    la question que je me pose, est la suivante :
+
+    Y a-t-il moyen de rooter le phone en installer un paquet apk contenant par
+    exemple sudo ou un script avec un sticky bit !
+
+    je vais chercher dans ce sens en tout cas !
+- id: 17
+  author: Gz'
+  author-url: http://www.ftpix.fr
+  date: 2010-01-12 18:56:27+02:00
+  contents: |
+    J'ai acheté un HTC Magic pour le lien avec google, je l'ai acheté en
+    Malaisie dans un magasin HTC et il n'y avait de base ni synchro google, ni
+    market, quedal. c'est un comble sachant que c'est ce que je voulais, un
+    petit flash, une nouvelle ROM et c'était bon.
+- id: 18
+  author: Dd
+  author-url: http://bydorian.com
+  date: 2010-04-25 13:36:50+01:00
+  contents: |
+    Merci pour cet article, ca me donne vraiment envie d'acheter un téléphone
+    sous Android (avec Free au mieux, mais en attendant SFR me parait le moins
+    pire des 3).
+- id: 19
+  author: Ali C. Kanouni
+  date: 2010-06-06 17:36:44+02:00
+  contents: |
+    Merci pour ton article.
+
+    J'ai acheté le 20 Mai, un Motorola Milestone "ouvert" que je peux utiliser
+    avec n'importe quel opérateur.
+
+    Dans cette condition, y'a t'il un avantage à passer en mode "root" ?
+
+    Merci.

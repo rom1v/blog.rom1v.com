@@ -1,0 +1,73 @@
+- id: 1
+  author: Xanatos
+  date: 2008-08-27 21:11:00+02:00
+  contents: |
+    sympa comme initiative ®om
+
+    mais j'aime bien quand même le flood sur les forums ;)
+
+    bonne continuation
+
+- id: 2
+  author: Guizmo.7
+  date: 2009-01-10 10:56:00+01:00
+  contents: |
+    Salut, j'aime bien ton blog mais je me demande si c'est bien sérieux de le
+    mettre sur blogger.
+
+    Pourquoi blogger et pas un autre ?
+
+    Et surtout j'espère que tu es au courant de ça :
+
+    > En fournissant, envoyant ou affichant un Contenu sur ou par
+    > l'intermédiaire des services Google, mis à la disposition des membres du
+    > public, vous octroyez à Google une licence mondiale, non exclusive et sans
+    > royalties de reproduction, de publication et de distribution du Contenu
+    > sur les services Google dans l'objectif d'afficher et de distribuer les
+    > services Google.
+
+    C'est dans les condition d'utilisation (<http://www.blogger.com/terms.g>) et
+    j'en comprends que Google a tout les droits de reproduction de ce que tu
+    mets sur ton blog.
+
+    Alors, tu veux toujours rester sur blogger ?
+
+    (Je ne veux pas du tout te faire changer, je veux juste savoir pourquoi
+    blogger au lieu d'un autre, je suis curieux)
+
+- id: 3
+  author: ®om
+  date: 2009-01-10 11:07:00+01:00
+  contents: |
+    Je suis tout à fait au courant de ça, je l'ai mis sur blogger car ce service
+    permettait de créer un blog en 5 minutes.
+
+    Depuis, je me suis acheté une EeeBox pour faire serveur, mais que je n'ai
+    pas fini de configurer, et je vais héberger moi-même mon blog (wordpress),
+    mais j'ai encore des soucis techniques à régler. Pour l'instant, je galère
+    avec les sous-domaines, et j'ai peu de temps pour m'en occuper :
+
+    <http://forum.ubuntu-fr.org/viewtopic.php?id=276483>
+
+    C'est d'ailleurs une des raisons pour lesquels il n'y a pas beaucoup de
+    messages en ce moment sur le blog, j'attends d'avoir le nouveau ;-)
+- id: 4
+  author: Guizmo.7
+  date: 2009-01-19 23:11:00+01:00
+  contents: |
+    Héhé, j'ai fait exactement la même chose mais je n'étais pas au courant pour
+    le EEEbox donc je suis un peu dégouté (j'ai payé plus cher pour 2 fois moins
+    de puissance :( )
+
+    Puisque j'ai fait comme toi, je peux peut-être t'aider, je vais aller voit
+    ton lien sur le forum et on verra ça.
+
+    A bientôt !
+- id: 5
+  author: Guizmo.7
+  date: 2009-01-19 23:22:00+01:00
+  contents: |
+    J'ai lu ton post sur le forum et j'ai free comme toi, OVH à la place de
+    gandi (car le nom de domaine était à 0€) et bind9 et apache2 comme toi. Tu
+    devrais t'en sortir, sinon demande moi sur mon adresse mon\_pseudo@free.fr
+    ;) jte filerai des confs ou ce dont tu as besoin.

@@ -1,0 +1,211 @@
+- id: 1
+  author: G-rom
+  date: 2013-05-30 22:55:21+02:00
+  contents: |
+    Je vois souvent passer ce genre d'article autour de GIT. Je n'ai jamais
+    compris pourquoi certain se donnait autant de mal pour "cacher" des choses
+    réelles. Pour moi il ne faut pas chercher à tordre GIT et l 'historique de
+    nos actions sur une branche à tout prix. Ce n'est pas parce qu'on peut le
+    faire qu'il faut le faire.  Gardez les choses simples et acceptez d'avoir
+    des graph, des logs, des historiques un peu "complet" de temps en temps,
+    plutôt que de vouloir nettoyer, renommer, rebase, à posteriori tout le
+    temps.
+
+    En tant que chef de projet je préfère 100 fois relire un historique complet
+    mais réel, que de repasser derrière quelqu'un qui m'a tout manipulé et
+    transformé, et qui 1 fois sur 2 va juste se planter et me foutre un gros
+    bordel.
+- id: 2
+  author: bochecha
+  date: 2013-05-31 06:29:10+02:00
+  contents: |
+    En fait, je comprends pas pourquoi ne pas simplement rebaser ta branche
+    topic sur le nouveau master.
+
+    Si tu en est à faire une demande de pull/merge, c'est que tu as commit/push
+    dans ton propre dépôt, pas dans le dépôt officiel du projet.
+
+    En conséquence, ceux qui te clonent doivent s'attendre à ce que tu fasses
+    des rebases réguliers sur le dépôt officiel, et à ce que leurs clones
+    cassent.
+
+    C'est dans un dépôt vraiment public, comme le dépôt officiel d'un projet,
+    que les rebases sont une mauvaise chose. Mais un dépôt personnel pour
+    implémenter des features avant de les faire merger peut-être considére comme
+    privé : certes il est visible de tous, mais c'est ton terrain de
+    jeu personnel．
+- id: 3
+  author: ®om
+  date: 2013-05-31 08:19:14+02:00
+  contents: |
+    @[**G-rom**](#comment-1)
+    C'est un grand débat… Pour moi, cela dépend du contexte.
+
+    Dans le cas d'une *pull request*, il est préférable d'avoir
+    un historique propre. D'abord parce que les mainteneurs du projet n'en
+    ont rien à faire de ton historique local crade, ensuite parce que ça
+    rend plus difficile la revue de code.
+
+    L'historique propre (dans la
+    mesure du possible) permet de mieux cerner ce que le développeur propose
+    comme fonctionnalité, comment il l'a fait, quelles sont les différentes
+    parties de son implémentation…
+
+    @[**bochecha**](#comment-2)
+    Même si le code est dans ton propre dépôt, tu as
+    fait une *pull request* publique. Des utilisateurs qui suivent le projet
+    officiel peuvent l'avoir récupérée pour la tester et éventuellement déjà
+    l'utiliser, avant même l'intégration "officielle".
+
+    Tu ne peux pas te permettre de casser tout ça à chaque fois que tu modifies
+    quelque chose. Ce n'est plus "ton terrain de jeu personnel".
+
+    > **[Linus
+    > Torvalds](http://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg39091.html) :**
+    >
+    > once you've published your history in some public site, other people
+    > may be using it, and so now it's clearly not your \_private\_ history
+    > any more.
+
+    D'ailleurs, il me semble que sur *github*, le fait de faire un *rebase* et
+    de pusher (avec `-f`) ferme automatiquement la *pull request* (en fait,
+    non).
+
+    ***EDIT by ®om\_2015 :** je suis d'accord avec toi
+    @[**bochecha**](#comment-2), sur une PR c'est mieux de rebaser. N'écoute pas
+    ®om\_2013, il dit n'importe quoi ;-)*
+- id: 4
+  author: bochecha
+  date: 2013-05-31 09:12:06+02:00
+  contents: |
+    > Des utilisateurs qui suivent le projet officiel peuvent l'avoir récupérée
+    > pour la tester et éventuellement déjà l'utiliser, avant même l'intégration
+    > "officielle".
+
+    Et ceux-ci doivent s'attendre à ce que le code que tu as soumis ne soit pas
+    accepté tel quel.
+
+    Prenons un exemple quelque peut différent, sans merge.
+
+    Je prends la version actuelle de la branche master (A), puis ajoute sur ma
+    branche topic les commits X et Y, et je soumets ça upstream. (pour
+    l'instant, c'est ton exemple)
+
+    Là, upstream review mon code, et me dit qu'ils aiment bien la feature, mais
+    me demandent quelques changements.
+
+    Il va donc falloir que j'édite mon changement de manière à leur plaire.
+
+    Je vais donc faire un changement Z qui apporte les corrections demandées par
+    upstream.
+
+    Je pourrais éditer la pull-request pour simplement y ajouter Z, mais dans ce
+    cas, ceux qui reviewent les changements vont devoir lire les 3, s'apercevoir
+    que le premier est mauvais, puis voir la correction dans le troisième.
+
+    Ou alors, je peux rebaser mes 3 changements en 2, la correction du Z étant
+    par exemple mergée avec X en un X', et donc ne soumettre que 2 changements.
+
+    Dans le second cas, la review sera plus facile pour upstream, ainsi que pour
+    ceux qui suivent d'à côté.
+
+    Et non, un force-push ne ferme pas une pull-request sur Github, il la met à
+    jour simplement avec les nouveaux commits.
+
+    Enfin, pour ce qui est de Linus, tu prends son commentaire trop
+    littéralement justement, comme j'essayais de le dire dans mon premier
+    commentaire.
+
+    Regarde le workflow de contribution au kernel :
+
+     - dev A envoie une série de 5 patches
+     - mainteneur B dit que le patch 3 est mauvais parce que bla blah blah
+     - dev A renvoie la même série de 5 patches, avec juste le patch 3 de change
+       pour y intégrer les corrections demandées
+
+    C'est **exactement** la même chose que ce que je disais au-dessus. La seule
+    différence est que les changements soumis au kernel sont envoyés par email
+    sur une mailing-list, plutôt que par des pull-requests sous github.
+
+    Mais dans les deux cas, le dev a fait un rebase, et ceux qui avaient
+    appliqué la série de patches originelle, devront aussi se farcir de
+    réappliquer la nouvelle série après corrections.
+
+    Et c'est quelque chose à quoi les gens qui utilisent du code hors des dépôts
+    officiels s'attendent.
+- id: 5
+  author: ®om
+  date: 2013-05-31 12:00:23+02:00
+  contents: |
+    > @[**bochecha**](#comment-4)
+    >
+    > Et ceux-ci doivent s'attendre à ce que le code que tu as soumis ne soit
+    > pas accepté tel quel.
+
+    Ce n'est pas parce que le code n'est pas accepté tel quel que
+    l'historique doit être changé.
+
+    ***®om_2015** n'est pas d'accord ;-)*
+
+    Ce que tu dis est vrai, tout dépend où l'on place le curseur entre
+    *conserver l'historique* et *faire des commits propres*.
+
+    Tu peux conserver l'historique à tout prix (plutôt la position de
+    @[**G-rom**](#comment-1)), tant pis pour les commits sales.
+
+    Tu peux faire des commits propres à tout prix (plutôt ta position), tant pis
+    pour l'historique.
+
+    Mais personnellement, étant donné que la perte de
+    l'historique est surtout problématique lorsque d'autres ont déjà pris ton
+    code, je préfère un compromis entre les deux : [réécrire
+    l'histoire](https://git-scm.com/book/fr/v2/Les-branches-avec-Git-Rebaser-Rebasing)
+    pour faire des commits propres si et seulement s'ils n'ont pas été publiés.
+- id: 6
+  author: G-rom
+  date: 2013-06-02 23:13:25+02:00
+  contents: |
+    Et pourquoi juste ne pas être minutieux et faire des commits propre dès le
+    début ? Ok c'est impossible de faire du 100%, mais ça évite de modifier
+    l'historique et de perdre du temps et d'introduire du risque.
+- id: 7
+  author: ®om
+  date: 2013-06-03 00:06:12+02:00
+  contents: |
+    @[**G-rom**](#comment-6)
+    Ce n'est pas une question de minutie.
+
+    Par exemple, tu implémentes une nouvelle fonctionnalité, que tu souhaites
+    séparer en étapes successives bien distinctes (1 commit par étape).
+
+    Lors de la troisième étape, tu te rends compte qu'il y a un bug dans la
+    première : tu veux corriger le bug dans le premier commit… pas autre part.
+- id: 8
+  author: Jean
+  date: 2013-06-04 14:02:48+02:00
+  contents: |
+    Une question que je me pose, c'est plutôt que de faire croire à git qu'on
+    fait un merge, pourquoi ne pas vraiment faire un merge ? En l'occurrence,
+    pas besoin de créer le commit N, on annule le merge de M, et on rejoue sur
+    le master à jour :
+
+    {% highlight bash %}
+    git checkout topic  # (ou git checkout M)
+    git reset --hard Y
+    git merge master
+    {% endhighlight %}
+
+    Si on a activé rerere, le conflits de M devraient être résolus
+    automatiquement aussi.
+- id: 9
+  author: ®om
+  date: 2013-06-04 14:13:07+02:00
+  contents: |
+    @[**Jean**](#comment-8)
+    C'est exactement ce que j'explique dans le billet (avec les mêmes commandes
+    en plus) ;-)
+- id: 10
+  author: Jean
+  date: 2013-06-04 14:22:47+02:00
+  contents: |
+    Rhaa je suis con, je suis passé trop vite sur le milieu de l'article ;)

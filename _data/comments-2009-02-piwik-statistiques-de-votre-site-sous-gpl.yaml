@@ -1,0 +1,172 @@
+- id: 1
+  author: billux13
+  author-url: http://billux13.servhome.org
+  date: 2009-02-19 21:55:58+01:00
+  contents: |
+    Effectivement Piwik a l'air très bien fini au niveau de l'interface et
+    vraiment complet dans les renseignements donnés. Jusqu'à présent j'utilisais
+    awstats, qui lui aussi donne des résultats détaillé. Mais la je pense être
+    séduit pas piwik, je vais l'installer dès maintenant !
+- id: 2
+  author: Edouard
+  author-url: http://www.ensta.fr/~garnier
+  date: 2009-02-19 22:10:49+01:00
+  contents: |
+    Merci pour l'info.
+
+    Cela pose-t-il un problème (pour gganalytics et pour Piwik) si les deux
+    codes javascripts sont présents ?
+- id: 3
+  author: ®om
+  date: 2009-02-19 22:14:08+01:00
+  contents: |
+    @[**Edouard**](#comment-2)
+
+    J'imagine que non, je n'ai pas essayé.
+- id: 4
+  author: StandarT
+  author-url: http://standartux.fr
+  date: 2009-02-19 22:56:17+01:00
+  contents: |
+    Je l'utilise également et je le trouve très bien fait, j'ai meêm fait un
+    tuto d'install sous dotclear2 pour ceux que ça intéresse:
+
+    <http://standartux.fr/index.php?post/2008/11/09/Piwik>
+- id: 5
+  author: ®om
+  date: 2009-02-19 23:48:11+01:00
+  contents: |
+    Bon bah en fait, ça n'a pas l'air de marcher super, il me sort des stats
+    totalement farfelues, à croire que ce ne sont pas celles de mon site !
+
+    De même, dans les mots-clés soi-disant recherchés sur google pour tomber sur
+    mon site, il y a surtout des trucs en rapport avec piwik (phpmyvisite par
+    exemple), mais rien qui aurait la moindre chance de mener à mon blog.
+
+    De plus, il est censé effectuer les statistiques en temps réel, ce qu'il ne
+    fait pas du tout (ça monte "par sauts").
+
+    Et dans le menu API, quand je veux générer les données, j'obtiens :
+
+        Error: Error query: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'config_browser_name' cannot be null
+
+    Très étrange…
+- id: 6
+  author: ®om
+  date: 2009-02-20 01:40:12+01:00
+  contents: |
+    Bon, j'ai tout remis à zéro, j'ai tout repris du début pour cet outil, ça a
+    l'air de fonctionner.
+
+    On verra sur le long terme.
+- id: 7
+  author: aktiQ
+  author-url: http://www.aktiq.fr
+  date: 2009-02-20 08:28:13+01:00
+  contents: |
+    j'ai installé PIWIK (il y a 2 semaines environ) sur mon site PRO (aktiq.fr)
+    et je dois dire qu'il fonctionne très bien. J'ai constaté un léger
+    ralentissement au chargement de la page mais sinon tout est très bien. Les
+    infos sont pertinentes (j'ai laissé les 2 codes, piwik et GAnalytics, durant
+    1 semaine) et le fait d'avoir un système libre me convient bien. Aussi, le
+    fait de pouvoir laisser l'accès aux stats en mode lecture est très pratique.
+- id: 8
+  author: tominardi
+  author-url: http://www.tominardi.fr
+  date: 2009-02-20 10:15:12+01:00
+  contents: |
+    Je l'utilise depuis Octobre, pour 3 de mes sites (portails, blog et
+    festival) et pour le moment tout marque super, j'ai des statistiques
+    logiques, c'est un très bon outil.
+
+    J'ai mis un peu de temps à comprendre comment l'utiliser (avoir les stats en
+    temps réel par exemple), mais une fois que c'est maîtrisé, c'est parfait.
+- id: 9
+  author: Blesso
+  date: 2009-02-20 17:15:44+01:00
+  contents: |
+    Bonjour,
+
+    Je l'utilise actuellement pour générer quelques stats sur l'utilisation d'un
+    site intranet professionnel. Il est réellement intéressant de voir que des
+    outils libres peuvent concurrencer des géants.. Auparavant PhpMyVisites,
+    Piwik est à conseiller...
+- id: 10
+  author: Patrick Z;
+  date: 2009-03-16 22:20:35+01:00
+  contents: |
+    Bonjour, moi aussi j'aime beaucoup Piwik mais je n'arrive pas à comparer les
+    stats un mois sur l'autre, existe t-il un plugins ?
+
+    Perso j'ai rien trouvé sur la gestion des données (segmentation,
+    comparaison, funnels ...) sur le site et je trouve ça hyper dommage.
+
+    Merci d'avance pour vos réponses,
+
+    PZ
+- id: 11
+  author: Théophane
+  date: 2009-06-13 15:20:01+01:00
+  contents: |
+    Salut à tous,
+
+    Ne vous emballez pas trop... Piwik est certes très sympa, mais question
+    consommation en base de données, c'est bien trop gourmand.
+
+    Perso, je suis en 60GP chez OVH, et avec 150 visites/jours, Piwik, c'est
+    tout simplement inenvisageable.
+- id: 12
+  author: jn
+  date: 2010-08-29 17:24:21+02:00
+  contents: |
+    Juste pour signaler que l'accès public aux statistiques n'est plus
+    disponible.
+- id: 13
+  author: ®om
+  date: 2010-08-29 17:33:24+02:00
+  contents: |
+    Effectivement, j'ai désactivé l'accès public récemment en oubliant d'éditer
+    ce billet. C'est chose faite, merci.
+
+    Pour compléter mes commentaires datant de 2009, je suis très content de
+    *Piwik*, il tient sur la durée et est mis à jour régulièrement. Son
+    principal défaut est d'utiliser *Flash* pour afficher les graphes (du coup
+    je ne peux pas les lire).
+- id: 14
+  author: yoann
+  author-url: http://www.ifyouweb.fr
+  date: 2011-02-21 10:23:37+01:00
+  contents: |
+    Petite question, qu'en est-il de la consommation de Piwik ?
+
+    Les propos de Theophane sont ils confirmer par d'autres personnes ?
+- id: 15
+  author: ®om
+  date: 2011-02-21 10:38:28+01:00
+  contents: |
+    Actuellement, mon Piwik consomme 330Mio de base de données, en un peu plus
+    de deux ans d'utilisation.
+- id: 16
+  author: yoann
+  author-url: http://www.ifyouweb.fr
+  date: 2011-02-21 11:14:52+01:00
+  contents: |
+    Et en terme de nombre de visiteurs en 2 ans ?
+- id: 17
+  author: ®om
+  date: 2011-02-21 11:35:19+01:00
+  contents: |
+    La table `log_visit` contient 258626 entrées. Ce qui correspond à peu près
+    ce que j'observe en moyenne : 400 visiteurs / jour.
+
+    Par contre, il serait intéressant de choisir ce que l'on veut stocker (on
+    n'a pas besoin de tout, par exemple la version de FlashPlayer utilisée par
+    les visiteurs, ça ne m'intéresse pas).
+- id: 18
+  author: yoann
+  author-url: http://www.ifyouweb.fr
+  date: 2011-02-21 11:47:48+01:00
+  contents: |
+    Merci pour votre réponse.
+
+    Ca fait tout de même un bdd extrêmement lourde !

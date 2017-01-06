@@ -1,0 +1,155 @@
+- id: 1
+  author: skelettor
+  date: 2010-09-28 23:16:50+02:00
+  contents: |
+    Oui c'est bien pratique ce petit serveur MPD ;)
+
+    Pour le client PC je connaissais pas (bon en même temps j'ai pas fouiller
+    longtemps non plus)
+
+    Sinon niveau Android je suis très content de MPDroid aussi.
+- id: 2
+  author: ktr
+  author-url: http://www.flood.fr
+  date: 2010-09-29 00:01:09+02:00
+  contents: |
+    +1 pour Ario !
+- id: 3
+  author: "Tweets that mention Music Player Daemon (MPD) : la musique à distance « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/blog.rom1v.com/2010/09/music-player-daemon-mpd-la-musique-a-distance/?utm_source=pingback&amp;utm_campaign=L2
+  date: 2010-09-29 03:28:20+02:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by Planet-Libre, Denis Fruneau and
+    Denis Fruneau, ubuntufr. ubuntufr said: Music Player Daemon (MPD) : la
+    musique à distance: MPD est un lecteur audio libre un peu particulier : il
+    fonctio... http://bit.ly/cRrY97 [...]
+- id: 4
+  author: utodeb
+  date: 2010-09-29 07:17:23+02:00
+  contents: |
+    +1 pour tout (mpd, ario et MPDroid) que des bons choix c'est ce que
+    j'utilise ;-).
+
+    Avec le streaming de MPDroid, c'est un pas de plus qui nous éloigne du
+    minitel 2.0 (deezer/spotify) et en plus c'est gratuit.
+
+    A+
+- id: 5
+  author: utodeb
+  date: 2010-09-29 07:23:31+02:00
+  contents: |
+    Pour le streaming sur MPDroid si votre musique est en ogg pas de problème.
+    Si elle est en MP3, il faudrait modifier le paquet MPD. C'est expliqué ici :
+    <http://doc.ubuntu-fr.org/tutoriel/configurer_le_serveur_de_streaming_audio_http_de_mpd>
+
+    Ps : la capture d'écran du client android c'est Pmix et pas MPDroid.
+- id: 6
+  author: ®om
+  date: 2010-09-29 07:43:05+02:00
+  contents: |
+    > @[**utodeb**](#comment-5)
+    >
+    > Ps : la capture d'écran du client android c'est Pmix et pas MPDroid.
+
+    Oui, il n'y avait pas de capture sur le site officiel de MPDroid, et je ne
+    sais pas faire de capture de mon téléphone. Mais l'interface est assez
+    proche, ça ressemble à ça :
+    [capture](http://www.android-software.fr/wp-content/uploads/2010/07/MPDroid1.jpg).
+- id: 7
+  author: Radek411
+  author-url: http://radek.legtux.org
+  date: 2010-09-29 08:33:18+02:00
+  contents: |
+    @Rom
+
+    Si tu as un androphone, tu peux faire les captures directement depuis ton
+    telephone si tu as un l'accès root (et le programme dédié.) Sinon, il faut
+    passer par le DDMS du SDK Android.
+- id: 8
+  author: NaSH
+  date: 2010-09-29 10:00:14+02:00
+  contents: |
+    j'aime également beaucoup le principe de ce petit client/serveur, qui me
+    permet, via pulseaudio de déporter la sortie son sur un de mes 3 pc (mon
+    serveur n'est pas dans mon salon, mon mediacenter ne contient aucun fichier,
+    tout est sur un pc qui me sert de nas). Les clients gèrent facilement le
+    choix des sorties son, et c'est très pratique.
+
+    juste un bémol quand même.
+
+    Les "ratings" sont arrivé il n'y a pas longtemps, et quand on a beaucoup de
+    mp3, il est dommage de ne pas avoir de client qui le prennent comme choix
+    supplémentaire. (choisir un type de chanson + rating a partir de 4 par
+    exemple).
+
+    Enfin, le streaming interresse beaucoup, mais pour le tester depuis 1an avec
+    mon tel android avec d'autres outils, le meilleur débit reste celui a
+    48kbit/s qui permet d'écouter facilement de la musique en déplacement dans
+    sa voiture, et ce, même en réception edge (ce qui arrive souvent quand on
+    habite pas près d'une grosse ville), sans trop se soucier de la durée
+    d'écoute. forcement le codec aac-he qui le fait n'est pas libre.. :(
+
+    J'ai du me restreindre a ce choix, car il ne faut pas oublier qu'avec un
+    forfait "illimité" a 500mo/mois, avec du streaming a 128kbit/s, en théorie,
+    on ne peut écouter de la musique que 9h/mois. (ce a quoi il faut soustraire
+    les autres consommations internet du téléphone).
+
+    Le streaming ogg et mp3 reste donc a utiliser avec précaution sur un
+    smartphone en 3G, en attendant que les plafond augmentent (ou que des codecs
+    libres bas débits arrivent).
+- id: 9
+  author: TimCruz
+  author-url: http://geekdefrance.fr
+  date: 2010-09-29 10:30:57+02:00
+  contents: |
+    C'est une solution que j'envisageais de mettre en place. Je m'inspirerai de
+    ton article.Merci
+- id: 10
+  author: utodeb
+  date: 2010-09-29 10:14:22+01:00
+  contents: |
+    > @[**Radek411**](#comment-11)
+    >
+    > @Rom
+    >
+    > Si tu as un androphone, tu peux faire les captures directement depuis ton
+    > telephone si tu as un l'accès root (et le programme dédié.) Sinon, il faut
+    > passer par le DDMS du SDK Android.
+
+    ouaip et un des programme est shootme.
+
+    A+
+- id: 11
+  author: Radek411
+  author-url: http://radek.legtux.org
+  date: 2010-09-30 13:25:08+02:00
+  contents: |
+    De mon coté, je met ça en place cet après midi ;)
+- id: 12
+  author: do_0b
+  date: 2010-10-20 22:40:13+02:00
+  contents: |
+    Mis en place en 10 minutes chrono, avec Ubuntu 10.10 et mon HTC Hero.
+
+    Merci pour ce tuto !!!
+- id: 13
+  author: Ulf
+  date: 2010-11-08 17:22:20+02:00
+  contents: |
+    Il y a un très bon client aussi sur ipod /iphone qui s'appelle mpod
+    (attention, c'est pas un client qui lit, c'est un client qui contrôle le
+    serveur). Une sorte de télécommande, quoi.
+- id: 14
+  author: Lopes Ferreira David
+  author-url: http://ubunblox.servhome.org/
+  date: 2011-04-16 09:31:13+01:00
+  contents: |
+    > Enfin, pour pouvoir changer le volume, il faut décommenter la ligne :
+    > `mixer_type "software"`
+
+    Bizarrement cette option ne change strictement rien sur ma configuration...
+    Avec ou sans il m'est toujours possible de modifier le volume de MPD
+    indépendamment des autres applications.
+
+    Ah les mystères de l'informatique...

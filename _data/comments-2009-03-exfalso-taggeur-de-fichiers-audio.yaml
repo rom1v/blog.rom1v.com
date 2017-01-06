@@ -1,0 +1,83 @@
+- id: 1
+  author: Nicosmos
+  author-url: http://www.nicosmos.net
+  date: 2009-03-07 22:00:52+01:00
+  contents: |
+    Très utile en effet, mais j'ai tout de même une préférence pour EasyTag,
+    présent également dans les dépôts ... ;)
+- id: 2
+  author: tenshu
+  author-url: http://www.tenshu.fr/
+  date: 2009-03-07 22:02:32+01:00
+  contents: |
+    Easytag caymieux (expression copyritghée tout droits réservés).
+- id: 3
+  author: O'bibi
+  date: 2009-03-08 23:15:09+01:00
+  contents: |
+    Jetez un œil à picard (dans les dépots d'Ubuntu entre autre), c'est le
+    "taggeur" recommandé par MusicBrainz et une fois pris en main il est
+    irremplaçable.
+- id: 4
+  author: Schling
+  date: 2009-03-09 14:52:28+01:00
+  contents: |
+    Kid3 avec ses sources Discogs et autres en fait un sacré taggeur !
+- id: 5
+  author: Se7h
+  author-url: http://www.nintendolesite.com/
+  date: 2009-03-09 15:57:03+01:00
+  contents: |
+    Muse Powa !
+
+    Je suis du même avis que tenshu, il n'y a pas mieux que Easytag ^^
+
+    Le seul logiciel qu'il me manque, c'est un logiciel de transfert pour mon
+    Zen Vision M sachant géré les pochettes. Si quelqu'un en connais un j'en
+    suis preneur ;)
+- id: 6
+  author: antistress
+  author-url: http://libre-et-ouvert.blogspot.com/
+  date: 2009-03-09 17:17:29+01:00
+  contents: |
+    Moi j'extrais avec SOund Juicer car il gère le multi tag
+
+    puis je gère avec le couple Quod Libet / Ex Falso pour la même raison
+
+    Ca ferait un bon successeur à Rrythmbox
+- id: 7
+  author: Calimo
+  date: 2009-03-14 10:04:46+01:00
+  contents: |
+    Je n'ai jamais réussi à me faire à easytag. Trop complexe, pas assez souple
+    probablement, on ne peut modifier qu'un nombre assez limité de tags (titre,
+    artiste, genre etc). Impossible de modifier ou supprimer les affreux tags
+    "musicbrainz" ou "artistsort" ajoutés par Sound Juicer par exemple, et qui
+    mettent le boxon dans certains logiciels. Et puis Easytag a la fâcheuse
+    habitude de modifier par défaut certains fichiers (pas tous), sans qu'on
+    sache trop en quoi, ou que l'on contrôle quoi que ce soit (si ce n'est qu'on
+    peut refuser de sauvegarder la modification en changeant de répertoire).
+
+    Avec Ex Falso, on travaille directement sur le tag, par lot, c'est
+    formidable. On peut définir les tags que l'on veut, il n'y a aucune limite.
+    Et depuis le passage à Interpid, il ne râme plus lorsqu'il y a plus de 100
+    fichiers à traiter !
+
+    Seuls petits défauts :
+
+    \* les logiciels de lecture (type rhytmbox) ne sont pas capable de gérer
+    tous les tags que l'on pourrait imaginer créer (compositeur, interprète,
+    etc) et sont limités aux tags "standards" (genre artiste)
+
+    \* il enregistre les tag ID3 en version 2.4, qui ne sont pas (tout à fait)
+    compatibles avec mon baladeur (cowon d2), ce qui m'oblige à passer par un
+    logiciel propriétaire via wine pour downgrader la version d'ID3. Si
+    quelqu'un a une solution pour forcer Ex Falso à faire de l'ID3 2.3, je suis
+    preneur.
+- id: 8
+  author: 3po
+  date: 2009-03-20 20:19:39+01:00
+  contents: |
+    Le couple Quod Libet / Ex Falso est vraiment génial je trouve. Je pourrais
+    passer à un autre lecteur audio s'il permet de gérer les tags avec Ex Falso,
+    quelqu'un en connait-il un autre ?

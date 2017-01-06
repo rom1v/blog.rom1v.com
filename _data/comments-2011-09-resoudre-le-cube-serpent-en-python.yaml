@@ -1,0 +1,418 @@
+- id: 1
+  author: Fred
+  date: 2011-09-28 09:54:48+02:00
+  contents: |
+    Hello,
+
+    Sympa ton challenge perso :)
+
+    Pour info, un 3x3x3, tu le résous en combien de temps ?
+
+    Par ailleurs, tu connais la complexité de ton algo ?
+- id: 2
+  author: ®om
+  date: 2011-09-28 10:28:27+02:00
+  contents: |
+    > @[**Fred**](#comment-1)
+    >
+    > Pour info, un 3x3x3, tu le résous en combien de temps ?
+
+    Pour trouver les 48 solutions (symétries et rotations incluses), il met
+    moins d'une seconde.
+
+    > @[**Fred**](#comment-1)
+    >
+    > Par ailleurs, tu connais la complexité de ton algo ?
+
+    Je dirais que la complexité max est de *(2d)<sup>n</sup>, avec* *d* le
+    nombre de dimensions (dans l'exemple 3), et *n* le nombre de vecteurs dans
+    la structure du serpent (dans l'exemple 17) : on tente les combinaisons de
+    toutes les directions (et sens) (*2d*) pour chacun des vecteurs (*n*).
+
+    La complexité réelle est bien moins importante, car les branches de l'arbre
+    de résolution sont vite coupées (dès qu'un vecteur sort du cube ou qu'il ne
+    peut pas être placé).
+- id: 3
+  author: EdEd
+  author-url: http://bfontaine.net
+  date: 2011-09-28 10:30:13+02:00
+  contents: |
+    La première expression en gras n'est pas une compréhension de liste,
+    puisqu'elle n'est pas entre crochets:
+
+    {% highlight python %}
+    [f(elem) for elem in truc]
+    {% endhighlight %}
+
+    Elle est entre parenthèses, c'est donc un **générateur**. Mais ça revient
+    (presque) au même si c'est créé pour itérer dessus (la seule différence,
+    c'est que le générateur ne contient pas tous les éléments en mémoire en même
+    temps).
+- id: 4
+  author: ®om
+  date: 2011-09-28 10:37:48+02:00
+  contents: |
+    @[**EdEd**](#comment-3)
+
+    Que le résultat soit une liste ou un générateur, je pense qu'il s'agit d'une
+    compréhension de liste.
+
+    J'ai d'ailleurs précisé :
+
+    > *Remarque : la compréhension de liste retourne une liste si elle est
+    > définie entre `[]`, alors qu'elle retourne un
+    > [générateur](http://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_%28informatique%29)
+    > (un* itérateur*) si elle est définie entre `()`.*
+
+    Pour moi, quelque soit la manière dont les éléments sont produits, il s'agit
+    bien de [compréhension de
+    liste](http://fr.wikipedia.org/wiki/Liste_en_compr%C3%A9hension), car son
+    contenu est défini par compréhension et non par énumération.
+
+    **EDIT :** Je viens de comprendre ce que tu voulais dire. D'après toi ça ne
+    peut pas être une liste en compréhension car ce n'est pas une liste (mais un
+    générateur). En fait, il s'agit bien une liste en compréhension, *liste*
+    étant à comprendre dans le sens général (une suite d'éléments). Par contre,
+    cette liste n'est pas forcément implémentée sous forme de liste python (dont
+    tous les éléments sont en mémoire).
+- id: 5
+  author: ®om
+  date: 2011-09-29 20:18:55+02:00
+  contents: |
+    Bon, par contre, le 4×4×4 c'est beaucoup plus long, en partie parce qu'il
+    teste toutes les combinaisons alors qu'en supprimant les rotations et
+    symétries, on diviserait pas mal les combinaisons à tester.
+
+    Par exemple, si en partant de `[0, 0, 0]`, il n'y a pas de solution, ça ne
+    sert à rien de tester en partant `[0, 0, 3]`. De même, toujours en partant
+    de `[0, 0, 0]`, s'il n'y a pas de solution en partant sur l'axe *x*, alors
+    il n'y en aura pas non plus si l'on part sur les axes *y* ou *z*.
+
+    Concrètement, pour le cube-serpent 4×4×4 suivant :
+
+        SNAKE_STRUCTURE = [1, 1, 2, 1, 1, 3, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1 ,1, 2, 2, 1, 1, 1, 1, 1, 2, 3, 1, 1, 1, 3, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3]
+        VOLUME_DIMENSIONS = [4, 4, 4]
+
+    il trouve la première solution en 20 heures et 23 minutes sur mon PC :
+
+        ([0, 1, 1], [-y, x, 2z, -x, -z, 3y, z, -2y, x, 2y, -z, -2y, -z, y, -x, y, x, -z, -y, x, y, x, -2y, 2z, y, -z, -x, y, x, 2z, -3y, -z, -x, z, 3y, -z, -2y, -z, -y, x, -z, -x, y, -x, -y, -x, 3y])
+- id: 6
+  author: nico
+  date: 2011-09-29 20:24:01+02:00
+  contents: |
+    Merci,
+
+    Grâce à toi je viens enfin de résoudre mon serpent de 64 (cube de 4x4x4) sur
+    lequel je séchais depuis des années!
+- id: 7
+  author: ®om
+  date: 2011-09-29 20:26:31+02:00
+  contents: |
+    @[**nico**](#comment-5)
+    Tu as exécuté le programme pour trouver la solution ? Si oui tu as eu le
+    résultat en combien de temps ?
+
+    Ou alors tu as utilisé la solution que je viens de poster en commentaire… 6
+    minutes avant ton message (auquel cas tu es très rapide) ?
+- id: 8
+  author: nico
+  date: 2011-09-29 20:26:39+02:00
+  contents: |
+    Ca a pris environ 5mn chez moi.
+
+    Pour info, voila mon serpent:
+
+        [ 2, 1, 2, 1, 1, 3, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 3, 1, 1, 1, 3, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1 ]
+
+    et la solution:
+
+        ([0, 0, 0], [2x, y, -2x, z, -y, 3x, -z, 2y, -x, 2z, -x, -2z, -x, y, x, z, x, -z, x, z, -2y, -2x, z, -x, y, -z, y, 2z, -3y, -z, x, z, 3y, -z, 2x, -y, z, -y, -z, -x, -y, x, z, -x, 3y, x])
+- id: 9
+  author: ®om
+  date: 2011-09-29 20:28:17+02:00
+  contents: |
+    @[**nico**](#comment-8)
+
+    Ah ok, tu as une structure qui a une solution avec le premier point testé
+    (`[0, 0, 0]`), forcément ça prend moins de temps ;-)
+- id: 10
+  author: Ywen
+  date: 2011-09-30 20:04:42+02:00
+  contents: |
+    Salut !
+
+    Pour l'histoire des points testés, en fait c'est pas compliqué, il suffit de
+    supprimer ceux qui sont identiques à une rotation près. Exemple, pour un
+    3x3x3, il ne faut tester qu'une face et sur cette face, qu'un corner (\*),
+    un edge (\*) et un center (\*), autrement dit :
+
+        . . .
+        . C .
+        O E .
+
+    O = cOrner, E = Edge, C = Center
+
+    Ca plus le core (le milieu du cube), on n'a donc que 4 positions initales à
+    tester (au lieu de 27).
+
+    (\*) Termes du Rubik's Cube.
+
+    Doit bien y avoir moyen de déduire une règle pour les configurations autres
+    que 3x3x3...
+
+    De plus, si je ne me trompe pas, tu génères bien la liste de TOUTES les
+    solutions possibles à partir d'un coin, indépendamment de la structure de
+    ton serpent ?
+
+    Par exemple, si ton serpent commence ainsi :
+
+        [2, 2, 1, 2....]
+
+    Alors tu est sûr dès le moment ou tu vas commencer à établir une solution du
+    type
+
+        [2x, -y...]
+
+    Qu'elle sera forcément fausse, car la deuxième partie du corps de ton
+    serpent a une taille de 2. (tu devrais donc avoir 2y ou -2y pour continuer à
+    investiguer cette solution).
+
+    Or (j'ai lu rapidement ton code et donc il est possible que je me trompe) il
+    me semble que si tu génères tes solutions à la demande (via un generator),
+    ce n'est pas le cas des éléments de chaque solutions. Cela te permettrait de
+    tuer dans l'oeuf des solutions qui seront forcément fausses.
+- id: 11
+  author: ®om
+  date: 2011-09-30 22:29:43+02:00
+  contents: |
+    Merci de ta réponse de fond, qui s'attaque aux limites de mon algo.
+
+    > @[**Ywen**](#comment-10)
+    >
+    > Pour l'histoire des points testés, en fait c'est pas compliqué, il suffit
+    > de supprimer ceux qui sont identiques à une rotation près.
+
+    Il est effectivement assez facile de supprimer dès le départ tous ceux qui
+    sont "équivalents". Mais ce n'est pas suffisant pour supprimer toutes les
+    symétries et les rotations : si tu pars de `[0, 0, 0]`, tu peux encore
+    diviser par 3 le nombre de chemins à tester, car les solutions commençant
+    par *x*, *y* et *z* sont équivalentes. Et une fois que tu as choisi de
+    commencer par *x*, les chemins `[x, y]` et `[x, z]` sont encore équivalents.
+
+    *\<je\_pense\_à\_voix\_haute\>*
+
+    Je suis convaincu que les règles de détection sont les mêmes pour les points
+    d'origine et pour les chemins.
+
+    Pour les points, elle est la suivante : **deux points *p1* et *p2* sont
+    équivalents si et seulement si en permutant entre elles les dimensions de
+    même grandeur de *p1*, éventuellement en les "inversant", on peut obtenir
+    *p2***.
+
+    Par exemple, sur un 3×3×3, les points `[ 1, 0, 2 ]` et `[ 2, 1, 0 ]` sont
+    équivalents, car il s'agit d'une simple permutation de dimensions. Par
+    contre, ces points ne sont pas équivalents sur un 2×3×4, car un tel volume
+    n'a pas de symétries diagonales (il ne faut permuter entre elles que les
+    dimensions dans lequel le volume a la même taille).
+
+    Mais ce n'est pas tout, les points `[ 0, 0, 1 ]` et `[ 2, 0, 1 ]` sont aussi
+    équivalents (symétrie par rapport l'axe des *x*), tout comme les points
+    `[ 0, 0, 1 ]` et `[ 2, 2, 1 ]` (symétries par rapport aux axes *x* et *y*,
+    donc rotation de 180° autour de l'axe *z*). Ainsi, il faut également
+    considérer comme équivalents les points avec des dimensions "inversées"
+    (c'est-à-dire, pour la dimension *i*, avec
+    `p1[i] + p2[i] + 1 = dimensions[i]`).
+
+    Et il faut aussi prendre en compte les permutations de ces dimensions
+    "inversées".
+
+    En supprimant tous les points équivalents, on trouve bien les 4 solutions
+    initiales dont tu parlais :
+
+        [ 0, 0, 0 ]
+        [ 0, 0, 1 ]
+        [ 0, 1, 1 ]
+        [ 1, 1, 1 ]
+
+    Toutes les autres sont "équivalentes" au sens de la règle énoncée.
+
+    Et ce qui est bien, c'est qu'on remarque qu'on peut trouver tous les points
+    "minimaux" très facilement, car ils ont une forme très simple qu'on peut
+    généraliser (comme tu l'intuitais). De cette façon, on sait les générer bien
+    plus simplement qu'en appliquant la règle complexe.
+
+    Maintenant, pour "tuer dans l'œuf" les chemins équivalents à ceux déjà
+    calculés, il "suffit" d'appliquer une généralisation de la règle : **deux
+    chemins *c1* et *c2* sont équivalents si et seulement si en appliquant la
+    même permutation des dimensions de même grandeur de chacun des points par
+    lesquels passe *c1*, et en appliquant la même "inversion", on peut obtenir
+    chacun des points par lesquels passe *c2***. En clair, en appliquant la même
+    règle à chacun des points, si on parvient à obtenir un chemin déjà parcouru,
+    c'est un chemin équivalent.
+
+    Je pense que comme pour les points, il y a un algorithme simple de
+    génération qui applique cette règle pour couper les branches de l'arbre de
+    résolution. Je laisse tourner un processus
+    [démon](http://fr.wikipedia.org/wiki/Daemon_%28informatique%29) dans ma tête
+    avant de l'implémenter…
+
+    *\</je\_pense\_à\_voix\_haute\>*
+
+    > @[**Ywen**](#comment-10)
+    >
+    > De plus, si je ne me trompe pas, tu génères bien la liste de TOUTES les
+    > solutions possibles à partir d'un coin, indépendamment de la structure de
+    > ton serpent ?
+    >
+    > Par exemple, si ton serpent commence ainsi :
+    >
+    >     [2, 2, 1, 2....]
+    >
+    > Alors tu est sûr dès le moment ou tu vas commencer à établir une solution
+    > du type
+    >
+    >     [2x, -y...]
+    >
+    > Qu'elle sera forcément fausse, car la deuxième partie du corps de ton
+    > serpent a une taille de 2. (tu devrais donc avoir 2y ou -2y pour continuer
+    > à investiguer cette solution).
+    >
+    > Or (j'ai lu rapidement ton code et donc il est possible que je me trompe)
+    > il me semble que si tu génères tes solutions à la demande (via un
+    > generator), ce n'est pas le cas des éléments de chaque solutions. Cela te
+    > permettrait de tuer dans l'oeuf des solutions qui seront forcément
+    > fausses.
+
+    C'est déjà ce que fait l'algo, il ne testera jamais `[ 2x, -y, … ]` si la
+    structure est `[ 2, 2, … ]`.
+
+    Tout est dans cette portion de code :
+
+    {% highlight python %}
+    for possible_vector in ( Vector(i, v)
+                             for v in [ norm, -norm ]
+                             for i in xrange(len(self.dimensions))
+                             if i != previous_position ):
+    {% endhighlight %}
+
+    Les *vecteurs possibles* sont ceux concernant les dimensions autres que
+    celles du vecteur précédent (donc orthogonal), dont la composante vaut
+    `norm` ou `-norm`. Sur ton exemple, `norm` vaut 2, donc les *vecteurs
+    possibles* seront `2y`, `-2y`, `2z` et `-2z`.
+- id: 12
+  author: ®om
+  date: 2011-10-02 01:31:22+02:00
+  contents: |
+    Ça y'est, j'ai trouvé comment éviter les symétries et les rotations : il
+    faut garder la liste des [classes
+    d'équivalence](http://fr.wikipedia.org/wiki/Relation_d%27%C3%A9quivalence#Classe_d.27.C3.A9quivalence)
+    associées à la relation de symétrie/rotation, et ne choisir à chaque étape
+    qu'un vecteur par classe (en ignorant les autres, car ils sont équivalents).
+    Ces classes d'équivalence se diviseront lors du placement d'un nouveau
+    vecteur.
+
+    Je l'ai implémenté dans une version v0.2, et j'ai mis à jour le billet.
+
+    J'ai ajouté une classe `SymmetryHelper` qui gère ça, et son utilisation par
+    le solveur. Le code est commenté pour comprendre comment ça fonctionne.
+
+    Pour les points de départ, la fonction `get_useful_points()` remplace la
+    fonction `all_points()`.
+
+    Pour la résolution du cube de [nico](#comment-8) (en s'arrêtant à la
+    première solution), il n'y a aucun gain de temps, car la solution était déjà
+    trouvée sans explorer de symétries inutiles. Par contre, il n'y a aucune
+    perte de temps non plus, ce qui montre que le code servant à gérer la
+    détection des symétries prend un temps négligeable.
+
+    Pour se donner une idée du temps gagné, on peut comparer le calcul de toutes
+    les solutions du 3×3×3 :
+
+    -   `snakesolver-0.1.py` : 412ms ;
+    -   `snakesolver-0.2.py` : 50ms
+
+    Et il ne trouve plus qu'une seule solution, au lieu de 48 (qui étaient donc
+    48 solutions identiques).
+
+    J'ai démarré la résolution du cube 4×4×4 qui avait pris [plus de 20
+    heures](#comment-5). J'éditerai ce commentaire quand le programme aura
+    trouvé la solution.
+
+    **EDIT :** Il a trouvé en 3 heures 53 minutes.
+- id: 13
+  author: FTG
+  author-url: http://www.lutix.org
+  date: 2011-10-03 23:11:05+02:00
+  contents: |
+    Pas mal du tout!!
+
+    Mais pourquoi pas du C++ par exemple?
+
+    En gros pourquoi de l interprété plutôt que du compilé?
+- id: 14
+  author: ®om
+  date: 2011-10-04 11:54:27+02:00
+  contents: |
+    @[**FTG**](#comment-13)
+
+    C'est un choix arbitraire. Ici, je voulais apprendre *Python*, plus [haut
+    niveau](http://fr.wikipedia.org/wiki/Langage_de_haut_niveau).
+
+    Il serait intéressant de comparer les performances d'un tel algo écrit en
+    *Python* et en *C++* (si tu as quelques heures à perdre pour l'écrire en
+    *C++* ^^).
+
+    Il existe aussi des (au moins un) [compilateurs
+    JIT](http://fr.wikipedia.org/wiki/Compilation_%C3%A0_la_vol%C3%A9e) pour
+    *Python* comme [Psyco](http://psyco.sourceforge.net/introduction.html), mais
+    je n'ai jamais testé.
+- id: 15
+  author: Ywen
+  date: 2011-10-04 20:37:04+02:00
+  contents: |
+    @FTG :
+
+    Parce qu'en C++ le code aurait peut-être été 2 fois plus long. Il ne s'agit
+    pas d'interprété VS compilé, simplement d'expressivité (®om utilise beaucoup
+    de list-comprehensions et de fonctions lambda).
+
+    A titre d'exemple, je suis en train d'essayer de refaire le solver en
+    Haskell, je suis parti pour avoir un code 4 fois plus court qu'en Python.
+
+    Plus rapide ? Comme a dit ®om, ça se teste, mais visiblement Python commence
+    à se défendre.
+
+    @®om:
+
+    Mmmh... Psyco n'apporte pas toujours des gros boosts de vitesse, ça dépend
+    vraiment de ton algo (je n'en sais pas plus). Mieux vaut se pencher sur
+    Pypy, une autre implantation de Python.
+- id: 16
+  author: ®om
+  date: 2011-10-05 23:09:34+02:00
+  contents: |
+    Dans la version *0.2*, la fonction `get_useful_points()` ne fonctionnait pas
+    si toutes les dimensions n'étaient pas égales (par exemple 2×3×4).
+
+    Il faut d'une part ne créer que les vecteurs dont les coordonnées sont à la
+    moitié ou moins de la taille du volume dans cette dimension (pour éviter les
+    symétries suivant les axes des vecteurs de base), et uniquement ceux dont
+    les coordonnées sont dans l'ordre (pour éviter les permutations de
+    dimensions).
+
+    Mais il ne faut éviter les permutations de dimensions que pour celles qui
+    sont de même taille (commencer à `[0, 1]` ou à `[1, 0]`, c'est équivalent
+    sur un 2×2, mais pas sur un 2×3). Du coup, il faut faire cette opération à
+    l'intérieur de chaque classe d'équivalence, ce que ne faisait pas la version
+    *0.2*.
+
+    C'est ce que j'ai implémenté dans la version *0.2.1*.
+
+    @[**Ywen**](#comment-15) Poste ton code en *Haskell* quand tu auras terminé
+    ;-)
+- id: 17
+  author: Ywen
+  date: 2011-10-07 15:53:57+02:00
+  contents: |
+    Yep, je le posterai (enfin là ça fait 5 jours que j'y ai pas touché),
+    j'essaie de comprendre tes optimisations pour la symétrie et la rotation.

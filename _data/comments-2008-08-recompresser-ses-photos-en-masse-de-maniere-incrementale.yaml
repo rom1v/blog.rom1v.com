@@ -1,0 +1,83 @@
+- id: 1
+  author: glooze
+  date: 2008-09-23 12:39:00+01:00
+  contents: |
+    Et sous quelle licence est ce script ?
+
+    :)
+- id: 2
+  author: ®om
+  date: 2008-09-23 14:51:00+01:00
+  contents: |
+    Licence propriétaire, interdisant la diffusion des sources... arf, zut, je
+    les ai diffusées !
+
+    Bon bah GPL v3 alors. Ou v2. Bon allez, v2.5, comme ça tout le monde est
+    content :)
+- id: 3
+  author: ac
+  date: 2013-01-30 12:22:53+01:00
+  contents: |
+    Bonjour et tout d'abord merci pour cet article/astuce :-)
+
+    Je suis tenté par une utilisation ... mais connaît mon manque d'ordre et mes
+    idées saugrenues ...
+
+    Si je change , pour une raison ou une autre, le nom du fichier ... il ne
+    sera plus alors connu comme ayant été "mogrifié" ?
+
+    Ne peut-on pas imaginer un script qui irait noté cette info dans les données
+    exif de la photo elle-même ?
+
+    (je pose la question car j'ignore tout du/des langage(s) des "scripts" :-(
+
+    j'ai juste vu qu'il existe un champ "UserComments" qui pourrait peut-être
+    être utilisé à cet usage ?
+
+    ici : <http://fr.wikipedia.org/wiki/M%C3%A9tadonn%C3%A9es_EXIF>
+
+    merci
+
+    ac
+- id: 4
+  author: ®om
+  date: 2013-01-30 15:58:28+01:00
+  contents: |
+    Cela m'embête de stocker cette donnée physiquement dans la photo.
+
+    Au pire, si tu l'exécutes plusieurs fois, ce n'est pas très grave. Pour t'en
+    convaincre, prend une image `original.jpg` quelconque, et exécutes :
+
+    {% highlight bash %}
+    convert -quality 90 original.jpg mog1.jpg
+    convert -quality 90 mog1.jpg mog2.jpg
+    convert -quality 90 mog2.jpg mog3.jpg
+    convert -quality 90 mog3.jpg mogn.jpg
+    for i in {1..500}; do echo "$i"; mogrify -quality 90 mogn.jpg; done
+    compare mog1.jpg mog2.jpg diff1.jpg
+    compare mog2.jpg mog3.jpg diff2.jpg
+    compare mog3.jpg mogn.jpg diff3.jpg
+    {% endhighlight %}
+
+    Les `diff*.jpg` peuvent montrer des différences, mais si tu regardes les
+    photos, elles sont imperceptibles. Et si tu ouvres `mogn.jpg` (recompressée
+    plus de 500 fois), tu ne vois pas la différence avec `mog1.jpg`.
+
+    L'idéal est de ne pas recompresser, évidemment, mais je voulais montrer que
+    si ça arrive par erreur, ce n'est pas catastrophique.
+- id: 5
+  author: ac
+  date: 2013-01-30 17:37:58+01:00
+  contents: |
+    Merci ®om pour cette réponse détaillée,
+
+    en effet mes yeux n'y voient que du feu ;)
+
+    > Cela m'embête de stocker cette donnée physiquement dans la photo.
+
+    Pour saisir ton raisonnement peux-tu expliciter (techniquement) ta
+    formulation ?
+
+    @+
+
+    ac

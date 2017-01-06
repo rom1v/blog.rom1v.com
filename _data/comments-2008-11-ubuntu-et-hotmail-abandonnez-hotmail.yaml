@@ -1,0 +1,211 @@
+- id: 1
+  author: Anonymous
+  date: 2008-11-15 12:48:00+01:00
+  contents: |
+    Salut aux dernières nouvelles, le transfert d'email depuis hotmail ne peut
+    se faire que vers un autre compte hotmail/msn/live domains.
+- id: 2
+  author: ®om
+  date: 2008-11-15 13:04:00+01:00
+  contents: |
+    Merci, j'ai rajouté un paragraphe :)
+- id: 3
+  author: ShAdy
+  date: 2008-11-15 13:30:00+01:00
+  contents: |
+    Sinon il existe une extension firefox pour modifier l'user agent comme on le
+    désire et ce faire passer pr un ie sous vista ou autre config au choix
+- id: 4
+  author: ®om
+  date: 2008-11-15 13:32:00+01:00
+  contents: |
+    Si tu changes totalement l'user-agent, dans les statistiques (xiti par
+    exemple), tu es compté comme utilisateur Windows...
+- id: 5
+  author: Anonymous
+  date: 2008-11-15 13:37:00+01:00
+  contents: |
+    Bonjour.
+
+    Juste pour info on peut utiliser live messenger (ou plus generelament le
+    protocole MSN) avec une adresse gmail (ou n'importe quelle autre adresse
+    mail). Il suffit de créer un id passport (service de microsoft) (ici :
+    <https://accountservices.passport.net/ppnetworkhome.srf?Lcid=1036>)
+
+    voila!
+
+    simplement pour ne pas avoir peur de quitter hotmail ;)
+- id: 6
+  author: chapal
+  date: 2008-11-15 13:50:00+01:00
+  contents: |
+    Mais le hic c'est qu'on a toujours le même problème...
+
+    Comment rediriger ses mails hotmails vers une autre adresse (enfin sortir du
+    carcan MS quoi)...
+
+    Il y a bien des sites qui en parlent mais ça marche jamais bien
+- id: 7
+  author: ®om
+  date: 2008-11-15 13:54:00+01:00
+  contents: |
+    @chapal, effectivement c'est l'idée du paragraphe que j'ai rajouté
+    ("rectification") suite au premier commentaire, Microsoft interdit la
+    redirection vers une adresse autre que msn/hotmail/live.
+
+    Je pense qu'à partir d'un moment, il faut se lancer, c'est un petit
+    investissement au départ, mais ça évitera pas mal de problèmes par la
+    suite...
+- id: 8
+  author: ®om
+  date: 2008-11-15 13:58:00+01:00
+  contents: |
+    @chapal, ceci pourrait t'intéresser : [Rediriger email msn(hotmail) vers une
+    autre boite(gmail)](http://forum.ubuntu-fr.org/viewtopic.php?id=269822).
+- id: 9
+  author: chapal
+  date: 2008-11-15 16:28:00+01:00
+  contents: |
+    Moi je suis passé depuis 2 ans sous gmail (avec abandon de mes 2 comptes
+    hotmail)
+
+    Et je cherche depuis ce temps pour les quelques mails qui arrivent
+    encore...
+
+    Et apparement la technique du lien donné sur le forum ubuntu ne fonctionne
+    pas (en tout cas pas avec moi et je ne suis pas le seul)
+
+    A voir ;)
+- id: 10
+  author: achraf
+  date: 2008-11-15 17:14:00+01:00
+  contents: |
+    Faites attention ! n'oubliez pas que gmail est toujours en version beta,
+    alors au moins il faut prévoir une solution de sauvegarde, éventuellement un
+    logiciel de messagerie, outlook, mozilla ou autre ...
+- id: 11
+  author: Tuxargon
+  date: 2008-11-15 17:36:00+01:00
+  contents: |
+    Depuis que je suis passé sous Linux, j'ai dit BYE BYE à Microsoft et tous
+    ces produits :)
+- id: 12
+  author: Hadrien.eu
+  date: 2008-11-15 19:30:00+01:00
+  contents: |
+    Ma réponse ici :
+
+    <http://www.alti.info/post/2008/11/15/Hotmail-sux>
+- id: 13
+  author: bochecha
+  date: 2008-11-15 23:01:00+01:00
+  contents: |
+    > il est grand temps d'utiliser un service qui respecte un peu plus vos
+    > libertés d'action !
+    >
+    > Personnellement, j'utilise gmail
+
+    Mouhahahahahaha :D
+
+    Personnellement, j'utilise no-log.org
+
+    C'est un fournisseur de mails associatif, qui n'utilise que du logiciel
+    libre, est gratuit, sans pub, ne lit pas mes mails et ne demande aucune
+    information personnelle pour ouvrir un compte.
+
+    Ca, ça respecte ma liberté ;)
+- id: 14
+  author: ®om
+  date: 2008-11-15 23:21:00+01:00
+  contents: |
+    @bochecha, c'est pour ça que j'ai précisé "liberté D'ACTION" :)
+- id: 15
+  author: ®om
+  date: 2008-11-15 23:26:00+01:00
+  contents: |
+    Et no-log, quand on tente d'ouvrir un compte :
+    <http://images.imagup.com/07/1226797120_screenshot8.png>
+
+    Et dans les détails du certificat : "Ce site essaie de s'identifier lui-même
+    avec des informations invalides"
+- id: 16
+  author: theClimber
+  date: 2008-11-16 11:35:00+01:00
+  contents: |
+    Un truc qui pourrait vous intéresser :
+    <http://shamanix.wordpress.com/2008/04/10/transition-totale-hotmail-vers-gmail/>
+- id: 17
+  author: Lumpy
+  date: 2008-11-16 11:49:00+01:00
+  contents: |
+    No-log ne pose pas de problèmes de sécurité, c'est juste qu'ils n'ont pas
+    les moyens de s'offrir un certificat d'authentification "officiel". Il n'est
+    donc pas reconnu comme valide par Firefox.
+
+    De toutes façons, No-log n'offre désormais plus de comptes car ils sont
+    surchargés. Pour ma part je suis chez eux et j'en suis aussi très content.
+
+    Pour ce qui est de gmail, l'offre est effectivement alléchante, mais leur
+    contrat d'utilisation laisse vraiment à désirer sur la confidentialité, non
+    ?
+- id: 18
+  author: Anonymous
+  date: 2008-11-17 17:08:00+01:00
+  contents: |
+    Ubuntu est un OS, pas un navigateur...
+
+    Hotmail n'est pas totalement compatible avec la version Linux de Firefox.
+    Cependant, en passant par la version classique, ça fonctionne très bien ;-)
+- id: 19
+  author: freechelmi
+  date: 2008-11-17 17:24:00+01:00
+  contents: |
+    je ne comprends pas :
+
+    j'ai tester avec un user Agent mozilla 1.7.8 / Fedora et j'ai le même
+    problème.
+
+    j'aurais tendance à dire donc que MS veut carrément faire fuir les switcher
+    WIn-\>lin en leur montrant qu'il faut revenir du coté MS de la force s'ils
+    veulent utiliser leur Webmail a la con.
+
+    idem pour les cybercafés etc...
+
+    je trouves ça carrément ahurissant .... ce serait bien d'avoir une réponse
+    de leur part ?
+- id: 20
+  author: ®om
+  date: 2008-11-18 18:25:00+01:00
+  contents: |
+    Ils n'en sont pas à leur coup d'essai, déjà par le passé ils ont fait la
+    même chose pour contrer Opera face à IE :
+    <http://people.opera.com/howcome/2003/2/msn/>
+- id: 21
+  author: ®om
+  date: 2008-11-21 21:11:00+01:00
+  contents: |
+    Le problème de la zone d'écriture de mails qui ne fonctionnait pas est
+    résolu.
+- id: 22
+  author: Gilles
+  date: 2008-12-27 11:58:00+01:00
+  contents: |
+    Avec Thunderbird, y'a une extension pour utiliser les comptes Webmail sans
+    POP/IMAP comme hotmail : http://webmail.mozdev.org/
+- id: 23
+  author: Lumanda
+  date: 2009-02-05 04:20:47+01:00
+  contents: |
+    Depuis peu, Microsoft vient de permettre de consulter ses emails à partir
+    d'un autre utilitaire de messagerie comme Thunderbird, Evolution...
+
+    J'utilise thunderbird pour rapatrier mes messages d'hotmail sans utiliser le
+    greffon Webmail.
+
+    il faut juste faire cette configuration:
+
+     * Login: ....@hotmail.com
+     * Accès POP.: pop3.live.com
+     * Sécurité: SSl 995
+     * Accès SMTP: smtp.live.com
+     * Sécurité: TLS 587

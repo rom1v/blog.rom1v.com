@@ -1,0 +1,370 @@
+- id: 1
+  author: yagraph
+  date: 2009-03-03 10:02:32+01:00
+  contents: |
+    Ton raisonnement est surement valable en pratique... Mais, je suis désolé,
+    malheureusement il est complètement faux en théorie.
+
+    Tu confonds dpi (dots per inch - point par pouce), une unité qui sert à
+    mesurer la résolution pour des supports physiques (le plus petit point
+    qu'une imprimante peu imprimer, qu'un scanner peut scanner...) et ppi (pixel
+    per inch - pixel par pouce), une unité qui sert effectivement à mesurer la
+    résolution d'une image numérique (par exemple l'affichage d'un moniteur)...
+    Ce sont deux unités où l'entité la plus petite n'a pas de taille prédéfinie,
+    mais elles ne mesure pas la même chose ! Une résolution d'écran ne s'exprime
+    pas en dpi, mais en ppi !
+
+    Quand au point (pica), c'est une unité qui est utilisé en typographie, et
+    qui elle a une taille fixe réelle... et qui est donc indépendante de la
+    résolution de ton écran... Elle n'entre donc pas en jeu ici.
+
+    Enfin il y a les problèmes d'anti-crenelage (de lissage) qui se rajoute à
+    tout ça, et dont tu n'a pas tenu compte...
+
+    Bref c'est courageux de s'attaquer à un tel problème, mais il faut partir
+    sur de bonnes bases.
+
+    Pour finir, voici une tentative de définition de la Résolution :
+
+    La résolution d'une image est le rapport entre sa définition et sa surface,
+    quel que soit le support utilisé. La définition est la quantité
+    d'information découpée en unité élémentaire, généralement des pixels pour
+    les écrans, et des points d'imprimante (dots) pour les supports imprimés.
+    Tout le jeu de la résolution est d'être assez grande (c'est à dire avoir une
+    définition suffisante dans une surface donnée) pour donner à l'oeil humain
+    l'illusion, à une distance du support donnée, de la continuité en lui
+    cachant sa structure élémentaire (pixels ou points). Ainsi une image peut
+    avoir une résolution très faible, mais si on en est suffisamment loin
+    celle-ci pourra être suffisante (pas besoin d'imprimer une affiche AO à plus
+    de 25 dpi, puisqu'elle est faite pour être vue à plus de 3 mètres).
+
+    Il faut bien comprendre que la problématique de la résolution est fortement
+    liée à celle du numérique, qui découpe l'information, et à des techniques
+    d'impression qui utilisent des trames, c'est à dire de l'information binaire
+    (tout ou rien). Comme dans les deux cas on a une unité extrêmement simple,
+    on doit jouer sur sa quantité pour apporter de la finesse et du détail.
+
+    Pour exprimer la résolution on utilise deux unités, qui sont dépendantes du
+    support, et exprimés en unité par pouce (1 pouce = 2.54 cm) : le pixel per
+    inch (ppi) pour les images numériques sur écran où l'unité élémentaire est
+    le pixel, et le dot per inch (dpi) pour les images imprimées où l'unité
+    élémentaire est le point d'imprimante. On utilise les terme anglais (ppi et
+    dpi) plutôt que leur traduction en français (pixels par pouce et point par
+    pouce) car celle-ci génère des confusions (ppp ≠ ppp).
+
+    Pour convertir une image d'une unité à l'autre (et donc d'un support à
+    l'autre), il faut tenir compte de deux problèmes potentiels : la résolution
+    (c'est à dire la quantité d'information) et la structure de l'information
+    (les pixels sont dans une grille bitmap, les points sont répartis dans une
+    trame), en plus des éventuels problèmes de couleur. Pour contourner ces
+    problèmes quant on imprime une image numérique, il faut que la grille de
+    pixel soit au moins égale à la trame d'imprimante, ou à deux fois sa
+    linéature. Si elle est inférieur, des pixels se dessineront à l'impression,
+    ce qui arrive régulièrement quand on ne vérifie pas la résolution des images
+    bitmaps trouvées sur Internet (qui sont pour la plupart à 72 ppi).
+- id: 2
+  author: simon G
+  author-url: http://simtris.free.Fr
+  date: 2009-03-03 10:21:23+01:00
+  contents: |
+    J'ai envie de dire wahooo !
+
+    Sur ce domaine messieurs, je suis tellement novice que je goberais n importe
+    quoi. Néanmoins il semble régner une confusion totale entre les constructeur
+    qui s'emmêle (ou en profite) et le public qui n'y comprend rien et qui
+    prend : "le plus grand !"
+- id: 3
+  author: ®om
+  date: 2009-03-03 10:43:02+01:00
+  contents: |
+    Merci de ta longue réponse :)
+
+    > @[**yagraph**](#comment-1)
+    >
+    > Tu confonds dpi (dots per inch - point par pouce), une unité qui sert à
+    > mesurer la résolution pour des supports physiques (le plus petit point
+    > qu'une imprimante peu imprimer, qu'un scanner peut scanner...) et ppi
+    > (pixel per inch - pixel par pouce), une unité qui sert effectivement à
+    > mesurer la résolution d'une image numérique (par exemple l'affichage d'un
+    > moniteur)...
+
+    Je suis d'accord avec toi, sur un écran ça devrait être PPI et non DPI
+    (réservé à l'imprimante). Mais j'ai choisi volontairement d'utiliser DPI,
+    car dans les préférences de Gnome, on choisit le DPI (mais en disant DPI, il
+    faut comprendre PPI) de l'écran. C'est d'après toi une erreur d'écrire DPI
+    dans les préférences de Gnome? (pour moi oui)
+
+    > @[**yagraph**](#comment-1)
+    >
+    > Quand au point (pica), c'est une unité qui est utilisé en typographie, et
+    > qui elle a une taille fixe réelle...
+
+    Euh, oui… c'est ce que j'ai dit, non?
+
+    C'est son équivalent en pixel qui varie selon le DPI.
+
+    > @[**yagraph**](#comment-1)
+    >
+    > Enfin il y a les problèmes d'anti-crenelage (de lissage) qui se rajoute à
+    > tout ça, et dont tu n'a pas tenu compte...
+
+    C'est vrai que je n'en ai pas explicitement parlé, mais il me semble que
+    leur prise en compte est incluse dans ma phrase :
+
+    > une contrainte intervient fortement : les caractères doivent avoir une
+    > forme reconnaissable, et être "suffisamment lisses".
+- id: 4
+  author: sergio
+  author-url: http://cahierdesergio.free.fr/
+  date: 2009-03-03 11:21:09+01:00
+  contents: |
+    Précision sur les dpi :
+
+    Le DPI d'un écran, n'est pas le nombre de pixel par pouce... mais un nombre
+    plus psychologique.
+
+    Dans un SDK de Microsoft datant au moins de Windows 3.0, il était expliqué
+    que le choix de 96dpi (pour les écrans de l'époque...) n'était pas la
+    résolution réelle de l'écran (qui devait avoisiner les 72dpi, valeur donnée
+    sur les Macintosh...), mais une adéquation pour qu'un document affiché à
+    l'écran ait le même aspect que le document imprimé par la suite sur une
+    imprimante (dont les dpi sont, eux, réels).
+
+    Ce raisonnement, étant basé sur le fait que, la distance à laquelle on lit
+    l'écran, n'est pas la même que celle à laquelle on lit un papier !
+
+    Sinon, ta commande magique me donne 95x96dpi. Normal ? (écran 17"
+    1280x1024).
+- id: 5
+  author: Jeece
+  date: 2009-03-03 15:54:16+01:00
+  contents: |
+    Beau billet de mise au point ®om.
+
+    Quant à la confusion dpi VS ppi elle n'a pas vraiment lieu d'être. Ici on
+    parle bien de support numérique, point = pixel.
+- id: 6
+  author: yagraph
+  date: 2009-03-04 14:27:56+01:00
+  contents: |
+    Je m'excuses, tu avais volontairement fait l'omission, et pas une confusion.
+
+    Mais en effet pour moi c'est une erreur de mélanger ppi et dpi... ça donne
+    l'illusion qu'une imprimante imprime des pixels, ou qu'un écran affiche des
+    points de trames !
+
+    et un point n'est pas du tout égal à un pixel, ça peut être le cas mais la
+    plupart du temps c'est faux, tout dépends du périphérique !
+
+    C'est un peu comme dire que les rayons de miel des abeilles sont structurés
+    en grilles perpendiculaires x-y cartésiennes ....
+
+    Sinon sur le fond on est d'accord en fait (y compris l'histoire des points
+    typographiques et du lisage).
+
+    Simplement ça m'arrache les yeux quand on me parle de dpi pour un écran...
+    Il y a surement des origines commerciales à ça, comme le dit Sergio, mais ça
+    n'empêche pas que ça soit complètement faux.
+
+    Après on s'étonne que les gens crois que tout ce qu'on affiche à l'écran va
+    s'imprimer proprement... alors que ce n'est ni la même structuration, ni le
+    même espace colorimétrique, ni la même unité...
+
+    Bref, ton article est intéressant, mais je tenais à m'insurger un peu contre
+    cet erreur répandue...
+- id: 7
+  author: ravomavain
+  author-url: http://ravomavain.servhome.org/
+  date: 2009-03-05 17:41:29+01:00
+  contents: |
+    Moi j'ai un problème de pixels noirs sur mon écran :
+
+    Quand je vais sur des sites libres en France (dont le miens), il y a du noir
+    partout avec marquer en gros : HADOPI : «black-out» du Net français.
+
+    C'est grave docteur? Vous croyez que je pourrai revoir un net libre en
+    France?
+- id: 8
+  author: LordFarquaad
+  date: 2009-03-06 00:27:31+01:00
+  contents: |
+    Tiens c'est amusant, j'avais indirectement relevé ce problème lorsque je
+    suis passé à Hardy : certaines polices dans Firefox étaient beaucoup trop
+    grandes (<http://forum.ubuntu-fr.org/viewtopic.php?id=212726>)
+
+    J'ai comme toi un écran 128 ppi mais Gnome est configuré en 96 ppi… Je dois
+    dire que je n'aime pas trop ces solutions bancales, mais bon. Dans le cas
+    présent je ressens comme l'impression que mon écran n'est pas utilisé « au
+    maximum de ses capacités » puisque les objets qu'il affiche ne tiennent pas
+    compte de ses propriétés réelles.
+
+    D'un autre côté, le fait que les objets graphiques (menus, boutons etc.)
+    aient des tailles en pixels est un avantage (pour des résolutions pas trop
+    élevées du moins, probablement pas au dessus de 150 ppi) , puisque cela
+    permet d'en afficher plus sur l'écran. Par compte pour les tailles de
+    polices il faut effectivement qu'elles soient en points comme tu
+    l'expliques. Si tout était en points, à quoi bon avoir une résolution
+    d'écran plus élevée puisqu'on afficherait alors exactement la même chose ?
+    (plus nettement, certes, mais de loin ça ne change rien…)
+
+    En tout cas je pense que c'est un sujet qui n'est pas prêt d'être clos. Mais
+    quand tu dis que les résolutions (en dpi) augmentent, je ne suis pas
+    convaincu. La plupart des gens sont avec leur 1280×800 sur des 15,4″ voire
+    17″… Ou alors il faut regarder du côté téléphones, netbooks ou écrans haute
+    gamme.
+- id: 9
+  author: Calimo
+  date: 2009-03-07 13:00:06+01:00
+  contents: |
+    > Et le pire, c'est qu'il n'y a pas de « bonne manière de faire » : les
+    > tailles en pixels et les tailles en points ont chacunes leurs avantages et
+    > leurs inconvénients sur les sites internet.
+
+    Ceci me semble inexact, en effet on peut utiliser l'unité "em" définie en
+    CSS, qui est une unité relative et indique un rapport de taille par rapport
+    à l'élément parent. Par exemple, pour qu'un titre soit 2 fois plus gros que
+    le reste du texte, on indique 2em.
+
+    La dimension de base est définie dans les préférences du navigateur, ce qui
+    permet à un utilisateur de changer la taille des polices. La solution
+    existe, c'est juste que (presque) personne ne l'applique.
+- id: 10
+  author: ®om
+  date: 2009-03-07 18:17:40+01:00
+  contents: |
+    @[**Calimo**](#comment-9)
+
+    En effet, merci pour la précision. Ça se règle où la taille d'un **em** dans
+    Firefox?
+
+    Par contre, pour les images, elles sont toujours en bitmap sur les sites
+    web, donc avec une taille fixe en pixels…
+- id: 11
+  author: Geronimo
+  date: 2009-03-09 11:20:16+01:00
+  contents: |
+    Comment fait on avec les imprimantes ? On utilise bien des résolution
+
+    différentes. 300 dpi, 600 dpi etc... Pour les écrants à 300 dpi le
+
+    problème devrait être le même ?
+- id: 12
+  author: Thibali
+  date: 2009-06-11 16:15:35+01:00
+  contents: |
+    tout à fait d'accord avec yagraph. Cette confusion a le don de m'agacer moi
+    aussi. la confusion est tellement répandu que [même wikipédia était
+    érronée](http://fr.wikipedia.org/wiki/Point_par_pouce).
+
+    Tou s'éclaire quand on sait qu'historiquement, dot=pixel, donc qu'un point
+    (sous entendu "de l'écran") correspond à un pixel. Seulement lorsqu'on
+    travaille dans l'imprimerie, cela crée une certaine confusion.
+
+    Cette confusion est d'autant plus grave qu'elle est toujours employé par de
+    nombreuses personnes dans le graphisme (il me semble que Photoshop faisait
+    aussi l'erreur de proposer une résolution graphique en dpi à une certaine
+    époque...), mais aussi et surtout par les vendeurs. Une "résolution" de 12
+    Mégapixel pour les appareils photo numériques n'est juste qu'une taille (et
+    d'ailleurs, il faut diviser par 4, car cela comprend les 4 pixels des
+    chaques composantes colorimétriques...).
+
+    Bref! En tout cas belle tentative de résumé. Article très complet, même si
+    effectivement il y a une ambiguité sur dpi/ppi. Je suis sous Intrepid et je
+    n'ai pas de problème de PPI. Et sous Jaunty, est-ce que ce problème
+    apparait?
+- id: 13
+  author: Olive White
+  author-url: http://www.olivewhite.com
+  date: 2009-07-13 23:13:03+02:00
+  contents: |
+    Bonjour
+
+    Pensez également que contrairement à ce que l'on dit un peu partout sur le
+    net, l'impression sur une imprimante jet d'encre en qualité photo est
+    suffisante à 200 dpi. C'est en imprimerie offset que la barrière de 300 dpi
+    est indispensable. Peu de gens le croient mais c'est vrai ;-)
+- id: 14
+  author: "Grille de mise en page, « zoning » et gabarit avec InDesign"
+  author-url: http://css4design.com/indesign-grille-mise-en-page-zoning-gabarit
+  date: 2010-10-28 10:16:09+02:00
+  pingback: true
+  contents: |
+    [...] Résolution, pixels, points, dpi : un casse-tête insoluble ? [...]
+- id: 15
+  author: lsga
+  date: 2010-12-13 15:23:19+01:00
+  contents: |
+    Super article, on y voit enfin un peu plus clair...
+- id: 16
+  author: Lafont François
+  date: 2011-08-19 15:00:07+02:00
+  contents: |
+    Bonjour et merci pour cet article qui m'a pas mal éclairé. J'ai une petite
+    question (je ne sais pas si c'est le lieu pour ça mais au pire ma question
+    restera sans réponse, ce n'est pas très grave). Je suis sous Debian Squeeze
+    et j'ai ça :
+
+        $ xdpyinfo | grep -C 1 resolution
+          dimensions:    1920x1080 pixels (508x285 millimeters)
+          resolution:    96x96 dots per inch
+          depths (7):    24, 1, 4, 8, 15, 16, 32
+
+    1\) Déjà, ça ne serait pas «96x96 **Pixels** per inch» (et non «dots») ?
+
+    2\) Si j'applique mes petites règles de proportionnalités, je tombe sur un
+    écran de 50,8x28,575 cm ce qui correspond à peu près à ce que donne la
+    commande ci-dessus. Mais le problème, c'est que si je mesure mon écran avec
+    mon bon vieux mètre de couturier, je tombe sur environ 48x27 cm (je mesure
+    la zone d'affichage sans l'armature en plastique bien sûr) ce qui est quand
+    même assez différent de ce que donne la commande. Comment ce se fait-il ?
+
+    Merci d'avance et merci bien pour l'article.
+- id: 17
+  author: ®om
+  date: 2011-08-22 19:23:05+02:00
+  contents: |
+    @[**Lafont François**](#comment-16)
+
+    1\) cf la définition de résolution dans le billet :
+
+    > Elle est souvent exprimée en DPI (Dot Per Inch : Point Par Pouce).
+    > Attention, dans cette unité, le point signifie pixel.
+
+    2\) La valeur écrite en dur pour que le système "connaisse" la taille réelle
+    de l'écran ne doit pas être totalement exacte pour ton matériel.
+- id: 18
+  author: Edmond Solin
+  date: 2012-08-14 15:45:37+02:00
+  contents: |
+    Bonjour
+
+    Dur, dur pour moi de suivre toutes vos explications !...
+
+    Moi, j'ai un Windows Vista, diagonale écran 47 cm=18,5 pouces ; mon écran
+    s'est beaucoup étiré vers le haut et le bas comme les icônes dont certaines
+    on disparues. Depuis des jours je bataille pour réduire la résolution
+    d'écran. Impossible ! D'ailleurs, OK a disparu aussi et rien ne change.J'ai
+    aussi essayé de supprimer des raccourcis pour faire de la place à l'écran
+    (mais je crois que cela est parfaitement inutile ??). J'ai aussi beaucoup de
+    peine à retrouver ma messagerie.
+
+    Verriez-vous un conseil à me donner ?
+
+    Merci
+
+    E.S.
+- id: 19
+  author: ®om
+  date: 2012-08-14 18:59:24+02:00
+  contents: |
+    @[**Edmond Solin**](#comment-18)
+
+    Les symptômes que vous décrivez correspondent simplement à une mauvaise
+    configuration de la *définition* de votre écran. Je ne connais pas Windows
+    Vista, mais il doit y avoir un menu pour changer la *définition* (1600×900
+    par exemple).
+
+    Choisissez-en une qui a le même *aspect-ratio* (le même rapport
+    largeur/hauteur) que celui de votre écran, de préférence celle qui
+    correspond à sa définition native (s'il s'agit d'un écran plat, ce qui est
+    très probablement le cas).

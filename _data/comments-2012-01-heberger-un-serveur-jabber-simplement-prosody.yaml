@@ -1,0 +1,266 @@
+- id: 1
+  author: Mario
+  date: 2012-01-07 02:25:01+01:00
+  contents: |
+    C'est très intéressant! Alors ensuite il faut payer son domaine... Merci
+    pour le tuto! J'ai partagé ta page sur Diaspora\*
+- id: 2
+  author: mart-e
+  author-url: http://mart-e.be
+  date: 2012-01-07 11:11:06+01:00
+  contents: |
+    Quand tu dis "la liste de mes contacts est mieux sur mon serveur que sur un
+    autre", tu sous-entend juste les contacts de ton compte Jabber ou tu as un
+    système exploitable par d'autres applications (style un répertoire CardDAV)
+    ?
+- id: 3
+  author: ®om
+  date: 2012-01-07 14:30:15+01:00
+  contents: |
+    @[**mart-e**](#comment-2)
+    Je parle juste des contacts de mon compte *Jabber*.
+- id: 4
+  author: ®om
+  date: 2012-01-07 15:32:01+01:00
+  contents: |
+    Petit complément : j'utilise [Beem](http://www.beem-project.com/) comme
+    client sur mon téléphone (Android), et je ne parvenais pas à me connecter à
+    mon serveur.
+
+    En fait, *Beem* semble ne pas fonctionner si le nom de domaine gère IPv6. En
+    effet, pour `rom1v.com`, j'ai à la fois une entrée `A` (IPv4) et une entrée
+    `AAAA` (IPv6).
+
+    Pour le faire fonctionner, j'ai créé un sous-domaine `ipv4.rom1v.com` qui
+    lui ne contient que l'entrée `A`.
+
+    Ainsi, dans *Beem*, en renseignant mon compte *Jabber* normalement (le
+    [JID](http://wiki.jabberfr.org/Jabber_ID) en `@rom1v.com`), et en activant
+    dans *Options avancées* la case *Options spécifiques*, je peux forcer le
+    serveur à `ipv4.rom1v.com`. Et ça fonctionne…
+- id: 5
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-01-07 18:12:12+01:00
+  contents: |
+    Du coup tu change d'adresse Jabber ? tu es obligé de prévenir tes contacts
+- id: 6
+  author: totopipo
+  date: 2012-01-07 20:01:05+01:00
+  contents: |
+    @bartounet :
+
+    Mécaniquement, c'est indispensable. Personne ne devrait avoir accès au
+    calepin privé de chacun de ses contacts. :o)
+- id: 7
+  author: tyler durden
+  date: 2012-01-08 04:05:23+01:00
+  contents: |
+    Bonjour,
+
+    Intéressant. Merci.
+
+    Mais dans quel état est le serveur après ces manipulations, au niveau
+    sécurité ?
+
+    Toute personne passant par là peut elle créer un compte sur le serveur ? Si
+    oui, comment l'interdire ? Si non, comment l'autoriser et avec quelle(s)
+    restrictions ?
+
+    Cordialement.
+- id: 8
+  author: ®om
+  date: 2012-01-08 08:35:23+01:00
+  contents: |
+    *Suite à [ce commentaire](#comment-4) :*
+
+    En fait, ça ne vient pas (que) de *Beem*, mais de
+    [Prosody](http://blog.arnoux.lu/2011/03/02/passage-en-ipv6/), et de
+    [luasocket](http://code.google.com/p/lxmppd/issues/detail?id=68) qui ne gère
+    pas l'IPv6.
+
+    Du coup, la meilleure solution est d'ajouter un sous-domaine
+    (`im.rom1v.com`) qui ne contient qu'une entrée `A` (IPv4), et d'ajouter deux
+    entrées `SRV` de cette manière :
+
+     * `_xmpp-client._tcp` ayant pour valeur `0 0 im.rom1v.com`
+     * `_xmpp-server._tcp` ayant pour valeur `0 0 im.rom1v.com`
+
+    *([plus d'infos ici](http://wiki.jabberfr.org/Utilisateur:Gfa/SRV))*
+
+    De cette manière, il suffit de configurer *Beem* (ou n'importe quel autre
+    client) normalement sans options spécifiques.
+- id: 9
+  author: ®om
+  date: 2012-01-08 08:42:17+01:00
+  contents: |
+    > @[**tyler durden**](#comment-7)
+    >
+    > Toute personne passant par là peut elle créer un compte sur le serveur ?
+    > Si oui, comment l'interdire ? Si non, comment l'autoriser et avec
+    > quelle(s) restrictions ?
+
+    Par défaut, personne ne peut créer de compte sur le serveur. Les options se
+    configurent dans `/etc/prosody/prosody.cfg.lua`.
+
+    Concernant la création de comptes, ce fichier contient :
+
+        allow_registration = false;
+
+    Je ne sais pas comment appliquer des restrictions (je n'ai pas besoin de
+    cette option). Tu peux au moins activer (décommenter) un module qui
+    s'appelle `watchregistrations` pour recevoir une alerte quand quelqu'un
+    s'inscrit.
+- id: 10
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-01-08 09:26:39+01:00
+  contents: |
+    du coup on doit mettre à jour ton contact ? ta nouvelle adresse ?
+- id: 11
+  author: ®om
+  date: 2012-01-08 09:30:50+01:00
+  contents: |
+    @[**bartounet**](#comment-10)
+
+    Je n'avais pas répondu à [ton premier commentaire](#comment-5), car je
+    t'avais ajouté en contact avec ma nouvelle adresse (ce qui répondait
+    implicitement à la question). Mais tu ne dois plus avoir la même adresse
+    *Jabber* que celle que j'avais de toi (en `@im.apinc.org`)…
+
+    La réponse est donc oui, il faut mettre à jour mon contact avec ma nouvelle
+    adresse ;-)
+- id: 12
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-01-08 10:18:00+01:00
+  contents: |
+    tu as vu ma demande de contact ?
+- id: 13
+  author: ®om
+  date: 2012-01-08 10:33:32+01:00
+  contents: |
+    @[**bartounet**](#comment-12)
+
+    Je viens de la voir.
+
+    *Empathy* devrait cacher encore plus les notifications, afin d'être bien sûr
+    que l'utilisateur ne la voit pas. Pour voir ta demande de contact, aucune
+    notification visible dans *gnome-shell*, aucune nouvelle fenêtre ouverte,
+    simplement dans le *roster*. Pour la voir, il faut activer l'affichage des
+    contacts déconnectés, pour voir un contact correspondant à ton compte qui
+    s'est ajouté, avec une icône clignotante indiquant qu'il faut l'accepter…
+    Superbe notification !
+- id: 14
+  author: Galuel
+  author-url: http://www.creationmonetaire.info
+  date: 2012-01-08 10:40:47+01:00
+  contents: |
+    Excellent ! Merci ®om pour ce post !
+- id: 15
+  author: Tyler Durden
+  date: 2012-01-08 17:25:22+01:00
+  contents: |
+    Bonsoir,
+
+    Merci pour vos commentaires supplémentaires.
+
+    Très instructif.
+
+    J'avais un peu abandonné l'idée d'avoir mon serveur jabber sur mon serveur
+    dédié à la lecture des docs de ejabberd ; jabberd ....cela me semblait plus
+    complexe. Une dernière question si vous le permettez , mes contacts n'ont
+    pas besoin de s'inscrire sur "mon" serveur pour continuer à communiquer avec
+    moi inscrit sur "mon" serveur également ?
+
+    Cordialement.
+- id: 16
+  author: ®om
+  date: 2012-01-08 19:27:06+01:00
+  contents: |
+    > @[**Tyler Durden**](#comment-15)
+    >
+    > Une dernière question si vous le permettez , mes contacts n'ont pas besoin
+    > de s'inscrire sur « mon » serveur pour continuer à communiquer avec moi
+    > inscrit sur « mon » serveur également ?
+
+    Non, bien sûr. Chaque utilisateur n'est inscrit que sur le serveur qu'il a
+    choisi, et peut communiquer avec tous les autres.
+
+    C'est le même principe que pour le mail : par exemple un utilisateur inscrit
+    sur *GMail* et un autre inscrit sur *Yahoo!* (ou sur son serveur perso)
+    peuvent communiquer. C'est la raison pour laquelle l'adresse du serveur fait
+    partie de l'adresse mail (`@gmail.com`, `@yahoo.fr`, `@rom1v.com`…) et de
+    l'adresse *Jabber*.
+- id: 17
+  author: Tyler Durden
+  date: 2012-01-08 23:17:52+01:00
+  contents: |
+    bonsoir,
+
+    Merci pour tout ;)
+
+    Cordialement.
+- id: 18
+  author: Majoux
+  author-url: http://blog.sajous.net
+  date: 2012-01-09 15:13:24+01:00
+  contents: |
+    ça s'installe très bien comme tu l'explique. Et plus sensationnel : ça
+    marche ! Testé donc sur un serveur sous Debian Squeeze. Par contre j'ai du
+    décocher la ligne "Chiffrement requis" de mon client Empathy. J'ai du merder
+    dans le chiffrement. Any idea ?
+- id: 19
+  author: Cyrille
+  author-url: http://www.cyrille-borne.com
+  date: 2012-01-09 21:53:03+01:00
+  contents: |
+    En fait c'est merci JB Favre (<http://www.jbfavre.org/>) qui m'avait soufflé
+    le logiciel pour le faire à l'époque où j'étais sous identi.ca. Je rajoute
+    juste que Nicolargo est une grosse faignasse qui a pompé mon tuto pour y
+    mettre 4 écrans de plus :D
+- id: 20
+  author: 22decembre
+  author-url: http://www.22decembre.eu
+  date: 2012-03-31 21:06:11+01:00
+  contents: |
+    Hello
+
+    J'essaye moi aussi de m'installer un serveur jabber. Une question. Y a t-il
+    un moyen pour que ce soit encore les comptes système qui permettent de
+    s'authentifier ? (le mot de passe est le même : log sur le serveur,
+    courriel, blog, jabber…)
+- id: 21
+  author: ®om
+  date: 2012-03-31 22:16:37+01:00
+  contents: |
+    @[**22decembre**](#comment-20)
+
+    Aucune idée…
+- id: 22
+  author: 22decembre
+  author-url: http://www.22decembre.eu
+  date: 2012-04-09 18:25:13+01:00
+  contents: |
+    Résolu... Je suis sur Jabberd2 !
+- id: 23
+  author: Jean-Baptiste Carré
+  date: 2012-04-30 00:00:53+01:00
+  contents: |
+    Hello Romain,
+
+    Merci pour ce tuto clair et précis !
+
+    Par contre, comment fais-tu pour regler la durée du certificat ? Dans mon
+    cas, en suivant ton tuto, j'obtiens des certificats valables 1 mois. C'est
+    le cas chez toi aussi ?
+
+    Merci pour ton aide :-)
+- id: 24
+  author: ®om
+  date: 2012-04-30 08:09:14+01:00
+  contents: |
+    C'est l'option `-days`. Merci, je rajoute l'info dans le billet.
+
+    Effectivement, j'avais un certificat d'un mois également (mais comme je
+    l'avais accepté, ça fonctionnait quand même).

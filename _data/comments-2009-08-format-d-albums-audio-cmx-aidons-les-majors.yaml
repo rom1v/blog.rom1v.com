@@ -1,0 +1,89 @@
+- id: 1
+  author: AP
+  date: 2009-08-15 18:00:08+02:00
+  contents: |
+    Je proposerais bien du OGG ou mieux, du MKV (Matroska) comme conteneur, car
+    ce format de fichier gère nativement tout ce qui est chapitrage et du WAV ou
+    du FLAC (ou tout autre format de compression audio non destructif).
+- id: 2
+  author: "Emmanuel BOUILLON (ebouillon) 's status on Saturday, 15-Aug-09 16:46:43 UTC - Identi.ca"
+  author-url: http://identi.ca/notice/8188227
+  date: 2009-08-15 18:46:35+02:00
+  pingback: true
+  contents: |
+    [...]
+    http://blog.rom1v.com/2009/08/format-d-albums-audio-cmx-aidons-les-majors/
+    [...]
+- id: 3
+  author: Edouard
+  author-url: http://www.inouire.net
+  date: 2009-08-15 18:59:44+02:00
+  contents: |
+    Réflexion très intéressante. J'aime bien ta proposition de format et
+    j'espère qu'il en sera ainsi... surtout pour eux effectivement :)
+- id: 4
+  author: Ricard
+  date: 2009-08-16 13:07:30+02:00
+  contents: |
+    J'ai une meilleure idée... Je continue de boycotter jusqu'à ce que les
+    majors crèvent.
+- id: 5
+  author: Guyome
+  date: 2009-08-17 15:25:40+02:00
+  contents: |
+    Tu vas un peu vite. Si le CMX est un conteneur, on est a peu prêt d'accord
+    sauf qu'une archive n'aurait aucun intérêt puisque les fichiers seraient
+    déjà encodés (mp3, vorbis,...) et donc compressez. Dans le cas d'un
+    conteneur, je suis curieux de voir l'intérêt parce qu'il y a déjà des
+    conteneur qui supporte le multi-pistes, l'inclusion de documents,le
+    chapitrage, genre Matroska. Le CMX ne serait que la n-ème réinvenstion de la
+    roue.
+
+    Dans le cas d'un codex, je suis curieux de voir l'intérêt par rapport à
+    vorbis, mp3 etc...
+- id: 6
+  author: lutti_lutti
+  date: 2009-08-19 10:05:05+02:00
+  contents: |
+    perso je ne vois pas se que le cmx ma-porterais en plus si je lit un mp3 ou
+    un ogg en ce moment sur mon pc avec internet mon lecteur vas chercher toutes
+    ces informations "la jaquette, les paroles, des clips vidéo" etc
+
+    pour la suite je vais rejoindre l'idée de AP
+- id: 7
+  author: "Twitted by MrKnucklez"
+  author-url: http://realurl.org/twitted.php?id=4367369101
+  date: 2009-09-25 14:50:11+02:00
+  pingback: true
+  contents: |
+    [...] This post was Twitted by MrKnucklez [...]
+- id: 8
+  author: Benoît0123
+  author-url: http://bgilon.free.fr
+  date: 2009-09-27 11:38:11+02:00
+  contents: |
+    Bonjour,
+
+    Pourquoi les majors ne reprendraient-elles pas un format propriétaire déjà
+    existant et l'ouvrirait selon les recommandations de l'article. La première
+    idée qui me vient est le format mxp4 dont voici les caractéristiques:
+
+    > Key format features:
+    >
+    > * 1 single interactive file
+    > * Music, images, texts
+    > * On the fly remix of different song versions
+    > * Endless variations
+    > * Updatable over time
+    > * To stream or download
+    > * New way to create & promote for artists
+    > * Interactive applications for fans
+
+    Le site est: <http://www.mxp4.com>
+
+    Moi même j'ai acheté un CD de l'artiste Mike Oldfield sous ce format et j'ai
+    trouvé que l'offre était valide, du point de vue d'un consommateur lambda
+    comme moi.
+
+    ceci était ma pierre dans le jardin... pour "aider" nos
+    "artistes"^H^H^Hmajors.

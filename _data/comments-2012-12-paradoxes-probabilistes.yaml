@@ -1,0 +1,246 @@
+- id: 1
+  author: le hollandais volant
+  author-url: http://lehollandaisvolant.net/
+  date: 2012-12-09 23:48:00+01:00
+  contents: |
+    Bien marrant, mais là j'en ai mal à la tête :/
+
+    > Lors de son choix initial, le joueur a une chance sur trois de
+    > sélectionner la porte gagnante. S'il décide de toujours garder sa porte,
+    > il a donc une chance sur trois de gagner. Comme à la fin il n'a que deux
+    > choix (garder ou changer), il aurait eu deux chances sur trois de gagner
+    > en changeant de porte.
+
+    Juste là : le fait d'avoir la possibilité de changer, lui donnerait-il pas
+    dés le départ 1 chance sur 2 ? Vu qu'il sait que quoi qu'il arrive, une
+    porte perdante sera éliminée ?
+- id: 2
+  author: kleim
+  date: 2012-12-10 03:06:31+01:00
+  contents: |
+    Très intéressant !
+
+    Pour ceux qui veulent une explication plus poussée
+    sur le dernier cas, celui-ci est développé dans cet excellent article
+    (en anglais) : <http://adnausi.ca/post/12640080262>
+- id: 3
+  author: maethor
+  author-url: http://blog.subiron.org/
+  date: 2012-12-10 07:43:37+01:00
+  contents: |
+    Très bon article, vraiment surprenant.
+
+    J'ajouterai le paradoxe des anniversaires, qui va vraiment à l'encontre de
+    nos intuitions, lui aussi :)
+- id: 4
+  author: ®om
+  date: 2012-12-10 10:08:37+01:00
+  contents: |
+    > @[**le hollandais volant**](#comment-1)
+    >
+    > Juste là : le fait d'avoir la possibilité de changer, lui donnerait-il
+    > pas dés le départ 1 chance sur 2 ? Vu qu'il sait que quoi qu'il
+    > arrive, une porte perdante sera éliminée ?
+
+    Au départ, il choisit 1 porte parmi 3 dont une seule est gagnante. Il n'en
+    change jamais. Comment pourrait-il avoir 1 chance sur 2 de gagner ?
+- id: 5
+  author: ®om
+  date: 2012-12-10 10:10:04+01:00
+  contents: |
+    > @[**kleim**](comment-2)
+    >
+    > Pour ceux qui veulent une explication plus poussée sur le dernier cas,
+    > celui-ci est développé dans cet excellent article (en anglais) :
+    > <http://adnausi.ca/post/12640080262>
+
+    Merci pour le lien, très complet et intéressant.
+- id: 6
+  author: tada
+  date: 2012-12-10 14:49:04+01:00
+  contents: |
+    dans « Deux enfants »
+
+    La réponse 1/2 est évidente. Mais juste ...
+
+    il n'y a pas 4, mais 3 possibilités équiprobables, car dans la liste :
+
+     1. garçon-garçon
+     2. garçon-fille
+     3. fille-garçon
+     4. fille-fille
+
+    les cas 2 et 3 représentent la même situation; on a donc
+
+     1. garçon-garçon
+     2. garçon-fille
+     3. fille-fille
+
+    on supprime le cas 1. restent les cas 2 et 3 donc probabilité = 1/2
+- id: 7
+  author: ®om
+  date: 2012-12-10 15:22:24+01:00
+  contents: |
+    > @[**tada**](#comment-6)
+    >
+    > il n'y a pas 4, mais 3 possibilités équiprobables […]
+    >
+    > les cas 2 et 3 représentent la même situation;
+
+    Nous aurions donc 2 chances sur 3 d'avoir deux enfants du même genre et
+    1 chance sur 3 d'avoir des enfants de genres différents ?
+    [FAUX](http://normanfaitdesvideos.com/)
+- id: 8
+  author: Pazns
+  author-url: http://www.perdu.com
+  date: 2012-12-10 19:25:26+01:00
+  contents: |
+    C'est bien parce que les deux cas représentent la même situation que dans le
+    calcul de probabilité que tu évoques, @tada, ils sont cumulés.
+- id: 9
+  author: jerrywham
+  author-url: http://www.ecyseo.net
+  date: 2012-12-10 23:53:26+01:00
+  contents: |
+    Pour les "deux enfants, un jour", pourrais-tu reprendre une explication
+    succincte car je ne trouve pas 13/27 mais 13/26. En effet, si l'enfant peut
+    être né un mardi, il y a 14 possibilités (lundi, mardi, mercredi, jeudi,
+    vendredi, samedi, dimanche X 2) mais juste 7 que ce soit une fille.
+
+    Si l'enfant, ne peut pas être né le mardi, cela laisse 12 possibilités mais
+    6 que ce soit une fille. Donc au total (7+6)/(14+12) = 13/26.
+
+    Je dois oublier un cas, mais je ne vois pas lequel...
+- id: 10
+  author: ®om
+  date: 2012-12-11 06:27:02+01:00
+  contents: |
+    > @[**jerrywham**](#comment-9)
+    >
+    > Pour les « deux enfants, un jour », pourrais-tu reprendre une
+    > explication succincte car je ne trouve pas 13/27 mais 13/26.
+
+    Voici tous les cas où il y a au moins une fille (F) née un mardi (1) (en
+    <span style="color: red;">rouge</span> le F1 qui a *matché*).
+
+    En **gras**, ceux parmi ceux-là où il y a deux filles.
+
+     * G0-<span style="color: red;">F1</span>
+     * G1-<span style="color: red;">F1</span>
+     * G2-<span style="color: red;">F1</span>
+     * G3-<span style="color: red;">F1</span>
+     * G4-<span style="color: red;">F1</span>
+     * G5-<span style="color: red;">F1</span>
+     * G6-<span style="color: red;">F1</span>
+     * **F0-<span style="color: red;">F1</span>**
+     * <span style="color: red;">F1</span>-G0
+     * <span style="color: red;">F1</span>-G1
+     * <span style="color: red;">F1</span>-G2
+     * <span style="color: red;">F1</span>-G3
+     * <span style="color: red;">F1</span>-G4
+     * <span style="color: red;">F1</span>-G5
+     * <span style="color: red;">F1</span>-G6
+     * **<span style="color: red;">F1</span>-F0**
+     * **<span style="color: red;">F1</span>-<span style="color: red;">F1</span>**
+     * **<span style="color: red;">F1</span>-F2**
+     * **<span style="color: red;">F1</span>-F3**
+     * **<span style="color: red;">F1</span>-F4**
+     * **<span style="color: red;">F1</span>-F5**
+     * **<span style="color: red;">F1</span>-F6**
+     * **F2-<span style="color: red;">F1</span>**
+     * **F3-<span style="color: red;">F1</span>**
+     * **F4-<span style="color: red;">F1</span>**
+     * **F5-<span style="color: red;">F1</span>**
+     * **F6-<span style="color: red;">F1</span>**
+
+    C'est à cause du **<span style="color: red;">F1</span>-<span style="color:
+    red;">F1</span>**, dans lequel on ne peut
+    discerner les deux enfants (il n'y a pas deux cas F1-F1 comme il y a F0-F1
+    et F1-F0) qu'on obtient 13/27 et non 14/28 (1/2).
+- id: 11
+  author: Jacques Pyrat
+  author-url: http://blog.pyrat.eu/
+  date: 2012-12-11 08:47:41+01:00
+  contents: |
+    Très sympa ces probabilités.
+
+    Mais c'est vraiment dommage d'y parler de "genre" et non de "sexe".
+
+    Il n'y a qu'un genre : le genre humain. Et le genre humain est sexué.
+- id: 12
+  author: ®om
+  date: 2012-12-11 09:07:42+01:00
+  contents: |
+    > @[**Jacques Pyrat**](#comment-11)
+    >
+    > Mais c'est vraiment dommage d'y parler de "genre" et non de "sexe".
+
+    Au départ, j'utilisais "sexe", mais certaines phrases pourraient prêter à
+    confusion (pour les esprits mal placés), notamment avec le double-sens du
+    verbe
+    [connaître](http://www.linternaute.com/expression/langue-francaise/12507/connaitre-quelqu-un-bibliquement/)
+    (*"vous connaissez le sexe de la fille de votre ami"*).
+
+    Mais tu as raison, je viens de remplacer, car le
+    [genre](http://fr.wikipedia.org/wiki/Gender_studies) ne désigne pas tout à
+    fait la même chose (et ce dont nous parlons pour les probabilités, c'est
+    bien le sexe *physiologique*).
+- id: 13
+  author: dacrovinunghi
+  date: 2012-12-11 20:20:18+01:00
+  contents: |
+    Super intéressant, surtout que parfois on trouve le problème mal posé par
+    exemple pour le 1er, on me l'avait posé plutot comme ca : Sachant qu'un
+    couple a une fille quelle est la probabilité que l'autre enfant soit (aussi)
+    une fille. du coup je me suis demandé longtemps pour quoi ca faisait 1/3, en
+    fait parce que c'est 1/2 dans ce cas là, merci pour la nuance (idem pour la
+    porte).
+- id: 14
+  author: dacrovinunghi
+  date: 2012-12-11 20:29:39+01:00
+  contents: |
+    Mince je voulais dire le contraire....
+- id: 15
+  author: lekant
+  date: 2012-12-17 06:19:02+01:00
+  contents: |
+    Super article. Tes liens wikipedia m'ont redonné envie de m'intéresser aux
+    probas avec lesquelles j'ai toujours été un peu faché ;)
+- id: 16
+  author: arsenikstiger
+  date: 2013-01-01 12:37:10+01:00
+  contents: |
+    Bonjour.
+
+    L'article est intéressant.
+
+    Je ne suis cependant pas d'accord avec le premier exemple des enfants. En
+    effet, tu oublies la notion de tirage, qui définit un ordre aux sorties
+    probables.
+
+    Il y a donc bien quatre possibilités (garçon-garçon, garçon-fille,
+    fille-garçon, fille-fille) avant le premier tirage.
+
+    Si le premier enfant, **issu du premier tirage**, est une fille, alors il ne
+    reste bien que deux possibilités, et donc une chance sur deux, d'avoir une
+    deuxième fille, **au deuxième tirage**.
+
+    Cette notion est importante à ne pas oublier en probabilité, sinon on va
+    inévitablement à l'encontre de paradoxes insolubles.
+
+    Pour finir, bonne année et bonne santé à tous, même si la probabilité que
+    tous les voeux de tous les lecteurs se réalisent est assez faible (hélas).
+- id: 17
+  author: ®om
+  date: 2013-01-03 20:52:50+01:00
+  contents: |
+    > @[**arsenikstiger**](#comment-16)
+    >
+    > En effet, tu oublies la notion de tirage, qui définit un ordre aux
+    > sorties probables.
+
+    Oui, si tu "particularises" par un ordre de tirage. Mais :
+
+    > Si nous avons demandé à l'un des parents « avez-vous (au moins) une
+    > fille ? » et qu'il a répondu « oui », alors la probabilité que les
+    > deux soient des filles est bien **1/3**.

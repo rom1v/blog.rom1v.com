@@ -1,0 +1,409 @@
+- id: 1
+  author: Févic
+  date: 2009-12-06 18:49:10+02:00
+  contents: |
+    Impressionnant! Merci pour l'info!
+- id: 2
+  author: smecher
+  author-url: http://localhost:8000
+  date: 2009-12-06 18:51:29+02:00
+  contents: |
+    Tout simplement énorme.Vraiment :))
+
+    Tournant depuis tres longtemps sous gnu/linux ubuntu, pour mes besoins perso
+    ( test de templates html/css), je devais a chaque fois, monter apache2
+    etc... qui quand on est novice... et plus ou moins long a reussir a mettre
+    en oeuvre.( voir docs diverses :))
+
+    La c'est tout simplement enorme :)) une ligne dans le terminal et Hop..c'est
+    fait :))
+
+    La dessus un petit script qui vas bien pour Nautilus(click droit et c'est le
+    bonheur :))
+
+    Plus serieusement ne connaissant absolument pas Python...
+
+    Peut t'il y avoir moyen de le faire tourner avec Php.
+
+    Voila :)
+
+    Merci et encore tres Bonne Continuation
+
+    Prend soin de toi
+
+    bye
+- id: 3
+  author: J4N
+  author-url: http://j4n.ch
+  date: 2009-12-06 18:53:59+02:00
+  contents: |
+    Génial :) C'est normal que dans la liste des trucs, on:
+
+     * ne voit pas tous les fichiers(typiquement je vois pas mes fichiers
+    vidéos(.mov, .avi, .mp4)
+     * ne voit pas les dossiers?
+- id: 4
+  author: nico
+  date: 2009-12-06 18:59:46+02:00
+  contents: |
+    Super!!!
+
+    ca me servira bien pour echanger des fichiers entre deux uc
+
+    Merci super infos
+- id: 5
+  author: ®om
+  date: 2009-12-06 19:04:24+02:00
+  contents: |
+    > @[**J4N**](#comment-3)
+    >
+    > Génial :) C'est normal que dans la liste des trucs, on:
+    >
+    >  * ne voit pas tous les fichiers(typiquement je vois pas mes fichiers
+    > vidéos(.mov, .avi, .mp4)
+    >  * ne voit pas les dossiers?
+
+    Chez moi je vois tous les fichiers et les vidéos…
+- id: 6
+  author: wumzi
+  author-url: http://www.wumzi.info/
+  date: 2009-12-06 19:35:47+02:00
+  contents: |
+    C'est marrant,j'ai lu un billet évoquant la même astuce dans mon agrégateur
+    RSS (Tiny Tiny Rss) aujourd'hui. Par contre, il n'était pas aussi détaillé
+    que le tien. Non, sérieusement c'est vraiment cool comme truc.
+
+    Je fais déjà du Python pour des scripts basiques, là ça me donne vraiment
+    envie de faire du Python mon langage à la place de PHP pour les applications
+    web !
+
+    Tu fais du Python ®om ?
+- id: 7
+  author: citronbleu-v
+  date: 2009-12-06 19:49:14+02:00
+  contents: |
+    C'est vrai que si en plus avec une simple option la commande pouvait faire
+    tourner php (apache avec des options prédéfinies de base) ça serait
+    magnifique.
+- id: 8
+  author: Sabotage
+  date: 2009-12-06 20:01:07+02:00
+  contents: |
+    > @[**J4N**](#comment-3)
+    >
+    > Génial :) C'est normal que dans la liste des trucs, on:
+    >
+    >  * ne voit pas tous les fichiers(typiquement je vois pas mes fichiers
+    > vidéos(.mov, .avi, .mp4)
+    >  * ne voit pas les dossiers?
+
+    ca partage ton repertoire courant, choisi ton rep avant et ensuite lance
+
+        python -m SimpleHTTPServer
+- id: 9
+  author: Dd
+  author-url: http://bydorian.com
+  date: 2009-12-06 20:38:13+02:00
+  contents: |
+    Impressionant ! Mais après ? Là t'as juste un partage de fichiers... (si le
+    port est ouvert), ce qui est faisable avec samba encore plus rapidement.
+- id: 10
+  author: Silvyn!
+  author-url: http://blog.silvyn.net
+  date: 2009-12-06 20:42:16+02:00
+  contents: |
+    Tu pouvais écrire en titre "sur Gnu/Linux" :)
+
+    Ça fonctionne très bien sous Fedora.
+
+    Super cette simple astuce !
+
+    Thank's for sharing :)
+- id: 11
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2009-12-06 20:48:30+02:00
+  contents: |
+    C'est un peu le même principe que Woof et Droopy petit serveur web en python
+    pour partager du contenu, Droopy va meme plus loin il permet d'uploader des
+    fichiers.
+
+    J'ai découvert cela sur le blog de Uggy
+
+    <http://blog.uggy.org/post/2009/10/22/Droopy-Upload-simple-de-fichier-par-HTTP>
+- id: 12
+  author: 'HTTP-Server in weniger als 10 Sekunden anlegen | bejonet'
+  author-url: http://www.be-jo.net/de/2009/12/http-server-in-weniger-als-10-sekunden-anlegen/
+  date: 2009-12-06 21:09:16+02:00
+  pingback: true
+  contents: |
+    [...] (via) Artikel teilen: [...]
+- id: 13
+  author: zmf
+  author-url: http://tim.gau.free.fr/devinettes/
+  date: 2009-12-06 22:36:54+02:00
+  contents: |
+    GENIAAAALLLLLLLLL
+
+    pour ceux qui ont un doute (je sais pas si c'est utile de le dire ?) :
+
+    ça marche aussi sous mac snow leopard (avec le port python de macport)
+- id: 14
+  author: Corbier
+  date: 2009-12-07 00:37:38+02:00
+  contents: |
+    Normal python roxxx !!!!!!
+- id: 15
+  author: cedric
+  date: 2009-12-07 05:10:10+02:00
+  contents: |
+    ca marche en fait pour toutes les versions de python.
+
+    c'est une classe de base permettant de rajouter un serveur dans son
+    application.
+
+    il y a même une application exemple pour de consulter la doc interne des
+    modules
+- id: 16
+  author: smecher
+  date: 2009-12-07 12:45:55+02:00
+  contents: |
+    En trouvant ce petit truc sympa, j'ai cherché un peut plus sur le net...
+
+    et effectivement, les petits scripts d'Upload et les petits scripts pour
+    visionner le contenu d'un dossier sont bien sympa...
+
+    ca serait bien de pouvoir faire un mix des 2 ...( Amis Devs... ;) )
+
+    Plus serieusement...
+
+    si je post ici...
+
+    c'est pour rajouter une petite commande permettant ainsi d'avoir un rapport
+    de log non plus dans la console mais sur un fichier texte.
+
+        nohup python -m SimpleHTTPServer
+
+    c'est en fait just un petit nohup a rajouter
+
+    voila..a plus et y'a vraiment des trucs a faire avec Python ;)
+- id: 17
+  author: Gustavo Enrique Pimentel
+  author-url: http://www.gustavopimentel.com.ar/2009/12/crear-un-server-http-en-pythoncreer-un-serveur-http-avec-python/#more-633
+  date: 2009-12-08 14:37:47+02:00
+  contents: |
+    Bonjour,
+
+    J'ai trouvé votre tutoriel, simple et pratique. C'est pour cela que je me
+    suis permis de le traduire dans ma langue maternelle (l'espagnol) et de le
+    publier dans mon blog , en respectant bien entendu votre propriété
+    intelectuelle.
+
+    Voici l'adresse :
+
+    <http://www.gustavopimentel.com.ar/2009/12/crear-un-server-http-en-pythoncreer-un-serveur-http-avec-python/#more-633>
+
+    Merci,
+
+    Gustavo Pimentel
+- id: 18
+  author: 'Technoaddict &raquo; Rendre un répertoire accessible à tout le monde en 5 secondes'
+  author-url: http://www.technoaddict.fr/2009/12/08/rendre-un-repertoire-accessible-a-tout-le-monde-en-5-secondes/
+  date: 2009-12-08 17:38:56+02:00
+  pingback: true
+  contents: |
+    [...] rom’s blog) Tags: partage, python, répertoire, serveur [...]
+- id: 19
+  author: Gillaume
+  date: 2009-12-10 11:08:55+02:00
+  contents: |
+    Je n'en reviens pas de cette astuce.
+
+    C'est l'astuce de l'année pour moi.
+
+    Merci beaucoup.
+
+    Guillaume
+- id: 20
+  author: smecher
+  date: 2009-12-10 19:00:29+02:00
+  contents: |
+    c'est bon le script tout chaud tout beau est arrivé :D
+
+    c'est un script bash qui utilise aussi zenity.
+
+    (parfais sous gnome ;)
+
+    il est tres interesssant, puisqu'il permet de connaitre son adresse Ip
+    externe + son Ip resau interne.
+
+    de plus , dans le systray, une icone apparait quand le serveur tourne.
+
+    plus de detail ici..pour questions et autres...
+
+    <http://forum.ubuntu-fr.org/viewtopic.php?id=364489>
+
+    ou sinon, le script est a telecharger sur le site de son auteur.
+
+    a savoir Sputnick.
+
+    <http://www.sputnick-area.net/scripts/SimpleHTTPServerGui.bash>
+
+    @+
+- id: 21
+  author: Les Zeuils de Neuneuil
+  author-url: http://eyes.neuneuil.com/index.php/2009/12/13/181-un-serveur-web-en-moins-de-dix-secondes-grace-a-python
+  date: 2009-12-14 00:51:05+02:00
+  pingback: true
+  contents: |
+    **Un serveur web en moins de dix secondes... grace à Python !...** Cela fait
+    bien longtemps que j'entends parler de Python comme langage de
+    programmation : simple, facile d'apprentissage, etc... Et il y a peu, je
+    tombe sur un post d'un blog qui explique comment, en une ligne de commande
+    très courte, créer un...
+- id: 22
+  author: 'Créer un serveur HTTP instantanément sur Ubuntu grâce à Python | Ubuntu pour tous'
+  author-url: http://zapp.free.fr/?p=252
+  date: 2009-12-25 11:08:09+02:00
+  pingback: true
+  contents: |
+    [...] à ®om pour [...]
+- id: 23
+  author: En vrac &raquo; Keldan&#39;s Blog
+  author-url: http://keldan.phamily.fr/wp/2009/12/13/en-vrac/
+  date: 2010-01-15 00:02:24+02:00
+  pingback: true
+  contents: |
+    [...] serveur HTTP en Python et en dix secondes : Julien revient sur un
+    article du ®om's blog qui nous apprend à créer un serveur web simple en une
+    seule ligne de commande en Python. Simple [...]
+- id: 24
+  author: philpep
+  author-url: http://blog.philpep.org
+  date: 2010-02-22 14:00:05+02:00
+  contents: |
+    > @[**Silvyn!**](#comment-10)
+    >
+    > Tu pouvais écrire en titre "sur Gnu/Linux" :)
+    >
+    > Ça fonctionne très bien sous Fedora.
+    >
+    > Super cette simple astuce !
+    >
+    > Thank's for sharing :)
+
+    Ou alors "avec python", ça marche partout ou python est installable (BSD,
+    Solaris, MAC OS, Windows...)
+- id: 25
+  author: mart
+  author-url: http://mart-e.tk
+  date: 2010-03-02 11:02:57+02:00
+  contents: |
+    C'est étrange, si je lance ce script, en allant sur http://localhost:1234
+    j'arrive sur mon site hébergé chez x10hosting :-S
+- id: 26
+  author: 'monter un serveur PHP en une ligne de commande (ou presque) &raquo; Le Blog du grand loup Zeur'
+  author-url: http://blog.gaetan-grigis.eu/systeme/monter-un-serveur-php-en-une-ligne-de-commande-ou-presque/
+  date: 2010-04-24 10:45:11+01:00
+  pingback: true
+  contents: |
+    [...] lourde apache ou nginx. Après diverses recherche sur mon ami, je suis
+    tombé sur : créer un serveur http en 10 secondes [...]
+- id: 27
+  author: 'Crear un server HTTP en Python|Créer un serveur HTTP avec Python | Gustavo Pimentel&#039;s GNU/Linux Blog'
+  author-url: http://www.gustavopimentel.com.ar/2009/12/08/crear-un-server-http-en-pythoncreer-un-serveur-http-avec-python/
+  date: 2010-06-24 18:54:52+02:00
+  pingback: true
+  contents: |
+    [...] Castellano | Article d'origine intitulé : "Créer un serveur HTTP en 10
+    secondes sur Ubuntu grâce à Python" [...]
+- id: 28
+  author: Jellyroll
+  date: 2010-07-09 11:48:33+02:00
+  contents: |
+    L'astuce fonctionne avec Windows XP.
+- id: 29
+  author: 'Python, ou un serveur Web en 10 secondes &laquo; Aiko&#039;s Blog'
+  author-url: http://petrus6.wordpress.com/2010/07/16/serveur-web-10-secondes/
+  date: 2010-07-31 18:50:32+02:00
+  pingback: true
+  contents: |
+    [...] Source : ®om’s Blog =) Catégories:Info, Mémo perso Mots-clefs :Python,
+    rapide, serveur, Ubuntu, web Commentaires (0) Rétroliens (0) Laisser un
+    commentaire Rétrolien [...]
+- id: 30
+  author: 'Créer un serveur HTTP instantanément sur Ubuntu grâce à Python | Ubuntu'
+  author-url: http://ubuntu.lescigales.org/?p=248
+  date: 2010-08-21 09:25:43+02:00
+  pingback: true
+  contents: |
+    [...] à ®om pour [...]
+- id: 31
+  author: En vrac
+  author-url: http://phamily.fr/blog/keldan/2009/12/13/en-vrac/
+  date: 2010-10-26 19:18:47+02:00
+  pingback: true
+  contents: |
+    [...] serveur HTTP en Python et en dix secondes : Julien revient sur un
+    article du ®om's blog qui nous apprend à créer un serveur web simple en une
+    seule ligne de commande en Python. Simple [...]
+- id: 32
+  author: jay
+  date: 2010-12-05 23:24:46+01:00
+  contents: |
+    Question naïve:
+
+    Est-ce possible de lancer un serveur python qui peut-être visible depuis
+    internet en le faisant pointer sur mon adresse IP ?
+- id: 33
+  author: ®om
+  date: 2010-12-06 07:10:58+01:00
+  contents: |
+    @jay, il suffit de configurer ton routeur pour rediriger le port écouté vers
+    ton PC où tu as lancé le serveur.
+- id: 34
+  author: 'Créer un serveur HTTP en 10 secondes sur Ubuntu grâce à Python | Ubuntu express, journal de bord au pays du Libre'
+  author-url: http://pascollibre.wordpress.com/2010/01/09/creer-un-serveur-http-en-10-secondes-sur-ubuntu-grace-a-python/
+  date: 2010-12-08 22:01:55+01:00
+  pingback: true
+  contents: |
+    [...] article est une reprise d’autre autre blog. L’info est tellement
+    pratique que je la reprends [...]
+- id: 35
+  author: olivier
+  author-url: http://www.olivierdelcourt.fr
+  date: 2010-12-12 09:36:34+01:00
+  contents: |
+    Bonjour,
+
+    Je cherche a faire, en local, une petite application en Python
+    d'interrogation d'une base SQLITE dont l'interface serait en HTML.
+
+    Créer de cette façon simple le serveur m'irait très bien.
+
+    En revanche, comment faire exécuter les scripts Python par le code HTML ?
+- id: 36
+  author: raphael
+  date: 2011-04-13 14:48:00+01:00
+  contents: |
+    @olivier
+
+    tu peux utiliser le module CGIHTTPServer qui hérite de SimpleHTTPServer et
+    qui permet d'exécuter des scripts CGI présents par défaut dans le sous
+    répertoire cgi-bin
+
+    Pour plus d'info: <http://docs.python.org/library/cgihttpserver.html>
+- id: 37
+  author: 22decembre
+  author-url: http://www.22decembre.eu
+  date: 2011-12-17 20:47:38+01:00
+  contents: |
+    Et ça marche pour lancer du php dedans (pour faire du coding web) ?
+
+    Marre de relancer apache en root à chaque fois !
+- id: 38
+  author: ®om
+  date: 2011-12-17 20:49:06+01:00
+  contents: |
+    @[**22decembre**](#comment-37)
+    Non, c'est très basique…

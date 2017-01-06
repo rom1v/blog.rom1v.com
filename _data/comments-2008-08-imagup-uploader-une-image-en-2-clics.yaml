@@ -1,0 +1,47 @@
+- id: 1
+  author: ®om
+  date: 2008-10-08 10:14:00+01:00
+  contents: |
+    Petite modification du script, qui ne fonctionnait plus suite à une
+    modification sur le site.
+- id: 2
+  author: Anonymous
+  date: 2009-01-06 23:49:00+01:00
+  contents: |
+    si j'ai bien compris, cela upload le fichier mais aussi cela copie le lien
+    dans le press papier pret à etre collé sur le forum. C'est bien ca ?
+- id: 3
+  author: "®om&#8217;s blog &raquo; Screenshots sous Ubuntu : plusieurs méthodes à connaître"
+  author-url: http://blog.rom1v.com/2008/08/screenshots-sous-ubuntu-plusieurs-methodes-a-connaitre/
+  date: 2009-01-31 10:31:08+01:00
+  pingback: true
+  contents: |
+    [...] pouvez maintenant optimiser les images png et les uploader sur un
+    hébergeur pour les poster sur un [...]
+- id: 4
+  author: "®om&#8217;s blog &raquo; Optimiser la taille des fichiers png"
+  author-url: http://blog.rom1v.com/2008/08/optimiser-la-taille-des-fichiers-png/
+  date: 2009-01-31 11:17:56+01:00
+  pingback: true
+  contents: |
+    [...] avec imagup, c’est très pratique pour poster des captures d’écran sur
+    un [...]
+- id: 5
+  author: Rody
+  date: 2009-07-08 20:38:03+02:00
+  contents: |
+    Salut,
+
+    Ce script est compatible avec le site <http://www.hostingpics.net> ? Si
+    c'est le cas ça m'interesserai beaucoup.
+- id: 6
+  author: hedy
+  date: 2010-12-05 21:44:56+01:00
+  contents: |
+    Très intéressant !
+
+    J'utilise depuis peu le script OpenSource <http://chevereto.com/> histoire
+    de gagner un peu en autonomie et moins dépendre des prestataires
+    "gratuits"...
+
+    Du coup ça serait intéressant d'adapter ton script pour celle solution :)

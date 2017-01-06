@@ -1,0 +1,735 @@
+- id: 1
+  author: Guizmo
+  date: 2010-01-02 23:23:02+02:00
+  contents: |
+    Dans la "Configuration de SASL" :
+
+    et ajouter l'**utilisateur** postfix au groupe sasl.
+
+    Sinon, tu t'es penché sur d'autres méthodes d'authentification ? Par
+    certificat par exemple ?
+
+    Tu n'aurais pas des liens sur lesquels tu t'es basé ?
+
+    Sinon merci encore puisque je vais surement m'inspirer de ton billet :)
+- id: 2
+  author: ®om
+  date: 2010-01-02 23:31:16+02:00
+  contents: |
+    Merci pour la correction :-)
+
+    Je n'ai pas étudié d'autres méthodes d'authentification, je voulais
+    simplement un login et un mot de passe (pour y accéder de n'importe où à
+    partir de mon téléphone).
+
+    Je me suis principalement basé sur [la doc de
+    postfix](http://postfix.state-of-mind.de/patrick.koetter/smtpauth/) et [la
+    doc ubuntu-fr](http://doc.ubuntu-fr.org/postfix).
+- id: 3
+  author: Guizmo.7
+  author-url: http://Drupal.GuillaumeG.eu
+  date: 2010-01-03 00:31:36+02:00
+  contents: |
+    Merci pour la réponse.
+
+    Je vais étudier ça de plus près.
+
+    Je pense aussi intégrer tout ça à un serveur LDAP.
+
+    Bonne continuation !
+- id: 4
+  author: doudoufr
+  date: 2010-01-03 11:18:47+02:00
+  contents: |
+    CouCou
+
+    et alors tu synchronise comment avec ton phone ? Quel est la partie logiciel
+    utilisée de ce coté ?
+- id: 5
+  author: ®om
+  date: 2010-01-03 12:20:12+02:00
+  contents: |
+    J'ai un Motorola Milestone avec Android 2, j'utilise l'application e-mail,
+    et on peut configurer le compte, le chiffrement (TLS sans vérification du
+    certificat), etc… comme sur un PC.
+- id: 6
+  author: 'Hébergez vos mails sur Ubuntu Server (et libérez-vous) &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2009/08/hebergez-vos-mails-sur-ubuntu-server-et-liberez-vous/
+  date: 2010-01-03 20:10:09+02:00
+  pingback: true
+  contents: |
+    [...] EDIT 02/01/2010 : Pour mettre en place une authentification plutôt que
+    de limiter l’accès à une liste de réseaux, lisez ce billet. [...]
+- id: 7
+  author: doudoufr
+  date: 2010-01-04 10:57:27+02:00
+  contents: |
+    heu oui mais ma question est :
+
+    sur ton serveur, quel est le logiciel que tu utilise pour la synchro avec
+    ton mobile ?
+
+    parce que juste dovecot et imap et sasl, ne permet pas de synchroniser avec
+    son mobile. il faut qqe chose en plus, soit funambol, soit un autre qui fait
+    déjà tout (zarafa par exemple) ou si juste les emails de synchro, juste
+    z-push. non ?
+- id: 8
+  author: ®om
+  date: 2010-01-04 11:51:17+02:00
+  contents: |
+    Qu'entends-tu par "synchroniser" ? Tu veux dire pour une utilisation
+    hors-ligne ?
+- id: 9
+  author: n3o51
+  date: 2010-01-04 22:01:27+02:00
+  contents: |
+    Bonsoir Rom j'utilise depuis longtemps maintenant gmail.Mais j'aimerais
+    mettre en place mon propre server de Mail pourrais tu me decrire les etapes
+    a suivre l'ordre de tes articles a suivre
+
+    afin d'envoyer et recevoir des mails mais aussi avoir une adresse mail un
+    webmail perso mais surtout se qui me fait peur c'est le spam oO
+
+    En ayant un serveur mail comme le tien peut-on créer plusieurs adresse mail
+
+    Merci et bonne année a toi
+- id: 10
+  author: doudoufr
+  date: 2010-01-05 13:00:10+02:00
+  contents: |
+    coucou
+
+    ben en fait, j'pensais que pour recevoir ses mails sur mobile, il fallait un
+    connecteur genre funambol ou z-push, pour que le mobile puisse voir les
+    mails.
+
+    Mais peut être, juste l'imap suffit alors.
+
+    Donc toi, tu as juste, postfix + imaps+dovecot+roundcube, et le tout se
+    synchronise avec ton mobile ?
+
+    hmmm hmmmm !
+- id: 11
+  author: ®om
+  date: 2010-01-05 14:26:49+02:00
+  contents: |
+    > @[**n3o51**](#comment-9)
+    >
+    > Bonsoir Rom j'utilise depuis longtemps maintenant gmail.Mais j'aimerais
+    > mettre en place mon propre server de Mail pourrais tu me decrire les
+    > etapes a suivre l'ordre de tes articles a suivre
+    >
+    > afin d'envoyer et recevoir des mails mais aussi avoir une adresse mail un
+    > webmail perso mais surtout se qui me fait peur c'est le spam oO
+    >
+    > En ayant un serveur mail comme le tien peut-on créer plusieurs adresse
+    > mail
+    >
+    > Merci et bonne année a toi
+
+    Tu peux partir de l'article qui parle d'[hébergement des
+    mails][mail] (il y a des liens vers les autres). Tu as déjà un nom de domaine?
+
+    [mail]: {% post_url 2009-08-16-hebergez-vos-mails-sur-ubuntu-server-et-liberez-vous %}
+
+    Pour le spam, ne t'en fais pas, pour l'instant je n'ai même pas mis
+    d'anti-spam sur le serveur, et j'ai juste reçu 2~3 spams en 4 mois (qui vont
+    dans le dossier spams dans mon client mail). Si la fréquence augmente,
+    il suffira de mettre en place spamassassin.
+
+    Tu peux avoir plusieurs adresses mail, soit comme je le fais une par
+    utilisateur système, soit si tu as vraiment beaucoup d'adresses et tu peux
+    les gérer en "utilisateurs virtuels" en base de données, c'est expliqué sur
+    la doc de postfix (mais je n'ai jamais fait).
+- id: 12
+  author: ®om
+  date: 2010-01-05 14:29:26+02:00
+  contents: |
+    > @[**doudoufr**](#comment-10)
+    >
+    > Mais peut être, juste l'imap suffit alors.
+    >
+    > Donc toi, tu as juste, postfix + imaps+dovecot+roundcube, et le tout se
+    > synchronise avec ton mobile ?
+
+    Oui, juste l'IMAP suffit, tout est sur le serveur, donc tu peux t'y
+    connecter du webmail, du client sur le PC ou du téléphone portable, c'est
+    "synchronisé" (ou plutôt il n'y a rien à synchroniser).
+- id: 13
+  author: VIncent-Xavier JUMEL
+  date: 2010-01-06 21:02:40+02:00
+  contents: |
+    > @[**Guizmo.7**](#comment-3)
+    >
+    > Merci pour la réponse.
+    >
+    > Je vais étudier ça de plus près.
+    >
+    > Je pense aussi intégrer tout ça à un serveur LDAP.
+    >
+    > Bonne continuation !
+
+    Ca s'intègre très bien avec LDAP. Tout est assez bien documenté sur le web.
+    Le plus simple en revanche est de déléguer l'authentification à dovecot (via
+    dovecot-sasl) et c'est dovecot qui s'interfacera avec l'annuaire LDAP.
+- id: 14
+  author: n3o51
+  date: 2010-01-06 22:35:52+02:00
+  contents: |
+    Bonsoir Rom merci bien pour t'as réponse et non je n'es pas de nom de
+    domaine :(
+- id: 15
+  author: n3o51
+  date: 2010-01-09 12:54:53+02:00
+  contents: |
+    Un nom de domaine je prendre un prendre un , le meme nom de domaine qu'un
+    site web fonctionne non ? si je rpends un nom de domaine www.onsite.fr avec
+    un adresse email déja c'est pas grave ?
+- id: 16
+  author: Guizmo.7
+  author-url: http://Drupal.GuillaumeG.eu
+  date: 2010-01-19 11:41:58+02:00
+  contents: |
+    > @[**VIncent-Xavier JUMEL**](#comment-13)
+    >
+    > Ca s'intègre très bien avec LDAP. Tout est assez bien documenté sur le
+    > web. Le plus simple en revanche est de déléguer l'authentification à
+    > dovecot (via dovecot-sasl) et c'est dovecot qui s'interfacera avec
+    > l'annuaire LDAP.
+
+    Qu'il faille interfacer Dovecot avec LDAP pour vérifier les connexions IMAP
+    je veux bien mais pour le SMTP, tu es sur qu'il faille déléguer le boulot à
+    Dovecot ?
+- id: 17
+  author: jul
+  author-url: http://www.arcencielstudio.com
+  date: 2010-01-30 07:45:17+02:00
+  contents: |
+    salut, j'ai un gros soucis, j'utilise netscape pour communiquer avec mes
+    clients, et depuis que j'ai réçament changé d'hébergeur, et changé la
+    configuration de netscape, tous les mails que j'envois, sont lu comme du
+    spam...
+
+    Y aurait t'il un moyen d'autentifier mes mails, pour qu'ils arrivent
+    dirrectement à mes clients ??? Mon nouvel hébergeur fait la sourde oreille,
+    j'espère que vous pourrez me venir en aide.
+- id: 18
+  author: 'Filtrer les spams sur un serveur mail (SpamAssassin) &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2010/03/filtrer-les-spams-sur-un-serveur-mail-spamassassin/
+  date: 2010-03-25 23:29:59+01:00
+  pingback: true
+  contents: |
+    [...] vos mails sur Ubuntu Server (et libérez-vous) Installer un webmail
+    (RoundCube) sur Ubuntu Server Ajouter l'authentification SMTP sur un serveur
+    mail Trier ses mails directement sur le serveur [...]
+- id: 19
+  author: chris
+  date: 2010-07-14 20:58:35+02:00
+  contents: |
+    Salut, je viens de suivre la tuto à la lettre et ça marche nickel.
+
+    Super. C'est sympa de publier ce genre de trucs.
+
+    Sauf que hotmail me renvoi mes courriels instantanément. Ils me disent que
+    mon adresse IP n'est pas connue de leur service et qu'il me bloque pour des
+    raisons de sécurité. GÉNIAL, je peux pas envoyer de courriel aux boites
+    hotmail (et peut-être d'autres). Mon serveur fonctionne puisque je peux
+    envoyer et recevoir vers et sur une boite free.fr, mais pas envoyer vers
+    hotmail. Ça déconnait déjà avant d'ajouter l'authentification.
+
+    Ce problème est-il connu et y a-t'il une astuce pour y remédier ?
+
+    Autre question sans rapport : Comment ajoute-t'on un utilisateur ?
+- id: 20
+  author: ®om
+  date: 2010-07-17 11:49:45+02:00
+  contents: |
+    > @[**chris**](#comment-19)
+    >
+    > Sauf que hotmail me renvoi mes courriels instantanément. Ils me disent que
+    > mon adresse IP n'est pas connue de leur service et qu'il me bloque pour
+    > des raisons de sécurité. GÉNIAL, je peux pas envoyer de courriel aux
+    > boites hotmail (et peut-être d'autres). Mon serveur fonctionne puisque je
+    > peux envoyer et recevoir vers et sur une boite free.fr, mais pas envoyer
+    > vers hotmail. Ça déconnait déjà avant d'ajouter l'authentification.
+    >
+    > Ce problème est-il connu et y a-t'il une astuce pour y remédier ?
+
+    Essaie de renseigner ton reverse DNS chez ton FAI pour associer à ton IP ton
+    nom de domaine (chez free c'est dans l'interface, et avec le service client
+    si ça ne fonctionne pas).
+
+    Pour vérifier s'il est renseigné :
+
+        dig -x 11.22.33.44
+
+    (à adapter avec ton IP)
+
+    Normalement, un serveur mail doit être sur une adresse qui a un reverse DNS.
+    Sans cela, certains classent les mails dans spam plus facilement, d'autres
+    bloquent purement et simplement.
+- id: 21
+  author: chris
+  date: 2010-07-18 20:14:06+02:00
+  contents: |
+    Merci beaucoup.
+
+    Sur free, ils me demandent si je suis certain car c'est irréversible.
+
+    Pour être sûr : je renseigne mondomaine.com qui pointe vers MonIP ?
+
+    J'ai aussi : "smtp.mondomaine.com. A MonIP" dans mon fichier zone dns, comme
+    conseillé dans ton blog.
+
+    Merci encore.
+- id: 22
+  author: 'L&#8217;hébergement total, chez soit &#8211; Influence PC'
+  author-url: http://influence-pc.1s.fr/index.php/07-10-2010-lhebergement-total-chez-soit
+  date: 2010-10-07 01:08:50+02:00
+  pingback: true
+  contents: |
+    [...] l'authentification SMTP sur un serveur mail ! C’est facile, regardez
+    sur ®om’s blog. Si vous souhaitez comprendre la différence entre SSL et TLS,
+    demandez à Michel (c’est son [...]
+- id: 23
+  author: fifou
+  date: 2010-11-13 17:07:52+02:00
+  contents: |
+    Une autre solution consiste à faire du relay host.
+
+    ~~~
+    # echo "relay_host = smtp.free.fr" >> /etc/postfix/main.cf
+    # /etc/init.d/postfix restart
+    ~~~
+
+    Comme ça ton SMTP transfert à celui de Free (puisque tu es sur Free a
+    priori) et ce dernier n'est pas en guerre contre Hotmail donc il réussira à
+    relayer ton mail.
+- id: 24
+  author: fifou
+  date: 2010-11-13 17:13:40+02:00
+  contents: |
+    Une question au passage Romain : tu es chez quel opérateur ? Je suis chez
+    Bouygues et pour l'application E-Mail de mon HTC Wildfire (Android 2 aussi),
+    je peux effectivement renseigner le SMTP et son type d'authentification mais
+    RIEN d'autre que smtp.bouygtel.fr ne fonctionne (hormis en réseau Wifi ou
+    cela semble fonctionner correctement).
+
+    Je prends ça comme une limitation du réseau 3G de Bouygues (sont-ce les
+    seuls ?) et pour preuve, si je télécharge une application de telnet et que
+    je me connecte sur le 25 de mon serveur, il ne répond pas mais Bouygues le
+    fait à sa place :/
+
+    Quelqu'un aurait une solution pour éviter ce qui ressemble à un proxy
+    envahissant ? J'ai tenté de faire un tunnel SSH vers mon serveur dans le but
+    de saisir localhost dans les propriétés SMTP de l'application mais encore
+    une fois, la connexion SSH ne fonctionne qu'en Wifi donc je n'ai pas creuser
+    la piste du tunnel. J'ai entendu dire que la connexion GPRS serait moins
+    restrictive mais plus lente. On peut choisir de se connecter en GPRS d'après
+    vous ?
+- id: 25
+  author: ®om
+  date: 2010-11-13 17:27:40+02:00
+  contents: |
+    > @[**fifou**](#comment-24)
+    >
+    > Une question au passage Romain : tu es chez quel opérateur ? Je suis chez
+    > Bouygues et pour l'application E-Mail de mon HTC Wildfire (Android 2
+    > aussi), je peux effectivement renseigner le SMTP et son type
+    > d'authentification mais RIEN d'autre que smtp.bouygtel.fr ne fonctionne
+    > (hormis en réseau Wifi ou cela semble fonctionner correctement).
+    >
+    > Je prends ça comme une limitation du réseau 3G de Bouygues (sont-ce les
+    > seuls ?) et pour preuve, si je télécharge une application de telnet et que
+    > je me connecte sur le 25 de mon serveur, il ne répond pas mais Bouygues le
+    > fait à sa place :/
+    >
+    > Quelqu'un aurait une solution pour éviter ce qui ressemble à un proxy
+    > envahissant ?
+
+    J'ai eu le même problème pour le téléphone de ma femme (qui est chez
+    Bouygues). Pour contourner le problème, il suffit de se connecter sur le
+    port 587.
+
+    Il faut donc qu'un serveur réponde sur ce port. Soit en décommentant la
+    ligne contenant "submission" dans `/etc/postfix/master.cf`, soit en
+    configurant le routeur pour rediriger le port 587 vers le serveur sur le
+    port 25 (ce que j'ai fait).
+
+    Sinon, tu confirmes, le SSH ne fonctionne pas chez Bouygues ? Si c'est le
+    cas, c'est vraiment à fuir.
+- id: 26
+  author: fifou
+  date: 2010-11-14 00:11:35+02:00
+  contents: |
+    Salut Romain ! La classe ton astuce de rediriger le port : ça fonctionne à
+    merveille. J'aurais du me douter que ce sont certains ports qui sont bloqués
+    dont le 25. Concernant mon serveur SSH, je me sers du 443 donc il est bloqué
+    aussi dirait-on :/
+
+    J'ai d'ailleurs trouvé des confirmation sur le Web pour le problème SSH et à
+    l'époque, des gens conseillaient de passer par le 443 justement. A priori,
+    les restrictions prennent du terrain...
+
+    Je l'apprends un peu à mes dépens et j'avoue que ça me contrarie pas mal...
+- id: 27
+  author: 'TUTO serveur de mail sous Ubuntu (postfix) | Admin Reso'
+  author-url: http://www.adminreseau.fr/?p=541
+  date: 2011-01-06 17:30:18+01:00
+  pingback: true
+  contents: |
+    [...] EDIT 02/01/2010 : Pour mettre en place une authentification plutôt que
+    de limiter l’accès à une liste de réseaux, lisez ce billet. [...]
+- id: 28
+  author: Lordinux
+  author-url: http://lordinux.com
+  date: 2011-04-11 17:58:59+01:00
+  contents: |
+    Bonjour,
+
+    J'allais suivre ce tuto mais j'ai découvert qu'avec Ubuntu Server 10.04
+    l'authentification "en clair" fonctionne déjà sans rien faire ! Apparemment
+    Postfix gère nativement (du moins, dans sa configuration standard d'Ubuntu
+    Server 10.04) l'authentification "en clair". Le paquet sasl2-bin n'est donc
+    pas nécessaire, ni la modification de configuration de Postfix.
+
+    La seule chose à faire est la configuration du client de messagerie !
+
+    Alain
+- id: 29
+  author: ®om
+  date: 2011-06-07 00:44:11+02:00
+  contents: |
+    @Lordinux
+
+    Non, il n'y a pas d'authentification dans ce cas (à part celle basée sur
+    l'adresse IP du client). Enlève ton login et ton mot de passe dans la
+    configuration de ton client mail, ça fonctionnera quand même ;-)
+- id: 30
+  author: Lordinux
+  author-url: http://lordinux.com
+  date: 2011-06-08 13:12:19+02:00
+  contents: |
+    @®om
+
+    Pas d'accord...
+
+    Je n'ai effectivement pas besoin de login et mot de passe depuis mon réseau
+    local car j'ai noté l'adresse IP dans "mynetworks". En revanche, si j'enlève
+    le login ou le mot de passe du client mail de mon téléphone utilisé en 3G je
+    n'arrive plus à envoyer des mails et j'ai le message suivant dans les logs
+    du serveur :
+
+        Jun  8 12:54:11 servaa2 postfix/smtpd[2156]: warning: unknown[90.84.144.132]: SASL LOGIN authentication failed: VXNlcm5hbWU6
+        Jun  8 12:54:12 servaa2 postfix/smtpd[2156]: NOQUEUE: reject: RCPT from unknown[90.84.144.132]: 554 5.7.1 : Relay access denied; from= to= proto=ESMTP helo=
+        Jun  8 12:54:12 servaa2 postfix/smtpd[2156]: disconnect from unknown[90.84.144.132]
+
+    Donc, je confirme que l'authentification SASL est bien disponible en
+    standard dans Ubuntu 10.04 Server !
+- id: 31
+  author: ®om
+  date: 2011-06-08 13:16:27+02:00
+  contents: |
+    > @[**Lordinux**](#comment-30)
+    >
+    > Donc, je confirme que l'authentification SASL est bien disponible en
+    > standard dans Ubuntu 10.04 Server !
+
+    Eh bien je ne comprends pas, j'ai installé *Ubuntu Server 11.04* cette
+    semaine, et tant que je n'avais pas installé et configuré ce qui est
+    expliqué dans ce billet, il m'était impossible de me connecter à partir de
+    mon téléphone portable (un message d'erreur indiquait que l'authentification
+    n'était pas supportée par le serveur).
+- id: 32
+  author: Lordinux
+  author-url: http://lordinux.com
+  date: 2011-06-08 14:50:01+02:00
+  contents: |
+    Une différence, hormis celle de la version d'Ubuntu Server, tient peut-être
+    à la manière d'installer Postfix. Pour ma part, j'ai installé le paquet
+    `dovecot-postfix` (ce qui installe le paquet `postfix` par dépendance). Et
+    je me demande si ce n'est pas pour ça que j'ai déjà dans
+    `/etc/postfix/main.cf` des lignes `smtpd_*` que tu as besoin d'ajouter dans
+    ce fichier.
+
+    Voici toutes les lignes `smtpd_*` (et une ligne `smtp_*`) que j'ai
+    nativement dans `/etc/postfix/main.cf` :
+
+        smtpd_sasl_auth_enable = yes
+        smtpd_sasl_type = dovecot
+        smtpd_sasl_path = private/dovecot-auth
+        smtpd_sasl_authenticated_header = yes
+        smtpd_sasl_security_options = noanonymous
+        smtpd_sasl_local_domain = $myhostname
+        broken_sasl_auth_clients = yes
+        smtpd_recipient_restrictions = reject_unknown_sender_domain, reject_unknown_recipient_domain, reject_unauth_pipelining, permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+        smtpd_sender_restrictions = reject_unknown_sender_domain
+        mailbox_command = /usr/bin/procmail -a "${EXTENSION}"
+        smtp_use_tls = yes
+        smtpd_tls_received_header = yes
+        smtpd_tls_mandatory_protocols = SSLv3, TLSv1
+        smtpd_tls_mandatory_ciphers = medium
+        smtpd_tls_auth_only = yes
+- id: 33
+  author: Nem
+  date: 2011-09-06 11:29:48+02:00
+  contents: |
+    Erf je m'arrache les cheveux sur l'authentification.
+
+    mynetworks contient la machine et le réseau local (et j'ai un
+    permit\_mynetworks dans les restrictions)... Pourtant on peut envoyer des
+    mails depuis l'extrieur...
+
+    Sasl me dit via un test telnet 235 2.7.0 Authentication successful mais un
+    client tiers me dit authentification non prise en charge...
+
+    J'ai mis smtpd\_sasl\_security\_options = noanonymous mais on peut envoyer
+    en anonyme
+
+    Je suis en train de me demander si ça ne vient pas du master.cf parce que
+    après avoir vu et revu mon main.cf...
+- id: 34
+  author: ®om
+  date: 2011-09-06 13:52:40+02:00
+  contents: |
+    @[**Nem**](#comment-33)
+
+    Peux-tu nous montrer tes fichiers :
+
+     * `/etc/postfix/main.cf`
+     * `/etc/postfix/sasl/smtpd.conf`
+     * `/etc/default/saslauthd`
+
+    ?
+- id: 35
+  author: Nem
+  date: 2011-09-06 15:01:25+02:00
+  contents: |
+    Je mettrais à jour quand j'aurais tout sous la main mais en attendant:
+
+    (j'ai enlevé le nom du domaine étant donné la "faiblesse" actuelle du smtp)
+
+    (ce sont les valeurs actuelles mais beaucoup de lignes sont
+    commentées/décommentées au fil des essais, je veux bien enlever tout et
+    presque n'importe quoi. J'ai bien sûr essayé par exemple en ne laissant
+    comme lignes smtpd que les deux listées dans cet article)
+
+    `postconf -n` (disons que ça renseigne pas mal sur le main.cf)
+
+        alias_database = hash:/etc/aliases
+        alias_maps = hash:/etc/aliases
+        append_dot_mydomain = no
+        biff = no
+        config_directory = /etc/postfix
+        disable_vrfy_command = yes
+        home_mailbox = Maildir/
+        inet_interfaces = all
+        inet_protocols = ipv4
+        mailbox_size_limit = 536000000
+        mydestination = domaine.info, localhost.localdomain, localhost
+        myhostname = domaine.info
+        mynetworks = 127.0.0.0/8 192.168.0.0/24 [::ffff:127.0.0.0]/104 [::1]/128
+        myorigin = /etc/mailname
+        readme_directory = no
+        recipient_delimiter = +
+        relayhost = 
+        smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+        smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
+        smtpd_recipient_restrictions = permit_sasl_authenticated,permit_mynetworks,reject_unauth_destination
+        smtpd_sasl_auth_enable = yes
+        smtpd_sasl_path = private/auth
+        smtpd_sasl_security_options = noanonymous
+        smtpd_sasl_type = dovecot
+        smtpd_tls_cert_file = /etc/prosody/certs/localhost.cert
+        smtpd_tls_key_file = /etc/prosody/certs/localhost.key
+        smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+        smtpd_use_tls = yes
+
+    `/etc/default/saslauthd`
+
+        START=yes
+        MECHANISMS="pam"
+        OPTIONS="-c -m /var/spool/postfix/var/run/saslauthd"
+
+    (essayé aussi avec `PARAMS="-r"`,
+    `OPTIONS="-c -m /var/spool/postfix/var/run/saslauthd -r"` et d'autres
+    valeurs)
+
+    `/etc/postfix/sasl/smtpd.conf`
+
+        pwcheck_method: saslauthd
+        mech_list: login plain
+
+    (ça par contre je n'ai pas essayé d'autres valeurs...)
+
+    Retour d'authentification telnet (j'ai caché le login/pass encodé pour des
+    raisons évidentes)
+
+        Trying 82.243.239.187...
+        Connected to domaine.info.
+        Escape character is '^]'.
+        220 domaine.info ESMTP Postfix (Ubuntu)
+        ehlo domaine.info
+        250-domaine.info
+        250-PIPELINING
+        250-SIZE 10240000
+        250-ETRN
+        250-STARTTLS
+        250-AUTH PLAIN
+        250-ENHANCEDSTATUSCODES
+        250-8BITMIME
+        250 DSN
+        AUTH PLAIN AXXXXXXXXXX=
+        235 2.7.0 Authentication successful
+- id: 36
+  author: Nem
+  date: 2011-09-10 11:27:53+02:00
+  contents: |
+    Bon j'ai repris postfix/dovecot depuis le début à l'aide de ton tuto:
+
+    Pour la partie avant authentification:
+
+     * L'utilisation du smtp n'est pas limité aux mynetworks (réseau local...
+    mais j'ai accès en réception/envoi sur mon téléphone en mode 3G donc en
+    dehors de mon réseau local)
+     * Le TLS sur imap marche bien, mais sur smtp j'ai un soucis (finirai bien
+    par trouvé)
+
+    J'attaque la partie authentification, en espérant que ça compense le premier
+    problème en obligeant à s'authentifier.
+- id: 37
+  author: Nem
+  date: 2011-09-10 12:13:28+02:00
+  contents: |
+    Il accepte l'authentification mais accepte aussi le "sans authentification",
+    ce qui laisse toujours le serveur smtp très vulnérable...
+- id: 38
+  author: ®om
+  date: 2011-09-10 12:28:22+02:00
+  contents: |
+    Il accepte sans authentification à partir des réseaux définis dans l'option
+    `mynetworks`, ainsi que pour l'envoi des mails sur le même domaine (par
+    exemple si je m'envoie un mail à moi-même). D'ailleurs, ce n'est pas
+    terrible, il faut que je trouve comment empêcher ça également…
+
+    Pour le reste, je ne peux pas envoyer de mail sans authentification…
+- id: 39
+  author: Nem
+  date: 2011-09-10 12:57:48+02:00
+  contents: |
+    C'est vrai que je teste vers mes adresses en général.
+
+    Bon par contre je viens de faire un test:
+
+    Depuis tel 3G (donc ip externe en dehors de mynetworks), sans
+    authentification, vers gmail... Et ça passe quand même...
+- id: 40
+  author: Lordinux
+  author-url: http://lordinux.com
+  date: 2011-09-11 10:13:10+02:00
+  contents: |
+    Ne manque-t-il pas des restrictions sur la ligne
+    `smtpd_recipient_restrictions` de main.cf ?
+
+    Chez moi j'ai :
+
+        smtpd_recipient_restrictions = reject_unknown_sender_domain, reject_unknown_recipient_domain, reject_unauth_pipelining, permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+
+    Je pense que `reject_unknown_sender_domain` peut avoir son importance...
+- id: 41
+  author: Nem
+  date: 2011-09-11 14:18:25+02:00
+  contents: |
+    J'ai ptet une piste, si je termine ma ligne par "reject" ça a l'air de
+    réagir correctement...
+
+    Je creuse...
+- id: 42
+  author: Nem
+  date: 2011-09-11 15:19:19+02:00
+  contents: |
+    Je me demande si logiquement il ne faudrait pas jouer aussi avec:
+
+     * `smtpd_sender_restrictions`
+     * `smtpd_client_restrictions`
+- id: 43
+  author: Nem
+  date: 2011-09-11 16:27:07+02:00
+  contents: |
+    ~~~
+    smtpd_client_restrictions = permit_sasl_authenticated, reject_unknown_client_hostname, reject
+    ~~~
+
+    a l'air de faire le boulot aussi.
+
+    sender m'aurait eu l'air plus adapté mais je ne trouve pas d'option
+    `permit_sasl_authenticated`
+- id: 44
+  author: ®om
+  date: 2011-09-11 17:07:16+02:00
+  contents: |
+    @[Nem](#comment-43)
+    Merci, j'ai ajouté `reject`, ça fonctionne ;-)
+- id: 45
+  author: ®om
+  date: 2011-09-15 21:57:51+02:00
+  contents: |
+    Ah non il ne faut surtout pas mettre `reject`, sinon tous les mails venant
+    de l'extérieur seront refusés !
+
+    En ce moment, je n'ai pas le temps de me pencher sur le problème, si
+    quelqu'un a une solution, ça m'intéresse.
+- id: 46
+  author: Nem
+  date: 2011-09-17 04:27:02+02:00
+  contents: |
+    Intuitivement, je pense à `smtpd_sender_restrictions`... mais je ne trouve
+    pas la bonne conf dessus
+- id: 47
+  author: Lordinux
+  author-url: http://lordinux.com
+  date: 2011-09-17 09:02:43+02:00
+  contents: |
+    J'ai `smtpd_sender_restrictions = reject_unknown_sender_domain`
+- id: 48
+  author: Nem
+  date: 2011-09-17 12:35:14+02:00
+  contents: |
+    Chez moi seul ça n'arrête pas les connexion distantes non authentifiées
+    (rhaaaa) et
+
+        smtpd_sender_restrictions = reject_sender_login_mismatch,reject_unknown_sender_domain
+
+    Me bloque les mails légitimes que j'envois en disant que
+    `"nom@domain" n'appartient pas à "nom" (erreur 553)`
+- id: 49
+  author: 'Heberger son site web chez soi | MyWebCV'
+  author-url: http://blog.cvtharlaut.tk/articles/156-hebergement-alternatif
+  date: 2011-09-23 15:00:58+02:00
+  pingback: true
+  contents: |
+    [...] l'authentification SMTP sur un serveur mail ! C'est facile, regardez
+    sur ®om's blog. Si vous souhaitez comprendre la différence entre SSL et TLS,
+    demandez à Michel (c'est son vrai [...]
+- id: 50
+  author: Van Damme
+  date: 2011-10-23 00:18:28+02:00
+  contents: |
+    Bonjour!
+
+    Tout d'abords merci à toi pour tous ces tutoriels sur la configuration d'un
+    serveur mail, c'est les seuls récent et compréhensible que j'ai trouvé!! :)
+
+    Cependant j'ai un petit problème ... :) J'ai donc installer le serveur mail
+    postfix et imap grace au premier tuto et à partir de là je pouvais lire mes
+    mails avec un client de messagerie et en envoyer depuis le serveur. Après
+    j'ai essayer cet article-ci, j'ai tout configurer comme noté mais lorsque
+    j'essaye d'envoyer un mail depuis le client de messagerie il me dit "Une
+    erreur est survenue lors de l'envoi du courrier : le serveur de courrier a
+    envoyé un message d'accueil incorrect : Cannot connect to SMTP server
+    xxx.xxx.xxx.xxx , connect timeout."
+
+    (J'utilise Thunderbird et dans la config du serveur smtp, la sécurité de
+    connexion est STARTTLS et méthode d'authentification est normale).
+
+    Merci pour tes réponses si tu as des éclaircissements à faire :)

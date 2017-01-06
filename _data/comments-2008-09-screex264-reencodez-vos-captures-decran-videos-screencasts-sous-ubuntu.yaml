@@ -1,0 +1,105 @@
+- id: 1
+  author: agathe
+  date: 2008-09-30 10:59:00+01:00
+  contents: |
+    chez moi le script plante, il doit manquer la dernière ligne.
+
+    petite remarque :
+
+    là on fait une double passe. le fichier tmp.avi fini dans la poubelle, dans
+    ce cas autant rediriger le flu vers /dev/null (votre disque dur va vous dire
+    merci) il faut rajouter -f avi pour spécifier le type du conteneur
+
+    {% highlight bash %}
+    # encodes the first pass
+    mencoder "$in" -o /dev/null -f avi -passlogfile $tmp_log -ovc x264 -x264encopts "$opts:pass=1" -nosound $@ &&
+    {% endhighlight %}
+
+    en revenge je ne comprends pas bien l'emploi de mkvmerge on n'est pas forcé
+    l'encapsuler le fichier dans un conteneur de type mkv on pourrait aussi bien
+    conserver le format avi.
+- id: 2
+  author: ®om
+  date: 2008-09-30 15:55:00+01:00
+  contents: |
+    Bizarre qu'il plante, il te dit quoi précisément?
+
+    Concernant ta remarque sur le fichier vidéo généré lors de la première
+    passe, es-tu absolument sûre que ce fichier n'est pas du tout utilisé lors
+    de la seconde passe?
+
+    A priori, je pense que tu as raison, car dès que la seconde passe commence,
+    le fichier est écrasé... Je vais faire quelques tests et modifier le script.
+
+    Sinon, effectivement tu pourrais le laisser dans un .avi, mais comme je le
+    dis dans le billet :
+
+    > Ici, ce qui nous intéresse, c'est qu'il est libre, et qu'à contenu égal, il
+    > prend moins de place que les autres conteneurs (l'overhead quasi-nul).
+
+    MKV est meilleur que AVI, donc pourquoi garder un .avi?
+- id: 3
+  author: ®om
+  date: 2008-09-30 16:02:00+01:00
+  contents: |
+    J'ai modifié le script, pour remplacer la sortie par /dev/null lors de la
+    1ère passe.
+
+    Cependant, l'option -f n'existe pas :
+
+        -f is not an MEncoder optionExiting... (error parsing command line)
+- id: 4
+  author: Compte0
+  date: 2008-09-30 17:09:00+01:00
+  contents: |
+    Petite correction x264 est une implementation libre d'une compression
+    propriétaire h264, comme le xvid l'est pour le divx. Donc la vidéo encodé
+    avec x264 est encodé dans un format proprio.C'est la même chose que le doc,
+    on peut le créer/modifier avec OOo, mais ça reste proprio
+
+    Pour encoder facilement sans trop ce prendre la tête en format libre, j'ai
+    trouvé OggConvert. Il convertit tout les vidéo/musique en formats libres,
+    notament le Dirac qui est un concurrent libre au h264
+- id: 5
+  author: Agathe
+  date: 2008-09-30 18:29:00+01:00
+  contents: |
+    ~~~
+    mkvmerge v2.3.0 ('Freak U') built on Sep 7 2008 22:13:04
+
+    Error: '--track-order' lacks its argument.
+    ~~~
+
+    C'est --track-order qui fait planter le script, sans ça tous fonctionne (
+    c'est peut-être dû a la version de mkvmerge que j'utilise )
+
+    Au temps pour moi!
+
+    la commande est -of avi
+
+    si on en croit la doc
+
+        -of (format) (CODE BÉTA!)
+            Encode dans le format de conteneur donné (par défaut : AVI).
+
+    dans le cas présent c'est superflu.
+- id: 6
+  author: ®om
+  date: 2008-09-30 19:37:00+01:00
+  contents: |
+    Compte0, merci de la précision. Et au niveau rapport qualité/taille ça donne
+    quoi? De même pour le theora?
+- id: 7
+  author: Anonymous
+  date: 2008-09-30 20:37:00+01:00
+  contents: |
+    J'avais posté un message sur le dirac dans le forum ubuntu-fr (dans la
+    partie actualité), mais comme il est indisponible je peux pas te filer le
+    lien.
+
+    A qualité comparable (à vue de nez), Big buck bunny est a peu près pareil en
+    h264 et dirac. Sinon, t'as la dépêche sur da linux french page Tu pourra
+    comparer les vidéos fournies avec celle du site de bigbuckbunny.
+
+    Sinon pour le theora, ç'est juste bine pour du streaming ou des truc basse
+    qualité. c'est moins bien que le divx

@@ -1,0 +1,286 @@
+- id: 1
+  author: Guizmo
+  date: 2009-11-21 23:59:07+02:00
+  contents: |
+    Ne serait-il pas intéressant de faire une Autorité de Certification sur ton
+    serveur qui pourrait créer des certificats pour le HTTPS, SMTPS, IMAPS, etc
+    ... ?
+
+    Ainsi, tu n'aurais qu'à importer le certificat de ta CA et tu n'aurais plus
+    de problème de certificats non-reconnus.
+- id: 2
+  author: Simtris
+  author-url: http://simtris.free.fr
+  date: 2009-11-22 13:08:36+02:00
+  contents: |
+    :) Je vais aussi commenter la partie certificat, mais d'un point de vue plus
+    pratique : prend un certificat publique chez StartSSL.
+
+    Certificat gratuit pour 1 domaine.
+
+    J'ai d'ailleur un article à ce sujet qui traine son mon blog :
+    <http://simtris.free.fr/blog/?p=314>
+
+    Pour continuer dans l'idée du commentaire précédent et atteindre le nirvana
+    du chiffrement. Tu dois pouvoir coupler ça avec une authorité de
+    certification.
+- id: 3
+  author: ®om
+  date: 2009-11-22 13:20:05+02:00
+  contents: |
+    Effectivement, avoir une autorité de certification pourrait être intéressant
+    (plus pour apprendre à la mettre en place que pour l'utiliser d'ailleurs,
+    car avoir une exception à rajouter dans firefox, ça ne coûte pas plus cher
+    que de rajouter l'autorité de certification).
+
+    Je verrai peut-être ça un jour :-)
+- id: 4
+  author: djib
+  author-url: http://djib.fr
+  date: 2009-11-22 16:24:58+02:00
+  contents: |
+    Et pour les plus paresseux il y a `apt-get install roundcube`…
+- id: 5
+  author: Guizmo
+  date: 2009-11-23 00:00:52+02:00
+  contents: |
+    > @[**®om**](#comment-3)
+    > 
+    > Effectivement, avoir une autorité de certification pourrait être
+    > intéressant (plus pour apprendre à la mettre en place que pour l'utiliser
+    > d'ailleurs, car avoir une exception à rajouter dans firefox, ça ne coûte
+    > pas plus cher que de rajouter l'autorité de certification).
+    > 
+    > Je verrai peut-être ça un jour :-)
+
+    Tout à fait d'accord, c'est surtout pour apprendre à la mettre en place
+    et/ou pour bien comprendre comment ça marche. Mais d'un autre coté, si tes
+    certificats servent à quelqu'un d'autre qu'a toi, ils n'ont pas à se
+    demander « ce certificat vient bien de chez ®om ? », ils sauront qu'il vient
+    de chez toi puisqu'il auront le certificat de ta CA. Bon après, sinon c'est
+    vrai que pour ce que ça apporte ...
+- id: 6
+  author: dan
+  date: 2009-11-23 11:05:12+02:00
+  contents: |
+    heu....alors tout ceci m'aide bcp hein car ayant moi aussi un serveur mail
+    perso je m'intéresse vachement au sujet.
+
+    Donc moi j'ai zarafa en tant que serveur mail. L'avantage, c'est que ca
+    permet de synchroniser mail, calendrier et taches avec un mobile !
+
+    Mais vu que j'aime bien tester un peu d'autre solution, j'aimerais savoir,
+    avec ta solution, faut utiliser funambol non ? (le serveur funambol) et ca
+    synchroniserait alors que les mails, et pas les taches et pas le calendrier
+    ?
+- id: 7
+  author: ®om
+  date: 2009-11-23 11:11:08+02:00
+  contents: |
+    > @[**dan**](#comment-6)
+    >
+    > j'aimerais savoir, avec ta solution, faut utiliser funambol non ? (le
+    > serveur funambol) et ca synchroniserait alors que les mails, et pas les
+    > taches et pas le calendrier ?
+
+    Honnêtement, je n'en ai aucune idée. Je ne synchronise pas de tâches ni de
+    calendrier. C'est possible d'ailleurs avec evolution de se synchroniser sur
+    un calendrier (auto-hébergé) ?
+- id: 8
+  author: Respawner
+  author-url: http://www.respawner.fr/blog/
+  date: 2009-12-07 18:42:37+02:00
+  contents: |
+    Intéressant, moi qui cherchait à faire ceci. Cependant, j'ai un souci au
+    test de la configuration de Roundcube. Pas moyen de se connecter avec le
+    protocole IMAP. L'envoi de mail marche mais le login sur le webmail ne
+    fonctionne pas à cause de ça. J'ai bien mis 'localhost' en tant que
+    'default\_host' et le port IMAP est ouvert au niveau de ma configuration du
+    firewall. Une idée ?
+- id: 9
+  author: florenth3me
+  date: 2009-12-20 03:50:38+02:00
+  contents: |
+    Bonjour ou bonsoir à toi!
+
+    Ce simple commentaire pour te remercier pour toutes ces informations/tuto
+    que tu nous offres gracieusement. Tu prends du temps, et c'est tout à ton
+    honneur, car peu de gens sont visiblement capable d'en faire autant dans le
+    monde où nous vivons aujourd'hui...
+
+    Enfin bref, merci pour ce que tu apportes aux lecteurs de passage ici, et
+    bonne continuation à toi ! (-;
+- id: 10
+  author: 'Ajouter l&#8217;authentification SMTP sur un serveur mail &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2010/01/ajouter-lauthentification-smtp-sur-un-serveur-mail/
+  date: 2010-01-02 22:23:14+02:00
+  pingback: true
+  contents: |
+    [...] La configuration de postfix présentée dans mon premier billet limitait
+    (dans un but de sécurité) l’envoi d’un mail à une personne distante qu’à
+    partir du réseau local (ou une liste de réseaux prédéfinis). Cela est
+    parfait lorsqu’on envoie toujours les mails de chez soi, avec au besoin la
+    possibilité d’envoyer un mail de n’importe où grâce au webmail. [...]
+- id: 11
+  author: phil
+  date: 2010-03-11 00:03:03+02:00
+  contents: |
+    J'aime beaucoup tes articles Rom :)
+
+    Concernant Roundcube, est-ce lui qui conserve les mails que tu envoies (pas
+    ceux que tu reçois qui sont je pense dans le Maildir de ton user, grâce à
+    dovecot) ?
+
+    Si oui, tu sais où ils sonts ? En base ? Si je me connecte d'une autre façon
+    à mon mail, je ne vois pas ce que j'ai envoyé je suppose :S
+
+    Existe-t-il une façon de les stocker à la manière de ce que permet IMAP pour
+    les messages reçus ou est-ce que je rêve ?
+
+    J'espère que tu auras des éléments de réponse sur tout ça ;) Bravo encore
+    pour tes sujets.
+- id: 12
+  author: ®om
+  date: 2010-03-11 11:07:24+02:00
+  contents: |
+    Les mails envoyés (et les brouillons) sont des dossiers "comme les autres"
+    dans Maildir (`.Sent` et `.Drafts` par exemple), et dans chacun des clients,
+    tu les spécifies dans les préférences.
+
+    Ainsi, quand tu envoies un message, que ça soit à partir du webmail, du
+    client lourd ou du téléphone portable, tu y a accès de n'importe où, vu que
+    ces dossiers sont sur le serveur.
+
+    Sinon effectivement ça serait un peu galère pour récupérer ses éléments
+    envoyés.
+- id: 13
+  author: phil
+  date: 2010-03-11 13:39:33+02:00
+  contents: |
+    Je ne trouvais pas ces répertoires, je savais pourtant qu'ils devaient
+    commencer par un point et donc être cachés : je suis distrait :)
+
+    En tout cas, je comprends mieux grâce à toi. Roundcube permet donc
+    l'équivalent d'un maildirmake, j'adore.
+
+    Ta série d'article sur la question est très sympa, j'ai bientôt finit de
+    copier/coller sur mon serveur !
+
+    A bientôt.
+- id: 14
+  author: 'Filtrer les spams sur un serveur mail (SpamAssassin) &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2010/03/filtrer-les-spams-sur-un-serveur-mail-spamassassin/
+  date: 2010-03-25 23:28:06+01:00
+  pingback: true
+  contents: |
+    [...] l’auto-hébergement des mails : Hébergez vos mails sur Ubuntu Server
+    (et libérez-vous) Installer un webmail (RoundCube) sur Ubuntu Server Ajouter
+    l'authentification SMTP sur un serveur mail Trier ses mails directement sur
+    le serveur [...]
+- id: 15
+  author: 'Hébergez vos mails sur Ubuntu Server (et libérez-vous) &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2009/08/hebergez-vos-mails-sur-ubuntu-server-et-liberez-vous/
+  date: 2010-03-25 23:36:18+01:00
+  pingback: true
+  contents: |
+    [...] minimum vital, mais vous pouvez trouver des fonctionnalités à mettre
+    en place (un webmail tel que RoundCube, un anti-spam, le tri des mails sur
+    le serveur, une authentification [...]
+- id: 16
+  author: genesis
+  date: 2010-04-02 22:52:38+01:00
+  contents: |
+    Bonjour,
+
+    Merci pour ce tuto très clair et concis.
+
+    J'ai malgré tout une petite question. Pourquoi, lorsque je supprime un
+    message via roundcube, celui-ci n'est pas effacé du dossier `~/Maildir/cur`
+    ?
+- id: 17
+  author: ®om
+  date: 2010-04-03 09:25:56+01:00
+  contents: |
+    Parce que par défaut, lors d'une suppression dans un dossier IMAP, Roundcube
+    (comme beaucoup de clients) marque le mail comme supprimé, mais ne le
+    supprime pas (ça permet de le récupérer).
+
+    Pour changer ce comportement, dans Préférences \> Préférences du serveur, tu
+    peux décocher la case "Mettre le drapeau de suppression au lieu de
+    supprimer".
+
+    Pour nettoyer (supprimer les mails "marqués comme supprimés"), je le fais à
+    partir d'evolution : Dossiers \> Nettoyer (Ctrl+E).
+- id: 18
+  author: tchywallace
+  date: 2010-04-16 06:32:43+01:00
+  contents: |
+    Ok merci vraiment pour ton tuto qui me permet de réaliser un travail tres
+    exigens.
+
+    Mais j'ai un probleme je n'arrive pas a me connecter sur webmail a partir du
+    navigateur c-a-d que je n'arrive pas a m'authentifier c'est vrailent
+    embarrassant pour moi.
+
+    Si tu peux m'aider a surmonter cet obstacle.
+- id: 19
+  author: 'L&#8217;hébergement total, chez soit &#8211; Influence PC'
+  author-url: http://influence-pc.1s.fr/index.php/07-10-2010-lhebergement-total-chez-soit
+  date: 2010-10-07 01:09:27+02:00
+  pingback: true
+  contents: |
+    [...] voici deux : - Zimbra (oui, le nouveau webmail de Free !) propriétaire
+    (VMWare) - RoundCube, dont un tuto sur Rom’s [...]
+- id: 20
+  author: 'Autobloguant &raquo; Adapter roundcube pour Gmail et son propre serveur'
+  author-url: http://www.autobloguant.tk/?p=115
+  date: 2010-10-17 17:58:41+02:00
+  pingback: true
+  contents: |
+    [...] Partie webmail roundcube : Installer un webmail (RoundCube) sur Ubuntu
+    Server [...]
+- id: 21
+  author: 'TUTO serveur de mail sous Ubuntu (postfix) | Admin Reso'
+  author-url: http://www.adminreseau.fr/?p=541
+  date: 2011-01-06 18:00:15+01:00
+  pingback: true
+  contents: |
+    [...] vital, mais vous pouvez trouver des fonctionnalités à mettre en place
+    (un webmail tel que RoundCube, un anti-spam, le tri des mails sur le
+    serveur, une authentification [...]
+- id: 22
+  author: Clikti
+  date: 2011-04-28 14:14:20+01:00
+  contents: |
+    Je n'arrive pas à me connecter sur mon roundcube
+
+    http://Monip/webmail fonctionne bien, on me demande un login et mot de passe
+
+    Je remplis
+
+    En haut au milieu je vois le message "Chargement..." pendant quelques
+    secondes, ensuite "Erreur d'authentification"
+
+    Dans mon var/www/webmail/logs/errors j'ai ceci :
+
+        [28-Apr-2011 15:13:07 +0200]: IMAP Error: Login failed for roundcube from 192.168.17.24. LOGIN: Login failed. in/var/www/webmail/program/include/rcube_imap.php on line 192 (POST /webmail/?_task=login&_action=login)
+
+    Merci de votre aide :)
+
+    Clikti
+- id: 23
+  author: 'Heberger son site web chez soi | MyWebCV'
+  author-url: http://blog.cvtharlaut.tk/articles/156-hebergement-alternatif
+  date: 2011-09-27 19:31:50+02:00
+  pingback: true
+  contents: |
+    [...] RoundCube, dont un tuto sur Rom's [...]
+
+- id: 24
+  author: Pierre-Loup
+  author-url: http://www.geekend.fr
+  date: 2012-07-21 14:50:31+01:00
+  contents: |
+    Ca marche nickel sur Ubuntu 12.04 LTS.
+
+    Merci pour le walkthrough

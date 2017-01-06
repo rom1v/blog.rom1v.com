@@ -1,0 +1,205 @@
+- id: 1
+  author: kane
+  date: 2009-06-28 04:50:11+02:00
+  contents: |
+    Fais gaffe, tu va être embarqué pour motif d'être un anarchiste cyber
+    dissident !
+- id: 2
+  author: Lenezir
+  author-url: http://blog.lenezir.fr
+  date: 2009-06-28 09:54:17+02:00
+  contents: |
+    Entièrement d'accord avec toi à propos de la fausse excuse de la pédophilie
+    pour justifier le filtrage.
+
+    Notre gouvernement joue la politique de l'autruche, ils paniquent en voyant
+    toutes ces nouvelles technologies qu'ils ne comprennent pas, alors plutôt de
+    trouver des solutions intelligentes (comme à fait cet allemand qui a
+    contacté les hébergeurs de sites pédophiles - étonnant d'ailleurs que si peu
+    aient répondu), ils préfèrent tout boucler.
+
+    Et comme résultat, cela va détruire notre liberté et rendre service aux
+    véritables criminels.
+
+    Il faudra, suite à cette loi, penser à changer la devise de notre pays
+    "Liberté Égalité Fraternité" en un truc du style "Surveillance Injustice
+    Délation".
+
+    J'ai honte d'avoir un gouvernement pareil.
+- id: 3
+  author: PAB
+  date: 2009-06-28 17:53:11+02:00
+  contents: |
+    Merci pour cette analyse très intéressante.
+- id: 4
+  author: Renaud
+  author-url: http://totalement.geek.oupas.fr
+  date: 2009-07-02 17:34:44+02:00
+  contents: |
+    Hop hop hop !!
+
+    3.3 -\> 1926 visites avec JS contre 51126 connexions au serveur
+
+    PAS DU TOUT LA MÊME CHOSE
+
+    une connexion au serveur = un téléchargement
+
+    1 visite = 1 page html + x fichiers CSS + y images + z fichiers JS... = 1 +
+    x + y + z... connexions
+
+    Si tu n'as pas de quoi mieux comparer, mieux vaux enlever cet exemple du pdf
+    :)
+- id: 5
+  author: Renaud
+  author-url: http://totalement.geek.oupas.fr
+  date: 2009-07-02 17:43:53+02:00
+  contents: |
+    Sinon, tout le reste me parait très bien analyser... parfois on aimerait un
+    peu plus savoir ce que disent les liens qui tu mets sans devoir cliquer...
+    un petit résumé serait appréciable, mais globalement, c'est un très bon
+    boulot... et ca fait encore un peu plus peur...
+- id: 6
+  author: ®om
+  date: 2009-07-02 19:23:31+02:00
+  contents: |
+    > @[**Renaud**](#comment-4)
+    >
+    > Hop hop hop !!
+    >
+    > 3.3 -\> 1926 visites avec JS contre 51126 connexions au serveur
+    >
+    > PAS DU TOUT LA MÊME CHOSE
+    >
+    > une connexion au serveur = un téléchargement
+    >
+    > 1 visite = 1 page html + x fichiers CSS + y images + z fichiers JS… = 1 +
+    > x + y + z… connexions
+
+    Je sais bien, c'est pour ça que je n'ai pas compté chaque requête (sinon
+    j'aurais obtenu plusieurs centaines de milliers – 269326 sur la semaine du
+    21 au 28 –), mais que j'ai fait un `uniq` :
+
+    {% highlight bash %}
+    cat blog_access.log.1 | grep -v /stats | cut -f1 -d' ' | uniq | wc -l
+    {% endhighlight %}
+
+    Après, s'il y a 2 utilisateurs dont les connexions s'entremêlent, ça peut
+    compter plusieurs fois un visiteur… mais ça reste dans le même ordre de
+    grandeur…
+
+    Si quelqu'un a une meilleure manière de compter, je suis preneur ;-)
+- id: 7
+  author: ®om
+  date: 2009-07-30 09:50:09+02:00
+  contents: |
+    Suite à de nombreuses critiques, [la loi LOPPSI 2 n'est plus à l'ordre du
+    jour](http://www.pcinpact.com/actu/news/52265-loppsi-filtrage-pedopornographie-free-oclctic.htm).
+- id: 8
+  author: Deet
+  date: 2009-09-20 13:07:21+02:00
+  contents: |
+    Salut, je n'arrive pas à télécharger ton PDF.
+- id: 9
+  author: ®om
+  date: 2009-09-20 13:09:24+02:00
+  contents: |
+    > @[**Deet**](#comment-8)
+    >
+    > Salut, je n'arrive pas à télécharger ton PDF.
+
+    Bizarre, pourtant il fonctionne : <http://dl.rom1v.com/loppsi.pdf>
+
+    Clic-droit, enregistrer sous.
+
+    Ou :
+
+        wget http://dl.rom1v.com/loppsi.pdf
+- id: 10
+  author: Pierre
+  author-url: http://juralibertaire.over-blog.com/
+  date: 2010-12-28 14:08:55+01:00
+  contents: |
+    Le prochain rassemblement contre LOPPSI à Paris aura lieu : le mercredi 5
+    janvier 2011 de 17H à 23H au CIP (collectif intermittents et précaires) 14
+    quai de Charente 75019 PARIS - Métro Corentin Cariou (ligne 7)
+
+    Pour que ce rassemblement ne soit pas vain, il peut être intéressant d'avoir
+    lu ce texte auparavant.
+
+    > « Je te souhaite que ta loi retombe sur ton père, ta mère, ta femme, tes
+    > enfants, et toute ta postérité. Et maintenant avale ta loi. » — A. Artaud.
+    >
+    > Là ne s'agit pas de s'en contenter.
+    >
+    > Les lois LOPSSIs sont des lois scélérates, certes, mais elles s'attaquent
+    > à quelque chose de plus profond : la mémoire historique.
+    >
+    > Un arrière-goût de tout ce que les régimes autoritaires ont concocté de
+    > meilleur.
+    >
+    > Mais nous ne nous arrêterons pas là, ce n'est pas au nom de quelque idéal
+    > de liberté républicain ou démocrate que nous désirons nous lever.
+    >
+    > Au nom de rien d'ailleurs.
+    >
+    > La haine totale de ce monde totalitaire suffit à nous accrocher à la
+    > moindre intensité de résistance pouvant naître.
+    >
+    > Mais nous ne nous arrêterons pas là non plus.
+    >
+    > Nous combattons sans défendre mais combattons avec certains horizons en
+    > tête : celui de voir un jour sans Travail, sans Propriété, sans Misère,
+    > bref tout ce qui a dicté les grandes insurrections ouvrières du siècle
+    > dernier…
+    >
+    > Nous sommes une histoire perdue cherchant à se retrouver en ces temps
+    > effacés :
+    >
+    > Mieux que partout, la France a réussi à ménager l'oubli chez ses sujets,
+    > non seulement l'oubli de ce pourquoi elle règne encore, cette France, mais
+    > l'oubli qu'il existe des ailleurs, d'autres notes, d'autres couleurs que
+    > le gris bétonné et le noir fumeux.
+    >
+    > « C'est une époque bien carabinée » disait un camarade et c'est
+    > véritablement vrai. Tout a faillit ici, pourtant tout semble encore
+    > fonctionner. Là, se dévisage le capitalisme : il n'a besoin que de notre
+    > consentement soumis pour exister. Il ne lui faut même plus inventer
+    > quelques bonheurs qui tiennent, des merveilles qui font espérer. Il ne lui
+    > faut, désormais, plus que perfectionner ses outils policiers.
+    >
+    > Lui-même se l'avoue lorsqu'il met en scène sa critique : « Le monde est
+    > pourri, vous avec, restez sage » relaye le Spectacle.
+    >
+    > Puisque le monde dérive, pourquoi ne pas dériver lentement avec lui. C'est
+    > ce qu'ON voulait nous faire croire.
+    >
+    > Hélas, le meilleur des mondes n'a pas encore triomphé !
+    >
+    > « C'est un beau moment, que celui où se met en mouvement un assaut contre
+    > l'ordre du monde […] Voilà donc une civilisation qui brûle, chavire et
+    > s'enfonce tout entière. Ah ! Le beau torpillage. »
+    >
+    > Il nous faut retrouver la mémoire, une mémoire tactile, celle des armes,
+    > de l'émeute, de la résistance matérielle. Il nous faut des réflexes, il
+    > nous faut se mettre d'accord une bonne fois pour toute : « faire
+    > apparaitre dans la pratique une ligne de partage entre ceux qui veulent
+    > encore de ce qui existe, et ceux qui n'en voudront plus ».
+    >
+    > En temps de guerre, ceux qui prétendent échapper à celà sont ceux qui ont
+    > déjà choisi un camp : celui de l'engagement le plus total dans le
+    > désengagement. Celui de rejouer les mêmes échecs en se disant que cela
+    > fonctionnera un jour.
+    >
+    > Ce sont eux, les véritables amnésiques. L'amnésie est une position bien
+    > confortable en ce monde, elle permet de s'ancrer léthargiquement dans un
+    > espoir messianique. Un espoir qui n'a pas fini de faire vivre et de
+    > laisser mourir…
+    >
+    > « Diverses époques ont eu ainsi leur grand conflit, qu'elles n'ont pas
+    > choisi mais où il faut choisir son camps. C'est l'entreprise d'une
+    > génération, par laquelle se balaient les empires et leurs cultures. Il
+    > s'agit de prendre Troie ; ou bien de la défendre. Ils se ressemblent par
+    > quelque côté, ces instants où vient se séparer ceux qui combattront dans
+    > les camps ennemis, et ne se reverront plus. » — Guy Debord.
+    >
+    > Dimanche 26 décembre 2010.

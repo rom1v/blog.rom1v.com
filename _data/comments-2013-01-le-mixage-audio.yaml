@@ -1,0 +1,508 @@
+- id: 1
+  author: dwan
+  date: 2013-01-29 15:53:32+01:00
+  contents: |
+    J'ai bien l'impression que tu as construit un compresseur :)
+
+    <http://fr.wikipedia.org/wiki/Compresseur_%28audio%29>
+- id: 2
+  author: Florian
+  date: 2013-01-29 22:39:20+01:00
+  contents: |
+    Tu viens de créer un compresseur/limiteur :)
+
+    Bon, en un peu mieux, le tiens a un arrondi du seuil de compression !!
+- id: 3
+  author: L'éclectique
+  date: 2013-01-30 01:34:23+01:00
+  contents: |
+    Bravo cher ®om (permettez la familiarité) pour ce remarquable travail
+    d'analyse.  Mais hélas la fonction de mixage que vous proposez aurait été
+    une parfaite solution si elle pouvait être linéaire, ce qui n'est
+    malheureusement pas le cas.  Je précise bien *linéaire* (bilinéaire ou autre
+    ne ferait pas l'affaire), car tout manquement à la sacro-sainte linéarité en
+    audio laisse apparaître (ou plutôt entendre) des distortions, qui dénaturent
+    le signal et peuvent provoquer une rage des tympans chez les audiophiles ...
+
+    **Des distortions ?**
+
+    Le son étant un phénomène vibratoire, son étude repose principalement sur sa
+    décomposition en vibrations élémentaires. Généralement, la brique de base
+    est l'[onde pure
+    sinusoïdale](http://fr.wikipedia.org/wiki/Signal_sinuso%C3%AFdal), et la
+    décomposition la plus usitée est la [transformée de
+    Fourier](http://fr.wikipedia.org/wiki/Transform%C3%A9e_de_Fourier).  Il en
+    existe d'autres comme la [décomposition en
+    ondelettes](http://fr.wikipedia.org/wiki/Ondelette), où les briques de bases
+    sont des ondelettes.
+
+    Le résultat de la décomposition est appelé le spectre: c'est la recette de
+    reconstitution du son par un mélange d'ondes pures.
+
+    La fidélité d'un système de reproduction du son (dont le mixeur de sons fait
+    partie) est directment liée à la fidélité de reproduction des ondes pures.
+    Les défauts de reproductions peuvent être multiples :
+
+     - Accentuation, atténuation ou déphasage de certaines fréquences du
+       spectre, mais il y a pire ;
+     - Ajout de nouvelles fréquences inexistantes dans le signal à reproduire
+
+    Les fonctions non-linéaires excellent dans ce deuxième cas. C'est parfois
+    appréciable comme sur les guitares électriques, mais en général ce n'est
+    pas beau à entendre.
+
+    Cette non-linéarité est quantifiable, par exemple sur les amplificateurs
+    audio par ce qu'on nomme [Taux de Distortion
+    Harmonique](http://en.wikipedia.org/wiki/Total_harmonic_distortion).  La
+    course à la linéarité fait que ce taux se mesure sur les équipements de
+    bonne qualité en millième de pourcent (comme ce circuit [amplificateur
+    audio](http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00000017.pdf
+    "TDA7294"), page 3) ...
+
+    **Que des théories, on veut de la pratique !**
+
+    On peut réaliser un test rapide de la fonction mix\_f. Préparons deux sons à
+    mixer :
+
+     - Une onde sinusoïdale à 19kHz et d'amplitude 0,5, sauvé sous le nom de
+       fichier 19khz.raw
+     - Une onde sinusoïdale à 20kHz et d'amplitude 0,5, sauvé sous le nom de
+       fichier 20khz.raw
+
+    J'ai fait cela sous
+    Audacity, projet à 44100Hz, menu Générer puis Son.... J'ai exporté
+    chaque son en données RAW, puis j'ai lancé mixpoc en faisant :
+
+        mixpoc f 19khz.raw 20khz.raw > fmix.raw
+
+    J'ai ensuite importé le fichier résultant du mixage. Que remarquer ? Les
+    sons à 19kHz et 20kHz sont situés à la limite de la sensibilité en fréquence
+    de l'oreille humaine. Ils sont donc généralement inaudibles, sauf parfois
+    pour les jeunes gens dont les tympans n'ont pas encore été traumatisés par
+    des MP3 128kbps à 120dB mais passons ... Avec un mixage de bonne qualité, et
+    avec une chaîne de rendu correct (une carte son ordinaire avec une paire
+    d'écouteurs ou un casque bon marché suffisent pour l'expérience) on ne
+    devrait rien entendre, mais le fichier fmix.raw présente une tonalité basse,
+    aux alentours de 1kHz, très facilement détectable car l'oreille humaine
+    présente un pic de sensibilité vers cette fréquence. Le mixage sum de mixpoc
+    donne un très bon résultat puisque je n'entends rien quand je reproduis le
+    son chez moi, et le mixage vttx est le plus affreux de tous puisque la
+    distortion est très audible.
+
+    On peut visualiser les dégâts de la non-linéarité sur Audacity, en
+    sélectionnant le menu déroulant d'une piste et en choisissant le mode
+    d'affichage Spectre au lieu de Forme d'onde.
+
+    A un signal pur correspond une raie unique sur le spectre, le mixage de sons
+    à 19kHz et 20kHz ne devrait donner qu'un signal ayant un spectre formé de
+    deux raies, mais la distorsion introduit une foultitude de raies espacée de
+    1kHz pour le fichier fmix.raw.
+
+    **Alors c'est inutile ?**
+
+    Cette distortion porte un nom précis :
+    l'[intermodulation](http://fr.wikipedia.org/wiki/Intermodulation). La
+    fréquence de 1kHz que l'on entend n'est pas quelconque, elle est la
+    différence entre 19kHz et 20kHz. Si par exemple on avait utilisé 18kHz et
+    18.2kHz, on aurait entendu une intermodulation à 200Hz. Cette distorsion est
+    certes indésirable en audio, mais en revenche c'est la clé de voûte des
+    systèmes de transmission et de communication sans fil.  La plupart des
+    récepteurs modernes font intermoduler, dans un circuit électronique appelé
+    [mélangeur](http://fr.wikipedia.org/wiki/M%C3%A9langeur_%28%C3%A9lectronique%29),
+    le signal reçu par l'antenne avec une onde générée au niveau du recepteur
+    pour obtenir une intermodulation de plus faible fréquence.  L'exemple le
+    plus usuel est la radio FM : quand on veut capter une station FM sur 100MHz
+    par exemple, le récepteur radio génère une onde à 110.7Mhz, le résulat du
+    mixage non linéaire est une onde à 10.7Mhz (c'est une valeur standard pour
+    les récepteurs FM) plus facile à traiter car de fréquence plus faible, et
+    qui est spécifiquement attendue à la sortie du mélangeur. Pour les télés
+    analogiques, c'est 38,9MHz, et pour les récepteurs ondes courtes de nos
+    grand-pères, c'est généralement 455kHz.
+
+    La fonction non-linéaire la plus usitée en traitement de signal
+    radio-fréquence est la forme bilinéaire f(x,y) = k.x.y (k étant une
+    constante), car le résultat d'intermodulation est simple à étudier et à
+    prévoir (remarquer que pour deux ondes le produit cos(x).cos(y) = 1/2 .
+    (cos(x-y) + cos(x+y)), la différence d'intermodulation étant le terme
+    cos(x-y)).
+
+    Certains amateurs d'équipements audio anciens (comme les amplificateurs à
+    lampes) recherchent à reproduire les défauts sur les installations modernes.
+    La fonction mix\_f étant quadratique
+    [(tracé)](http://fooplot.com/plot/clm062p2in), elle s'approche de la réponse
+    d'une [lampe](http://fr.wikipedia.org/wiki/Triode) et pourrait servir à
+    recréer les distorsions de ces équipements.
+
+    **Faut-il se ruiner en équipement audio ?**
+
+    Non, les ordinateurs actuels sont capable de prouesses impossibles pour les
+    ingénieurs de l'époque analogique, comme l'explique Chris Montgomery
+    (créateur du codec audio Vorbis) dans son [introduction au multimédia
+    (video)](http://www.xiph.org/video/vid1.shtml "introduction au multimédia").
+    La plupart des interfaces audio d'ordinateurs approchent la perfection en
+    rendu, mais l'enregistrement laisse un peu à désirer.
+
+    Le monde du logiciel Libre offre Octave (clone du soft propriétaire MatLab)
+    (cette
+    [page](http://fr.wikibooks.org/wiki/Programmation_Octave/Traitement_du_son)
+    wiki est malheureusement dépouillée, je la complèterai si le temps s'offre à
+    moi).
+
+    Le monde de l'audio est très vaste, mais il reste heureusement très
+    accessible à notre ère. J'espère avoir été utile et ne pas avoir abusé de
+    cet espace de commentaire.
+
+    Ah oui, et bravo pour votre blog !
+- id: 4
+  author: ®om
+  date: 2013-01-30 15:27:40+01:00
+  contents: |
+    Waoh, ça c'est du commentaire : c'est un article à lui tout seul ;-) Merci
+    infiniment pour les explications.
+
+    Ton exemple avec 19kHz et 20kHz illustre très bien le problème. Merci
+    d'avoir pris le temps de tester l'exemple avec le PoC.
+
+    ###### Quelques tests
+
+    J'ai reproduit tes tests. Au passage, j'ai ajouté un script `genfreq` qui
+    génère un fichier de 5 secondes d'une fréquence donnée (la même chose que ce
+    que propose *Audacity* manuellement).
+
+        ./genfreq 19000 .5 19khz.raw
+        ./genfreq 20000 .5 20khz.raw
+        ./mix f 19khz.raw 20khz.raw
+
+    Effectivement, les fréquences apparues sont bien audibles. D'ailleurs,
+    même :
+
+        ./mix f 19khz.raw 19khz.raw
+
+    produit un son audible (le principe de la fonction `mix_f` est de "déformer"
+    la moyenne des signaux, donc s'il y a deux fois le même signal, le résultat
+    est déformé).
+
+    *Ceci a le même effet :*
+
+        ./mix f 19khz.raw
+
+    *Cela signifie que ma fonction g (donc f aussi) n'est "bonne"
+    (mathématiquement parlant, sans parler des distorsions créées) que pour le
+    mixage de 2 pistes audio (avec 1 ou 3, elle ne respecte plus toutes les
+    propriétés énoncées). La distorsion qu'elle produit devrait être dépendante
+    du nombre de sources.*
+
+    ***EDIT :** c'est [corrigé](#comment-8).*
+
+    En parcourant une plage de fréquences, on entend bien aussi la distorsion de
+    `mix_f`.
+
+    L'original :
+
+        ./genfreq 5000-10000 .5 - | ./play
+
+    Avec la fonction `mix_sum` :
+
+        ./genfreq 5000-10000 .5 tmp.raw && ./mix sum tmp.raw tmp.raw
+
+    Avec la fonction `mix_f` :
+
+        ./genfreq 5000-10000 .5 tmp.raw && ./mix f tmp.raw tmp.raw
+
+    ###### *mix\_sum* aussi
+
+    Cependant, `mix_sum` ne s'en sort bien que parce que l'amplitude totale ne
+    dépasse pas 1. Sinon, on obtient ça :
+
+        ./genfreq 19000 .6 19khz.raw
+        ./genfreq 20000 .6 20khz.raw
+        ./mix sum 19khz.raw 20khz.raw
+        ./mix sum 19khz.raw 19khz.raw
+        ./genfreq 5000-10000 .6 tmp.raw && ./mix sum tmp.raw tmp.raw
+
+    C'est encore pire... Seul `mix_mean` s'en sort dans tous les cas, mais au
+    prix d'une amplitude diminuée. Ce qui me ramène au point de départ.
+
+    ###### Pick any two
+
+    J'ai l'impression (corrige-moi si je me trompe) que parmi les
+    caractéristiques suivantes, nous devons en [choisir au plus
+    deux](http://en.wikipedia.org/wiki/Project_triangle) :
+
+     1. amplitude relativement conservée
+     2. pas de *hard-clipping*
+     3. pas de distorsion (en dehors du *clipping*)
+
+    Ou alors il faut faire des compromis (j'accepte de perdre *un peu*
+    d'amplitude, d'avoir *un peu* de hard-clipping et *un peu* de distorsion).
+
+    Je n'ai pas d'expérience sur des exemples réels (voix humaine, musique...) :
+    vaut-il mieux perdre la *linéarité* pour éviter le *clipping* (l'objectif
+    que poursuit mon billet), ou considérer que la probabilité de *clipping* est
+    suffisamment faible pour garder la *linéarité* ?
+
+    Concrètement, est-ce qu'il vaut mieux quelque chose comme `mix_ksum` (on
+    préfère la linéarité sur l'absence totale de *clipping*) ou comme `mix_f`
+    (on préfère éviter le *clipping* même si ça rajoute *un peu* des fréquences
+    sur tout le spectre) ?
+
+    Avec des pistes audio "réelles", je ne parviens pas à entendre qu'il y a des
+    fréquences ajoutées avec `mix_f`.
+
+    Ou peut-être y'a-t-il de meilleures stratégies ?
+- id: 5
+  author: dwan
+  date: 2013-01-30 16:30:41+01:00
+  contents: |
+    > @[**®om**](#comment-4)
+    >
+    > vaut-il mieux perdre la *linéarité* pour éviter le *clipping* (l'objectif
+    > que poursuit mon billet), ou considérer que la probabilité de *clipping* est
+    > suffisamment faible pour garder la *linéarité* ?
+
+    Le clipping est à éviter absolument, ça rajoute beaucoup trop d'harmoniques
+    et c'est *peu* musical. Et, selon une certaine loi, s'il y a une possibilité
+    pour que ça clippe, ça va clipper :)
+
+    Un compresseur audio est linéaire jusqu'à un certain volume (*threshold*),
+    puis au-dessus devient progressivement (ou pas, voir *knee*) de moins en
+    moins linéaire, ou du moins change de linéarité, ce qui conserve
+    relativement le spectre du signal original (signal *seulement* distordu)
+    tout en réduisant la dynamique du signal.
+
+    Un compresseur réglé agressivement devient un limiteur : linéaire jusqu'au
+    moment où pour un volume d'entrée supérieur à x, le volume de sortie sera
+    égal à x (saturation du signal).
+
+    Un point intéressant : un compresseur (hard ou software) dispose souvent
+    d'une sortie spéciale à laquelle il est possible de récupérer en temps réel
+    la réduction de volume appliquée à son signal d'entrée : il est alors
+    possible d'utiliser cette information pour baisser le volume d'un autre
+    signal concurrent (*side-chain*). En musique rock, on compresse souvent
+    beaucoup la grosse caisse, et on met la guitare basse en side-chain : de
+    cette manière, lorsqu'il y a un coup de grosse caisse, cela réduit le volume
+    de la basse (*ducking*), ce qui laisse plus de puissance disponible à
+    l'ampli pour reproduire la grosse caisse, et donne l'impression que les deux
+    instruments sont "liés".
+
+    **Si tu disposes de deux signaux que tu veux mixer ensemble tout en
+    réduisant leur dynamique de façon à maintenir un signal sommé à peu près
+    constant, il suffit d'appliquer une compression à chacun de tes deux
+    signaux, et pourquoi pas une troisième un peu plus légère sur le mix
+    final.** C'est un procédé classique en matière de mixage.
+
+    La grosse différence entre ta manière de procéder et une compression, c'est
+    que tu appliques ton effet de manière immédiate, ce qui correspond à une
+    compression à attaque et relâchement instantané. Si cela peut être utilisé
+    en tant qu'effet, le rendu est assez désagréable et écrase beaucoup trop la
+    dynamique, tes deux sources sonores luttant pour dominer à une rythme bien
+    trop élevé (44100Hz). En sonorisation et enregistrement, on préfère souvent
+    laisser passer les transitoires (quelques millisecondes après le début de
+    l'attaque d'un son) avant de compresser le signal progressivement.
+- id: 6
+  author: ®om
+  date: 2013-01-31 15:37:20+01:00
+  contents: |
+    @[**dwan**](#comment-5)
+    Merci pour ta réponse éclairante.
+
+    Je voudrais implémenter un (vrai) compresseur pour tester. J'ai écrit des
+    fonctions mathématiques qui-vont-bien (enfin, j'espère) pour le [*hard* et
+    *soft
+    knees*](http://en.wikipedia.org/wiki/Dynamic_range_compression#Soft_and_hard_knees)
+    (même si ma fonction de *smooth* est trop compliquée) :
+
+        gnuplot -p knee.gnu
+
+    {: .center}
+    ![knee]({{ site.assets }}/mixage_audio/knee.png)
+
+    *(commit dc04b19)*
+
+    Mais je me rend compte qu'il ne faudrait pas réaliser le mixage échantillon
+    par échantillon, mais "globalement", sur un intervalle de temps suffisant
+    pour capturer au moins une *période* du signal (sinon le signal se fait
+    vraiment distordre). Avec une fonction linéaire par morceaux, c'est
+    flagrant :
+
+        ./mix hknee file1.raw file2.raw
+        ./mix sknee file1.raw file2.raw
+
+    *(commit 154866b)*
+
+    Êtes-vous d'accord avec cela ?
+
+    Avoir une durée d'attaque et de relâchement non-nuls suffirait peut-être à
+    résoudre le problème. Qu'en pensez-vous ?
+- id: 7
+  author: dwan
+  date: 2013-01-31 16:56:00+01:00
+  contents: |
+    Doit-on voir les graphiques dans votre commentaire ou faut-il compiler votre
+    exemple ? Je ne suis pas très doué pour ça ;)
+- id: 8
+  author: ®om
+  date: 2013-01-31 16:59:30+01:00
+  contents: |
+    > *Cela signifie que ma fonction g (donc f aussi) n'est "bonne"
+    > (mathématiquement parlant, sans parler des distorsions créées) que pour le
+    > mixage de 2 pistes audio (avec 1 ou 3, elle ne respecte plus toutes les
+    > propriétés énoncées). La distorsion qu'elle produit devrait être
+    > dépendante du nombre de sources.*
+
+    J'ai trouvé comment généraliser ma fonction *g* pour que ça fonctionne pour
+    *n* pistes audio :
+
+        g(x) = sgn(x) * (1 - (1 - abs(x)) ** n)
+
+    Pour *n = 2*, on tombe bien sur la première que j'avais :
+
+        g(x) = x * (2 - abs(x))
+
+    *(commit 54be29e)*
+- id: 9
+  author: ®om
+  date: 2013-01-31 17:08:19+01:00
+  contents: |
+    > @[**dwan**](#comment-7)
+    >
+    > Doit-on voir les graphiques dans votre commentaire ou faut-il compiler
+    > votre exemple ? Je ne suis pas très doué pour ça ;-)
+
+    Je l'ai [ajouté](#comment-6) ;-)
+- id: 10
+  author: dwan
+  date: 2013-01-31 19:51:44+01:00
+  contents: |
+    > @[**®om**](#comment-6)
+    >
+    > Mais je me rend compte qu'il ne faudrait pas réaliser le mixage
+    > échantillon par échantillon, mais "globalement", sur un intervalle de
+    > temps suffisant pour capturer au moins une *période* du signal (sinon le
+    > signal se fait vraiment distordre).
+
+    Oui, et vu que les sources ne seront pas toujours de belles sinus, il
+    faut raisonner en terme de temps d'attaque.
+
+    > @[**®om**](#comment-6)
+    >
+    > Avec une fonction linéaire par morceaux, c'est flagrant
+
+    L'attaque et le relâchement d'un compresseur se basent sur une mesure du
+    volume (et donc de la puissance) moyen sur une certaine durée du signal,
+    histoire d'obtenir une correction de l'amplitude moins frénétique. Il faut
+    donc observer les samples contenus dans une fenêtre mouvante dont l'avant se
+    trouve à l'endroit de la tête de lecture. Il est également possible
+    d'observer un peu dans le futur (fonction *lookahead*), ce qui est
+    légèrement problématique dans le cas d'un traitement en direct (introduction
+    d'un retard) mais tout à fait indolore dans le cas d'un traitement différé
+    (offline)
+
+    > @[**®om**](#comment-6)
+    >
+    > Avoir une durée d'attaque et de relâchement non-nuls suffirait peut-être à
+    > résoudre le problème. Qu'en pensez-vous ?
+
+    Il est très souhaitable que ces durées soient paramétrables, tout comme le
+    threshold (et le knee dans une moindre mesure).
+
+    > @[**®om**](#comment-8)
+    >
+    >     g(x) = x * (2 - abs(x))
+
+    J'ai implémenté cette fonction à l'aide du logiciel Pure Data, du coup j'ai
+    une question : les deux sources doivent-elles passer chacune par cette
+    transformation puis être sommées ou doivent-elles y passer une fois sommées
+    ? Dans le premier cas, j'observe une forte distortion du signal même à
+    faible volume, et dans le second j'observe une distortion de retournement
+    (traduction hasardeuse de *foldback distortion*, mes lectures dans ce
+    domaine sont en anglais...), c'est à dire que les crêtes dépassant un
+    certain seuil sont retournées dans le sens opposé.
+- id: 11
+  author: ®om
+  date: 2013-01-31 20:24:32+01:00
+  contents: |
+    OK, merci pour les réponses.
+
+    > @[**dawn**](#comment-10)
+    >
+    > J'ai implémenté cette fonction à l'aide du logiciel Pure Data, du coup
+    > j'ai une question : les deux sources doivent-elles passer chacune par
+    > cette transformation puis être sommées ou doivent-elles y passer une fois
+    > sommées ?
+
+    Une fois sommées (*g* s'applique sur la moyenne des sources).
+
+    > @[**dawn**](#comment-10)
+    >
+    > Dans le premier cas, j'observe une forte distortion du signal même à
+    > faible volume, et dans le second j'observe une distortion de retournement
+    > (traduction hasardeuse de *foldback distortion*, mes lectures dans ce
+    > domaine sont en anglais...), c'est à dire que les crêtes dépassant un
+    > certain seuil sont retournées dans le sens opposé.
+
+    Tu aurais une capture d'écran et/ou un bout de piste audio pour reproduire
+    ce comportement ?
+- id: 12
+  author: dwan
+  date: 2013-01-31 22:42:47+01:00
+  contents: |
+    Le comportement bizarre était de ma faute :) C'est réparé, ça marche !  Ce
+    que j'observe maintenant est bien conforme à ton graphe. Par contre, il
+    s'agit du comportement d'un compresseur-expanseur : ton rapport
+    d'amplification est d'abord positif, avant de devenir négatif vers 50% de
+    l'amplitude. Pour l'instant tu as donc un *waveshaper*, vu que tu appliques
+    une fonction de transfert directement à ta forme d'onde. Si tu veux un
+    *vrai* compresseur, tu dois appliquer cette fonction de transfert (ou une
+    autre, pour rigoler) au volume de ton son, ce qui suppose de calculer ce
+    volume. Un petit tour [ici](http://en.wikipedia.org/wiki/Decibel#Acoustics)
+    et [là](http://en.wikipedia.org/wiki/Watt_RMS#Sine_wave_power) devrait
+    te renseigner.
+- id: 13
+  author: ®om
+  date: 2013-02-01 09:13:32+01:00
+  contents: |
+    > @[**dwan**](#comment-12)
+    >
+    > Par contre, il s'agit du comportement d'un compresseur-expanseur : ton
+    > rapport d'amplification est d'abord positif, avant de devenir négatif
+    > vers 50% de l'amplitude.
+
+    Je ne pense pas. La conversion de l'amplitude *x* en
+    [dB](http://en.wikipedia.org/wiki/Decibel) s'effectue grâce à la fonction
+    *20 × log~10~(x)*, qui est strictement croissante. Par ailleurs, comme je le
+    dis dans le billet, la fonction *g* est **toujours** comprise entre la
+    moyenne et la somme de la valeur de chaque échantillon :
+
+    {: .center}
+    ![g]({{ site.assets }}/mixage_audio/g.png)
+
+    Nous pouvons en conclure que le volume résultant est, lui aussi, toujours
+    compris entre la moyenne et la somme de celui des sources. Il s'agit donc
+    d'une *amplification* de la moyenne et d'une *compression* de la somme (ce
+    qui compte).
+
+    Ou alors j'ai loupé quelque chose.
+- id: 14
+  author: dwan
+  date: 2013-02-01 15:31:41+01:00
+  contents: |
+    Je me suis mélangé les pinceaux (décidément). Pour une somme de deux signaux
+    d'amplitude maximale -2 2, c'est bien un compresseur. Pour un signal seul
+    d'amplitude maximale -1 1, c'est un compresseur-expanseur, dont le rapport
+    d'amplification ne devient pas négatif au-delà de 50% comme je l'ai dit,
+    mais seulement inférieur à 1. Ouf :)
+- id: 15
+  author: tth
+  author-url: http://foo.bar.quux.over-blog.com/
+  date: 2013-02-04 15:30:01+01:00
+  contents: |
+    Bonjour à tous.
+
+    C'est un article et des commentaires fortement passionnants que vous
+    proposez là. Le mixage de sons numériques me tracasse depuis longtemps, et
+    je pense que vous m'avez fourni quelques bonnes pistes.
+
+    Je vous propose donc de venir expliquer ces résultats devant un public
+    conquis d'avance lors du prochain [THSF](http://thsf2013-c5.tetalab.org/
+    "THSF 2013") qui aura lieu à Toulouse, dernière semaine de mai.

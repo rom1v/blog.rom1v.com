@@ -1,0 +1,18 @@
+- id: 1
+  author: Anonymous
+  date: 2008-09-21 11:52:00+01:00
+  contents: |
+    C'est une règle générale. Il faut tojours avoir un son faible lorsqu'il
+    transite par des amplis ou autres. C'est l'ampli de puissance (celui
+    auxquelles sont connectées les enceintes), qui doit déterminer le niveau
+    général.
+- id: 2
+  author: racoon97
+  date: 2008-09-22 00:01:00+01:00
+  contents: |
+    Seul petit hic : je n'ai jamais encore compris pourquoi le niveau du son
+    général sous Linux était bien en dessous, à configuration identique, de
+    celui de Windows, et ceci qu'il soit à 80 ou à 100%. J'en étais pas vraiment
+    certain, mais sur toute les machines testées il y a pas mal de db en moins
+    sous Linux. C'est encore plus flagrant sur les latops avec leur minuscules
+    haut-parleurs.

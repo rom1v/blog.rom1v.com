@@ -1,0 +1,15 @@
+- id: 1
+  author: Armetiz
+  date: 2008-11-11 19:01:00+01:00
+  contents: |
+    Très sympa la petite astuce, merci pour le partage ;)
+- id: 2
+  author: Misc
+  date: 2008-11-11 21:04:00+01:00
+  contents: |
+    Sinon, parmi les trucs bourrins, il y a le support de /dev/tcp
+    (<http://thesmithfam.org/blog/2006/05/23/bash-socket-programming-with-devtcp-2/>),
+    mais c'est pas activé par défaut sur tout les distributions.
+
+    ( en même temps, netcat n'est jamais installé par défaut )
+

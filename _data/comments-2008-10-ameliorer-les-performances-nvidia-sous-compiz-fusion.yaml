@@ -1,0 +1,66 @@
+
+- id: 1
+  author: Anonymous
+  date: 2008-10-07 18:10:00+01:00
+  contents: |
+    Apparement cela ne fonctionne qu avec le nouveau driver 177.67 en Beta, non
+    ?
+
+    Mais peut etre que je me trompe !
+
+     rcspam
+- id: 2
+  author: Oni
+  date: 2008-10-07 19:58:00+01:00
+  contents: |
+    Je viens d'essayer avec la version 173.14.12 des drivers Nvidia et X plante
+    au lancement de Compiz fusion après d'avoir fait nvidia-settings -a
+    InitialPixmapPlacement=2 -a GlyphCache=1 et je constate pas vraiment
+    d'amélioration quand j'ajoute les options dans xorg.conf (je suis à ~85 fps
+    dans le benchmark de compiz-fusion après les modifications donc…)
+- id: 3
+  author: Stéphane
+  date: 2008-10-07 20:39:00+01:00
+  contents: |
+    Bonjour,
+
+    Chez moi avec la version Beta, j'ai été obligé de supprimer la ligne
+    nvidia-settings -a... dans ~/.gnomerc car avec Avant Windows Manager
+    fonctionnait à 2 à l'heure.
+
+    J'ai laissé les options d'optimisation dans xorg.conf. Même si je n'ai pas
+    vu d'amélioration flagrante c'est à l'usage que je verrai si va marche mieux
+    ou non.
+
+    Merci pour l'info.
+- id: 4
+  author: Michael
+  date: 2008-10-08 10:33:00+01:00
+  contents: |
+    Ça fait quand même un peu bidouille à la MS/DOS, ce genre de choses.
+
+    Ce genre de hack n'aide pas à rendre le libre accessible à tous, et aussi
+    longtemps que nvidia persisteras à ne pas collaborer correctement avec le
+    monde du libre ( cad en fournissant des specs, ce genre de choses ), on
+    devra en passer par la, et dépendre de leur bon vouloir, ou devoir perdre du
+    temps à integrer des hacks à gauche et à droite au lieu de faire avancer le
+    libre.
+
+    L'article d'un dev kde (<http://vizzzion.org/?blogentry=819>) résume bien le
+    probléme, et perso, je trouve ça un peu triste, non ?
+- id: 5
+  author: ®om
+  date: 2008-10-08 11:31:00+01:00
+  contents: |
+    Je suis totalement d'accord avec toi michael, le mieux serait de ne pas
+    avoir à faire de telles manips, et que nvidia ouvre ses specs.
+
+    Mais bon on a l'habitude, c'est toujours les produits non ouverts qui
+    ralentissent le développement (flash, nvidia, etc.), dont malheureusement il
+    est difficile de se passer.
+- id: 6
+  author: kikislater
+  date: 2008-10-08 20:27:00+01:00
+  contents: |
+    Ces améliorations degradent les performances avec les drivers 173.14.12 et
+    une 7300 go. Je déconseille !

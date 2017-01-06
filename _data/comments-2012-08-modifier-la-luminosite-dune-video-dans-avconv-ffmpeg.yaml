@@ -1,0 +1,35 @@
+- id: 1
+  author: plop
+  date: 2012-08-14 23:21:06+02:00
+  contents: |
+    juste parce que ca m'intriguait:
+
+    > Ubuntu now uses libav which is a fork of the FFmpeg project
+
+    <http://stackoverflow.com/questions/9477115/who-can-tell-me-the-difference-and-relation-between-ffmpeg-libav-and-avconv>
+- id: 2
+  author: ux
+  author-url: http://blog.pkh.me
+  date: 2012-10-05 09:45:09+02:00
+  contents: |
+    Note aussi que si tu compiles FFmpeg avec --enable-gpl (souvent le cas), le
+    wrapper sur les filtres MPlayer sera distribué avec. Tu auras donc accès à
+    un equalizer ; tu as justement un exemple avec mp=eq2 un peu plus bas ici :
+    <http://ffmpeg.org/ffmpeg.html#mp>
+
+    Note : le portage de ce filtre en natif est en cours.
+- id: 3
+  author: ®om
+  date: 2012-10-05 10:39:21+02:00
+  contents: |
+    @[**ux**](#comment-2) :
+
+    Merci pour [ton
+    billet](http://blog.pkh.me/p/13-the-ffmpeg-libav-situation.html) qui
+    explique la situation entre *ffmpeg* et *libav*.
+
+    Je suis tombé dessus grâce à
+    [linuxfr](http://linuxfr.org/news/ffmpeg-1-0#comment-1395208) (et j'imagine
+    que tu es tombé sur mon blog par le commentaire en question ^^).
+
+    J'ai édité mon billet pour y faire référence.

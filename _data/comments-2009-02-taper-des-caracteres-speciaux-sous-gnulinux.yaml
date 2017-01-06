@@ -1,0 +1,349 @@
+- id: 1
+  author: Miles
+  date: 2009-02-01 13:10:28+01:00
+  contents: |
+    Et comment faire simplement un n~ (en un seul caractère bien sûr) avec une
+    disposition de clavier fr-oss ?
+- id: 2
+  author: Sedna
+  author-url: http://fumblefamily.org
+  date: 2009-02-01 13:36:58+01:00
+  contents: |
+    Très pratique ce billet ! Est-ce que tu sais si on peut trouver quelque part
+    un pdf A4 avec un récapitulatif de tout ca, incluant la table unicode, le
+    schéma du clavier, quelles combinaisons de touches pour faire les caractères
+    en haut à droite/bas à droite etc ?
+- id: 3
+  author: ikeluther
+  date: 2009-02-01 13:41:03+01:00
+  contents: |
+    Depuis le temps que je cherchais un billet là dessus!! Génial, merci! :)
+- id: 4
+  author: ®om
+  date: 2009-02-01 13:45:37+01:00
+  contents: |
+    > @[**Miles**](#comment-1)
+    >
+    > Et comment faire simplement un n~ (en un seul caractère bien sûr) avec
+    > une disposition de clavier fr-oss ?
+
+    À part *Ctrl+Shift+ud1* (Ñ) et *Ctrl+Shift+uf1* (ñ), je ne sais pas…
+
+    > @[**Sedna**](#comment-2)
+    >
+    > Est-ce que tu sais si on peut trouver quelque part un pdf A4 avec un
+    > récapitulatif de tout ca, incluant la table unicode, le schéma du clavier,
+    > quelles combinaisons de touches pour faire les caractères en haut à
+    > droite/bas à droite etc ?
+
+    Je ne sais pas. Par contre, tu ne pourras pas avoir la table *Unicode* sur
+    une feuille A4, elle contient potentiellement 65536 codes…
+- id: 5
+  author: zoom
+  date: 2009-02-01 13:50:14+01:00
+  contents: |
+    merci beaucoup pour ce blog je le visite régulierement !! bonne continuation
+    encore merci, ça me fait encore plus plaisir de savoir que je suis connecté
+    à l eee ;)
+- id: 6
+  author: Raphaël
+  author-url: http://www.lalala.fr
+  date: 2009-02-01 13:55:19+01:00
+  contents: |
+    Très utile en effet.
+
+    C'est quand même vachement pratique de pouvoir utiliser des accents sur les
+    majuscules. Ça respecte davantage la graphie française.
+
+    Sur ce sujet là, Ubuntu est bien mieux loti que Windows.
+
+    À noter aussi, l'application "Palette de caractères", à ajouter au tableau
+    de bord : Très pratique pour insérer des symboles arbitraires.
+- id: 7
+  author: Miles
+  date: 2009-02-01 14:24:31+01:00
+  contents: |
+    Merci d'avoir regardé, mais je ne trouve pas cette solution terrible… Bon,
+    au moins, maintenant je pourrai employer cette fichue lettre dans des
+    papiers en espagnol.
+- id: 8
+  author: Lunatic
+  author-url: http://blog.bafouillages.net
+  date: 2009-02-01 14:43:56+01:00
+  contents: |
+    Merci pour ce billet très instructif ! Je vais enfin pouvoir insérer
+    facilement des espaces insécables (U+A0) devant mes ponctuations doubles et
+    dans une expression entre guillemets français :)
+- id: 9
+  author: Zic
+  author-url: http://www.marsaud.org/
+  date: 2009-02-01 14:49:17+01:00
+  contents: |
+    Sans oublier les vrais apostrophes courbées (Wordpress que tu utilises comme
+    moteur de blog transforme automatiquement les guillemets droits `'` en ').
+
+    D'ailleurs, on ne va pas voir la différence là ;-).
+- id: 10
+  author: Zic
+  author-url: http://www.marsaud.org/
+  date: 2009-02-01 14:50:28+01:00
+  contents: |
+    Hmm, il a pris ça pour des guillemets du coup, enfin bref, il y a une
+    différence entre ce caractère : ' et celui qui se trouve sur votre clavier,
+    essayez dans un éditeur de texte par exemple ;-).
+- id: 11
+  author: Lunatic
+  author-url: http://blog.bafouillages.net
+  date: 2009-02-01 15:00:36+01:00
+  contents: |
+    Je viens de tester l'espace insécable dans un forum punBB, et le code source
+    de la page, une fois le message posté, n'affiche qu'une espace normale. Par
+    contre sur ce blog, avant le point d'exclamation de mon précédent message,
+    on a bien un ` `. Comment expliquer ce phénomène ? (←espace insécable) Ou
+    alors serait-ce ce blog qui disposerait d'un script particulier ? (←sans
+    espace insécable)
+- id: 12
+  author: Romain
+  date: 2009-02-01 15:07:46+01:00
+  contents: |
+    simple mais efficace! merci
+
+    par contre, j' utilise un clavier qwerty, sais-tu ou je pourrais trouver le
+    schema pour le layout USA alternative international?
+
+    PS:desole pour les accents, je ferai mieux la prochaine fois ;-)
+- id: 13
+  author: Lunatic
+  author-url: http://blog.bafouillages.net
+  date: 2009-02-01 15:11:47+01:00
+  contents: |
+    @[**Lunatic**](#comment-11)
+
+    Je me réponds ! En fait ça dépend de l'encodage de la page Web… ce qui
+    paraît logique d'ailleurs. Le forum punBB sur lequel l'espace insécable ne
+    fonctionne pas est en ISO-8859-1.
+- id: 14
+  author: Balkoth
+  date: 2009-02-01 15:56:41+01:00
+  contents: |
+    Pour tous les caractères qui ne sont pas directement accessibles, il suffit
+    d'utiliser la touche compose :
+
+    <http://forum.ubuntu-fr.org/viewtopic.php?id=2042>
+
+    Par exemple, [compose] n~ donne `ñ`, [compose] ae donne `æ`, [compose] ..
+    donne `…`, [compose] %o donne `‰`, …
+
+    Pas la peine d'apprendre par cœur la table unicode ;)
+- id: 15
+  author: ®om
+  date: 2009-02-01 16:10:34+01:00
+  contents: |
+    > @[**Balkoth**](#comment-14)
+    >
+    > Pour tous les caractères qui ne sont pas directement accessibles, il
+    > suffit d'utiliser la touche compose :
+    >
+    > <http://forum.ubuntu-fr.org/viewtopic.php?id=2042>
+    >
+    > Par exemple, [compose] n~ donne `ñ`, [compose] ae donne `æ`, [compose] ..
+    > donne `…`, [compose] %o donne `‰`, …
+    >
+    > Pas la peine d'apprendre par cœur la table unicode ;)
+
+    Merci pour la précision, j'ai rajouté un bloc expliquant ceci dans le billet
+    :)
+- id: 16
+  author: Benjamin
+  author-url: http://www.generation-linux.fr
+  date: 2009-02-01 16:24:16+01:00
+  contents: |
+    Génial cet article !
+
+    Merci beaucoup, je n'arrivais pas à faire "É", j'ai enfin compris qu'en plus
+    de AltGr, il fallait utiliser MAJ :)
+- id: 17
+  author: playmobitch
+  author-url: http://www.playmobitch.com
+  date: 2009-02-01 16:54:32+01:00
+  contents: |
+    pour la question sur le caractère ñ, perso je l'obtient avec : touche
+    compose + Alt Gr + 2 et enfin la touche n. Mais il doit sûrement y avoir une
+    autre méthode...
+- id: 18
+  author: "Le weblog de dwitgsi &raquo; Blog Archive &raquo; Écrire les caractères spéciaux sous GNU/Linux"
+  author-url: http://blog.dwitgsi.fr/2009/02/01/ecrire-les-caracteres-speciaux-sous-gnulinux/
+  date: 2009-02-01 17:11:56+01:00
+  pingback: true
+  contents: |
+    [...] Je viens de découvrir comment taper les caractères spéciaux sous Linux
+    ! J’suis comme un gosse du coup… ¬\_¬Bref, je vais vous expliqué la méthode
+    que j’ai trouvé chez «®om1v». [...]
+- id: 19
+  author: Ner0lph
+  date: 2009-02-01 18:08:51+01:00
+  contents: |
+    @[**Miles**](#comment-1)
+
+    C'est très simple : le tilde mort est présent en bas à droite de la touche
+    morte « ^ », à gauche de la touche « \$ ». Il te suffit donc de l'utiliser
+    comme pour l'accent circonflexe ou le tréma : ñ
+- id: 20
+  author: Miles
+  date: 2009-02-01 20:13:53+01:00
+  contents: |
+    @[**Ner0lph**](#comment-19)
+
+    Hum, j'ai essayé, mais je ne vois pas du tout où est cette touche morte
+    capable de produire un ~. J'ai tenté sur plusieurs niveaux de clavier
+    (AltGR, Maj+AltGR) sans succès. Je rappelle être en fr-oss et vouloir
+    conserver cet agencement qui me semble le plus efficace au quotidien (AtlGR
+    + o = œ, AtlGR+a = æ, etc).
+- id: 21
+  author: theClimber
+  author-url: http://theclimber.fritalk.com
+  date: 2009-02-01 22:41:08+01:00
+  contents: |
+    Pour faire les caractères majuscules accentuée sous linux c'est simple comme
+    bonjour :
+
+    Shift-lock puis le caractère accentué que tu veux :
+
+     * shift-lock + é
+     * shift-lock + à
+     * ...
+
+    Pas besoin de 1001 combinaison de touche compliqué.
+
+    En tout cas ça marche chez moi !
+- id: 22
+  author: "Taper des caractères spéciaux sous GNU/Linux"
+  author-url: http://www.clicatoo.com/taper-des-caracteres-speciaux-sous-gnulinux/11531/
+  date: 2009-02-02 04:01:55+01:00
+  pingback: true
+  contents: |
+    [...] See the original post: Taper des caractères spéciaux sous GNU/Linux
+    [...]
+- id: 23
+  author: sergio
+  author-url: http://cahierdesergio.free.fr/
+  date: 2009-02-03 19:25:02+01:00
+  contents: |
+    @[**Sedna**](#comment-2)
+    Dans le panneau de contrôle, tu sélectionnes ton agencement clavier (dans
+    l'onglet "agencement") et tu cliques sur "imprimer un shéma de
+    l'agencement". Tu peux choisir ensuite l'imprimante PS ou PDF...
+
+    Je subodore om d'avoir utilisé cette méthode pour illustrer l'article...
+- id: 24
+  author: LordFarquaad
+  date: 2009-02-03 22:24:36+01:00
+  contents: |
+    C'est amusant, je me serais attendu à voir surgir « Clavier Dvorak » dans
+    les commentaires. Ça, c'est fait…
+
+    Pour ceux que cela intéresse, il s'agit d'une disposition optimisée pour
+    être ergonomique, rapide et facile. Pour la langue Française, la disposition
+    bépo est (pratiquement) finalisée (1.0rc2) :
+    <http://www.clavier-dvorak.org/>
+
+    Avec cette disposition, taper des caractères accentués en majuscule, des
+    espaces insécables, des « ® © ™ Œ Æ Ñ Ç ‰ ¿ ' ≠×÷ » ne pose aucune
+    difficulté. :)
+- id: 25
+  author: Pinkilla
+  author-url: http://blog.namok.be
+  date: 2009-02-05 16:44:05+01:00
+  contents: |
+    Pour le Ñ, je fais simplement [AltGr]~ (ce tilde se trouve chez moi à côté
+    de la touche [Shift] de droite) suivi de N ([Shift] n).
+
+    Pour la touche compose et ceux qui ne veulent pas trop faire des "clic
+    clic", il suffit d'ajouter dans son fichier xorg.con, dans la section "Input
+    Device-Keyboard Device" la ligne qui définit la touche Windows comme touche
+    de composition ...
+
+    Option "XkbOptions" "compose:lwin"
+- id: 26
+  author: JRo
+  date: 2009-02-07 22:56:08+01:00
+  contents: |
+    > @[**Sedna**](#comment-2)
+    >
+    > Très pratique ce billet ! Est-ce que tu sais si on peut trouver quelque
+    > part un pdf A4 avec un récapitulatif de tout ca, incluant la table
+    > unicode, le schéma du clavier, quelles combinaisons de touches pour faire
+    > les caractères en haut à droite/bas à droite etc ?
+
+    L'image du layout du clavier suffit ! la position du caractère sur la touche
+    permet de dire s'il faut combiner avec shift, altgr ou les 2.
+- id: 27
+  author: Guizmo.7
+  date: 2009-02-08 20:08:23+01:00
+  contents: |
+    Et bien didons, on peut dire que ton blog gagne à être 100% libre ! Tes
+    stats de commentaires ont explosé par rapport à ceux sur blogspot !
+
+    Bonne continuation.
+- id: 28
+  author: T89
+  date: 2009-02-09 23:55:17+01:00
+  contents: |
+    Je confirme l'utilité du clavier bépo, qui apporte bien plus que la facilité
+    d'accès aux caractères.
+- id: 29
+  author: Gilles
+  author-url: http://gilles.wittezaele.fr/blog/
+  date: 2009-02-14 11:18:08+01:00
+  contents: |
+    Petite remarque sur la France : en France, on a souvent appris (je pense,
+    j'ai pas de stats) que les majuscule ne doivent pas être accentuées. donc on
+    n'a pas développé de clavier avec ça et donc...
+
+    Enfin c'est mon avis. J'accentue maintenant les majuscules.
+
+    A lire :
+    <http://fr.wikipedia.org/wiki/Usage_des_majuscules_en_fran%C3%A7ais#Accentuation_des_majuscules_et_des_capitales>
+
+    Sinon c'est ton thème qui met les commentaires d'un côté et les tiens de
+    l'autre ?
+- id: 30
+  author: Thierry
+  date: 2009-07-29 16:15:00+02:00
+  contents: |
+    Moi j'utilise depuis toujours USA international et ça marche super bien. Et
+    c'est pareil pour tous les systèmes... et ils l'ont dans tous les systèmes.
+    Alors là... Sur mac c'est appelé Américain étendu. C'est sûr que lorsqu'on a
+    appris sur du AZERTY... C'est assez difficile de changer...
+
+    Je voulais aussi dire que si vous connaissez le code utf-8 du caractère en
+    question, vous faites sous gnome, CTRL + SHIFT + u + Le numéro. ex. ђ (u452)
+- id: 31
+  author: Thierry
+  date: 2009-07-29 16:59:54+02:00
+  contents: |
+    J'ai oublié de le dire... c'est le numéro hexadécimal.............
+
+    ^^
+
+    <http://fr.wikipedia.org/wiki/Table_des_caractères_Unicode_(0000-0FFF)>
+- id: 32
+  author: Yoha
+  date: 2009-11-21 13:26:24+02:00
+  contents: |
+    Ça faisait déjà un moment que je cherchais comment faire les caractères
+    mathématiques sous GNU/Linux. Très utile !
+- id: 33
+  author: ®om
+  date: 2009-12-13 14:13:06+02:00
+  contents: |
+    Pour le ñ, il est également possible de faire : **AltGr + ^, n**.
+- id: 34
+  author: "À la recherche de l&#8217;espace insécable | Vincent Mabillot, expressions libres"
+  author-url: http://vincent.mabillot.net/a-la-recherche-de-lespace-insecable-1683
+  date: 2013-02-03 16:43:51+01:00
+  pingback: true
+  contents: |
+    [...]
+    http://blog.rom1v.com/2009/02/taper-des-caracteres-speciaux-sous-gnulinux/
+    [...]

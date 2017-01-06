@@ -1,0 +1,81 @@
+- id: 1
+  author: "Tweets that mention Filtrer les spams sur un serveur mail (SpamAssassin) « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/trackback?url=http://blog.rom1v.com/2010/03/filtrer-les-spams-sur-un-serveur-mail-spamassassin/
+  date: 2010-03-26 08:30:15+01:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by Planet-Libre and ubuntufr,
+    Jérôme Tux Ubuntero. Jérôme Tux Ubuntero said: RT @planetlibre: ®om :
+    Filtrer les spams sur un serveur mail (SpamAssassin): Pour continuer ma
+    série d'articles sur l'auto-héberge... http://bit.ly/ajJUCN [...]
+- id: 2
+  author: michauko
+  author-url: http://michauko.org/blog/
+  date: 2010-03-26 09:03:41+01:00
+  contents: |
+    Salut,
+
+    2/3 trucs qui peuvent intéresser/compléter :
+
+    <http://michauko.org/blog/tag/spamassassin/>
+
+    <http://michauko.org/blog/tag/postfix/>
+
+    C'est du Debian, ce qui ne doit rien changer pour un ubuntu server
+
+    bye
+- id: 3
+  author: philpep
+  author-url: http://blog.philpep.org
+  date: 2010-03-26 09:09:54+01:00
+  contents: |
+    Tu as aussi Dspam. Une des fonctionnalités qui font que je l'utilise c'est
+    qu'il s'interface bien avec dovecot (serveur imap) il y a un plugin qui
+    permet d'avoir un dossier spam et tout ce qui est mis dedans est rapporté
+    comme spam à Dspam.
+- id: 4
+  author: phil
+  date: 2010-04-05 09:33:00+01:00
+  contents: |
+    Merci pour ce nouvel article Rom ! Je suis très tenté de m'inspirer sur ce
+    que tu as mis en oeuvre avec procmail d'une part et spamassin/procmail de
+    l'autre.
+
+    On voit tout de même que l'acteur central de cette organisation est procmail
+    et si j'hésite, c'est parce que je sais que je pourrai affiner au fil de
+    l'eau mes règles procmail sur le serveur mais qu'en sera-t-il si je fourni
+    une boîte mail à quelqu'un de ma famille par exemple ? Existe-t-il un plugin
+    roundcube pour piloter un peu procmail ou suis-je obliger de me tourner vers
+    Sieve pour permettre ce genre de chose ? Sieve me semble plus compliqué :
+    peut-il quand même être interphasé simplement avec spamassassin ?
+
+    (Je sais que tu as justement choisi procmail mais je suppose que tu as déjà
+    lu pas mal de doc sur la question ^^).
+
+    Merci pour tes contributions !
+- id: 5
+  author: ®om
+  date: 2010-04-07 21:48:58+01:00
+  contents: |
+    Je ne connais que procmail, je n'ai pas essayé sieve, et je suis en attente
+    de retours d'expériences (notamment pour la configuration des règles de
+    filtrage sur le serveur à partir d'un client mail).
+
+    Donc n'hésitez pas à essayer et à blogger :-)
+- id: 7
+  author: 'L&#8217;hébergement total, chez soit &#8211; Influence PC'
+  author-url: http://influence-pc.1s.fr/index.php/07-10-2010-lhebergement-total-chez-soit
+  date: 2010-10-07 01:10:36+02:00
+  pingback: true
+  contents: |
+    [...] termine par un filtre à spam coté serveur : - soit le classique
+    Spamassassin, - soit Maia Mailguard, qui propose une interface [...]
+- id: 8
+  author: 'TUTO serveur de mail sous Ubuntu (postfix) | Admin Reso'
+  author-url: http://www.adminreseau.fr/?p=541
+  date: 2011-01-06 18:01:12+01:00
+  pingback: true
+  contents: |
+    [...] vous pouvez trouver des fonctionnalités à mettre en place (un webmail
+    tel que RoundCube, un anti-spam, le tri des mails sur le serveur,
+    une authentification [...]

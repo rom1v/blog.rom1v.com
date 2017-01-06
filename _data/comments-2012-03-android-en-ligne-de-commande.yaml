@@ -1,0 +1,38 @@
+- id: 1
+  author: FTG
+  author-url: http://lutix.org
+  date: 2012-04-01 07:29:48+01:00
+  contents: |
+    Le titre m'alléchait: je pensais y trouver quelques raisons de développer
+    des applications pour la ligne de commande Android ;)
+
+    D'ailleurs, j'en profite pour lancer une bouteille à la mer: la plupart des
+    applis serveurs sur Android ouvrent des sockets ipv6, alors que mon réseau
+    wifi est en ipv4... comment faire coexister les 2 pour que je puisse accéder
+    à mon mobile en ssh?
+- id: 2
+  author: Antoine
+  date: 2012-04-13 10:35:32+01:00
+  contents: |
+    Sympa ton tuto !
+
+    Par contre j'ai un soucis, je n'ai aucun fichier ant.properties à la racine
+    de mon projet android.
+
+    Les seuls fichiers de propriété dont je dispose sont ".project" (contenant
+    des buildspec) ".classpath" et "project.properties" (il est spécifié qu'il
+    ne faut pas le modifier car il est régénérer automatiquement et
+    régulièrement).
+
+    Je travaille sous Xp et j'utilise Eclipse.
+- id: 3
+  author: ®om
+  date: 2012-04-13 18:58:45+01:00
+  contents: |
+    Par défaut, `ant.properties` n'est pas créé. Tu peux le créer, il sera lu
+    par *Ant*. En effet, si tu regardes le contenu du `build.xml`, tu peux
+    trouver :
+
+    {% highlight xml %}
+        <property file="ant.properties" />
+    {% endhighlight %}

@@ -1,0 +1,358 @@
+- id: 1
+  author: ZondeR
+  date: 2010-11-05 18:36:43+02:00
+  contents: |
+    Merci pour le contrôle du volume et le F3 de Nautilus.
+
+    On peut aussi aller directement à l'URL contenue dans le presse-papier en
+    faisant un clic-milieu sur "le petit icône (le favicon) à gauche de la barre
+    d'adresse".
+
+    On peut ouvrir directement la page d'accueil dans un nouvel onglet avec un
+    clic-milieu sur le bouton de la page d'accueil. Que de décisecondes gagnées
+    grâce à ça! :)
+- id: 2
+  author: han
+  date: 2010-11-05 18:50:43+02:00
+  contents: |
+    merci pour le redimensionnement des fenêtres, ca va m'éviter de galérer a
+    chercher les coins !
+
+    Sinon, pour naviguer dans les espaces de travail : en plus de molette de la
+    souris sur le gestionnaire d'espaces de travail, on peut aussi faire
+    ctrl+alt+fleche pour passer de l'un a l'autre.
+- id: 3
+  author: ®om
+  date: 2010-11-05 18:50:58+02:00
+  contents: |
+    > @[**ZondeR**](#comment-1)
+    >
+    > On peut aussi aller directement à l'URL contenue dans le presse-papier en
+    > faisant un clic-milieu sur « le petit icône (le favicon) à gauche de la
+    > barre d'adresse ».
+
+    Ah oui effectivement, et il n'y a même pas besoin de modifier la
+    configuration par défaut comme ça. Merci ;-)
+- id: 4
+  author: David
+  author-url: http://perpendiculaires.free.fr
+  date: 2010-11-05 19:00:20+02:00
+  contents: |
+    Merci pour tout !
+- id: 5
+  author: Félix_Faure
+  date: 2010-11-05 19:18:17+02:00
+  contents: |
+    Merci, c'est excellent, mais je suis prêt à parier que ces astuces n'ont été
+    documentées nulle part par leurs développeurs.
+- id: 6
+  author: "Tweets that mention 1101 astuces pour Ubuntu 10.10 « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/blog.rom1v.com/2010/11/1101-astuces-pour-ubuntu-10-10/?utm_source=pingback&amp;utm_campaign=L2
+  date: 2010-11-05 19:51:57+02:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by Sylvain Deloux and Jean-Michel
+    Frouin, Damien Gombault. Damien Gombault said: Des astuces pour GNOME,
+    Compiz et Firefox http://is.gd/gKJ73\#tips \#gnome \#compiz \#firefox [...]
+- id: 7
+  author: Julien Cornuwel
+  date: 2010-11-05 19:54:06+02:00
+  contents: |
+    Merci beaucoup pour ces astuces !
+
+    Dommage qu'il n'y ait pas de bouton Flattr sur le site, j'aurai donné avec
+    plaisir...
+- id: 8
+  author: anath
+  date: 2010-11-05 20:14:06+02:00
+  contents: |
+    1101 ça porte malheur ;) merci
+- id: 9
+  author: eon01
+  author-url: http://web-01.blogspot.com
+  date: 2010-11-05 20:28:36+02:00
+  contents: |
+    Merci pour cet article , énorme . Je partage ;)
+- id: 10
+  author: annso
+  author-url: http://www.as-i-am.fr
+  date: 2010-11-05 21:03:00+02:00
+  contents: |
+    Merci pour toutes ces astuces, je les ai quasiment toutes découvertes, et
+    j'espère que j'arriverais à m'en souvenir pour les utiliser !
+- id: 11
+  author: djiock
+  author-url: http://blog.junegros.fr
+  date: 2010-11-05 21:47:17+02:00
+  contents: |
+    Piou merci yen a plein que je connaissais pas, article d'utilité publique !
+- id: 12
+  author: Ben
+  author-url: http://www.element62.com
+  date: 2010-11-05 23:27:03+02:00
+  contents: |
+    salut, merci beaucoup.
+
+    pour renommer un fichier avec extension, il y a un chouilla plus pratique:
+    F2, puis encore F2 :-)
+- id: 13
+  author: enebre
+  author-url: https://sites.google.com/site/enebreun/
+  date: 2010-11-05 23:48:03+02:00
+  contents: |
+    superbe cette news, ca manquait.
+
+    Alt + clic gauche déplace la fenêtre
+
+    Alt + clic droit donne un autre menu fonction
+
+    on peut aussi déplacer la barre personnelle de FF à côté des titres menus et
+    ainsi avoir que les icônes sans les textes (éffacer le texte depuis
+    "propriétés"), de nos favoris préférés, comme illustré sur cette capture
+    d'écran <http://www.23hq.com/enebre/photo/5645179/original>
+- id: 14
+  author: Christophe
+  author-url: http://catarina.fr
+  date: 2010-11-06 00:25:57+02:00
+  contents: |
+    Belle collection d'astuces :)
+
+    Pour ceux qui utilisent Firefox (et Chromium), le "Chargement d'une URL par
+    un clic milieu" peut être amplement remplacée par une extension, Easy
+    DragToGo.
+
+    J'explique comment elle fonctionne ici :
+    <http://catarina.fr/index.php?pages/Cliquer-tirer-pour-garder-le-fil>
+
+    Et la touche Super recèle une fonction de zoom intéressante : Super+Molette
+    = Jamais plus presbyte !
+
+    ;-)
+- id: 15
+  author: zedtux
+  author-url: http://www.zedroot.org/
+  date: 2010-11-06 12:14:04+02:00
+  contents: |
+    Au début je me suis dis "Encore un post bidon sans vrai nouveautées".
+
+    Mais après la lecture fini, j'y ai appris pas mal de choses ! Merci ! :)
+- id: 16
+  author: christophe
+  date: 2010-11-06 13:15:49+02:00
+  contents: |
+    Malgré de nombreuses années sous ubuntu (et encore plus avec GNOME), on
+    découvre encore des astuces régulièrement, avec toujours un certain plaisir
+    !
+
+    Merci pour ce post, qui en contient plusieurs que je ne connaissais pas.
+
+    Une autre [astuce][] dont je ne peux plus me passer.
+
+    [astuce]: {% post_url 2009-06-30-apercus-des-fichiers-openoffice-org-dans-nautilus %}
+
+    ps : félicitations !
+- id: 17
+  author: bristow
+  date: 2010-11-06 19:08:36+02:00
+  contents: |
+    Sympa ! Merci
+- id: 18
+  author: 'Geek links du 5-11-2010 au 5-11-2010 | Alcoogeek'
+  author-url: http://www.alcoogeek.fr/geek-links-du-5-11-2010-au-5-11-2010/
+  date: 2010-11-07 00:04:34+02:00
+  pingback: true
+  contents: |
+    [...] 1101 astuces pour Ubuntu 10.10 – [...]
+- id: 19
+  author: Herisson
+  date: 2010-11-07 11:01:23+02:00
+  contents: |
+    Merci
+
+    En alternative au \#13 :
+
+    Pour ouvrir une adresse de site non cliquable, sélectionner le texte et le
+    faire glisser a droite du dernier onglet (il faut voir une flèche verte
+    descendante) et la page du site s'ouvre
+
+    Pour faire une recherche d'un texte quelconque, il suffit de le faire
+    glisser dans la barre de recherche en haut à droit et une page du moteur
+    sélectionné s'ouvre en arrière plan.
+
+    Moins rapide que Easy Drag mais utile car cela fait une extension de moins
+    et surtout cela marche qu'en l'extension n'est pas dispo pour les versions
+    de FF en développement.
+- id: 20
+  author: tristan
+  author-url: http://www.aumax.com/linux/
+  date: 2010-11-07 23:39:40+02:00
+  contents: |
+    Sympa les astuces, j'aime bien Ubuntu comme client, mais comme serveur je
+    préfère de loin Debian.
+- id: 21
+  author: kanon
+  author-url: http://le-blog-de-kanon.ma-deesse.com
+  date: 2010-11-08 13:02:17+02:00
+  contents: |
+    Excellent ces petites astuces, je connaissais pas le F3.
+- id: 22
+  author: Zeboch
+  date: 2010-11-09 10:53:55+02:00
+  contents: |
+    Ça me donne envie d'installer la 10.10 !
+
+    すごい !
+- id: 23
+  author: telemarkus
+  date: 2010-11-09 21:33:52+02:00
+  contents: |
+    Merci pour ces tuyaux, je débute sur Linux avec Ubuntu et je m'aperçois
+    qu'il y a plein de petits truc géniaux, il faut juste aller les chercher,
+    une synthèse comme ça facilité la vie !
+- id: 24
+  author: Michel
+  date: 2010-11-11 00:18:21+02:00
+  contents: |
+    D'excellentes astuces! A utiliser sans modération.
+- id: 25
+  author: Dakine
+  date: 2010-11-14 03:10:25+02:00
+  contents: |
+    Bien vu le coup de la molette pour le son !
+- id: 26
+  author: enebre
+  author-url: https://sites.google.com/site/enebreun/
+  date: 2010-11-15 20:11:31+02:00
+  contents: |
+    Dans nautilus la touche F2, comment fonctionne t elle ?
+
+    La procédure me semble plus compliquée qu'un clic droit "rennomer"
+- id: 27
+  author: ®om
+  date: 2010-11-18 20:32:07+02:00
+  contents: |
+    > @[**enebre**](#comment-26)
+    >
+    > Dans nautilus la touche F2, comment fonctionne t elle ?
+    >
+    > La procédure me semble plus compliquée qu'un clic droit "rennomer"
+
+    Tu sélectionnes un fichier et tu fais F2 (ou Shift+F2, ou F2 deux fois).
+- id: 28
+  author: Hiko Seijûrô
+  author-url: http://hikoseijuro.celeonet.fr/blog/
+  date: 2010-11-25 00:58:46+01:00
+  contents: |
+    Merci pour ces astuces pratiques !
+- id: 29
+  author: florent
+  author-url: http://www.iluvmyblackberry.com
+  date: 2010-11-29 11:37:17+01:00
+  contents: |
+    merci pour toutes ces infos
+- id: 30
+  author: lsga
+  date: 2010-12-13 15:36:43+01:00
+  contents: |
+    super blog !!!
+- id: 31
+  author: Cliclic
+  date: 2011-08-21 15:30:06+02:00
+  contents: |
+    Bonjour,
+
+    je découvre ton blog , il y a tout un tas de truc sympa à lire :)
+
+    Je connaissais déjà toutes ces astuces, j'en ai une autre à vous proposer
+    que j'ai paramétré et dont je ne peux plus me passer.
+
+    J'ai paramétré le bouton clic-molette du milieu pour réduire les fenêtres !
+    Extrêmement pratique !
+- id: 32
+  author: Drosotomate
+  date: 2011-11-27 02:23:36+01:00
+  contents: |
+    Super, merci beaucoup !
+
+    Dans Firefox, on peut aussi utiliser le clic central pour ouvrir la page
+    suivante ou précédente dans un nouvel onglet.
+
+    Dans VLC, on peut aussi changer le volume avec la molette en survolant le
+    contrôle volume.
+- id: 33
+  author: tony
+  date: 2011-12-27 13:29:18+01:00
+  contents: |
+    Bonjours,
+
+    J'ai lu et essayé les différentes astuces que tu proposes dans ton blog. En
+    ce qui me concerne j'ai déterminé que certaine ne fonctionne pas avec la
+    version UBUNTU 10.10 32bits que j'ai installer sur mon ordinateur.
+
+    Voici la liste de celles qui ne fonctionnent pas.
+
+    Positionnement d'un ascenseur
+
+    un clic dans la partie grisée permet de déplacer le curseur page par page ;
+
+    Dans mon cas 1er déplace à 25 cm, et le 2ème clic déplacement vers 5,5 cm de
+    la page suivante
+
+    Déplacement d'un applet sans effet
+
+    Redimensionnement d'une fenêtre sans effet
+
+    Capture d'écran rapide par zone sans effet
+
+    Suppression d'un historique de liste déroulante sans effet
+
+    Voici la liste des astuces qui foctionnent
+
+    Positionnement d'un ascenseur
+
+    un clic sur les petites flèches permettent de déplacer le curseur ligne par
+    ligne ;
+
+    un glisser-déposer (clic gauche maintenu sur le curseur pendant un
+    déplacement) permet de placer le curseur à volonté.
+
+    Contrôle du volume OK
+
+    Double-panneau Nautilus OK
+
+    Renommage avec ou sans extension OK
+
+    Déplacement d'une fenêtre OK
+
+    Liste des astuces non testés
+
+    Ajout d'un lien dans gnome-panel
+
+    Chargement d'une URL par un clic milieu
+
+    Notifications intégrées
+
+    Par contre je suis toujours à la recherche de la possibilité d'améliorer la
+    capture de la poignée d'agrandissement ou de réduction de fenêtres.
+
+    Chaque fois que j'ai posé la question je n'ai jamais eu de réponse, à croire
+    que cela n'intéresse personne.
+
+    Par contre j'ai observé que dans la version de Ubuntu 11.10 la capture des
+    poignées ont été grandement amélioré, mais le style de tableau de bord ainsi
+    que d'autres fonctions ne me plaisent pas et n'ayant pas la possibilité de
+    les modifier je suis revenu à la version 10.10.
+
+    Merci quand même pour les quelques astuces qui fonctionnent
+- id: 34
+  author: Cedric
+  date: 2012-02-13 15:16:46+01:00
+  contents: |
+    Salut.
+
+    Quelqu'un peut-il m'aider pour activer "autre panneau" dans le menu
+    contextuel copier vers de Nautilus.
+
+    Je suis sur ubuntu 11.10 oneiric.
+
+    Merci pour votre future réponse.

@@ -1,0 +1,71 @@
+- id: 1
+  author: Android en ligne de commande &#8211; ®om&#039;s blog
+  author-url: http://blog.rom1v.com/2012/03/android-en-ligne-de-commande/
+  date: 2012-05-24 23:43:55+01:00
+  pingback: true
+  contents: |
+    [...] le Vendor ID du matériel sur cette page puis créer un fichier
+    /etc/udev/rules.d/51-android.rules (sauf sous Debian) [...]
+- id: 2
+  author: wilfried18
+  author-url: http://ordica-depanne.com
+  date: 2012-05-25 03:27:47+01:00
+  contents: |
+    Merci pour ce tuto
+
+    mais aprés sa nous permet de faire quoi?
+
+    il y a t'il une façon de le faire sous Windows?
+- id: 3
+  author: Cyril B
+  date: 2012-05-25 06:18:23+01:00
+  contents: |
+    Très intéressant la relation entre `/lib/...` et `/etc/rules.d/...`
+
+    Par contre, la commande `udevadm trigger` doit permetre d'éviter le restart
+- id: 4
+  author: src
+  author-url: http://maniatux.fr
+  date: 2012-05-25 08:44:13+01:00
+  contents: |
+    Ou sinon, si tu ne veux pas te casser la tête, utilise adb en root... pas
+    besoin de faire les manipulations udev. Je me suis cassé la tête pendant une
+    heure avant de découvrir qu'en su ça marchait directement.
+- id: 5
+  author: ®om
+  date: 2012-05-25 08:54:49+01:00
+  contents: |
+    > @[**wilfried18**](#comment-2)
+    >
+    > mais aprés sa nous permet de faire quoi?
+
+    Ça permet de développer pour *Android* ou d'installer des
+    [APK](http://en.wikipedia.org/wiki/APK_%28file_format%29).
+
+    > @[**wilfried18**](#comment-2)
+    >
+    > il y a t'il une façon de le faire sous Windows?
+
+    Win-quoi ? ;-)
+- id: 6
+  author: ®om
+  date: 2012-05-25 08:57:29+01:00
+  contents: |
+    > @[**Cyril B**](#comment-3)
+    >
+    > Par contre, la commande `udevadm trigger` doit permetre d'éviter le
+    > restart
+
+    Ah ? Je n'ai pas cette commande.
+
+    D'ailleurs, je ne suis pas sûr à 100% que le restart d'`udev` soit
+    nécessaire (je pense que oui).
+- id: 7
+  author: Elessar
+  author-url: http://tanguy.ortolo.eu/
+  date: 2012-05-25 15:57:06+01:00
+  contents: |
+    Plus simple et plus propre, plutôt que de rendre ton téléphone accessible en
+    écriture par tout le monde (très mauvaise habitude à prendre, si tu te
+    retrouves un jour sur un serveur multi-utilisateur à faire des chmod 777 ou
+    666 par réflexe) : ajoute-toi au groupe plugdev.

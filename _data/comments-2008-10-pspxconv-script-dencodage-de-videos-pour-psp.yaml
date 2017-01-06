@@ -1,0 +1,69 @@
+- id: 1
+  author: Costalfy
+  date: 2008-10-30 08:26:00+01:00
+  contents: |
+    Salut,
+    sympa ce script. est-ce que tu connais PSPVC pour linux
+    <http://pspvc.sourceforge.net/index_fr.html>
+
+    Il fait exactement la meme chose que ton script avec un GUI en plus ;-)
+- id: 2
+  author: i M@N
+  date: 2008-10-30 14:13:00+01:00
+  contents: |
+    Hello.
+
+    Jette un oeil @ <http://forum.ubuntu-fr.org/viewtopic.php?pid=1221710>
+
+    C'est expliqué comment récupérer les infos des pistes de ton .mkv avec
+    mplayer.
+
+    aid = audio
+
+    sid = sous-titres
+
+    Ensuite il faudra une ligne de commande dans ce genre pour encoder :
+
+        mencoder -oac mp3lame -lameopts cbr=128 -ovc xvid -xvidencopts bitrate=900 -aid 0 input.mkv -o output.avi
+
+    @+...
+- id: 3
+  author: ®om
+  date: 2009-06-25 00:21:02+02:00
+  contents: |
+    J'ai fait quelques modifs, notamment pour gérer l'aspect-ratio correctement
+    tout en ne dépassant pas 480×272.
+- id: 4
+  author: zetax
+  date: 2009-10-13 19:36:38+02:00
+  contents: |
+    un grand merci pour ton script je n'utilise que ça pour convertir mes vidéos
+    pour une qualité au top :)
+
+    encore merci
+- id: 5
+  author: "Conversion des films pour la PSP sous GNU/Linux &laquo; Improve the world"
+  author-url: http://geenux.wordpress.com/2009/12/24/conversion-des-films-pour-la-psp-sous-gnulinux/
+  date: 2009-12-24 14:45:22+02:00
+  pingback: true
+  contents: |
+    [...] plus de détails sur le script, regardez l’article qui m’a fait
+    découvrir ce magnifique script Au cas où, voici le script en question:
+    \#!/bin/sh \# pspxconv : video encoding script for PSP \# \# [...]
+- id: 6
+  author: jo
+  date: 2010-06-21 21:30:29+02:00
+  contents: |
+    Bonjour
+
+    Il semblerait que les vidéos encodées avec x264 sous lucid (avec paquets
+    medibuntu) ne soient pas reconnues sur la PSP. Suis je seul dans ce cas ?
+
+    A+
+- id: 7
+  author: jo
+  date: 2010-06-21 21:42:42+02:00
+  contents: |
+    Apparemment je ne suis pas le seul dans ce cas
+
+    <http://ubuntuforums.org/showthread.php?p=9250205>

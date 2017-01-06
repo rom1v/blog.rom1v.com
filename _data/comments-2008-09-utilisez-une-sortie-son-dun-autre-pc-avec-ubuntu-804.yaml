@@ -1,0 +1,28 @@
+- id: 1
+  author: cudjoe
+  date: 2008-09-18 01:46:00+01:00
+  contents: |
+    cela fonctionne plutôt bien :)
+
+    j'ai un peu soucis, le son est très saccadé sur le PC serveur. Serait-ce un
+    problème de bande passante ?
+- id: 2
+  author: SexyMimi
+  date: 2008-12-17 12:25:00+01:00
+  contents: |
+    Cela fonctionne pas du tout chez moi =( !
+
+    Comment fait-on pour configurer le "serveur" ?
+
+    Déjà je pense que mon "serveur" ne détecte pas mon "client"... j'ai tout
+    fait comme il est expliqué pourtant =( !
+
+    C'est dommage, ça à l'air facile et sacrément utile !
+- id: 3
+  author: "®om&#8217;s blog &raquo; PulseAudio et X-forwarding : trouver le serveur de son"
+  author-url: http://blog.rom1v.com/2008/09/pulseaudio-et-x-forwarding-trouver-le-serveur-de-son/
+  date: 2009-01-31 12:44:15+01:00
+  pingback: true
+  contents: |
+    [...] ensuite présenté comment rediriger le son vers un autre PC (grâce à
+    [...]

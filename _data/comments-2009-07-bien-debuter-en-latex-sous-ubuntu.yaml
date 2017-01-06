@@ -1,0 +1,419 @@
+- id: 1
+  author: "taziden (taziden) 's status on Wednesday, 15-Jul-09 23:27:24 UTC - Identi.ca"
+  author-url: http://identi.ca/notice/6517453
+  date: 2009-07-16 01:27:10+02:00
+  pingback: true
+  contents: |
+    [...] http://blog.rom1v.com/2009/07/bien-debuter-en-latex-sous-ubuntu/ [...]
+- id: 2
+  author: celui
+  author-url: http://griffonnages.net
+  date: 2009-07-16 03:20:40+02:00
+  contents: |
+    Il faut appeler le package geometry avec l'option a4paper en France ou plus
+    systématiquement
+
+    {% highlight latex %}
+    \documentclass[a4paper]{article}
+    {% endhighlight %}
+- id: 3
+  author: ®om
+  date: 2009-07-16 07:52:52+02:00
+  contents: |
+    @[**celui**](#comment-2)
+    Tu as raison, sans a4paper, la page mesure 215,9 mm × 279,4 mm (US Letter)
+    au lieu de 210 mm × 297 mm (A4).
+
+    J'ai modifié dans le billet.
+- id: 4
+  author: Nico
+  author-url: http://duboisnicolas.free.fr
+  date: 2009-07-16 09:42:49+02:00
+  contents: |
+    Merci pour ton post ! Pour les marges, tu as aussi le package fullpage (pas
+    toujours compatible avec tous les types de documents, notamment les
+    koma-scripts).
+
+    Question du jour : est-ce que tu utilises LaTeX en entreprise ?
+- id: 5
+  author: Morgan
+  date: 2009-07-16 09:46:01+02:00
+  contents: |
+    Merci pour ces informations. J'ai appris plein de choses !
+- id: 6
+  author: Chichille
+  date: 2009-07-16 10:28:45+02:00
+  contents: |
+    Intéressant le coup des métadonnées PDF.
+
+    Par contre, comme tu le fais remarquer, le support d'UTF-8 relève de la
+    grosse bidouille. Du coup, si le texte doit contenir pas mal de langues en
+    même temps (genre du français, du japonais, du russe, du vietnamien, du
+    hindi, du grec, du polonais... dans le même document, y compris la bilbio),
+    ça devient abominablement compliqué (genre la config pour avoir du chinois
+    n'est pas compatible avec celle pour le cyrillique, les tutos pour le
+    vietnamien sont... en vietnamien, forcément, etc.).
+
+    Dans ce cas, il peut être intéressant d'aller voir du côté de Xelatex, que
+    j'ai personnellement découvert beaucoup trop tard (pas 100% compatible avec
+    mes docs Latex existants).
+- id: 7
+  author: ®om
+  date: 2009-07-16 10:36:32+02:00
+  contents: |
+    @[**Chichille**](#comment-6)
+
+    Le support de l'UTF-8 n'est pas de la bidouille, il faut juste spécifier
+    l'encodage dans l'en-tête. Et après tu peux écrire tous les caractères
+    Unicode (codés en UTF-8) sans aucun problème.
+
+    Ou alors je n'ai pas compris ce que tu as voulu dire.
+- id: 8
+  author: Chichille
+  date: 2009-07-16 13:09:16+02:00
+  contents: |
+    > @[**®om**](#comment-7)
+    >
+    > Le support de l'UTF-8 n'est pas de la bidouille, il faut juste spécifier
+    > l'encodage dans l'en-tête. Et après tu peux écrire tous les caractères
+    > Unicode (codés en UTF-8) sans aucun problème.
+    >
+    > Ou alors je n'ai pas compris ce que tu as voulu dire.
+
+    Comme tu le dis dans ton billet, les caractères "exotiques" (accentués par
+    exemple) sont préprocessés, d'UTF-8 vers un codage latexien. Le problème,
+    c'est qu'il y a un préprocesseur et une police différente différente par
+    système d'écriture (je schématise grossièrement). Il y a bien Babel pour le
+    gérer le multilinguisme, mais il faut rester sur du caractère latin. Dès
+    qu'on tape dans un autre système d'écriture, les ennuis commencent...
+
+    Concrètement, essaye de mettre du japonais dans ton document en français, et
+    si tu arrives à le compiler, ça m'intéresse ^^. C'est pour ça que je parle
+    de "grosse bidouille" (et franchement, après y avoir consacré quelques
+    nuits, j'utilisais des qualificatifs moins flateurs ^^).
+
+    Je suis loin d'être le seul à être embêté par ça (des collègues linguistes
+    aussi), une rapide recherche sur cjk+latex ou bien hindi+latex te montrera
+    que ça n'a rien d'évident.
+
+    D'où l'intérêt de Xelatex pour les gens qui doivent combiner de nombreux
+    systèmes d'écriture différents (bon, OK, c'est pas fréquent).
+- id: 9
+  author: Alphazo
+  date: 2009-07-16 14:57:32+02:00
+  contents: |
+    Texlive dans Ubuntu est assez statique. Pour profiter au mieux des nombreux
+    paquets Latex disponibles ainsi que leur mise à jour j'utilise texlive2008
+    qui comporte un outil graphique pour l'installation de la distrib.,
+    l'installation de nouveaux package et la mise à jour de ceux-ci.
+
+    L'idée est d'enlever TexLive qui vient des paquets Ubuntu pour installer
+    autonome. De plus le truc à la fin pour ne pas être dérangé par les
+    dépendances Ubuntu (type Kile et autre outils basé sur Latex) c'est de créer
+    un paquet "bidon" qui fait croire au système qu'un distrib LateX est
+    installé dans le système de package.
+
+    Voici ma procédure:
+
+    1\) Enlever ancienne installation de TexLive
+
+        sudo apt-get purge texlive-*
+        sudo apt-get autoremove
+
+    2\) Installer lmodern font et tex-common (apparament pas nécessaire avec TeX
+    live 2008)
+
+        sudo apt-get install lmodern
+
+    3\) Installer gestionnaire de package graphique
+
+        sudo apt-get install perl-doc perl-tk
+        sudo mkdir /usr/local/texlive
+        sudo chmod 777 /usr/local/texlive
+
+    Télécharger l'installateur dans home
+
+        wget http://mirror.ctan.org/systems/texlive/tlnet/2008/install-tl-unx.tar.gz ~/
+        tar -xf ~/install-tl-unx.tar.gz
+        ~/install-tl/install-tl -gui
+
+    Utilisez la config par défaut ou modifiez les options (ne pas sélectionner
+    l'installation de raccourci dans les répertoires système)
+
+        sudo nano /etc/environment
+
+    ajouter: `/usr/local/texlive/2008/bin/i386-linux:` devant le reste
+
+    Création du package bidon pour les dépendances
+
+        sudo apt-get install equivs sudo apt-get install equivs
+        mkdir /tmp/tl-loc
+        cd /tmp/tl-loc
+        equivs-control texlive-local
+
+    Remplacer le contenu de texlive-local content par :
+
+        Section: misc
+        Priority: optional
+        Standards-Version: 3.6.2
+
+        Package: texlive-local
+        Version: 2008-1
+        Maintainer: MPG 
+        Provides: cm-super, cm-super-minimal, context, latex-beamer,
+        latex-cjk-all, latex-cjk-chinese, latex-cjk-chinese-arphic-bkai00mp,
+        latex-cjk-chinese-arphic-bsmi00lp, latex-cjk-chinese-arphic-gbsn00lp,
+        latex-cjk-chinese-arphic-gkai00mp, latex-cjk-common, latex-cjk-japanese,
+        latex-cjk-japanese-wadalab, latex-cjk-korean, latex-cjk-thai,
+        latex-sanskrit, latex-xcolor, lmodern, luatex, musixtex, pgf, prosper,
+        tex4ht, tex4ht-common, texinfo, texlive-base, texlive-base-bin,
+        texlive-base-bin-doc, texlive-bibtex-extra, texlive-common,
+        texlive-doc-base, texlive-doc-bg, texlive-doc-cs+sk, texlive-doc-de,
+        texlive-doc-el, texlive-doc-en, texlive-doc-es, texlive-doc-fi,
+        texlive-doc-fr, texlive-doc-it, texlive-doc-ja, texlive-doc-ko,
+        texlive-doc-mn, texlive-doc-nl, texlive-doc-pl, texlive-doc-pt,
+        texlive-doc-ru, texlive-doc-th, texlive-doc-tr, texlive-doc-uk,
+        texlive-doc-vi, texlive-doc-zh, texlive-extra-utils, texlive-font-utils,
+        texlive-fonts-extra, texlive-fonts-extra-doc, texlive-fonts-recommended,
+        texlive-fonts-recommended-doc, texlive-formats-extra, texlive-full,
+        texlive-games, texlive-generic-extra, texlive-generic-recommended,
+        texlive-humanities, texlive-humanities-doc, texlive-lang-african,
+        texlive-lang-arab, texlive-lang-armenian, texlive-lang-croatian,
+        texlive-lang-cyrillic, texlive-lang-czechslovak, texlive-lang-danish,
+        texlive-lang-dutch, texlive-lang-finnish, texlive-lang-french,
+        texlive-lang-german, texlive-lang-greek, texlive-lang-hebrew,
+        texlive-lang-hungarian, texlive-lang-indic, texlive-lang-italian,
+        texlive-lang-latin, texlive-lang-manju, texlive-lang-mongolian,
+        texlive-lang-norwegian, texlive-lang-other, texlive-lang-polish,
+        texlive-lang-portuguese, texlive-lang-spanish, texlive-lang-swedish,
+        texlive-lang-tibetan, texlive-lang-ukenglish, texlive-lang-vietnamese,
+        texlive-latex-base, texlive-latex-base-doc, texlive-latex-extra,
+        texlive-latex-extra-doc, texlive-latex-recommended,
+        texlive-latex-recommended-doc, texlive-latex3, texlive-math-extra,
+        texlive-metapost, texlive-metapost-doc, texlive-music, texlive-omega,
+        texlive-pictures, texlive-pictures-doc, texlive-plain-extra,
+        texlive-pstricks, texlive-pstricks-doc, texlive-publishers,
+        texlive-publishers-doc, texlive-science, texlive-science-doc,
+        texlive-xetex, tipa,
+        Architecture: all
+        Description: Installation locale de TeX Live.
+        Installation locale d'une TeX Live nature complete.
+
+    Créer le package
+
+        equivs-build texlive-local
+
+    Installer
+
+        dpkg -i texlive-local_2008-1_all.deb
+
+    Voilà vous avez maintenant TexLive 2008 qui peut être mise à jours en ligne
+    et pas de problèmes de dépendances.
+
+    PS: Le how-to ci-dessus est tiré des liens suivants:
+
+    <http://weblog.elzevir.fr/2008/11/tex-live-2008-a-la-vanille-sur-debian-like/>
+
+    <http://www.imf.au.dk/system/latex/artikler/tl2008_i_ubuntu.html>
+- id: 10
+  author: ®om
+  date: 2009-07-16 15:18:36+02:00
+  contents: |
+    > @[**Nico**](#comment-4)
+    >
+    > Question du jour : est-ce que tu utilises LaTeX en entreprise ?
+
+    Ça m'arrive quand j'ai besoin de faire une petite présentation perso (avec
+    beamer). Par contre si on bosse à plusieurs dessus, c'est *PowerPoint* :(
+- id: 11
+  author: Nico
+  author-url: http://duboisnicolas.free.fr
+  date: 2009-07-16 15:36:30+02:00
+  contents: |
+    > @[**®om**](#comment-10)
+    >
+    > Ça m'arrive quand j'ai besoin de faire une petite présentation perso (avec
+    > beamer). Par contre si on bosse à plusieurs dessus, c'est *PowerPoint*
+
+    Je suis (malheureusement et sûrement plus pour très longtemps de toute
+    façon) dans une boite pro-microsoft où on *doit* utiliser MSWord. Mon boss
+    est ok pour changer d'éditeur pour les spécifications que l'on rédige. Sauf
+    que je ne sais pas si je vais pouvoir être en mesure d'imposer LaTeX. Je
+    suis curieux de savoir si une boite a déjà réussi à utiliser LaTeX en
+    interne pour les documents.
+
+    J'ai déjà rédigé quelques docs quand j'étais certain d'être le seul à
+    travailler dessus.
+
+    Pardon pour le glissement de sujet, mais certain d'entre vous ont une
+    expérience (bonne ou mauvaise) avec LaTeX en entreprise, ça m'intéresserait
+    de savoir ! ;)
+- id: 12
+  author: Alphazo
+  date: 2009-07-16 15:54:49+02:00
+  contents: |
+    Bonjour,
+
+    Pressé par le temps j'ai rédigé le business plan de mon entreprise en
+    utilisant LyX et le résulat était très pro (de loin supérieur à ce que Word
+    peut faire) avec en plus la gestion de branches (version Euro et Dollars).
+    LyX est un bon moyen de transition pour sensibiliser les utilisateurs à
+    LaTex. Pour du LaTex pur je vais l'utiliser pour une newsletter.
+- id: 13
+  author: Nico
+  author-url: http://duboisnicolas.free.fr
+  date: 2009-07-16 16:44:28+02:00
+  contents: |
+    Merci pour ton retour Alphazo ; c'est vrai que LyX peut être un premier
+    compromis pour un passage en douceur vers LaTeX. ;)
+- id: 14
+  author: Matttbe
+  author-url: http://www.mbaerts.be
+  date: 2009-07-16 17:18:15+02:00
+  contents: |
+    > @[**Nico**](#comment-11)
+    >
+    > Pardon pour le glissement de sujet, mais certain d'entre vous ont une
+    > expérience (bonne ou mauvaise) avec LaTeX en entreprise, ça
+    > m'intéresserait de savoir !
+
+    Personnellement, je suis étudiant et depuis janvier et avec mon groupe de
+    travail de 4 personnes, nous avons toujours utilisé LaTeX pour les rapports
+    et présentations.
+
+    J'étais le seul à avoir déjà produit des documents en tex et j'ai proposé
+    l'idée. Vu la qualité des documents produits, la facilité d'insertion de
+    formules et la mise en page automatique, la proposition a été bien
+    accueillie. Le premier document a été un peu difficile pour les autres mais
+    après une page, la base est comprise et après, ça avance de plus en plus
+    vite !
+
+    Mais pour travailler en groupe où on était 2 sous Linux, un sur Mac et un
+    dernier sous Windows, on pensait que ce serait difficile mais pas du tout !
+    Beaucoup plus simple que d'utiliser une solution comme MSWord (baah, sous
+    Linux ou Mac, c'est laid :-P ) ou OpenOffice.
+
+    Tout d'abord, j'ai fourni les fichiers de configuration et créé des fichiers
+    .tex pour chaque partie : j'ai donc un tex principal, celui qu'il faut
+    compiler) où j'ai une série de \\input{Mon\_Fichier.tex} et des fichiers
+    pour tex pour chacun. Si mes fichiers de config avec exemples, etc. vous
+    intéresse, ils sont disponibles à cette adresse :
+    <http://users.edpnet.be/matth/latex-matth.zip>.
+
+    En ce qui concerne les programmes, pour l'éditeur, je leur ai conseillé
+    TexMaker, facile pour débuter. Puis nous utilisons Dropbox avec un dossier
+    partagé et synchronisé (nickel, rapide et avec une fonction "undo") !
+
+    Enfin, pour les mises en commun ou relectures, nous utilisons Gobby pour
+    travailler à plusieurs sur un même fichier.
+
+    Franchement, avec ça, on pouvait avancer bien vite et avoir des documents de
+    très bonne qualité !!
+
+    Sinon, pour ma part, j'utilise ce plug-in Gedit depuis une bonne année
+    (récupéré par SVN). Maintenant qu'il est bien stable, je le conseille
+    également !
+
+    Mais je vous invite à installer la dernière version 0.2 rc2
+    (<http://sourceforge.net/projects/gedit-latex/files/>) car maintenant, on a
+    la possibilité d'inclure un aperçu du pdf dans Gedit (comme sur cette
+    image : <http://uppix.net/d/f/2/f7153237bc8fac8e407171bc73228.jpg>). Il faut
+    juste installer le paquet "python-poppler" et activer l'option ;-)
+- id: 15
+  author: ®om
+  date: 2009-07-16 23:23:32+02:00
+  contents: |
+    @[**Chichille**](#comment-6)
+
+    J'essaie de compiler mon `test.tex` avec xelatex, ça ne fonctionne pas du
+    tout, il ne reconnaît rien…
+- id: 16
+  author: "Egide Dey (egide) 's status on Friday, 17-Jul-09 21:59:21 UTC - Identi.ca"
+  author-url: http://identi.ca/notice/6611444
+  date: 2009-07-17 23:59:05+02:00
+  pingback: true
+  contents: |
+    [...] http://blog.rom1v.com/2009/07/bien-debuter-en-latex-sous-ubuntu/ [...]
+- id: 17
+  author: milan
+  date: 2009-07-18 00:10:31+02:00
+  contents: |
+    LateX est un outil extraordinaire pour les éditions de documents
+    scientifiques.
+
+    Une fois les bases acquises, on peut éditer des rapports très professionnels
+    et de manière très rapide.
+- id: 18
+  author: Nico
+  author-url: http://duboisnicolas.free.fr
+  date: 2009-07-20 09:36:53+02:00
+  contents: |
+    Merci pour ton retour Matt ! Je ne connaissais pas Gobby, je vais regarder
+    de plus prêt. Merci également pour tes sources : j'ai découvert quelques
+    packages/commandes intéressants. ;)
+
+    Au niveau de l'IDE, j'ai été un peu déçu du plugin pour Eclipse et donc
+    reste assez fan, même étant sous Gnome, de Kile.
+- id: 19
+  author: Matttbe
+  author-url: http://www.mbaerts.be
+  date: 2009-07-22 13:03:42+02:00
+  contents: |
+    Content que ça te fasse plaisir alors ;-)
+
+    Perso, j'ai tjs été fan de Gedit. Donc j'ai rapidement utilisé ce plugin,
+    tôt dans son développement. Le nouveau support du pdf incrusté est génial
+    pour travailler sur Beamer par exemple !
+
+    Par contre, il n'offre pas un support aussi complet que TexMaker mais quand
+    on connait déjà un peu les bases, ça suffit amplement (et puis, on peut
+    utiliser TexMaker juste pour générer rapidement un tableau par exemple).
+
+    Sinon, il me semble que Gedit avec qqs plug-in permet d'obtenir les mêmes
+    spécificités que Kile mais on ne change pas aussi facilement ses habitudes
+    ;-)
+- id: 20
+  author: Gianni
+  date: 2009-07-23 21:37:01+02:00
+  contents: |
+    Merci pour ce billet, très intéressant !
+- id: 21
+  author: seb
+  date: 2009-07-27 00:04:59+02:00
+  contents: |
+    merci beaucoup rom pour ce billet qui va me permettre de m' y mettre...en
+    douceur.je dois souvent rédiger des rapport scientifiques et la mise en page
+    est toujours un casse tête.
+- id: 22
+  author: Christophe
+  author-url: http://www.road2mayotte.org/blog/
+  date: 2009-08-23 08:37:17+02:00
+  contents: |
+    Salut,
+
+    Je cherche à faire des liens cliquables (actifs) avec le packages
+    hyperref... bon ils le sont mais sont encadrés en cyan ! Je ne parviens pas
+    à remplacer ce fichu cadre par un simple soulignement... As-tu une idée ?
+- id: 23
+  author: lecteur1003
+  date: 2009-09-23 15:21:27+02:00
+  contents: |
+    Je me permet de vous recommander le super bouquin (libre, qui plus est)
+    intitulé "Tout ce que vous avez toujours voulu savoir sur LaTeX sans jamais
+    oser le demander" de Vincent Lozano. Le livre est à 15€ dans le commerce ou
+    téléchargeable en pdf gratuitement sur le site de l'association FramaSoft,
+    ici : <http://www.framabook.org/latex.html>
+
+    Faites en la pub, j'ai personnellement débuté avec ce bouquin et je peux
+    vous en donner un retour très positif !
+- id: 24
+  author: Christophe
+  author-url: http://www.road2mayotte.org/blog/
+  date: 2010-01-15 18:17:00+02:00
+  contents: |
+    @lecteur1003
+
+    J'ai moi-même commencé par ce livre. Il est une très bonne base mais
+    rapidement des compléments sont nécessaires. Il y en a de très bons sur le
+    net, notamment : Une courte (?) introduction à LATEX 2ε, moins drôle mais un
+    peu plus consistant...

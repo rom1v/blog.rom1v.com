@@ -1,0 +1,572 @@
+- id: 1
+  author: korbe
+  author-url: http://Yourwebsite
+  date: 2010-05-16 20:42:38+02:00
+  contents: |
+    Alors c'est comme ça dans Ubuntu...
+
+    Je préfère la solution de Fedora: tout chiffré en LUKS (sauf /boot/). Ça
+    demande le passphrase au boot de la machine mais au moins on l'oublie pas.
+    :-D
+- id: 2
+  author: gorghoa
+  date: 2010-05-16 20:52:17+02:00
+  contents: |
+    mazette, article mastoque et interessant, j'avais un peu les boules de
+    chiffrer ma partoche home sur un netbook. je vais peut être me lancer.
+
+    merci pour ton article
+- id: 3
+  author: Kasi
+  date: 2010-05-16 21:57:12+02:00
+  contents: |
+    Article de qualité comme à ton habitude :).
+
+    Aurais-tu des précisions sur l'algorithme de chiffrement utilisé ?
+- id: 4
+  author: caméléon
+  date: 2010-05-16 21:59:36+02:00
+  contents: |
+    "Mais il y a un grand absent dans la liste des logiciels qui le gèrent :
+    Firefox. Firefox enregistre les mots de passe quasiment en clair ; c'est
+    dommage, c'est à lui qu'on donne la majorité de nos mots de passe."
+
+    C'est l'objet de ce bug, qui compte presque 50 votes!
+
+    Bug 309807 - Integrate Password Manager with Gnome Keyring Manager
+
+    Le lien: <https://bugzilla.mozilla.org/show_bug.cgi?id=309807>
+- id: 5
+  author: LinuxManua
+  author-url: http://linuxmanua.blogspot.com/
+  date: 2010-05-16 22:22:55+02:00
+  contents: |
+    Super Article. A garder sous le coude. Merci.
+- id: 6
+  author: mart
+  author-url: http://mart-e.tk
+  date: 2010-05-16 22:30:53+02:00
+  contents: |
+    très intéressant comme article, merci
+
+    faudra que je fasse ça mais à mon avis, j'attendrai les prochaines vacances.
+    A un moment où ce n'est pas trop grave si je fous en l'air mon système :)
+- id: 7
+  author: FabriceV
+  date: 2010-05-17 05:25:18+02:00
+  contents: |
+    Bonjour.
+
+    Je me posais justement la question de la longueur des noms de fichier dans
+    un dossier crypté (des articles scientifiques : 1er-auteur année
+    initiale-revue. Titre). Je me demande s'il n'y a pas quelques subtilités ou
+    bugs : lorsque j'inclus des signes de ponctuation autorisés (ex: virgule),
+    j'ai parfois une réduction drastique du nombre de caractères acceptés, mais
+    c'est aléatoire. C'est assez gênant pour qui utilise régulièrement des noms
+    à rallonge. Je n'ai pas encore essayé de renommer automatiquement par des
+    logiciels pour expérimenter l'effet (jabref, mendeley).
+- id: 8
+  author: FabriceV
+  date: 2010-05-17 05:31:50+02:00
+  contents: |
+    Rebonjour
+
+    Autre problème, ou conséquence logique, la mise en hibernation et surtout le
+    réveil de l'ordinateur est horriblement lent sur un netbook. Exemple plus de
+    15s à attendre devant la seule fenêtre de login pour pouvoir saisir son mot
+    de passe. Bref, bien plus rapide d'éteindre et de rallumer. J'ai essayé un
+    cryptage total du disque dur (système inclus), mais l'impact sur les
+    performances globales du système est trop négatif.
+- id: 9
+  author: ®om
+  date: 2010-05-17 07:26:11+02:00
+  contents: |
+    > @[**Kasi**](#comment-3)
+    >
+    > Article de qualité comme à ton habitude :)
+    >
+    > Aurais-tu des précisions sur l'algorithme de chiffrement utilisé ?
+
+    A priori c'est du AES 128bits (je déduis ça des réponses à donner lors du
+    montage du disque dur avec mount).
+
+    > @[**caméléon**](#comment-4)
+    >
+    > Le lien: <https://bugzilla.mozilla.org/show_bug.cgi?id=309807>
+
+    Merci, a voté.
+
+    > @[**FabriceV**](#comment-8)
+    >
+    > Rebonjour
+    >
+    > Autre problème, ou conséquence logique, la mise en hibernation et surtout
+    > le réveil de l'ordinateur est horriblement lent sur un netbook. Exemple
+    > plus de 15s à attendre devant la seule fenêtre de login pour pouvoir
+    > saisir son mot de passe. Bref, bien plus rapide d'éteindre et de rallumer.
+    > J'ai essayé un cryptage total du disque dur (système inclus), mais
+    > l'impact sur les performances globales du système est trop négatif.
+
+    D'après moi le chiffrement du dossier personnel n'impacte pas du tout
+    l'hibernation.
+
+    Seul le chiffrement du SWAP pourrait éventuellement l'affecter.
+    L'hibernation, ce n'est rien d'autre que la copie de la RAM en SWAP et une
+    extinction complète de la machine, lors du redémarrage il faut faire le
+    processus inverse : c'est normal que ça soit plus long qu'une simple
+    extinction suivi d'un redémarrage (que le disque dur soit chiffré ou non).
+    Le but de l'hibernation c'est de garder tout son contexte (fenêtres
+    ouvertes, etc.).
+
+    Pour éteindre et rallumer plus rapidement, il faut utiliser la mise en
+    veille (mais la RAM reste allumée).
+- id: 10
+  author: Gilles
+  date: 2010-05-17 08:31:51+02:00
+  contents: |
+    Merci pour l'article. Perso, j'utilise le mot de passe Maitre de FF (mais
+    avec une connexion auto, donc nombre de saisie de mot de passe identique) et
+    pour les données "critiques" j'ai un "fichier" Truecrypt qui est sur une
+    partition partagée avec Windows (et oui, j'ai gardé Win en dual boot et
+    aussi en VM pour des logiciels spécifiques !).
+
+    C'est moins robuste mais plus souple. Donc peut être que cela pourra être
+    utile à certains qui ont un besoin de partage entre OS tout en gardant un
+    minimum de sécurisation des données.
+- id: 11
+  author: tanguy
+  date: 2010-05-17 09:10:46+02:00
+  contents: |
+    Ahhh, dommage que mon Ashram préféré soit hors ligne pour quelques temps.
+    Son guru swami pétaramesh avait fait un excellent billet sur le chiffrement
+    du disque dur (avec une carte sd comme clé de démarrage).
+
+    <http://petaramesh.org/post/2010/03/23/Une-cle-de-contact-pour-votre-portable-chiffre-%3A-Mise-a-jour>
+- id: 12
+  author: tanguy
+  date: 2010-05-17 09:18:23+02:00
+  contents: |
+    La clé de démarrage (carte sd ou clé usb) permet de contourner la conclusion
+    de ton billet. Une fois l'ordi démarré, on la retire et on la garde sur soi.
+    Suffit de la bien la dissimuler ou la détruire en cas d'intruision policière
+    inopinée et la justice ne pourra jamais découvrir le contenu de votre ordi.
+    (D'autant plus que le swap étant chiffré il ne révèle aucun documents
+    enregistré lors d'une mise en veille).
+- id: 13
+  author: VoidAndAny
+  author-url: http://voidandany.free.fr
+  date: 2010-05-17 10:16:21+02:00
+  contents: |
+    Superbe article, je comptais justement étudier ce sujet bientôt/un jour et
+    cet article me mâche le travail
+- id: 14
+  author: Binerf
+  date: 2010-05-17 11:42:13+02:00
+  contents: |
+    Bonjour,
+
+    Merci pour cet article [quasi] complet ;-)
+
+    Manque juste la partie "suppression du cryptage de sa HOMEDIR" ;-)
+
+    J'ai crypté ma home mais je me suis aperçu qu'un script contenu dans ma home
+    et devant être lancé par la crontab n'était jamais exécuté (sauf quand
+    j'étais connecté sur le PC).
+
+    Après reflexion, j'ai compris pourquoi.
+
+    C'est pour quoi, je conseille de crypter un sous-répertoire de sa home
+    plutôt que toute sa home.
+- id: 15
+  author: Jeremie
+  author-url: http://www.web-modules.net
+  date: 2010-05-17 15:55:54+02:00
+  contents: |
+    Ce chiffrement est pas mal pour protéger ses docs, mais on peut aller encore
+    plus loin avec LVM et ses volumes chiffrés. Ça permet non seulement de
+    chiffrer son /home mais surtout presque tout son / !
+
+    Il me semble que /boot doit être en clair pour la raison évidente de qu'il
+    contient de quoi déchiffrer la partition.
+
+    Au final, un password de boot est demandé et protège son PC. Très pratique
+    sur un PC portable !
+
+    Pour le mettre en œuvre facilement, le mieux que j'ai trouvé est d'installé
+    Fedora, qui propose l'option dès l'installation, de façon très accessible.
+    Ça doit être possible de le faire avec Ubuntu en alternate je suppose, vu
+    qu'on peut faire des LVM et des raids.
+- id: 16
+  author: le hollandais volant
+  author-url: http://lehollandaisvolant.net/
+  date: 2010-05-17 17:30:06+02:00
+  contents: |
+    J'ai jamais voulu activer cette fonction, par peur de ne pas pouvoir
+    récupérer des données depuis une autre session de Linux (un live CD ou un
+    autre ordinateur par exemple).
+
+    Maintenant, je pense que c'est clair que ce n'est pas dangereux. Me
+    trompe-je ?
+- id: 17
+  author: 'GnuPG : chiffrer et signer sous Ubuntu pour les nuls &laquo; ®om&#39;s blog'
+  author-url: http://blog.rom1v.com/2009/05/gnupg-chiffrer-et-signer-sous-ubuntu-pour-les-nuls/
+  date: 2010-05-17 19:12:50+02:00
+  pingback: true
+  contents: |
+    [...] EDIT: Pour chiffrer son dossier personnel (/home), c’est ici. [...]
+- id: 18
+  author: Percherie
+  author-url: http://toutenkamion.net/
+  date: 2010-05-18 22:26:10+02:00
+  contents: |
+    Excellent, j'osais pas m'y lancer et ça donne envie car il est facile de
+    voler un netbook et toutes les données inscrites dedans même si j'espère
+    bien qu'un voleur connait plus Windows que Linux c'est jouer avec le feu.
+
+    Grande question : est-ce judicieux de placer cette solution chez des
+    particuliers qui cherchent un système qui fonctionne sans se poser de
+    question? Certains seraient bien capables d'oublier le phrase de passe.
+- id: 19
+  author: FabriceV
+  date: 2010-05-21 11:42:00+02:00
+  contents: |
+    Une autre possibilité c'est le mot de passe d'accès au disque dur enregistré
+    dans le firmware. Seul certains disques durs le permettent. Et
+    malheureusement, je crois que certains logiciels arrivent maintenant à
+    contourner la protection sans avoir à reformater le disque dur... Si
+    certains ont des infos?
+
+    =\> compte tenu des infos précédentes (très bien l'article), de mes tests et
+    de l'impact sur les performances (je confirme que sur ma machine NC10, une
+    partition home encryptée provoque un ralentissement de la mise en
+    hibernation), de la réduction de longueur des fichiers (gênante en l'état
+    pour moi), je vais adopter une solution intermédiaire :
+
+     * mot de passe boot
+     * dossier crypté truecrypt pour les seules données sensibles
+- id: 20
+  author: Kasi
+  date: 2010-05-21 17:30:07+02:00
+  contents: |
+    J'ai fait des tests pour récupérer un home chiffré depuis un live cd...
+    J'arrive bien à monter le home chiffré, je vois bien le contenu mais les
+    noms des dossiers et fichiers ne veulent rien dire, ils semblent encore
+    chiffrés.
+
+    Voici un extrait :
+
+        root@ubuntu:~/Desktop# ls decrypted/
+        ECRYPTFS_FNEK_ENCRYPTED.FWYaojaaLEYRWUSlavJJymLETtVXs4HxCYBM2dO1QlRJ.GXpfs0X6yWuR---
+        ECRYPTFS_FNEK_ENCRYPTED.FWYaojaaLEYRWUSlavJJymLETtVXs4HxCYBM6AwAuvotUkHU-JjxOBkOeU--
+        ECRYPTFS_FNEK_ENCRYPTED.FWYaojaaLEYRWUSlavJJymLETtVXs4HxCYBM6oqSTO24DtNHQ630AkralE--
+        ECRYPTFS_FNEK_ENCRYPTED.FWYaojaaLEYRWUSlavJJymLETtVXs4HxCYBM83Z1v6PKwWqN4ACFX9UAgk--
+
+    Quelqu'un en connait-il la raison ?
+- id: 21
+  author: ®om
+  date: 2010-05-21 21:38:14+02:00
+  contents: |
+    Tu as bien fait :
+
+        ecryptfs-add-passphrase --fnek
+
+    et noté le code de la dernière ligne, que tu as bien spécifié lors du
+    montage :
+
+        Filename Encryption Key (FNEK) Signature [514d1d3af1a232cd]: 7890544814a5865f
+
+    ?
+- id: 22
+  author: Kasi
+  author-url: http://Yourwebsite
+  date: 2010-05-21 22:45:41+02:00
+  contents: |
+    Oui j'ai même réessayé plusieurs fois...
+- id: 23
+  author: ®om
+  date: 2010-05-21 22:55:08+02:00
+  contents: |
+    Et tu rentres bien la passphrase de montage à chaque fois (et pas celle de
+    login)?
+
+    C'est bizarre chez moi ça fonctionne...
+- id: 24
+  author: Kasi
+  author-url: http://Yourwebsite
+  date: 2010-05-22 00:06:35+02:00
+  contents: |
+    ahhhh boulette de ma part, je rentrais la passphrase de login au lieu de
+    celle de montage. Avec celle de montage ça fonctionne :), merci.
+
+    Bon et bien à la prochaine réinstallation du système je chiffrerai mon home
+    :).
+- id: 25
+  author: SylvainC
+  author-url: http://courira.ca/
+  date: 2010-05-26 15:25:19+02:00
+  contents: |
+    Pour ce qui est de Firefox, il y a bel et bien une solution pour enregistrer
+    ses mots de passe dans Mots de passe et clés de chiffrement (GNOME) et
+    KWallet (KDE). Il suffit d'installer:
+
+    Gnome-keyring password integration
+
+    <https://addons.mozilla.org/fr/firefox/addon/8737/>
+
+    ou
+
+    KDE Wallet password integration
+
+    <https://addons.mozilla.org/fr/firefox/addon/49357/>
+
+    Malheureusement, Gnome-keyring password integration ne supporte que Firefox
+    3.5.
+
+    Pour ma part, KDE Wallet password integration fonctionne très bien sous
+    Kubuntu (il supporte Firefox 3.6).
+- id: 26
+  author: hypno
+  date: 2010-06-07 21:42:55+02:00
+  contents: |
+    grand merci, j'ai pu récupérer mon /home de 80GO après 2 mois au placard
+- id: 27
+  author: Hedy
+  author-url: http://www.spheerys.fr/
+  date: 2010-07-03 23:46:04+02:00
+  contents: |
+    J'ai une question en marge de cet article... comment faire pour DESACTIVER
+    le cryptage si jamais on regrette son choix lors de l'installation ?
+- id: 28
+  author: ®om
+  date: 2010-07-04 09:39:30+02:00
+  contents: |
+    > @[**Hedy**](#comment-27)
+    >
+    > J'ai une question en marge de cet article… comment faire pour DESACTIVER
+    > le cryptage si jamais on regrette son choix lors de l'installation ?
+
+    Pour désactiver le chiffrement, il faut copier ses données vers un
+    répertoire non chiffré, se déconnecter et se reconnecter en `root`, et
+    déplacer le dossier contenant les données non chiffrées dans
+    `/home/ton_user`, puis supprimer totalement `/home/.ecryptfs` (je n'ai pas
+    testé).
+- id: 29
+  author: 10ruegiero
+  author-url: http://diruggiero.fr
+  date: 2010-07-17 01:01:11+02:00
+  contents: |
+    Merci pour cet article complet, simple et clair, il m'a beaucoup aidé à
+    chiffrer mon /home/me sur mon netbook.
+- id: 30
+  author: Chiffrer son /home son mac ou sous linux &laquo; 10 rue Giero
+  author-url: http://10ruegiero.wordpress.com/2010/07/18/chiffrer-son-home-son-mac-ou-sous-linux/
+  date: 2010-07-18 12:24:17+02:00
+  pingback: true
+  contents: |
+    [...] intéressant, détaillé et complet sur le chiffrement de votre dossier
+    personnel sous Ubuntu sur le blog de Rom avant de réaliser cette opération.
+    Vous pourrez alors saisir les détails, quelques subtilités [...]
+- id: 31
+  author: Eric Polin
+  date: 2010-07-29 18:02:41+02:00
+  contents: |
+    Une page de référence, mille mercis !
+
+    Je vais suivre votre blog dorénavant : il y a plein de choses intéressantes.
+- id: 32
+  author: Kasi
+  author-url: http://Yourwebsite
+  date: 2010-08-09 18:17:14+02:00
+  contents: |
+    J'anticipe un problème futur. J'ai chiffré mon /home par la méthode décrite
+    (je n'ai pas utilisé de LVM).
+
+    Comment puis-je faire pour appliquer le même chiffrement (même clé + montage
+    au démarrage) sur un nouveau disque dur additionnel (avec éventuellement une
+    partition autre de home)?
+- id: 33
+  author: Ric Flomag
+  date: 2010-08-11 13:09:54+02:00
+  contents: |
+    Merci pour ce post, une référence !
+
+    J'aventure quand même une remarque: il n'est pas nécessaire d'avoir le
+    dossier "/home" sur une partition séparée pour réinstaller Ubuntu en
+    conservant ses données. Avec une seule partition, il suffit de ne pas
+    formater "/" lors de l'installation: les dossiers système seront écrasés,
+    mais pas les autres, donc "/home" sera intact. C'est en tout cas ce que dit
+    l'installeur quand on ne coche pas la case "formater" de la partition "/".
+
+    J'avoue que je n'ai pas testé, donc prudence ;).
+- id: 34
+  author: VIncent-Xavier JUMEL
+  date: 2010-08-21 18:32:03+02:00
+  contents: |
+    Pour ceux que ça intéresse, je [complète l'article avec une astuce qui
+    permettra de se connecter en
+    ssh](http://blog.thetys-retz.net/post/2010/08/21/De-l-authentification-par-clef-ssh-avec-un-home-chiffré-sous-Ubuntu)
+    à un compte protégé de cette façon. Il faut bien sur utiliser l'astuce avec
+    ses limites, en particulier au niveau de la sécurité de la phrase de passe
+    de la clef ssh.
+- id: 35
+  author: Polo
+  date: 2010-08-23 11:57:39+02:00
+  contents: |
+    Bonjour !
+
+    J'aime beaucoup ce blog, je me sert pas mal des tutos en ce moment (passage
+    a l'autohébergement).
+
+    Pour compléter celui-ci, un petit tuto sur le cryptage des sauvegardes me
+    semble pas mal intéressant.
+- id: 36
+  author: Kaoul
+  author-url: http://blog.upme.fr
+  date: 2010-09-28 12:49:27+02:00
+  contents: |
+    Très bien Polo, mais justement je souhaite sauver mes données dans un disque
+    externe. Si on copie ses données directement alors que la partition home est
+    montée, elle ne seront pas chiffrées sur le disque. Comment faire au plus
+    simple pour copier les fichier chiffrés sur un disque externe ?
+- id: 37
+  author: smile
+  date: 2010-10-11 14:53:30+02:00
+  contents: |
+    Chiffrage + effacement malencontreux des fichiers dans /home = suicide si
+    vous ne faites pas de sauvegardes régulières. Même avec testdisk
+    (récupérateur de fichiers effacés), on peut rien faire car ce dernier
+    attribue aux fichiers récupérés de nouveaux noms.
+- id: 38
+  author: GanGan
+  author-url: http://www.system-linux.eu
+  date: 2010-10-14 23:00:08+02:00
+  contents: |
+    Vous avez des choses à cacher ? :p
+- id: 39
+  author: FiM
+  date: 2010-10-20 08:32:08+02:00
+  contents: |
+    J'ai été contraint (merci ATI) de passer à Ubuntu 10.04 et donc d'abandonner
+    LUKS (qui fonctionnait à merveille sur Debian Lenny) contre ecryptfs et le
+    chiffrement du répertoire personnel, sans que j'aie le choix de conserver la
+    première solution, ce que j'aurais fait :
+
+     * quand on monte avec pam\_mount des répertoires distants à l'ouverture de
+    session dans son répertoire personnel, ça fonctionne au premier login, mais
+    si on se déconnecte, on les perd définitivement : ils restent montés et
+    inaccessibles !
+     * j'utilise VNC quand je ne suis pas à mon bureau... je me logue en SSH (ça
+    déchiffre mon répertoire perso), je lance VNC, ok, je me déconnecte, et ça
+    déconnecte mon répertoire perso, donc VNC est inutilisable...
+
+    Bref vu les contraintes, je pense que je vais virer cette "fonctionnalité"
+    rapidement.
+- id: 40
+  author: ®om
+  date: 2010-10-20 10:20:15+02:00
+  contents: |
+    > @[**FiM**](#comment-39)
+    >
+    > quand on monte avec pam\_mount des répertoires distants à l'ouverture de
+    > session dans son répertoire personnel, ça fonctionne au premier login,
+    > mais si on se déconnecte, on les perd définitivement : ils restent montés
+    > et inaccessibles !
+
+    Et si tu montes les répertoires distants en dehors de ton home (quitte à
+    faire un lien symbolique dans ton home) ?
+
+    > @[**FiM**](#comment-39)
+    >
+    > j'utilise VNC quand je ne suis pas à mon bureau… je me logue en SSH (ça
+    > déchiffre mon répertoire perso), je lance VNC, ok, je me déconnecte, et ça
+    > déconnecte mon répertoire perso, donc VNC est inutilisable…
+
+    Comment tu fais pour qu'une connexion en SSH déchiffre ton home, étant donné
+    qu'une connexion SSH nécessite la lecture des fichiers se trouvant dans
+    `~/.ssh` (en clair donc) ?
+
+    Si tu as une astuce pour faire cela, ça m'intéresse ;-)
+
+    (sinon je n'ai pas bien compris ce que tu faisais avec VNC, ni pourquoi la
+    déconnexion de VNC démontait ton home)
+- id: 41
+  author: 22decembre
+  author-url: http://www.22decembre.eu
+  date: 2011-05-31 15:06:11+02:00
+  contents: |
+    Article très bien. J'ai trouvé des références dans plusieurs blogs qui
+    renvoient ici.
+
+    Je songe moi-même à chiffrer mon home. Je trouve ça moins contraignant que
+    de chiffrer tout le système (un mot de passe de plus à se rappeler au boot,
+    et je parle même pas de ma femme qui va râler à mort !).
+
+    Ce que je trouve bête finalement, c'est qu'on puisse pas chiffrer tout le
+    système (/var contient aussi des données à protéger des fois...) et se
+    connecter avec son login utilisateur qui déchiffre en temps réel ce dont on
+    a besoin. Je ne sais pas si je me fais bien comprendre...
+
+    Autre soucis à ce que je vois : l'hibernation. Or il y a plus d'intérêt à
+    chiffrer un laptop qu'un desktop. Là, ça coince !
+
+    Quelqu'un connait le détail technique (je suis pas ubuntu, mais gentoo) du
+    dossier home chiffré ? Il faut monter automatiquement le dossier au login,
+    toussa... Il y a des scripts ?
+- id: 42
+  author: ®om
+  date: 2011-05-31 16:00:53+02:00
+  contents: |
+    > @[**22decembre**](#comment-41)
+    >
+    > Ce que je trouve bête finalement, c'est qu'on puisse pas chiffrer tout le
+    > système (/var contient aussi des données à protéger des fois…) et se
+    > connecter avec son login utilisateur qui déchiffre en temps réel ce dont
+    > on a besoin. Je ne sais pas si je me fais bien comprendre…
+
+    Le problème je pense, c'est que `/var` est utilisé avant la connexion de
+    l'utilisateur.
+
+    > @[**22decembre**](#comment-41)
+    >
+    > Autre soucis à ce que je vois : l'hibernation. Or il y a plus d'intérêt à
+    > chiffrer un laptop qu'un desktop. Là, ça coince !
+
+    Tu peux aussi chiffrer le swap.
+
+    > @[**22decembre**](#comment-41)
+    >
+    > Quelqu'un connait le détail technique (je suis pas ubuntu, mais gentoo) du
+    > dossier home chiffré ? Il faut monter automatiquement le dossier au login,
+    > toussa… Il y a des scripts ?
+
+    Je ne sais pas, mais ça m'intéresse aussi. Car là si je change de
+    distribution, je ne sais pas comment faire pour garder mon `/home` chiffré
+    tel quel.
+- id: 43
+  author: Peronico
+  date: 2012-02-28 22:55:31+01:00
+  contents: |
+    Bravo pour cet article !
+
+    Ca m'a permis de comprendre un peu mieux ce qu'était le chiffrement des
+    données. Car j'ai découvert ça par hasard suite à une coupure de courant
+    lors d'un démarrage de session.
+
+    En effet, toutes mes données ont été chiffrées et je ne savais pas du tout
+    comment les récupérer.
+
+    Toutefois, lorsque j'essaie de les déchiffrer, j'ai le message suivant :
+
+        Error mounting eCryptfs: [-2] No such file or directory
+
+    Pouvez vous m'aider ?
+- id: 44
+  author: Kasi
+  date: 2012-12-28 19:25:42+01:00
+  contents: |
+    Salut,
+
+    Dans la dernière version d'Ubuntu on peut chiffrer tout le disque y compris
+    le système. Comment se passe l'authentification ssh dans ce cas ?
+
+    Merci

@@ -1,0 +1,324 @@
+- id: 1
+  author: huit_six
+  date: 2012-04-05 07:27:31+01:00
+  contents: |
+    Merci pour l'astuce,
+
+    Très utile
+- id: 2
+  author: tominardi
+  author-url: http://www.tominardi.fr
+  date: 2012-04-05 08:18:53+01:00
+  contents: |
+    C'est pas ce que propose nativement ZSH ? Ou alors c'est via Oh My ZSH ?
+- id: 3
+  author: ®om
+  date: 2012-04-05 08:42:53+01:00
+  contents: |
+    @[**tominardi**](#comment-2)
+
+    Je viens de tester, nativement, non.
+
+    Je ne connaissais pas
+    [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), je testerai quand
+    j'aurai un moment. Si tu l'utilises, tu peux indiquer ce qu'il fait
+    exactement pour *GIT* ?
+- id: 4
+  author: cosmocat
+  date: 2012-04-05 09:09:34+01:00
+  contents: |
+    je me demande, si ça ressembla pas à çà...
+
+    https://yeevgen.wordpress.com/2011/05/23/mercurial-zsh-prompt/
+- id: 5
+  author: pums974
+  date: 2012-04-05 09:24:55+01:00
+  contents: |
+    Merci pour ce petit script très pratique.
+
+    Cependant j'ai eu un problème chez moi, il a fallut que j'enlève des
+    guillemets pour qu'il marche:
+
+    {% highlight diff %}
+    -        SFI="$IFS"
+    +        SFI=$IFS
+    -        IFS="$SFI"
+    +        IFS=$SFI
+    {% endhighlight %}
+- id: 6
+  author: ®om
+  date: 2012-04-05 09:46:07+01:00
+  contents: |
+    Je viens de mettre à jour le script (v0.11), car la première version
+    n'affichait plus du tout le chemin lorsqu'on était dans un répertoire hors
+    du *home* (quand le chemin affiché commençait par `/`).
+- id: 7
+  author: Johan
+  author-url: http://www.johanbleuzen.fr
+  date: 2012-04-05 09:53:03+01:00
+  contents: |
+    Améliorer son prompt pour supporter git est vraiment quelque chose
+    d'obligatoire une fois que l'on utilise fréquement git.
+
+    Personnellement, j'utilise zsh avec un script custom pour afficher les
+    informations de Git, pour l'instant je n'affiche que la branche courant et
+    l'état du répo (modified ou up-to-date).
+
+    Et pour info, oh-my-zsh utilise un principe de plugin pour afficher un
+    prompt "git" complet, il est même possible d'afficher dans le prompt si on
+    est en avance ou en retard sur l'origin.
+- id: 8
+  author: ®om
+  date: 2012-04-05 09:53:17+01:00
+  contents: |
+    @[pums974](#comment-5)
+    Ah, bizarre, je ne comprends pas pourquoi.
+
+    Cependant, pour moi il faut des guillemets (si on ancien `IFS` contenait par
+    exemple un `~`, il ne faut pas que *bash* l'interprète).
+
+    Peux-tu nous montrer ton `IFS` :
+
+        printf "$IFS" | hd
+
+    ?
+- id: 9
+  author: Rolinh
+  author-url: http://blog.rolinh.ch/
+  date: 2012-04-05 12:19:41+01:00
+  contents: |
+    C'est vrai que se passer de ce genre d'infos une fois qu'on y a goûté, c'est
+    difficile.
+
+    C'est un minimum d'afficher la branche mais je trouve qu'afficher l'état du
+    dépôt (nouveau fichier non ajouté au dépôt, fichier modifié) est
+    indispensable également.
+
+    Pour ma part, j'utilise le module vcs\_info de zsh. C'est vraiment super
+    efficace et cela se configure selon ses envies. De plus, pratiquement tous
+    les VCS sont supportés (git, hg, svn, etc.).
+
+    J'en avais fait [un article en janvier dernier, si cela intéresse
+    quelqu'un...](http://blog.rolinh.ch/linux/zsh-afficher-les-infos-des-vcs-git-mercurial-svn-etc-dans-son-prompt/)
+- id: 10
+  author: bartounet
+  author-url: http://blog.info16.fr
+  date: 2012-04-05 16:11:06+01:00
+  contents: |
+    J'aime bien ton "par manque d'inattention" :)
+- id: 11
+  author: ®om
+  date: 2012-04-05 17:05:21+01:00
+  contents: |
+    @[**bartounet**](#comment-10)
+    Merci, corrigé. ;-)
+
+    En plus, ce matin, je me suis dit qu'il fallait que je vérifie, car il me
+    semblait bien avoir écrit "par manque d'inattention". Mais j'ai finalement
+    oublié de vérifier, sans doute par manque de *dé*concentration ;-)
+- id: 12
+  author: jbar
+  author-url: http://open-udc.org
+  date: 2012-04-06 20:02:27+01:00
+  contents: |
+    le packet git de mageia (rpm chez moi: git-core-1.7.4.4-2.mga1), a modifié
+    la variable PS1 par défaut et installé un fichier pour bash\_completion
+    (`/etc/bash_completion.d/git`) qui fait déjà cela (et même bcp plus, cf.
+    completion).
+
+    voila mon PS1 :
+
+    {% highlight bash %}
+    "$?[\u@\h \W$(type __git_ps1 &>/dev/null && __git_ps1 " (%s)")]\$"
+    {% endhighlight %}
+
+    (j'ai rajouté `\$?` ...)
+- id: 13
+  author: Asenar
+  date: 2012-04-07 13:48:02+01:00
+  contents: |
+    Merci beaucoup !
+
+    Une suggestion : pourquoi ne pas mettre ton script dans github ?
+- id: 14
+  author: ®om
+  date: 2012-04-07 14:24:43+01:00
+  contents: |
+    @[**Asenar**](#comment-13)
+    C'est vrai que j'aurais pu mettre le script sur un dépôt *git*. D'ailleurs,
+    je le fais :
+
+        git clone http://git.rom1v.com/gitbashprompt.git
+
+    Pour *github*, j'essaie d'éviter (autant que faire se peut) les services
+    centralisés, d'autant qu'il n'est pas libre…
+
+    Après, techniquement, je ne dis pas, c'est sympa les *pull requests* et tout
+    ça… Une solution pragmatique serait de le mettre sur *github* en plus d'un
+    dépôt sur lequel on a la main.
+
+    Mais pour un simple script comme celui-là, je vais me contenter de mon dépôt
+    *http* ;-)
+- id: 15
+  author: 786543
+  author-url: http://www.flood.fr
+  date: 2012-04-07 18:10:21+01:00
+  contents: |
+    J'utilise ça :
+
+    <https://github.com/olivierverdier/zsh-git-prompt>
+
+    ça permet d'avoir le `git status` dans le prompt également :)
+- id: 16
+  author: Zistoloen
+  author-url: http://gitstack.com
+  date: 2012-04-07 22:51:31+01:00
+  contents: |
+    Bonsoir,
+
+    Il est vrai que le livre Pro Git est assez formidable. Perso, j'utilise Git
+    depuis un moment maintenant pour mes projets Java et je trouve cet outil
+    super puissant, facile à utiliser et rapide. Un utile vraiment utile !
+
+    Je pense donc que c'est une bonne chance d'en parler à travers un blog, cela
+    promeut l'outil ;-).
+
+    Bonne soirée,
+- id: 17
+  author: ®om
+  date: 2012-04-17 21:39:58+01:00
+  contents: |
+    Je viens de publier une version 0.12, qui corrige un petit bug dans certains
+    cas lorsqu'on utilise les sous-modules.
+
+    En effet, le répertoire `.git` d'un sous-module peut se trouver ailleurs
+    qu'à la racine du projet, et être référencé par un fichier `.git` contenant
+    par exemple :
+
+        gitdir: ../.git/modules/monprojet
+
+    Avec la version 0.11, la branche ne s'affichait pas dans ce cas, c'est
+    maintenant corrigé.
+- id: 18
+  author: huit_six
+  date: 2012-05-04 11:05:19+01:00
+  contents: |
+    Bonjour,
+
+    Encore merci pour ton script, je l'utilise quotidiennement.
+
+    Petite remarque, sous bash, il y a un (bug ? comportement bizarre ?) qui
+    fait qu'on peut mettre deux / en début de chemin et dans ce cas, ton script
+    ne fonctionne pas (aucun chemin n'est affiché).
+
+    Je sais c'est un peu du pinaillage mais j'ai eu le cas ce matin et je ne
+    comprenais pas pourquoi je ne retrouvait plus mon repo ^^
+- id: 19
+  author: ®om
+  date: 2012-05-04 11:11:26+01:00
+  contents: |
+    @[**huit\_six**](#comment-18) :
+
+    Je ne savais pas qu'on pouvait mettre `//` en début de chemin. Que cela
+    signifie-t-il ?
+
+    Tu peux préciser le chemin que tu mets stp pour reproduire le problème ?
+
+    J'ai essayé avec un projet *git* dans `//tmp`, je n'ai pas eu de problème…
+- id: 20
+  author: Olivier Mengué (dolmen)
+  author-url: http://o.mengue.free.fr/presentations/2008-fpw/Mieux-programmer-en-shell.pdf
+  date: 2012-08-03 17:09:27+01:00
+  contents: |
+    L'implémentation est peu efficace : tout le code shell est dans la variable
+    PS1, donc le parsing des 40 lignes de code shell (la grosse boucle while) et
+    la vérification de la syntaxe sont fait à chaque affichage du prompt. Une
+    meilleure solution serait de faire comme fait le plugin Git de bash (voir
+    `__git_ps1`): mettre le code dans une fonction et ne mettre dans PS1 que
+    l'appel à la fonction.
+
+    De plus les variables `col` et `nocol` pourraient être développées et
+    supprimées de l'environnement.
+- id: 21
+  author: ®om
+  date: 2012-08-03 20:04:00+02:00
+  contents: |
+    @[**Olivier Mengué (dolmen)**](#comment-20) :
+
+    Bonnes remarques.
+
+    Quand j'aurai un moment, j'en ferai une fonction à part.
+- id: 22
+  author: ®om
+  date: 2012-09-08 15:10:36+02:00
+  contents: |
+    @[**Olivier Mengué (dolmen)**](#comment-20) :
+
+    J'ai donc mis le contenu de la fonction dans une fonction à part, et je l'ai
+    appelée dans `PS1`.
+
+    J'ai créé une nouvelle branche temporaire nommée **func** pour cette modif :
+
+        git clone http://git.rom1v.com/gitbashprompt.git -b func
+
+    Mais je n'arrive pas à faire fonctionner les couleurs comme avant.
+
+    En effet, si j'utilise le script que je t'envoie tel quel, ça affiche les
+    `\[` :
+
+        ~/MonProjet\[\]@master\[\]$
+
+    Si je retire ces `\[\]` "en trop", ça s'affiche correctement, mais le
+    terminal, lui, se trouve buggé : il retourne à la ligne avant la fin de la
+    ligne (et écrit par-dessus le texte déjà présent) car il "croit" que les
+    codes couleurs (`\e[34m`) comptent pour 6 caractères, alors qu'en réalité
+    aucun de ces caractères n'est affiché. C'est la raison pour laquelle j'avais
+    encadré le code couleur de `\[` et `\]` dans ma première version, mais ça ne
+    semble pas fonctionner s'ils se trouvent dans une fonction à part.
+
+    As-tu une idée ?
+- id: 23
+  author: ®om
+  date: 2012-10-09 22:26:54+02:00
+  contents: |
+    J'ai
+    [trouvé](http://superuser.com/questions/301353/escape-non-printing-characters-in-a-function-for-a-bash-prompt) !
+
+    `\[` et `\]` ne sont interprétés que par `PS1`, dans une fonction il faut
+    utiliser `\001` et `\002`.
+
+    Un bout du commit qui résout le problème (`1d062d9`) :
+
+    {% highlight diff %}
+    --- gitbashprompt
+    +++ gitbashprompt
+    @@ -9,8 +9,8 @@
+     
+     __git_bash_prompt() {
+         # Colors
+    -    local nocol='\[\e[0m\]'
+    -    local col='\[\e[34m\]' # blue
+    +    local nocol='\001\e[0m\002'
+    +    local col='\001\e[34m\002' # blue
+     
+         SFI="$IFS"
+         IFS=/
+    {% endhighlight %}
+
+    Cette nouvelle version du script (0.2) a maintenant été mergée sur la
+    branche `master` et supprimé la branche temporaire `func`.
+- id: 24
+  author: Romlinch
+  date: 2013-01-04 17:26:58+01:00
+  contents: |
+    Connaissez-vous LiquidPrompt ?
+
+    <https://github.com/nojhan/liquidprompt>
+
+    Il affiche:
+
+     * Le niveau de batterie à partir d'un seuil
+     * Le proxy
+     * La charge à partir d'un seuil
+     * Dans un dossier git, la branche, le nombre de commit par rapport au remote
+     * etc

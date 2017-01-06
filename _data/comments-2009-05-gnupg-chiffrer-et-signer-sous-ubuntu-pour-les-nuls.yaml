@@ -1,0 +1,636 @@
+- id: 1
+  author: jp.fox
+  author-url: http://www.jpfox.fr/
+  date: 2009-05-22 13:22:11+01:00
+  contents: |
+    Très bonne introduction à GnuPG :-)
+
+    Pour ceux qui utilisent Thunderbird pour lire leurs mails, il existe
+    l'extension Enigmail pour intégrer GnuPG. Ici, un petit tutoriel pour
+    Thunderbird/Enigmail :
+    <http://www.jpfox.fr/?post/2008/10/09/235-envoyer-des-messages-signes-et-chiffres-avec-thunderbird-enigmail-et-gnupg-sous-ubuntu>
+- id: 2
+  author: RaMuS
+  date: 2009-05-22 13:56:13+01:00
+  contents: |
+    merci pour ce petit tuto, sous ubuntu je chiffrais quelques documents
+    personnels. Par contre je suis passé sous xubuntu et je n'ai pas chiffrer
+    dans le clique droit... Comment faire ? (en interface graphique si possible)
+- id: 3
+  author: Seb24
+  author-url: http://blog.e-node.org
+  date: 2009-05-22 14:31:39+01:00
+  contents: |
+    Excellent article. Merci
+- id: 4
+  author: korbé
+  date: 2009-05-22 14:32:18+01:00
+  contents: |
+    Excellent tuto.
+
+    Ça mériterai d'être dans la Doc d'Ubuntu-fr.
+- id: 5
+  author: splitsch
+  author-url: http://www.pastanque.be/splitsch
+  date: 2009-05-22 14:49:33+01:00
+  contents: |
+    Exceptionnel ! depuis le temps que je me disais que j'allais m'y intéresser,
+    les explications m'ont toujours parues inutilement techniques, et passant à
+    côté de l'essentiel !
+
+    Merci beaucoup !
+
+    Yan
+- id: 6
+  author: said026
+  author-url: http://said026.co.cc
+  date: 2009-05-22 15:13:49+01:00
+  contents: |
+    Merci super fort j'ai tout pijé
+- id: 7
+  author: LordPhoenix
+  author-url: http://lordphoenix.tuxfamily.org
+  date: 2009-05-22 15:52:23+01:00
+  contents: |
+    En ces temps d'hadopi et de Loppsi ce genre de pratique est à généraliser le
+    plus possible. En plus sous Gnu/Linux quasiment tout les bons clients mail
+    intègrent facilement ces fonctionnalités.
+- id: 8
+  author: Loyl
+  date: 2009-05-22 16:20:02+01:00
+  contents: |
+    Un petit détail a été oublié dans l'article à propos de l'expiration des
+    clés. Que faire une fois sa clé expiré, faut-il en recréer une autre ? La
+    republié ? Que deviennent tous les fichiers chiffrer avec l'ancienne clé ?
+- id: 9
+  author: Wacken
+  author-url: http://15minutesoffame.be/nico/blog/
+  date: 2009-05-22 16:40:51+01:00
+  contents: |
+    Salut,
+
+    Super tuto, tu m'as piqué mon idée :D Je me permets tout de même de mettre
+    un lien vers ce que j'ai fait.
+
+    une intro sur la cryptographie et l'anonymat :
+
+    <http://15minutesoffame.be/nico/blog/2009/05/securite-et-anonymat-quelques-elements-de-cryptographie/>
+
+    De quoi protéger ses données perso, notamment avec TrueCrypt :
+
+    <http://15minutesoffame.be/nico/blog/2009/05/securite-et-anonymat-proteger-ses-donnees-personnelles/>
+- id: 10
+  author: Tutur
+  date: 2009-05-22 17:26:41+01:00
+  contents: |
+    Merci, très clair ce tuto, j'avais déjà quasi tout fait "à la main" mais
+    c'est vrai que c'est aussi simple avec les interfaces, en tout cas plus
+    intuitif.
+- id: 11
+  author: ®om
+  date: 2009-05-22 18:10:45+01:00
+  contents: |
+    @[**Loyl**](#comment-8)
+
+    Une fois sa clé expirée, il faut en recréer une autre et la publier. Mais
+    l'ancienne reste toujours utilisable pour déchiffrer et vérifier des
+    signatures (mais plus pour chiffrer ou signer).
+- id: 12
+  author: sandrew
+  date: 2009-05-22 21:26:57+01:00
+  contents: |
+    Excellent article !!! Mais reste une question. Apres avoir chiffre un
+    document via nautilus, est il possible de le detruire automatiquement ?
+    Jusque la, l'original reste et il faut manuellement le mettre a la poubelle,
+    puis vider la poubelle.
+- id: 13
+  author: ®om
+  date: 2009-05-22 23:56:03+01:00
+  contents: |
+    @[**sandrew**](#comment-12)
+
+    A priori, il reste. Je ne sais pas si c'est possible de le faire
+    automatiquement lors du clic sur Chiffrer (mais c'est plus sûr comme ça,
+    imagine tu chiffres et tu oublies de t'inclure dans les destinataires…).
+    Après pour éviter d'avoir à vider la corbeille, ne le mets pas à la
+    corbeille mais supprime-le directement (Maj+Suppr).
+- id: 14
+  author: superpapalolo
+  author-url: http://librepc.canalblog.com/
+  date: 2009-05-23 07:43:11+01:00
+  contents: |
+    Bravo pour ce tuto, j'en avais écrit un aussi mais le tien est vraiment très
+    très complet et très simple à lire.
+
+    Je me permets de le citer, je pense que tu n'as rien contre, mais si cela
+    pose un quelconque problème, fais le moi savoir.
+
+    Laurent.
+
+    id clef publique : 9178CEF8
+- id: 15
+  author: VV666
+  date: 2009-05-23 08:07:52+01:00
+  contents: |
+    Très bon tuto, cependant n'oubliez pas que la meilleur façon d'attirer le
+    regard sur soit, c'est de crypter ses échanges... Vous croyez pas plus
+    sécurisé avec un cryptage, actuellement, ce sont les premier échange
+    analysé. ;)
+
+    Pour le moment, le seul moyen de communication encore sur est le courrier
+    postal !
+- id: 16
+  author: ®om
+  date: 2009-05-23 08:13:58+01:00
+  contents: |
+    @[**superpapalolo**](#comment-14)
+
+    Aucun problème :-)
+
+    @[**VV666**](#comment-15)
+
+    Ce n'est pas grave d'attirer le regard sur soi, on n'a rien à cacher… Mais
+    ce n'est pas parce qu'on a rien à cacher qu'on doit tout rendre public.
+
+    Le chiffrement des messages, c'est simplement l'équivalent pour le courrier
+    postal de mettre une enveloppe autour d'une carte postale, pour éviter que
+    tout le monde le lise (ce qui est fait de manière massive pour les mails par
+    exemple).
+- id: 17
+  author: Eikasia
+  date: 2009-05-23 10:43:56+01:00
+  contents: |
+    Salut
+
+    Très bon tuto, clair et efficace. Tu devrais le mettre dans le wiki
+    d'ubuntu-fr. Il le mérite amplement.
+- id: 18
+  author: VV666
+  date: 2009-05-23 19:49:57+01:00
+  contents: |
+    Je comrpends très bien ta position, je sais qu'on à rien à caché (enfin, moi
+    pas... quoi que mon activisme sur les caténaires... oops, je me tais !  ^^),
+    mais en cryptant massivement nos échanges on permet à des gens
+    malintentionnée de ce fondre dans la foule d'échange crypté...
+
+    C'est le gros problème des réseaux "parallèle" comme TOR ou FreeNet.
+- id: 19
+  author: Wacken
+  author-url: http://15minutesoffame.be/nico/blog/
+  date: 2009-05-23 21:58:55+01:00
+  contents: |
+    > @[**VV666**](#comment-15)
+    >
+    > en cryptant massivement nos échanges on permet à des gens malintentionnée
+    > de ce fondre dans la foule d'échange crypté…
+
+    Envisagerais-tu de déconseiller aux gens d'utiliser la Poste sous prétexte
+    de des gens malintentionnés utilisent leurs services ?
+
+    Le problème, si on va dans ce sens, c'est qu'on peut justifier tous les
+    filtrages et interdictions sous prétexte que des gens "malintentionnés"
+    utilisent tel ou tel outil. De plus, il faut relativiser : on n'a pas
+    attendu l'arrivée massive de la cryptographie dans les mails pour commettre
+    des actes odieux.
+
+    Finalement, le plus gros problème dans tout ça, c'est le manque d'anonymat
+    qu'offre le web. Dans la vraie vie, il est assez difficile de suivre
+    quelqu'un à la trace, ce qui est très facile sur le web. Dans la vraie vie,
+    ta voiture ne dévoilera jamais tous les endroits que tu as visité. Ton
+    historique de navigation ou ton FAI, si.
+- id: 20
+  author: VV666
+  date: 2009-05-23 22:53:58+01:00
+  contents: |
+    Non, je ne déconseillerai pas d'utiliser La Poste, tout comme je ne
+    déconseille pas de crypter ces mails.
+
+    Et j'encourage encore moins le filtrage massif ! Avec les centaines de mails
+    anti-hadopi que j'ai envoyé, ce serait un comble.
+
+    Mais croire que le cryptage une solution ma parait un peu simpliste.
+
+    @Wacken
+
+    Non, on a pas attendu la cryptographie pour faire des truc dégueulasse, mais
+    serais-tu capable de permettre à un gros salopard de ce fondre la foule
+    uniquement pour que tu protège ton courrier personnel ? Moi non....
+    Internet, mail, tchat, etc N'EST PAS ANONYME, c'est public. c'est comme
+    discuter à la terrasse d'un café, donc en partant de ce principe, je me
+    contrefiche que mes échange ne soit pas crypter, car y a rien à trouver de
+    dans.
+
+    Dans la "vrai vie", c'est difficile d'espionner quelqu'un, mais Internet
+    N'EST PAS LA VRAI VIE... donc, on peux pas faire d'analogie. Comportons nous
+    différemment.
+
+    Personnellement, en dehors du ssh, des mot de passe crypter et des
+    transaction bancaire sécurisé, je n'utilise pas de cryptage, pas de GPG, pas
+    de TOR, ni de FreeNet.... Le gain est trop faible par rapport au
+    inconvénient.
+
+    Il n'y a pas si longtemps je pensais comme vous, puis plusieurs discutions
+    avec ds amis (flic, militaires, syndicaliste, informaticien, etc) m'ont fait
+    changer d'avis.
+- id: 21
+  author: VV666
+  date: 2009-05-23 22:55:38+01:00
+  contents: |
+    arf, dsl pour l'orthographe et les mots oubliés... j'ai tapé trop vite. :/
+- id: 22
+  author: Wacken
+  author-url: http://15minutesoffame.be/nico/blog/
+  date: 2009-05-24 01:30:56+01:00
+  contents: |
+    > @[**VV666**](#comment-20)
+    >
+    > Internet, mail, tchat, etc N'EST PAS ANONYME, c'est public. c'est comme
+    > discuter à la terrasse d'un café, donc en partant de ce principe, je me
+    > contrefiche que mes échange ne soit pas crypter, car y a rien à trouver de
+    > dans.
+
+    Moi j'estime qu'on a droit à l'anonymat sur le net. De plus, le Net n'est
+    pas totalement déconnecté de la "vraie vie", pour preuve les e-mails qui
+    remplacent la correspondance postale.
+
+    Je ne parle pas de crypter systématiquement tous ses échanges, ce qui est
+    ridicule, mais bien de crypter ce qui est personnel. Par exemple, j'ai pas
+    spécialement envie que mon FAI soit au courant de mes hypothétiques
+    problèmes de santé car j'ai écrit un mail à une connaissance.
+- id: 23
+  author: ®om
+  date: 2009-05-24 09:44:56+01:00
+  contents: |
+    @[**VV666**](#comment-20)
+
+    Je ne suis pas d'accord, la correspondance privée est privée, et non
+    publique.
+
+    Cela ne veut pas dire que ça ne peut pas être lu : si la police a besoin de
+    déchiffrer certaines données chiffrées, dans le cadre d'une procédure
+    judiciaire, elle peut ordonner à l'utilisateur de fournir sa clé privée.
+
+    Alors, effectivement, ça serait plus simple pour la police si elle pouvait
+    lire tout ce qui transite sur internet… Tout comme ça serait plus simple si
+    une caméra filmait en permanence l'intérieur du domicile des français, et si
+    tout le monde portait un bracelet électronique pour savoir à n'importe quel
+    instant où toute personne se trouve… Il n'y aurait même plus besoin de
+    passer par un juge, dans un souci d'*efficacité* (mot très souvent employé
+    en ce moment pour justifier le contournement de l'autorité judiciaire).
+
+    Mais il y a un équilibre entre sécurité et liberté… Et pour augmenter un
+    tout petit peu la sécurité (et encore ça reste à prouver), il faudrait
+    sacrifier une grande part de liberté.
+
+    Alors certes, le contenu des e-mails a des intérêts économiques (c'est le
+    modèle économique de google, qui lit les mails de tout le monde car
+    l'information ça a de la valeur), mais il faut un moyen pour que la
+    correspondance privée soit privée… surtout à l'heure où le filtrage (la
+    limitation des communications) veut être instauré.
+
+
+- id: 24
+  author: David
+  author-url: http://www.ddmdllt.org/weblog/
+  date: 2009-05-27 06:37:11+01:00
+  contents: |
+    @Rom:
+
+    Sur le fait que la justice puisse ordonner systématiquement de fournir une
+    clé privée, je ne suis pas sûr.
+
+    Je sais que la justice peut ordonner d'indiquer ce qui est nécessaire pour
+    pouvoir rendre clairs les messages chiffrés.
+
+    Or souvent (avec GnuPG), il ne s'agit pas de chiffrement asymétrique mais
+    hybride. Seule une clé symétrique de session est codée avec la clé publique.
+    Donc le système à clé publique/privée n'est au final qu'un moyen de contrôle
+    de droits d'accès.
+
+    La clé de session (qui sert au cryptage symétrique) peut être obtenue par
+    ceux qui ont la bonne clé privée. Ils peuvent donc la révéler, et permettre
+    à un non destinataire de déchiffrer le message sans donner leur clé privée.
+
+    (Pour la pratique cf le manuel de gpg et les options --show-session-key et
+    --override-session-key)
+
+    Pour les aspects de nécessité de sécurité (du pays) mis en avant pour
+    décourager le chiffrement, je n'ai jamais été convaincu.
+
+    Des terroristes voulant faire transiter des messages courts et urgents via
+    Internet n'ont qu'à utiliser des phrases clés indécelables postées sur des
+    forums publics connus. C'est facile d'établir de telles conventions, et
+    surtout ça rend difficile pour des enquêteurs et services de renseignement
+    d'établir les réseaux. (Chiffrer les échanges est une chose, mais cela
+    n'empêche pas toujours de savoir qui parle à qui...).
+
+    (Note: Mes idées n'ont rien de novatrices et n'apprendront rien aux
+    terroristes, rassurez vous. Des méthodes similaires telles que l'envoi de
+    messages discrets via petites annonces étaient connues avant l'avénément de
+    l'informatique...)
+
+    Pour tout ce qui n'est pas estimé comme court et urgent, il n'y a simplement
+    peu d'intérêt à utiliser Internet.
+
+    Pour la lutte contre la pédophilie, pour faire court, empêcher le
+    chiffrement sur Internet n'empêchera pas d'utiliser la poste pour
+    transmettre des clés/CDs chiffrées. Pour ce qui est d'empêcher des échanges
+    privés entre des individus qui se connaissent, c'est perdu d'avance.
+
+    Si c'est entre individus qui ne se connaissent pas, il y a fort à parier
+    qu'Internet puisse jouer un rôle favorable et crucial, en permettant aux
+    enquêteurs de la police de réussir à s'infiltrer. (La transmission de
+    documents pédophile est un problème très grave, les actes pédophiles non
+    virtuels le sont encore plus.)
+- id: 25
+  author: Wacken
+  author-url: http://15minutesoffame.be/nico/blog/
+  date: 2009-05-27 15:52:19+01:00
+  contents: |
+    Salut,
+
+    Je me permets de mettre un lien sur ce que j'ai fait concernant la
+    sécurisation des échanges :
+
+    <http://15minutesoffame.be/nico/blog/2009/05/securiser-ses-echanges/>
+
+    A+
+- id: 26
+  author: ®om
+  date: 2009-05-28 20:55:21+01:00
+  contents: |
+    @[**David**](#comment-24)
+
+    L'[Article
+    230-1](http://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006576029)
+    du code de procédure pénale dit :
+
+    > lorsqu'il apparaît que des données saisies ou obtenues au cours de
+    > l'enquête ou de l'instruction ont fait l'objet d'opérations de
+    > transformation empêchant d'accéder aux informations en clair qu'elles
+    > contiennent ou de les comprendre, le procureur de la République, la
+    > juridiction d'instruction ou la juridiction de jugement saisie de
+    > l'affaire peut désigner toute personne physique ou morale qualifiée, en
+    > vue d'effectuer les opérations techniques permettant d'obtenir la version
+    > en clair de ces informations ainsi que, dans le cas où un moyen de
+    > cryptologie a été utilisé, la convention secrète de déchiffrement, si cela
+    > apparaît nécessaire.
+
+    Donc si la clé de session suffit pour déchiffrer une donnée, c'est ok. En
+    fait peu importent les moyens, tant qu'ils permettent d'obtenir le message
+    en clair.
+- id: 27
+  author: Geek87
+  date: 2009-05-28 21:20:59+01:00
+  contents: |
+    Salut,
+
+    Juste pour signaler qu'il n'est pas terrible de chiffrer sa messagerie
+    instantannée avec GPG, mieux vaut le faire avec
+    [OTR](http://www.cypherpunks.ca/otr/) car il permet en plus de
+    l'authentification et du chiffrement le perfect forward secrecy (si une
+    correspondance est décryptée, les précédentes ne pourront pas l'être pour
+    autant) et la deniable encryption (qui permet de ne pas laisser de preuve de
+    ce que l'on a dit : il faut réserver la non répudiation pour les contrats
+    pas pour la messagerie instantannée, comme dit sur leur site).
+
+    Bonne soirée.
+- id: 28
+  author: ®om
+  date: 2009-05-28 21:33:44+01:00
+  contents: |
+    @[**Geek87**](#comment-27)
+
+    Ah merci, effectivement je n'avais pas pensé à cet inconvénient de GPG pour
+    la messagerie instantanée.
+
+    Une petite nuance cependant, ce que tu écris dans gajim, c'est chiffré avec
+    la clé de ton interlocuteur, pas signé (je viens de vérifier en écrivant à
+    quelqu'un, avec ma clé non déverrouillée). Dans ce cas, la seule preuve
+    qu'il peut obtenir, c'est que si tu as compris ce qu'il écrivait (ce qu'il a
+    chiffré avec ta clé publique), c'est bien toi…
+
+    Dans pidgin c'est OTR qui est utilisé, non? Je n'ai pas testé encore.
+
+    Malheureusement, [OTR a été abandonnée dans
+    gajim](http://trac.gajim.org/wiki/OTR).
+- id: 29
+  author: David
+  author-url: http://www.ddmdllt.org/weblog/
+  date: 2009-05-29 00:10:56+01:00
+  contents: |
+    @[**Geek87**](#comment-27)
+
+    GPG permet d'encrypter un message pour quelqu'un sans qu'on puisse savoir
+    pour qui il a été encrypté (à moins de tester avec la bonne clef *privée*) :
+    il s'agit de l'option "-R" (au lieu de "-r").
+
+    Si on a que la clef de session, on ne peut pas déchiffrer les messages
+    précédents et suivants.
+
+    @[**®om**](#comment-26)
+
+    Oui la clef de session suffit à déchiffrer un message précis.
+
+    L'article 230-1 que tu cites n'est pas celui qui importe. Il permet à la
+    justice de faire appels à des personnes/moyens pour déchiffrer un message.
+    Il n'est utile que si le procédé de chiffrement est faible.
+
+    En revanche, l'article
+    [434-15-2](http://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=88194916439D93DEC01B6C1CD274D16B.tpdjo16v_2?idArticle=LEGIARTI000006418646&cidTexte=LEGITEXT000006070719&dateTexte=20011231)
+    est un de ceux qui importe réellement.
+- id: 30
+  author: Geek87
+  date: 2009-05-29 09:06:28+01:00
+  contents: |
+    @®om
+
+    Oui il s'agit bien d'OTR. Effectivement s'il n y a pas de signature des
+    messages il n y a pas non répudiation mais il n y a plus de réelle
+    authentification, il faut se baser sur le principe que tu donnes.
+
+    @David
+
+    OK je ne savais pas, en fait je ne savais même pas qu'on pouvait retrouver
+    pour qui a été écrit un message chiffré sans cette option. Mais cela ne
+    change rien au fait que seul OTR offre les 4 garanties que sont encryption,
+    authentication, perfect forward secrecy et deniable encryption.
+- id: 31
+  author: tux03
+  date: 2009-07-14 14:28:15+02:00
+  contents: |
+    salut !
+
+    C'est super moi qui cherchait un tuto simple pour ce type de chiffrement me
+    voila ravi !
+
+    Serait il possible que tu mette un pdf en ligne pour ce tuto ?
+
+    Merci et bonne soirée
+- id: 32
+  author: laurent
+  author-url: http://librepc.canalblog.com/
+  date: 2009-10-29 10:39:57+02:00
+  contents: |
+    Merci Romain pour l'astuce du plugin de seahorse (dans ta mise à jour du
+    4/10). Je me suis retrouvé comme un âne bâté à me demander pourquoi je
+    n'avais plus l'option chiffrer/signer dans le clic droit malgré la présence
+    de seahorse dans Karmic.
+
+- id: 33
+  author: Xibine
+  date: 2009-11-28 23:01:10+02:00
+  contents: |
+    Il y a une branche OTR pour Gajim.
+
+    C'est stable. Faut juste penser à supprimer les clés OTR des contacts du
+    fichier ad hoc, au lieu de le faire par Gajim lui-même.
+
+    Il y a d'autres programmes qui l'utilisent aussi :
+    <http://free.korben.info/index.php/S%C3%A9curiser_ses_conversations>
+- id: 34
+  author: Philippe
+  date: 2010-01-10 18:02:14+02:00
+  contents: |
+    Bonjour,
+
+    j'ai suivi le tuto et je me suis crée une clef privée. Cependant, je l'ai
+    crée sur mon portable, et je voudrais avoir la même sur mon PC principal.
+    Lorsque je l'exporte, je n'exporte que la clef publique, qui permet de
+    déchiffrer. Est-ce que je dois forcément avoir deux clef privée différentes
+    sur 2 PC différents, ou bien y a t'il un moyen pour la dupliquer ?
+
+    Merci bien.
+- id: 35
+  author: ®om
+  date: 2010-01-10 18:51:43+02:00
+  contents: |
+    Tu peux simplement copier le fichier `~/.ssh/id_rsa` (qui est ta clé privée)
+    sur ton autre pc.
+- id: 36
+  author: David
+  author-url: http://www.daviddallet.com/weblog/
+  date: 2010-01-13 18:13:38+02:00
+  contents: |
+    Mais faut faire attention de ne pas écraser le fichier de l'autre PC
+    aussi... (D'autant plus que là c'est pour ssh et non gnupg...)
+
+    Sinon personnellement je préfère utiliser gpg avec "--export-secret-keys".
+
+    Ne pas oublier de prendre les précautions qui s'imposent pour transporter le
+    fichier (si média amovible, penser qu'un effacement du fichier ne détruit
+    pas véritablement les données... voir shred, etc...).
+- id: 37
+  author: ®om
+  date: 2010-01-13 18:16:34+02:00
+  contents: |
+    Oulà, effectivement, j'ai lu un peu vite le commentaire, j'étais persuadé
+    que c'était dans mon billet sur SSH.
+
+    Du coup, pour GnuPG c'est bien ~/.gnupg
+
+    qu'il faut copier (la méthode brute mais rapide).
+- id: 38
+  author: Kasi
+  date: 2010-03-21 00:19:09+02:00
+  contents: |
+    Moi j'ai une petite question sur la hiérarchisation des clés.
+
+    Dans l'aide de seahorse j'ai pu lire :
+
+    > Chaque clé OpenPGP dispose d'une clé principale unique utilisée seulement
+    > pour signer. Les sous-clés sont utilisées pour chiffrer et également pour
+    > signer. Ainsi, si une sous-clé est compromise, vous n'avez pas besoin de
+    > révoquer votre clé principale.
+
+    Admettons une clé cléparent qui a les sous clés cléfille1 et cléfilles2.
+
+    Si une personne accorde sa confiance à la clé cléfille2 et que je la
+    révoque, est-ce qu'une cléfille3 aura directement la confiance de l'ancienne
+    ? je pense que non mais dans ce cas quel est l'intérêt des sous clés ?
+- id: 39
+  author: "Chiffrer son dossier personnel (/home) sous Ubuntu &laquo; ®om&#39;s blog"
+  author-url: http://blog.rom1v.com/2010/05/chiffrer-son-dossier-personnel-home-sous-ubuntu/
+  date: 2010-05-16 18:16:13+01:00
+  pingback: true
+  contents: |
+    [...] Pour utiliser le chiffrement pour des communications plutôt que pour
+    le stockage des données, vous pouvez consulter GnuPG : chiffrer et signer
+    sous Ubuntu pour les nuls. [...]
+- id: 40
+  author: "Le logiciel HADOPI est impossible ! &laquo; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2010/08/le-logiciel-hadopi-est-impossible/
+  date: 2010-08-01 03:03:27+02:00
+  pingback: true
+  contents: |
+    [...] la cryptographie, ça fonctionne bien et c’est accessible à tous très
+    simplement. Pourquoi donc un tel logiciel ne peut pas [...]
+- id: 41
+  author: cedmuche
+  date: 2010-10-22 23:33:08+02:00
+  contents: |
+    Bonjour,
+
+    Merci pour ces explications. J'ai suivi ton tuto et quand je lance gajim
+    (sur ubuntu) il me répond :
+
+    > Votre mot de passe est incorrect
+    >
+    > Vous avez configuré Gajim pour qu'il utilise un agent GPG, mais aucun
+    > agent GPG n'est lancé ou il a renvoyé un mauvais mot de passe.
+    >
+    > Vous êtes actuellement connecté sans clé OpenPGP.
+
+    Aurais-tu idée d'où vient ce problème ?
+- id: 42
+  author: Jacques le Malade
+  date: 2011-07-12 21:18:27+02:00
+  contents: |
+    Au fait, j'ai regardé ça :
+
+    <http://www.securite-informatique.gouv.fr/autoformations/signature_elec/co/mod01_chap01_scha01_cu06.html>
+
+    On y raconte :
+
+    > La Clef publique
+    >
+    > Pour permettre aux autres de lire vos documents, vous leur remettez une
+    > copie de votre clé de déchiffrement. Ils peuvent aussi se la procurer
+    > auprès de l'organisme de confiance qui vous l'a délivrée. Nous
+    > l'appellerons "clé publique".
+
+    C'est une grosse bêtise, non ? Et c'est sur gouv.fr...
+- id: 43
+  author: ®om
+  date: 2011-07-12 21:28:15+02:00
+  contents: |
+    @[Jacques le Malade](#comment-42)
+
+    Effectivement, c'est au moins très mal dit.
+
+    Mais c'est dans leur logique de [signer =
+    chiffrer](http://www.securite-informatique.gouv.fr/autoformations/signature_elec/co/mod01_chap01_scha01_cu01.html) :
+
+    > Dans le monde numérique, votre marque personnelle, c'est une clé de
+    > chiffrement. Pour signer un document, vous le chiffrez.
+
+    Après peut-être que les vidéos expliquent mieux, mais je n'y ai pas accès
+    (il faut Flash).
+- id: 44
+  author: "Ubuntu Server : messagerie | Wilibre"
+  author-url: http://wilibre.homelinux.net/ubuntu-server-messagerie/
+  date: 2011-11-09 15:43:45+02:00
+  pingback: true
+  contents: |
+    [...] : si vous souhaitez transmettre vos messages sans qu’ils puissent être
+    lus par des tiers, le chiffrement avec PGP reste le meilleur moyen de vous
+    masquer (et surtout masquer le contenu). En effet, vos messages, [...]
+- id: 45
+  author: "Proteger vos courriels avec Gpg | 22decembre"
+  author-url: http://www.22decembre.eu/2012/02/27/proteger-vos-courriels-avec-gpg/
+  date: 2012-02-27 22:19:51+01:00
+  pingback: true
+  contents: |
+    [...]
+    http://blog.rom1v.com/2009/05/gnupg-chiffrer-et-signer-sous-ubuntu-pour-les-nuls/
+    [...]

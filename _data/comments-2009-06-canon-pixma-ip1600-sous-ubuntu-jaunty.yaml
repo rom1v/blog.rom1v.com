@@ -1,0 +1,83 @@
+
+- id: 1
+  author: jerome
+  date: 2009-08-27 12:53:55+02:00
+  contents: |
+    Tu viens juste de me sauver après de long jours de recherche car les liens
+    de dépendances ne sont pas bon et c'est très bien expliqué sur ton site.
+
+    Merci bcp
+- id: 2
+  author: papi
+  date: 2009-09-12 20:49:28+02:00
+  contents: |
+    Merci pour ce memo très bien fait qui m'a permis de réinstaller mon
+    imprimante Canon. J'avais perdu le mode opératoire
+- id: 3
+  author: pierre-yves
+  date: 2009-09-28 17:44:05+02:00
+  contents: |
+    Alors là champion !!! Deux jours que je viens de me mettre à linux,tu viens
+    de m'épargner des prises de tête !
+
+    Merci!
+- id: 4
+  author: kiki
+  author-url: http://riderducoin.com
+  date: 2009-11-22 19:25:04+02:00
+  contents: |
+    Et pour imprimer en noir et blanc ou en mode rapide ce n'est pas disponible
+    dans les options du pilote !
+
+    Une idée ?
+
+    D'avance merci
+- id: 5
+  author: Christophe
+  date: 2010-02-14 12:35:53+02:00
+  contents: |
+    Testé avec succès ce jour sur Karmic 64 bits. Impec. Merci
+- id: 6
+  author: Kami
+  date: 2010-03-02 14:03:09+02:00
+  contents: |
+    Super. Ca fait 3 jours que je galère. En 5 mn j'ai résolu mon pb.
+
+    Je suis sous UBUNTU 9.10 Karmic.
+
+    Merci beaucoup.
+- id: 7
+  author: Arnaud Champollion
+  author-url: http://tuxecole.free.fr
+  date: 2010-04-15 20:26:46+01:00
+  contents: |
+    Je confirme aussi : ça fonctionne sans problème sous Ubuntu Karmic Koala
+    9.10.
+
+    J'ajoute qu'au moment de brancher l'imprimante, ça ouvre tout seul le
+    gestionnaire d'imprimantes, et ça demande quel pilote utiliser, et si on a
+    fait les manips décrites au préalable, il n'y a plus qu'à choisir le bon
+    fichier ppd/
+- id: 8
+  author: Cécile I
+  date: 2011-01-08 18:30:55+01:00
+  contents: |
+    Bonjour,
+
+    Je suis passé à linux il y a quelques jours avec ubuntu 10.10 et je n'arrive
+    toujours pas à installer mon imprimante canon ip1600. Après avoir suivi
+    votre tuto, j'ai le même problème qu'avec le précédent (forum de la
+    plateforme ubuntu) : Tout va bien jusqu'au moment d'imprimer la page test,
+    qui ne sort jamais. Le message qui s'affiche me dit "soumission effectuée
+    page de test soumise comme tâche d'impression 16" mais quand j'ouvre la file
+    d'attente elle est vide. L'imprimante était reconnue avant que je tente de
+    l'installer. J'ai supprimé l'imprimante reconnue au départ mais après avoir
+    suivi le tuto (avec le premier tuto pas moyen de la supprimer). On dirait
+    que la commande n'est pas transmise à l'imprimante ou que l'imprimante
+    n'exécute pas l'ordre.
+- id: 9
+  author: Cécile I
+  date: 2011-01-08 18:34:20+01:00
+  contents: |
+    Petite précision : le premier tuto que j'ai suivi est celui de mouling vers
+    lequel vous donnez un lien.

@@ -1,0 +1,863 @@
+- id: 1
+  author: Edouard
+  author-url: http://www.ensta.fr/~garnier
+  date: 2009-01-31 16:28:31+01:00
+  contents: |
+    Longue vie au nouveau serveur libre!
+- id: 2
+  author: dan
+  date: 2009-01-31 17:01:53+01:00
+  contents: |
+    moi j'aurais bien aimé que tu détaille pas a pas comment tu as fais. Car
+    ayant une eeebox aussi, pour l'instant, elle me sert que de serveur nfs...
+
+    et j'aurais bien voulu y mettre un site a moi ! :-)
+
+    Et la doc ubuntu, plouf, c'est pas une des plus clair que j'ai vu heiiin !
+- id: 3
+  author: XbY
+  date: 2009-01-31 17:04:31+01:00
+  contents: |
+    Petite geekerie :
+
+    Tu peux remplacer les 3 dernières lignes de ton script par ça :
+
+    {% highlight bash %}
+    ssh -t rom-eeebox "mysqldump -u root -p wordpress | gzip" > /media/gnu/backup/rom-eeebox/$target
+    {% endhighlight %}
+
+    Avantage : une seule connexion au lieu de 3, plus rapide (puisque le dump et
+    le transfert se font simultanément), n'utilise pas le disque dur et ... plus
+    court :).
+
+    Sinon, félicitation pour la migration et ta liberté :)
+- id: 4
+  author: dan
+  date: 2009-01-31 17:05:27+01:00
+  contents: |
+    Tiens au passage, javais aussi installer ubuntu server sur la eeebox,
+    mais...réseau pas reconnu...Fonctionnel, mais network manager (oui oui
+    interface graphique pour un serveur quouwaaa ? qu'entends je ? qu'oui je ?
+    scrognegne mais c'est péché, blablabla....!!) donc interface gnome network
+    manager, réseau : aucun ! alors que j'pouvais surfer et tout...J'ai meme
+    réinstallé network manager, rien n'y a fait....il voulait pas...Alors qu'en
+    version desktop...nickel !
+
+    ps : je sais que linux c'est la ligne de commande pure et dure, mais moi les
+    trucs "ahahha une interface graph pour un serveuuur ! bouuuh", ben...j'l'ai
+    comprends pas...! windows serveur est bien graphique et ca dérange personne
+    ? novel aussi ! et surement d'autre,....bref, moi le serveur doit me servir
+    et non pas l'contraire donc lol !
+- id: 5
+  author: _Enchained
+  author-url: http://www.most-enchained.com
+  date: 2009-01-31 17:24:20+01:00
+  contents: |
+    Tiens personne n'a relevé là dessus ?...
+
+    100% libre ? Tu as donc mis une Gobuntu sur ton serveur ? (troll inside)
+
+    Sinon je crois que je vais me renseigner là dessus, connaissais pas la
+    eee-box...
+- id: 6
+  author: yorkie bleur
+  date: 2009-01-31 18:06:03+01:00
+  contents: |
+    Oui , détaille la mise en place de ton serveur , ça m'intéresse beaucoup !
+- id: 7
+  author: ®om
+  date: 2009-01-31 19:04:05+01:00
+  contents: |
+    > @[**XbY**](#comment-3)
+
+    Le problème, que je n'ai pas réussi à résoudre, c'est que quand je fais
+    (avec ou sans gzip) :
+
+    {% highlight bash %}
+    ssh -t rom-eeebox "mysqldump -u root -p wordpress" > /tmp/test
+    {% endhighlight %}
+
+    le texte "Enter password:" (qui me demande le mot de passe de la base de
+    données) se retrouve redirigé dans le fichier `/tmp/test` (et n'apparaît pas
+    dans la console).
+
+    Alors que ça ça fonctionne (mais ça écrit sur le serveur) :
+
+    {% highlight bash %}
+    ssh -t rom-eeebox "mysqldump -u root -p wordpress > /tmp/test"
+    {% endhighlight" %}
+
+    Si tu as une solution je suis preneur :)
+- id: 8
+  author: ®om
+  date: 2009-01-31 19:06:27+01:00
+  contents: |
+    > windows serveur est bien graphique et ca dérange personne ?
+
+    C'est une absurdité pourtant :)
+
+    En plus ça utilise de la puissance pour rien, ça rajoute des failles…
+    vraiment inutile.
+
+    De toute façon je n'ai même pas d'écran ni de clavier sur la eee-box, alors
+    je n'ai pas besoin d'interface ;)
+- id: 9
+  author: ®om
+  date: 2009-01-31 19:20:09+01:00
+  contents: |
+    > @[**dan**](#comment-2)
+    >
+    > moi j'aurais bien aimé que tu détaille pas a pas comment tu as fais. Car
+    > ayant une eeebox aussi, pour l'instant, elle me sert que de serveur nfs...
+    >
+    > et j'aurais bien voulu y mettre un site a moi ! :-)
+    >
+    > Et la doc ubuntu, plouf, c'est pas une des plus clair que j'ai vu heiiin !
+
+    > @[**yorkie bleur**](#comment-6)
+    >
+    > Oui , détaille la mise en place de ton serveur , ça m'intéresse beaucoup !
+
+    OK, j'essaierai de faire un billet là-dessus. Mais ça ne va pas être facile
+    car il faudrait que je le refasse en parallèle pour faire le tuto, pour être
+    précis dans l'enchaînement des étapes…
+
+    En tout cas, ubuntu server est très simple à installer, il installe lui-même
+    lamp, ensuite faut configurer iptables (le firewall), et installer
+    wordpress… Je détaillerai tout ça.
+- id: 10
+  author: Tuxargon
+  author-url: http://tuxargon.kelio.org
+  date: 2009-01-31 20:11:43+01:00
+  contents: |
+    Très bonne idée !
+
+    Juste une petite proposition : essaie de diminuer le nombre de post dans le
+    home car c'est un peu long à charger pour les connexions lentes (comme la
+    mienne :P )
+- id: 11
+  author: Philippe
+  author-url: http://philippe.scoffoni.net
+  date: 2009-01-31 20:54:41+01:00
+  contents: |
+    Petite remarque malicieuse : ta liaison ADSL tombe jamais ? Tu as prévu un
+    petit onduleur pour les coupures d'électricité ? ;)
+
+    Bon mis à part ces petits soucis potentiels, c'est une solution sympa pour
+    apprendre à maîtriser un serveur Web. Coté distribution j'aurais plutôt pris
+    une Debian. Mais bon pas très différent d'un Ubuntu server.
+- id: 12
+  author: ®om
+  date: 2009-01-31 21:05:24+01:00
+  contents: |
+    > @[**Tuxargon**](#comment-10)
+    >
+    > Très bonne idée !
+    > 
+    > Juste une petite proposition : essaie de diminuer le nombre de post dans
+    > le home car c'est un peu long à charger pour les connexions lentes (comme
+    > la mienne :P )
+
+    Je viens de changer, c'était à 10 j'ai mis 5, c'était effectivement beaucoup
+    10 (y'avait beaucoup à scroller).
+
+    > @[**Philippe**](#comment-11)
+    >
+    > Petite remarque malicieuse : ta liaison ADSL tombe jamais ? Tu as prévu un
+    > petit onduleur pour les coupures d'électricité ? ;)
+
+    A priori elle ne tombe pas souvent, mais c'est effectivement un inconvénient
+    que j'aurais pu rajouter dans la liste.
+
+    Cependant, j'ai bien sûr pensé à cette éventualité avant de mettre tout ça
+    en place, et j'en ai conclu que pour un blog perso, il n'y a pas besoin
+    d'une haute dispo. Au pire même si très exceptionnellement, le blog ne
+    fonctionne pas pendant 2 heures, ça n'est pas la fin du monde.
+
+    C'est pas comme google qui pendant 40mn a signalé tous les sites du monde
+    comme dangereux :)
+- id: 13
+  author: MulX
+  author-url: http://www.mulx.net
+  date: 2009-01-31 21:12:24+01:00
+  contents: |
+    Petite question qui va avec le post \#11, tu possèdes quoi comme type de
+    connexion internet ?
+
+    Tu as une IP fixe ? IP dynamique ?
+
+    Pour quoi choisir cette solution, plutôt qu'un (petit) serveur dédié ?
+    (parce que même si l'eeebox ça ne consomme pas beaucoup, ça oblige a avoir
+    la box adsl + une machine allumer en permanence, sans compter que ta
+    connexion est moins performante qu'un serveur dédié. )
+
+    Et pis la liaison ADSL 3e-Box c'est du filaire ? Wifi ? CPL ? .... ?
+- id: 14
+  author: ®om
+  date: 2009-01-31 21:25:00+01:00
+  contents: |
+    J'ai pas une super connexion, une connexion "normale" pour un particulier,
+    un peu plus de 100Ko/s en upload (ce qui suffit pour un blog comme ça). Mon
+    eee-box est branchée en ethernet.
+
+    Je trouve ça plus sympa de l'héberger moi-même, je peux y copier des
+    fichiers rapidement, et je fais ce que je veux dessus (si je veux m'en
+    servir pour faire un proxy ssh, je peux).
+- id: 15
+  author: DecIRC
+  author-url: http://www.pingouin-barbu.info
+  date: 2009-01-31 22:40:44+01:00
+  contents: |
+    Essaie de mettre -pwordpress au lieu de -p wordpress
+
+    (considérant que ton password est bien "wordpress")
+
+    cEd
+- id: 16
+  author: XbY
+  date: 2009-01-31 22:51:15+01:00
+  contents: |
+    Ou bien ne serait-ce pas le mot de passe pour la conexion SSH ? Tu n'aurais
+    pas oublié de copier ta clé publique sur le serveur ?
+- id: 17
+  author: ®om
+  date: 2009-01-31 23:10:03+01:00
+  contents: |
+    Non non, la connexion fonctionne très bien (la clé publique fonctionne),
+    c'est simplement que le "Enter password:" lors de l'exécution de mysqldump,
+    dans le second cas, va être redirigé vers le fichier `/tmp/test`, au lieu
+    d'apparaître dans la console.
+- id: 18
+  author: XbY
+  date: 2009-02-01 00:24:40+01:00
+  contents: |
+    Etrange... pas trop d'idée comme ça. A priori si tu lui fourni un mot de
+    passe, il devrait pas te le demander. (As-tu essayé ce que DecIRC propose ?)
+
+    Et si tu crées un user dans ta db avec un acces SELECT uniquement ? Je te
+    l'accorde, foireux :D
+- id: 19
+  author: ®om
+  date: 2009-02-01 01:03:06+01:00
+  contents: |
+    Je ne lui fournis pas de mot de passe, *wordpress* c'est le nom de la base
+    :-)
+
+    Le truc c'est que ce "*Enter password:*" je ne sais pas comment `mysqldump`
+    arrive à l'afficher sur la console, il n'est ni sur `stdout`, ni sur
+    `stderr` :
+
+        rom@rom-eeebox$ mysqldump -uroot -p wordpress > /tmp/stdout 2> /tmp/sterrEnter password: 
+
+    D'ailleurs il ne réagit pas à un `Ctrl+C`.
+
+    J'imagine que lorsque ça passe en ssh, ce `Enter password:` passe sur
+    `stdin`, d'où le problème…
+- id: 20
+  author: XbY
+  date: 2009-02-01 01:57:59+01:00
+  contents: |
+    ahhh ben oui, c'est logique alors :).
+
+    En fait, non je crois que SSH fait la différence entre stdin et stdout. Par
+    contre, je suis incapable de dire ou il affiche "Enter password" :s
+- id: 21
+  author: Dave
+  date: 2009-02-01 03:34:55+01:00
+  contents: |
+    Pour palier au manque d'upload, je crois qu'une idée serait d'utiliser
+    picassa + flickr pour diminuer l'envoi d'images à partir de chez toi.
+
+    Comme je sais qu'on peut préférer ne pas trop être dépendant de ces trucs
+    là, une idée intéressante peut être de d'envoyer systématiquement à picassa
+    + flickr tout en gardant une copie dispo chez toi, puis de faire un script
+    qui:
+
+     * si possible génère la balise img (dans un lien a href) pour picassa
+     * sinon pour flickr (si picassa plante par exemple)
+     * et en dernier lieu est prêt à proposer la version qui traine chez toi
+
+    Ça devrait te permettre de diminuer l'usage de ton upload...
+
+    Il est aussi possible de prendre le problème autrement, en monitorant
+    l'usage de ton upload et en ne proposant picassa / flickr qu'en cas d'usage
+    supérieur à un certain pourcentage durant les 15 secondes précédentes (sorte
+    de procédure de délestage).
+
+    Sinon qu'est ce que j'aimerais avoir 100 ko/s en upload, mais bien
+    qu'habitant à moins de 500m d'une station de métro (pas parisien), je suis à
+    presque 4km du dslam (4km via les câbles, 20 min à pied, bravo FT)
+- id: 22
+  author: "Nouveau blog, 100% libre"
+  author-url: http://www.clicatoo.com/nouveau-blog-100-libre/11366/
+  date: 2009-02-01 04:50:02+01:00
+  pingback: true
+  contents: |
+    [...] More here: Nouveau blog, 100% libre [...]
+- id: 23
+  author: Compte0
+  date: 2009-02-01 10:57:13+01:00
+  contents: |
+    Un serveur sur un EeeBox, je viens juste de faire la même!!! Ma
+    configuration est un peu différente: Ubuntu minimal+ lighttp + openSSH +
+    Plumxml. Comme je vis à l'étranger et que je galère pour avoir des émissions
+    en français, j'ai mis xbmc comme média center. Tout fonctionne bien, je me
+    tâte pour mettre un serveur mail ou Jabber. Au passage, avec openSSH,
+    l'Eeebox fait un très bon NAS.
+- id: 24
+  author: ®om
+  date: 2009-02-01 11:44:41+01:00
+  contents: |
+    Je viens de changer la dernière ligne du script, pour utiliser
+    `rdiff-backup` au lieu de `rsync`. L'avantage c'est que `rdiff-backup` ne
+    met pas simplement à jour la copie locale, il garde aussi les différences
+    avec les anciennes versions : ainsi, il est possible de restaurer le contenu
+    d'une version plus récente.
+- id: 25
+  author: Mina
+  date: 2009-02-02 11:35:44+01:00
+  contents: |
+    C'est tout à fait dans l'esprit de la présentation "Internet libre ou
+    minitel 2.0", une conférence par le fournisseur d'accès coopératif FDN.
+
+    A voir sans aucun hésitation :
+
+    <http://www.fdn.fr/Internet-libre-ou-Minitel-2.html>
+
+    Prenez-vous en main, et hébergez-vous ! C'est le prix du contrôle de sa vie
+    numérique !
+- id: 26
+  author: el robert
+  date: 2009-02-02 13:25:10+01:00
+  contents: |
+    Une question: pourquoi ne pas faire un cron pour executer le script de
+    backup??
+- id: 27
+  author: djib
+  author-url: http://www.Think-Underground.com
+  date: 2009-02-02 15:46:05+01:00
+  contents: |
+    Un dernier inconvénient que je te suggère très fortement de ne pas
+    négliger : tu dois t'assurer de la sécurité de ta machine.
+- id: 28
+  author: gadjou
+  date: 2009-02-02 16:44:06+01:00
+  contents: |
+    > @[**dan**](#comment-4)
+    >
+    > j'l'ai comprends pas...! windows serveur est bien graphique et ca dérange
+    > personne ?
+
+    C'est pas bien, et même microsoft a fini par le comprendre avec windows
+    server 2008 et son [server
+    core](http://msdn.microsoft.com/en-us/library/ms723891(VS.85).aspx)
+- id: 29
+  author: lordikc
+  author-url: http://www.lordikc.com/
+  date: 2009-02-07 21:48:48+01:00
+  contents: |
+    N'avez-vous pas peur de saturer votre connexion internet ?
+
+    J'ai fait à peut près la même chose sous mandriva
+    (<http://lordikc.free.fr/wordpress/?p=203>) mais uniquement pour le stockage
+    en ligne au travers de SSH.
+
+    Le serveur ne tourne pas 24/24 mais il peut être allumé à distance depuis
+    internet.
+- id: 30
+  author: Ayo2
+  date: 2009-02-08 00:18:52+01:00
+  contents: |
+    Super, au moins on a pas à ce farcir la pub qui nous est imposée sur
+    blogeee, résultat ce site bien qu'hebergé @ home est rapide est clair.
+    Félicitations.
+- id: 31
+  author: Yann
+  author-url: http://perso.ismaya.fr
+  date: 2009-02-08 10:10:21+01:00
+  contents: |
+    J'ai également effectué la migration sur une eeebox tout se passe à
+    merveille. Concernant les backup vous vous compliquer un peu tous la vie. Je
+    t'invite à installer backup-manager pour les backup. Afin de diminuer le
+    temps de réponse tu peux installer wp-super-cache (plugin wordpress) et
+    optimiser quelques broutille tel que le mod\_gzip / mod\_deflate et
+    compagnie
+- id: 32
+  author: ®om
+  date: 2009-02-08 11:34:01+01:00
+  contents: |
+    Pour les backups j'ai regardé vite-fait backup-manager, ça a l'air
+    intéressant mais pour l'instant ça me convient comme ça, je verrai plus tard
+    si j'ai le temps.
+
+    Pour le wp-super-cache, j'en ai entendu parler, il a des avantages, mais
+    quels sont les inconvénients (s'il n'y avait pas d'inconvénients il serait
+    présent par défaut)?
+
+    Pour mod\_gzip et mod\_deflate, cela consiste en quoi et que changer?
+- id: 33
+  author: gagadget
+  date: 2009-02-08 13:02:11+01:00
+  contents: |
+    @[**®om**](#comment-32)
+
+    mod\_gzip et mod\_deflate sont 2 modules apache concurrents pour faire la
+    même chose : compresser à la volée le flux http sortant du serveur pour les
+    navigateurs supportant la décompression à la volée.
+
+    Tout les navigateurs web modernes supportent cette décompression, ils
+    l'indiquent au serveur dans leur header http avec la ligne "Accept-Encoding:
+    gzip,deflate"
+
+    Tu as tout à gagner en mettant en place cette solution car elle est faite
+    pour ceux qui sont limités en bande passante. Il y aura une légère
+    augmentation de la charge CPU sur serveur mais vu l'audience max que peux
+    atteindre ton site, tu n'a rien à craindre.
+
+    Un comparaison des deux modules :
+
+    <http://blog.usweb.com/archives/mod_deflate-vs-mod_gzip-comparing-the-two/>
+
+    Gael.
+- id: 34
+  author: ®om
+  date: 2009-02-08 13:46:01+01:00
+  contents: |
+    @[**gagadget**](#comment-33)
+    Merci de ta réponse.
+
+    Mais dans quelle mesure le temps gagné pour transférer des données
+    compressées par rapport à des données non compressées sera perdu le temps de
+    compresser (côté serveur) + décompresser (côté client)? Si au final le
+    transfert est plus rapide mais que de bout en bout c'est plus long (le
+    processeur du serveur n'est pas super puissant)…
+
+    J'imagine qu'on y gagne
+    quand même, mais j'aimerais savoir dans quelle mesure.
+
+    **mod\_deflate** pourrait être un bon compromis. **mod\_gzip** se
+    trouve-t-il dans les dépôts d'Ubuntu Server? Si oui quel est le nom du
+    paquet?
+
+    Sinon il suffit d'activer le module et c'est bon, rien à configurer?
+
+    **EDIT : deflate a l'air d'être activé par défaut :
+
+        $ sudo a2enmod deflate
+        Module deflate already enabled
+
+    **EDIT2 :** je viens d'installer **wp-super-cache**. Difficile de faire une
+    différence (je me suis délogué) sans bench.
+- id: 35
+  author: rwxncz
+  date: 2009-02-08 14:14:13+01:00
+  contents: |
+    > @[**®om**](#comment-8)
+    >
+    > > windows serveur est bien graphique et ca dérange personne ?
+    >
+    > C'est une absurdité pourtant :)
+    > 
+    > En plus ça utilise de la puissance pour rien, ça rajoute des failles…
+    > vraiment inutile.
+    > 
+    > De toute façon je n'ai même pas d'écran ni de clavier sur la eee-box,
+    > alors je n'ai pas besoin d'interface ;)
+
+    Le meilleur compromis pour les non-fans de la ligne de commande : Travailler
+    sur le serveur en graphique, puis une fois terminé, casser l'interface et
+    laisser le reste tourner :)
+- id: 36
+  author: legranblon
+  author-url: http://legranblon.dyndns.org
+  date: 2009-02-08 14:45:06+01:00
+  contents: |
+    > vous le lisez dans firefox…
+
+    Faux !!!
+
+    Je ne supporte pas ce truc (préférence personnelle), seamonkey
+    (<http://www.seamonkey-project.org/>) est bien mieux!
+
+    (loin de moi l'idée de lancer un troll ^\_^)
+
+    Pour revenir au sujet : l'auto hébergement est très sympa, une fois qu'on y
+    a goûté, on ne peut plus envisager autre chose (pareil que pour les
+    logiciels libres). Il y a des contraintes fortes (prendre une petite heure
+    pour se tirer les doigts du prose notemment) quand on veut mettre en place
+    quelque chose, mais au vu de la modularité et de la pérennité (j'ai pas
+    touché à mon serveur depuis quelques mois ... il gère la liaison adsl, un
+    serveur web, un serveur samba, nfs, tout ça en raid miroir soft, aucune
+    indisponibilité depuis.. zut, j'au oublié.) des solutions disponibles, ça
+    vaut vraiment le coup. Tout ça pour un coût modique : le matos est un ancien
+    poste de travail sans écran avec deux cartes réseau (~8€ la carte en plus),
+    un disque dur supplémentaire pour faire le raid (~45€/disque). Il tourne
+    depuis 2004 non stop, un disque a déjà rendu l'âme (le disque originel, paix
+    à son âme). C'est pas du ubuntu, mais ça marche très bien quand même... Coût
+    total :
+
+     * Un vieux poste de travail : 0€
+     * Deux disques durs à 45€ le morceau : 90€
+     * Une carte réseau supplémentaire : 0€ (c'était une carte de récupération)
+     * Remplacement d'une carte réseau cramée : 8€
+
+    Coût depuis 5 ans : 98€
+
+    Rapporté à une année : on va pas être chien : 20€ pour l'ensemble
+    matos/logiciels...
+
+    Pour le coût de l'électricité, je ne pense pas que ça représente bien plus
+    qu'une ampoule 100W allumée en permanence (876kWh/an si je ne me trompe pas,
+    0.135€/kwh selon
+    <http://www.edf-bleuciel.fr/accueil/j-ai-besoin-d-energies/electricite/les-tarifs-electricite-141626.html>)
+    =\> 10€/mois
+
+    Coût total, 12 €/mois.
+
+    On voit bien que l'investissement dans une eeebox diminue encore plus les
+    coûts sur le long terme ( la conso est largement inférieure et en
+    l'occurrence, c'est le facteur le plus influent sur le prix global ), reste
+    à savoir si ce sera aussi fiable...
+- id: 37
+  author: Stephane
+  author-url: http://sjaglin.homelinux.org/Joomla/
+  date: 2009-02-08 15:07:50+01:00
+  contents: |
+    Hi!
+
+    Super site, -\> direct in my favourites, le seul petit "improvement" serai
+    de brancher le serveur sur une batterie elle meme alimente par un panneau
+    solaire!
+
+    J'ai un petit server sur une QNAP 109, je vais essayer une distro
+    gratuite...
+
+    Merci pour le site et le blog, Go Solar!
+
+    Stef (Bristol,UK)
+- id: 38
+  author: gagadget
+  date: 2009-02-09 18:07:56+01:00
+  contents: |
+    @[**®om**](#comment-34)
+
+    Tu ne gagnera et ne verra le différence avec mod\_deflate que lorsque ton
+    site sera accéder par plusieurs personnes, assez de personne pour remplir
+    ton upload. En fait, la compression augmente artificiellement ta bande
+    passante en contrepartie d'une petite augmentation de temps latence
+    réellement négligeable par rapport à la latence de la génération des pages,
+    le routage, ...
+
+    Je pense que tu ne peux qu'y gagner dans ton cas d'un upload limité surtout
+    si ton site deviens un tout petit peu célèbre.
+- id: 39
+  author: utodeb
+  date: 2009-02-16 11:46:53+01:00
+  contents: |
+    Salut,
+
+    Relativemant HS ...
+
+    Est-ce que tu te sers de ta eeebox comme serveur de son avec mpd par exemple
+    ?
+
+    Parce qu'en fait, j'en ai une également mais le volume sonore est très bas
+    ...
+
+    ++
+- id: 40
+  author: ®om
+  date: 2009-02-16 19:44:30+01:00
+  contents: |
+    @[**utodeb**](#comment-39)
+
+    Non, je ne l'utilise pas comme serveur de son.
+- id: 41
+  author: utodeb
+  date: 2009-02-16 19:47:14+01:00
+  contents: |
+    OK merci :-)
+- id: 42
+  author: "®om&#8217;s blog &raquo; Piwik : statistiques de votre site sous gpl"
+  author-url: http://blog.rom1v.com/2009/02/piwik-statistiques-de-votre-site-sous-gpl/
+  date: 2009-02-19 21:35:43+01:00
+  pingback: true
+  contents: |
+    [...] la continuité de l’objectif d’utiliser un blog 100% libre,
+    l’utilisation de cet outil pose problème : tout comme l’hébergement de blogs
+    sur [...]
+- id: 43
+  author: Silvering
+  author-url: http://cruz.mickael.free.fr
+  date: 2009-02-22 20:21:27+01:00
+  contents: |
+    Bravo pour l'initiative je compte m'acheter ce bel objet qu'est l'EeeBox
+    pour la transformer aussi en Nas, Home Serveur sous Debian. Bonne
+    continuation!
+- id: 44
+  author: Azurency
+  author-url: http://www.azurency.com/
+  date: 2009-03-09 16:04:17+01:00
+  contents: |
+    Moi je suis sous safari... mais je trouve l'investissement dans un eeebox en
+    peut trop cher... C'est juste mon opinion !!
+- id: 45
+  author: Benjamin
+  author-url: http://www.generation-linux.fr
+  date: 2009-03-29 14:59:03+01:00
+  contents: |
+    Très bonne initiative Rom, moi j'hésite entre une EeeBox et le prochain Asus
+    D200.
+
+    Disons que je voudrais bien cette EeeBox mais avec deux disques dur pour
+    mettre en place un système de RAID pour la haute disponibilité (je voudrais,
+    à terme, héberger Génération Linux dessus).
+
+    Voila, en tout cas félicitations :)
+
+    P.S. Au niveau de la sécurité, tu as mis quoi en place ?
+
+    P.S. 2 Tu as installé d'autres services chez toi ? (mail par exemple) ?
+- id: 46
+  author: ®om
+  date: 2009-03-30 06:50:47+01:00
+  contents: |
+    > P.S. Au niveau de la sécurité, tu as mis quoi en place ?
+
+    Je n'autorise la connexion ssh que par clé privée, j'ai ouvert uniquement
+    les ports qu'il fallait dans iptables, et je mets régulièrement à jour le
+    système. Le minimum pour un serveur je pense (mais pas de quoi héberger
+    jaimelesartistes ^^).
+
+    > P.S. 2 Tu as installé d'autres services chez toi ? (mail par exemple) ?
+
+    Pour l'instant non, j'ai juste le blog.
+- id: 47
+  author: billux13
+  author-url: http://billux13.servhome.org
+  date: 2009-03-31 22:18:52+01:00
+  contents: |
+    Bravo pour l'initiative, je suis moi aussi en train d'y réfléchir, justement
+    après avoir vu la vidéo le minitel 2.0.
+
+    Le problème que j'ai actuellement c'est pour l'adresse IP publique :
+    évidemment j'ai une IP dynamique (je suis chez NeufTelecom) et j'ai vu
+    plusieurs astuces, qui font assez bidouillage je trouve, pour associer mon
+    IP à mon nom de domaine (un vrai que j'aurai acheté pas un chez dyndns ou
+    autre).
+
+    Donc je voudrais savoir comment tu t'y es pris pour gérer ça. Ou alors tu a
+    peut être la chance d'avoir une IP statique ;)
+- id: 48
+  author: atlas95
+  author-url: http://www.levis-heb.net
+  date: 2009-04-01 08:56:50+01:00
+  contents: |
+    Salut !
+
+    Juste pour te dire merci pour l'idée d'hergement @home sur une eeebox, j'ai
+    la mienne depuis presque un mois maintenant et rempli très bien cette tache
+    !
+
+    Dis moi, quel solution de monitoring utilises tu? xymon, nagios,
+    zabbix?..aucune?
+
+    Cyril
+- id: 49
+  author: ®om
+  date: 2009-04-02 22:41:47+01:00
+  contents: |
+    Aucune ;-)
+- id: 50
+  author: tux03
+  date: 2009-06-18 15:06:42+01:00
+  contents: |
+    Salut !
+
+    Je trouve ton blog vraiment bien et tu m'a donné une idée pour hébergé mon
+    site moi même. Cherchant un pc pour le faire je vais étudié le choix de la
+    eee box qui a l'air pas mal niveau consommation et performance pour un mini
+    serveur.
+
+    Voila et bonne continuation pour ce superbe blog sous licence libre !
+- id: 51
+  author: "Hébergez vos mails sur Ubuntu Server (et libérez-vous) &laquo; ®om&#39;s blog"
+  author-url: http://blog.rom1v.com/2009/08/hebergez-vos-mails-sur-ubuntu-server-et-liberez-vous/
+  date: 2009-08-17 00:54:45+02:00
+  pingback: true
+  contents: |
+    [...] Mon blog est un bon exemple d’un contenu qui ne doit pas être hébergé
+    ailleurs. La liste des flux RSS que je consulte aussi (c’est pourquoi j’ai
+    installé tt-rss). Mon album photos à partager avec la famille également
+    (j’ai installé gallery). Mais il restait le plus important : les mails.
+    [...]
+- id: 52
+  author: "Installation ultra simple d un serveur de mail sur Ubuntu server - les CBruits de couloir !!!"
+  author-url: http://www.coolbytes.fr/blog/lesite/?p=271
+  date: 2009-08-17 09:47:34+02:00
+  pingback: true
+  contents: |
+    [...] Mon blog est un bon exemple d'un contenu qui ne doit pas être hébergé
+    ailleurs. La liste des flux RSS que je consulte aussi (c'est pourquoi j'ai
+    installé tt-rss). Mon album photos à partager avec la famille également
+    (j'ai installé gallery). Mais il restait le plus important : les mails.
+    [...]
+- id: 53
+  author: Antoine
+  date: 2009-10-27 20:40:31+02:00
+  contents: |
+    Bonjour,
+
+    Est-ce que vous pensez qu'une eeebox B202 peut héberger un serveur
+    apache2+mysql+postfix+exim
+
+    2 blog wordpress et 1 forum le tout pour environ 3000 pages vues/jour
+
+    Je peux en avoir une à un prix relativement correcte (un peu plus de 100
+    euros) dans le but de remplacer mon serveur actuel avec une conso moindre
+    mais je voudrais ne pas être trop déçu :)
+
+    Merci d'avance
+- id: 54
+  author: ®om
+  date: 2009-10-29 09:57:35+02:00
+  contents: |
+    Pour 3000 pages/jour ça suffit largement je pense.
+
+    Sur ce blog le record de fréquentation a été, très exceptionnellement, de
+    6200 visiteurs uniques, sur ma pauvre connexion freebox, ça tient largement.
+
+    Dessus il y a apache+mysql+postfix+dovecot…
+- id: 55
+  author: Antoine
+  date: 2009-10-29 22:40:54+02:00
+  contents: |
+    Parfait un grand merci à roi romain. Je me suis préparé ma clé USB bootable
+    avec unetbootin, plus qu'à aller chercher la eeeboite pour le plonger là
+    dedans :D.
+
+    J'espère que le tout sera stable. Tu arrive a des uptime correcte?
+
+    Merci encore
+- id: 56
+  author: Lenezir
+  author-url: http://blog.lenezir.fr
+  date: 2009-10-30 22:11:44+02:00
+  contents: |
+    Ça fait quelques mois que j'héberge moi aussi mon blog sur une eeeBox.
+
+    C'est ce post qui m'a donné envie et je le regrette pas !
+
+    Je tenais à te signaler que j'ai pompé ton article et que j'en ai fais une
+    page sur mon blog pour propager la bonne parole (avec évidemment un lien qui
+    pointe vers l'original). :p
+
+    <http://blog.lenezir.fr/blog-100-libre/>
+- id: 57
+  author: Anthony
+  date: 2009-11-30 19:40:15+02:00
+  contents: |
+    Bonsoir,
+
+    j'ai découvert ton blog dernièrement et je me lance également dans la
+    conception de mon serveur perso.
+
+    J'aurais quelques questions à te poser.
+
+    Serait t'il possible que tu me réponde par email ?
+
+    Merci ;)
+- id: 58
+  author: Luc
+  date: 2010-01-06 11:34:44+02:00
+  contents: |
+    Bonjour,
+
+    je me demandais depuis plusieurs jours si la plateforme ION avec Atom 330
+    etait assez puissante pour pouvoir etre utilisée en tant que serveur (24/7)
+    et faisant tourner des choses comme ftpd, sshd, apache... D'apres ce que je
+    vois j'ai l'impression que vous etes tous content de votre eeebox utilisée
+    dans cette optique :-) J'hésitait avec 2 concurrents (Zotac mag, et Revo
+    3610) mais j'ai l'impression que la eeebox 1012 (1501 est un peu trop cher)
+    à peut etre un peu plus d'historique.
+
+    Merci pour vos témoignages en tout cas.
+
+    Luc
+- id: 59
+  author: "Tweets that mention Nouveau blog, 100% libre « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/trackback?utm_source=pingback&amp;utm_campaign=L1&amp;url=http://blog.rom1v.com/2009/01/nouveau-blog-100-libre/
+  date: 2010-05-15 22:38:14+01:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by Pierre A.. Pierre A. said:
+    @dbourrion Tu as les Asus eebox, ou les Zotac Mag ou Zbox.
+    http://bit.ly/ayvd9d (NB : il faut quand même un écran le temps de config
+    ^^) [...]
+- id: 60
+  author: Antoine
+  author-url: http://forum.moto-mz.fr
+  date: 2011-01-03 16:08:00+01:00
+  contents: |
+    Petit retour plus d'un an après la migration de mon serveur perso sur la
+    eeebox, que du bonheur.
+
+    Un uptime de 425 jours (il n'a jamais redémarré) sous debian.
+
+    Il ne serveur que pour du web+mail+irc(tourne toujours mais plus utilisé) et
+    très occasionnellement serveur teamspeak.
+
+    Le box est complètement à l'aise pour mon utilisation.
+
+    Pas de difficultés lors de la période d'été qui représente la plus forte
+    affluence (les motards sont plus actifs l'été).
+
+    13 000 visites/mois
+
+    80 000 pages vues/mois
+
+    \+ les nombreux mails générés sur cette période
+
+    Bilan très positif donc en ce qui me concerne que ce soit en stabilité, gain
+    de place, économies d'électricité et confort sonore (je ne l'entend jamais)!
+
+    Merci
+- id: 61
+  author: Antoine
+  author-url: http://forum.moto-mz.fr
+  date: 2011-01-03 19:31:56+01:00
+  contents: |
+    > @[**rwxncz**](#comment-35)
+    >
+    > Le meilleur compromis pour les non-fans de la ligne de commande :
+    > Travailler sur le serveur en graphique, puis une fois terminé, casser
+    > l'interface et laisser le reste tourner
+
+    Il y a Windows Server Core (2008) pour ceux qui veulent un serveur Windows
+    sans l'interface. Je préfère une bonne distrib linux mais il a le mérite
+    d'exister.
+- id: 62
+  author: "Installer Ubuntu Server sur un Shuttle XS35 &laquo; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2011/06/installer-ubuntu-server-sur-un-shuttle-xs35/
+  date: 2011-06-07 00:21:56+02:00
+  pingback: true
+  contents: |
+    [...] viens de migrer mon auto-hébergement vers cette nouvelle machine. Elle
+    est très silencieuse (il n’y a pas de ventilateur) et [...]
+- id: 63
+  author: "Tiny Tiny RSS : auto-hébergement des flux RSS &#8211; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2011/06/tiny-tiny-rss-auto-hebergement-des-flux-rss/
+  date: 2011-11-01 13:44:28+02:00
+  pingback: true
+  contents: |
+    [...] principe. Comme pour le blog ou les mails, autant auto-héberger son
+    propre contenu, qui n’a rien à faire [...]
+- id: 64
+  author: "Lire des images et des vidéos sans serveur X (dans un TTY) &#8211; ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2012/04/lire-des-images-et-des-videos-sans-serveur-x-dans-un-tty/
+  date: 2012-04-08 00:02:09+01:00
+  pingback: true
+  contents: |
+    [...] contre, sur une machine moins puissante (une EeeBox, qui hébergeait ce
+    blog par le passé), MPlayer saccade, même sur des vidéos basse définition,
+    que VLC lit sans [...]

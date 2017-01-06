@@ -1,0 +1,232 @@
+- id: 1
+  author: le sanglier
+  date: 2011-08-28 21:13:38+02:00
+  contents: |
+    Bonjour,
+
+    je me suis bien poilé quand j'ai lu le contenu de la fenêtre du terminal,
+    bien vu
+
+    @+
+- id: 2
+  author: ®om
+  date: 2011-08-28 21:26:33+02:00
+  contents: |
+    @[**le sanglier**](#1)
+    Si tu veux le contenu complet : [apt-get install hadopi][] ;-)
+
+    [apt-get install hadopi]: {% post_url 2009-09-21-apt-get-install-hadopi %}
+- id: 3
+  author: yamaneko
+  date: 2011-08-28 22:06:22+02:00
+  contents: |
+    Tiens, ça doit être dans l'air en ce moment, après 3 ans sous Ubuntu, je
+    viens aussi de passer sous Debian ce week-end (testing pour le moment mais
+    je n'exclus pas de passer en Sid prochainement, et avec Xfce parce que je ne
+    veux pas de Gnome 3 chez moi).
+- id: 4
+  author: lanzorg
+  date: 2011-08-28 22:38:21+02:00
+  contents: |
+    Concernant la simplicité d'installation.
+
+    Ils existent des distros basées debian très simples à installer :
+
+    - Crunchbang (OpenBox/XFCE)
+    - Linux Mint Debian (Gnome2 /XFCE)
+
+    Et plein d'autres, mais celles-ci sont vraiment de très bonne qualité.
+- id: 5
+  author: Olivier
+  author-url: http://www.iabsis.com
+  date: 2011-08-28 23:59:58+02:00
+  contents: |
+    Merci pour ce tuto.
+
+    J'hésite depuis un petit moment à passer à Debian sur ma machine du travail
+    au vue du nombre de problèmes croissants que j'ai avec Ubuntu. Je pense que
+    je vais m'inspirer de ce tuto qui m'a l'air pas mal du tout.
+- id: 6
+  author: pluviotor
+  date: 2011-08-29 02:12:17+02:00
+  contents: |
+    Bon poilage pour le contenu aussi :)
+
+    Par contre installé une testing ca craint à tout moment tu peux te prendre
+    un paquet pourrave en testing.
+
+    Il y a longtemps, je l'avais fait c'était chouette au début, après j'ai
+    pleuré pendant des jours...
+- id: 7
+  author: HacKurx
+  author-url: https://hackurx.wordpress.com/
+  date: 2011-08-29 08:27:02+02:00
+  contents: |
+    Pas mal ta dernière image mdr.
+
+    Sinon encore des personnes qui quitte ubuntu comme c'est bizarre lol, ça
+    n'arrête pas ^^
+- id: 8
+  author: macsim
+  author-url: http://macsim.labolinux.net
+  date: 2011-08-29 09:42:51+02:00
+  contents: |
+    Pour voir où est monté ta clé tu peux aussi simplement taper : `mount` ;)
+- id: 9
+  author: antistress
+  author-url: http://libre-ouvert.toile-libre.org/
+  date: 2011-08-29 10:35:37+02:00
+  contents: |
+    Je peux pense qu'on peut simplifier l'installation avec UNetbootin, c'est ce
+    que j'ai utilisé pour installer Squeeze
+    <http://libre-ouvert.toile-libre.org/?article48/gnu-linux-debian-6-0-squeeze-sur-netbook-dell-mini-9-inspiron-910>
+
+    @ lanzorg : Debian a un installeur tout à fait comparable aux autres distrib
+    de nos jours, je le trouve même mieux fait que celui d'Ubuntu dans lequel le
+    partitionneur a tendance à induire en erreur l'utilisateur (j'ai effacé le
+    mauvais disque par erreur la dernière fois)
+- id: 10
+  author: Jos
+  author-url: http://blog.cheztoi.net
+  date: 2011-08-29 16:47:50+02:00
+  contents: |
+    Hello,
+
+    Je me tate aussi a passer d'Ubuntu a Debian. Pour l'instant je n'ai pas
+    réussi a avoir un live USB debian donc ça me refroidissait un peu.
+
+    Sinon pour la copie de l'ISO vers l'USB, c'est à mon avis plus propre avec
+    dd
+
+        dd if=debian-testing-amd64-businesscard.iso of=/dev/sdb [bs=XXX]
+- id: 11
+  author: Nikoals
+  author-url: http://fumbles.forumactif.net
+  date: 2011-08-29 17:07:37+02:00
+  contents: |
+    Génial!
+
+    /private\_joke
+
+    La frime de recycler ton post quart-d'heure-de-gloire-à-la-Warhol
+- id: 12
+  author: ®om
+  date: 2011-08-29 17:10:54+02:00
+  contents: |
+    @Nikoals ;-)
+
+    `</grunt>`
+- id: 13
+  author: debbie
+  date: 2011-08-29 19:23:35+02:00
+  contents: |
+    Très bien ... t'as plus qu'à passer 2 ans sur Debian , puis toi aussi tu
+    nous rejoindra sur Archlinux !!!
+- id: 14
+  author: Miaou
+  date: 2011-08-29 20:50:51+02:00
+  contents: |
+    Est-il possible de l'installer avec gnome 3 pour le tester ?
+- id: 15
+  author: TempsX
+  date: 2011-08-29 22:27:08+02:00
+  contents: |
+    Fidèle à Ubuntu depuis la Warty 4.10, je passe aujourd'hui sous Debian Sid à
+    la suite du choix de l'équipe de développement d'imposer Unity que je
+    n'affectionne absolument pas. Un divorce à l'amiable mais un divorce quand
+    même.
+- id: 16
+  author: antistress
+  author-url: http://libre-ouvert.toile-libre.org
+  date: 2011-08-30 00:51:58+02:00
+  contents: |
+    @Miaou : <http://www.0d.be/debian/debian-gnome-3.0-status.html>
+- id: 17
+  author: GuiGui
+  date: 2011-09-01 16:06:23+02:00
+  contents: |
+    Je n'approuve pas l'utilisation d'unstable dans ce cadre d'utilisation : une
+    testing aurait suffit. Sans compter que l'écart entre testing et unstable
+    est réduit et que testing est prise en charge par la team securité de
+    Debian.
+- id: 18
+  author: ®om
+  date: 2011-09-01 21:58:19+02:00
+  contents: |
+    @[**GuiGui**](#comment-17)
+
+    Mouais, la dernière fois que j'avais essayé *testing*, il fallait ajouter
+    des paquets de `unstable` parce que certains trucs ne fonctionnaient pas.
+    Peut-être que j'avais juste essayé au mauvais moment, mais bon…
+- id: 19
+  author: s.o.
+  date: 2011-09-03 11:24:36+02:00
+  contents: |
+    J'utilise une carte nvidia sous Ubuntu avec le pilote nouveau, et compiz
+    fonctionne très bien !
+
+    à condition d'activer la 3D expérimentale.
+
+    Ça doit être la même sous debian. Mais il n'y a pas d'interface graphique
+    pour le faire, donc installer le paquet : libgl1-mesa-dri-experimental
+    devrait être suffisant. Faut peut-être aussi installer un firmware non
+    libre, je ne sais pas.
+
+    Je suis assez content de "nouveau" :-)
+- id: 20
+  author: antistress
+  author-url: http://libre-ouvert.toile-libre.org
+  date: 2011-09-03 18:36:15+02:00
+  contents: |
+    Je me demandais quelles étaient les implications de ceci ?
+
+    <http://lists.alioth.debian.org/pipermail/cut-team/2011-July/000292.html>
+- id: 21
+  author: yan
+  date: 2011-10-04 11:25:46+02:00
+  contents: |
+    Tiens... N'affectionnant pas le choix débile d'aller vers des interfaces
+    graphiques de smartphones sur un PC, je pensais aussi changer de crèmerie,
+    étant sous Ubuntu depuis la 6.06... Actuellement en 10.04, j'ai installé une
+    Debian au taf et j'ai été surpris: C'est devenu bien foutu. Ubuntu aura au
+    moins apporté cela, avant son déclin prévisible.
+
+    Et comme en prime, entre partir d'une Debian un peu nue à laquelle il faut
+    ajouter pas mal de choses... ou d'une Ubuntu qui grossit trop et ou il faut
+    virer les conneries de market à la con, clouderies débiles et autres stupide
+    intégration de réseaux sociaux allergisants... et désormais changer
+    d'interface, après avoir du remettre les boutons de fenêtre du bon côté et
+    viré le thème manquant tellement d'inspiration qu'il a été pompé sur les
+    MAC: Non, vraiment, la 10.04 a marqué le début du manque d'inspiration
+    clairement visible!
+
+    D'ailleurs, il y a de plus en plus de distrib dérivées d'Ubuntu... c'est un
+    signe. Mais bon, dans ce cas autant aller à l'originale qui a fait l'effort
+    de devenir plus accessible tout en ne perdant pas son âme!
+- id: 22
+  author: Nealith
+  date: 2012-01-21 23:36:20+01:00
+  contents: |
+    Unity est moche (on est tous d'accord ?) bref, mais c'est juste un
+    environnement de bureau/graphique, et les logiciels préinstallés restes des
+    logiciels, donc messieurs je vous rappel la possibilité de changer
+    d'environnement de bureau ( chose faites avec un passage temporaire à gnome
+    shell pour l'instant dans mon cas ) et les logiciels peuvent être viré (
+    exemple = gwibber héhé ) donc serait tant que les gens arrêtes de quitter
+    ubuntu juste pour ça ^^
+
+    archlinux m'intéressait plus qu'ubuntu, mais vu la complexité de mon ordi
+    portable ( technologie optimus, et peut être le fait que je sois débutant
+    aussi) m'ont fait me tourner avec voyager (xubuntu personnalisée :
+    <http://voyager.legtux.org/>) , et ensuite je suis retourner sur une buntu
+    pure pour la configurer moi même :) oublier pas que ubuntu a plein
+    d'avantage , je pensais notamment à la logithèque ^^
+- id: 23
+  author: dyp
+  author-url: http://www.lesphacocheres.com
+  date: 2013-01-06 08:39:51+01:00
+  contents: |
+    je trouve qu'Ubuntu a un grand mérite, elle donne envie aux gens de passer à
+    Debian. c'est vrai qu'elles sont user-friendly les distros Debian-based
+    mais, au bout d'un moment, les gens passent du user-friendly au base-friend.
+    l'originale souvent imitée jamais égalée.

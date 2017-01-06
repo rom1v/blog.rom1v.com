@@ -1,0 +1,150 @@
+- id: 1
+  author: Nelson
+  date: 2009-06-20 06:51:46+02:00
+  contents: |
+    Merci beaucoup du tuyau ! Ça faisait longtemps que je cherchais ce genre de
+    programme. C'est quand même dingue que ce probleme persiste avec les
+    nouvelles versions de gnome, ça doit quant même pas être dur à coder...
+- id: 2
+  author: rniamo
+  author-url: http://rniamo.is-a-geek.com/mu/
+  date: 2009-06-20 08:14:31+02:00
+  contents: |
+    perso j'utilisais glipper sous edgy mais depuis jaunty je n'ai plus trop de
+    problèmes (j'y fais peut être attention sans y faire attention ;)).
+
+    SInon je vois que ce thème a la cote auprès des blogistes ;) (zedroot a le
+    même)
+- id: 3
+  author: dwan
+  date: 2009-06-20 09:31:32+02:00
+  contents: |
+    Pas de Parcellite dans mes dépôts (Hardy 64)... Il est par contre trouvable
+    sur Getdeb : <http://www.getdeb.net/app/Parcellite>
+
+    Attention, paquet non-officiel, blablabla ;)
+- id: 4
+  author: dada
+  author-url: http://www.dadall.eu/blog
+  date: 2009-06-20 10:06:40+02:00
+  contents: |
+    Merci, c'est ce que je cherchais depuis un moment ! ;)
+- id: 5
+  author: Simon
+  author-url: http://www.opusdei-dofus.fr
+  date: 2009-06-20 10:51:37+02:00
+  contents: |
+    Pour les raisons citées de démarrage foireux, j'avais aussi abandonné
+    Glipper pour tester Parcellite... mais ça ne m'a pas convaincu plus que ça
+    (enfin par rapport à mes habitudes avec Glipper). Cependant, cette
+    fonctionnalité est quasiment indispensable pour moi!
+
+    Quelques semaines plus tard: la révélation! Je testais le cairo-dock, et
+    tadaaaaaaa! Il y a un applet Clipper très utile et bien intégré au dock (ou
+    en desklet, au choix). :D
+
+    Et je suppose que de nombreux docks ou applets de bureau proposent cette
+    fonctionnalité. ^^
+- id: 6
+  author: Tite-Live
+  date: 2009-06-20 12:46:28+02:00
+  contents: |
+    Merci beaucoup, c'est vrai que ça manquait cruellement à Gnome :)
+
+    Par contre, même si la traduction française n'est pas encore insérée aux
+    dépots, elle existe sur le trunk :)
+
+    Une petite commande pour l'installer :
+
+    {% highlight bash %}
+    cd /tmp ; wget http://parcellite.svn.sourceforge.net/viewvc/parcellite/trunk/po/fr.po ; msgfmt fr.po -o fr.mo ; sudo mv fr.mo /usr/share/locale/fr/LC_MESSAGES/parcellite.mo ; rm fr.po ; killall parcellite ; sleep 2 ; cd ; parcellite &
+    {% endhighlight %}
+- id: 7
+  author: Cricket
+  date: 2009-06-20 13:01:38+02:00
+  contents: |
+    Il me semble que ce problème fait partie des papercuts à régler.
+- id: 8
+  author: Uxal
+  date: 2009-06-20 14:32:15+02:00
+  contents: |
+    Fonctionnalité effectivement indispensable de pouvoir conserver dans le
+    presse-papier différents éléments et pas seulement le dernier. Et aussi de
+    pouvoir gérer le presse papier de la sélection de la souris et celui de
+    [CTRL]+C.
+
+    Après voir testé Glipper puis Parcellite je me suis fixé sur Clipper de
+    Cairo-dock. Il est aussi bon que Parcellite et a l'avantage pour moi d'être
+    justement intégré à Cairo-dock.
+- id: 9
+  author: Guizmo.7
+  date: 2009-06-21 13:16:56+02:00
+  contents: |
+    Salut ®om,
+
+    Tu n'aurais pas un flux RSS pour suivre tes billets ? Je ne le trouve pas :(
+- id: 10
+  author: ®om
+  date: 2009-06-21 13:58:25+02:00
+  contents: |
+    @[**Guizmo.7**](#comment-9)
+
+    C'est [ici](http://blog.rom1v.com/feed/).
+
+    Pourtant quand tu es sur la [page d'accueil](http://blog.rom1v.com), tu as
+    la petite icône RSS dans la barre d'adresse de Firefox…
+- id: 11
+  author: egan
+  date: 2009-06-21 19:39:27+02:00
+  contents: |
+    @[**Tite-Live**](#comment-6)
+
+    Merci beaucoup pour l'info sur la traduction et pour la méthode d'install.
+
+    Tout marche bien et j'ai un Parcellite en français. Excellent !
+- id: 12
+  author: Danone
+  author-url: http://bananefraise.com
+  date: 2009-06-22 08:32:01+02:00
+  contents: |
+    Merci beaucoup!
+
+    Ca m'a l'air trés pratique, ca va surement bcp me servir!
+
+    cool!
+- id: 13
+  author: Guizmo.7
+  date: 2009-06-22 18:18:30+02:00
+  contents: |
+    @[**®om**](#comment-10)
+
+    oups … aux temps pour moi, je n'ai pas l'habitude de ces fils cachés.
+
+    Merci !
+- id: 14
+  author: Joe Bar
+  date: 2009-06-24 08:53:12+02:00
+  contents: |
+    Euh
+
+    Si je ne m'abuse, une sélection tirée (glisser-déposer) sur le bureau depuis
+    FireFox (ou autre appli) crée un fichier Gedit non ?
+
+    Ubuntu 9.04
+- id: 15
+  author: Brakbabord
+  author-url: http://brakbabord.fr
+  date: 2009-08-15 17:53:40+02:00
+  contents: |
+    Ah, merci pour l'astuce.
+
+    Y'a vraiment des fois ou le système de copier-coller sur GNU/Linux me
+    gonflait, justement parce qu'on perdait sans arrêt des trucs. Par contre
+    j'avais jamais noté que c'était uniquement sur Gnome
+
+    Bref je vais installer parcellite.
+- id: 16
+  author: Pierre Puiseux
+  date: 2010-01-11 12:27:45+02:00
+  contents: |
+    Parfait, merci pour les tuyaux.

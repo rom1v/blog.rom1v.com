@@ -1,0 +1,287 @@
+- id: 1
+  author: vilraleur
+  date: 2010-01-10 17:29:54+02:00
+  contents: |
+    C'est bien. L'astuce peut être pratique pour faire des sauvegardes de ses
+    application ...
+
+    Mais dans ton cas tu installe des programmes non acheté ...
+
+    Pas très sympathique pour les Dev ...
+- id: 2
+  author: ®om
+  date: 2010-01-10 17:38:38+02:00
+  contents: |
+    @[**vilraleur**](#comment-1)
+    Ah bon, et pourquoi cela? Je n'installe que des programmes sous licence
+    libre, comme sur mon PC…
+
+    Pour toi, un programme doit être propriétaire, payant et fermé?
+- id: 3
+  author: diogene
+  date: 2010-01-10 17:58:37+02:00
+  contents: |
+    Dommage. Ça ne marche pas avec mon Samsung Galaxy Spica. J'ai pourtant
+    modifié le code "Vendor" mais adb devices me revoie une liste vide.
+- id: 4
+  author: Chriss
+  date: 2010-01-10 18:14:25+02:00
+  contents: |
+    Le problème par rapport au Market, c'est que même si celui ci est
+    bordélique, il centralise tous les programmes.
+
+    Mais je ne crois pas qu'il existe de dépôt ou autre permettant de trouver
+    des .apk, il faut donc se frapper de chercher sur des sites pour les
+    récupérer, du moins quand on sait ce qu'on cherche.
+
+    Et ça, c'est pas pratique.
+- id: 5
+  author: MAIDEN
+  author-url: http://www.maiden-fr.com
+  date: 2010-01-10 18:53:59+02:00
+  contents: |
+    > @[**®om**](#comment-2)
+    >
+    > Ah bon, et pourquoi cela? Je n'installe que des programmes sous licence
+    > libre, comme sur mon PC… Pour toi, un programme doit être propriétaire,
+    > payant et fermé?
+
+    Rôôôh tu t'es fait avoir par un troll aussi évident ?!
+- id: 6
+  author: flem
+  date: 2010-01-10 20:00:08+02:00
+  contents: |
+    Hello, comment fais tu pour recuperer les .apk dans ce cas ?
+- id: 7
+  author: LordPhoenix
+  author-url: http://lordphoenix.tuxfamily.org
+  date: 2010-01-10 21:15:42+02:00
+  contents: |
+    C'est dingue ces app-store et compagnies. Il ne reste plus que Windows
+    Mobile sur lequel on peut encore installer les applications que l'on veut.
+- id: 8
+  author: ®om
+  date: 2010-01-10 21:31:43+02:00
+  contents: |
+    > @[**flem**](#comment-6)
+    >
+    > Hello, comment fais tu pour recuperer les .apk dans ce cas ?
+
+    Ils sont dispos sur le site du programme en question. Par exemple :
+
+     * [connectbot](http://code.google.com/p/connectbot/) ;
+     * [beem](http://dev.beem-project.com/projects/beem/news) ;
+     * [jabiru](http://jabiru.mzet.net/) ;
+     * [k9mail](http://code.google.com/p/k9mail/)…
+- id: 9
+  author: regala
+  date: 2010-01-14 17:54:18+02:00
+  contents: |
+    > Ah bon, et pourquoi cela? Je n'installe que des programmes sous licence
+    > libre, comme sur mon PC…
+    > 
+    > Pour toi, un programme doit être propriétaire, payant et fermé?
+
+    parce que selon toi payant = pas libre ? tu te trompes lourdement. Un
+    développeur de logiciel libre a aussi besoin de manger, et placer le code en
+    licence libre n'empêche pas ce développeur de pouvoir vouloir être
+    _justement_ rémunéré pour le travail fourni. Va relire la GPL.
+- id: 10
+  author: ®om
+  date: 2010-01-14 18:02:45+02:00
+  contents: |
+    Je n'ai pas dit le contraire regala.
+
+    Mais la phrase à laquelle j'ai répondu disait que "pas acheté" implique "pas
+    sympathique pour les dév", ce qui sous-entend que pour respecter le
+    développeur, et donc la licence qu'il a utilisée (quelqu'elle soit), il
+    **faut** avoir "acheté" son programme. Ce qui est faux.
+
+    @MAIDEN: oui, je suis tombé dans le troll, et je continue ^^
+- id: 11
+  author: regala
+  date: 2010-01-15 13:39:26+02:00
+  contents: |
+    @®om: mouais. désolé, le développeur peut avoir à vivre de ça, et quelle que
+    soit la licence qu'il a pu choisir pour distribuer son soft, c'est
+    irrespectueux vis-à-vis de ce développeur que d'utiliser une méthode
+    permettant d'éviter de lui reverser son dû. ce que je soulignais, mais très
+    mal ;), c'est que ce n'est aucunement un problème de licence, mais un
+    problème de respect moral.
+- id: 12
+  author: Hell Pé
+  date: 2010-01-16 19:41:02+02:00
+  contents: |
+    Mec, je crois que t'as oublié de fermer une balise italique :p
+- id: 13
+  author: ®om
+  date: 2010-01-17 11:15:41+02:00
+  contents: |
+    Merci, j'ai corrigé (c'est quand j'ai rajouté une petite ligne en italique
+    dans l'article).
+- id: 14
+  author: huguenant
+  date: 2010-02-07 21:55:48+02:00
+  contents: |
+    Bon, j'ai fait et refait tout cela, mais impossible de trouver mon milestone
+    sur la prise usb, même quand il est relié. adb ne trouve aucun device, alors
+    que lsusb le trouve bien !
+
+    Si quelqu'un pouvait me donner une piste.
+
+    J'utilise Ubuntu 8.10 LTS, et j'ai acquis le motorola milestone.
+
+    Merco
+- id: 15
+  author: ®om
+  date: 2010-02-07 21:58:25+02:00
+  contents: |
+    @huguenant, pour les versions avant la 9.10, le fichier doit peut-être
+    s'appeler 50-android.rules au lieu de 51 :
+
+        sudo mv /etc/udev/rules.d/5{1,0}-android.rules
+
+    À tester…
+- id: 16
+  author: huguenant
+  date: 2010-02-08 20:08:41+02:00
+  contents: |
+    Merci de la proposition, mais hélas, cela ne change rien. Rien dans la "list
+    of device attached",
+
+    et "can't find 'ConnectBot-svn-r466-all.apk' to install", sur la commande :
+
+    "adb install -r ConnectBot-svn-r466-all.apk"
+
+    Bizarre, bizarre.
+- id: 17
+  author: Remi
+  date: 2010-03-19 22:37:19+02:00
+  contents: |
+    Salut rome, j'ai un lg android mais les application que j'ai spnt des
+    fichiers APk et lorsque je les passe sur ma carte SD, et que je linsert sur
+    mon prtable, je ne retrouve aucunes des applications et je ne comprend pas
+    vraiment ce qu'es sudo echo et les truk ecrit en petit :S merci de m'aider
+    ...
+- id: 18
+  author: ®om
+  date: 2010-03-28 00:43:21+01:00
+  contents: |
+    @Remi, es-tu sous GNU/Linux déjà?
+- id: 19
+  author: "Le Repaire du Sanglier des Ardennes » Blog Archive &raquo; [Android]
+Environnement de développement"
+  author-url: http://ardenne-informatique.com/~nekrofage/journal/2010/05/08/android-environnement-de-developpement/
+  date: 2010-05-08 15:15:27+01:00
+  pingback: true
+  contents: |
+    [...] nekrofage@reseau66:\~/ANDROID/android-sdk-linux\_86/tools\$ Lien :
+    http://blog.rom1v.com/2010/01/installer-une-application-apk-sur-android-a-partir-dun-pc/
+    [...]
+- id: 20
+  author: ®om
+  date: 2010-08-30 20:38:23+02:00
+  contents: |
+    Pour ceux qui ont un téléphone non reconnu par `adb devices`, mettez à jour
+    le SDK : sur un téléphone sur lequel je viens de tester, une ancienne
+    version du SDK ne le reconnaissait pas, alors que le nouveau si.
+
+    Il se peut aussi qu'il faille redémarrer l'ordinateur après la modification
+    du fichier de règles (chez moi un simple `reload` ou `restart` du service
+    `udev` ne suffit pas).
+- id: 21
+  author: pascaltux
+  author-url: http://www.flickr.com/photos/linux2010/
+  date: 2010-09-12 08:39:26+02:00
+  contents: |
+    Bonjour à tous ,
+
+    j'ai un HTC wildfire et j'aimerai savoir si il existe un emulateur de .apk
+    pour linux ?
+
+    Je suis sous linux , je dll des logiciels .apk puis je les transfères , via
+    usb , sur mon téléphone puis installe ; c'est super facile et rapide !
+
+    mais j'aimerai savoir si il existe un programme qui émulerai android où
+    simplement les .apk sur mon PC linux.
+
+    Comme cela je pourrai essaier les logiciels .apk avant de les installer ?
+
+    (plus simple que de transféré , installer , tester et effacer si j'aime pas
+    !)
+
+    alors qui c'est si ça existe ?
+
+    merci , pascal
+- id: 22
+  author: pascaltux
+  author-url: http://www.flickr.com/photos/linux2010/
+  date: 2010-09-12 18:12:52+02:00
+  contents: |
+    difficile de trouver l'émulateur !!!
+
+    j'ai cherché sous google , visité plusieurs site et j'ai essaier celui si :
+    <http://www.webdevonlinux.fr/2009/06/ubuntu-tester-les-applications-android/>
+
+    mais je ne peux pas aller plus loing que :
+
+    " Rajoutez la ligne suivante à la fin du fichier en prenant soin de
+    remplacer ‘korben' par votre nom d'utilisateur"
+
+    "export PATH=\${PATH}:\~/android-sdk-linux\_x86-1.5\_r2/tools"
+
+    le fichier gedit \~/.bashrc je l'ai ouvert , mais a près ajouter " export
+    PATH=\${PATH}:\~/android-sdk-linux\_x86-1.5\_r2/tools" je l'ai fait en fin
+    de page et enregistrer mais quand je lance l'émulateur rien ne viens ?
+
+    Et "korben" c'est où je ne l'ai pas trouvé , c'est la que ca bloque !! je ne
+    sais pas finir l'install.
+
+    connais tu un emulateur ?
+- id: 23
+  author: geeklitant
+  author-url: http://geeklitant.wordpress.com
+  date: 2010-09-15 20:54:45+02:00
+  contents: |
+    Cela fonctionne également sous Debian Sid. Si vous avez ce message quand
+    vous faites "adb devices" :
+
+        ??????????? no permissions
+
+    Il faut, en root, faire :
+
+        adb kill-server
+        adb start-server
+
+    Ensuite, en user ordinaire, avec le téléphone branché au PC (mais le
+    répertoire pas forcément monté), vous pouvez faire `adb devices` et
+    `adb install -r MonPaquet.apk`.
+- id: 24
+  author: dj jess
+  date: 2010-12-30 00:20:06+01:00
+  contents: |
+    c'est juste super merci pour le tuyau c cool!!
+- id: 25
+  author: Installing applications to your Androïd phone from your computer using Mandriva
+  author-url: http://www.linux-wizard.net/2011/02/05/installing-applications-to-your-android-phone-from-your-computer-using-mandriva/
+  date: 2011-02-05 09:15:56+01:00
+  pingback: true
+  contents: |
+    [...]
+    http://blog.rom1v.com/2010/01/installer-une-application-apk-sur-android-a-partir-dun-pc/
+    (Fr) [...]
+- id: 26
+  author: AZ
+  date: 2011-06-15 14:49:07+02:00
+  contents: |
+    slt ls gars moi gsui sur microsoft seven..et gai un motorola MB200.comment
+    faire??
+- id: 27
+  author: Extraire les recherches Google des logs Apache - ®om&#039;s blog
+  author-url: http://blog.rom1v.com/2011/06/extraire-les-recherches-google-des-logs-apache/
+  date: 2011-06-25 19:52:52+02:00
+  contents: |
+    [...] conteste, les deux billets qui amènent le plus d’internautes par
+    Google concernent pluzz et apk. Et parfois ça ne doit pas les aider
+    beaucoup : certains recherchent par exemple [...]
+

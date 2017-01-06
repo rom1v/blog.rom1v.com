@@ -1,0 +1,80 @@
+- id: 1
+  author: "Tweets that mention Aggréger différentes sources de VOD en OGG/Theora « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/trackback?utm_source=pingback&amp;utm_campaign=L1&amp;url=http://blog.rom1v.com/2010/04/aggreger-differentes-sources-de-vod-en-oggtheora/
+  date: 2010-04-24 21:44:22+01:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by Planet-Libre. Planet-Libre said:
+    ®om : Agréger différentes sources de VOD en OGG/Theora: Pour mes flux RSS,
+    j'utilise l'outil tt-rss installé sur... http://bit.ly/bgfiaY [...]
+- id: 2
+  author: MarcSpitz
+  author-url: http://wild-widow.com
+  date: 2010-04-24 21:59:13+01:00
+  contents: |
+    Bravo pour ton article complet.
+
+    Le script est très bien étudié.
+
+    Ca ouvre des perspectives :)
+- id: 3
+  author: thuban
+  date: 2010-04-25 08:49:22+01:00
+  contents: |
+    Très intéressant tout ça!
+
+    Le plus dur est de trouver les adresses des vidéos...
+
+    Je galère avec les émissions Taratata. Quelqu'un saurait comment les
+    récupérer avec ce systeme par hasard?
+- id: 4
+  author: Aurélien Bompard
+  author-url: http://aurelien.bompard.org
+  date: 2010-04-25 10:07:55+01:00
+  contents: |
+    Très intéressant tout ça. Je vais probablement piquer des idées pour un
+    script assez proche que j'ai écrit, et qui convertit les vidéos d'un flux
+    RSS dans un format et une taille demandée. Une fois encodée, la nouvelle
+    adresse de la vidéo est écrite dans le flux à la place de l'ancienne.
+
+    Pour ceux que ça intéresse, j'ai récemment publié ce script ici :
+    <http://gitorious.org/abompard-scripts/abompard-scripts/blobs/master/podcast-transcode.py>
+
+    Défaut par rapport au tien : il encode en DivX, parce que mon lecteur
+    portable ne décode pas le Theora de façon matérielle.
+- id: 5
+  author: patate
+  date: 2010-04-25 10:21:49+01:00
+  contents: |
+    je ne comprends pas cette ligne :
+
+    {% highlight bash %}
+    IFS='|' read -a args <<< "$1"
+    {% endhighlight %}
+- id: 6
+  author: ®om
+  date: 2010-04-25 11:11:01+01:00
+  contents: |
+    @[**patate**](#comment-5)
+
+    La variable `IFS` contient le séparateur qui sera utilisé par `read -a` pour
+    découper la chaine de caractères et la stocker dans un tableau.
+
+        $ IFS=';' read -a args <<< 'a;b c;d'
+        $ echo ${args[0]}
+        a
+        $ echo ${args[1]}
+        b c
+        $ echo ${args[2]}
+        d
+
+    L'opérateur `<<<` est un peu équivalent à faire un echo suivi d'un pipe :
+
+    {% highlight bash %}
+    echo 'abc' | cut -c2-
+    cut -c2- <<< 'abc'
+    {% endhighlight %}
+
+    Sauf que dans le premier cas, le `cut` est dans un processus séparé, dans le
+    second il est dans le shell courant. Et pour le `read`, c'est important, car
+    sinon la variable `args` serait perdue.

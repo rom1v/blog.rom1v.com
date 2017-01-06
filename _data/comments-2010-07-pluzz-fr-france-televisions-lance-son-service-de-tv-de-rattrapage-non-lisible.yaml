@@ -1,0 +1,2101 @@
+- id: 1
+  author: "Tweets that mention Pluzz.fr : France Televisions lance son service de TV de rattrapage non lisible « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/blog.rom1v.com/2010/07/pluzz-fr-france-televisions-lance-son-service-de-tv-de-rattrapage-non-lisible/?utm_source=pingback&amp;utm_campaign=L2
+  date: 2010-07-06 18:13:01+02:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by Planet-Libre. Planet-Libre said:
+    ®om : Pluzz.fr : France Televisions lance son service de TV de rattrapage
+    non lisible: Le 5 juillet (hier donc), ... http://bit.ly/9EDvKi [...]
+- id: 2
+  author: bux
+  author-url: http://bux.fr
+  date: 2010-07-06 18:27:18+02:00
+  contents: |
+    C'est triste de voir nos services publiques en être de moins en moins ... Le
+    script ne fonctionne pas chez moi:
+
+        [0x960b980] main access error: connection failed: Connexion refusée
+        [0x960b980] main access error: connection failed: Connexion refusée
+        [0x960b980] access_mms access error: failed to open a connection (tcp)
+        [0x960b980] main access error: connection failed: Connexion refusée
+        [0x960b980] main access error: connection failed: Connexion refusée
+        [0x960b980] access_mms access error: failed to open a connection (tcp)
+        [0x960b980] access_mms access error: cannot connect to server
+        [0x960b980] access_mms access error: error: HTTP/1.0 404 Not Found
+
+    Ca a certainement changé de leurs coté. =)
+- id: 3
+  author: ®om
+  date: 2010-07-06 18:39:48+02:00
+  contents: |
+    > @[**bux**](#comment-2)
+    >
+    > Le script ne fonctionne pas chez moi
+
+    Ah bizarre, tu as testé sur quel flux? Quelle commande as-tu exécutée?
+    Quelle version de VLC utilises-tu?
+
+    Moi aussi j'ai les lignes de "Connexion refusée", mais ça n'est pas gênant
+    ça fonctionne quand même. Par contre je n'ai pas la ligne `404 Not Found`…
+- id: 4
+  author: jp.fox
+  author-url: http://www.jpfox.fr/
+  date: 2010-07-06 18:42:35+02:00
+  contents: |
+    @bux : presque le même problème mais si on attend, ça finit par arriver ^^
+
+        [0x1b9c8a8] main access error: connection failed: Connexion refusée
+        [0x1b9c8a8] main access error: connection failed: Connexion refusée
+        [0x1b9c8a8] access_mms access error: failed to open a connection (tcp)
+        [0x1b9c8a8] main access error: connection failed: Connexion refusée
+        [0x1b9c8a8] main access error: connection failed: Connexion refusée
+        [0x1b9c8a8] access_mms access error: failed to open a connection (tcp)
+        [0x1b9c8a8] access_mms access error: cannot connect to server
+        [0x1b9c8a8] access_mms access error: cannot read data 2
+        QPainter::begin: Paint device returned engine == 0, type: 1
+        [0x1d36fc8] pulse audio output: No. of Audio Channels: 2
+- id: 5
+  author: astromb
+  date: 2010-07-06 19:28:31+02:00
+  contents: |
+    Fonctionne super bien (ubuntu 10.04 64b - VLC 1.1)
+
+    Merci et bravo pour ce script !
+- id: 6
+  author: jjdoti
+  date: 2010-07-06 19:43:15+02:00
+  contents: |
+    Salut,
+
+    Il reste possible de voir la video dans son navigateur à condition d'avoir
+    Adblock et de bloquer l'URL suivante :
+
+    <http://www.pluzz.fr/layoutftv/arches/common/javascripts/jquery.mediaTools-catchup-min.js>
+
+    Enfin, ça marche chez moi avec le plugin totem dans firefox.
+- id: 7
+  author: jazzta
+  date: 2010-07-06 21:38:36+02:00
+  contents: |
+    La première chose à faire est d'envoyer des mail à FranceTélévision pour
+    s'en plaindre.
+
+    Et leur rappeler que la gendarmerie, l'assemblée nationale et bien d'autres
+    services et institutions utilisent linux et ses différentes distributions.
+- id: 8
+  author: xamaco
+  date: 2010-07-06 22:04:24+02:00
+  contents: |
+    Ça marche très bien, merci...
+
+    Bon, mais, y a t'il un mouvement, pétition en ligne, ... pour protester
+    contre cette aberration ?
+- id: 9
+  author: Yub
+  date: 2010-07-06 22:54:06+02:00
+  contents: |
+    Je vais voir si je ne peux pas faire une petite extension firefox... qui
+    automatiserais tout çà!
+
+    Il faut juste trouver le temps...
+- id: 10
+  author: illovae
+  date: 2010-07-07 00:39:29+02:00
+  contents: |
+    Salut :)
+
+    Je sais pas où tu as trouvé la valeur de `$stream_url_part1` mais, alors que
+    ça marche bien pour le 20H, ça ne marche pas pour d'autres comme par exemple
+    Gaston. D'ailleurs, le format de la video de Gaston
+    (<http://www.pluzz.fr/gaston.html>) est au format mp4 ce qui ne colle pas avec
+    pluzz.sh.
+
+    Je pense donc qu'il faut que la valeur de `$stream_url_part1` ne doit pas
+    être écrite en dur puisque qu'elle a l'air de dépendre de la vidéo voulu. De
+    plus, il faut aussi plutôt utiliser `cut` au lieu du second `grep` pour
+    `$stream_url_part2` histoire de récupérer l'adresse quelque soit le flux :)
+
+    Cordialement :)
+- id: 11
+  author: Oinje
+  date: 2010-07-07 05:37:39+02:00
+  contents: |
+    Salut, j'avais le même problème et je l'ai résolu en remplaçant
+    l'avant-dernière ligne par :
+
+        mplayer $stream_url -dumpstream -dumpfile $output_file
+
+    Merci pour ce super script
+- id: 12
+  author: kurokame
+  date: 2010-07-07 07:24:40+02:00
+  contents: |
+    Je rebondis juste sur ça à propos des drm : "Certains prétendent que ça
+    permet d'empêcher la copie ; ce n'est pas totalement faux : quand on ne peut
+    pas lire le contenu on ne peut pas le copier."
+
+    Moi je dis que c'est entièrement faux : du moment qu'un fichier ne présente
+    pas d'anomalie, il est tout à fait copiable peut importe qu'on soit en
+    mesure de comprendre ou pas son contenu. Donc drm ou pas, je peux très bien
+    le mettre en télépartage sur des réseaux p2p même si je suis incapable de
+    connaître ce qu'il est censé contenir.
+
+    Bon ceci dit, d'un coté je ne regarde pratiquement pas la TV et de l'autre
+    je préfèrerai encore me faire un boycott de ce genre de service : ils ne
+    veulent pas que je vois, alors je ne chercherai pas à voir. Ces ayatollahs
+    des droits et des brevets ne méritent pas mon attention en "contournant" ce
+    balisage virtuel.
+
+    Une chose aussi, il m'est avis que convaincre la sévisse publique ne sera
+    que pure perte de temps, l'arrivée du silverlight sur leur site date depuis
+    les JO de Vancouver, un partenariat a été signé l'année dernière pour Roland
+    Garros. Et vu la grande indépendance légendaire qui anime le tout, peu de
+    chance donc que fRance Télébidule s'amuse à écouter d'autres sirènes.
+
+    Et que la vague soit avec vous. :)
+- id: 13
+  author: damien200
+  date: 2010-07-07 07:57:44+02:00
+  contents: |
+    Merci beaucoup, ça marche super.
+- id: 14
+  author: ®om
+  date: 2010-07-07 08:43:23+02:00
+  contents: |
+    > @[**kurokame**](#comment-12)
+    >
+    > Moi je dis que c'est entièrement faux : du moment qu'un fichier ne
+    > présente pas d'anomalie, il est tout à fait copiable peut importe qu'on
+    > soit en mesure de comprendre ou pas son contenu. Donc drm ou pas, je peux
+    > très bien le mettre en télépartage sur des réseaux p2p même si je suis
+    > incapable de connaître ce qu'il est censé contenir.
+
+    Il fallait comprendre "tout ce qui est lisible est copiable en quelque chose
+    de lisible sans verrou".
+- id: 15
+  author: ®om
+  date: 2010-07-07 08:48:44+02:00
+  contents: |
+    > @[**illovae**](#comment-10)
+    >
+    > Je sais pas où tu as trouvé la valeur de `$stream_url_part1` mais, alors que
+    > ça marche bien pour le 20H, ça ne marche pas pour d'autres comme par exemple
+    > Gaston. D'ailleurs, le format de la video de Gaston
+    > (<http://www.pluzz.fr/gaston.html>) est au format mp4 ce qui ne colle pas avec
+    > pluzz.sh.
+
+    Merci pour l'info. Effectivement le script ne gère pas tous les cas, je
+    compte sur vous pour le faire évoluer ^^
+- id: 16
+  author: Loo
+  author-url: http://www.coolbytes.fr
+  date: 2010-07-07 10:18:21+02:00
+  contents: |
+    Superbe... Grand merci pour le script.
+- id: 17
+  author: gnuzer
+  author-url: http://gnuzer.legtux.org
+  date: 2010-07-07 14:52:47+02:00
+  contents: |
+    > Tout ce qui est lisible est copiable. Par contraposée, tout ce qui n'est
+    > pas copiable n'est pas lisible.
+
+    J'aime beaucoup. C'est de toi ?
+- id: 18
+  author: GillesM
+  author-url: http://www.nainposteur.org/blog
+  date: 2010-07-07 17:43:04+02:00
+  contents: |
+    Hello,
+
+    J'avais eu un échange via Twitter avec les petites mains de FranceTv au
+    moment de Roland Garros à ce sujet et ils m'avaient signalé que Moonlight
+    permettait sous Linux de visualiser les vidéos (il était alors question du
+    direct et non de Pluzz.fr bien sûr).
+
+    Je viens de tester sur mon NC10 sous 10.04 et ... ça ne marche pas pour
+    Pluzz malgré Moonlight :((
+
+    Je vais voir si je peux en savoir plus toujours via Twitter mais je doute
+    que FranceTv fasse quoi que ce soit de toute façon (je parle des décideurs
+    s'entend) car ils ont des volontés bien précises de monétisation (et ils ont
+    écrit vouloir interdire la lecture de leur vidéos ailleurs que sur leur site
+    pour les bannières pub) ... je vais par contre tester ton script avec
+    plairsir @om :)
+- id: 19
+  author: Quentin THEURET
+  author-url: http://blog.quentin-theuret.net
+  date: 2010-07-07 18:05:21+02:00
+  contents: |
+    Du temps de la vidéo sur le site france2.fr, je leur avait envoyé un mail
+    pour leur dire mon mécontentement à l'égard des technologies utilisées sur
+    leurs sites pour la lecture des vidéos.
+
+    Je ne sais pas si ça a joué, mais 6 mois plus tard, ils avaient gardé
+    Silverlight, mais il y a avait un système annexe qui permettait de lire les
+    vidéos en se passant de la plateforme Microsoft.
+
+    Il faut donc que tout un chacun envoie un mail de mécontentement, et peut
+    être que les choses bougeront.
+- id: 20
+  author: StandarT
+  author-url: http://standartux.fr
+  date: 2010-07-07 18:31:18+02:00
+  contents: |
+    Merci pour ce petit script, ça marche super pour moi : ubuntu 10.04 + vlc
+    1.0.6.
+
+    Même remarque que jp.fox, quelques messages d'erreurs au demarrage mais
+    aprés ça passe, en tout cas pour le flux du jt-20h que tu donnes en exemple,
+    pour le reste j'ai pas encore essayé...
+- id: 21
+  author: Michelange
+  author-url: http://www.michelange.org
+  date: 2010-07-07 19:53:56+02:00
+  contents: |
+    Bravo bravo...
+
+    ça marche et c'est d'une simplicité élégante.
+
+    Magnifique
+- id: 22
+  author: golgot200
+  date: 2010-07-07 22:59:07+02:00
+  contents: |
+    Bonsoir,
+
+    Et bien tout est ok pour moi (juste mis smplayer à la place de vlc). Merci
+    beaucoup pour le boulot. Une question, où se loge les vidéos enregistrées ?
+
+    Merci par avance.
+- id: 23
+  author: phiga
+  date: 2010-07-08 02:34:32+02:00
+  contents: |
+    Salut,
+
+    Script ok sur Mandriva 2010.1 32 bit et VLC 1.0.6
+
+    L'enregistrement peut se faire via vlc et le bouton rouge d'enregistrement!
+    (menu vue\> contrôles avancés)
+- id: 24
+  author: ®om
+  date: 2010-07-08 05:50:26+02:00
+  contents: |
+    > @[**gnuzer**](#comment-17)
+    >
+    > > Tout ce qui est lisible est copiable. Par contraposée, tout ce qui
+    > > n'est pas copiable n'est pas lisible.
+    >
+    > J'aime beaucoup. C'est de toi ?
+
+    Euh, oui :)
+- id: 25
+  author: ®om
+  date: 2010-07-08 05:51:11+02:00
+  contents: |
+    > @[**GillesM**](#comment-18)
+    >
+    > Je vais voir si je peux en savoir plus toujours via Twitter mais je doute
+    > que FranceTv fasse quoi que ce soit de toute façon (je parle des décideurs
+    > s'entend) car ils ont des volontés bien précises de monétisation (et ils
+    > ont écrit vouloir interdire la lecture de leur vidéos ailleurs que sur
+    > leur site pour les bannières pub) ...
+
+    Les journalistes non plus ne veulent pas que leurs articles soient recopiés,
+    cela ne les empêche pas de les diffuser dans un simple format texte, ouvert
+    et lisible par tous. Les images, même celles étant sous une licence très
+    restrictives, sont accessibles au format JPEG, ouvert et lisible par tous.
+    Pourquoi en serait-il autrement pour les vidéos?
+
+    Alors oui, comme ces formats sont lisibles et utilisables, il est
+    techniquement possible de copier le contenu très simplement. Mais c'est
+    normal, la lecture n'est rien d'autre que de la copie (d'une zone mémoire à
+    une autre).
+
+    Vouloir interdire la copie d'un contenu numérique, c'est comme vouloir
+    interdire aux gens de se souvenir d'un film après l'avoir vu. Et un
+    ordinateur a bonne mémoire.
+- id: 26
+  author: ®om
+  date: 2010-07-08 05:59:35+02:00
+  contents: |
+    > @[**golgot200**](#comment-22)
+    >
+    > Une question, où se loge les vidéos enregistrées ?
+
+    Dans le répertoire courant (à partir duquel tu lances le script).
+- id: 27
+  author: Flanker
+  date: 2010-07-08 07:36:25+02:00
+  contents: |
+    ®om : "Effectivement le script ne gère pas tous les cas, je compte sur vous
+    pour le faire évoluer"
+
+    Tout d'abord merci. Ton script est le bienvenu.
+
+    Peux-tu nous expliquer sommairement comment rechercher l'URL de la vidéo
+    quand elle est si bien cachée ? Je ne suis pas très fort dans ce domaine et
+    je n'ai rien vu dans le source de la page, si ce n'est l'adresse d'un
+    lecteur flash :)
+
+    Merci encore
+- id: 28
+  author: Magic Beurt
+  date: 2010-07-08 07:38:42+02:00
+  contents: |
+    Il faut protester : <http://www.francetelevisions.fr/contact/contact.php>
+
+    Faisons du buzz pour les réveiller !
+- id: 29
+  author: olivier
+  date: 2010-07-08 08:18:40+02:00
+  contents: |
+    Bonjour
+
+    je suis novice sous ubuntu (10.04) comment puis je enregistrer/créer le
+    script en question (quelle extension mettre au fichier,...)
+
+    Merci pour votre aide
+
+    ;-)
+- id: 30
+  author: Evildead
+  date: 2010-07-08 08:30:18+02:00
+  contents: |
+    Il faut leur laisser le temps, c'est normal d'être frileux au début quand on
+    se lance sur quelque chose de nouveau. La musique numérique au début était
+    bourrée de DRM, maintenant on peut acheter quasiment n'importe quel album en
+    MP3 sans aucun DRM.
+- id: 31
+  author: Regarder les vidéo Pluzz sur Linux
+  author-url: http://www.korben.info/regarder-les-video-pluzz-sur-linux.html
+  date: 2010-07-08 09:30:41+02:00
+  pingback: true
+  contents: |
+    [...] site est tout en silverlight, ce qui empêche un bon fonctionnement
+    sous Linux ! Mais heureusement, Rom1v a eu la bonne idée de développer un
+    petit script qui permet de regarder ces émissions [...]
+- id: 32
+  author: afrinc
+  date: 2010-07-08 09:47:49+02:00
+  contents: |
+    Merci pour le script,
+
+    Mais je profite de l'espace commentaire pour rappeler sa bonne place :
+    `/usr/local/bin` (et non `/usr/bin`)
+
+    C'est à ça que sert l'esapce `/usr/local`, il est semblable à `/usr` mais
+    pour tout ce qui est hors distribution (non packagé), que l'on rajoute à la
+    main :-)
+- id: 33
+  author: ®om
+  date: 2010-07-08 10:54:53+02:00
+  contents: |
+    > @[**afrinc**](#comment-32)
+    >
+    > Mais je profite de l'espace commentaire pour rappeler sa bonne place :
+    > `/usr/local/bin` (et non `/usr/bin`)
+    >
+    > C'est à ça que sert l'esapce `/usr/local`, il est semblable à `/usr` mais pour
+    > tout ce qui est hors distribution (non packagé), que l'on rajoute à la
+    > main :-)
+
+    Merci, j'ai corrigé.
+- id: 34
+  author: Fred
+  date: 2010-07-08 11:54:11+02:00
+  contents: |
+    Et Arte qui utilise également le format WMV pour ses videos (que l'on peut
+    récupérer grâce à Arte +7)... mais qu'on ne peut pas lire sur un disque dur
+    mul
+
+    timédia couplé à un TV... Trancoder, ca marche, mais avec un décalage entre
+    le son et l'image... pour regarder OneShotNot, pas top...
+- id: 35
+  author: bux
+  author-url: http://bux.fr
+  date: 2010-07-08 12:39:00+02:00
+  contents: |
+    reSalut =)
+
+    Oui, en fait ça marche effectivement pour le 20h par exemple. Mais pour
+    d'autres programmes:
+
+    VLC ne peut pas ouvrir
+    "mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication/".
+    Vérifiez les messages pour plus de détails.
+- id: 36
+  author: thisisabore
+  author-url: http://thisisabore.net/post/2010/07/08/Pluzz%2C-syst%C3%A8mes-libres-et-interop%C3%A9rabilit%C3%A9
+  date: 2010-07-08 16:10:20+02:00
+  pingback: true
+  contents: |
+    **Pluzz, systèmes libres et interopérabilité (ce titre vend du rêve)...** Le
+    lancement récent de Pluzz, la télévision de rattrapage de France Télévision,
+    et son incompatibilité avec les ordinateurs utilisant des systèmes libres
+    (comme Ubuntu), me donne l'occasion de revenir sur quelques notions trop
+    souvent mal compr...
+- id: 37
+  author: Murazaki
+  date: 2010-07-08 19:05:04+02:00
+  contents: |
+    Tant que les programmes avec DRM sont du niveau de "plus belle la vie" ça me
+    va x) ça m'empèchera tout visonnage suicidaire xD
+- id: 38
+  author: Vk
+  date: 2010-07-09 08:11:04+02:00
+  contents: |
+    pour info, j'ai bricolé un petit plugin firefox (launchy) qui permet le
+    lancer des progs externes depuis FF pour lancer le lien avec pluzz depuis le
+    menu contextuel. Si cela vous intéresse, je mettrais cette modif sur un
+    partage... (le plugin a l'origine insère des , entre les arguments...)
+- id: 39
+  author: Vk
+  date: 2010-07-09 08:17:16+02:00
+  contents: |
+    je profite de cet espace pour faire part d'un problème que je rencontre : en
+    effet suivant le prog que je regarde, la vidéo apparait saccadée (notamment
+    héro corp par ex)...
+
+    Est-ce que quelqu'un sait comment résoudre ce genre de problème (cela ne
+    vient pas du débit du streaming, j'ai vérifié...)
+
+    Peut-être est-ce la vidéo elle-même ???
+
+    J'attends vos retours ! ;)
+- id: 40
+  author: olivier
+  date: 2010-07-09 14:21:52+02:00
+  contents: |
+    j'ai une erreur au lancement du script :
+
+        ./scriptpluzz: line 4: Erreur de syntaxe près du symbole inattendu « ;& »
+        ./scriptpluzz: line 4: `    printf "Syntaxe: $0 [url|play|record] http://www.pluzz.fr/...\n" >&2'
+
+    si qqu'un a une idée. . .
+- id: 41
+  author: stb
+  date: 2010-07-09 14:27:38+02:00
+  contents: |
+    Un grand merci à jjdoti, pour l'astuce avec adblock, ça fonctionne nickel
+    chez moi.
+
+    mort à windows, linux for ever !
+- id: 42
+  author: Fugitif
+  date: 2010-07-09 16:27:10+02:00
+  contents: |
+    Fonctionne pas chez moi avec vlc
+
+        [00000306] main access error: Connection to a988.v101995.c10199.e.vm.akamaistream.net port 1755 failed: Connexion refusée
+        [00000306] access_mms access error: failed to open a connection (tcp)
+        [00000306] main access error: Connection to a988.v101995.c10199.e.vm.akamaistream.net port 1755 failed: Connexion refusée
+        [00000306] access_mms access error: failed to open a connection (tcp)
+        [00000306] access_mms access error: cannot connect to server
+        [00000306] access_mms access error: cannot read data
+        [00000306] access_mms access error: error: HTTP/1.0 400 Bad Request
+        [00000306] access_mms access error: cannot start stream
+
+    Par contre avec mplayer ça marche super
+- id: 43
+  author: grongnet
+  date: 2010-07-09 16:39:57+02:00
+  contents: |
+    Merci pour ce bash ! Il fonctionne trés bien sous Jaunty (904)
+
+    Chris
+- id: 44
+  author: jeyenkil
+  date: 2010-07-10 00:48:32+02:00
+  contents: |
+    Hahaha !!! J'adore la license wtfpl que je ne connaissais pas. Merci pour ce
+    script, je le test de suite.
+- id: 45
+  author: jp
+  date: 2010-07-10 08:37:13+02:00
+  contents: |
+    Merci,
+
+    super ça dépanne
+
+    vive ubuntu, vive la liberté
+- id: 46
+  author: bj
+  date: 2010-07-10 12:44:47+02:00
+  contents: |
+    bonjour merci pour le script fonctionne bien avec mplayer mais ne fonctionne
+    pas avec vlc mème erreur que fugitif
+- id: 47
+  author: Morphing
+  author-url: http://twitter.com/camillebaronnet
+  date: 2010-07-10 14:53:50+02:00
+  contents: |
+    Super ton script, 1000 mercis,
+
+    En partant ton ton code, j'ai travailler une partie de la nuit le dessu :
+
+    <http://userscripts.org/scripts/show/81167>
+
+    Sa permet de remplacer le player directement sur le site par celui utilisé
+    pas le système ( Totem par défaut ). et de rajouter un lien en pied de page
+    pour récupéré le lien. Plus besoin donc de terminal pour avoir accès au
+    contenu.
+- id: 48
+  author: Eric
+  date: 2010-07-10 16:46:57+02:00
+  contents: |
+    Bonjour,
+
+    Je débute sur Ubuntu.. J'ai bien crée le dossier /usr/local/bin/pluzz puis
+    copié le ficher pluzz.sh
+
+    mais à l'appel du script, j'ai "Command not found"
+
+    Je ne maitrise pas du tout ces scripts...
+
+    Merci pour votre aide !
+
+    Eric
+- id: 49
+  author: Thom
+  date: 2010-07-10 23:32:58+02:00
+  contents: |
+    Bonsoir, Pour résoudre le problème d'Éric, lancer la commande suivante dans
+    un terminal de façon à donner le droit de lancer le script aux autres que
+    root :
+
+        sudo chmod o+x /usr/local/bin/pluzz
+
+    Normalement cela doit suffire. Cela a été le cas pour moi, en tout cas. thom
+- id: 50
+  author: ®om
+  date: 2010-07-11 11:17:05+02:00
+  contents: |
+    > @[**Eric**](#comment-48)
+    >
+    > Bonjour,
+    >
+    > Je débute sur Ubuntu.. J'ai bien crée le dossier /usr/local/bin/pluzz puis
+    > copié le ficher pluzz.sh
+    >
+    > mais à l'appel du script, j'ai "Command not found"
+    >
+    > Je ne maitrise pas du tout ces scripts...
+    >
+    > Merci pour votre aide !
+    >
+    > Eric
+
+    Le dossier, c'est `/usr/local/bin`, et le fichier c'est `pluzz`.
+
+    Le plus simple est de créer un fichier `pluzz` dans le dossier personnel,
+    d'y recopier le code du script, et d'exécuter :
+
+        sudo install pluzz /usr/local/bin
+
+    Je le rajoute à la fin de l'article…
+- id: 51
+  author: ponky
+  date: 2010-07-11 11:30:10+02:00
+  contents: |
+    Salut, je suis sous debian et ça ne fonctionne pas j'ai l'erreur suivante :
+
+        [0x935d8c0] access_output_file access out error: cannot open `' (Aucun fichier ou dossier de ce type)
+        [0x90f3fe8] stream_out_standard stream out error: no suitable sout access module for `file/asf://(null)'
+        [0x935ba10] main stream output error: stream chain failed for `std{access=file,mux=asf,dst=}'
+        [0xb7001c78] main input error: cannot start stream output instance, aborting
+- id: 52
+  author: ®om
+  date: 2010-07-11 11:41:40+02:00
+  contents: |
+    Tu as essayé sur quel flux? Car apparemment l'url est vide. Serait-ce un
+    flux en mp4?
+- id: 53
+  author: ponky
+  date: 2010-07-11 11:43:59+02:00
+  contents: |
+    Salut,
+
+    testé sur <http://www.pluzz.fr/singe-mi-singe-moi-2010-07-11.html>
+- id: 54
+  author: apostrof
+  date: 2010-07-11 11:48:10+02:00
+  contents: |
+    > @[**bux**](#comment-35)
+    >
+    > reSalut =)
+    >
+    > Oui, en fait ça marche effectivement pour le 20h par exemple. Mais pour
+    > d'autres programmes:
+    >
+    > VLC ne peut pas ouvrir
+    > "mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication/".
+    > Vérifiez les messages pour plus de détails.
+
+    Bonjour, merci pour le script. Même problème que bux, avez-vous une idée
+    pour corriger ce pb? Merci!
+- id: 55
+  author: ponky
+  date: 2010-07-11 11:51:47+02:00
+  contents: |
+    Okay j'ai testé sur <http://www.pluzz.fr/strip-tease-2010-07-07.html> et ça
+    fonctionne !
+
+    Donc sur les mp4 ça marche pas désolé je n'avais pas lu tous les
+    commentaires
+
+    et surtout j'avais pas vu quels flux étaient en mp4.
+
+    En tout cas merci pour le script !!! Beau travail, et si quelqu'un connait
+
+    l'équivalent pour Arte+7 je suis preneur.
+- id: 56
+  author: ®om
+  date: 2010-07-11 12:19:09+02:00
+  contents: |
+    J'ai amélioré le script pour qu'il gère les flux MP4, vous pouvez donc
+    réessayer avec le nouveau script ça devrait fonctionner.
+- id: 57
+  author: ®om
+  date: 2010-07-11 12:22:53+02:00
+  contents: |
+    Pour les bidouilleurs, je suis tombé sur [ce
+    lien](http://www.encodage.org/phpBB/viewtopic.php?f=26&t=108) qui explique
+    comment récupérer les url, avec une méthode différente de celle que j'ai
+    utilisée (au moins en partie).
+- id: 58
+  author: 'Le service Pluzz sur Linux | Hultrasimple : A simple Webdesigner'
+  author-url: http://hultrasimple.com/informatique/linux/le-service-pluzz-sur-linux.html
+  date: 2010-07-11 16:43:24+02:00
+  pingback: true
+  contents: |
+    [...] j’ai découvert que Rom1v (par le biais de Korben) a réalisé un petit
+    script qui vous permettra de regarder les vidéos de [...]
+- id: 59
+  author: 'Quick &amp; Dirty (17) &laquo; Journal du Hack'
+  author-url: http://journalduhack.wordpress.com/2010/07/11/quick-dirty-17/
+  date: 2010-07-11 17:07:25+02:00
+  pingback: true
+  contents: |
+    [...] Planète libre -Installer un clone de µTorrent sur Ubuntu? Rendez-vous
+    ici! -Le nouveaux service de France Télévision de TV-Rattrapage a été lancé.
+    Mais vu que ça utilise de vilain formats propriétaires, voilà un petit tuto
+    pour en profiter sur Linux.via VLC! [...]
+- id: 60
+  author: Lucien
+  author-url: http://users.skynet.be/linux-rixensart
+  date: 2010-07-11 18:39:30+02:00
+  contents: |
+    Bonjour,
+
+    Bravo et merci pour le script. Tout est OK sauf l'accès aux mp4.
+
+    J'ai essayé avec la version 2 et
+    <http://www.pluzz.fr/gaston-2010-07-11.html>
+
+    Sur le site linux-rixensart, j'ai ajouté un script basé sur xclic et zenity
+    pour commander la visualisation ou l'enregistrement sans passer par les
+    lignes de commande.
+
+    <http://users.skynet.be/linux-rixensart/app41_multimedia.html#pluzz>
+
+    Lucien
+- id: 61
+  author: ®om
+  date: 2010-07-11 18:44:05+02:00
+  contents: |
+    > @[**Lucien**](#comment-60)
+    >
+    > Bravo et merci pour le script. Tout est OK sauf l'accès aux mp4.
+    >
+    > J'ai essayé avec la version 2 et
+    > <http://www.pluzz.fr/gaston-2010-07-11.html>
+
+    Avec la version 0.2, chez moi ça fonctionne :
+
+        pluzz play http://www.pluzz.fr/gaston-2010-07-11.html
+- id: 62
+  author: lionel
+  date: 2010-07-11 19:46:39+02:00
+  contents: |
+    formidable... Cela fonctionne aussi sous Mandriva 2010
+    2.6.31.13-desktop-1mnb \#1
+
+        VLC version 1.0.6 Goldeneye
+        Compilé par plf@.(none)
+        Compilateur : gcc version 4.4.1 (GCC)
+
+    au début :
+
+        main access error: connection failed: Connexion refusée
+        main access error: connection failed: Connexion refusée
+
+    j'avais peur.... Merci vraiment. Et en plus l'enregistrement...
+- id: 63
+  author: Geal
+  author-url: http://unhandledexpression.com
+  date: 2010-07-12 11:16:43+02:00
+  contents: |
+    Salut,
+
+    Quitte à faire un script pour ça, pourrais-tu écrire un script lua pour VLC?
+
+    Ca permettrait d'accéder à ce service depuis VLC sur Windows et Mac en plus
+    :)
+
+    cf
+    <http://eleves.ec-lille.fr/~couprieg/post/2009/04/11/55-vlc-tricks-lua-playlist>
+- id: 64
+  author: Florent
+  date: 2010-07-12 13:41:19+02:00
+  contents: |
+    N'hésitez pas à contacter France Télévisions pour faire part du problème...
+    Si nous sommes nombreux à demander une adaptation libre, ils la feront
+    peut-être !
+
+    Voilà ce qu'ils m'ont répondu :
+
+    > Paris, le 12 juillet 2010
+    >
+    > Fidèle téléspectateur de France Télévisions, vous nous avez écrit afin de
+    > nous faire part de votre sentiment concernant le logiciel de lecteur vidéo
+    > utilisé pour nos sites Internet
+    >
+    > Nous vous remercions d'avoir pris le temps de nous écrire.
+    >
+    > Nous avons bien pris en compte l'ensemble de votre remarque. Afin de
+    > relayer votre propos, nous avons transmis votre courriel à la Direction
+    > des programmes de nos antennes.
+    >
+    > Nous restons à votre disposition et vous souhaitons d'agréables moments en
+    > compagnie des chaînes de France Télévisions.
+    >
+    > La Direction des relations avec les téléspectateurs
+- id: 65
+  author: Lucien
+  author-url: http://users.skynet.be/linux-rixensart
+  date: 2010-07-12 17:53:03+02:00
+  contents: |
+    Avec la version 0.2, chez moi ça fonctionne :
+
+        pluzz play http://www.pluzz.fr/gaston-2010-07-11.html
+
+    Après différents tests j'ai constaté que nous, les petits belges, n'avons
+    pas le droit (DRM) de lire cette vidéo et là réside le problème. Patience,
+    nous serons bientôt rattachés à la France.......
+
+    Lucien
+- id: 66
+  author: Laurent
+  date: 2010-07-12 22:35:39+02:00
+  contents: |
+    Chez moi ça fonctionne presque toujours directement avec chrome. C'est le
+    plugin totem qui lit la vidéo sans broncher.
+- id: 67
+  author: apostrof
+  date: 2010-07-12 23:16:45+02:00
+  contents: |
+    Bonsoir, avec la version 0.2, ça fonctionne nickel, merci!
+- id: 68
+  author: aurejac
+  date: 2010-07-14 15:33:28+02:00
+  contents: |
+    Bonjour,
+
+    J'avoue être assez neophyte : vos astuces ne fonctionnent pas avec Mac Os X
+    version 10.4.11 qui est incompatible avec silverlight et Pluzz ne détecte
+    pas flip4mac (pourtant installé). Et-circonstance aggravante-mon portable
+    est un power pc.....J'ai essayé aussi l'astuce adblockplus sur firefox,
+    toujours rien...écran noir...
+
+    Quelqu'un aurait il une solution? Mille mercis
+- id: 69
+  author: Elucubrations
+  date: 2010-07-15 18:04:09+02:00
+  contents: |
+    je les ai contactés et même réponse (automatique ?) que Florent :)
+
+    Signé blablatok ?
+
+    > Paris, le 15 juillet 2010
+    >
+    > Fidèle téléspectateur de France Télévisions, vous nous avez écrit afin de
+    > nous faire part de votre sentiment concernant le logiciel de lecteur vidéo
+    > utilisé pour nos sites Internet
+    >
+    > Nous vous remercions d'avoir pris le temps de nous écrire.
+    >
+    > Nous avons bien pris en compte l'ensemble de votre remarque. Afin de
+    > relayer votre propos, nous avons transmis votre courriel à la Direction
+    > des programmes de nos antennes.
+    >
+    > Nous restons à votre disposition et vous souhaitons d'agréables moments en
+    > compagnie des chaînes de France Télévisions.
+    >
+    > La Direction des relations avec les téléspectateurs
+- id: 70
+  author: DAVID
+  date: 2010-07-15 19:33:55+02:00
+  contents: |
+    cela fait 2 jours que nous n'avons pas El Diablo à 6h10 du matin sur France
+    Ô. Que se passe-t-il? A-t-on changé l'heure de l'émission? Quelqu'un peut-il
+    me répondre? J'habite en Polynésie Française.
+- id: 71
+  author: Mollets de bouc
+  date: 2010-07-16 12:46:40+02:00
+  contents: |
+    Bonjour,
+
+    merci ça marche très bien pour le JT de 20h mais je n'y arrive pas pour les
+    étapes du tour de France...
+
+    <http://www.pluzz.fr/tour-de-france--9eme-etape-2010-07-13.html>
+
+    Le script renvoie une erreur format ' ' non reconnu ou quelquechose de la
+    sorte... Une idée?
+- id: 72
+  author: ®om
+  date: 2010-07-16 13:25:28+02:00
+  contents: |
+    > @[**Mollets de bouc**](#comment-71)
+    >
+    > Bonjour,
+    >
+    > merci ça marche très bien pour le JT de 20h mais je n'y arrive pas pour
+    > les étapes du tour de France...
+    >
+    > <http://www.pluzz.fr/tour-de-france--9eme-etape-2010-07-13.html>
+    >
+    > Le script renvoie une erreur format ' ' non reconnu ou quelquechose de la
+    > sorte... Une idée?
+
+    Ah effectivement, le champ `urls-url-video` n'est pas renseigné pour cette
+    vidéo :
+
+        $ wget -qO- http://info.francetelevisions.fr/?id-video=000141350_CAPP_TourdeFrance9metape_050720101410_Au | grep urls-url-video
+        <meta name="urls-url-video" content="" >
+
+    Vu que le script se base sur ce champ, ça ne fonctionne pas. Il faudrait
+    voir pour récupérer l'url de la vidéo ailleurs.
+
+    En regardant vite fait, j'ai vu que le champ
+    `vignette-type-lien-externe-url` contenait un lien complet en `.asx`. En
+    exécutant manuellement ce petit script (il suffit de le copier-coller dans
+    la console), on arrive à regarder la vidéo (changer l'url sur la première
+    ligne au besoin) :
+
+    {% highlight bash %}
+    url='http://www.pluzz.fr/tour-de-france--9eme-etape-2010-07-13.html'
+    video_page_url=$(wget -qO- "$url" |
+        grep -o 'http://info.francetelevisions.fr/?id-video=[^"]\+')
+    stream_url=$(wget -qO- "$video_page_url" |
+        grep vignette-type-lien-externe-url |
+        sed 's/.*content="\(.*\)".*/\1/')
+    vlc "$stream_url"
+    {% endhighlight %}
+- id: 73
+  author: Boufonman35
+  author-url: http://www.stream-actu.com/
+  date: 2010-07-16 14:39:21+02:00
+  contents: |
+    Visiblement france télévision à réagit ... plus besoin de scripts ou de
+    bidouille pour avoir accès aux vidéos .
+
+    Lorsque vous n'avez pas silverlight, le lecteur vous propose soit de le
+    télécharger soit de ne pas l'utiliser !!
+
+    Dans le second cas, la vidéo se lance avec le lecteur de votre choix, chez
+    moi il s'agit de totem !
+
+    Bien entendu il n'est toujours pas possible de télécharger directement les
+    vidéos ... mais en même temps aucun site de rattrapage ne le permet !
+- id: 74
+  author: pascal
+  date: 2010-07-17 07:40:54+02:00
+  contents: |
+    bonjour je ne connais pas grand chose en enregistrement, je voulais
+    enregistrer cette émission sur mon pc est ce possible et si oui comment
+
+    <http://www.pluzz.fr/accordeons-nous-.html>
+
+    merci d'avance de votre aide
+- id: 75
+  author: Thom
+  date: 2010-07-17 18:14:06+02:00
+  contents: |
+    @ pascal
+
+    En passant par la commande
+
+        pluzz url http://www.pluzz.fr/accordeons-nous-.html
+
+    on obtient
+
+    mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication/Autre/Autre/2010/S28/144902_accordeonsnous_20100714.wmv
+
+    qu'il suffit de mettre dans le flux à ouvrir par VLC
+
+    Média -\> Ouvrir un flux réseau. Mettre dans le champ Adresse l'url obtenue
+    ci-dessus et cliquer sur Lire en bas à droite.
+- id: 76
+  author: Thom
+  date: 2010-07-17 18:40:28+02:00
+  contents: |
+    @ pascal
+
+    J'ai répondu un peu vite. Ma solution, c'est pour regarder. J'ai essayé VLC
+    pour enregistrer ce genre de flux. Cela ne fonctionne pas chez moi.
+
+    Personnellement, j'utilise msdl
+
+    <http://msdl.sourceforge.net/>
+
+    Sous Ubuntu, j'ai appliqué la méthode Tarball package de la page ci-dessus
+    en remplaçant la commande «install» par «checkinstall» (ce qui suppose
+    d'avoir installé le paquet checkinstall.
+
+    Avec, dans une console, msdl url\_donnée\_par\_pluzz le téléchargement se
+    fait comme un chargement de fichier réalisé avec wget.
+- id: 77
+  author: ®om
+  date: 2010-07-18 12:15:51+02:00
+  contents: |
+    > @[**Boufonman35**](#comment-73)
+    >
+    > Visiblement france télévision à réagit ... plus besoin de scripts ou de
+    > bidouille pour avoir accès aux vidéos .
+    > 
+    > Lorsque vous n'avez pas silverlight, le lecteur vous propose soit de le
+    > télécharger soit de ne pas l'utiliser !!
+    > 
+    > Dans le second cas, la vidéo se lance avec le lecteur de votre choix, chez
+    > moi il s'agit de totem !
+    > 
+    > Bien entendu il n'est toujours pas possible de télécharger directement les
+    > vidéos ... mais en même temps aucun site de rattrapage ne le permet !
+
+    *(pour en garder une trace, je recopie quasiment ce que je t'ai répondu au
+    mail où tu trouvais que la situation était résolue depuis que France
+    Télévisions a rajouté un bouton "Ne pas utiliser Silverlight", tout comme
+    depuis que M6Replay était passé en Flash)*
+
+    Je dis que nous n'avons (quasiment) rien gagné car les technologies
+    proposées sont propriétaires et nécessitent un plug-in.
+
+    Flash c'est comme Silverlight : un blob binaire intégré par-dessus une page
+    web par un logiciel à installer en plus du navigateur. Et dès qu'il faut un
+    plug-in (même s'il est libre d'ailleurs), ce n'est pas du web.
+
+    Imaginons qu'on soit dans la même situation pour les images : un site
+    proposerait de voir les images soit avec un plug-in du type Silverlight,
+    soit avec l'intégration dans la page de "Windows Image Editor" qui saurait
+    lire les images au format "Windows Media Image". Serions-nous satisfaits de
+    cette situation uniquement parce que `eyeofgnome-firefox-plugin` saurait
+    s'en sortir et pemettre l'affichage des images sous Gnome? Ou alors
+    faudrait-il défendre l'utilisation d'un format ouvert comme le JPEG?
+
+    Et sous BSD avec E17, peut-on accéder aux images et aux vidéos? Le web s'est
+    développé tel qu'on le connaît parce qu'il est ouvert et accessible à tous.
+    En particulier, les développeurs peuvent implémenter leur propre navigateur,
+    qui peut lire tous les contenus interopérables sans payer ni rien demander à
+    personne, c'est ce qui favorise l'innovation. Si une partie du web est
+    rendue propriétaire (la partie non-web en fait), de nouveaux acteurs ne
+    peuvent plus proposer quelque chose de compétitif qui peut lire tout le
+    contenu.
+
+    D'ailleurs, c'est exactement ce qu'il se passe en ce moment sur les
+    téléphones mobiles, il aura fallu plusieurs années pour que quelques modèles
+    soient capables de lire le Flash, parce qu'il faut qu'Adobe accepte de
+    développer son plug-in pour tel navigateur sur tel système d'exploitation et
+    telle architecture. Et évidemment, ils se concentrent sur les plus utilisés,
+    l'innovation est donc rendue difficile et ça favorise des monopoles privés.
+    Et pour l'utilisateur, pendant plusieurs années, il n'a pas accès aux
+    contenus, ou alors s'il a de la chance il peut y avoir accès selon le bon
+    vouloir d'accords commerciaux.
+
+    Sur le très court terme, avec telle version d'Ubuntu, tel navigateur et tel
+    plug-in, oui on peut le lire. Mais c'est loin d'être suffisant, et sur le
+    long terme c'est dommageable.
+- id: 78
+  author: fred
+  date: 2010-07-19 17:39:11+02:00
+  contents: |
+    Salut tous,
+
+    j'ai le même problème, sur un autre site :
+
+    <http://www.tdlivemusic.com/>
+
+    C'est le concert des Stray Cats le 25 juin dernier à Montréal
+
+    Ai tenté avec le script mais ça marche pas !
+
+    Quelqu'un aurait une idée ?
+- id: 79
+  author: wido
+  date: 2010-07-25 01:12:28+02:00
+  contents: |
+    Pour archlinux, installation:
+
+        yaourt -S pluzz
+        packer -S pluzz
+- id: 80
+  author: Coco
+  date: 2010-08-07 11:54:13+02:00
+  contents: |
+    Domage, je recherchais la reprogrammation de la série Urgence mais je ne
+    l'ai pas trouvée.
+- id: 81
+  author: Poulpette
+  author-url: http://www.poulpettedelamare.com
+  date: 2010-08-22 14:33:19+02:00
+  contents: |
+    Un très grand merci pour ce script. :o)
+
+    Testé rapidement sous Ubuntu 9.04 et ça semble fonctionner (j'ai visionné et
+    récupéré une édition du 12 / 13).
+
+    Dans les prochains jours je testerai sur d'autres vidéos pour voir.
+- id: 82
+  author: Hl2612
+  author-url: http://www.weblog-hl2612.tk/
+  date: 2010-08-25 21:33:12+02:00
+  contents: |
+    Merci beaucoup pour ce script.
+
+    Je viens de le tester pour ubuntu 10.04 et ça fonctionne.
+
+    Encore merci
+- id: 83
+  author: bluzorange
+  date: 2010-08-27 21:41:32+02:00
+  contents: |
+    Comment peut-on transposer la règle de filtrage Adblock pour l' appliquer
+    avec l'extension firefox Adblock Plus ?
+- id: 84
+  author: Grandtoubab
+  date: 2010-08-31 21:26:38+02:00
+  contents: |
+    Salut, Avec Ubuntu 10.04, le paquet gecko-mediaplayer comme plugin , je
+    choisis "ne pas utiliser silverlght" et ca fonctionne sans problème. Le
+    mplayer se déclenche dans Firefox, je lui ai simplement un buffer de 4096
+    pour assurer la fluidité.
+
+    Exemple: <http://pix.toile-libre.org/?img=1283282773.png>
+- id: 85
+  author: JM
+  date: 2010-09-09 09:30:25+02:00
+  contents: |
+    Bonjour,
+
+    Je suis en panne d'Internet, et je souhaitais pouvoir capturer cette video
+    sur le site France3, ce vendredi 10 Sept :
+
+    http://nord-pas-de-calais-picardie.france3.fr/...
+
+    Est-ce qu'un généreux Internaute serait prêt à le faire pour moi ? Je
+    pourrai récupérer le fichier depuis le bureau en début de semaine prochaine.
+
+    Un tout grand merci d'avance,
+
+    JM
+- id: 86
+  author: xavier
+  date: 2010-09-13 21:06:35+02:00
+  contents: |
+    Parfait!!
+
+    Merci beaucoup pour ce script.
+- id: 87
+  author: Ramotep
+  date: 2010-09-14 21:26:45+02:00
+  contents: |
+    > @[**Thom**](#comment-75)
+    >
+    > @ pascal
+    > 
+    > En passant par la commande
+    > 
+    >     pluzz url http://www.pluzz.fr/accordeons-nous-.html
+    > 
+    > on obtient
+    > 
+    > mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication/Autre/Autre/2010/S28/144902_accordeonsnous_20100714.wmv
+    > 
+    > qu'il suffit de mettre dans le flux à ouvrir par VLC
+    > 
+    > Média -\> Ouvrir un flux réseau. Mettre dans le champ Adresse l'url obtenue
+    > ci-dessus et cliquer sur Lire en bas à droite.
+
+    Pourriez-vous m'expliquer comment on recupe l'url? Où est-ce qu'on met
+    "pluzz url" ?
+
+    Merci
+- id: 88
+  author: nicoxxl
+  author-url: http://nicoxxl.over-blog.com
+  date: 2010-09-22 13:48:26+02:00
+  contents: |
+    pour lancer VLC sans l'interface graphique (pour l'enregistrement), il faut
+    utiliser cvlc.
+- id: 89
+  author: ArdemK
+  author-url: http://ardemk.com
+  date: 2010-10-16 14:04:11+02:00
+  contents: |
+    Excellent! J'ai fait toutes les manips à la main, mais avec le script c'est
+    tellement plus rapide ;)
+
+    Danke!
+- id: 90
+  author: programmes tv
+  author-url: http://www.tv-replay.fr
+  date: 2010-10-17 01:07:55+02:00
+  contents: |
+    Merci nicoxxl. Ca marche.
+- id: 91
+  author: missing plugin
+  date: 2010-10-20 15:18:41+02:00
+  contents: |
+    lorsque je lance le script pour voir le 12/13, j'ai le message suivant:
+
+    extension not managed
+- id: 92
+  author: ®om
+  date: 2010-10-20 21:10:02+02:00
+  contents: |
+    > @[**missing plugin**](#comment-91)
+    >
+    > lorsque je lance le script pour voir le 12/13, j'ai le message suivant:
+    >
+    > extension not managed
+
+    Que tapes-tu exactement comme commande (avec quelle url) ?
+
+    Je viens de tester sur un 12/13, ça a l'air de fonctionner…
+- id: 93
+  author: amarante
+  date: 2010-10-21 12:24:12+02:00
+  contents: |
+        ~~~
+        pluzz play http://www.pluzz.fr/jt-12-13-midi-pyrenees-2010-10-21-12h00.html
+        Extension not managed : ''
+        ~~~
+- id: 94
+  author: ®om
+  date: 2010-10-23 00:04:00+02:00
+  contents: |
+    Chez moi, ça fonctionne.
+
+    Et quand je fais :
+
+        pluzz url http://www.pluzz.fr/jt-12-13-midi-pyrenees-2010-10-21-12h00.html
+
+    j'obtiens :
+
+        mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication/France_3/Autre/2010/S42/J4/177296_HD_1200_toulouse_midipile_211010.wmv
+- id: 95
+  author: amarante
+  date: 2010-10-23 11:25:01+02:00
+  contents: |
+    j'ai essayé d'ouvrir un flux réseau avec vlc en utilisant le lien que tu
+    donnes, et j'ai le message d'erreur suivant :
+
+        Unable to open 'mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication/France_3/Autre/2010/S42/J4/177296_HD_1200_toulouse_midipile_211010.wmv'
+
+    idem avec totem ça s'ouvre pas ,j'ai l'impression qu'il me manque un plugin
+    ....
+
+    Si quelqu'un a une idée.
+
+    Merci.
+- id: 96
+  author: ®om
+  date: 2010-10-24 12:28:38+02:00
+  contents: |
+    À mon avis, c'est simplement que *Pluzz* te refuse l'accès (ils ont mis en
+    place un géo-filtrage). Tu tentes de t'y connecter avec une IP française ?
+- id: 97
+  author: amarante
+  date: 2010-10-24 14:26:21+02:00
+  contents: |
+    oui, j'ai une ip fr. mais mon fils qui est connecté sur la même box, mais
+    sous windows, accède aux vidéos de pluzz sans aucun problème...(il a
+    silverlight).
+
+    d'ailleurs quand je clique sur" version simplifiée"j'aboutit sur une page
+    avec un ecran blanc ou il est inscrit "missing plug-in.
+- id: 98
+  author: amarante
+  date: 2010-10-25 16:01:12+02:00
+  contents: |
+    bon j'ai finalement réussie à voir les programmes sur pluzz en désactivant
+    tous les plugins dans iceweasel sauf windows media player plugin.
+- id: 99
+  author: erwan
+  date: 2010-11-06 13:28:20+02:00
+  contents: |
+    Bonjour, voilà pourquoi linux est supérieur à d'autres OS, on y est plus
+    libre..... Par contre, je ne trouve plus de solutions de ce type pour
+    enregistrer les émissions d'Arte, qui sont souvent plus classe que celles de
+    pluzz. Y a t-il quelque chose ?
+- id: 100
+  author: 'Visionner et télécharger des vidéos sur Pluzz.fr | Tapsbiffu.net'
+  author-url: http://tapsbiffu.net/WordPress/uncategorized/visionner-et-telecharger-des-videos-sur-pluzz-fr/
+  date: 2010-11-08 12:16:13+02:00
+  pingback: true
+  contents: |
+    [...] partir d’un script de ®om sous licence WTFPL, voici quelques lignes
+    qui vont vous simplifier la [...]
+- id: 101
+  author: PyNux
+  date: 2010-11-12 14:10:44+02:00
+  contents: |
+    Bonjour,
+
+    Une autre solution possible pour visionner les vidéos : installer les
+    paquets "epiphany-gecko" & "gecko-mediaplayer", ce qui permet de voir les
+    vidéos directement dans Epiphany...
+
+    (il suffit de cliquer sur "ne pas utiliser silverlight" lors de l'ouverture
+    d'une vidéo).
+
+    Cordialement à tous.
+
+    PyNux
+- id: 102
+  author: cedmuche
+  date: 2010-11-12 16:09:04+02:00
+  contents: |
+    @erwan Tvdownloader ou urecoder
+- id: 103
+  author: jmb
+  date: 2010-11-14 11:52:36+02:00
+  contents: |
+    voila j'ai la clé 3g+ et quand je veu lire une vidéo sur pluzz ou même
+    directement sur france 3 sa me lance la pub et après quand sa veut lire la
+    vidéo sa met vidéo indisponible
+
+    que faut il que je fasse merci????
+- id: 104
+  author: Raph
+  date: 2010-12-17 18:01:22+01:00
+  contents: |
+    J'ai proposé un patch pour quvi (cclive)
+    <https://sourceforge.net/apps/trac/quvi/ticket/13> à terme ceci permettra:
+
+    {% highlight bash %}
+    apt-get install quvi
+    vlc $( quvi -nq "http://www.pluzz.fr/URL.html"|sed -n '/url/s/.*: //p' )
+    {% endhighlight %}
+- id: 105
+  author: Géo
+  date: 2010-12-17 20:07:51+01:00
+  contents: |
+    Salut ! Ca te derange si on met ce script sur github ?
+
+    Merci en tout cas !
+- id: 106
+  author: SRG
+  author-url: http://blog.tensin.org
+  date: 2011-03-14 19:10:26+01:00
+  contents: |
+    Moi aussi j'ai été terrifié de voir qu'un service récent (diffusion vidéo
+    sur France2) ait pu faire le choix d'une technologie propriétaire type
+    SilverLight (d'autant que c'est une usine à gaz).
+
+    Ma boîte a fait le même choix technique pour la diffusion de vidéos en
+    interne (c'est une grosse boîte, ils ne savent pas toujours ce qu'ils font
+    ...), je galère un peu (moi qui suit sous Linux même au boulot),
+    Mono/Firefox ne marchant (évidemment ?) pas très bien non plus (en plus je
+    suis sous Chrome ...).
+
+    Tout çà pour dire qu'en 2010/2011 c'est quand même dingue qu'on en soit
+    encore à faire des choix de ce genre (mais c'est peut être des choix faits
+    par des "hiérarchiques" qui se sont laissés berner par les sirènes des
+    commerciaux microsoft ?).
+
+    Au passage, le script marche toujours nickel à ce jour, grand merci à toi.
+- id: 107
+  author: astazou
+  date: 2011-03-18 23:24:23+01:00
+  contents: |
+    Je viens d'essayer sous w7 64 bits avec une vieille version de cygwin, et ce
+    script marche super bien à condition de le lancer par
+
+        bash .\getpluzz.sh record http://www.pluzz.fr/...
+
+- id: 108
+  author: piglop
+  date: 2011-04-13 21:20:07+01:00
+  contents: |
+    Je l'ai mis sur github : https://github.com/piglop/pluzz
+
+    Merci pour ce script et pour lui avoir attribué une licence libre !
+- id: 109
+  author: Aurélien Sallé
+  author-url: http://wikishell.net/
+  date: 2011-04-18 13:48:27+01:00
+  contents: |
+    Salut ;)
+
+    Un grand merci pour ce script clair, net et surtout efficace !
+
+    Juste une petite chose, quelle en est la licence ? GPL, CC ?
+
+    Merci ++
+
+    Aurélien
+- id: 110
+  author: ®om
+  date: 2011-04-18 13:59:05+01:00
+  contents: |
+    > @[**Aurélien Sallé**](#comment-109)
+    >
+    > Juste une petite chose, quelle en est la licence ? GPL, CC ?
+
+    C'est indiqué dans le billet : [wtfpl](http://sam.zoy.org/wtfpl/) ;-)
+- id: 111
+  author: Aurélien Sallé
+  author-url: http://wikishell.net/
+  date: 2011-04-18 14:27:39+01:00
+  contents: |
+    Pt'OOooOOoo ! Désolé je n'avais pas vu ;) Merci ;)
+- id: 112
+  author: Dugh
+  date: 2011-05-12 06:23:49+02:00
+  contents: |
+    Bonjour, je ne parviens pas à enrigistrer le script en app. Apple Script
+    Editor me rend un message d'erreur : syntax error expected expression, etc.
+    but found nknown token au niveau du premier \$.
+
+    Une idée?
+
+    Merci
+- id: 113
+  author: Sorcier
+  date: 2011-05-19 09:22:29+02:00
+  contents: |
+    Merci pour ce script, toujours fonctionnel à ce jour.
+
+    Marche nickel sur Ubuntu 11.04 64-bits avec VLC 1.1.9
+- id: 114
+  author: nemosphere
+  date: 2011-05-29 17:32:01+02:00
+  contents: |
+    Chezz moi ça a marché direct pour 'touche pas à mon poste'.
+
+    Merci beaucoup pour l'astuce !
+
+    Je n'ai pas encore regardé le script mais je compte y jeter un oeil...
+- id: 115
+  author: nemosphere
+  date: 2011-05-29 17:54:53+02:00
+  contents: |
+    rectificatif !
+
+    Perte répétée du faisceau...
+
+    Avant c'était déjà relou d'aller chercher l'adresse akamai dans le script
+    HTML, mais là c'est plus lisible du tout...
+
+    lisible mais pas plus de 5 mn...
+
+    Fais chier, moi qui croyais que les services de l'état avaient compris qu'il
+    était de l'intérêt général d'utiliser des formats libres et ouverts.
+
+    Enfin bon, ce que je décris à plutôt l'air d'une faiblesse du stream, mais
+    avant cette fermeture supplémentaire le flux arrivait au moins pendant tout
+    le temps de l'émission.
+- id: 116
+  author: nemosphere
+  date: 2011-05-29 18:07:25+02:00
+  contents: |
+    eh merde
+
+    au bout de 4 ruptures j'abandonne...
+
+    La solution marche mais avec une rupture toutes les 5 minutes.
+
+    Poubelle pluzz.fr
+- id: 117
+  author: idoric
+  author-url: http://idoric.free.fr/dotclear/
+  date: 2011-06-29 20:11:03+02:00
+  contents: |
+    Merci pour ce script qui vient de me rendre un fier service.
+- id: 118
+  author: vincentdeparis
+  date: 2011-07-10 22:04:39+02:00
+  contents: |
+    J'ai moi aussi eu beaucoup de soucis avec Pluzz, sourtout depuis que je me
+    suis mis à Linux.
+
+    J'ai finalement trouvé un service (gratuit et sans pubs) qui propose les
+    vidéos de Pluzz sans Sliverlight et accessible pour les expatriés !
+
+    C'est par ici -\> <http://www.my-phocal.fr/player/index.php>
+
+    L'interface est simple et ça fonctionne très bien avec VLC.
+- id: 119
+  author: 'Extraire les recherches Google des logs Apache - ®om&#039;s blog'
+  author-url: http://blog.rom1v.com/2011/06/extraire-les-recherches-google-des-logs-apache/
+  date: 2011-07-10 22:42:09+02:00
+  pingback: true
+  contents: |
+    [...] conteste, les deux billets qui amènent le plus d’internautes par
+    Google concernent pluzz et apk. Et parfois ça ne doit pas les aider
+    beaucoup : certains recherchent par exemple [...]
+- id: 120
+  author: SIGWALT Jean6françois
+  date: 2011-07-13 09:02:45+02:00
+  contents: |
+    Très pratique
+
+    Merci pour ce script qui me permet d'enregistrer sans problèmes les
+    émissions que j'ai aimées ou ratées
+
+    Vive le libre !
+- id: 121
+  author: P. Moreaux
+  date: 2011-07-15 10:41:47+02:00
+  contents: |
+    Encore une défaillance du service public palliée par le travail d'une
+    personne dévouée à la communauté!
+
+    Un très grand merci à Rom!!!
+
+    Note: Linux OpenSuse 11.3 64bits, à jour sur Dell Latitude D830 (Core2Duo,
+    4GoRAM).
+
+    VLC (version 1.1.9 The Lugage) installé avant usage du script.
+
+    Tout focntionne parfaitement.
+
+    Encore bravo et merci!
+- id: 122
+  author: yeah
+  date: 2011-07-15 18:44:27+02:00
+  contents: |
+    Meme si je me trouve en Allemagne (je suis allemand), ca marche nickel !
+    Merci bcp pour ton travail.
+- id: 123
+  author: thierry
+  date: 2011-08-09 19:57:32+02:00
+  contents: |
+    comment ce fait il qu'une émission comme la parade du festival interceltique
+    de Lorient, que je n'ai malheureusement pas pu suivre, n'est pas visible
+    alors quelle est affichée alors que le feuilleton "intellectuel" plus belle
+    la vie qui passe plusieurs fois dans la journée soit lui visible pour ma
+    part je trouve cela inadmissible.
+- id: 124
+  author: Laurent
+  date: 2011-08-31 12:01:32+02:00
+  contents: |
+    Merci pour ce script bien pratique.
+
+    Je ne sais pas si il y eu des changements sur www.pluzz.fr mais on a juste
+    le choix d'installer moonlight 3.9xxx alors que la version microsoft est
+    4.06 quelque chose (en supposant qu'il y a une correlation entre les numéros
+    de version). Quoi qu'il en soit le résultat est un freeze de firefox.
+
+    Quel est l'interet de technos proprietaires pour du web et des sites du
+    service public ?
+- id: 125
+  author: merl1n
+  date: 2011-09-06 21:31:46+02:00
+  contents: |
+    Salut,
+
+    Merci pour ce super script. Savais-tu que, pour une raison qui ne m'apparaît
+    pas clairement, il permet de contourner la géolocalisation ? Sans doute
+    quelqu'un te l'a déjà dit, mais j'avais la flemme de lire tous les
+    commentaires...
+
+    Encore merci en tout cas !
+- id: 126
+  author: ®om
+  date: 2011-09-06 22:13:27+02:00
+  contents: |
+    @[merl1n](#comment-125)
+    Ah non, je ne savais pas pour la géolocalisation (ou plutôt géorestriction).
+    Tant mieux, c'est vraiment stupide comme concept.
+- id: 127
+  author: imanol
+  date: 2011-09-17 05:07:31+02:00
+  contents: |
+    marche tres bien pour le JT. tres bon script. en revanche
+
+        $ pluzz url http://www.pluzz.fr/rugby--nouvelle-zelande---japon-2011-09-16-10h00.html
+        Extension not managed : ''
+
+    j'ai vu un contournement dans un commentaire au dessus mais ca ne fonctionne
+    pas.
+- id: 128
+  author: demos
+  date: 2011-09-22 22:54:28+02:00
+  contents: |
+    Merci pour ce script bien pratique.
+
+    je crois que c'est possible de faire ca avec l'interface graphique de vlc,
+    mais j'en ai gardé le souvenir d'une grosse galere.
+
+    Avec ton aide c'est nettement plus simple.
+- id: 129
+  author: jilucorg
+  date: 2011-10-09 19:37:48+02:00
+  contents: |
+    Impeccable, ça a fonctionné du premier coup, nickel (ubuntu 10.04). Merci !!
+- id: 130
+  author: Erlen
+  date: 2011-10-25 21:41:21+02:00
+  contents: |
+    Quand j'essaie de visualiser castle j'ai ça :
+
+        VLC media player 1.1.11 The Luggage (revision exported)
+        Blocked: call to unsetenv("DBUS_ACTIVATION_ADDRESS")
+        Blocked: call to unsetenv("DBUS_ACTIVATION_BUS_TYPE")
+        [0x973c67c] main libvlc: Lancement de vlc avec l'interface par défaut.
+        Utilisez « cvlc » pour démarrer VLC sans interface.
+        Blocked: call to setlocale(6, "")
+        Warning: call to srand(1319602019)
+        Warning: call to rand()
+        Blocked: call to setlocale(6, "")
+
+        (process:2000): Gtk-WARNING **: Locale not supported by C library.
+            Using the fallback 'C' locale.
+        Warning: call to rand()
+        Warning: call to rand()
+        Warning: call to rand()
+        Warning: call to rand()
+        [0x9a73c9c] main access error: connection failed: Connection refused
+        [0x9a73c9c] main access error: connection failed: Connection refused
+        [0x9a73c9c] access_mms access error: failed to open a connection (tcp)
+        [0x9a73c9c] main access error: connection failed: Connection refused
+        [0x9a73c9c] main access error: connection failed: Connection refused
+        [0x9a73c9c] access_mms access error: failed to open a connection (tcp)
+        [0x9a73c9c] access_mms access error: cannot connect to server
+        [0x9a73c9c] access_mms access error: cannot read data 2
+        warning: first frame is no keyframe
+        warning: first frame is no keyframe
+        Bits overconsumption: 12543 > 12504
+        Bits overconsumption: 4638 > 4624 at 11x5
+        Bits overconsumption: 3638 > 3616 at 12x2
+        [0x97e2eac] signals interface error: signal 17 overridden (0x941c130)
+        [0x97e2eac] signals interface error:  /usr/lib/libQtCore.so.4(?)[(nil)]
+        Packet loss detected! seq e vs 8
+        Packet loss detected! seq 8 vs e
+        Packet loss detected! seq e vs a
+        Packet loss detected! seq a vs 2
+        broken frame: channel len > samples_per_frame
+        Packet loss detected! seq a vs 9
+        broken frame: channel len > samples_per_frame
+        ...
+
+    Et donc pas d'image mais des carrés rouges, verts, jaunes... En tout ca
+    aucune image.
+- id: 131
+  author: ®om
+  date: 2011-10-25 21:47:41+02:00
+  contents: |
+    @[Erlen](#comment-130) :
+
+    *Castle* est _endommagé_ par des
+    [DRM](http://fr.wikipedia.org/wiki/Gestion_des_droits_num%C3%A9riques). Il
+    n'est donc malheureusement pas possible de le lire par ce script.
+- id: 132
+  author: Erlen
+  date: 2011-10-25 22:03:14+02:00
+  contents: |
+    Quelle méthode dois-je utiliser pour pouvoir le lire ?
+- id: 133
+  author: ®om
+  date: 2011-10-26 10:45:12+02:00
+  contents: |
+    À part contacter *France Televisions* pour te plaindre, je n'ai pas de
+    solution.
+- id: 134
+  author: 'Un génialissime script pour Pluzz.fr : Devil505&#039;s Blog / Blog de Devil505'
+  author-url: http://frugalware.org/~devil505/blog/?p=2639
+  date: 2011-10-30 17:15:26+02:00
+  pingback: true
+  contents: |
+    [...] Un génialissime script pour Pluzz.fr Devil505 On octobre - 30 - 2011
+    // Visionner ou même sauvegarder les vidéos de Pluzz, la plateforme de
+    vidéos replay de France Télévisions, n’est pas toujours évident sous linux
+    sauf avec le génialissime script de rom. [...]
+- id: 135
+  author: Agmenor
+  date: 2011-11-01 00:33:45+02:00
+  contents: |
+    Je ne vois malheureusement pas le bouton « Flattr », mais au moins je
+    connais un autre bouton que je peux toujours utiliser : [Merci beaucoup !].
+- id: 136
+  author: Drosotomate
+  date: 2011-11-27 02:34:02+01:00
+  contents: |
+    Super, ça marche très bien, merci beaucoup chef-justicier !!!
+- id: 137
+  author: hans
+  date: 2011-12-01 04:16:59+01:00
+  contents: |
+    fonctionne tres bien, merci! dommage que francetv ne veuille pas utiliser
+    autre chose que cette infamie de silverlight...
+- id: 138
+  author: ememesse
+  date: 2011-12-05 22:19:57+01:00
+  contents: |
+    Bon,çà marche plus.
+
+    Après de nombreux succès ces derniers mois,le script bloque sur
+    "manipulations"(fr5,le 2011-12-04).
+
+    Tout semble etre segmenté d'après firebug (mais je ne suis pas un expert).
+- id: 139
+  author: ®om
+  date: 2011-12-06 14:27:23+01:00
+  contents: |
+    > @[**ememesse**](#comment-138)
+    >
+    > Bon,çà marche plus.
+    >
+    > Après de nombreux succès ces derniers mois,le script bloque sur «
+    > manipulations »(fr5,le 2011-12-04).
+
+    Sur [la page en
+    question](http://www.pluzz.fr/manipulations-une-histoire---.html), le lien
+    pointant vers la vidéo est :
+
+    <http://info.francetelevisions.fr/?id-video=55471385>
+
+    Si l'on charge cette page, on s'aperçoit que la vidéo n'est pas disponible.
+- id: 140
+  author: Pacome
+  date: 2011-12-07 13:33:19+01:00
+  contents: |
+    Bonjour,
+
+    Et merci beaucoup pour ce script bien pratique.
+
+    Tout comme ememesse je ne parviens pas à visionner/télécharger le dernier
+    épisode de Manipulations du 2011-12-04 à l'aide du script, alors que ça
+    fonctionnait parfaitement pour les précédents.
+
+    Le plugin flash accède cependant à la video, et downloadHelper (un plugin de
+    Firefox) propose d'enregistrer le fichier
+    *Manipulations\_une\_histoire\_fran\_aise\_sur\_Pluzz\_fr.f4f* de l'adresse
+    suivante:
+
+    `http://ftvodhdsecz-f.akamaihd.net//z/streaming-adaptatif_france-dom-tom/2011/S48/J7/55471385-20111204-,398,632,934,k.mp4.csmil/2_02df341584a538e2_Seg1-Frag11?als=29.24,30,7.01,0,488,2191,0,198,0,7,f,22.2,3235.86,f,s,THMQYRMCIBUI,2.4.5`
+
+    Je crois avoir trouvé les [specs du
+    f4f](http://download.macromedia.com/f4v/video_file_format_spec_v10_1.pdf)
+    (page 63), mais je ne sais pas trop quoi faire de tout ça...
+
+    Une idée?
+- id: 141
+  author: ememesse
+  date: 2011-12-08 18:27:37+01:00
+  contents: |
+    Je ne comprend pas.
+
+    Le lien pointe bien vers une vidéo non disponible,mais il est quand-même
+    possible de voir "Manipulations" sur pluzz .
+
+    En fait il y a maintenant 2 types de replay:
+
+    les émissions courantes , invisibles dans firefox,mais visibles dans ton
+    excellent script.
+
+    les émissions (docs,...) visibles dans fox, mais inaccessibles au script.
+
+    Et là, download terminé. On a
+
+        Extension not managed : ' '
+
+    DowloadHelper,propose de charger une valise de petits fichiers de plusieurs
+    centaines de Kio.
+
+    Au format inconnu.
+
+    Lutte contre le download?Dommage, ce script est tellement utile.
+- id: 142
+  author: xavier
+  date: 2011-12-11 11:37:05+01:00
+  contents: |
+    Oui france télévision a changé qqch.
+
+    A l'étranger, je peux lire
+    <http://www.pluzz.fr/la-grande-battle-2011-12-06-20h35.html> avec un socks
+    prowy ce qui ne marchait jamais avant.
+
+    Maintenant, certaines video marchent encore avec pluzz (mais le socks proxy
+    ne permet pas de les lire à l'étrange) et d'autre video marchent avec le
+    socks proxy (comme la grane battle par ex) mais plus avec pluzz.
+
+    Conclusion : il va falloir regarder le code html et updater si possible le
+    script.
+- id: 143
+  author: Stephane
+  date: 2011-12-11 19:28:18+01:00
+  contents: |
+    Bonjour,
+
+    @ememesse
+
+    comme vous j'avais réussi à récupérer grâce au script pluzz les 3 premiers
+    épisodes de Manipulations... mais depuis il ont modifié quelque chose
+    effectivement.
+
+    Cette semaine par contre j'ai réussi à récupérer le dernier épisode en ligne
+    à partir du site de france 5 (valable jusqu'au 11/12 à 22h):
+
+    <http://documentaires.france5.fr/documentaires/manipulations-une-histoire-francaise/karachi-et-le-tresor-de-guerre>
+
+    depuis cette page le plugin Totem se charge avec la vidéo depuis l'adresse
+    (clic-droit sur la vidéo copier) :
+    [352395\_docu\_011011\_5\_309267.wmv](rtsp://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S49/J2/352395_docu_011011_5_309267.wmv)
+
+    par contre rien à faire avec cette adresse et mplayer... après quelques
+    heures de recherche je suis tombé sur un forum ou ils parlaient de modifié
+    le rtsp en mms et là miracle :
+
+        mplayer -noframedrop -dumpfile /home/mon_répertoire_perso/Manipulations4-6.wmv -dumpstream mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S49/J2/352395_docu_011011_5_309267.wmv
+
+    ça marche ! (ne pas s'inquiéter du message "Stream not seekable!", votre
+    fichier en local grossi )
+
+    bonne continuation à tous
+- id: 144
+  author: ememesse
+  date: 2011-12-12 00:00:19+01:00
+  contents: |
+    Merci,
+
+    @Stephane
+
+    Enregistrement terminé in extremis à 23h27.
+- id: 145
+  author: Pacome
+  date: 2011-12-12 18:48:45+01:00
+  contents: |
+    Un énorme MERCI à Stephane pour le lien mms et l'idée de passer par le site
+    documentaire.france5!
+
+    J'ai cru être arrivé trop tard, mais j'ai quand même essayé, et le
+    fichier/flux est toujours disponible! :-D
+
+    D'ailleurs si tu as raté le 4ème épisode, essaye le lien mms suivant:
+    `mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S48/J1/348917_docu_011011_4_309156.wmv`
+    (trouvé dans les commentaires de l'épisode)
+
+    Par contre l'astuce consistant à utiliser le plugin mplayer pour obtenir une
+    adresse exploitable ne fonctionne pas sur les pages de pluzz qui réclament
+    un flash player \> 10.2...
+
+    À+
+- id: 146
+  author: mwnn
+  date: 2011-12-15 17:45:06+01:00
+  contents: |
+    Hello,
+
+    j'ai l'impression que Pluzz utilise pour certaines emissions du streaming
+    adaptatif avec du f4m de Adobe.
+
+    J'ai tenté de voir comment récupérer une url ... impossible.
+
+    Si quelqu'un a une idée, je suis preneur
+
+    MWNN
+- id: 147
+  author: score
+  date: 2011-12-17 18:06:50+01:00
+  contents: |
+    Pour ceux qui veulent voir ou enregistrer la série en 6 épisodes
+    "Manipulations Une histoire française" (documentaire sur l'affaire
+    Clearstream) diffusée sur France 5 entre novembre et décembre 2011, voici
+    les liens (toujours actifs il me semble) :
+
+    [Episode 1: Au commencement le 3ème
+    homme](mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S45/J5/342471_docu_011011_1_309015.wmv)
+
+    [Episode 2: Clearstream la banque des
+    banques](mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S46/J1/341782_docu_011011_2_308895.wmv)
+
+    [Episode 3: JL Lagardère le scénario
+    noir](mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S46/J5/346236_docu_011011_3_309375.wmv)
+
+    [Episode 4: Taiwan naissance de la zone
+    grise](mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S48/J1/348917_docu_011011_4_309156.wmv)
+
+    [Episode 5: Karachi et le trésor de
+    guerre](mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S49/J2/352395_docu_011011_5_309267.wmv)
+
+    [Episode 6: La république des
+    malettes](mms://videozones.francetv.fr/france-dom-tom/France_5/Autre/2011/S49/J6/352396_docu_011011_6_309269.wmv)
+
+    Pour enregistrer, j'utilise mplayer:
+
+        mplayer -dumpstream -dumpfile monfichier.wmv mms://mon.lien.wmv
+- id: 148
+  author: olivier76
+  date: 2011-12-18 10:20:56+01:00
+  contents: |
+    Bonjour,
+
+    Idem pour moi pour "Histoire immédiate" du 14 décembre.
+
+    <http://www.pluzz.fr/histoire-immediate-2011-12-14-20h35.html>
+
+    A la commande `record``, ``play` et `url` résultat :
+
+        Extension not managed : ''
+
+    C'est la première fois que cela arrive.
+
+    cordialement
+
+    olivier
+- id: 149
+  author: anonyme
+  date: 2011-12-21 18:30:00+01:00
+  contents: |
+    Pareil, du super flash et avec du f4f comme extention... (vu avec
+    DownloadHelper aussi)
+
+    <http://www.pluzz.fr/marine-le-pen-l-histoire-d-une-her-2011-12-15-23h10.html>
+
+    Ca donne ca:
+
+    <http://ftvodhdsecz-f.akamaihd.net//z/streaming-adaptatif_france-dom-tom/2011/S50/J4/56603740-20111215-,398,632,934,k.mp4.csmil/0_02df341584a538e2_Seg1-Frag1?als=0,1,0,0,0,NaN,0,0,0,29,f,0,4278.39,f,s,DBOXDUBJEGOB,2.4.5>
+
+    :(
+- id: 150
+  author: nemosphere
+  date: 2012-01-07 21:07:06+01:00
+  contents: |
+    Ça fait un mois ou deux que je n'accède plus aucune émission. Je suis enfin
+    venu chercher des news, j'ai essayé d'appliquer l'astuce mms://, mais
+    j'avais déjà mms comme protocole... J'ai tenté là où ça n'était pas le cas :
+
+    {% highlight bash %}
+    if [ "$ext" = 'wmv' ]
+    then
+        stream_url_part1='mms://a988.v101995.c10199.e.vm.akamaistream.net/7/988/10199/3f97c7e6/ftvigrp.download.akamai.com/10199/cappuccino/production/publication'
+    elif [ "$ext" = 'mp4' ]
+    then
+        #stream_url_part1='rtmp://videozones-rtmp.francetv.fr/ondemand/mp4:cappuccino/publication'
+        stream_url_part1='mms://videozones-rtmp.francetv.fr/ondemand/mp4:cappuccino/publication'
+    else
+        printf "Extension not managed : '$ext'\n" >&2
+        exit 3
+    fi
+    {% endhighlight %}
+
+    Aucune différence.
+
+    Le résultat est `Extension not managed : ''`, que je traduis par:
+    L'algorithme ne fait plus le travail correctement car quelque chose en
+    entrée a changé. Désormais la variable contenant l'extension du fichier
+    document-vidéo se trouve être NULL, ce qui a pour conséquence de *louper la
+    boucle* de sélection du protocole en fonction du type MIME du document-vidéo
+    *( en vérité on analyse l'extension et pas le type MIME si j'ai bien compris
+    ce qui se passe)*
+- id: 151
+  author: nemosphere
+  date: 2012-01-07 21:10:07+01:00
+  contents: |
+    C'est ici que ça se passe mais je ne sais pas encore quoi faire :
+
+    {% highlight bash %}
+    video_page_url=$(wget -qO- "$url" | grep -o 'http://info.francetelevisions.fr/?id-video=[^"]\+')
+    stream_url_part2=$(wget -qO- "$video_page_url" | grep urls-url-video | sed 's/.*content="\(.*\)".*/\1/')
+    ext=${stream_url_part2##*.}
+    {% endhighlight %}
+- id: 152
+  author: nemosphere
+  date: 2012-01-07 21:43:57+01:00
+  contents: |
+    Je suis tenté par une modif du masque de grep
+
+        grep urls-url-video
+
+    Mais je ne sais pas ce qu'il convient d'y mettre, pour le moment. Personne
+    ne suit ce fil de discussion ?
+- id: 153
+  author: nemosphere
+  date: 2012-01-07 23:11:37+01:00
+  contents: |
+    Je viens de trouver plus haut cette adresse :
+
+    <http://www.my-phocal.fr/player/index.php>
+
+    Ça fonctionne mais il n'y a que les éditions régionales de France3...
+
+    D'ailleurs il y a cette remarque :
+
+    > Suite à une mise à jour de Pluzz au mois de Décembre, une grande quantité
+    > de liens habituellement utilisés par notre lecteur ne sont plus publiés
+    > par France Télévision. Nous ne pouvons toujours pas proposer de solution
+    > pour le moment, et il semblerait que la marge de manoeuvre soit trop
+    > étroite pour nous permettre d'aboutir à quelque chose de viable. Les liens
+    > subsistants sont toujours disponibles plus bas (pour longtemps encore,
+    > croisons les doigts).
+- id: 154
+  author: kukrapok
+  date: 2012-01-09 16:32:46+01:00
+  contents: |
+    Moi j'essaye avec pluzz de récupérer les videos PBLV, et cela ne fonctionne
+    plus depuis le 29 décembre (me semble-t-il).
+
+    Si je trace ce que fait pluzz.sh, ça récupère la page (exemple avec la vidéo
+    d'hier):
+
+    plus-belle-la-vie-2012-01-06-20h10.html
+
+    dans laquelle il trouve:
+
+    <http://info.francetelevisions.fr/?id-video=57477977>
+
+    qu'il récupère mais ça n'ira pas plus loin (urls-url-video non présent dans
+    cette dernière page). Or si on tape cette URL dans un navigateur, on finit
+    aussi avec "Video non disponible".
+
+    Du coup je me demande si l'accès direct à ces pages n'est pas filtré, alors
+    que via leur outils ça passerait.
+
+    Une idée?
+- id: 155
+  author: kukrapok
+  date: 2012-01-09 16:46:06+01:00
+  contents: |
+    Je me demande si pluzz ne procède pas à un filtrage technique en fonction de
+    ce qui accède au lien de la vidéo.
+
+    J'ai fait ce que fait le script pluzz.sh fait, c-à-d j'ai récupéré la page
+    .html d'une vidéo (tenté avec PBLV) à partir de sa date, je trouve le lien
+    "id-video", je récupère cette page, et que ce soit via un navigateur ou le
+    script, on tombe sur un "Video non disponible" (et pas de "urls-url-video"
+    dedans), alors que la vidéo fonctionne bien via pluzz..
+
+    Mystère!
+- id: 156
+  author: olivier76
+  date: 2012-01-09 18:27:29+01:00
+  contents: |
+    Bonjour
+
+    Une solution existe ici
+
+    <http://forum.ubuntu-fr.org/viewtopic.php?pid=7728361#p7728361>
+
+    cordialement
+
+    olivier
+- id: 157
+  author: ®om
+  date: 2012-01-09 19:25:31+01:00
+  contents: |
+    @[olivier76](#comment-156)
+    Merci, j'ai rajouté un paragraphe dans le billet.
+- id: 158
+  author: kukrapok
+  date: 2012-01-10 11:20:12+01:00
+  contents: |
+    olivier76: merci, ça marche nickel ici avec pluzzdl!
+- id: 159
+  author: kukrapok
+  date: 2012-01-13 17:15:18+01:00
+  contents: |
+    Depuis 2 jours même avec pluzzdl ça ne fonctionne plus (PBLV du moins), ça
+    récupère bien un .avi mais de 290 octets (en-têtes AVI normaux, mais la
+    vidéo est vide).
+
+    Des soucis identiques de votre côté?
+- id: 160
+  author: olivier76
+  date: 2012-01-14 11:20:14+01:00
+  contents: |
+    Bonjour
+
+    Il faut suivre le fil sur Ubuntu.fr, car c'est en développement, dans le
+    projet TVDowloader.
+
+    Il y a une version 0.3 de sortie du script.
+
+    cordialement
+
+    olivier
+- id: 161
+  author: olivier76
+  date: 2012-01-16 06:49:11+01:00
+  contents: |
+    Maintenant une version 0.4
+
+    cordialement
+- id: 162
+  author: olivier76
+  date: 2012-01-29 10:00:12+01:00
+  contents: |
+    Bonjour
+
+    Pour les utilisateur Win il y a ça :
+
+    <http://tv.replay.free.fr/viewtopic.php?f=15&t=547>
+
+    cordialement
+- id: 163
+  author: MeLys
+  date: 2012-02-16 15:24:01+01:00
+  contents: |
+    Bonjour,
+
+    Avez-vous une solution pour les utilisateurs Mac ?
+
+    Merci
+- id: 164
+  author: nemosphere
+  date: 2012-03-19 06:08:39+01:00
+  contents: |
+    Je peux lire pluzz.fr avec firefox si je désactive flashgot, je ne peux pas
+    le faire si j'utilise l'URL qui marche dans Firefox et que je veux utiliser
+    VLC comme client.
+
+    En gros le client qui demande la vidéo est 'étudié', et certains critères
+    sont bloquant, surtout la fonction 'enregistrement'.
+
+    Je ne sais pas encore s'il est possible/facile de 'cacher' des modules
+    Firefox installés, ou simuler l'identifiant d'un client autorisé.
+
+    Je suis sous Linux.
+- id: 165
+  author: patrick
+  date: 2012-10-18 22:10:24+02:00
+  contents: |
+    tu peux creer un lien vers ton fichier en RAW bash \*.sh ?
+
+    merci
+
+    tu connais youtube-dl.sh & plowdshare ?
+
+    pourrais tu creer un bash script qui permet d enregistrer :
+    <http://www.france2.fr/jt/20h/> ?
+
+    Encore mieux, pourrais tu merger ton programme et faire un module pour
+    PLOWDSHARE?
+
+    merci
+- id: 166
+  author: Dylan
+  date: 2012-11-07 23:09:56+01:00
+  contents: |
+    Bonsoir,
+
+    Je suis nul en copie et tout internet... J'ai rien compris à la
+    technique... j'aimerais enregistrer le reportage:
+    <http://www.pluzz.fr/alerte-rouge--les-soldats-du-feu-2012-11-05-20h45.html>
+
+    merci d'avance

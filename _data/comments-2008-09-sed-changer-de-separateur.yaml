@@ -1,0 +1,54 @@
+- id: 1
+  author: Guizmo.7
+  date: 2008-10-03 06:36:00+01:00
+  contents: |
+    Je savais que l'on utilisait \< pour envoyer sur l'entrée standard mais
+    pourquoi tu mets \<\<\< ? Il y a une différence ?
+- id: 2
+  author: ®om
+  date: 2008-10-03 09:08:00+01:00
+  contents: |
+    `<` c'est pour mettre le contenu d'un fichier sur stdin
+
+    `<<<` (bash only) c'est pour mettre directement le contenu
+
+    {% highlight bash %}
+    cat < /etc/hostscat <<< bonjour
+    {% endhighlight %}
+- id: 3
+  author: Guizmo.7
+  date: 2008-10-08 16:55:00+01:00
+  contents: |
+    Génial !
+
+    Et \<\< ça existe ?
+
+- id: 4
+  author: ®om
+  date: 2008-10-08 17:06:00+01:00
+  contents: |
+    oui: ça lit l'entrée standard jusqu'à tomber sur la ligne correspondante
+
+        $ cat << 'au revoir'
+        > bonjour
+        > comment ça va?
+        > au revoir
+        bonjour
+        comment ça va?
+- id: 5
+  author: guizmo.7
+  date: 2008-10-27 20:42:00+01:00
+  contents: |
+    Merci :)
+
+    (Public : On veut d'autres articles !!)
+- id: 6
+  author: Fugitif
+  date: 2009-06-20 14:10:26+02:00
+  contents: |
+    On peu aussi faire `sed -i 's/ancien/récent/' fichier_a_modifier.log` qui
+    remplacera ancien par récent directement en insertion (option -i).
+
+    Par contre je ne connaissait pas `sed 's|/home/rom/sh|/usr/bin|'`
+
+    Je m'amusait à mettre des backslash à chaque fois

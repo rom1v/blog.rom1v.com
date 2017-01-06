@@ -1,0 +1,610 @@
+- id: 1
+  author: buw
+  author-url: http://www.bux.fr
+  date: 2011-06-14 14:48:53+02:00
+  contents: |
+    J'ai justement lu ton billet avec TinyTinyRSS ;)
+
+    Merci pour le tuto ca pourra me re servir ^^
+- id: 2
+  author: David
+  author-url: http://rss.zici.fr
+  date: 2011-06-14 15:09:11+02:00
+  contents: |
+    Merci pour le tuto,
+
+    Je l'ai installé et le met a dispo de qui veut l'utiliser / tester :
+    <http://rss.zici.fr>
+
+    Note : je vais mettre du https bientôt...
+- id: 3
+  author: Blount
+  author-url: http://programmation-web.net/
+  date: 2011-06-14 15:10:44+02:00
+  contents: |
+    J'utilise TTRss depuis un moment déjà. J'ai commencé sous Liferea, puis
+    Google Reader pour profiter du « tout en ligne ». Ce qui permet d'une part
+    d'y accéder de n'importe et d'autre part (plus important pour moi) d'une
+    mise à jour 24h/24 et ce même en étant absent durant plusieurs jours. En
+    effet, les anciens articles disparaissent dans le temps, et certain dans la
+    journée même.
+
+    J'ai donc terminé par utiliser TTRss pour, comme tu le signales, être
+    indépendant des services en ligne. Au moins, si ça bug chez moi, je suis sur
+    de savoir d'où ça vient (de moi ^^).
+
+    Par contre, je suis resté à la version 1.4.2, la migration vers 1.5.x a été
+    un grand échec chez moi du au changement d'encodage (ISO vers UTF-8). Il
+    faut que je retente le coup, ça m'a donné envie ;)
+- id: 4
+  author: ®om
+  date: 2011-06-14 15:15:22+02:00
+  contents: |
+    > @[**Blount**](#comment-3)
+    >
+    > Par contre, je suis resté à la version 1.4.2, la migration vers 1.5.x a
+    > été un grand échec chez moi du au changement d'encodage (ISO vers UTF-8).
+
+    Effectivement, la migration 1.4.2 vers 1.5 il y a quelque temps était un peu
+    foireuse. L'encodage des articles et des flux a été cassé, il a fallu que je
+    renomme tous les titres qui contenaient un accent manuellement (pas tant que
+    ça au final).
+
+    Mais plus simplement, essaie d'exporter ta liste de flux en OPML, de faire
+    une installation propre en 1.5, et d'importer ton OPML.
+- id: 5
+  author: Elessar
+  author-url: http://tanguy.ortolo.eu/blog/
+  date: 2011-06-14 15:30:49+02:00
+  contents: |
+    Dommage qu'il nécessite une base de données… Sans vraie raison d'ailleurs,
+    vu la simplicité des informations qu'il doit stocker.
+- id: 6
+  author: Aurélien
+  author-url: http://coillet.eu
+  date: 2011-06-14 15:32:53+02:00
+  contents: |
+    Merci pour le tuto, je garde ça en marque-page ;)
+
+    Personnellement, j'utilise [rsslounge](http://rsslounge.aditu.de) pour son
+    interface à la google reader. J'avais essayé ttrss avant mais avais manqué
+    l'étape de mise a jour des fluxs, pas tres bien expliquée dans la doc. Alors
+    que je n'ai eu aucun problème avec la doc de rsslounge.
+
+    Est ce que tu as essayé pour comparer ? As-tu un avis sur rsslounge ?
+- id: 7
+  author: Greg de H
+  author-url: http://theclimber.fritalk.com
+  date: 2011-06-14 15:33:59+02:00
+  contents: |
+    Et pourquoi pas le bilboplanet plutôt que ttrss?
+- id: 8
+  author: Greg de H
+  author-url: http://theclimber.fritalk.com
+  date: 2011-06-14 15:35:40+02:00
+  contents: |
+    Pour compléter ma question : qu'est-ce qui manque ou qui ne convient pas
+    dans le Bilboplanet pour ce genre d'utilisation? En tant que développeur ça
+    m'intéresse quand même pas mal. Car à peu de choses près, l'application fait
+    quand même la même chose.
+
+    Merci pour ton feedback constructif ;)
+- id: 9
+  author: ®om
+  date: 2011-06-14 15:47:46+02:00
+  contents: |
+    > @[**Elessar**](#comment-5)
+    >
+    > Dommage qu'il nécessite une base de données… Sans vraie raison d'ailleurs,
+    > vu la simplicité des informations qu'il doit stocker.
+
+    Les requêtes pour récupérer les derniers articles d'une catégorie (donc en
+    ignorant les flux) ne sont-elles pas plus performantes en base de données
+    qu'avec une structure plus simple ? (laquelle ?)
+- id: 10
+  author: ®om
+  date: 2011-06-14 15:53:48+02:00
+  contents: |
+    > @[**Greg de H**](#comment-8)
+    >
+    > Pour compléter ma question : qu'est-ce qui manque ou qui ne convient pas
+    > dans le Bilboplanet pour ce genre d'utilisation?
+
+    J'ai l'impression que ce n'est pas la même utilisation. De ce que j'en
+    connais, *BilboPlanet* c'est pour les *Planet*, comme
+    [planet-libre](http://www.planet-libre.org/).
+
+    Certes, on peut dire que ça fait à peu près la même chose car ça agrège des
+    flux.
+
+    Mais un outil comme *Tiny Tiny RSS* est orienté flux personnels, alors qu'un
+    *Planet* sert plutôt à regrouper les articles d'un même sujet pour en faire
+    une nouvelle source publique (auxquels les utilisateurs s'abonneront en
+    RSS)…
+- id: 11
+  author: ®om
+  date: 2011-06-14 15:57:35+02:00
+  contents: |
+    > @[**Aurélien**](#comment-6)
+    >
+    > Est ce que tu as essayé pour comparer ? As-tu un avis sur rsslounge ?
+
+    Non, désolé, je ne connais pas. Je viens juste de tomber sur [une
+    démo](http://rsslounge.aditu.de/demo/) (si certains veulent tester).
+
+    > @[**Aurélien**](#comment-6)
+    >
+    > J'avais essayé ttrss avant mais avais manqué l'étape de mise a jour des
+    > fluxs, pas tres bien expliquée dans la doc. Alors que je n'ai eu aucun
+    > problème avec la doc de rsslounge.
+
+    Si tu arrives à configurer correctement *Tiny Tiny RSS*, je suis intéressé
+    par ton avis et ta comparaison des deux outils ;-)
+- id: 12
+  author: Benjamin
+  author-url: http://generation-linux.fr
+  date: 2011-06-14 16:29:40+02:00
+  contents: |
+    Très bon article !
+
+    Pour ma part, j'utilise TTRSS depuis quelques mois. J'ai un gros problème de
+    base de données qui devient énooooorme !
+
+    J'ai l'impression que l'option de purge de TTRSS ne fonctionne pas, j'ai
+    beau mettre une purge tous les 3 jours, j'ai toujours tous mes articles dans
+    la BDD (qui grossit donc sans arrêt).
+
+    As-tu constaté ce genre de problème ?
+- id: 13
+  author: Blount
+  author-url: http://programmation-web.net/
+  date: 2011-06-14 16:40:20+02:00
+  contents: |
+    @om : je viens à l'instant de retenter le passage de 1.4.2 à 1.5.3, et comme
+    la dernière fois, problème d'encodage.
+
+    Je suis arrivé tout de même à mes fins.
+
+    Tout d'abord, problème lors de mise à jour de la BDD numéro 83 sur la
+    suppression d'une clé étrangère. J'ai du la supprimer et finir l'upgrade 83
+    manuellement avant de relancer la mise à jour de la BDD.
+
+    Ensuite, pour le problème d'encodage, il faut laisser `MYSQL_CHARSET` à vide
+    dans le fichier de configuration.
+
+    Maintenant, mon problème vient du daemon qui ne met pas à jour les flux :/
+- id: 14
+  author: ®om
+  date: 2011-06-14 16:40:21+02:00
+  contents: |
+    > @[**Benjamin**](#comment-12)
+    >
+    > Pour ma part, j'utilise TTRSS depuis quelques mois. J'ai un gros problème
+    > de base de données qui devient énooooorme !
+    >
+    > As-tu constaté ce genre de problème ?
+
+    Non, la base est toujours correctement vidée.
+
+    Actuellement, elle fait 404K (et ce n'est pas une erreur) :
+
+         sudo du -sh /var/lib/mysql/flux
+         404K  /var/lib/mysql/flux
+
+    Dans les options, j'ai mis :
+
+     * *Purger les articles plus vieux que le nombre de jours donné:* **4**
+     * *Ancienneté maximale pour un nouvel article (en heures):* **24**
+     * *Purger les articles non lus:* **oui**
+
+    (je ne sais plus si ce sont les valeurs par défaut, ni si elles sont
+    importantes)
+- id: 15
+  author: Elessar
+  author-url: http://tanguy.ortolo.eu/blog/
+  date: 2011-06-14 17:01:15+02:00
+  contents: |
+    @®om : Une requête directe sur le système de fichiers, dès lors qu'il n'y a
+    pas de calcul relationnel, ça va plus vite qu'un requête sur base de
+    données. Les bases de données relationnelles n'apporte quelque chose que
+    lorsqu'on exploite leurs fonctionnalités relationnelles justement. Là, c'est
+    plutôt juste pour stocker des données simples : c'est à mon avis
+    inapproprié.
+- id: 16
+  author: kurokame
+  date: 2011-06-14 18:08:12+02:00
+  contents: |
+    Hello, j'utilisais aussi ttrss, mais son évolution devenant de plus en plus
+    complexe à mon goût, je l'ai abandonné en début d'année pour rnews (sur mon
+    auto-hébergement). Ce lecteur possède également un addons pour firefox.
+
+    Ttrss reste néanmoins un excellent lecteur de flux.
+
+    Son installation ne m'a également jamais posé de problème sur une Debian
+    Lenny à partir des archives du site.
+
+    J'oubliais : très bon tuto. Je l'aureis eu avant... :o)
+- id: 17
+  author: David
+  date: 2011-06-14 20:42:19+02:00
+  contents: |
+    Salut,
+
+    Je l'utilise depuis plus d'un an, en auto-hébergement, pour les mêmes
+    raisons d'indépendance, de vies privées. Et j'en suis satisfait, et venant
+    de Netvibes qui ont une fâcheuse tendance à réinitialisé leur base. Mais
+    surtout, il ne disposait pas de mode https, à l'époque ou je les ai quitté
+    en tout cas. Même pour l'authentification...
+
+    \- Les applis mobiles:
+
+    Sous ma tablette galaxy tab, la version web, est buggué sous Firefox Mobile.
+    A savoir, que le texte des options se retrouve en "paté" sur la gauche de
+    l'écran. Par contre, RAS sous chrome.
+
+    Idem pour les téléphones?
+
+    Quant à l'application ttrss-reader-fork, il est vrai que l'on peut
+    rencontrer certains bug, je me suis retrouvé pendant une petite semaine, où
+    les flux semblaient se mettre à jour mais aucun affichage de ceux-ci. Et
+    c'est revenu, sans explication, ou intervention de ma part. Juste une mise à
+    jour de la part du dev, il me semble.
+
+    Le véritable avantage de l'application c'est la mise en cache, à savoir,
+    qu'elle va télécharger les flux pour pouvoir les consulter off-line. Et
+    étant dans la région parisienne, lorsqu'il n'y a plus de réseau, (métro,
+    tunnel, ou réseau saturé). C'est bien pratique. A condition d'avoir
+    récupérer les avants évidement, et que les articles complets dans le RSS.
+
+    Peut-être un bé-mol, il faut avoir une bonne couverture 3G si l'on souhaite
+    avoir une bonne synchro.
+
+    \- Bon point également, les tag automatiques: afin de regroupé tout les
+    articles d'un même thème et les mettre dans la catégorie spécial nommée
+    "étiquettes". Bien pratique pour ne rien louper d'une actu.
+
+    Pour finir, c'est la mise à jour des flux, il faudrait que je remette en
+    place le mode deamon, plutôt qu'une crontab. Mais pour le moment, ça
+    fonctionne pas trop mal.
+
+    Petite question pour conclure, j'utilise la gestion de mes flux par
+    catégorie. La navigation entre celles-ci est un peu longue, 3 à 4 sec pour
+    qu'elles s'affichent.
+
+    C'est idem pour tous ou c'est un comportement normal?
+- id: 18
+  author: Adrianu
+  author-url: http://www.tottenhamhotspur.fr
+  date: 2011-06-15 10:20:11+02:00
+  contents: |
+    Merci pour ce tuto. Dans ma longue quête de quitter petit à petit les
+    services Google pour mon utilisation perso, voilà une nouvelle pierre pour
+    ma nouvelle maison :)
+- id: 19
+  author: Matt
+  author-url: http://www.i-maj.org
+  date: 2011-06-15 10:28:17+02:00
+  contents: |
+    Salut,
+
+    J'utilise également TTRss depuis quelques temps. Mon problème avec la
+    version 1.5, la gestion du Timezone. L'heure affichée dans TTRss est de +2h.
+    Ca ne me gène pas plus que cela. Sinon pour accélérer un peu le bouzin, j'ai
+    placé le cache dans un tmpfs. Même après un reboot, je n'ai pas d'effet de
+    bord. Donc je le garde.
+
+    Bonne continuation.
+
+    Matt
+- id: 20
+  author: ®om
+  date: 2011-06-15 10:33:25+02:00
+  contents: |
+    > @[**David**](#comment-17)
+    >
+    > Petite question pour conclure, j'utilise la gestion de mes flux par
+    > catégorie. La navigation entre celles-ci est un peu longue, 3 à 4 sec pour
+    > qu'elles s'affichent.
+    >
+    > C'est idem pour tous ou c'est un comportement normal?
+
+    C'est pareil chez moi en tout cas. Il faut effectivement attendre quelques
+    secondes.
+- id: 21
+  author: ®om
+  date: 2011-06-15 10:36:26+02:00
+  contents: |
+    > @[**Matt**](#comment-20)
+    >
+    > Mon problème avec la version 1.5, la gestion du Timezone. L'heure affichée
+    > dans TTRss est de +2h.
+
+    Dans `/etc/php5/apache2/php.ini`, remplace la ligne :
+
+        ;date.timezone =
+
+    par :
+
+        date.timezone = 'Europe/Paris'
+
+    Puis redémarre *Apache* (un `reload` suffit peut-être) :
+
+        sudo service apache2 restart
+- id: 22
+  author: Nicolas
+  date: 2011-06-15 14:45:28+02:00
+  contents: |
+    Correction sur un line de commande
+
+        start-stop-daemon -c www-data -Sbx /usr/bin/php /var/www/flux/update_daemon2.php
+- id: 23
+  author: ®om
+  date: 2011-06-15 14:58:36+02:00
+  contents: |
+    @[**Nicolas**](#comment-22)
+    Chez moi ça fonctionne aussi sans le `/usr/bin/php` (`update_daemon2.php`
+    est exécutable, et commence par `#!/usr/bin/php`).
+- id: 24
+  author: qwerty
+  date: 2011-06-15 15:16:25+02:00
+  contents: |
+    Moi, j'ai plutôt coder une fonction en php !
+- id: 25
+  author: ®om
+  date: 2011-06-15 15:18:29+02:00
+  contents: |
+    @qwerty
+
+    Que veux-tu dire ? Tu peux développer stp ?
+- id: 26
+  author: Lilian
+  date: 2011-06-16 09:16:25+02:00
+  contents: |
+    Après avoir utilisé plusieurs années TTRSS, j'ai du le quitter à cause de
+    lenteur qui devenait insoutenable (plusieurs milliers de flux enregistrés).
+
+    J'ai eu beau optimiser la bdd, ça n'a rien changé.
+
+    Je suis passé sous RssLounge, un vrai bonheur, belle interface ajaxifiée,
+    très rapide malgré les milliers de flux. Je recommande :
+
+    <http://rsslounge.aditu.de/>
+- id: 27
+  author: Aurélien
+  author-url: http://coillet.eu
+  date: 2011-06-16 10:17:03+02:00
+  contents: |
+    Me revoila aprés avoir testé tt-rss !
+
+    D'abord, j'ai eu quelques problèmes à l'install, notamment un open\_basedir
+    not supported que j'ai chinté dans le sanity-check.php, sans vraiment
+    résoudre le probleme, mais bon, ca fonctionne. Pour la mise a jour, j'ai été
+    obligé de passer par une crontab (méthode numéro 2 dans le wiki de tt-rss),
+    le start-stop-daemon d'archlinux ne fonctionnant vraisemblablement pas comme
+    celui sous debian... Ou alors j'ai raté un truc. Du coup, il ttrss m'affiche
+    que l' "update daemon is not running", mais les mises a jour se font
+    correctement.
+
+    A l'usage, je le trouve moins pratique que rsslounge : pour marquer un
+    article comme lu, un clic suffit sous rsslounge, 3 pour tt-rss. En mode
+    combiné, je n'arrive pas à fermer simplement un article en lecture. Après,
+    je n'ai certainement pas étudié toutes les possibilités de configuration, et
+    tt-rss fait clairement plus de choses que rsslounge (raccourcis clavier,
+    tags, publication, ...). Il y'a aussi un certain nombre de choses plus
+    techniques que je ne comprends pas, par exemple le message d'erreur à propos
+    du daemon d'update, le fait qu'on peut choisir l'intervalle entre les mises
+    a jour dans la configuration alors que c'est cron qui choisit, a quoi sert
+    l'icone "mettre a jour", ... Egalement en terme de rapidité, rsslounge est
+    meilleur. A mettre du coté des avantages de tt-rss, je pense que l'interface
+    est moins buggée, sur rsslounge, il arrive que certains menu ne répondent
+    pas sous firefox (par exemple, je ne peux pas ajouter de catégorie sous ff
+    alors que sous chromium tout va bien).
+
+    Bref, je vais rester sous rsslounge, mais l'esprit est le même !
+- id: 28
+  author: ®om
+  date: 2011-06-16 10:27:25+02:00
+  contents: |
+    Merci de tes retours.
+
+    > @[**Aurélien**](#comment-27)
+    >
+    > pour marquer un article comme lu, un clic suffit sous rsslounge, 3 pour
+    > tt-rss
+
+    Ah bon ? Chez moi, dès que je clique sur un article il est marqué comme lu…
+    Mais peut-être parce que je n'utilise pas le mode combiné (j'aime bien avoir
+    la liste des titres).
+
+    > @[**Aurélien**](#comment-27)
+    >
+    > je ne comprends pas […] le fait qu'on peut choisir l'intervalle entre les
+    > mises a jour dans la configuration alors que c'est cron qui choisit, a
+    > quoi sert l'icone « mettre a jour »
+
+    En fait, quand tu appelles le script d'update, il ne met à jour que les flux
+    datant de plus longtemps que l'intervalle défini. Si tu appelles deux fois
+    de suite le script d'update, il ne va mettre à jour qu'une fois…
+
+    L'icône "mettre à jour", si je ne me trompe pas, permet d'indiquer que le
+    flux est à mettre à jour lors du prochain passage du script (ça force à
+    invalider sa dernière date de mise à jour).
+
+    > @[**Aurélien**](#comment-27)
+    >
+    > Egalement en terme de rapidité, rsslounge est meilleur.
+
+    Effectivement, c'est un point faible de *Tiny Tiny RSS*, notamment quand on
+    veut voir tous les articles d'une catégorie, où il faut attendre 4~5
+    secondes.
+- id: 29
+  author: Samuel Martin
+  author-url: http://blog.creaone.fr
+  date: 2011-06-16 23:53:33+02:00
+  contents: |
+    Temporairement revenu à Liferea. (au lieu du couple Greader + Feedly).
+
+    "le temps d'attente de mise à jour des flux" \> j'ai remarqué qu'avec un
+    disque dur SSD liferea n'est pas freezé le temps de l'update de chaque flux
+    et c'est d'ailleurs plus rapide.
+- id: 30
+  author: 'En vrac 2011-06-19 : simplement Nat'
+  author-url: http://nat.fam-martel.eu/2011/06/en-vrac-2011-06-19/
+  date: 2011-06-19 23:36:37+02:00
+  pingback: true
+  contents: |
+    [...] tuto, comme sur des roulettes ! encore un produit google en moins !
+    http://blog.rom1v.com/?p=2592 [...]
+- id: 31
+  author: Arthur
+  date: 2011-06-23 15:07:04+02:00
+  contents: |
+    J'ai abandonné TTRSS (au profit de RSSLounge) car son développeur principal
+    n'a pas vraiment la logique du logiciel libre et de l'ouverture. Il a un peu
+    trop l'approche "si t'es pas capable de l'optimiser tout seul, viens pas me
+    poser de question". J'ai plusieurs fois essayé d'interagir avec le bonhomme
+    sans succès. Un exemple ici : <http://tt-rss.org/redmine/issues/346>
+
+    Il y a pourtant plein de pistes intéressantes à développer sur les lecteurs
+    RSS. Notamment la notion de mécanisme de recommandation décentralisé où un
+    group de lecteurs RSS communiquent entre eux et recommandent des articles ou
+    des flux (automatique ou manuel).
+
+    Du coup, l'approche "ca marche pour moi, démerde toi" du développeur de
+    TTRSS m'a décidé à abandonner complétement le produit (alors que
+    j'envisagais de contribuer). Reste à voir comment réagi la communauté de
+    RSSLounge évolue sur la durée.
+- id: 32
+  author: ®om
+  date: 2011-06-24 09:11:58+02:00
+  contents: |
+    @[**Arthur**](#comment-31)
+
+    Personnellement, j'ai fait quelques demandes de fonctionnalités qui ont été
+    prises en compte : [315](http://tt-rss.org/redmine/issues/315),
+    [338](http://tt-rss.org/redmine/issues/338),
+    [347](http://tt-rss.org/redmine/issues/347),
+    [348](http://tt-rss.org/redmine/issues/348).
+
+    Dans mes rapports de bugs, vous remarquerez au passage que j'avais du mal à
+    trouver les mots pour différencier flux, source, etc. Voici donc les termes
+    à utiliser, qui sont compris par tous :
+
+     * **article :** c'est le niveau le plus bas, qui désigne un article, un
+       billet de blog, etc. (ce billet par exemple) ;
+     * **flux :** c'est un site auquel on est abonné, à partir duquel on
+       récupèrera les articles (*"®om's blog"* par exemple) ;
+     * **categorie :** c'est le "dossier" dans lequel on regroupe plusieurs
+       flux de même type (*"logiciel libre"* par exemple).
+- id: 33
+  author: Matt
+  date: 2011-07-04 23:21:33+02:00
+  contents: |
+    Je reviens sur la mise en cache j'ai ajouté les lignes suivantes dans le
+    `/etc/rc.local`
+
+        mkdir /var/cache/tt-rss/htmlpurifierchmod -R 777 /var/cache/tt-rss/htmlpurifier
+
+    htmlpurifier semble être nouveau pour la 1.5.3.
+- id: 34
+  author: Grégoire de gregoire-penverne.fr
+  author-url: http://gregoire-penverne.fr
+  date: 2011-07-06 12:54:19+02:00
+  contents: |
+    Peut être existe-t-il un système qui utiliserait un stockage du genre
+    memcache plutôt qu'une base données, non ?
+- id: 35
+  author: nyquist
+  date: 2011-07-22 16:16:29+02:00
+  contents: |
+    personnellement je viens de faire ma migration de ttrss 1.2.30 vers la 1.5.5
+
+    j'utilise le script de Pierre-Yves Landuré pour avoir un service lancé au
+    démarrage
+
+    cf
+    <http://howto.landure.fr/gnu-linux/debian-4-0-etch-en/install-tiny-tiny-rss-on-debian-4-0-etch/>
+
+    C'est vrai que tiny rss est lent un peu plus avec la version 1.5.5 que celle
+    que je viens de quitter. Mais le multi-utilisateur est vraiment un besoin
+    pour moi (surtout qu'en version 1.5 on délègue l'authentification à apache
+    (et donc potentiellement a plein d'outils centralisé derrière).
+- id: 36
+  author: Ax
+  date: 2011-07-28 19:09:21+02:00
+  contents: |
+    Un article qui parle de Tiny Tiny RSS et de RSS Lounge: [rssLounge, un
+    excellent gestionnaire de flux RSS
+    !](http://www.generation-linux.fr/index.php?post/2011/07/02/rssLounge%2C-un-excellent-gestionnaire-de-flux-RSS-!)
+
+    Concernant le fait de s'auto heberger, une bonne page de wiki: [Fournisseur
+    d'accès et hébergement internet
+    libres](http://free.korben.info/index.php/Fournisseur_d'accès_et_hébergement_internet_libres)
+
+    A plus :)
+- id: 37
+  author: Jonas
+  author-url: http://jonas.tuxfamily.org
+  date: 2011-08-03 19:58:38+02:00
+  contents: |
+    Après avoir utilisé pendant de longue année liferea j'ai migré depuis
+    quelque semaine sous tt-rss (par nécessité de pouvoir relevé mes flux depuis
+    le TAF car je n'avais plus le temps à la maison :D).
+
+    J'avais déjà testé tt-rss il y a un ou deux ans mais ce qui avait fait que
+    j'étais resté sous liferea est principallement l'absence de notification.
+    N'ayant toujours pas rien trouvé comme solution pour j'ai développé sur le
+    coin de la table <http://jonas.tuxfamily.org/wiki/tt-rss_gtk-notify>
+    peut-être qu'il vous serra utilise ;).
+- id: 38
+  author: GuiGui&#039;s show &raquo; Agrégateur RSS
+  author-url: http://www.guiguishow.info/?p=1689
+  date: 2011-08-07 12:22:16+02:00
+  pingback: true
+  contents: |
+    [...] applications web « privées » auto-hébergées (Tiny Tiny RSS, [...]
+- id: 39
+  author: ®om
+  date: 2011-10-26 23:28:12+02:00
+  contents: |
+    Étant un peu lassé des problèmes à répétition à chaque mise à jour mineure
+    de *TinyTinyRSS* (j'ai tenté de mettre à jour vers la 1.5.6, mais j'ai dû
+    restaurer un backup de la 1.5.5, car l'utilisation des catégories ne
+    fonctionnait plus), j'ai finalement installé [RSS
+    Lounge](http://rsslounge.aditu.de/) en parallèle, et effectivement il est
+    plus simple à mettre en place et plus rapide à l'utilisation.
+
+    Par contre il ne propose pas de version mobile (c'est vraiment dommage).
+
+    Je garde les deux pour me faire un avis sur une période plus longue.
+- id: 40
+  author: Auto-héberger son Reader RSS Web &laquo; Blog Perso
+  author-url: http://blog.beufa.net/linux/auto-heberger-son-reader-rss-web/
+  date: 2012-02-26 04:56:59+01:00
+  pingback: true
+  contents: |
+    [...] Suivre ces instructions
+    (http://blog.rom1v.com/2011/06/tiny-tiny-rss-auto-hebergement-des-flux-rss/).
+    [...]
+- id: 41
+  author: wake
+  date: 2012-08-13 05:56:04+01:00
+  contents: |
+    hello,
+
+    Finalement tu as retenus quoi?
+
+    De mon coté, j'ai utilisé TTRSS, mais je commence a avoir des soucis de
+    MAJ... update daemon not running...
+
+    Bonne journée,
+
+    Merci !
+- id: 42
+  author: rssLounge, un excellent gestionnaire de flux RSS ! | Problème informatique ?
+  author-url: http://www.problemes-informatique.com/rsslounge-un-excellent-gestionnaire-de-flux-rss/
+  date: 2012-12-03 20:47:29+01:00
+  pingback: true
+  contents: |
+    [...] avoir lu l’article de ®om, je me suis rendu compte que pas mal de gens
+    se plaignaient de TTRSS (pour des raisons que [...]

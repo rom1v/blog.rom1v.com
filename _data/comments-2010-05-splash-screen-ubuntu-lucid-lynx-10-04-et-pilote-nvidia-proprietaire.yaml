@@ -1,0 +1,640 @@
+- id: 1
+  author: Hiko Seijûrô
+  author-url: http://hikoseijuro.celeonet.fr/blog/
+  date: 2010-05-13 16:39:17+01:00
+  contents: |
+    J'ai un pilote propriétaire pour ma carte graphique ATI et j'ai déjà essayé
+    cette manipulation. Mais ça ne marche pas chez moi, le logo devient énorme.
+
+    Ma carte graphique : ATI Mobility Radeon HD 4500 Series
+- id: 2
+  author: G-rom
+  date: 2010-05-13 16:51:43+01:00
+  contents: |
+    Le problème est le même pour le driver proprio ATI.
+
+    Par contre tu ne parles pas des effets négatifs de ce changement, ni ne mets
+    en garde. Sur le forum j'ai vu des gens avoir un écran noir au boot.
+    D'autres disent que le démarrage est plus long depuis ce changement.
+
+    Ce n'est peut être pas à présenter de façon aussi légère.
+- id: 3
+  author: "Tweets that mention Splash screen Ubuntu Lucid Lynx (10.04) et pilote NVIDIA propriétaire « ®om's blog -- Topsy.com"
+  author-url: http://topsy.com/trackback?utm_source=pingback&amp;utm_campaign=L1&amp;url=http://blog.rom1v.com/2010/05/splash-screen-ubuntu-lucid-lynx-10-04-et-pilote-nvidia-proprietaire/
+  date: 2010-05-13 16:57:41+01:00
+  pingback: true
+  contents: |
+    [...] This post was mentioned on Twitter by ubuntufr. ubuntufr said: Splash
+    screen Ubuntu Lucid Lynx (10.04) et pilote NVIDIA propriétaire: Ubuntu
+    utilise maintenant Plymouth pour le ... http://bit.ly/b4suDD [...]
+- id: 4
+  author: ®om
+  date: 2010-05-13 17:17:20+01:00
+  contents: |
+    > @[**G-rom**](#comment-2)
+    >
+    > Par contre tu ne parles pas des effets négatifs de ce changement, ni ne
+    > mets en garde.
+
+    J'ai rajouté une petite ligne de mise en garde (pour dissuader certains
+    utilisateurs un peu trop aventureux).
+- id: 5
+  author: FireWave
+  author-url: http://www.megagiiks.com/
+  date: 2010-05-13 17:46:01+01:00
+  contents: |
+    Effectivement, bien que je n'arrête pas de voir cette méthode, elle dégrade
+    nettement les performances et de plus est pas mal risquée pour un débutant.
+    Je propose la solution native de Grub2.
+
+        gksu gedit /etc/default/grub
+
+    Remplacé la ligne suivante (environ ligne 18):
+
+        #GRUB_GFXMODE=640×480
+
+    avec :
+
+        GRUB_GFXMODE=1280×1024
+        GRUB_GFXPAYLOAD_LINUX=1280×1024×24
+
+    Sauvegarder puis:
+
+        sudo update-grub
+
+    Voilà !
+- id: 6
+  author: ®om
+  date: 2010-05-13 18:03:36+01:00
+  contents: |
+    FireWave, je viens d'essayer ta technique (après avoir annulé toutes les
+    modifications décrites dans le billet), ça ne fonctionne pas, j'ai le logo
+    tout moche. C'est dommage, ça aurait été plus simple.
+
+    J'avais vu une méthode similaire à la tienne, avec un `gfxpayload=keep` à
+    écrire dans `/etc/grub.d/00_header`, ça fonctionnait pour le logo, par
+    contre les TTY ne fonctionnaient plus (avec Ctrl+Alt+F1, Ctrl+Alt+F2…).
+- id: 7
+  author: Ronan
+  author-url: http://ronan.jouchet.fr
+  date: 2010-05-13 18:17:40+01:00
+  contents: |
+    Sur ma machine (10.04, nvidia 8600GT M), la manip provoque des artefacts
+    visuels au reboot et, au lieu d'un beau logo, donne un "Ubuntu 10.04" en
+    mode texte au lieu du joli logo :-/
+
+    Je ne pense pas avoir fait d'erreur et j'ai bien ajusté à ma résolution.
+
+    Bah pas grave, en tout cas aucun problème pour revenir à l'état initial en
+    décommentant les nouveautés et en relançant les updates grub et initramfs.
+
+    Merci quand même :)
+- id: 8
+  author: le hollandais volant
+  author-url: http://lehollandaisvolant.net/
+  date: 2010-05-13 18:19:48+01:00
+  contents: |
+    Merci !
+
+    Ça marche !
+- id: 9
+  author: sylvainsjc
+  author-url: http://linuxadvantage.blogspot.com/
+  date: 2010-05-13 21:30:36+01:00
+  contents: |
+    Si le pilote Nvidia ne suit pas le rythme du logiciel libre, comment
+    expliquer que des systèmes comme Fedora, Mandriva, PCLinuxOS, Chakra
+    permettent une superbe utilisation de plymouth avec justement le pilote
+    Nvidia ?
+- id: 10
+  author: NicoM
+  date: 2010-05-13 22:59:07+01:00
+  contents: |
+    Bon j'ai essayé, mais ça marche pas non plus chez moi. Logo énorme et
+    démarrage plus lent (pas grand chose, mais quand même). J'ai tenté
+    1920x1080, peut être que c'est une réso trop haute. J'ai une carte graphique
+    GeForce 9600 GT.
+
+    Du coup je suis repassé sans splash du tout, j'aime bien les messages qui
+    défilent, ça fait nerd et c'est plus rapide :)
+- id: 11
+  author: Jeff
+  date: 2010-05-14 07:27:47+01:00
+  contents: |
+    C'est simple Ubuntu....
+
+    Treve de troll, je ne trouve pas ca normal qu'une distribution sorte avec
+    pleins de bugs aussi gros : prenez pas exemple gtwitter qui marche pas des
+    le debut...
+
+    Ca donne pas envie d'y aller.
+
+    Jeff
+- id: 12
+  author: Olivier
+  date: 2010-05-14 08:06:43+01:00
+  contents: |
+    Quelles sont les commandes pour annuler les modifications svp ? Merci
+- id: 13
+  author: G-rom
+  date: 2010-05-14 08:27:13+01:00
+  contents: |
+    Idem que pour les gens avec une ATI. La résolution du menu Grub est bien
+    changée, mais le logo est encore plus baveux !!
+- id: 14
+  author: ®om
+  date: 2010-05-14 08:49:26+01:00
+  contents: |
+    > @[**Olivier**](#comment-12)
+    >
+    > Quelles sont les commandes pour annuler les modifications svp ? Merci
+
+    Réouvrir `/etc/default/grub` et remettre les lignes :
+
+        GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+        #GRUB_GFXMODE=640x480
+
+    Ouvrir `/etc/initramfs-tools/modules` et supprimer la dernière ligne :
+
+        uvesafb mode_option=1680x1050-24 mtrr=3 scroll=ywrap
+
+    Exécuter :
+
+        sudo rm /etc/initramfs-tools/conf.d/splash
+        sudo apt-get remove v86d
+        sudo update-grub2
+        sudo update-initramfs -u
+- id: 15
+  author: ®om
+  date: 2010-05-14 08:52:00+01:00
+  contents: |
+    > @[**NicoM**](#comment-10)
+    >
+    > Du coup je suis repassé sans splash du tout
+
+    Tu as fait quoi pour désactiver totalement le splash?
+- id: 16
+  author: Strider
+  author-url: http://blog.strycore.com
+  date: 2010-05-14 10:29:28+01:00
+  contents: |
+    Je ne connaissais pas la méthode avec v86d, cela permet d'utiliser
+    d'avantages de résolutions. Sans cela on est limité aux résolutions données
+    par la commande vbeinfo dans grub (1280x1024) pour moi
+- id: 17
+  author: Strider
+  author-url: http://blog.strycore.com
+  date: 2010-05-14 10:30:16+01:00
+  contents: |
+    > @[**®om**](#comment-15)
+    >
+    > > @[**NicoM**](#comment-10) Du coup je suis repassé sans splash du
+    > > tout
+    >
+    > Tu as fait quoi pour désactiver totalement le splash?
+
+    En enlevant quiet spash par exemple :D
+- id: 18
+  author: Olivier
+  date: 2010-05-14 13:12:25+01:00
+  contents: |
+    Merci ®om, vu que c'est plus compliqué que prévu pour pas mal de monde de
+    changer la résolution du splash, les commandes que tu donnes pour revenir en
+    arrière seront utiles à du monde !
+- id: 19
+  author: Oyster
+  date: 2010-05-14 16:22:08+01:00
+  contents: |
+    Personnellement j'ai contourné le problème en installant Burg, et en
+    éditant :
+
+        sudo gedit /etc/burg.d/00_header
+
+    {% highlight bash %}
+    if [ "x${GRUB_GFXMODE}" = "x" ] ; then GRUB_GFXMODE=1280x800 ; fi
+    {% endhighlight %}
+
+    1280x800, étant ma résolution native. puis :
+
+        sudo update-burg
+- id: 20
+  author: Jean
+  date: 2010-05-14 16:47:44+01:00
+  contents: |
+    Pareil que Oyster, mais en plus simple (on modifie la config, pas les
+    fichiers de burg) :
+
+    Avec Burg installé et configuré (la résolution se change dans
+    /etc/burg/default, c'est BURG\_GFXMODE je crois, enfin celui qui est
+    commenté, quoi), Plymouth utilise directement la même résolution que Burg.
+- id: 21
+  author: Goalgauth
+  date: 2010-05-14 21:21:17+01:00
+  contents: |
+    Bonjour,
+
+    J'ai essayé et alors que tout allait bien, le logo du splash est encore plus
+    grand et après avoir eu le message d'erreur "failed to initialized the
+    nvidia kernel module..." la résolution du bureau est petite.  Comme quoi le
+    mieux est l'ennemi du bien...
+
+    J'ai tenté pas mal de choses (charger nvidia avec sudo nvidia-settings, un
+    bon vieux "sudo dpkg-reconfigure xserver-xorg"...) mais rien n'y fait, la
+    résolution n'est correcte qu'en enlevant les pilotes proprio, même en
+    faisant les manips à l'envers de ce qui est décrit...
+
+    Si quelqu'un à l'idée d'autre chose à tenter avant de faire une réinstall...
+    Merci
+- id: 22
+  author: Pokemon_JOJO
+  author-url: http://www.mibhouse.org/pokemon_jojo
+  date: 2010-05-16 12:56:42+01:00
+  contents: |
+    Pour les retissant à la ligne de commande, vous pouvez essayer avec
+    Startup-Manager.
+
+        sudo apt-get install startupmanager
+
+    Ca permet de configurer tous ça en quelques clics ;)
+- id: 23
+  author: Zaf
+  date: 2010-05-16 13:18:04+01:00
+  contents: |
+    On fait comment si on a encore Grub 1 ? Je n'ai pas installé Lucid de zéro.
+- id: 24
+  author: Beuleuleu
+  date: 2010-05-17 07:37:00+02:00
+  contents: |
+    salut,
+
+    catastrophe pour moi, écran noir à la place du logo et plus de fenêtre de
+    connection (pourtant j'ai spécifié la bonne résolution).
+
+    J'ai une nvidia 6600 GT agp.
+
+    heureusement que la manip pour revenir en arrière est indiquée ici.
+- id: 25
+  author: Chichille
+  date: 2010-05-17 12:54:58+02:00
+  contents: |
+    Si on a encore Grub 1, il suffit normalement d'utiliser update-grub au lieu
+    de update-grub2, sinon on se retrouve avec le pb du logo énorme (vécu).
+- id: 26
+  author: Yoyo
+  date: 2010-05-17 18:31:28+02:00
+  contents: |
+    Merci!
+
+    Grace à votre astuce, j'ai retrouvé un splash screen!
+
+    Yoyo
+- id: 27
+  author: Nadley
+  date: 2010-05-23 01:00:58+02:00
+  contents: |
+    Juste un mot pour annoncé que j'ai essayé l'astuce et que comme certains
+    d'entre vous j'ai eu un gros logo à la place. Donc j'ai tenté la marche
+    arrière via les commandes données en commentaire et je n'ai pas réussi.
+
+    Au final mon splash screen est multicolore et illisible.
+
+    Donc attention avec cette manipulation !!!
+
+    Amicalement
+- id: 28
+  author: ®om
+  date: 2010-05-23 09:25:37+02:00
+  contents: |
+    @[**Nadley**](#comment-27)
+    peux-tu préciser ce qui n'a pas fonctionné? Tu as bien remplacé la
+    définition `1680x1050` par celle de ton écran?
+
+    Si oui, peux-tu donner le contenu de `/etc/default/grub` (au moins les
+    lignes intéressantes) ainsi que `/etc/initramfs-tools/modules` et
+    `/etc/initramfs-tools/conf.d/splash`?
+- id: 29
+  author: Neroptik
+  date: 2010-05-23 20:07:09+02:00
+  contents: |
+    merci pour le tricks ^^.
+- id: 30
+  author: Balzac
+  author-url: http://www.pilotes-driver.fr/
+  date: 2010-05-27 08:50:05+02:00
+  contents: |
+    salut,
+
+    j´ai essayé tout mais ça ne marche pas! pourtant je te remercie et je vais
+    continuer à essayer ^^ Ubuntu m'énerve vraiment!
+- id: 31
+  author: ®om
+  date: 2010-05-27 09:41:42+02:00
+  contents: |
+    > @[**Balzac**](#comment-30)
+    >
+    > Ubuntu m'énerve vraiment!
+
+    Je ne voudrais pas défendre Ubuntu à tout prix, mais c'est plutôt NVIDIA
+    qu'il faudrait blâmer là : c'est eux qui ne fournissent pas les specs et qui
+    font un driver propriétaire qui ne gère pas les nouvelles fonctionnalités.
+- id: 32
+  author: AurAlchemist
+  date: 2010-06-04 01:55:12+02:00
+  contents: |
+    Merci, cela marche très bien ici !
+
+    Après avoir essayé d'éditer Grub2 sur ma distribution Ubuntu Lucid Lynx
+    (10.04) via StartUp-Manager, j'obtenais un écran splash multicolore et
+    illisible.
+
+    La manip détaillée ici m'a permis de récupérer l'écran splash original tout
+    en ajustant la dimension à 1680x1050.
+
+    Carte graphique : nVidia GeForce 9800M GS
+- id: 33
+  author: Xaf
+  date: 2010-06-04 22:45:59+02:00
+  contents: |
+    Bonjour,
+
+    j'ai essayé d'abord la méthode de FireWave : plus simple et moins risquée
+    que celle indiquée que celle indiquée au début de la page. Aucun changement,
+    ni catastrophe, ni amélioration. J'ai donc réédité grub2 pour remettre la
+    configuration par défaut, et j'ai essayé la méthode indiquée dans l'article.
+    Miracle, çà marche. J'ai pu aussi constater que le chargement du système
+    prenait quelques secondes de plus.
+
+    Pour information, j'ai une nVidia GeForce 8400 GS
+- id: 34
+  author: yann
+  date: 2010-06-08 13:30:29+02:00
+  contents: |
+    Avant de sortir les trucs sales, comme v86d, il se peut que plus simple
+    marche. C'est le cas sur mon laptop avec une 7600Go.
+
+    Dans mon cas, il a suffit de vérifier quels étaient les modes frame-buffer
+    EXACTS supportés par ma carte, via le paquet hwinfo, à installer:
+
+        sudo apt-get install hwinfo
+        sudo hwinfo --framebuffer
+
+    J'ai pris le mode le plus haut supporté par mon matos (j'insiste: La même
+    résolution avec 16 bits de profondeur de couleur ne donnait dans mon cas pas
+    le résultat esthetique escompté!), dans mon cas 1024x768-24 bits, soit le
+    mode 0x0318 (hexa, base 16), soit 792 (décimal, base 10)
+
+    Mettre à jour la bootline (vga=... n'est parait-il plus supporté? Bin chez
+    moi sous lucid avec nvidia-current des dépots, ca fonctionne tandis que les
+    GRUB\_GFXMODE reviennent à pisser dans un violon! Nvidia doit continuer à
+    utiliser ce mot clef de boot line même si le kernel l'a déprécié??) dans
+    grub:
+
+        sudo gedit /etc/default/grub
+
+    Le modifier pour avoir qqchose du genre (remplacer par le bon mode selon
+    matos) sur cette ligne:
+
+        GRUB_CMDLINE_LINUX_DEFAULT="splash vga=792"
+
+    puis
+
+        sudo update-grub
+
+    Ensuite, ajouter le support du FB dans l'initramfs (évite d'être longtemps
+    avec un écran noir avant d'avoir le logo 1 ou 2 secondes!):
+
+    Créer ce fichier:
+
+        sudo gedit /etc/initramfs-tools/conf.d/splash
+
+    et y mettre cette ligne :
+
+        FRAMEBUFFER=y
+
+    Refaire un initramfs:
+
+        sudo update-initramfs -u
+
+    Rebooter pour test... Au besoin, essayer qq autres modes dans les plus
+    hautes résolutions dans ce que retourne hwinfo: Ca ne semble pas être une
+    science exacte, raison sans doute de l'absence de palliatif général à ce
+    problème.
+
+    Mais pour moi ça a suffi, sans avoir besoin d'un émulateur de frame buffer,
+    ce qui est bien crade...
+
+    Reste un scintillement de changement de mode juste avant le login screen
+    GDM, mais c'est presque rien...
+- id: 35
+  author: manifesto
+  author-url: http://systemx.nosuke.org/
+  date: 2010-06-28 23:12:42+02:00
+  contents: |
+    Super soluce yann.
+
+    Moi aussi j'aime quand c est clair et simple.
+- id: 36
+  author: loliverouge
+  date: 2010-06-29 16:50:52+02:00
+  contents: |
+    Bonjour à tous,
+
+    Je confirme pour la solution de Yann. Et pour ceux qui savent pas convertir
+    en base 10 :
+    <http://www.editeurjavascript.com/scripts/scripts_autres_3_258.php>
+- id: 37
+  author: myother
+  date: 2010-08-21 09:41:13+02:00
+  contents: |
+    Salut,
+
+    Bon, comme je suis pas une pointure : au secours !
+
+    J'ai essayé cette méthode, mais maintenant, durant le slpash screen, mon
+    écran se met en erreur (en veille) en me précisant que la fréquence du
+    signal n'est pas la bonne (trop élevée). A priori il préférerait du 60Hz.
+    Arrivé à l'écran de connexion, tout rentre dans l'ordre par contre.
+
+    Je comprends pas comment régler ça.
+- id: 38
+  author: tOnI0
+  date: 2010-08-22 16:35:39+02:00
+  contents: |
+    Cette méthode a marché pour moi,
+
+    NEANMOINS j'ai eu besoin de rectifier tous les paramètres de résolution.
+
+    1680x1050 n'est pas supporté par ma carte graphique en terminal (cela n'a
+    RIEN à voir avec la résolution max de votre carte graphique, faites
+    attention.)
+
+    Pour voir quelles sont les résolution supportées par votre système, au
+    démarrage du PC attendez le menu GRUB et appuyez sur la touche "C" de votre
+    clavier. Tapez ensuite la commande "vbeinfo".
+
+    Je conseille à tous de reprendre le très bon tuto de ®om, mais en remplaçant
+    les "1680x1050" par des "1280X1024". Et là effectivement ça marche à
+    merveille, je n'ai pas remarqué de dégradation de perfs.
+
+    Sinon, pour les curieux la solution de Yann marche aussi.
+- id: 39
+  author: Antoine
+  date: 2010-08-25 09:29:34+02:00
+  contents: |
+    J'ai une question : J'utilise régulièrement (mais pas tout le temps) un
+    écran externe avec mon ThinkPad. Évidemment, l'écran externe et celui du
+    laptop n'ont pas la même géométrie ni donc le même ensemble de résolutions
+    supportées. Ce qui fait que lorsque je démarre sans l'écran externe je
+    n'obtiens pas avec "vbeinfo" les même résolutions que si l'écran est
+    branché.
+
+    Que dois-je utilisé comme résolution pour le splash? la meilleure résolution
+    que les écrans ont en commune? la meilleure résolution de l'écran le plus
+    petit (l'autre se débrouillera)? La meilleure résolution tout court? Ou
+    mieux: existe-il un système de fallback qui permette à grub de tester
+    plusieurs résolutions (de la meilleure à la moins bonne) et de démarrer avec
+    la première qui marche?
+- id: 40
+  author: Dalmito
+  date: 2010-11-07 21:49:55+02:00
+  contents: |
+    Bonjour,
+
+    Je ne sais pas trop si je suis au bon endroit, mais...
+
+    Avec une Geforce210 et ubuntu 10.04, alors que tout fonctionnait bien, mon
+    écran de login est maintenant divisé en 2 dans le sens de la hauteur. A
+    gauche l'écran est nickel (1/2 écran pour saisie du mot de passe) et à
+    droite l'écran est vu comme au travers d'une loupe.
+
+    Pour me connecter, je saisi mon mot de passe, puis place le curseur de la
+    souris sur la droite et appuie sur la touche entrée (si le curseur est à
+    gauche, le mot de passe est refusé).
+
+    Une fois connecté, tout est nickel...
+
+    Quelqu'un a-t-il une idée ?
+- id: 41
+  author: Alex
+  date: 2011-02-23 21:42:10+01:00
+  contents: |
+    Bonjour,
+
+    J'ai un big pb avec cette manip…
+
+    Tout à bien fonctionner, l'écran de démarrage est visible et adapté à mon
+    écran …
+
+    … sauf que après ça tout est en ligne de commande …
+
+        login :
+        password :
+
+    puis l'invite de ma session comme dans mon terminal …
+
+    comme si j'avais plus d'interface graphique pour ubuntu en quelque sorte …
+
+    Des idées svp ???
+- id: 42
+  author: Gregala
+  date: 2011-04-13 20:18:45+01:00
+  contents: |
+    @Alex
+
+    Moi j'ai un autre problème : l'animation se déroule normalement pendant le
+    chargement, puis le logo nVidia apparait, puis écran noir et tout est
+    bloqué : obligé de rebooter en passant par une console.
+
+    Pour contourner le problème, j'appuie sur la touche F7 pendant l'animation
+    de démarrage, ce qui a pour effet de faire disparaître cette dernière. Le
+    reste du chargement se déroule normalement et Gnome démarre. Je te suggère
+    d'essayer aussi cette technique du F7, car on dirait que ça "désactive" la
+    carte graphique pendant le chargement, ou un truc du genre... Ca résoudra
+    peut-être temporairement ton problème.
+
+    Gregala
+- id: 43
+  author: Isabellule
+  date: 2011-04-16 23:37:37+01:00
+  contents: |
+    @Alex et Gregala
+
+    Après avoir passé une petite et catastrophique semaine a tenter de regler
+    mes (multiples) problèmes liés à ma "vielle" GeForce Fx5500 (et son driver
+    173.xxx) par la lecture des premiers bugs déclarés sur launchpad jusqu'aux
+    dernières solutions les plus inutiles j'ai fini par passer à la version
+    10.10 d'ubuntu (90 minutes).
+
+    Et tout est rentré dans l'ordre. (l'affichage j'entends).
+
+    Je ne suis quand même pas très satisfaite de la manip. La 10.04 c'est une
+    Lts! Et j'ai attendu un an avant d'y passer, ayant eu vent des problèmes
+    nvidia lors de l'upgrade.
+- id: 44
+  author: Globulle
+  date: 2011-05-17 12:58:01+02:00
+  contents: |
+    Glop,
+
+    Voici un correctif très simple et rapide.
+
+    Ouvrir un terminal et taper à suivre ces 3 lignes :
+
+        wget http://launchpadlibrarian.net/57638460/fixplymouth
+        chmod +x fixplymouth
+        ./fixplymouth
+
+    Cette dernière ligne installe le package.
+
+    A la fin de l'installation, une liste des résolutions compatibles avec votre
+    machine est affichée.
+
+    Il suffit de choisir la votre, ou celle s'en approchant le plus. Tapez la
+    directement dans le terminal comme dans l'exemple affiché. (1024x768-24)
+
+    Un petit démarrage et le problème est définitivement réglé ;-)
+- id: 45
+  author: Isabellule
+  date: 2011-05-19 00:45:37+02:00
+  contents: |
+    Bonsoir Glop.
+
+    Votre proposition, ici le script extrait de launchpadlibrarian :
+
+    {% highlight bash %}
+    #!/bin/bash
+    # ----------------------------------
+    # Author: D0rkye
+    # Homepage: http://d0rkye.zsenialis.com/
+    # Most code probably by kyleabaker: http://kyleabaker.com/2010/07/11/how-to-fix-your-ubuntu-boot-screen/
+    # ----------------------------------
+    sudo apt-get install v86d hwinfo -y
+    sudo hwinfo --framebuffer
+    echo "---------------------------------------------------------------"
+    echo "Please enter the best resolution from the list above"
+    echo "It usualy looks like this >>Mode 0x0323: 1024x768 (+4096), 24 bits<>1024x768-24< ./newgrub
+    sudo mv -f ./newgrub /etc/default/grub
+    sed 's/\#GRUB\_GFXMODE\=640x480/GRUB\_GFXMODE\='$resolution'/g' /etc/default/grub > ./newgrub
+    sudo mv -f ./newgrub /etc/default/grub
+    sudo echo "uvesafb mode_option=$resolution mtrr=3 scroll=ywrap" | sudo tee -a /etc/initramfs-tools/modules
+    echo FRAMEBUFFER=y | sudo tee /etc/initramfs-tools/conf.d/splash
+    sudo update-grub2
+    sudo update-initramfs -u
+    echo "The resolution should be fixed after a reboot"
+    {% endhighlight %}
+
+    Est exactement la même que la solution proposée dans ce billet!
+
+    Elle ne résoud pas le problème de ceux qui n'ont plus accès au "mode texte",
+    il n'y a rien sur l'écran sauf des pixels colorés, pire le "mode recovery"
+    (root sans "GUI") est innacessible.
+
+    Quoi de mieux ?
+- id: 46
+  author: paul Bonijol
+  author-url: http://www.pharmacastor.fr
+  date: 2011-08-22 20:37:22+02:00
+  contents: |
+    Merci pour l'astuce magique, qui a bien contribué à sauver ma soirée !
+
+    Je tiens à préciser que ça marche aussi pour Ubuntu 11.04 natty. :)

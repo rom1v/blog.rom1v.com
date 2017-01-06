@@ -1,0 +1,144 @@
+- id: 1
+  author: Kahn_Onjy_Bryce
+  date: 2009-05-21 11:20:45+01:00
+  contents: |
+    Je te recommande d'aller sur Gnome-look.org où on trouve des thèmes léger
+    (light).
+- id: 2
+  author: NicoA380
+  date: 2009-05-21 12:12:41+01:00
+  contents: |
+    Cette semaine je suis passé à [Clearlooks
+    Compact](http://martin.ankerl.com/2007/11/04/clearlooks-compact-gnome-theme/)
+    histoire de gagner en espace d'affichage et c'est vraiment pas mal (j'ai
+    repris les couleurs de DarkRoom et ça le fait bien).
+
+    Les thèmes installés sont un peu léger sinon ...
+- id: 3
+  author: djiock
+  date: 2009-05-21 12:38:25+01:00
+  contents: |
+    Mais... Comment un simple thème peut ralentir un bouzin ? Ça devrait pas
+    arriver sur une grosse bécanne, si ?
+- id: 4
+  author: zoom
+  date: 2009-05-21 13:01:09+01:00
+  contents: |
+    j ai changé pour dust merci
+- id: 5
+  author: ®om
+  date: 2009-05-21 13:04:57+01:00
+  contents: |
+    @[**djiock**](#comment-3)
+
+    Le thème intervient pour dessiner chacun des composants graphiques. Si le
+    temps de dessin de chaque cellule d'un tableau prend 0,005s plutôt que
+    0,001s (à cause de dégradés, d'effets…), et qu'il y a 10 lignes et 5
+    colonnes, le rafraîchissement du tableau complet demande 0,25s au lieu de
+    0,05s… soit 4 images par seconde au lieu de 20…
+
+    C'était un exemple totalement bidon avec des temps inventés, mais c'était
+    pour illustrer…
+- id: 6
+  author: ljere
+  date: 2009-05-21 13:07:38+01:00
+  contents: |
+    bonjour,
+
+    à mon avis c'est du au fichier "userChrome.css" c'est le seul thème qui
+    possède ce fichier
+- id: 7
+  author: Bristow
+  date: 2009-05-21 14:28:37+01:00
+  contents: |
+    Moi c'est ici que je me sers... <http://francois.vogelweith.com/> et ils sont
+    superbes !
+
+    J'ai pas comparé les différences par contre...
+- id: 8
+  author: Steve Dodier
+  date: 2009-05-21 16:46:18+01:00
+  contents: |
+    Salut,
+
+    Il y a un outil pour calculer les performances d'un thème :
+    [gtkperf](apt://gtkperf). Et effectivement, New Wave est assez lent... comme
+    certains vieux thèmes du genre Industrial, d'ailleurs, qui ont pourtant la
+    réputation de carburer. Il y a plusieurs raisons à cela : d'abord, le moteur
+    et les effets utilisés, certains sont plus lourds. Un autre critère est la
+    quantité de code dans le gtkrc du thème, plus on écrit de code pour des
+    applis particulières, plus ça devient lourd.
+
+    Le fichier userChrome.css est un fichier à utiliser pour customiser Firefox,
+    par contre, rien à voir avec les performances ;)
+
+    Si vous voulez des thèmes légers, essayez Hanso et Alvaro, dans mes propres
+    benchmarks, c'est deux des plus rapides (en plus, ils sont jolis, et ils ont
+    un xfwm :p).
+- id: 9
+  author: vito
+  date: 2009-05-21 17:14:25+01:00
+  contents: |
+    @[**ljere**](#comment-6)
+
+    hello,
+
+    non le userchrome.css c'est juste dans firefox qu'il peut jouer, c'est pour
+    avoir le texte en blanc dans la barre de menu de firefox
+
+    et y'a beaucoup de thèmes qui utilisent ça, dès qu'il y a la barre de menu
+    sur fond sombre et le reste du thème sur fond clair on est obligés
+    d'utiliser ce truc dans firefox, même problème pour openoffice d'ailleurs
+- id: 10
+  author: ldnpub
+  date: 2009-05-21 17:56:18+01:00
+  contents: |
+    > @[**Bristow**](#comment-7)
+    >
+    > Moi c'est ici que je me sers… <http://francois.vogelweith.com/> et ils
+    > sont superbes !
+    >
+    > J'ai pas comparé les différences par contre…
+
+    Effectivement ils sont super ... félicitation à l'artiste !!
+
+    PS j'aime bien "New Wave "quand meme :-P
+- id: 11
+  author: Matt
+  date: 2009-05-22 02:05:59+01:00
+  contents: |
+    Ha, enfin, quelqu un souffre des memes symptomes. Je plussoie,
+    particulierement sur Deluge qui fait souffrir ma vieille config. Moi qui
+    avait reinstalle beaucoup de programmes, il suffisait juste de changer le
+    theme... Je fais les changements des que possible
+- id: 12
+  author: omne
+  author-url: http://bepo.fr
+  date: 2009-05-22 07:59:48+01:00
+  contents: |
+    Moi, je conseille vivement gnome-color (icônes et thèmes, les thèmes gdm
+    sont très bien aussi).
+
+    <http://code.google.com/p/gnome-colors/>
+
+    Il y a un ppa pour ubuntu :
+
+    <https://launchpad.net/~gnome-colors-packagers/+archive/ppa>
+- id: 13
+  author: Tiny
+  date: 2009-05-22 08:08:58+01:00
+  contents: |
+    Je peux te conseiller le sublime « Elegant Brit », sobre rapide et efficace.
+
+    <http://www.gnome-look.org/content/show.php/Elegant+Brit?content=74553>
+- id: 14
+  author: swissmade
+  date: 2009-05-22 10:10:11+01:00
+  contents: |
+    Salut a tous,
+
+    Je vous conseil les themes de
+    <http://francois.vogelweith.com/index.php?option=com_content&view=category&layout=blog&id=3&Itemid=14>
+
+    Ils sont tout simplement exeptionel et d'une qualité profesionnelle! En plus
+    vous pouvez les installer par des dépots!

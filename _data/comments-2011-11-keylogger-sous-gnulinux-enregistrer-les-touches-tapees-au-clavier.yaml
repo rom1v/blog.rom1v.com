@@ -1,0 +1,283 @@
+- id: 1
+  author: fylefou
+  date: 2011-11-02 07:58:05+02:00
+  contents: |
+    Ca craint quand même . surtout pour le mot de passe root. faudrait peut etre
+    que X11 gère ce que je considererai comme une faille.
+- id: 2
+  author: krominet
+  date: 2011-11-02 10:25:38+02:00
+  contents: |
+    même avec SSH ?
+- id: 3
+  author: Huy
+  date: 2011-11-02 10:48:46+02:00
+  contents: |
+    ~~~
+    # unset DISPLAY
+    # xinput --list
+    Unable to connect to X server
+    ~~~
+- id: 4
+  author: G-rom
+  date: 2011-11-02 10:54:52+02:00
+  contents: |
+    Ça n'impacte pas de choses importantes la variable DISPLAY ?
+- id: 5
+  author: Huy
+  date: 2011-11-02 10:56:10+02:00
+  contents: |
+    Pour compléter mon commentaire précédent, si on utilise xauth - ce qui est
+    normalement fait par défaut, il n'est pas possible pour un utilisateur qui
+    n'a pas accès au fichier d'autorisations (donc a priori tout le monde sauf
+    root) de communiquer avec le serveur X.
+- id: 6
+  author: ®om
+  date: 2011-11-02 11:01:38+02:00
+  contents: |
+    > @[**krominet**](#comment-2)
+    >
+    > même avec SSH ?
+
+    Si tu demandes s'il est possible d'écouter à distance les touches tapées
+    dans un environnement graphique sur une machine à laquelle tu as accès par
+    *SSH*, la réponse est oui (selon la configuration du serveur *SSH*).
+
+    Au moins l'une des trois solutions suivante doit marcher (j'éditerai ce
+    message quand j'aurai testé) :
+
+     * <del>utiliser `ssh -X` ;</del>
+     * <del>`export DISPLAY=:0` avant de lancer `xinput` ;</del>
+     * <del>les deux.</del>
+
+    **EDIT :** En fait, ces solutions ne fonctionnent pas (voir [le commentaire de
+    Huy](#comment-8)).
+
+    Si tu demandes s'il est possible d'écouter ce que tu écris dans un terminal
+    en *SSH* sur un serveur, la réponse est non, car alors tu n'utilises pas le
+    *serveur X* du serveur.
+
+    De même, tout ce que tu écris dans un *TTY* (auquel tu accèdes par
+    `Ctrl+Alt+F1` par exemple) ne sera pas capturé.
+
+    *(`Ctrl+Alt+F7` permet de revenir à l'environnement graphique, je préfère le
+    préciser pour ceux qui testeraient `Ctrl+Alt+F1` sans connaître.)*
+- id: 7
+  author: ®om
+  date: 2011-11-02 11:06:37+02:00
+  contents: |
+    > @[**Huy**](#comment-5)
+    >
+    > Pour compléter mon commentaire précédent, si on utilise xauth – ce qui est
+    > normalement fait par défaut, il n'est pas possible pour un utilisateur qui
+    > n'a pas accès au fichier d'autorisations (donc a priori tout le monde sauf
+    > root) de communiquer avec le serveur X.
+
+    Si un utilisateur ne peut pas démarrer un programme qui communique avec le
+    serveur X, il ne peut lancer aucune application graphique, si ?
+- id: 8
+  author: Huy
+  date: 2011-11-02 11:41:44+02:00
+  contents: |
+    Non, un utilisateur Y ne pourra pas se connecter au serveur X de
+    l'utilisateur Z et ne pourra par conséquent pas lancer d'application
+    graphique sur ce dernier.
+
+    La commande ssh -X permet de connecter une machine distante au serveur X
+    local, ça ne permettra donc pas d'utiliser xinput sur l'affichage graphique
+    distant. De même, exporter la variable DISPLAY n'est sans doute pas
+    suffisant sur une machine distante, à cause de xauth. Par contre, si Y a
+    accès /var/run/{light|g|k}dm/\*, il pourra lancer autant de xinput qu'il le
+    souhaite.
+- id: 9
+  author: tuxce
+  author-url: http://tuxce.no-ip.org
+  date: 2011-11-02 12:11:44+02:00
+  contents: |
+    > Mais aussi incroyable (et inquiétant) que cela puisse paraître, il est
+    > possible de faire exactement la même chose… sans être root.
+
+    Je vois pas pourquoi ça serait incroyable ou inquiétant. Le programme que tu
+    lances est démarré de la même façon qu'un gestionnaire de fenêtre entre
+    autre, or ce dernier, par exemple, a besoin de savoir ce que tu tapes.
+- id: 10
+  author: ®om
+  date: 2011-11-02 12:15:01+02:00
+  contents: |
+    @[**tuxce**](#comment-9)
+
+    Que le gestionnaire de fenêtres ait besoin de savoir ce que tu tapes, c'est
+    une chose. Que chacun des programme puisse savoir ce qui est tapé dans
+    chacun des autres en est une autre.
+- id: 11
+  author: tuxce
+  author-url: http://tuxce.no-ip.org
+  date: 2011-11-02 12:50:48+02:00
+  contents: |
+    2 programmes lancés avec les mêmes droits auront les mêmes accès, tous les
+    programmes lancés par l'utilisateur peuvent écrire / lire dans son `$HOME`,
+    ils peuvent monter / démonter des partitions etc.
+
+    Accéder à X est du même ordre. Il n'y a pas de différence entre un programme
+    gérant des raccourcis globaux ou le keylogger
+- id: 12
+  author: Paradoxe
+  date: 2011-11-02 12:56:44+02:00
+  contents: |
+    D'où l'utilité des système de sécurité plus poussé, telle SELinux.
+- id: 13
+  author: G-rom
+  date: 2011-11-02 13:34:36+02:00
+  contents: |
+    En même temps la personne qui installerait un tel programme sur son pc ça
+    serait l'utilisateur. Donc on revient à deux problèmes :
+
+     * la confiance envers les dev d'un logiciel qu'on installe.
+     * le bug entre la chaise et le clavier qui installe n'importe quoi.
+- id: 14
+  author: le hollandais volant
+  author-url: http://lehollandaisvolant.net/
+  date: 2011-11-02 22:22:05+02:00
+  contents: |
+    Ah, ceci est pratique pour connaitre les numéros des touches.
+
+    :)
+
+    Merci !
+- id: 15
+  author: Tuxicoman
+  author-url: http://tuxicoman.jesuislibre.net
+  date: 2011-11-03 03:00:50+02:00
+  contents: |
+    regarde du coté de
+    <http://sourceforge.net/apps/mediawiki/pykeylogger/index.php?title=Installation_Instructions>
+
+    et de python-xlib. Ca devrait te permettre de récupérer les données clavier
+    dans python directement.
+
+    C'est clair que ça fout les boules de savoir qu'il n'y a pas de séparations
+    entre les applications !!!
+- id: 16
+  author: desidia
+  author-url: http://www.k1ka.be/desidia/
+  date: 2011-11-03 07:45:21+02:00
+  contents: |
+    > @[**le hollandais volant**](#comment-14)
+    >
+    > Ah, ceci est pratique pour connaitre les numéros des touches.
+
+    Pour cet usage, il y a un utilitaire dédié qui se nomme `xev`. Il lance une
+    petite fenêtre où tout cela s'affiche, y compris les coordonnées des
+    déplacements de la souris.
+- id: 17
+  author: krs
+  date: 2011-11-03 22:05:47+02:00
+  contents: |
+    Chez moi la commande « `xinput test 11` » ne me donne pas les numéro des
+    touches, mais se contente d'afficher les lettres que je tappe. comment faire
+    pour connaitre les numéro des touches? (en fait je cherche ça pour remapper
+    mon clavier)
+- id: 18
+  author: ®om
+  date: 2011-11-03 22:11:21+02:00
+  contents: |
+    @[krs](#comment-17)
+    Si les lettres que tu tapes sont affichées, c'est juste que ton terminal a
+    le focus (ce n'est pas la sortie de `xinput`). Si tu n'as rien d'autre,
+    c'est que `xinput` n'affiche rien.
+
+    Es-tu sûr de l'id ? Que donne la commande :
+
+        xinput list | grep AT
+
+    ?
+- id: 19
+  author: Nono&#8217;s vrac 01 (dédicasse à sebsauvage) | m0le&#039;o&#039;blog
+  author-url: http://blog.m0le.net/2011/11/03/nonos-vrac-01-dedicasse-a-sebsauvage/
+  date: 2011-11-03 23:50:44+02:00
+  pingback: true
+  contents: |
+    [...] déjà utilisé la commande xinput pour me faire des raccourcies, mais
+    j’avais pas pensé à cette utilisation détourné ! Le serveur X tournant via
+    l’utilisateur root, l’intérêt est [...]
+- id: 20
+  author: De la sécurité entre applications
+  author-url: http://tuxicoman.jesuislibre.net/2011/11/de-la-securite-entre-applications.html
+  date: 2011-11-08 20:27:42+02:00
+  pingback: true
+  contents: |
+    [...] Rom1v a récemment mis le doigt sur un problème actuel de la sécurité
+    sous GNU/Linux : Une application utilisateur peut très facilement
+    enregistrer toutes les frappes clavier de l'utilis.... [...]
+- id: 21
+  author: alexx
+  date: 2011-12-17 13:43:48+01:00
+  contents: |
+    Pour ma part, je n'ai pas de AT dans les lignes
+
+    `xinput list | grep AT` me renvoit rien.
+
+    J'ai ceci
+
+        $ xinput list
+        ⎡ Virtual core pointer                      id=2    [master pointer  (3)]
+        ⎜   ↳ Virtual core XTEST pointer                id=4    [slave  pointer  (2)]
+        ⎜   ↳ Logitech G500                             id=9    [slave  pointer  (2)]
+        ⎜   ↳ Logitech G500                             id=10   [slave  pointer  (2)]
+        ⎜   ↳ HID 0b38:0010                             id=12   [slave  pointer  (2)]
+        ⎣ Virtual core keyboard                     id=3    [master keyboard (2)]
+            ↳ Virtual core XTEST keyboard               id=5    [slave  keyboard (3)]
+            ↳ Power Button                              id=6    [slave  keyboard (3)]
+            ↳ Video Bus                                 id=7    [slave  keyboard (3)]
+            ↳ Power Button                              id=8    [slave  keyboard (3)]
+            ↳ HID 0b38:0010
+- id: 22
+  author: arn0
+  date: 2012-01-19 08:21:32+01:00
+  contents: |
+    Salut Rom dit moi je n'arrive pas a faire ctrl +a dans screen serait tu
+    pourquoi j'ai un message :
+
+    no other window mais impossible de taper hardcopy dedans
+- id: 23
+  author: arn0
+  date: 2012-01-19 08:53:06+01:00
+  contents: |
+    J'ai rien dit ^^ pas réveillé xD.par contre cela n'as pas l'air d'être écrit
+    en direct ?
+
+- id: 24
+  author: Doupod
+  date: 2012-02-13 14:52:13+01:00
+  contents: |
+    Est-il possible de s'en protéger ? Peut on desinstaller xinput ou est-ce un
+    paquet essentiel ? Merci
+- id: 25
+  author: ®om
+  date: 2012-02-13 15:40:33+01:00
+  contents: |
+    @[**Doupod**](#comment-24)
+
+    `xinput` n'est pas installé par défaut, mais le problème n'est pas là.
+
+    Ce n'est qu'un POC qui montre qu'une appli non-root peut accéder aux touches
+    tapées par l'utilisateur. N'importe quelle application peut faire la même
+    chose que ce que fait `xinput`.
+- id: 26
+  author: cpamoi
+  date: 2012-06-05 07:57:47+01:00
+  contents: |
+    xinput est installé par défaut sous 10.04 /12.04 j'ai vérifié il y en a une
+    (distri) qui ne l'installe pas par défaut,me semble que c'est debian . a
+    vérifier
+- id: 27
+  author: ®om
+  date: 2012-06-05 08:47:33+01:00
+  contents: |
+    @[**cpamoi**](#comment-26)
+    Une petite parenthèse, qu'il soit pré-installé ou non ne change rien au
+    problème.
+
+    Ce qu'il montre, c'est qu'un programme *non-root* a accès à tous les
+    événements X. N'importe quel programme *non-root* y a donc accès, ne
+    serait-ce qu'en faisant la même chose que `xinput`…

@@ -1,0 +1,31 @@
+- id: 1
+  author: Anonymous
+  date: 2008-12-14 13:22:00+01:00
+  contents: |
+    Pourquoi s'encombrer d'un logiciel/plug-in alors que de nombreux sites
+    permettent de faire la même chose (netvibes, google reader, etc.) ?\
+    J'ai moi-même longtemps hésité entre une application stand-alone et une
+    application online et je trouve que le fait de pouvoir accéder à ses flux
+    depuis n'importe où (surtout quand on a un terminal mobile qui-va-bien)
+    devient presque indispensable.
+- id: 2
+  author: ®om
+  date: 2008-12-14 13:26:00+01:00
+  contents: |
+    Moi je préfère une appli stand-alone, c'est "plus réactif" et si on n'y
+    accède que d'un seul endroit, pas besoin d'avoir un truc en ligne.
+
+    Tout comme pour les mails, je n'aime pas trop les webmails.
+- id: 3
+  author: Denis
+  date: 2008-12-20 08:18:00+01:00
+  contents: |
+    Excellent.
+- id: 4
+  author: "Tiny Tiny RSS : auto-hébergement des flux RSS - ®om&#039;s blog"
+  author-url: http://blog.rom1v.com/2011/06/tiny-tiny-rss-auto-hebergement-des-flux-rss/
+  date: 2011-06-14 14:11:48+02:00
+  pingback: true
+  contents: |
+    [...] existe de nombreux clients d'agrégateurs de flux, tels que Liferea
+    sous Gnome ou NewsFox dans [...]
