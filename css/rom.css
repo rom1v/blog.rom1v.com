@@ -63,3 +63,8 @@ img {
     font-style: italic;
     color: #888;
 }
+
+.sidebar-checkbox {
+  /* fixes navbar behavior <https://github.com/poole/lanyon/issues/192> */
+  display: none;
+}
