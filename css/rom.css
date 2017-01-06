@@ -17,6 +17,15 @@ img {
 
 .pagination-item {
     border: medium none;
+    width: 50%;
+}
+
+.newer {
+    float: right;
+}
+
+.older {
+    float: left;
 }
 
 .index-post-title {
