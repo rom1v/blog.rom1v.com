@@ -73,6 +73,38 @@ img {
     color: #888;
 }
 
+.comment-title {
+    font-weight: 400;
+}
+
+.comment-table {
+    border: medium none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .7rem;
+}
+
+table.comment-table th {
+    text-align: right;
+    border: medium none;
+}
+
+table.comment-table td {
+    border: medium none;
+}
+
+table.comment-table textarea {
+    width: 100%;
+}
+
+table.comment-table tbody tr td,
+table.comment-table tbody tr th {
+    background: none;
+}
+
+.comment-submit {
+    float: right;
+}
+
 .sidebar-checkbox {
   /* fixes navbar behavior <https://github.com/poole/lanyon/issues/192> */
   display: none;

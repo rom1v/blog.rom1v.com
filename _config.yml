@@ -5,6 +5,7 @@ tagline: "{ un blog libre }"
 url: "http://blog.rom1v.com"
 assets: /assets
 paginate: 10
+comments_form: true
 
 # Build settings
 markdown: kramdown

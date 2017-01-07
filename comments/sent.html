@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<?php if (isset($_POST['return_url']))
+		{
+			$return_url = $_POST['return_url'];
+			$return_delay = 5; //Number of seconds to linger on this page before redirecting back to the static site
+			echo "<meta http-equiv=\"refresh\" content=\"$return_delay;url='$return_url'\" />";
+		} ?>
+		<title>Commentaire envoyé</title>
+	</head>
+<body>
+	<h1>Comment envoyé</h1>
+	<p>Merci pour votre commentaire. Il sera publié après validation.</p>
+	<?php if (isset($return_url))
+	{
+		echo '<p>Vous allez être redirigé vers la page à partir de laquelle vous avez envoyé ce commentaire.</p>';
+                echo "<a href=\"$return_url\">Cliquez ici</a> si vous n'êtes pas redirigé automatiquement.</p>";
+	} ?>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {% capture commentid %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
-{% if site.data[commentid] %}
+{% if site.data[commentid] or site.comments_form %}
 <h2 id="comments">Commentaires</h2>
 <div class="comments">
     {% for comment in site.data[commentid] %}
@@ -20,4 +20,48 @@
         </div>
     {% endfor %}
 </div>
+{% if site.comments_form %}
+{% if page.comments_closed %}
+<p><em>Les commentaires sont fermés.<em></p>
+{% else if %}
+<h3 class="comment-title">Poster un commentaire</h3>
+<form method="POST" action="/comments/submit.php">
+    <input type="hidden" name="post_id" value="{{ page.id }}" />
+    <input type="hidden" name="return_url" value="{{ page.url }}" />
+    <table class="comment-table">
+        <tr>
+            <th>Nom :</th>
+            <td>
+                <input type="text" size="25" name="name" />
+                <em>(requis)</em>
+            </td>
+        </tr>
+        <tr>
+            <th>E-mail :</th>
+            <td>
+                <input type="text" size="25" name="email" />
+                <em>(requis, non publié)</em>
+            </td>
+        </tr>
+        <tr>
+            <th>Site web :</th>
+            <td>
+                <input type="text" size="25" name="url" />
+                <em>(optionnel)</em>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea name="comment" rows="10"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input class="comment-submit" type="submit" value="Envoyer" />
+            </td>
+        </tr>
+    </table>
+</form>
+{% endif %}
+{% endif %}
 {% endif %}
