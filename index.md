@@ -43,6 +43,7 @@ permalink: index/
  * [Tiny Tiny RSS : auto-hébergement des flux RSS]({% post_url 2011-06-14-tiny-tiny-rss-auto-hebergement-des-flux-rss %}) (2011)
  * [Héberger un serveur Jabber simplement (prosody)]({% post_url 2012-01-06-heberger-un-serveur-jabber-simplement-prosody %}) (2012)
  * [Duplicity : des backups incrémentaux chiffrés]({% post_url 2013-08-14-duplicity-des-backups-incrementaux-chiffres %}) (2013)
+ * [Commentaires statiques avec Jekyll]({% post_url 2017-01-09-commentaires-statiques-avec-jekyll %}) (2017)
 
 ## Chiffrement
 
