@@ -2,6 +2,9 @@
 layout: post
 title: Prompt Bash pour GIT
 date: 2012-04-04 23:22:55+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 J'utilise [git][] depuis quelques mois, et je trouve ça vraiment génial. Si vous

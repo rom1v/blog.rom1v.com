@@ -2,6 +2,9 @@
 layout: post
 title: Tricher dans les jeux en modifiant la mémoire à chaud
 date: 2009-12-20 19:52:58+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Il y a longtemps, sur la première _PlayStation_, j'avais acheté un [Action

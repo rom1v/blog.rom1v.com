@@ -2,6 +2,8 @@
 layout: post
 title: Le logiciel HADOPI est impossible
 date: 2010-08-01 01:03:46+02:00
+tags:
+- planet-libre
 ---
 
 Ça y'est, nous en savons plus sur les moyens de sécurisation HADOPI, après la

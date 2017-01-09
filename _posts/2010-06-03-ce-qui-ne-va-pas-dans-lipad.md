@@ -2,6 +2,8 @@
 layout: post
 title: Ce qui ne va pas dans l'iPad
 date: 2010-06-03 15:43:18+02:00
+tags:
+- planet-libre
 ---
 
 Depuis la sortie de l'_iPad_ d'_Apple_, de nombreux articles ont été écrits sur

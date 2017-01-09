@@ -2,6 +2,9 @@
 layout: post
 title: Installer Ubuntu Server sur un Shuttle XS35
 date: 2011-06-06 22:21:48+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 {: .center}

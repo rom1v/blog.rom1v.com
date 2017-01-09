@@ -2,6 +2,8 @@
 layout: post
 title: L'abondance contre l'économie
 date: 2011-06-08 08:42:37+02:00
+tags:
+- planet-libre
 ---
 
 {: .center}

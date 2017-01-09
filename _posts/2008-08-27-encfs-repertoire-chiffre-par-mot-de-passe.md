@@ -2,6 +2,9 @@
 layout: post
 title: 'encfs : répertoire chiffré par mot de passe'
 date: 2008-08-27 17:57:00+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ce billet présente comment avoir un (ou plusieurs) répertoire(s) chiffré(s).

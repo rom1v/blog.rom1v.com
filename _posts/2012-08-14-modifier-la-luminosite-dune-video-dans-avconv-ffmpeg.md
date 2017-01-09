@@ -2,6 +2,8 @@
 layout: post
 title: Modifier la luminosité d'une vidéo dans avconv (ffmpeg)
 date: 2012-08-14 12:26:38+02:00
+tags:
+- planet-libre
 ---
 
 Pour partager des vidéos capturées par mon appareil photo, je les convertissais

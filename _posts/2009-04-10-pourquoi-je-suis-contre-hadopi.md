@@ -2,6 +2,8 @@
 layout: post
 title: Pourquoi je suis contre Hadopi
 date: 2009-04-10 15:36:10+02:00
+tags:
+- planet-libre
 ---
 
 J'ai résisté depuis le début à l'idée de faire un billet à propos de la loi

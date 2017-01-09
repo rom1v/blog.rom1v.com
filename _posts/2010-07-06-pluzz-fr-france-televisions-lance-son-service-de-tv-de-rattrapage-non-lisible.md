@@ -2,6 +2,9 @@
 layout: post
 title: 'Pluzz.fr : France Télévisions lance son service de TV de rattrapage non lisible'
 date: 2010-07-06 14:57:11+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 {: .center}

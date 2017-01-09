@@ -2,6 +2,9 @@
 layout: post
 title: 'GIT : squasher des merges'
 date: 2013-05-30 15:40:50+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 {: .center}

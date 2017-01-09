@@ -2,6 +2,9 @@
 layout: post
 title: Utiliser Wireshark sous Debian
 date: 2012-06-02 12:48:21+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 [Wireshark][] est un outil incontournable pour connaître les paquets qui

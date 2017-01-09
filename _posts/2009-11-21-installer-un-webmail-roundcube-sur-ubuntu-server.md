@@ -2,6 +2,9 @@
 layout: post
 title: Installer un webmail (Roundcube) sur Ubuntu Server
 date: 2009-11-21 18:38:55+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Un de mes précédents billets présentait l'[installation d'un serveur de mails

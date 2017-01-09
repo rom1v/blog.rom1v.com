@@ -2,6 +2,9 @@
 layout: post
 title: 'pspxconv : script d''encodage de vidéos pour PSP'
 date: 2008-10-29 17:37:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 J'ai récemment acheté une PSP, et je voulais pouvoir encoder mes vidéos

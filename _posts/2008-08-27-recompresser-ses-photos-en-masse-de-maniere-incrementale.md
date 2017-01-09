@@ -2,6 +2,9 @@
 layout: post
 title: Recompresser ses photos en masse de manière incrémentale
 date: 2008-08-27 18:45:00+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Mon appareil photo possède 3 réglages de "qualité" (niveau de compression

@@ -2,6 +2,9 @@
 layout: post
 title: Améliorer les performances nvidia sous compiz-fusion
 date: 2008-10-07 12:22:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ce billet s'adresse aux possesseurs de carte graphique **nvidia** qui utilisent

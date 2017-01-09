@@ -2,6 +2,9 @@
 layout: post
 title: 'Le format de compression 7zip : impressionnant !'
 date: 2008-08-27 08:30:00+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 J'en avais déjà entendu parler, je l'ai déjà utilisé juste comme ça, mais

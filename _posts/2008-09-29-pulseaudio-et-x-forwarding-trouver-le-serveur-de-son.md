@@ -2,6 +2,9 @@
 layout: post
 title: 'PulseAudio et X-forwarding : trouver le serveur de son'
 date: 2008-09-29 17:55:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 J'avais d'abord présenté comment exécuter un lecteur audio à distance, en ayant

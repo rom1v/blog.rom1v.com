@@ -2,6 +2,9 @@
 layout: post
 title: Ajouter l'authentification SMTP sur un serveur mail
 date: 2010-01-02 20:23:05+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ce billet vient compléter mon premier billet concernant l'[installation d'un

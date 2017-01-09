@@ -2,6 +2,9 @@
 layout: post
 title: Générer des mots de passe aléatoires
 date: 2009-11-21 19:05:29+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Il arrive de vouloir changer de mot de passe, et comme d'habitude, d'en vouloir

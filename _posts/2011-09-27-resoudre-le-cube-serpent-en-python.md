@@ -2,6 +2,8 @@
 layout: post
 title: Résoudre le cube-serpent en Python
 date: 2011-09-27 21:10:34+02:00
+tags:
+- planet-libre
 ---
 
 {: .center}

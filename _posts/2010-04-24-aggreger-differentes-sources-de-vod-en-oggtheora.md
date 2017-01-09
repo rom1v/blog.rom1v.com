@@ -2,6 +2,8 @@
 layout: post
 title: Agréger différentes sources de VOD en OGG/Theora
 date: 2010-04-24 18:58:08+02:00
+tags:
+- planet-libre
 ---
 
 Pour mes flux RSS, j'utilise l'outil [tt-rss][] installé sur

@@ -2,6 +2,9 @@
 layout: post
 title: Optimiser la taille des fichiers png
 date: 2008-08-30 10:02:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 L'outil `optipng` permet d'optimiser les fichiers *png* : les compresser

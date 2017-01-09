@@ -2,6 +2,8 @@
 layout: post
 title: apt-get install hadopi
 date: 2009-09-21 23:29:53+02:00
+tags:
+- planet-libre
 ---
 
 {: .center}

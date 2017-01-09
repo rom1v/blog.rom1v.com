@@ -2,6 +2,9 @@
 layout: post
 title: Installer Debian Sid
 date: 2011-08-28 18:04:31+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Je viens de migrer mon PC principal vers **Debian Sid** (_unstable_), qui

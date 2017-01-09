@@ -2,6 +2,8 @@
 layout: post
 title: Des slides Beamer en Markdown
 date: 2014-02-15 18:29:14+01:00
+tags:
+- planet-libre
 ---
 
 Pour produire des slides propres pour une présentation, j'aime beaucoup

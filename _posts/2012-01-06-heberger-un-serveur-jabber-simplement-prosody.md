@@ -2,6 +2,9 @@
 layout: post
 title: Héberger un serveur Jabber simplement (prosody)
 date: 2012-01-06 22:12:58+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 {: .center}

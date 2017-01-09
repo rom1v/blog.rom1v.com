@@ -2,6 +2,9 @@
 layout: post
 title: Authentification automatique à un réseau WiFi avec NetworkManager
 date: 2011-07-31 11:43:34+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Certains réseaux WiFi sont ouverts (sans clé de sécurité) mais nécessitent une

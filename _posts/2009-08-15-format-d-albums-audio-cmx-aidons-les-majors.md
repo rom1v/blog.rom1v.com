@@ -2,6 +2,8 @@
 layout: post
 title: "Format d'albums audio CMX : aidons les majors !"
 date: 2009-08-15 14:32:29+02:00
+tags:
+- planet-libre
 ---
 
 Les majors [ont annoncé][zdnet] la préparation d'un nouveau format audio : le

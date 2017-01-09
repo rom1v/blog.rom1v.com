@@ -2,6 +2,9 @@
 layout: post
 title: Extraire les recherches Google des logs Apache
 date: 2011-06-24 13:10:36+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Aujourd'hui, c'est un billet de _distraction pour geeks_.

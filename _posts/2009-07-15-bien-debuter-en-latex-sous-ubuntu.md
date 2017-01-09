@@ -2,6 +2,9 @@
 layout: post
 title: Bien débuter en LaTeX sous Ubuntu
 date: 2009-07-15 22:35:38+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Je ne vais pas présenter **LaTeX**. Si vous ne connaissez pas, je vous renvoie

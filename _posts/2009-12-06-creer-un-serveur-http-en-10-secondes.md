@@ -2,6 +2,9 @@
 layout: post
 title: Créer un serveur HTTP en 10 secondes sur Ubuntu grâce à Python
 date: 2009-12-06 15:22:39+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Il suffit d'aller dans le répertoire à partager et d'exécuter :

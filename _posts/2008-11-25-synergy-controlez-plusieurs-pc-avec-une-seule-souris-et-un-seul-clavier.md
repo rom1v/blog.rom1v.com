@@ -2,6 +2,9 @@
 layout: post
 title: 'Synergy : contrôlez plusieurs PC avec une seule souris et un seul clavier'
 date: 2008-11-25 21:10:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 **Synergy** est un outil permettant de contrôler plusieurs ordinateurs avec un

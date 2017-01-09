@@ -2,6 +2,8 @@
 layout: post
 title: Flattr est une arnaque
 date: 2011-04-08 12:09:53+02:00
+tags:
+- planet-libre
 ---
 
 {: .center}

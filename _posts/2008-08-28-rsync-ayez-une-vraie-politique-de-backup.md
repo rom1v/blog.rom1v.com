@@ -2,6 +2,9 @@
 layout: post
 title: 'rsync : ayez une vraie politique de backup !'
 date: 2008-08-28 20:07:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ça vous est déjà arrivé de perdre un disque dur ?

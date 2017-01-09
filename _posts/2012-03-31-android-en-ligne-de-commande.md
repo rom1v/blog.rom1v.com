@@ -2,6 +2,8 @@
 layout: post
 title: Android en ligne de commande
 date: 2012-03-31 20:41:56+02:00
+tags:
+- planet-libre
 ---
 
 Ce billet décrit comment développer et compiler des applications pour _Android_

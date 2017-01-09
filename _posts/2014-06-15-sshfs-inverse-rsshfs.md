@@ -2,6 +2,9 @@
 layout: post
 title: SSHFS inversé (rsshfs)
 date: 2014-06-15 13:30:27+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 [SSHFS][] permet de monter un répertoire d'une machine distance dans

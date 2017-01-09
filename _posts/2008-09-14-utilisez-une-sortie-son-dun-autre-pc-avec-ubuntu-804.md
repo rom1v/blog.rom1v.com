@@ -2,6 +2,9 @@
 layout: post
 title: Utilisez une sortie son d'un autre PC avec Ubuntu 8.04 !
 date: 2008-09-14 12:03:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Dans ma [présentation de SSH][ssh] (au chapitre 5), j'expliquais comment

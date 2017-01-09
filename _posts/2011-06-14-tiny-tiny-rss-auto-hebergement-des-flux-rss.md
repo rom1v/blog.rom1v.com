@@ -2,6 +2,9 @@
 layout: post
 title: 'Tiny Tiny RSS : auto-hébergement des flux RSS'
 date: 2011-06-14 12:11:41+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Je vais expliquer dans ce billet pourquoi et comment installer [Tiny Tiny

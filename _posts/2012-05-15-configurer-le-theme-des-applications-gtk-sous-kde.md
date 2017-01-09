@@ -2,6 +2,9 @@
 layout: post
 title: Configurer le thème des applications GTK sous KDE
 date: 2012-05-15 20:08:19+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Après être passé de [KDE][] à [Gnome][] il y a un peu plus de 4 ans, j'ai décidé

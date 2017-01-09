@@ -2,6 +2,9 @@
 layout: post
 title: Lire des images et des vidéos sans serveur X (dans un TTY)
 date: 2012-04-07 23:01:55+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Saviez-vous qu'il était possible de lire des images et des vidéos dans un TTY,

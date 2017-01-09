@@ -2,6 +2,9 @@
 layout: post
 title: Formater du code C avec indent et Vim
 date: 2012-11-15 12:23:54+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Pour suivre des règles de codage et s'y tenir, rien de tel qu'un outil qui

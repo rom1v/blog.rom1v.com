@@ -2,6 +2,9 @@
 layout: post
 title: 'netcat : communication primaire en TCP'
 date: 2008-11-11 11:06:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Comment envoyer un bout de texte d'un pc à l'autre? Ou même un fichier?

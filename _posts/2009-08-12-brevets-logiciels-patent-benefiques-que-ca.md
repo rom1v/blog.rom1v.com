@@ -2,6 +2,8 @@
 layout: post
 title: 'Brevets logiciels : "patent" bénéfiques que ça…'
 date: 2009-08-12 23:02:20+02:00
+tags:
+- planet-libre
 ---
 
 ## Août, un mois riche en brevets XML

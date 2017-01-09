@@ -2,6 +2,8 @@
 layout: post
 title: 'Paquet telecom : neutralité du Net en danger !'
 date: 2009-09-05 11:42:11+02:00
+tags:
+- planet-libre
 ---
 
 Ce court billet a pour but de relayer l'annonce publiée sur **la Quadrature du

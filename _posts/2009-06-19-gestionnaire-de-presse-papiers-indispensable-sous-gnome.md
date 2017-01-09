@@ -2,6 +2,9 @@
 layout: post
 title: 'Gestionnaire de presse-papiers : indispensable sous Gnome !'
 date: 2009-06-19 22:43:30+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 La gestion du [presse-papiers][] de _Gnome_ par défaut est assez rudimentaire.

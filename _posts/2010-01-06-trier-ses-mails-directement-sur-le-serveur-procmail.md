@@ -2,6 +2,9 @@
 layout: post
 title: Trier ses mails directement sur le serveur (procmail)
 date: 2010-01-06 17:43:18+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 

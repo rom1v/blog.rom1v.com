@@ -2,6 +2,9 @@
 layout: post
 title: Hébergez vos mails sur Ubuntu Server (et libérez-vous)
 date: 2009-08-16 21:52:28+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Après avoir acheté un petit serveur pour y héberger ce dont j'avais besoin, mon

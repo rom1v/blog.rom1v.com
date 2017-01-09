@@ -2,6 +2,9 @@
 layout: post
 title: 'Duplicity : des backups incrémentaux chiffrés'
 date: 2013-08-14 14:59:42+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Quiconque s'[auto-héberge][auto-hébergement] doit maintenir un système de

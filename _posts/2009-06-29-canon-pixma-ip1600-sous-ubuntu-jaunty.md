@@ -2,6 +2,9 @@
 layout: post
 title: Canon PIXMA iP1600 sous Ubuntu Jaunty
 date: 2009-06-29 20:56:46+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 _Ce billet est un petit aide-mémoire pour moi-même._

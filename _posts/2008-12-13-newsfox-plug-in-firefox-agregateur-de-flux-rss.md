@@ -2,6 +2,9 @@
 layout: post
 title: 'NewsFox : plug-in Firefox agrégateur de flux RSS'
 date: 2008-12-13 08:41:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 J'imagine que, comme moi, beaucoup ne peuvent plus se passer des flux RSS. Vous

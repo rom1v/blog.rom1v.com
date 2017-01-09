@@ -2,6 +2,9 @@
 layout: post
 title: Aperçus des fichiers OpenOffice.org dans nautilus
 date: 2009-06-30 20:27:50+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Par défaut, Ubuntu ne gère pas les aperçus des fichiers ODF (format utilisé par

@@ -2,6 +2,9 @@
 layout: post
 title: Splash screen Ubuntu Lucid Lynx (10.04) et pilote NVIDIA propriétaire
 date: 2010-05-13 14:26:53+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 **Ubuntu** utilise maintenant **Plymouth** pour le processus de démarrage

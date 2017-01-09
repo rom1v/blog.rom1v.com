@@ -2,6 +2,9 @@
 layout: post
 title: 'Vidéo OGG Theora sur HTTPS (dans Firefox) : configurer Apache'
 date: 2010-03-27 22:43:52+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Tout le monde a entendu parler de la balise `<video/>`, la nouveauté la plus

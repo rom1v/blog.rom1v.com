@@ -2,6 +2,9 @@
 layout: post
 title: 'Ex Falso : taggeur de fichiers audio'
 date: 2009-03-07 11:22:08+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Je viens de découvrir un petit utilitaire pour tagger les fichiers audio,

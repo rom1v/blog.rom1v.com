@@ -2,6 +2,9 @@
 layout: post
 title: 'Résolution, pixels, points, dpi : un casse-tête insoluble ?'
 date: 2009-03-02 20:33:28+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ce billet fait suite à une [question][] que je me posais sur la résolution _dpi_

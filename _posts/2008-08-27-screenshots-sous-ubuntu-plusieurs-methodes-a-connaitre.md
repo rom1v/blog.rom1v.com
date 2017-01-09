@@ -2,6 +2,9 @@
 layout: post
 title: 'Screenshots sous Ubuntu : plusieurs méthodes à connaître'
 date: 2008-08-27 11:03:00+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 ## Méthode #1

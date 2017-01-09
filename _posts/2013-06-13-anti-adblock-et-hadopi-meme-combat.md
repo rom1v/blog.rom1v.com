@@ -2,6 +2,8 @@
 layout: post
 title: Anti-AdBlock et Hadopi, même combat ?
 date: 2013-06-13 15:47:38+02:00
+tags:
+- planet-libre
 ---
 
 La presse [s'inquiète][nextinpact-réaction] de plus en plus de l'impact des

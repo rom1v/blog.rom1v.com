@@ -2,6 +2,8 @@
 layout: post
 title: 'Piwik : statistiques de votre site sous GPL'
 date: 2009-02-19 20:35:36+01:00
+tags:
+- planet-libre
 ---
 
 Tout le monde (ou presque) connaît l'outil **Google Analytics** proposé par le

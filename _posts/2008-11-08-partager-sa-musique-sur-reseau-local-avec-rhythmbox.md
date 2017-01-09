@@ -2,6 +2,9 @@
 layout: post
 title: Partager sa musique sur réseau local avec Rhythmbox
 date: 2008-11-08 15:30:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Si vous avez plusieurs ordinateurs chez vous, il y a des dizaines de moyens de

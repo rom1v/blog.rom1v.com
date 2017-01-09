@@ -2,6 +2,8 @@
 layout: post
 title: Compiler un exécutable pour Android
 date: 2014-03-18 23:39:52+01:00
+tags:
+- planet-libre
 ---
 
 Je vais présenter dans ce billet comment compiler un exécutable [ARM][] pour

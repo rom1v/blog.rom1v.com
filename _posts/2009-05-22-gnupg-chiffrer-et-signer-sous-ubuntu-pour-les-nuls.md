@@ -2,6 +2,9 @@
 layout: post
 title: 'GnuPG : chiffrer et signer sous Ubuntu pour les nuls'
 date: 2009-05-22 10:26:22+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ce billet présente l'utilisation de [GnuPG][] sous Ubuntu pour chiffrer ses

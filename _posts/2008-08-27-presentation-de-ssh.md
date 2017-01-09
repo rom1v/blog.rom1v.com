@@ -2,6 +2,9 @@
 layout: post
 title: Présentation de SSH
 date: 2008-08-27 17:03:00+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Voici une présentation de **SSH** que j'ai faite à l'[Ubuntu-Party][] de juin

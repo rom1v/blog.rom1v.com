@@ -2,6 +2,9 @@
 layout: post
 title: Chiffrer son dossier personnel (/home) sous Ubuntu
 date: 2010-05-16 15:12:41+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ubuntu permet d'activer le chiffrement du dossier personnel lors de

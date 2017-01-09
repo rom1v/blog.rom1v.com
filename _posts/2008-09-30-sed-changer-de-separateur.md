@@ -2,6 +2,9 @@
 layout: post
 title: 'sed : changer de séparateur'
 date: 2008-09-30 15:03:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Si vous effectuez quelques traitements simples en ligne de commande, vous

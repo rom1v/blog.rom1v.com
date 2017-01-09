@@ -2,6 +2,9 @@
 layout: post
 title: Chiffrer un disque dur externe (ou une clé USB) avec LUKS
 date: 2014-07-20 21:03:33+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Un disque dur externe contenant vos données n'a pas de raisons de ne pas être

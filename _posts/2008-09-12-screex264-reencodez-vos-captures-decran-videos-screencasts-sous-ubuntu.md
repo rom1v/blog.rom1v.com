@@ -2,6 +2,9 @@
 layout: post
 title: 'screex264 : réencodez vos captures d''écran vidéos (screencasts) sous Ubuntu'
 date: 2008-09-12 09:11:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Vous connaissez sans doute l'outil `gtk-recordmydesktop`, qui permet de faire

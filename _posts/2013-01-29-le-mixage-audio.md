@@ -2,6 +2,8 @@
 layout: post
 title: Le mixage audio
 date: 2013-01-29 14:15:45+01:00
+tags:
+- planet-libre
 ---
 
 Que se passe-t-il lorsque nous percevons le son provenant de plusieurs sources

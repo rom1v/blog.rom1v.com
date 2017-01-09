@@ -2,6 +2,8 @@
 layout: post
 title: Motorola Milestone avec Android 2, mes premières impressions
 date: 2010-01-03 18:10:11+01:00
+tags:
+- planet-libre
 ---
 
 Je viens de recevoir mon nouveau téléphone, un Motorola Milestone, avec le

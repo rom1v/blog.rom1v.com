@@ -2,6 +2,8 @@
 layout: post
 title: Partager n'est pas voler !
 date: 2010-03-29 20:32:29+01:00
+tags:
+- planet-libre
 ---
 
 Il y a tout juste un an, durant les débats sur _Hadopi_, la _Quadrature du Net_

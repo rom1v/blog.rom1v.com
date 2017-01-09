@@ -2,6 +2,9 @@
 layout: post
 title: 'imagup : uploader une image en 2 clics'
 date: 2008-08-29 13:27:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 J'ai écrit un petit script pour uploader en ligne de commande une image sur

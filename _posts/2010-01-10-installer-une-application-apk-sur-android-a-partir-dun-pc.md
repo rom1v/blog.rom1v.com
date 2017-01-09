@@ -2,6 +2,9 @@
 layout: post
 title: Installer une application .apk sur Android à partir d'un PC
 date: 2010-01-10 11:12:34+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 J'expliquais, lors de [mes premières impressions d'Android 2 sur le Motorola

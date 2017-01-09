@@ -2,6 +2,9 @@
 layout: post
 title: 'Thunderbird : mails HTML et texte brut'
 date: 2008-09-27 19:33:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Il m'arrive souvent (tout le temps?) de vouloir envoyer des mails en *texte

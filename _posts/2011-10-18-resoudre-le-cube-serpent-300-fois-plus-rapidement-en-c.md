@@ -2,6 +2,8 @@
 layout: post
 title: Résoudre le cube-serpent 300 fois plus rapidement en C
 date: 2011-10-18 22:33:00+01:00
+tags:
+- planet-libre
 ---
 
 Il y a 3 semaines, j'avais écrit un [solveur de cube-serpent en

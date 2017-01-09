@@ -2,6 +2,9 @@
 layout: post
 title: 'Music Player Daemon (MPD) : la musique à distance'
 date: 2010-09-28 20:25:46+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 MPD est un lecteur audio libre un peu particulier : il fonctionne suivant le

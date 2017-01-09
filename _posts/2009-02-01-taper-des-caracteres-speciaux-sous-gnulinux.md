@@ -2,6 +2,9 @@
 layout: post
 title: Taper des caractères spéciaux sous GNU/Linux
 date: 2009-02-01 10:21:54+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ceux qui ont déjà utilisé _Windows_ savent peut-être qu'il est possible d'entrer

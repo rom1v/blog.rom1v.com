@@ -2,6 +2,8 @@
 layout: post
 title: Se connecter à un téléphone Android depuis Debian
 date: 2012-05-24 22:41:09+02:00
+tags:
+- planet-libre
 ---
 
 Je décrivais récemment la marche à suivre pour [se connecter à un téléphone

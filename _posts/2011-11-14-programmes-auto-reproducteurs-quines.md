@@ -2,6 +2,8 @@
 layout: post
 title: Programmes auto-reproducteurs (quines)
 date: 2011-11-14 21:14:17+01:00
+tags:
+- planet-libre
 ---
 
 {: .center}

@@ -2,6 +2,9 @@
 layout: post
 title: Configurer les applis KDE sous Gnome
 date: 2009-06-19 22:12:32+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Même en utilisant _Gnome_, il peut arriver de vouloir utiliser des applications

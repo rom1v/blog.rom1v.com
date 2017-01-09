@@ -2,6 +2,8 @@
 layout: post
 title: Lecture différée de la webcam d'un Raspberry Pi
 date: 2014-01-20 10:20:40+01:00
+tags:
+- planet-libre
 ---
 
 L'objectif de ce billet est de parvenir à lire le flux provenant de la

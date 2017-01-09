@@ -2,6 +2,8 @@
 layout: post
 title: Comportement indéfini et optimisation
 date: 2014-10-22 00:41:59+02:00
+tags:
+- planet-libre
 ---
 
 Dans certains langages (typiquement [C][] et [C++][]), la sémantique de

@@ -2,6 +2,9 @@
 layout: post
 title: Nouveau blog, 100% libre
 date: 2009-01-31 13:25:05+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Je viens de migrer mon blog hébergé sur _blogger_ vers un blog _wordpress_ sur

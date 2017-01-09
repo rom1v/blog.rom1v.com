@@ -2,6 +2,9 @@
 layout: post
 title: 'Son grésillant : volume PCM à réduire'
 date: 2008-09-20 17:48:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Lorsque je lisais de la musique sur mon PC fixe, branché sur l'ampli, le son

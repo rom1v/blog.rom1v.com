@@ -2,6 +2,8 @@
 layout: post
 title: L'argument économique contre le partage
 date: 2012-01-29 14:54:53+01:00
+tags:
+- planet-libre
 ---
 
 Posons comme principe que **le partage d'œuvres sur Internet sans but de profit

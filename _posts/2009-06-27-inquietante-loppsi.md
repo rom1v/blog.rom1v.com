@@ -2,6 +2,8 @@
 layout: post
 title: Inquiétante LOPPSI
 date: 2009-06-27 23:10:17+02:00
+tags:
+- planet-libre
 ---
 
 Le projet de loi [LOPPSI][] _(Loi d'Orientation et de Programmation pour la

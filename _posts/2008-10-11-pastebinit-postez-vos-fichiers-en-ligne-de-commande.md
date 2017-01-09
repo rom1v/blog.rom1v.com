@@ -2,6 +2,9 @@
 layout: post
 title: 'pastebinit : postez vos fichiers en ligne de commande'
 date: 2008-10-11 10:18:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Ceux qui vont souvent sur IRC connaissent [pastebin][], qui

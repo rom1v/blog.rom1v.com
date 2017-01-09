@@ -2,6 +2,9 @@
 layout: post
 title: 'LaTeX : hyperref + numérotation = warning'
 date: 2008-09-14 10:11:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Lorsque l'on veut utiliser [LaTeX][] pour générer un document *pdf*, le package

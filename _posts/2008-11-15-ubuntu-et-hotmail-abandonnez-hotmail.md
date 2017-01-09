@@ -2,6 +2,9 @@
 layout: post
 title: 'Ubuntu et hotmail : abandonnez hotmail !'
 date: 2008-11-15 09:51:00+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 De nombreuses personnes ont rapporté des problèmes avec l'utilisation du webmail

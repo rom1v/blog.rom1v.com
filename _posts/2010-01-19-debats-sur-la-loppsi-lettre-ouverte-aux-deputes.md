@@ -2,6 +2,8 @@
 layout: post
 title: 'Débats sur la LOPPSI : lettre (ouverte) aux députés'
 date: 2010-01-19 22:31:23+01:00
+tags:
+- planet-libre
 ---
 
 > Mesdames et messieurs les députés,

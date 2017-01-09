@@ -2,6 +2,9 @@
 layout: post
 title: 1101 astuces pour Ubuntu 10.10
 date: 2010-11-05 14:11:57+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Dans ce billet, je vais partager avec vous quelques astuces pour des opérations

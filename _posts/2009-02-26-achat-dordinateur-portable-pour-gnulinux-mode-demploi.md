@@ -2,6 +2,8 @@
 layout: post
 title: "Achat d'ordinateur portable pour GNU/Linux : mode d'emploi"
 date: 2009-02-26 08:16:55+01:00
+tags:
+- planet-libre
 ---
 
 Lors de l'achat d'un ordinateur portable destiné à faire tourner une

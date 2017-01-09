@@ -2,6 +2,9 @@
 layout: post
 title: 'Keylogger sous GNU/Linux : enregistrer les touches tapées au clavier'
 date: 2011-11-01 22:09:57+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 En tant que [_root_][root], il est bien sûr potentiellement possible de faire ce que

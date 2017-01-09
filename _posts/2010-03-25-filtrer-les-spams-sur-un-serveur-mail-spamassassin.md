@@ -2,6 +2,9 @@
 layout: post
 title: Filtrer les spams sur un serveur mail (SpamAssassin)
 date: 2010-03-25 22:25:54+01:00
+tags:
+- planet-libre
+- puf
 ---
 
 Pour continuer ma série d'articles sur l'auto-hébergement de ses mails, je vais

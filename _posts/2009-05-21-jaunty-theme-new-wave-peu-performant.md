@@ -2,6 +2,9 @@
 layout: post
 title: 'Jaunty : thème New Wave peu performant'
 date: 2009-05-21 08:27:31+02:00
+tags:
+- planet-libre
+- puf
 ---
 
 Dans Ubuntu Jaunty, le thème par défaut reste **Human** (à gauche), mais
