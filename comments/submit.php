@@ -59,7 +59,10 @@ if ($_POST["url"] !== '')
 $msg .= "  date: " . date($DATE_FORMAT) . "\n";
 $msg .= "  contents: |\n" . $_POST["comment"];
 
-if (mail($EMAIL_ADDRESS, $SUBJECT, $msg, "From: $EMAIL_ADDRESS"))
+$headers = "From: $EMAIL_ADDRESS\n";
+$headers .= "Content-Type: text/plain; charset=utf-8";
+
+if (mail($EMAIL_ADDRESS, $SUBJECT, $msg, $headers))
 {
 	include $COMMENT_SENT;
 }
