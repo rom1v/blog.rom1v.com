@@ -17,13 +17,15 @@ Pour les projets libres, plus de détails sont disponibles sur ma page de
 ## C++
 
 - Refonte complète d'une application C++/Qt (2 ans) (chez [Genymobile][])
-- Écriture d'un wrapper C++ pour certaines parties de `libusb`
+- Écriture d'un [wrapper C++][] pour certaines parties de [`libusb`][libusb]
 - Gestion générique de l'interruption de tâches asynchrones
 - Utilisation de `libqi` pour la création de l'API Android du robot [Pepper][]
 - Talk (interne) sur la gestion des ressources sans pointeurs en C++
 - [Mini-projet][meta] de métaprogrammation par templates
 
 [genymobile]: https://www.genymobile.com/
+[wrapper C++]: {% post_url 2017-01-12-cpp-sans-pointeurs %}#libusb-wrappers
+[libusb]: http://libusb.info/
 [meta]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
 [pepper]: https://fr.wikipedia.org/wiki/Pepper_%28robot%29
 
@@ -32,7 +34,7 @@ Pour les projets libres, plus de détails sont disponibles sur ma page de
 
 - Modifications du protocole MDP et parallélisation de Rhizome (projet [Serval][])
 - Projet `delay` (voir [article][delay])
-- Utilisation de `libusb` pour forwarder à partir d'un pc les événements HID d'une souris vers un device Android
+- Utilisation de [`libusb`][libusb] pour _forwarder_ à partir d'un pc les événements HID d'une souris vers un device Android
 
 [serval]: /contrib#servalbatphone
 [delay]: {% post_url 2014-01-20-lecture-differee-de-la-webcam-dun-raspberry-pi %}
