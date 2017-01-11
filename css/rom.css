@@ -15,6 +15,10 @@ img {
     margin: 0;
 }
 
+a code {
+    color: #268bd2;
+}
+
 .pagination-item {
     border: medium none;
     width: 50%;
