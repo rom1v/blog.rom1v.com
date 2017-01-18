@@ -49,6 +49,7 @@ if (!isset($_POST["post_id"])) {
 
 $msg = "post_id: " . $_POST["post_id"] . "\n";
 $msg .= "email: " . $_POST["email"] . "\n";
+$msg .= "address: " . $_SERVER["REMOTE_ADDR"] . "\n";
 $msg .= "---\n";
 $msg .= "- id: ?\n";
 $msg .= "  author: " . $_POST["name"] . "\n";
