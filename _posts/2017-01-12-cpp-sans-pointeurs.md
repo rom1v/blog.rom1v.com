@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++ sans *pointers
+title: C++ sans *pointeurs
 date: 2017-01-12 19:33:14+01:00
 tags:
 - planet-libre
@@ -71,7 +71,7 @@ string getName() {
     return "my name";
 }
 
-// Qt versiont
+// Qt version
 QString getName() {
     return "my name";
 }
@@ -84,9 +84,9 @@ Notre objectif est d'écrire des classes qui s'utiliseront de la même manière.
 
 Il faut distinguer deux types de _raw pointers_ :
 
- 1. ceux que l'on _détient_ (**_owning_**), dont on est responsable de la durée
-de vie ;
- 2. ceux que l'on ne _détient_ pas (**_non-owning_**).
+ 1. ceux qui détiennent l'objet pointé (**_owning_**), qui devront être
+libérés ;
+ 2. ceux qui ne le détiennent pas (**_non-owning_**).
 
 Le plus simple est de les comparer sur un exemple.
 
@@ -150,7 +150,7 @@ bool parse() {
     QFile file("file.txt");
     if (!file.open(QIODevice::ReadOnly))
         return false;
-    bool result = parser.parse(&file);
+    bool result = parser->parse(&file);
     delete parser;
     return result;
     // parser leaked if open failed
@@ -261,7 +261,7 @@ forcément qui a la responsabilité de le supprimer, ni comment le supprimer :
 Data *data = getSomeData();
 delete data; // ?
 free(data); // ?
-custom_data_deleter(data); // ?
+custom_deleter(data); // ?
 {% endhighlight %}
 
 _Qt fournit un mécanisme pour supprimer automatiquement les `QObject *` quand
@@ -310,9 +310,9 @@ pointeurs.**
 
 ### Privilégier les valeurs
 
-Dans les cas où les pointeurs sont utilisés uniquement pour éviter des copies
-(et non pour partager des objets), il est préférable de **passer les objets par
-valeur** à la place.
+Dans les cas où les pointeurs sont utilisés uniquement pour éviter de retourner
+des copies (et non pour partager des objets), il est préférable de **retourner
+les objets par valeur** à la place.
 
 Par exemple, si vous avez une classe :
 
@@ -346,7 +346,7 @@ qu'à travers un pointeur (car il faut le copier).
 
 Mais cette inefficacité est à relativiser.
 
-D'abord parce quand certains cas _(quand l'objet est copié à partir d'une
+D'abord parce que dans certains cas _(quand l'objet est copié à partir d'une
 [rvalue reference][])_, la copie sera remplacée par un [_move_][move]. Le _move_
 d'un [`vector`][vector] par exemple n'entraîne aucune copie (ni _move_) de ses
 éléments.
@@ -379,7 +379,7 @@ couramment utilisés en C++.
 Ils ont souvent un nom étrange. Par exemple :
 
  - [RAII][] _(Resource Acquisition Is Initialization)_
- - [PIMPL][] _(Private IMPLementation)_
+ - [PIMPL][] _(Pointer to IMPLementation)_
  - [CRTP][] _(Curiously Recurring Template Pattern)_
  - [SFINAE][] _(Substitution Failure Is Not An Error)_
  - [IIFE][] _(Immediately-Invoked Function Expression)_
@@ -404,12 +404,12 @@ bool submit() {
 }
 {% endhighlight %}
 
-Supposons que `validate()` et `something()` puissent lever une [exception][].
-
 [exception]: http://en.cppreference.com/w/cpp/language/exceptions
 
 Nous souhaitons rendre cette méthode [thread-safe][] grâce à un [mutex][]
 ([`std::mutex`][std::mutex] en STL ou [`QMutex`][QMutex] en Qt).
+
+Supposons que `validate()` et `something()` puissent lever une [exception][].
 
 Le _mutex_ doit être déverrouillé à la fin de l'exécution de la méthode. Le
 problème, c'est que cela peut se produire à différents endroits, donc nous
@@ -457,7 +457,7 @@ bool submit() {
 
 En ajoutant une seule ligne, la méthode est devenue _thread-safe_.
 
-Cette technique consiste à utiliser le cycle de vie d'un objet pour allouer une
+Cette technique consiste à utiliser le cycle de vie d'un objet pour acquérir une
 ressource dans le constructeur (ici verrouiller le _mutex_) et la relâcher dans
 le destructeur (ici le déverrouiller).
 
@@ -578,7 +578,7 @@ void Device::printInfo() {
 ### Shared pointers
 
 Les _shared pointers_ permettent de partager l'_ownership_ (la responsabilité de
-suppression) d'un pointeur.
+suppression) d'une ressource.
 
 Ils contiennent un [compteur de références][refcount], indiquant le nombre
 d'instances partageant le même pointeur. Lorsque ce compteur tombe à 0, le
@@ -992,7 +992,7 @@ UsbDevice UsbDeviceMonitor::getAnyMouse() const {
 }
 {% endhighlight %}
 
-Si une souris est trouvé dans la liste, on la retourne simplement ; sinon, on
+Si une souris est trouvée dans la liste, on la retourne simplement ; sinon, on
 retourne un `UsbDevice` "[_null_][null]".
 
 [null]: http://doc.qt.io/qt-5/qstring.html#isNull
