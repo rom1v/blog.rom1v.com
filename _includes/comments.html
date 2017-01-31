@@ -28,6 +28,7 @@
 <form method="POST" action="/comments/submit.php">
     <input type="hidden" name="post_id" value="{{ page.id }}" />
     <input type="hidden" name="return_url" value="{{ page.url }}" />
+    <input type="hidden" id="antispam" name="antispam" value="" />
     <table class="comment-table">
         <tr>
             <th>Nom :</th>
@@ -63,6 +64,9 @@
         </tr>
     </table>
 </form>
+<script type="text/javascript">
+    document.getElementById('antispam').value = "not-a-stupid-robot";
+</script>
 {% endif %}
 {% endif %}
 {% endif %}
