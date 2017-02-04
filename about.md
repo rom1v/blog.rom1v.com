@@ -19,6 +19,7 @@ Romain Vimont (®om)
  * **E-mail :** `rom` suivi de `@rom1v.com` <code style="color:orange; font-size: 6pt">echo abc@def.ghi | sed 's/abc\|de/rom/g;s/f/1v/;s/ghi/com/'</code>
  * **Jabber :** comme le mail
  * **GitHub :** [github.com/rom1v](https://github.com/rom1v)
+ * **StackOverflow :** [stackoverflow.com/…/rom1v](https://stackoverflow.com/users/1987178/rom1v)
 
 *Ne me cherchez pas sur Facebook ou Twitter, je n'y suis pas.*
 
