@@ -25,10 +25,9 @@
 <p><em>Les commentaires sont fermés.<em></p>
 {% else if %}
 <h3 class="comment-title">Poster un commentaire</h3>
-<form method="POST" action="/comments/submit.php" onSubmit="noSpam()">
+<form method="POST" action="/comments/submit.php">
     <input type="hidden" name="post_id" value="{{ page.id }}" />
     <input type="hidden" name="return_url" value="{{ page.url }}" />
-    <input type="hidden" id="antispam" name="antispam" value="" />
     <table class="comment-table">
         <tr>
             <th>Nom :</th>
@@ -53,6 +52,12 @@
         </tr>
         <tr>
             <td colspan="2">
+                Quelle est la 3e lettre du mot <code>blog</code>&nbsp;? <input type="text" name="antispam" size="1" maxlength="1" />
+                <em>(antispam)</em>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
                 <textarea name="comment" rows="10"></textarea><br />
                 <em>Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.</em>
             </td>
@@ -64,11 +69,6 @@
         </tr>
     </table>
 </form>
-<script type="text/javascript">
-function noSpam() {
-    document.getElementById('antispam').value = "not-a-stupid-robot";
-}
-</script>
 {% endif %}
 {% endif %}
 {% endif %}

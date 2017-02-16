@@ -42,8 +42,9 @@ $COMMENT_SENT = "sent.html";
  * HERE BE CODE
  ****************************************************************************/
 
-if (!isset($_POST["post_id"]) || $_POST["antispam"] !== "not-a-stupid-robot") {
-	http_response_code(403);
+if (!isset($_POST["post_id"]) || $_POST["antispam"] !== "o") {
+//	do not indicate to bots that this is an error
+//	http_response_code(403);
 	header('Content-Type: text/plain; charset=utf-8');
 	echo "Soumission refusée.";
 	return;
