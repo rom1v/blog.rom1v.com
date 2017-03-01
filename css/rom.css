@@ -21,6 +21,20 @@ a code {
     color: #268bd2;
 }
 
+/* diff remove */
+.highlight .gd {
+    background: none;
+    border: none;
+    color: #900;
+}
+
+/* diff add */
+.highlight .gi {
+    background: none;
+    border: none;
+    color: #090;
+}
+
 .pagination-item {
     border: medium none;
     width: 50%;
