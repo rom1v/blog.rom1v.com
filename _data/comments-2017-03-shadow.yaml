@@ -4,3 +4,10 @@
   date: 2017-03-01 07:16:50+01:00
   contents: |
       Bel article. Merci.
+- id: 2
+  author: node
+  date: 2017-03-01 10:31:27+01:00
+  contents: |
+    Pour en savoir davantage :
+
+    <https://www.nolimitsecu.fr/shattered-cloudbleed/>
