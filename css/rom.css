@@ -8,6 +8,8 @@ code {
 
 pre {
     font-size: .7rem;
+    white-space: pre;
+    overflow: auto;
 }
 
 img {
