@@ -302,3 +302,15 @@
      * [Analysis: Is there a backdoor in Truecrypt? Is Truecrypt a CIA honeypot?](http://www.privacylover.com/encryption/analysis-is-there-a-backdoor-in-truecrypt-is-truecrypt-a-cia-honeypot/)
      * [Résumé de l'affaire TrueCrypt](http://linuxfr.org/news/resume-de-l-affaire-truecrypt)
      * [License and source model](https://en.wikipedia.org/wiki/TrueCrypt#License_and_source_model)
+- id: 18
+  author: FrankiBoy
+  date: 2017-03-07 15:10:19+01:00
+  contents: |
+    Merci pour ce tuto clair et concis !!! :D
+
+    les données sont chiffrés et si jamais je paume cette clé USB, le premier
+    couillon venu (Windowsien donc) pourra pas lire les trucs qui sont dessus.
+    Parfait !!!
+
+    Et pardessus le marché, Windows lui proposera d'office de formater la clé
+    car EXT4, elle est pas belle la vie ? :-p
