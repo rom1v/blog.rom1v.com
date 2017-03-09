@@ -11,3 +11,13 @@
     Pour en savoir davantage :
 
     <https://www.nolimitsecu.fr/shattered-cloudbleed/>
+- id: 3
+  author: Sbgodin
+  author-url: http://sbgodin.fr/
+  date: 2017-03-08 23:51:14+01:00
+  contents: |
+    Merci beaucoup pour l'article, que j'ai lu avec intérêt. J'ai publié une
+    analyse reprenant le principe de ton article, mais en le vulgarisant et
+    appliqué à un programme Python.
+
+    <https://blog.sbgodin.fr/article6/shadow-py>
