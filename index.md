@@ -76,6 +76,7 @@ permalink: index/
  * [Utiliser Wireshark sous Debian]({% post_url 2012-06-02-utiliser-wireshark-sous-debian %}) (2012)
  * [Modifier la luminosité d'une vidéo dans avconv (ffmpeg)]({% post_url 2012-08-14-modifier-la-luminosite-dune-video-dans-avconv-ffmpeg %}) (2012)
  * [Des slides Beamer en Markdown]({% post_url 2014-02-15-des-slides-beamer-en-markdown %}) (2014)
+ * [Serveur-client]({% post_url 2017-03-12-serveur-client %}) (2017)
 
 ## Opinions
 
