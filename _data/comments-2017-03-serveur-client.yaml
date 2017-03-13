@@ -28,3 +28,12 @@
 
     Le blog local est alors accessible à l'adresse
     [localhost:4000](http://localhost:4000/).
+- id: 3
+  author: Bastien
+  author-url: https://bzg.fr
+  date: 2017-03-13 09:34:44+01:00
+  contents: |
+    D'après [ce post][], le moteur de ce blog est
+    [jekyll](https://jekyllrb.com).
+
+    [ce post]: {% post_url 2017-01-09-commentaires-statiques-avec-jekyll %}
