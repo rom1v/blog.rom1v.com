@@ -6,6 +6,14 @@ tags:
 - planet-libre
 ---
 
+L'objectif de ce billet est de parvenir à nous connecter à un serveur a priori
+inaccessible derrière un [NAT][].
+
+[NAT]: https://fr.wikipedia.org/wiki/Network_address_translation
+
+
+## Client-serveur
+
 De nos jours, [TCP][] est toujours utilisé en mode [client-serveur][] :
 
  - le **serveur** écoute _passivement_ sur un [port][] donné, en attente de la
@@ -38,13 +46,12 @@ celle qui répondra aux requêtes (des clients).
 
 ## Puis vint le NAT…
 
-Avec la [pénurie d'adresses IPv4][pénurie], le [NAT][] s'est généralisé. Bien
+Avec la [pénurie d'adresses IPv4][pénurie], le NAT s'est généralisé. Bien
 souvent, un accès internet ne fournit qu'une seule adresse [IPv4][]. Les
 différents ordinateurs partageant la même connexion ne sont alors pas
 accessibles directement depuis l'extérieur (il est nécessaire d'[ouvrir des
 ports][]).
 
-[NAT]: https://fr.wikipedia.org/wiki/Network_address_translation
 [pénurie]: https://fr.wikipedia.org/wiki/%C3%89puisement_des_adresses_IPv4
 [IPv4]: https://fr.wikipedia.org/wiki/IPv4
 [ouvrir des ports]: https://fr.wikipedia.org/wiki/Redirection_de_port
