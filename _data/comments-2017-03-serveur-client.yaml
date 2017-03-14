@@ -37,3 +37,9 @@
     [jekyll](https://jekyllrb.com).
 
     [ce post]: {% post_url 2017-01-09-commentaires-statiques-avec-jekyll %}
+- id: 4
+  author: Oli
+  date: 2017-03-13 23:25:05+01:00
+  contents: |
+    J’ai eu du mal à lire ce post, ne sachant pas où tu voulais en venir. Une
+    petite intro aiderait.
