@@ -51,3 +51,18 @@
 
     Je viens de rajouter une petite phrase d'introduction, j'espère que ça
     éclairera l'objectif du billet dès le départ.
+- id: 6
+  author: nono
+  date: 2017-03-15 10:16:26+01:00
+  contents: |
+    Article bien sympathique. Pour rendre tout ça (presque) transparent pour le
+    client (dans le cas d'une aide à distance par exemple :) ), tu peux aussi
+    passer par des services comme [tmate](https://tmate.io/). Une fois le cap de
+    l'install passé, tu n'as plus qu'à faire `tmate` côté client qui crée une
+    session tmux disponible à distance et passer le lien généré à ceux que tu
+    veux. Tu peux aussi rendre la session accessible uniquement en lecture
+    (pratique pour des démos par exemple).
+
+    Si tu ne fais pas confiance aux serveurs de tmate, il est possible d'avoir
+    ton propre serveur tmate (tmate-slave). Le code est sous licence BSD et
+    disponible sur [github](https://github.com/tmate-io/).
