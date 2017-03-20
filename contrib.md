@@ -27,6 +27,7 @@ avec une description succincte.
   * [`AImageView`](https://github.com/rom1v/AImageView)/[`AImageViewSample`](https://github.com/rom1v/AImageViewSample) ([article][blog-aimageview])
   * [`metahanoi`](https://github.com/rom1v/metahanoi) ([article][blog-metahanoi])
   * [`shadow`](https://github.com/rom1v/shadow) ([article][blog-shadow])
+  * [`gnirehtet`](https://github.com/Genymobile/gnirehtet) ([article][blog-gnirehtet])
 
 [blog-pluzz]: {% post_url 2010-07-06-pluzz-fr-france-televisions-lance-son-service-de-tv-de-rattrapage-non-lisible %}
 [blog-snakesolver]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
@@ -40,6 +41,7 @@ avec une description succincte.
 [blog-aimageview]: {% post_url 2014-10-20-aimageview-composant-android %}
 [blog-metahanoi]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
 [blog-shadow]: {% post_url 2017-03-01-shadow %}
+[blog-gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
 
 
 ## libusb

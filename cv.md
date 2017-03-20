@@ -44,6 +44,8 @@ Pour les projets libres, plus de détails sont disponibles sur ma page de
 
 Java est mon language maternel ;-)
 
+- Développement d'une application de _reverse tethering_ pour Android (voir
+  [article][gnirehtet])
 - Conception et réalisation de l'API Android du robot [Pepper] (pour
   [Aldebaran][])
     - bindings des `promise`/`future` C++ de `libqi` en Java (à travers JNI)
@@ -68,6 +70,7 @@ Java est mon language maternel ;-)
   corriger des bugs récurrents ou aléatoires
 - Applications e-mail et Twitter pour le tableau de bord de la Renault Zoé
 
+[gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
 [Aldebaran]: https://www.ald.softbankrobotics.com/fr
 [AndroidAnnotations]: /contrib#androidannotations
 [ExpWay]: http://www.expway.com/

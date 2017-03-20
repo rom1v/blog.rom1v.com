@@ -28,6 +28,7 @@ permalink: articles/
  * [Exécuter un algorithme lors de la compilation (templates C++)]({% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}) (2015)
  * [C++ sans *pointeurs]({% post_url 2017-01-12-cpp-sans-pointeurs %}) (2017)
  * [SHAdow]({% post_url 2017-03-01-shadow %}) (2017)
+ * [Gnirehtet]({% post_url 2017-03-30-gnirehtet %}) (2017)
 
 ## Mathématiques
 
