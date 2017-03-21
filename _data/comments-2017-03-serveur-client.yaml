@@ -78,3 +78,15 @@
     initialement établie du serveur vers le client.
 
     <http://www.magdiblog.fr/divers/ssh-connect-back-comment-garder-la-main-sur-un-raspberry-pi-connecte-a-internet-via-un-dongle-3g/>
+- id: 8
+  author: ®om
+  date: 2017-03-21 12:34:13+01:00
+  contents: |
+    > @[**Vincent**](#comment-7)
+    >
+    > Autre méthode qui n'a pas été évoquée : la remontée 'une connexion SSH
+    > initialement établie du serveur vers le client.
+
+    En fait, c'est la même méthode que celle que décrit la section
+    [redirection de port distant via SSH](#redirection-de-port-distant-via-ssh)
+    ;-)
