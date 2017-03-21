@@ -66,3 +66,15 @@
     Si tu ne fais pas confiance aux serveurs de tmate, il est possible d'avoir
     ton propre serveur tmate (tmate-slave). Le code est sous licence BSD et
     disponible sur [github](https://github.com/tmate-io/).
+- id: 7
+  author: Vincent
+  author-url: http://influence-pc.fr
+  date: 2017-03-21 12:24:50+01:00
+  contents: |
+    Super intéressant merci ! Et en effet, les schémas sont clairs et aident
+    bien.
+
+    Autre méthode qui n'a pas été évoquée : la remontée d'une connexion SSH
+    initialement établie du serveur vers le client.
+
+    <http://www.magdiblog.fr/divers/ssh-connect-back-comment-garder-la-main-sur-un-raspberry-pi-connecte-a-internet-via-un-dongle-3g/>
