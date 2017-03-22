@@ -37,3 +37,12 @@
     mon blog et depuis quelques jours je reçois une dizaine de spam par jour.
 
     Je vais regarder de plus près tes méthodes, elles marchent bien ?
+- id: 4
+  author: ®om
+  date: 2017-03-22 09:20:08+01:00
+  contents: |
+    Depuis [ce commit], l'anti-spam est très efficace. Il n'y a que 2 spams qui
+    sont passés en plus d'un mois (et c'est sans doute parce que la réponse
+    demandée tient sur 1 seul caractère).
+
+    [ce commit]: https://github.com/rom1v/blog.rom1v.com/commit/c791f464bbfdd9e361d1e9137fbea7cab847d481
