@@ -281,3 +281,9 @@
     Ce qu'il montre, c'est qu'un programme *non-root* a accès à tous les
     événements X. N'importe quel programme *non-root* y a donc accès, ne
     serait-ce qu'en faisant la même chose que `xinput`…
+- id: 28
+  author: joseph-tux
+  date: 2017-03-27 13:25:16+02:00
+  contents: |
+    Sur ma Jessie (Debian stable à cette date), xinput n'est pas installé
+    d'office.
