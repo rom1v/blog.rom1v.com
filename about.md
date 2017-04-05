@@ -10,7 +10,7 @@ Ceci est mon blog personnel.
 
 Il est principalement dédié à l'informatique et au développement logiciel.
 
-Vous pouvez consulter ma [liste de billets](/index).
+Vous pouvez consulter ma [liste de billets](/articles/).
 
 ## Contact
 
