@@ -6,3 +6,12 @@
     Hello,
 
     Chouette article, super projet. Bravo ! 👍
+- id: 2
+  author: Philippe G.
+  date: 2017-04-05 23:27:11+02:00
+  contents: |
+    J'ai testé. Bravo !
+
+    Quelle performance peut on espérer ?
+    J'obtient environ 13Mb/s en débit et 50ms de ping.
+    La limite est elle du à adb ? à l'usb ?
