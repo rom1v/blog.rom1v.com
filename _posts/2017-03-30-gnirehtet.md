@@ -35,7 +35,7 @@ commande suivante sur le PC :
 
     ./gnirehtet rt
 
-[release]: https://github.com/Genymobile/gnirehtet/releases
+[release]: https://github.com/Genymobile/gnirehtet/releases/latest
 
 Une fois activé, un logo en forme de clé apparaît dans la barre de statut du
 téléphone :
