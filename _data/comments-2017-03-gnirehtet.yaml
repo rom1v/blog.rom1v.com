@@ -15,3 +15,34 @@
     Quelle performance peut on espérer ?
     J'obtient environ 13Mb/s en débit et 50ms de ping.
     La limite est elle du à adb ? à l'usb ?
+- id: 3
+  author: ®om
+  date: 2017-04-06 20:17:10+02:00
+  contents: |
+    J'ai créé un fichier aléatoire de 500Mio :
+
+    {% highlight bash %}
+    dd if=/dev/urandom of=test bs=1M count=500
+    {% endhighlight %}
+
+    J'ai chronométré le temps nécessaire pour le copier par `adb` directement :
+
+    {% highlight bash %}
+    time adb push test /sdcard/
+    {% endhighlight %}
+
+    Il a fallu **1mn28**, soit 5,68Mio/s.
+
+    J'ai ensuite hébergé ce fichier sur le PC avec _Apache_, puis j'ai
+    chronométré le temps nécessaire pour le télécharger depuis Firefox sur
+    Android (tip: `10.0.2.2` est l'adresse du PC depuis le device lorsque
+    _gnirehtet_ est activé).
+
+    Ça a pris **1mn35**, soit 5,26Mio/s.
+
+    Les résultats sont donc très proches d'`adb` (légèrement inférieurs sans
+    doute parce que les paquets TCP sont découpés en plus petits bouts). Je
+    pense donc que la limite vient d'`adb` (l'USB 2 et 3 sont plus rapides).
+
+    Pour info, j'ai fait le même test en wifi (le device et le laptop tous deux
+    connectés à ma box) : **7mn20**, soit 1,14Mio/s.
