@@ -53,3 +53,18 @@
     Merci Romain,
 
     Gnirehtet est exactement ce qu'il me fallait …
+- id: 5
+  author: Jacques
+  date: 2017-04-08 21:58:21+02:00
+  contents: |
+    Salut
+    Merci infiniment pour cet utilitaire, c'est _exactement_ ce que je
+    cherchais !
+    Par contre, quand le lance ./gnirehtet, j'obtiens un horrible "Failure
+    [INSTALL_FAILED_OLDER_SDK]"
+    De ce que j'ai compris, tu as spécifié un numéro de version minimum dans ton
+    APK, et j'aurais une version trop vieille avec mon Android 4.4.2, cest bien
+    ça ?
+
+    Y aurait-il une solution autre que de faire la mise à jour d'Android ? (ce
+    qui ne m'enchante pas du tout)
