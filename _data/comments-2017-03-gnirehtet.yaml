@@ -68,3 +68,35 @@
 
     Y aurait-il une solution autre que de faire la mise à jour d'Android ? (ce
     qui ne m'enchante pas du tout)
+- id: 6
+  author: ®om
+  date: 2017-04-09 10:58:08+02:00
+  contents: |
+    > De ce que j’ai compris, tu as spécifié un numéro de version minimum dans
+    > ton APK, et j’aurais une version trop vieille avec mon Android 4.4.2, cest
+    > bien ça ?
+
+    Oui, c'est bien ça.
+
+    > Y aurait-il une solution autre que de faire la mise à jour d’Android ?
+
+    Je te conseille de suivre l'[issue #2].
+
+    [issue #2]: https://github.com/Genymobile/gnirehtet/issues/2
+
+    En gros, il serait possible de supporter des versions plus anciennes :
+
+     - soit en ajoutant une dépendance vers le NDK (ce que je voudrais éviter
+       juste pour ça) ;
+     - soit en fournissant un mécanisme dégradé pour les anciennes versions
+       (polling).
+
+    En attendant, tu peux utiliser [un autre outil][comment vvviperrr] de
+    reverse tethering qui fonctionne depuis l'API 14 (mais qui nécessite d'être
+    root sur le pc).
+
+    [comment vvviperrr]: https://github.com/Genymobile/gnirehtet/issues/2#issuecomment-292169139
+
+    Dans tous les cas, et indépendamment du reverse tethering, vu le nombre de
+    failles de sécurité découvertes depuis les versions 4, il serait raisonnable
+    de mettre à jour ;-)
