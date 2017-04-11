@@ -100,3 +100,16 @@
     Dans tous les cas, et indépendamment du reverse tethering, vu le nombre de
     failles de sécurité découvertes depuis les versions 4, il serait raisonnable
     de mettre à jour ;-)
+- id: 7
+  author: Jacques
+  date: 2017-04-11 12:46:45+02:00
+  contents: |
+    > Dans tous les cas, et indépendamment du reverse tethering, vu le nombre de
+    > failles de sécurité découvertes depuis les versions 4, il serait
+    > raisonnable de mettre à jour ;-)
+
+    Malheureusement, impossible d'obtenir une mise à jour au-delà de la 4.4.2
+    sans rooter l'appareil, le constructeur ne fournissant pas de version
+    supérieure. C'est pour ça que je ne suis pas chaud pour l'upgrade.
+
+    Merci pour ta réponse, en tout cas.
