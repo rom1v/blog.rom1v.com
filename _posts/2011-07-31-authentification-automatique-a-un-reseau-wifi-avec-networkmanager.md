@@ -75,8 +75,7 @@ et l'envoyer au serveur en [`POST`][post], par exemple grâce à la commande
 [post]: http://fr.wikipedia.org/wiki/HTTP#M.C3.A9thodes
 
 {% highlight bash %}
-POST http://10.9.0.1:8000/ <<<
-'auth_user=IDENTIFIANT&auth_pass=MOT_DE_PASSE&accept=Continuer'
+POST http://10.9.0.1:8000/ <<< 'auth_user=IDENTIFIANT&auth_pass=MOT_DE_PASSE&accept=Continuer'
 {% endhighlight %}
 
 
@@ -85,8 +84,7 @@ Si la page d'authentification est en HTTPS, il faudra installer le paquet
 `libcrypt-ssleay-perl`, ou alors utiliser `wget` :
 
 {% highlight bash %}
-wget -qO- https://10.9.0.1:8000/
---post-data='auth_user=IDENTIFIANT&auth_pass=MOT_DE_PASSE&accept=Continuer'
+wget -qO- https://10.9.0.1:8000/ --post-data='auth_user=IDENTIFIANT&auth_pass=MOT_DE_PASSE&accept=Continuer'
 {% endhighlight %}
 
 

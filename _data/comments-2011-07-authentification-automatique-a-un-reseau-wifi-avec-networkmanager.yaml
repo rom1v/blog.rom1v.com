@@ -125,23 +125,17 @@
     Voila ce qu'on peut trouver dans la balise form :
 
     {% highlight html %}
-    <form action="/auth/index.html/u" autocomplete="off" method="post"
-    onsubmit="return validate();">
-        <div id="titre"><p><img class="img-box"
-    src="https://wifi.u-bourgogne.fr/lock.png"/>  Formulaire de
-    connexion</p></div>
+    <form action="/auth/index.html/u" autocomplete="off" method="post" onsubmit="return validate();">
+        <div id="titre"><p><img class="img-box" src="https://wifi.u-bourgogne.fr/lock.png"/>  Formulaire de connexion</p></div>
         <div id="login">
-            <div id="logo"><a href="http://www.u-bourgogne.fr/"><img id="logo"
-    src="https://wifi.u-bourgogne.fr/ub.gif"/></a></div>
+            <div id="logo"><a href="http://www.u-bourgogne.fr/"><img id="logo" src="https://wifi.u-bourgogne.fr/ub.gif"/></a></div>
             <div class="row">
                 <label for="username">Nom d'utilisateur :</label>
-                <input id="username" name="username" tabindex="1" size="20"
-    autocomplete="false" type="text" value=""/>                        
+                <input id="username" name="username" tabindex="1" size="20" autocomplete="false" type="text" value=""/>
             </div> 
             <div class="row">
                 <label for="password">Mot de passe :</label>
-                <input id="password" name="password" tabindex="2" size="20"
-    autocomplete="false" type="password" value=""/>
+                <input id="password" name="password" tabindex="2" size="20" autocomplete="false" type="password" value=""/>
             </div>
             <div class="row">
                 <label for="fqdn">Population :</label>
@@ -149,19 +143,16 @@
                     <option value="u-bourgogne.fr">Personnel de l'uB</option>
                     <option value="etu.u-bourgogne.fr">Etudiant de l'uB</option>
                     <option value="dijon.iufm.fr">IUFM de Bourgogne</option>
-                    <option value="iut-dijon.u-bourgogne.fr">IUT de
-    Dijon</option>
-                    <option value="iut-chalon.u-bourgogne.fr">IUT de
-    Chalon</option>
-                    <option value="iut-auxerre.u-bourgogne.fr">IUT
-    d'Auxerre</option>
+                    <option value="iut-dijon.u-bourgogne.fr">IUT de Dijon</option>
+                    <option value="iut-chalon.u-bourgogne.fr">IUT de Chalon</option>
+                    <option value="iut-auxerre.u-bourgogne.fr">IUT d'Auxerre</option>
                     <option value="isat.u-bourgogne.fr">ISAT de Nevers</option>
                     <option value="invites.u-bourgogne.fr">Visiteur</option>
                 </select>
             </div>
-            <div class="btn-row"><input id="submit" class="test" type="submit"
-    onmouseover="onSubmitOver();" onmouseout="onSubmitOut();" value="Se
-    connecter" tabindex="3"/></div>
+            <div class="btn-row">
+                <input id="submit" class="test" type="submit" onmouseover="onSubmitOver();" onmouseout="onSubmitOut();" value="Se connecter" tabindex="3"/>
+            </div>
         </div>
     </form>
     {% endhighlight %}
@@ -188,13 +179,10 @@
     #!/bin/bash
     if [ "$1 $2" = 'wlan0 up' ]
     then
-        essid=$(iwconfig wlan0 | grep -o 'ESSID:".*$' | sed
-    's/^ESSID:"\(.*\)".*$/\1/')
+        essid=$(iwconfig wlan0 | grep -o 'ESSID:".*$' | sed 's/^ESSID:"\(.*\)".*$/\1/')
         case "$essid" in
             'universite')
-                POST http://www.u-bourgogne.fr/auth/index.html/u <<<
-    'username=gt846930&password=grossebite&fqdn=etu.u-bourgogne.fr&submit=Se
-    connecter' ;;
+                POST http://www.u-bourgogne.fr/auth/index.html/u <<< 'username=gt846930&password=grossebite&fqdn=etu.u-bourgogne.fr&submit=Se connecter' ;;
             'Fac_dijon')
                 POST http://192.168.0.1 <<< 'accept_cgu=1' ;;
         esac
