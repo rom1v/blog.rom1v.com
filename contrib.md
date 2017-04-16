@@ -27,7 +27,6 @@ avec une description succincte.
   * [`AImageView`](https://github.com/rom1v/AImageView)/[`AImageViewSample`](https://github.com/rom1v/AImageViewSample) ([article][blog-aimageview])
   * [`metahanoi`](https://github.com/rom1v/metahanoi) ([article][blog-metahanoi])
   * [`shadow`](https://github.com/rom1v/shadow) ([article][blog-shadow])
-  * [`gnirehtet`](https://github.com/Genymobile/gnirehtet) ([article][blog-gnirehtet])
 
 [blog-pluzz]: {% post_url 2010-07-06-pluzz-fr-france-televisions-lance-son-service-de-tv-de-rattrapage-non-lisible %}
 [blog-snakesolver]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
@@ -41,8 +40,21 @@ avec une description succincte.
 [blog-aimageview]: {% post_url 2014-10-20-aimageview-composant-android %}
 [blog-metahanoi]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
 [blog-shadow]: {% post_url 2017-03-01-shadow %}
-[blog-gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
 
+
+## gnirehtet
+
+J'ai développé un outil qui permet aux devices Android d'utiliser la connexion
+du PC sur lequel ils sont branchés (_reverse tethering_), sans accès _root_.  
+[`gnirehtet`] ([article][blog-gnirehtet]) \| [LinuxFR][gnirehtet-linuxfr] \|
+[reddit][gnirehtet-reddit] \| [Hacker News][gnirehtet-hn]
+
+[`gnirehtet`]: https://github.com/Genymobile/gnirehtet
+[blog-gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
+[gnirehtet-medium]: https://medium.com/genymobile/gnirehtet-reverse-tethering-android-2afacdbdaec7
+[gnirehtet-linuxfr]: https://linuxfr.org/users/rom1v/journaux/du-reverse-tethering-sur-android-sans-root
+[gnirehtet-reddit]: https://www.reddit.com/r/Android/comments/62lc8z/a_reverse_tethering_tool_for_android_no_root/
+[gnirehtet-hn]: https://news.ycombinator.com/item?id=14011590
 
 ## libusb
 
