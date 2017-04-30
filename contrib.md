@@ -330,37 +330,6 @@ J'ai effectué une minuscule modification d'optimisation des performances.
 [k9mail]: http://code.google.com/p/k9mail/
 
 
-
-## XBMC-remote
-
-[XBMC-remote][] est un client _Android_ pour [XBMC][].
-
-Pour générer un programme exécutable à partir des sources, j'ai généré les
-scripts de _build_ _Ant_ pour le projet et pour une bibliothèque utilisée en
-dépendance.  
-[✎](https://github.com/freezy/android-xbmcremote/pull/74)
-[✎](https://github.com/freezy/xbmc-jsonrpclib-android/pull/4)
-<em style="color: green;">contribution acceptée et mergée</em>
-
-[xbmc-remote]: https://github.com/freezy/android-xbmcremote
-[xbmc]: http://fr.wikipedia.org/wiki/XBMC_Media_Center
-
-
-
-## MPDroid
-
-[MPDroid][] est un client _Android_ pour [MPD][].
-
-Pour générer un programme exécutable à partir des sources, j'ai généré les
-scripts de _build_ _Ant_.  
-[✎](https://github.com/abarisain/dmix/issues/97)
-<em style="color: green;">contribution acceptée et mergée</em>
-
-[mpdroid]: https://github.com/abarisain/dmix
-[mpd]: {% post_url 2010-09-28-music-player-daemon-mpd-la-musique-a-distance %}
-
-
-
 ## MyFreeTV
 
 Un petit logiciel pour regarder la TV avec la _Freebox_ que j'ai commis en 2005.
