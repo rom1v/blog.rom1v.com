@@ -118,3 +118,36 @@
   date: 2017-05-28 09:37:13+02:00
   contents: |
     Très utile. Merci !
+- id: 9
+  author: Wyles
+  date: 2017-06-13 16:41:18+02:00
+  contents: |
+    Salut !
+
+    Merci, ton outil est franchement génial. Il tourne nickel sous Lineage OS
+    (OnePlus 2, 7.1 Nougat) :)
+
+    J'ignore si tu comptes le maintenir plus longtemps que ça, mais as-tu
+    envisagé d'y ajouter quelques fonctions ? Personnellement, j'utilise
+    [NetGuard](https://github.com/M66B/NetGuard) sur mon téléphone (pare-feu
+    open-source qui s'installe en tant que VPN et qui permet de filtrer le
+    trafic des applications), mais je suis obligé de le désactiver pour faire
+    tourner ton application. Je ne sais pas si c'est possible sans root, mais un
+    module permettant de faire passer NetGuard à travers gnirethet serait
+    vraiment cool !
+
+
+    Je me demandais aussi s'il est obligatoire de dépendre d'un serveur DNS
+    (comme celui de Google) pour résoudre les adresses. Je ne m'y connais pas
+    dans ce domaine, mais n'est-il pas possible de résoudre les adresses de la
+    même manière que l'hôte (ou n'importe quel appareil connecté à Internet) le
+    ferait ? J'avoue que je ne suis pas fan de l'idée de dépendre d'un système
+    tiers.
+
+
+    Dernièrement, ça n'a aucun rapport avec cette page mais je me permets de te
+    conseiller d'ajouter un certificat TLS à ton site web ; des services comme
+    [Let's Encrypt](http://letsencrypt.org/) (open source) peuvent t'en générer
+    un gratuitement.
+
+    Bonne continuation !
