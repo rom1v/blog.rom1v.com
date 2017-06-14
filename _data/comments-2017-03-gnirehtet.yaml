@@ -151,3 +151,45 @@
     un gratuitement.
 
     Bonne continuation !
+- id: 10
+  author: ®om
+  date: 2017-06-14 10:42:57+02:00
+  contents: |
+    > Je ne sais pas si c'est possible sans root, mais un module permettant de
+    > faire passer NetGuard à travers gnirethet serait vraiment cool !
+
+    Pour paraphraser
+    [NetGuard](https://github.com/M66B/NetGuard/#compatibility) : Android ne
+    permet pas de chaîner des services VPN, donc il n'est pas possible
+    d'utiliser _gnirehtet_ en même temps que d'autres applications utilisant un
+    service VPN.
+
+    > Je me demandais aussi s'il est obligatoire de dépendre d'un serveur DNS
+    > (comme celui de Google) pour résoudre les adresses.
+
+    Tu peux préciser l'adresse du ou des serveurs DNS à utiliser :
+
+        ./gnirehtet rt [serial] [-d DNS[,DNS2,...]]
+
+    Par exemple, pour un serveur DNS de _Free_ :
+
+        ./gnirehtet rt -d 212.27.54.252
+
+    Si tu n'en précises pas, il utilise celui de Google (8.8.8.8).
+
+    > Je ne m'y connais pas dans ce domaine, mais n'est-il pas possible de
+    > résoudre les adresses de la même manière que l'hôte (ou n'importe quel
+    > appareil connecté à Internet) le ferait ?
+
+    Vu que c'est le device Android qui initie les connexions, c'est lui qui
+    forge les requêtes DNS (qu'il envoie dans des paquets UDP qui sont relayés
+    par _gnirehtet_). Pour cela, il doit connaître l'adresse du serveur DNS à
+    utiliser.
+
+    Si tu veux le même serveur que sur le PC, utilise une adresse listée dans
+    `/etc/resolv.conf`.
+
+    > je me permets de te conseiller d'ajouter un certificat TLS à ton site web
+
+    Oui, j'ai ça dans la section "à faire un jour" de ma todo-list (virtuelle)…
+    :)
