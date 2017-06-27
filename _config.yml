@@ -14,3 +14,5 @@ permalink: /:year/:month/:title/
 author:
   name: Romain Vimont
   email: rom@rom1v.com
+
+gems: [jekyll-paginate]
