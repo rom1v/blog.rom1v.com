@@ -7,45 +7,65 @@ permalink: cv/
 ---
 
 
+## Formation
+
+- Ingénieur en **Informatique et Mathématiques Appliquées** (ENSEEIHT, 2008)
+- Diplôme Universitaire de Technologie Informatique (IUT du Havre, 2005)
+
+
+## Expériences
+
 Je liste pour chaque technologie quelques expériences significatives.
 Pour les projets libres, plus de détails sont disponibles sur ma page de
 [contributions][].
 
 [contributions]: /contrib
 
-
-## C++
+### C++
 
 - Refonte complète d'une application C++/Qt (2 ans) (chez [Genymobile][])
 - Écriture d'un [wrapper C++][] pour certaines parties de [`libusb`][libusb]
-- Gestion générique de l'interruption de tâches asynchrones
+- Mécanisme d'annulation d'exécution en environnement multithread
 - Utilisation de `libqi` pour la création de l'API Android du robot [Pepper][]
 - Talk (interne) sur la gestion des ressources sans pointeurs en C++
+  ([article][nopointers])
 - [Mini-projet][meta] de métaprogrammation par templates
 
 [genymobile]: https://www.genymobile.com/
 [wrapper C++]: {% post_url 2017-01-12-cpp-sans-pointeurs %}#libusb-wrappers
 [libusb]: http://libusb.info/
-[meta]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
 [pepper]: https://fr.wikipedia.org/wiki/Pepper_%28robot%29
+[nopointers]: {% post_url 2017-01-12-cpp-sans-pointeurs %}
+[meta]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
 
 
-## C
+### C
 
-- Modifications du protocole MDP et parallélisation de Rhizome (projet [Serval][])
-- Projet `delay` (voir [article][delay])
-- Utilisation de [`libusb`][libusb] pour _forwarder_ à partir d'un pc les événements HID d'une souris vers un device Android
+- Modifications du protocole MDP du projet [Serval][] (équivalent UDP sur réseau
+  Mesh)
+- Parallélisation de [Rhizome][] pour un partage décentralisé de données
+- PoC de [mixage audio][mixpoc-github] ([article][mixpoc])
+- Projet [`delay`][delay-github] (un _pipe_ à retardement) ([article][delay])
+- Utilisation de [`libusb`][libusb] pour _forwarder_ à partir d'un pc les
+  événements HID d'une souris vers un device Android
+- [Solveur][snakesolver-c-github] de serpent-cube ([article][snakesolver-c])
 
 [serval]: /contrib#servalbatphone
+[rhizome]: /contrib#paralllisation-de-rhizome
+[mixpoc-github]: https://github.com/rom1v/mixpoc
+[mixpoc]: {% post_url 2013-01-29-le-mixage-audio %}
+[delay-github]: https://github.com/rom1v/delay
 [delay]: {% post_url 2014-01-20-lecture-differee-de-la-webcam-dun-raspberry-pi %}
+[snakesolver-c-github]: https://github.com/rom1v/csnakesolver
+[snakesolver-c]: {% post_url 2011-10-18-resoudre-le-cube-serpent-300-fois-plus-rapidement-en-c %}
 
 
-## Java/Android
+### Java/Android
 
 Java est mon language maternel ;-)
 
-- Développement d'une application de _reverse tethering_ pour Android (voir
-  [article][gnirehtet])
+- Développement d'une application de [_reverse tethering_][gnirehtet-contrib]
+  pour Android ([article][gnirehtet])
 - Conception et réalisation de l'API Android du robot [Pepper] (pour
   [Aldebaran][])
     - bindings des `promise`/`future` C++ de `libqi` en Java (à travers JNI)
@@ -53,36 +73,78 @@ Java est mon language maternel ;-)
       avec simplicité (chaînage automatique d'appels asynchrones…)
 - Développement d'un talkie-walkie (pour une conversation à plusieurs) avec
   [mixage audio][mix] utilisant le réseau Mesh de [Serval][]
+- Intégration de cartes IGN avec [osmdroid][] (OpenStreetMap)
 - Ajout de fonctionnalités d'exécution concurrente dans [AndroidAnnotations][]
-- Système vidéo sur set-top box pour une chaîne d'hôtels
+- Système vidéo sur set-top box
     - modifications de la rom CyanogenMod
     - application Android de lecture vidéo (utilisant LibVLC)
     - compilation et intégration d'`udpxy` pour permettre la lecture d'un flux
       UDP multicast par le lecteur natif d'Android (voir [article][udpxy])
-
 - Application Android de lecture vidéo provenant d'un flux UDP envoyé par une
-  caméra de Raspberry Pi (qui filmait le babyfoot), supportant à la fois le
+  caméra de Raspberry Pi (qui filmait un babyfoot), supportant à la fois le
   lecteur natif et LibVLC, et à la fois sur `SurfaceView` et `TextureView` (pour
   des raisons de compatibilité avec différents devices)
-- Aide à l'intégration du timeshifting vidéo dans AOSP (pour [ExpWay][])
-- Intégration de ChromeCast dans l'application Android CanalPlay
+- Aide à l'intégration du timeshifting vidéo dans [AOSP] (pour [ExpWay][])
+- Intégration de [ChromeCast] dans l'application Android CanalPlay (Canal+)
 - Analyse et modifications d'architecture du SDK de [FollowAnalytics][] pour
   corriger des bugs récurrents ou aléatoires
 - Applications e-mail et Twitter pour le tableau de bord de la Renault Zoé
 
+[gnirehtet-contrib]: /contrib#gnirehtet
 [gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
 [Aldebaran]: https://www.ald.softbankrobotics.com/fr
+[osmdroid]: https://github.com/osmdroid/osmdroid
 [AndroidAnnotations]: /contrib#androidannotations
+[AOSP]: https://source.android.com/
 [ExpWay]: http://www.expway.com/
+[ChromeCast]: https://fr.wikipedia.org/wiki/Chromecast
 [FollowAnalytics]: http://followanalytics.com/
 [udpxy]: {% post_url 2014-03-18-compiler-un-executable-pour-android %}
 [mix]: {% post_url 2013-01-29-le-mixage-audio %}
 
 
-## Linux Kernel
+### Python
 
-Je suis en train de participer au challenge [eudyptula][] sur mon temps libre
-(pour l'instant j'ai validé les 8 premiers exercices sur 20).
+J'utilise _Python_ de manière très occasionnelle,
+
+- [SHAdow][shadow-github] (pour générer des collisions SHA1) ([article][shadow])
+- [Solveur][snakesolver-github] de serpent-cube ([article][snakesolver])
+
+[shadow-github]: https://github.com/rom1v/shadow
+[shadow]: {% post_url 2017-03-01-shadow %}
+[snakesolver-github]: https://github.com/rom1v/snakesolver
+[snakesolver]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
+
+
+### Bash
+
+_Bash_ est mon shell par défaut. Il m'arrive d'écrire des scripts, en voici
+quelques uns :
+
+- [Prompt][gitbashprompt-github] pour _git_ ([article][gitbashprompt])
+- [`rsshfs`][rsshfs-github] ([article][rsshfs])
+- Un script de récupération et d'encodage de vidéos ([article][vod])
+
+[gitbashprompt-github]: https://github.com/rom1v/gitbashprompt
+[gitbashprompt]: {% post_url 2012-04-04-prompt-bash-pour-git %}
+[rsshfs-github]: https://github.com/rom1v/rsshfs
+[rsshfs]: {% post_url 2014-06-15-sshfs-inverse-rsshfs %}
+[vod]: {% post_url 2010-04-24-aggreger-differentes-sources-de-vod-en-oggtheora %}
+
+
+### Rust
+
+Je suis en train de réécrire le serveur relai de [gnirehtet][gnirehtet-contrib]
+en [Rust][].
+
+[rust]: https://en.wikipedia.org/wiki/Rust_(programming_language)
+
+
+### Linux Kernel
+
+Je participe au challenge [eudyptula][] sur mon temps libre.
+
+Pour l'instant j'ai validé les 8 premiers exercices sur 20.
 
 [eudyptula]: http://eudyptula-challenge.org/
 
@@ -121,8 +183,11 @@ poste de travail sous _Windows_ ou _Mac_ est rédhibitoire).
 - [The C Programming Language](https://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628/)
 - [C++ Primer](https://www.amazon.com/Primer-5th-Stanley-B-Lippman/dp/0321714113/)
 - [Effective Modern C++](https://www.amazon.com/Effective-Modern-Specific-Ways-Improve/dp/1491903996/)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/)
+- [The Rustonomicon](https://doc.rust-lang.org/nomicon/)
 - [The Art of Multiprocessor Programming](https://www.amazon.com/Art-Multiprocessor-Programming-Maurice-Herlihy/dp/0123705916/) (la partie _Principles_, soit les 6 premiers chapitres)
 - [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/)
 - [Digital Signal Processing](https://www.amazon.com/Scientist-Engineers-Digital-Signal-Processing/dp/0966017633/)
-- [Linux Device Drivers](https://www.amazon.com/Linux-Device-Drivers-Jonathan-Corbet/dp/0596005903/) (en cours)
-- [Linux Kernel Development](https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468/) (en cours)
+- [Pro Git](https://git-scm.com/book/en/v2)
+- [Linux Device Drivers](https://www.amazon.com/Linux-Device-Drivers-Jonathan-Corbet/dp/0596005903/)
+- [Linux Kernel Development](https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468/)
