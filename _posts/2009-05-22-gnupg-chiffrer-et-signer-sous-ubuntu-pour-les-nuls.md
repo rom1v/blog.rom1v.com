@@ -262,7 +262,7 @@ Gérer le Contact → Assigner une clé OpenPGP… :
 Ensuite, lors de la conversation, il est possible d'activer le chiffrement :
 
 {: .center}
-![gpg_gajim_enable]({{ site.assets}}/gnupg/gpg_gajim_enable.png)
+![gpg_gajim_enable]({{ site.assets }}/gnupg/gpg_gajim_enable.png)
 
 Inutile de vous dire que pour la messagerie instantanée, il vaut mieux avoir
 configuré le trousseau pour que la clé soit déverrouillée [durablement][], afin
@@ -280,16 +280,16 @@ cliquer droit sur un panel de Gnome (la barre du haut par exemple), puis
 « Ajouter au tableau de bord… », et l'ajouter :
 
 {: .center}
-![gpg_gnome_applet]({{ site.assets}}/gnupg/gpg_gnome_applet.png)
+![gpg_gnome_applet]({{ site.assets }}/gnupg/gpg_gnome_applet.png)
 
 {: .center}
-![gpg_import_key]({{ site.assets}}/gnupg/gpg_import_key.png)
+![gpg_import_key]({{ site.assets }}/gnupg/gpg_import_key.png)
 
 Petit plus, lorsque le presse-papier contient une clé, l'applet permet de
 l'importer directement dans le trousseau de clés. Une fois que vous avez ajouté
 l'applet, essayez de sélectionner tout le texte de [ma clé publique][].
 
-[ma clé publique]: http://key.rom1v.com/rom_gpg.asc
+[ma clé publique]: /keys/rom_gpg.asc
 
 Ensuite, cliquez sur le bouton de l'applet : vous pourrez importer ma clé
 directement.

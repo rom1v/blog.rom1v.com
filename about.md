@@ -26,7 +26,7 @@ Romain Vimont (®om)
 ## Clé GPG
 
 [`644605F3`](http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x644605F3) (ou
-[`rom_gpg.asc`](http://key.rom1v.com/rom_gpg.asc))
+[`rom_gpg.asc`](/keys/rom_gpg.asc))
 
 **Empreinte :** `86E4 3F4E 340B CCE1 8566 719A 72FC C14D 6446 05F3`
 
