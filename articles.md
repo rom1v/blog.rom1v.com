@@ -29,6 +29,7 @@ permalink: articles/
  * [C++ sans *pointeurs]({% post_url 2017-01-12-cpp-sans-pointeurs %}) (2017)
  * [SHAdow]({% post_url 2017-03-01-shadow %}) (2017)
  * [Gnirehtet]({% post_url 2017-03-30-gnirehtet %}) (2017)
+ * [Fusionner deux dépôts git]({% post_url 2017-07-12-fusionner-deux-depots-git %}) (2017)
 
 ## Mathématiques
 
