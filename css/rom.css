@@ -35,6 +35,10 @@ a code {
     color: #090;
 }
 
+.highlight {
+    margin: 0 0 1rem 0;
+}
+
 .pagination-item {
     border: medium none;
     width: 50%;
