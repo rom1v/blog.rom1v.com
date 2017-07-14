@@ -60,7 +60,9 @@ Dans le répertoire `/etc/prosody/certs`, exécuter :
     openssl req -new -x509 -nodes -out nom.de.domaine.cert -keyout \
         nom.de.domaine.key -days 1000
 
-Renseigner les champs demandés _(« `.` » pour laisser un champ vide)_.
+Renseigner les champs demandés _(« `.` » pour laisser un champ vide)_. En
+particulier, indiquer dans `Common Name` le nom de domaine pour lequel ce
+certificat sera utilisé.
 
 Remplacer le certificat dans le fichier de configuration :
 
