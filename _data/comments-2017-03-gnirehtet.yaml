@@ -193,3 +193,19 @@
 
     Oui, j'ai ça dans la section "à faire un jour" de ma todo-list (virtuelle)…
     :)
+- id: 11
+  author: mvntp
+  date: 2017-07-29 20:11:39+02:00
+  contents: |
+    Hello, on Android 7.1.2 I have the problem that certain apps (Playstore for
+    example) does not recognice the network connection. Other Apps are working
+    fine.
+
+    Is there a solution for that?
+- id: 12
+  author: ®om
+  date: 2017-07-30 22:40:56+02:00
+  contents: |
+    I have no solution (except fixing the apps).
+
+    <https://github.com/Genymobile/gnirehtet/issues/37>
