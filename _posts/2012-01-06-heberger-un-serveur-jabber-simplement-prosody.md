@@ -34,7 +34,7 @@ Tout d'abord, installer le paquet `prosody` :
 
 Puis ajouter à la fin du fichier `/etc/prosody/prosody.cfg.lua` :
 
-    Host "<em>nom.de.domaine</em>"
+    Host "nom.de.domaine"
 
 Pour moi :
 
