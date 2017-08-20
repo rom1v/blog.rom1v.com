@@ -86,13 +86,13 @@ Pour formater cette partition en [ext4][] :
 [ext4]: https://fr.wikipedia.org/wiki/Ext4
 
 {% highlight bash %}
-sudo mkfs.ext4 /dev/mapper/lenomquevousvoulez
+sudo mkfs.ext4 /dev/mapper/lenomquevousvoulez -L unlabel
 {% endhighlight %}
 
 Pour l'initialisation, c'est fini, nous pouvons fermer la vue déchiffrée :
 
 {% highlight bash %}
-cryptsetup luksClose lenomquevousvoulez
+sudo cryptsetup luksClose lenomquevousvoulez
 {% endhighlight %}
 
 
