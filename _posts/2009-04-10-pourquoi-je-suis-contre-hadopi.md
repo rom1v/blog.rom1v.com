@@ -211,10 +211,8 @@ ailleurs beaucoup de contenus légaux), et d'avoir la chance que la date et
 l'heure d'accusation coïncide avec celle de fonctionnement du logiciel en
 question (en particulier il faut que l'ordinateur soit allumé).
 
-{% if false %}
 _**EDIT :** À lire également :_
 
-  * [Piratage ou usage commun ?](http://blog.rom1v.com/2010/08/piratage-ou-usage-commun/)
-  * [Le logiciel HADOPI est impossible](http://blog.rom1v.com/2010/08/le-logiciel-hadopi-est-impossible/)
-  * [L'abondance contre l'économie](http://blog.rom1v.com/2011/06/labondance-contre-leconomie/)
-{% endif %}
+  * [Piratage ou usage commun ?]({% post_url 2010-08-06-piratage-ou-usage-commun %})
+  * [Le logiciel HADOPI est impossible]({% post_url 2010-08-01-le-logiciel-hadopi-est-impossible %})
+  * [L'abondance contre l'économie]({% post_url 2011-06-08-labondance-contre-leconomie %})
