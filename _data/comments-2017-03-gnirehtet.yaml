@@ -209,3 +209,15 @@
     I have no solution (except fixing the apps).
 
     <https://github.com/Genymobile/gnirehtet/issues/37>
+- id: 13
+  author: ®om
+  date: 2017-08-21 09:13:40+02:00
+  contents: |
+    @[**Wyles**](#comment-9)
+
+    > Dernièrement, ça n'a aucun rapport avec cette page mais je me permets
+    > de te conseiller d'ajouter un certificat TLS à ton site web ; des
+    > services comme [Let's Encrypt](http://letsencrypt.org/) (open source)
+    > peuvent t'en générer un gratuitement.
+
+    Done ;-)
