@@ -1,0 +1,6 @@
+DirectoryIndex index.html index.xml
+<IfModule mod_headers.c>
+    <FilesMatch "^index.xml$">
+        Header set Content-type "application/atom+xml; charset=utf-8"
+    </FilesMatch>
+</IfModule>
