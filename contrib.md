@@ -56,6 +56,26 @@ du PC sur lequel ils sont branchés (_reverse tethering_), sans accès _root_.
 [gnirehtet-reddit]: https://www.reddit.com/r/Android/comments/62lc8z/a_reverse_tethering_tool_for_android_no_root/
 [gnirehtet-hn]: https://news.ycombinator.com/item?id=14011590
 
+
+## Rust/mio
+
+[mio] est une _library_ d'[I/O asynchrone] pour Rust.
+
+J'ai supprimé l'interdiction d'enregistrer un _handle_ avec un ensemble
+d'intérêts vide, vu les _backends_ le supportent. Cette modification était
+nécessaire au bon fonctionnement de _Gnirehtet_ :
+ - [Allow registration with empty interest](https://github.com/carllerche/mio/pull/640) <em style="color: green;">mergé</em>
+
+Quelques opérateurs manquaient sur `mio::Ready` :
+ - [Implement assignment operators for Ready](https://github.com/carllerche/mio/pull/627) <em style="color: green;">mergé</em>
+
+J'ai aussi ouvert quelques rapports de bugs :
+ - [Poll.deregister() has no effect on Windows](https://github.com/carllerche/mio/issues/633)
+ - [NotConnected on read() on Windows](https://github.com/carllerche/mio/issues/648)
+
+[mio]: https://docs.rs/mio/0.6.10/mio/
+[I/O asynchrone]: https://en.wikipedia.org/wiki/Asynchronous_I/O
+
 ## libusb
 
 [libusb][] est une bibliothèque C pour communiquer sur USB.

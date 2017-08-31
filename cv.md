@@ -134,10 +134,12 @@ quelques uns :
 
 ### Rust
 
-Je suis en train de réécrire le serveur relai de [gnirehtet][gnirehtet-contrib]
-en [Rust][].
+J'ai réécrit [Gnirehtet en Rust].
 
-[rust]: https://en.wikipedia.org/wiki/Rust_(programming_language)
+J'ai également apporté quelques contributions à [mio].
+
+[gnirehtet en Rust]: {% post_url 2017-09-21-gnirehtet-reecrit-en-rust %}
+[mio]: /contrib#rustmio
 
 
 ### Linux Kernel
