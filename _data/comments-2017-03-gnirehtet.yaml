@@ -221,3 +221,61 @@
     > peuvent t'en générer un gratuitement.
 
     Done ;-)
+- id: 14
+  author: Jean Francois
+  date: 2017-09-01 23:34:37+02:00
+  contents: |
+    Merci beaucoup pour ce merveilleux utilitaire.
+    Il fonctionne très bien avec Galaxy S5 Neo.
+
+    Voici quelques lignes de gnirehtet.cmd que j'ai modifié
+
+    {% highlight dosbatch %}
+    CALL :locate_file JAVA "C:\ProgramData\Oracle\Java\javapath\java.exe"
+    ...
+        ECHO Syntax:%~n0 [re^|un]install ^| rt ^| start ^| stop ^| relay ^| killserver ^| kill
+    ...
+    :do_killserver
+        SETLOCAL EnableDelayedExpansion
+        SET filter="WINDOWTITLE EQ gnirehtet_relay_server"
+        FOR /F "tokens=2" %%I in ('"TASKLIST /NH /FI %filter%"') DO SET PID=%%I 2>1
+        TASKKILL /PID !PID!
+        CALL %ADB% kill-server
+        ENDLOCAL
+    ...
+    :do_rt
+    @rem CALL :do_install
+        CALL :do_relay
+        CALL :do_start
+        EXIT /B 0
+    ...
+    :eof
+        SET dns=
+        SET serial=
+        SET ADB=
+        SET JAVA=
+        SET RELAY=
+        SET APK=
+        SET VAR_NAME=
+        SET ALL_BUT_FIRST=
+        SET FNAME=
+        SET dparam=
+        SET filter=
+        SET PID=
+    {% endhighlight %}
+
+    Merci encore
+- id: 15
+  author: ®om
+  date: 2017-09-03 12:41:34+02:00
+  contents: |
+    Content que ce logiciel soit utile :)
+
+    Merci pour le code. Cependant, l'interface en ligne de commande [n'est
+    plus écrite dans un script séparé][cli-java] (donc le contenu de ce
+    fichier n'existe plus sur la branche de développement).
+
+    Par ailleurs, les contributions de code se font par [pull request].
+
+    [cli-java]: https://github.com/Genymobile/gnirehtet/commit/e0a7bdc5a545555a60a9b7d2066b81a3845a7438
+    [pull request]: https://help.github.com/articles/about-pull-requests/
