@@ -35,6 +35,11 @@ a code {
     color: #090;
 }
 
+.highlight .err {
+    color: #f66;
+    background: none;
+}
+
 .highlight {
     margin: 0 0 1rem 0;
 }
