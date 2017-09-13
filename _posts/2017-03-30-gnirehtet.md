@@ -4,6 +4,10 @@ title: Gnirehtet
 date: 2017-03-30 10:50:00+01:00
 tags:
 - planet-libre
+lang: fr
+langref:
+- lang: en
+  url: https://medium.com/genymobile/gnirehtet-reverse-tethering-android-2afacdbdaec7
 ---
 
 Durant ces dernières semaines chez [Genymobile], j'ai développé un outil de
@@ -212,7 +216,3 @@ J'espère qu'il pourra être utile à certains d'entre vous.
 [geekstuff]: http://www.thegeekstuff.com/2014/06/android-vpn-service/
 [`LocalVPN`]: https://github.com/hexene/LocalVPN
 [`ToyVpn`]: https://android.googlesource.com/platform/development/+/master/samples/ToyVpn/
-
-_Cet article est également disponible en anglais sur [Medium]._
-
-[Medium]: https://medium.com/@rom1v/gnirehtet-reverse-tethering-android-2afacdbdaec7

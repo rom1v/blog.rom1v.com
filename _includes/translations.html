@@ -1,0 +1,4 @@
+{% for translation in page.langref %}<span class="translation-link">
+{% if translation.lang == 'fr' %}(également disponible en <a href="{% if translation.internal %}{{ site.baseurl }}{% endif %}{{ translation.url }}">français</a>){% endif %}
+{% if translation.lang == 'en' %}(also available in <a href="{% if translation.internal %}{{ site.baseurl }}{% endif %}{{ translation.url }}">English</a>){% endif %}
+</span>{% endfor %}

@@ -1204,6 +1204,11 @@ table.comment-table tbody tr th {
 }
 
 .sidebar-checkbox {
-  /* fixes navbar behavior <https://github.com/poole/lanyon/issues/192> */
-  display: none;
+    /* fixes navbar behavior <https://github.com/poole/lanyon/issues/192> */
+    display: none;
+}
+
+.translation-link {
+    font-size: .8rem;
+    font-style: italic;
 }
