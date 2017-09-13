@@ -1,6 +1,6 @@
 {% capture commentid %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
 {% if site.data[commentid] or site.comments_form %}
-<h2 id="comments">Commentaires</h2>
+<h2 id="comments">{{ site.l10n[page.lang].comments }}</h2>
 <div class="comments">
     {% for comment in site.data[commentid] %}
         <div id="comment-{{ comment.id }}" class="comment{% if (comment.pingback) %}-pingback{% elsif (comment.author == '®om') %}-rom{% endif %}" />
@@ -22,49 +22,49 @@
 </div>
 {% if site.comments_form %}
 {% if page.comments_closed %}
-<p><em>Les commentaires sont fermés.<em></p>
+<p><em>{{ site.l10n[page.lang].comments-closed }}<em></p>
 {% else if %}
-<h3 class="comment-title">Poster un commentaire</h3>
+<h3 class="comment-title">{{ site.l10n[page.lang].comment-post }}</h3>
 <form method="POST" action="/comments/submit.php">
     <input type="hidden" name="post_id" value="{{ page.id }}" />
     <input type="hidden" name="return_url" value="{{ page.url }}" />
     <table class="comment-table">
         <tr>
-            <th>Nom :</th>
+            <th>{{ site.l10n[page.lang].comment-name }} :</th>
             <td>
                 <input type="text" size="25" name="name" />
-                <em>(requis)</em>
+                <em>({{ site.l10n[page.lang].comment-required }})</em>
             </td>
         </tr>
         <tr>
-            <th>E-mail :</th>
+            <th>{{ site.l10n[page.lang].comment-email }} :</th>
             <td>
                 <input type="text" size="25" name="email" />
-                <em>(optionnel, non publié)</em>
+                <em>({{ site.l10n[page.lang].comment-optional }}, {{ site.l10n[page.lang].comment-not-published }})</em>
             </td>
         </tr>
         <tr>
-            <th>Site web :</th>
+            <th>{{ site.l10n[page.lang].comment-url }} :</th>
             <td>
                 <input type="text" size="25" name="url" />
-                <em>(optionnel)</em>
+                <em>({{ site.l10n[page.lang].comment-optional }})</em>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                Quelle est la 3e lettre du mot <code>blog</code>&nbsp;? <input type="text" name="antispam" size="1" maxlength="1" />
-                <em>(antispam)</em>
+                {{ site.l10n[page.lang].comment-question }} <input type="text" name="antispam" size="1" maxlength="1" />
+                <em>({{ site.l10n[page.lang].comment-antispam }})</em>
             </td>
         </tr>
         <tr>
             <td colspan="2">
                 <textarea name="comment" rows="10"></textarea><br />
-                <em>Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.</em>
+                <em>{{ site.l10n[page.lang].comment-notice }}</em>
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <input class="comment-submit" type="submit" value="Envoyer" />
+                <input class="comment-submit" type="submit" value="{{ site.l10n[page.lang].comment-send }}" />
             </td>
         </tr>
     </table>

@@ -16,3 +16,39 @@ author:
   email: rom@rom1v.com
 
 gems: [jekyll-paginate]
+
+defaults:
+- scope:
+    type: posts
+  values:
+    lang: fr
+
+l10n:
+  fr:
+    comments: 'Commentaires'
+    comments-closed: 'Les commentaires sont fermés.'
+    comment-post: 'Poster un commentaire'
+    comment-name: 'Nom'
+    comment-email: 'E-mail'
+    comment-url: 'Site web'
+    comment-question: 'Quelle est la 3e lettre du mot <code>blog</code>&nbsp?'
+    comment-required: 'requis'
+    comment-optional: 'optionnel'
+    comment-not-published: 'non publié'
+    comment-antispam: 'antispam'
+    comment-notice: 'Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.'
+    comment-send: 'Envoyer'
+  en:
+    comments: 'Comments'
+    comments-closed: 'Comments are closed.'
+    comment-post: 'Post a comment'
+    comment-name: 'Name'
+    comment-email: 'E-mail'
+    comment-url: 'Website'
+    comment-question: 'What is the 3rd letter of the word <code>blog</code>?'
+    comment-required: 'required'
+    comment-optional: 'optional'
+    comment-not-published: 'non published'
+    comment-antispam: 'antispam'
+    comment-notice: 'Comments are formatted in <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.'
+    comment-send: 'Send'
