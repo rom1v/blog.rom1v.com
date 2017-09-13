@@ -6,6 +6,9 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
   <div>
+    {% if post.lang != 'fr' %}
+      <span class="post-lang">{{ post.lang }}</span>
+    {% endif %}
     <span class="post-title index-post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}

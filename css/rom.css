@@ -1212,3 +1212,9 @@ table.comment-table tbody tr th {
     font-size: .8rem;
     font-style: italic;
 }
+
+.post-lang {
+    color: #9a9a9a;
+    font-size: .8rem;
+    font-variant: small-caps;
+}
