@@ -38,6 +38,7 @@ l10n:
     comment-antispam: 'antispam'
     comment-notice: 'Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.'
     comment-send: 'Envoyer'
+    translation-available: '(également disponible en <a href="%url">français</a>)'
   en:
     comments: 'Comments'
     comments-closed: 'Comments are closed.'
@@ -52,3 +53,4 @@ l10n:
     comment-antispam: 'antispam'
     comment-notice: 'Comments are formatted in <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.'
     comment-send: 'Send'
+    translation-available: '(also available in <a href="%url">English</a>)'
