@@ -1,3 +1,4 @@
+<?php require_once 'l10n.php'; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,15 +9,15 @@
 			$return_delay = 5; //Number of seconds to linger on this page before redirecting back to the static site
 			echo "<meta http-equiv=\"refresh\" content=\"$return_delay;url='$return_url'\" />";
 		} ?>
-		<title>Commentaire envoyé</title>
+		<title><?= $l10n[$lang]['comment-sent'] ?></title>
 	</head>
 <body>
-	<h1>Comment envoyé</h1>
-	<p>Merci pour votre commentaire. Il sera publié après validation.</p>
+	<h1><?= $l10n[$lang]['comment-sent'] ?></h1>
+	<p><?= $l10n[$lang]['comment-result'] ?></p>
 	<?php if (isset($return_url))
 	{
-		echo '<p>Vous allez être redirigé vers la page à partir de laquelle vous avez envoyé ce commentaire.</p>';
-                echo "<a href=\"$return_url\">Cliquez ici</a> si vous n'êtes pas redirigé automatiquement.</p>";
+		echo '<p>' . $l10n[$lang]['comment-redir'] . '</p>';
+		echo '<p>' . str_replace('%url', $return_url, $l10n[$lang]['comment-redir-manual']) . '</p>';
 	} ?>
 </body>
 </html>

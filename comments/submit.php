@@ -1,4 +1,5 @@
 <?php
+require_once 'l10n.php';
 
 // submit.php -- Receive comments and e-mail them to someone
 // Copyright (C) 2011 Matt Palmer <mpalmer@hezmatt.org>
@@ -46,7 +47,7 @@ if (!isset($_POST["post_id"]) || $_POST["antispam"] !== "o") {
 //	do not indicate to bots that this is an error
 //	http_response_code(403);
 	header('Content-Type: text/plain; charset=utf-8');
-	echo "Soumission refusée.";
+	echo $l10n[$lang]['comment-submission-refused'];
 	return;
 }
 
@@ -72,5 +73,5 @@ if (mail($EMAIL_ADDRESS, $SUBJECT, $msg, $headers))
 }
 else
 {
-	echo "Le commentaire n'a pas pu être envoyé.";
+	echo $l10n[$lang]['comment-not-sent'];
 }
