@@ -41,3 +41,18 @@
     Merci Romain pour ce super tutoriel!!!
 
     Je cherchais un exemple très pratique et je l'ai trouve ;-)
+- id: 7
+  author: Boussekey
+  date: 2017-09-17 15:28:20+02:00
+  contents: |
+    J'ai quelques questions subsidiaires:
+
+    * comment fais-tu pour que ton fichier `beamerthemeCustom.sty` soit pris en
+      compte au build de ton fichier beamer?
+    * Est-ce que tu utilises pandoc pour build un fichier **TEX** à partir de
+      ton **fichier markdown**, et tu crées le **PDF** à partir d'un éditeur
+      `latex`?
+    * Utilises-tu la commande `latex-engine` ?
+
+    Merci d'avance,
+    Thomas
