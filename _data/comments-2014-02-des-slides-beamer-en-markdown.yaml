@@ -56,3 +56,26 @@
 
     Merci d'avance,
     Thomas
+- id: 8
+  author: ®om
+  date: 2017-09-17 19:04:55+02:00
+  contents: |
+    > comment fais-tu pour que ton fichier `beamerthemeCustom.sty` soit pris en
+    > compte au build de ton fichier beamer?
+
+    Par convention, _beamer_ utilise le fichier `beamerthemeXXX.sty`. Le nom du
+    thème est passé en paramètre de `pandoc` dans le [`Makefile`][makefile] :
+
+        pandoc -st beamer -V theme:$(THEME) -V lang:fr-FR $(INPUT) -o $(OUTPUT)
+
+    > Est-ce que tu utilises pandoc pour build un fichier **TEX** à partir de
+    > ton **fichier markdown**, et tu crées le **PDF** à partir d’un éditeur
+    > `latex`?
+
+    Non, `pandoc` crée le fichier _pdf_ tout seul avec cette commande.
+
+    > Utilises-tu la commande `latex-engine` ?
+
+    Non. Pas explicitement en tout cas.
+
+    [makefile]: https://github.com/rom1v/mdbeamer/blob/0e771dcc9fc788c7d1dcd40a70ae0a66b1fb1ae5/Makefile#L9
