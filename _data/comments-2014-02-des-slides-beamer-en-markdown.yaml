@@ -151,3 +151,18 @@
 
     Merci d'avance,  
     Thomas
+- id: 10
+  author: ®om
+  date: 2017-09-17 19:04:55+02:00
+  contents: |
+    > Je n'arrive pas à localiser le bon répertoire pour le fichier `sty`
+
+    Dans le répertoire courant, chez moi ça marche.
+
+    Ça ne marche pas chez toi par défaut:
+
+        git clone https://github.com/rom1v/mdbeamer.git
+        cd mdbeamer
+        make
+
+    ?
