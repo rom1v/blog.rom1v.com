@@ -79,3 +79,75 @@
     Non. Pas explicitement en tout cas.
 
     [makefile]: https://github.com/rom1v/mdbeamer/blob/0e771dcc9fc788c7d1dcd40a70ae0a66b1fb1ae5/Makefile#L9
+- id: 9
+  author: Thomas B
+  date: 2017-09-18 13:36:29+02:00
+  contents: |
+    Bonjour Romain,
+
+    Je n'arrive pas à localiser le bon répertoire pour le fichier `sty`
+
+    Je travaille sous **Fedora25**, et l'installation de `texlive` n'est pas
+    super aisée, ce serait plus simple dans un environnement DEBIAN ;-)
+
+    J'ai réinstallé texlive et pandoc à partir des RPMs (car j'avais tenté les
+    installations des dernières versions, mais cela n'a pas amélioré le
+    comportement).
+
+    Voici la trace de mes derniers tests:
+
+    ```shell
+    sudo cp /usr/share/lyx/templates/beamerthemeCustom.sty
+    /usr/share/texlive/texmf-dist/tex/latex/beamer/themes/theme/
+     🐳 🔑 
+    pandoc -st beamer --toc -V theme:Custom -V lang:fr-FR
+    20171030_PGCONF2017_posdata.work.md -o 20171030_PGCONF2017_posdata.work.pdf
+     🐳 🔑 
+    ```
+
+    J'obtiens le message d'erreur suivant:
+
+    ```
+    ! LaTeX Error: File `beamerthemeCustom.sty' not found.
+
+    Type X to quit or <RETURN> to proceed,
+    or enter new name. (Default extension: sty)
+
+    Enter file name: 
+    ! Emergency stop.
+    <read *> 
+            
+    l.21 \usetheme{Custom}
+
+    pandoc: Error producing PDF
+    ```
+
+    ```shell
+    sudo cp /usr/share/lyx/templates/beamerthemeCustom.sty
+    /usr/local/texlive/2017/texmf-dist/tex/latex/beamer/themes/theme/
+     🐳 🔑 
+    pandoc -st beamer --toc -V theme:Custom -V lang:fr-FR
+    20171030_PGCONF2017_posdata.work.md -o 20171030_PGCONF2017_posdata.work.pdf
+     🐳 🔑 
+    ```
+
+    Et j'obtiens encore le même message d'erreur
+    ```
+    ! LaTeX Error: File `beamerthemeCustom.sty' not found.
+
+    Type X to quit or <RETURN> to proceed,
+    or enter new name. (Default extension: sty)
+
+    Enter file name: 
+    ! Emergency stop.
+    <read *> 
+            
+    l.21 \usetheme{Custom}
+
+    pandoc: Error producing PDF
+    ```
+
+    Si tu as une idée, je suis preneur ;-)
+
+    Merci d'avance,  
+    Thomas
