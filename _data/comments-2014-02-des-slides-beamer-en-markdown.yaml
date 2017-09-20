@@ -166,3 +166,29 @@
         make
 
     ?
+- id: 11
+  author: Thomas B
+  date: 2017-09-20 16:19:00+02:00
+  contents: |
+    Bonjour Romain,
+
+    Ca a très bien fonctionné!!
+
+    Reste plus quà le décliner pour ma présentation!
+
+    J'ai été très heureux que la première tentative échoue pour l'erreur
+    suivante:
+    ```
+    ! Package babel Error: Unknown option `french'. Either you misspelled it
+    ```
+
+    J'ai alors compris que ton fichier `beamerthemeCustom.sty` était bien pris
+    en compte ;-)
+
+    J'ai installé ce qui manquait en me basant sur le [post
+    suivant](https://tex.stackexchange.com/questions/254119/package-babel-error-unknown-language-french-not-francais)
+    à l'aide de la commande suivante (sous Fedora):
+
+    ```shell
+    dnf install texlive*french
+    ```
