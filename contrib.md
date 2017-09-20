@@ -62,11 +62,9 @@ du PC sur lequel ils sont branchés (_reverse tethering_), sans accès _root_.
 
 J'ai corrigé un bug qui pouvait provoquer l'arrêt de l'event thread [udev][]
 lors d'un [signal][]. En particulier, il s'arrêtait à chaque fois qu'une
-[FileDialog][] [Qt][]/[QML][] était ouverte.  
-[✎](https://github.com/libusb/libusb/pull/220)
-[✎](https://sourceforge.net/p/libusb/mailman/message/35466045/)
-<em style="color: green;">contribution acceptée et mergée</em> (cf [`commit
-0a02d12`][0a02d12])
+[FileDialog][] [Qt][]/[QML][] était ouverte :
+ - [linux_udev: Retry poll() on EINTR](https://github.com/libusb/libusb/pull/220)   <em style="color: green;">mergé</em> (cf [`commit 0a02d12`][0a02d12])
+ - [mail](https://sourceforge.net/p/libusb/mailman/message/35466045/)
 
 [0a02d12]: https://github.com/libusb/libusb/commit/0a02d1212bfb7ff2e9f3fc603655b0220b7d6889
 
@@ -93,19 +91,16 @@ l'application.
 
 L'état de l'application n'était pas mis à jour immédiatement lors d'une
 installation ou désinstallation d'une application (l'écran affichait donc une
-information erronée).  
-[✎](https://gitlab.com/fdroid/fdroidclient/merge_requests/56)
-<em style="color: green;">contribution acceptée et mergée</em>
+information erronée) :
+ - [Refresh AppDetails header on package state change](https://gitlab.com/fdroid/fdroidclient/merge_requests/56) <em style="color: green;">mergé</em>
 
-L'application plantait lors de la désinstallation d'applications.  
-[✎](https://gitlab.com/fdroid/fdroidclient/merge_requests/57)
-<em style="color: green;">contribution acceptée et mergée</em>
+L'application plantait lors de la désinstallation d'applications :
+ - [Do not crash on app uninstall](https://gitlab.com/fdroid/fdroidclient/merge_requests/57) <em style="color: green;">mergé</em>
 
 L'application pouvait également planter pour une autre raison si l'activité
 avait été détruite par le système pendant l'installation ou la désinstallation
-d'une application.  
-[✎](https://gitlab.com/fdroid/fdroidclient/merge_requests/58)
-<em style="color: green;">contribution acceptée et mergée</em>
+d'une application :
+ - [Do not manually call onChange() (fix NPE)](https://gitlab.com/fdroid/fdroidclient/merge_requests/58) <em style="color: green;">mergé</em>
 
 
 ## Android Universal Image Loader
@@ -115,20 +110,24 @@ d'images dans les applications Android.
 
 [Android-Universal-Image-Loader]: https://github.com/nostra13/Android-Universal-Image-Loader
 
-J'ai corrigé un bug aspect-ratio sur les images circulaires.  
-[✎](https://github.com/nostra13/Android-Universal-Image-Loader/pull/1257)
-_contribution en attente d'acceptation_
+J'ai corrigé un bug aspect-ratio sur les images circulaires :
+ - [Make circle displayer preserve
+aspect-ratio](https://github.com/nostra13/Android-Universal-Image-Loader/pull/1257) _not merged_
 
 
 
 ## VLC
 
 J'ai corrigé un problème de [deadlock][] pouvant survenir lors de l'arrêt d'un
-flux UDP sur le lecteur vidéo [VLC][].  
-[✎](https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098020.html)
-<em style="color: red;">contribution refusée</em> ([ne corrige pas la cause
-profonde du problème][vlc-answer])  
-_Le deadlock se produit lorsque les appels rapprochés à deux fonctions surviennent dans un certain ordre. Mon patch empêchait le deadlock dans ce cas. Un développeur de VLC considère plutôt que la cause du problème est que ces deux fonctions ne devraient jamais être appelées dans cet ordre._
+flux UDP sur le lecteur vidéo [VLC][] :
+
+ - [Avoid deadlock on UDP stop](https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098020.html) <em style="color: red;">contribution refusée</em>
+
+_Mon patch [ne corrige pas la cause profonde du problème][vlc-answer]. Le
+deadlock se produit lorsque les appels rapprochés à deux fonctions surviennent
+dans un certain ordre. Mon patch empêchait le deadlock dans ce cas. Un
+développeur de VLC considère plutôt que la cause du problème est que ces deux
+fonctions ne devraient jamais être appelées dans cet ordre._
 
 [deadlock]: https://fr.wikipedia.org/wiki/Deadlock
 [vlc]: http://www.videolan.org/
@@ -139,27 +138,23 @@ _Le deadlock se produit lorsque les appels rapprochés à deux fonctions survien
 ## Android Open Source Project
 
 J'ai rapporté un [bug][loader-bug] constaté sur l'utilisation [loaders][] lors
-de la rotation d'écran, pour lequel j'ai ensuite proposé un patch.  
-[✎](https://android-review.googlesource.com/#/c/71461/)
-_contribution en attente d'acceptation_
+de la rotation d'écran, pour lequel j'ai ensuite proposé un patch :
+ - [Avoid duplicate call to onLoadFinished()](https://android-review.googlesource.com/#/c/71461/) _not merged_
 
 [loader-bug]: https://code.google.com/p/android/issues/detail?id63179
 [loaders]: http://developer.android.com/guide/components/loaders.html
 
 J'ai également supprimé une petite erreur dans la documentation de
-`SharedPreferences`.  
-[✎](https://android-review.googlesource.com/#/c/100349/)
-<em style="color: green;">contribution acceptée et mergée</em>
+`SharedPreferences` :
+ - [Remove wrong javadoc comment](https://android-review.googlesource.com/#/c/100349/) <em style="color: green;">mergé</em>
 
 
 
 ## GoogleCast
 
 J'ai corrigé une fuite mémoire sur la [`CastCompanionLibrary`][ccl] (la
-bibliothèque de Google pour communiquer avec un _chromecast_).  
-[✎](https://github.com/googlecast/CastCompanionLibrary-android/pull/1)
-<em style="color: green;">contribution acceptée</em> (mais réimplémentée par
-[naddaf][])
+bibliothèque de Google pour communiquer avec un _chromecast_) :
+ - [Remove all references to a listener (leak fix)](https://github.com/googlecast/CastCompanionLibrary-android/pull/1) <em style="color: green;">accepté</em> (mais réimplémentée par [naddaf][])
 
 [ccl]: https://github.com/googlecast/CastCompanionLibrary-android
 [naddaf]: https://github.com/googlecast/CastCompanionLibrary-android/pull/1
@@ -186,29 +181,28 @@ J'ai effectué deux modifications concernant le protocole MDP (l'équivalent de
 l'UDP sur réseau _Mesh_).
 
 La première rend l'utilisation du MDP similaire à l'API socket standard C, et
-rend possible l'utilisation de plusieurs services simultanés.  
-[✎](https://github.com/servalproject/serval-dna/pull/39)
-[✎](https://github.com/servalproject/serval-dna/pull/53)
-<em style="color: green;">contribution acceptée et mergée</em> (cf [`commit
-954a8a0`][954a8a0])
+rend possible l'utilisation de plusieurs services simultanés :
+ - [MDP sockets support](https://github.com/servalproject/serval-dna/pull/39) _première version_
+ - [MDP sockets support (suite)](https://github.com/servalproject/serval-dna/pull/53) <em style="color: green;">mergé</em> (cf [`commit 954a8a0`][954a8a0])
 
 [954a8a0]: https://github.com/servalproject/serval-dna/commit/954a8a01a4cf4164fd093dfb5a95e483c7afc704
 
 La seconde implémente les "bindings Java" permettant d'utiliser les sockets MDP
-en Java, de manière similaire à l'API socket Java.  
-[✎](https://github.com/servalproject/serval-dna/pull/39#commits-pushed-1b81ad7)
-[✎](https://github.com/servalproject/batphone/pull/51)
-_non mergée_
+en Java, de manière similaire à l'API socket Java.
+ - [Native-part of MDP JNI
+   bindings](https://github.com/servalproject/serval-dna/pull/39#commits-pushed-1b81ad7) _non mergé_
+ - [Java-part of MDP JNI bindings](https://github.com/servalproject/batphone/pull/51) _non mergé_
 
 
 ### Talkie-walkie mesh
 
 J'ai ensuite développé, en utilisant le protocole MDP ainsi modifié, un mode
-talkie-walkie (communication _n-to-n_) sur réseau mesh.  
-[✎](https://groups.google.com/forum/#!topic/serval-project-developers/K-EH2RxtPbs)
-[☞](https://github.com/rom1v/batphone/commits/walkietalkie)
-([☛](https://github.com/rom1v/batphone/commits/af46c718bb76056db2c0e58abdb77d293264eeae),
-[★](https://github.com/rom1v/batphone/commit/3059bc4cb78c3f537f5fdfcfbd9a05a67a17b7c7))
+talkie-walkie (communication _n-to-n_) sur réseau mesh :
+ - [Walkie-talkie PoC](https://groups.google.com/forum/#!topic/serval-project-developers/K-EH2RxtPbs)
+ - [branche](https://github.com/rom1v/batphone/commits/walkietalkie)
+ - [commits principaux](https://github.com/rom1v/batphone/commits/af46c718bb76056db2c0e58abdb77d293264eeae)
+ - [Walkie-talkie service](https://github.com/rom1v/batphone/commit/3059bc4cb78c3f537f5fdfcfbd9a05a67a17b7c7)
+
 _non destiné à être mergé en l'état_
 
 
@@ -218,13 +212,11 @@ _non destiné à être mergé en l'état_
 particulier, ils ont codé le pilote pour le faire fonctionner sur _Galaxy
 Nexus_. Cependant, tel quel, _Serval_ ne pouvait pas piloter le wifi sur ce
 téléphone. J'ai donc ajouté la "colle" manquante. J'ai ensuite fait de même pour
-la _Nexus 7_.  
-[✎](https://groups.google.com/d/msg/serval-project-developers/JGN00i00nFk/AsDRQzWHVI0J)
-[☞](https://github.com/rom1v/batphone/commits/gnexus)
-([★](https://github.com/rom1v/batphone/commit/b1e00d190dfa7720fcb8e481bf4c55816c5fa4e6))
-_non destiné à être mergé en l'état (mais [partiellement intégré][405e915])_  
-[✎](https://github.com/servalproject/batphone/pull/85)
-<em style="color: green;">contribution acceptée et mergée</em>
+la _Nexus 7_ :
+ - [Re: Android IBSS mode](https://groups.google.com/d/msg/serval-project-developers/JGN00i00nFk/AsDRQzWHVI0J)
+ - [branche](https://github.com/rom1v/batphone/commits/gnexus)
+ - [Make serval work on Android-IBSS](https://github.com/rom1v/batphone/commit/b1e00d190dfa7720fcb8e481bf4c55816c5fa4e6) _non destiné à être mergé en l'état (mais [partiellement intégré][405e915])_
+ - [Fix wifi configuration for nl80211](https://github.com/servalproject/batphone/pull/85) <em style="color: green;">mergé</em>
 
 [thinktube]: http://www.thinktube.com/android-tech/46-android-wifi-ibss
 [405e915]: https://github.com/servalproject/batphone/commit/405e915397a7b5feef37c87961646273d299526d
@@ -237,39 +229,38 @@ problème avec [Rhizome][], qui exécute des actions longues, bloquant tous
 traitements liés au routage et au transfert de données.
 
 J'ai proposé une implémentation de parallélisation de _Rhizome_ basée sur les
-[threads POSIX](http://fr.wikipedia.org/wiki/Threads_POSIX).  
-[✎](https://github.com/servalproject/serval-dna/pull/68)
-_contribution non mergée_
+[threads POSIX](http://fr.wikipedia.org/wiki/Threads_POSIX) :
+ - [Rhizome parallelization](https://github.com/servalproject/serval-dna/pull/68) _non mergé_
 
 [rhizome]: http://developer.servalproject.org/dokuwiki/doku.php?id=content:tech:rhizome
 
 
 ### Réflexions sur Rhizome
 
-Ce n'est pas du code, mais des réflexions sur le fonctionnement de [Rhizome][].  
-[✎](https://groups.google.com/forum/#!topic/serval-project-developers/PiVOZvhngdA)
-[✎](http://dl.rom1v.com/rhizome/rhizome.html)
-[✎](http://dl.rom1v.com/rhizome/rhizome_2.html)
+Ce n'est pas du code, mais des réflexions sur le fonctionnement de [Rhizome][] :
+ - [Reflections on Rhizome protocol](https://groups.google.com/forum/#!topic/serval-project-developers/PiVOZvhngdA)
+ - [Reflections on Rhizome store-and-forward protocol](http://dl.rom1v.com/rhizome/rhizome.html)
+ - [Reflections on Rhizome store-and-forward protocol (part 2)](http://dl.rom1v.com/rhizome/rhizome_2.html)
 
 
 ### Rhizome over Git
 
 J'ai aussi implémenté un PoC pour explorer le principe d'implémenter la partie
-stockage de _Rhizome_ par-dessus _git_.  
-[✎](https://groups.google.com/forum/#!topic/serval-project-developers/D4Vt7nBd_7A)
-[☞](https://github.com/rom1v/rogpoc)
+stockage de _Rhizome_ par-dessus _git_ :
+ - [Rhizome over git (PoC)](https://groups.google.com/forum/#!topic/serval-project-developers/D4Vt7nBd_7A)
+ - [`rogpoc`](https://github.com/rom1v/rogpoc)
 
 
 ### Autres contributions
 
  * [Making it work on devices without sdcards](https://github.com/servalproject/batphone/pull/32)
-   <em style="color: green;">mergée</em>
+   <em style="color: green;">mergé</em>
  * [Peer list concurrent access crash (fix #71)](https://github.com/servalproject/batphone/pull/81)
-   <em style="color: green;">mergée</em>  
+   <em style="color: green;">mergé</em>
  * [Fix varargs use](https://github.com/servalproject/serval-dna/pull/63)
-   <em style="color: green;">mergée</em>
+   <em style="color: green;">mergé</em>
  * [Always notify completion](https://github.com/servalproject/batphone/pull/83)
-   <em style="color: green;">mergée</em>
+   <em style="color: green;">mergé</em>
  * [Disconnected phones don't disappear (bugfix)](https://github.com/servalproject/serval-dna/pull/65)
   _underlying issue [fixed](https://github.com/servalproject/serval-dna/commit/c6241c6634088c6e9c60d7681e288821052be687)_
  * [ob_dup() did not preserve source position](https://github.com/servalproject/serval-dna/pull/66)
@@ -291,41 +282,35 @@ compilation.
 J'ai ajouté la possibilité de sérialiser, à la demande, l'exécution de tâches en
 arrière-plan. Concrètement, cela permet d'écrire `@Background(serial="some_id")`
 pour garantir que toutes les actions ayant le même identifiant soient
-séquentielles.  
-[✎](https://github.com/excilys/androidannotations/pull/564)
-<em style="color: green;">contribution acceptée et mergée</em>
+séquentielles :
+ - [Serial execution in background](https://github.com/excilys/androidannotations/pull/564) <em style="color: green;">mergé</em>
 
 J'ai ensuite ajouté la possibilité d'annuler des tâches exécutées en
-arrière-plan.  
-[✎](https://github.com/excilys/androidannotations/pull/569)
-[✎](https://github.com/excilys/androidannotations/pull/624)
-<em style="color: green;">contribution acceptée et mergée</em>
+arrière-plan :
+ - [Cancel background tasks](https://github.com/excilys/androidannotations/pull/569) <em style="color: green;">mergé</em>
+ - [Serialized @Background task cancellation bugfix](https://github.com/excilys/androidannotations/pull/624) <em style="color: green;">mergé</em>
 
+Une régression a été introduite plus tard, que j'ai également corrigée :
+
+ - [Fix @Background serial execution](https://github.com/androidannotations/androidannotations/pull/1803) <em style="color: green;">mergé</em>
 
 ### Intégration plus simple avec Ant
 
-Le [wiki](https://github.com/excilys/androidannotations/wiki/Building-Project-Ant/de46913c73dc879977f6e709da005631526e4a05) propose une intégration d'_AndroidAnnotations_ avec _Ant_ trop compliquée et intrusive. J'en propose une autre, plus simple et plus naturelle.  
-[✎](https://groups.google.com/forum/#!topic/androidannotations/pVIOgQ-r31g)
-[✎](http://dl.rom1v.com/androidannotations/ant.html)
+Le [wiki][aa-wiki] propose une intégration d'_AndroidAnnotations_ avec _Ant_
+trop compliquée et intrusive. J'en propose une autre, plus simple et plus
+naturelle :
+ - [Easier AndroidAnnotation Ant integration](https://groups.google.com/forum/#!topic/androidannotations/pVIOgQ-r31g)
+ - [Ant + AndroidAnnotations](http://dl.rom1v.com/androidannotations/ant.html)
 
-
-### Autres contributions
-
- * [@ItemClick and type parameters workaround](https://github.com/excilys/androidannotations/pull/570)
-   _<span style="color: red;">refusée</span>
-   ([fix yDelouis](https://github.com/excilys/androidannotations/pull/627))_
- * [Fix @Background serial execution](https://github.com/excilys/androidannotations/pull/1803) (regression)
-   <em style="color: green;">mergée</em>
-
+[aa-wiki]: https://github.com/excilys/androidannotations/wiki/Building-Project-Ant/de46913c73dc879977f6e709da005631526e4a05
 
 
 ## K9mail
 
 [K9mail][] est un client mail _Android_.
 
-J'ai effectué une minuscule modification d'optimisation des performances.  
-[✎](https://github.com/k9mail/k-9/pull/150)
-<em style="color: green;">contribution acceptée et mergée</em>
+J'ai effectué une minuscule modification d'optimisation des performances :
+ - [Create the database in a transaction (better performances)](https://github.com/k9mail/k-9/pull/150) <em style="color: green;">mergé</em>
 
 [k9mail]: http://code.google.com/p/k9mail/
 
