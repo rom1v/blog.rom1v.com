@@ -1,0 +1,11 @@
+- id: 1
+  author: Ralf
+  date: 2017-09-21 20:25:55+02:00
+  contents: |
+    > In C and C++, infinite loops without side-effects are undefined behavior.
+
+    Actually, in C (unlike C++), such loops are only UB if the loop condition is
+    not a constant expression.  However, LLVM fails to implement this exception
+    as is thus breaking some correct C programs.  This has been reported against
+    LLVM already more than ten years ago:
+    <https://bugs.llvm.org/show_bug.cgi?id=965>.
