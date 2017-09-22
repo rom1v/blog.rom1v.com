@@ -18,3 +18,26 @@
 
     If not, why don't just use std::mem::transmute the convert the whole raw
     packet to/from the structs, right after reading / before writing the packet?
+- id: 3
+  author: ®om
+  date: 2017-09-22 16:00:07+02:00
+  contents: |
+    > @[**Ralf**](#comment-1)
+    >
+    > Actually, in C (unlike C++), such loops are only UB if the loop condition
+    > is not a constant expression.
+
+    Thank you for the precision, I was not aware of this subtlety.
+
+    > @[**Istvan Szekeres**](#comment-2)
+    >
+    > Is the raw field in IPV4Header (and others) necessary? Are those accessed
+    > besides reading/writing the whole packet, including those headers?
+
+    In the device-to-network direction, on new connection, the received headers
+    are [copied to a buffer][packetizer-copy], with source and destination
+    swapped, so that they are [updated][packetizer-update] (lengths and checksum
+    fields) on each packet built for the network-to-device direction.
+
+    [packetizer-copy]: https://github.com/Genymobile/gnirehtet/blob/v2.0/relay-rust/src/relay/packetizer.rs#L46-L58
+    [packetizer-update]: https://github.com/Genymobile/gnirehtet/blob/v2.0/relay-rust/src/relay/packetizer.rs#L110-L125
