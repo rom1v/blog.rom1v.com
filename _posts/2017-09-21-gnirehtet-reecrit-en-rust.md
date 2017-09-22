@@ -1164,3 +1164,7 @@ super langage et de nouveaux concepts de programmation. Et maintenant, nous
 avons une application native avec de meilleures performances.
 
 Bon reverse tethering !
+
+_Discussions sur [reddit]._
+
+[reddit]: https://www.reddit.com/r/rust/comments/71ks57/gnirehtet_a_reverse_tethering_tool_for_android/

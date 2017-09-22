@@ -216,3 +216,8 @@ J'espère qu'il pourra être utile à certains d'entre vous.
 [geekstuff]: http://www.thegeekstuff.com/2014/06/android-vpn-service/
 [`LocalVPN`]: https://github.com/hexene/LocalVPN
 [`ToyVpn`]: https://android.googlesource.com/platform/development/+/master/samples/ToyVpn/
+
+_Discussions sur [reddit] et [Hacker News]._
+
+[reddit]: https://www.reddit.com/r/Android/comments/62lc8z/a_reverse_tethering_tool_for_android_no_root/
+[Hacker News]: https://news.ycombinator.com/item?id=14011590

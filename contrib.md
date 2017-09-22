@@ -46,8 +46,9 @@ avec une description succincte.
 
 J'ai développé un outil qui permet aux devices Android d'utiliser la connexion
 du PC sur lequel ils sont branchés (_reverse tethering_), sans accès _root_.  
-[`gnirehtet`] ([article][blog-gnirehtet]) \| [LinuxFR][gnirehtet-linuxfr] \|
-[reddit][gnirehtet-reddit] \| [Hacker News][gnirehtet-hn]
+[`gnirehtet`] \| [article fr][blog-gnirehtet] \| [article en][gnirehtet-medium]
+\| [LinuxFR][gnirehtet-linuxfr] \| [reddit][gnirehtet-reddit] \|
+[Hacker News][gnirehtet-hn]
 
 [`gnirehtet`]: https://github.com/Genymobile/gnirehtet
 [blog-gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
@@ -55,6 +56,15 @@ du PC sur lequel ils sont branchés (_reverse tethering_), sans accès _root_.
 [gnirehtet-linuxfr]: https://linuxfr.org/users/rom1v/journaux/du-reverse-tethering-sur-android-sans-root
 [gnirehtet-reddit]: https://www.reddit.com/r/Android/comments/62lc8z/a_reverse_tethering_tool_for_android_no_root/
 [gnirehtet-hn]: https://news.ycombinator.com/item?id=14011590
+
+Je l'ai ensuite réécrit en Rust.  
+[article fr][blog-gnirehtet-2-fr] \| [article en][blog-gnirehtet-2-en] \|
+[annonce][gnirehtet-2-medium] \| [reddit][gnirehtet-2-reddit]
+
+[blog-gnirehtet-2-fr]: {% post_url 2017-09-21-gnirehtet-reecrit-en-rust %}
+[blog-gnirehtet-2-en]: {% post_url 2017-09-21-gnirehtet-rewritten-in-rust %}
+[gnirehtet-2-medium]: https://medium.com/genymobile/gnirehtet-2-our-reverse-tethering-tool-for-android-now-available-in-rust-999960483d5a
+[gnirehtet-2-reddit]: https://www.reddit.com/r/rust/comments/71ks57/gnirehtet_a_reverse_tethering_tool_for_android/
 
 
 ## Rust/mio
