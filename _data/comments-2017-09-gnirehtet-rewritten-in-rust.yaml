@@ -9,3 +9,12 @@
     as is thus breaking some correct C programs.  This has been reported against
     LLVM already more than ten years ago:
     <https://bugs.llvm.org/show_bug.cgi?id=965>.
+- id: 2
+  author: Istvan Szekeres
+  date: 2017-09-22 15:24:26+02:00
+  contents: |
+    Is the raw field in IPV4Header (and others) necessary? Are those accessed
+    besides reading/writing the whole packet, including those headers?
+
+    If not, why don't just use std::mem::transmute the convert the whole raw
+    packet to/from the structs, right after reading / before writing the packet?
