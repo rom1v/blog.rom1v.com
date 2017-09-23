@@ -41,3 +41,9 @@
 
     [packetizer-copy]: https://github.com/Genymobile/gnirehtet/blob/v2.0/relay-rust/src/relay/packetizer.rs#L46-L58
     [packetizer-update]: https://github.com/Genymobile/gnirehtet/blob/v2.0/relay-rust/src/relay/packetizer.rs#L110-L125
+- id: 4
+  author: yglukhov
+  date: 2017-09-23 00:21:55+02:00
+  contents: |
+    Thanks for the article, was really a pleasure to read. I wonder if you could
+    evaluate Nim lang with the same project of yours.
