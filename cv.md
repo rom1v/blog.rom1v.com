@@ -105,7 +105,7 @@ Java est mon language maternel ;-)
 
 ### Python
 
-J'utilise _Python_ de manière très occasionnelle,
+J'utilise _Python_ de manière très occasionnelle.
 
 - [SHAdow][shadow-github] (pour générer des collisions SHA1) ([article][shadow])
 - [Solveur][snakesolver-github] de serpent-cube ([article][snakesolver])
@@ -162,7 +162,7 @@ conséquences des [undefined behaviors][ub].
 
 [ub]: {% post_url 2014-10-22-comportement-indefini-et-optimisation %}
 
-J'aime bien les casse-tête de programmation ([1][reveng] [2][quines]
+J'aime bien les casse-têtes de programmation ([1][reveng] [2][quines]
 [3][serpent]…).
 
 Les problèmes faisant intervenir des mathématiques sont les plus intéressants
