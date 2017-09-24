@@ -1104,6 +1104,7 @@ showing better performances.
 
 Happy reverse tethering!
 
-_Discuss on [reddit]._
+_Discuss on [reddit] and [Hacker News]._
 
 [reddit]: https://www.reddit.com/r/rust/comments/71ks57/gnirehtet_a_reverse_tethering_tool_for_android/
+[Hacker News]: https://news.ycombinator.com/item?id=15326106
