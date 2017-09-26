@@ -59,12 +59,13 @@ du PC sur lequel ils sont branchés (_reverse tethering_), sans accès _root_.
 
 Je l'ai ensuite réécrit en Rust.  
 [article fr][blog-gnirehtet-2-fr] \| [article en][blog-gnirehtet-2-en] \|
-[annonce][gnirehtet-2-medium] \| [reddit][gnirehtet-2-reddit] \|
-[Hacker News][gnirehtet-2-hn]
+[annonce][gnirehtet-2-medium] \| [LinuxFR][gnirehtet-2-linuxfr] \|
+[reddit][gnirehtet-2-reddit] \| [Hacker News][gnirehtet-2-hn]
 
 [blog-gnirehtet-2-fr]: {% post_url 2017-09-21-gnirehtet-reecrit-en-rust %}
 [blog-gnirehtet-2-en]: {% post_url 2017-09-21-gnirehtet-rewritten-in-rust %}
 [gnirehtet-2-medium]: https://medium.com/genymobile/gnirehtet-2-our-reverse-tethering-tool-for-android-now-available-in-rust-999960483d5a
+[gnirehtet-2-linuxfr]: https://linuxfr.org/users/rom1v/journaux/du-reverse-tethering-en-rust
 [gnirehtet-2-reddit]: https://www.reddit.com/r/rust/comments/71ks57/gnirehtet_a_reverse_tethering_tool_for_android/
 [gnirehtet-2-hn]: https://news.ycombinator.com/item?id=15326106
 
