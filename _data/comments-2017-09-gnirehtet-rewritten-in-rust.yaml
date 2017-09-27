@@ -65,3 +65,32 @@
 
     So, your event listeners are free to mutate their state based on given
     event. `Storage` struct greatly benefit from this design.
+- id: 6
+  author: ®om
+  date: 2017-09-27 22:26:43+02:00
+  contents: |
+    > I'm wondering why you didn't implement `EventListener` trait for `Storage`
+    > struct from your example with `Observer` pattern?
+
+    That's an alternative, but it would need to be implemented for
+    `Rc<RefCell<Storage>>`.
+
+    > Also, you could change a signature of `on_event` method […]
+    >
+    > So, your event listeners are free to mutate their state based on given
+    > event.
+
+    That's a good question, I hesitated to talk about it in the article.
+
+    The `Notifier` stores the listeners in a `Vec<Box<EventListener>>`. Some of
+    them may need to mutate a state, some others may not.
+
+    If you define the trait method with `&mut self`, then the `Notifier` _must_
+    store them in a `Vec<Rc<RefCell<Box<EventListener>>>>`, and _always_
+    [mutably borrow][borrow_mut] the `RefCell` (which is not free) to call
+    `on_event()` on it, for all listeners.
+
+    [borrow_mut]: https://doc.rust-lang.org/std/cell/struct.RefCell.html#method.borrow_mut
+
+    To avoid this extra-cost, it is better to let the listeners borrow only when
+    necessary.
