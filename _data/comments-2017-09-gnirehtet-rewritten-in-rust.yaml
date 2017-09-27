@@ -47,3 +47,21 @@
   contents: |
     Thanks for the article, was really a pleasure to read. I wonder if you could
     evaluate Nim lang with the same project of yours.
+- id: 5
+  author: 0nkery
+  date: 2017-09-27 16:37:38+02:00
+  contents: |
+    Thanks for good article!
+
+    I'm wondering why you didn't implement `EventListener` trait for `Storage`
+    struct from your example with `Observer` pattern? Also, you could change a
+    signature of `on_event` method to be
+
+    {% highlight rust %}
+    pub trait EventListener {
+        fn on_event(&mut self, event: u32);
+    }
+    {% endhighlight %}
+
+    So, your event listeners are free to mutate their state based on given
+    event. `Storage` struct greatly benefit from this design.
