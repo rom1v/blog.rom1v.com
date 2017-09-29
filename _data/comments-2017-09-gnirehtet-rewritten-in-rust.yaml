@@ -94,3 +94,51 @@
 
     To avoid this extra-cost, it is better to let the listeners borrow only when
     necessary.
+- id: 7
+  author: Jan Hudec
+  date: 2017-09-29 20:55:52+02:00
+  contents: |
+    Ad patterns,
+
+    > The borrowing rules constrain encapsulation.
+
+    Actually, the rules mainly constrain composition *without* encapsulation. In
+    the first case since you are providing accessors to the data members, it is
+    not actually encapsulated. The internals of the struct are exposed and the
+    methods don't get a chance to enforce any invariants. Effectively, it is
+    exactly as if you left the data members public.
+
+    That's what the borrow checker does not like. But if it was actually
+    encapsulated, each method would do a complete operation and that would not
+    leave any outstanding borrow, so there would be no problem.
+
+    Also, unlike Java, in Rust the type is *not* a unit of encapsulation. Only
+    the module is. So adding internal getters is a Java habit that does not
+    translate well to Rust, but it is not really about encapsulation.
+
+    > The observer pattern is useful for registering event listeners on an
+    > object.
+    >
+    > In some cases, this pattern may not be straightforward to implement in
+    > Rust.
+
+    Here there does not seem to be any problem—except for the type inference
+    deficiency—until you try to add a method to the observer to register itself.
+
+    And there I'd argue that rust does not like this because it does not really
+    make sense. A method is supposed to take arguments and do some operation on
+    the invocant. However, the `register_to` is trying to put reference to the
+    instance somewhere and that is not responsibility of the type itself, it is
+    responsibility of its owner.
+
+    Rust is more opinionated about owners, so it makes this hard. But I think it
+    is not really a good idea in Java either. It should be in the owning module
+    or the owning object and there you should have the `Rc<RefCell<…>>`
+    available.
+
+    By the way, regarding the inference, I'd probably just declare `type
+    EventListener = Fn(u32)` and not create a custom trait. Java didn't have
+    closures until recently, so the usual approach was to create special
+    interface for each observer, but in languages that do have them (including
+    C#, C++ etc.) the usual style is to just declare what signature is needed
+    and use standard function-objects.
