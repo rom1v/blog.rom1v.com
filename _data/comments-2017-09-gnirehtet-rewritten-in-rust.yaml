@@ -142,3 +142,106 @@
     interface for each observer, but in languages that do have them (including
     C#, C++ etc.) the usual style is to just declare what signature is needed
     and use standard function-objects.
+- id: 8
+  author: ®om
+  date: 2017-10-01 22:26:21+02:00
+  contents: |
+    > Actually, the rules mainly constrain composition *without* encapsulation.
+
+    In my opinion, the rules are "annoying" (and unexpected, at first) when
+    encapsulation is involved: returning something lifetime-bound to a part of a
+    struct from a method expands the borrow to the whole struct.
+
+    > In the first case since you are providing accessors to the data members,
+    > it is not actually encapsulated.
+
+    Using mutable references to the fields is the minimal way to show the
+    problem, but it also applies to cases were actual data fields may not be
+    exposed:
+
+    {% highlight rust %}
+    pub struct Data {
+        header: [u8; 4],
+        payload: [u8; 20],
+    }
+
+    pub struct Header<'a> {
+        raw: &'a mut [u8],
+    }
+
+    impl Data {
+        pub fn header(&mut self) -> Header {
+            Header { raw: &mut self.header }
+        }
+    }
+    {% endhighlight %}
+
+    > Effectively, it is exactly as if you left the data members public.
+
+    I'd argue that even exposing methods returning mutable references to fields
+    is a form of encapsultation: the struct layout is hidden and it is possible
+    to change it without breaking the API, so it's different from leaving the
+    data members public.
+
+    For instance, I may internally refactor my `Data` struct this way without
+    the callers being affected:
+
+    {% highlight rust %}
+    struct Data {
+        meta: Meta,
+        content: ([u8; 20], String),
+    }
+
+    struct Meta {
+        id: u32,
+        header: [u8; 4],
+    }
+
+    impl Data {
+        pub fn new() -> Self {
+            Self {
+                meta: Meta { id: 0, header: [0; 4] },
+                content: ([0; 20], String::new()),
+            }
+        }
+
+        pub fn header(&mut self) -> &mut [u8] {
+            &mut self.meta.header
+        }
+
+        pub fn payload(&mut self) -> &mut [u8] {
+            &mut self.content.0
+        }
+    }
+    {% endhighlight %}
+
+    > Also, unlike Java, in Rust the type is *not* a unit of encapsulation.
+    > Only the module is. So adding internal getters is a Java habit that
+    > does not translate well to Rust, but it is not really about
+    > encapsulation.
+
+    The boundaries are just not the same: adding getters is still useful to
+    expose data to another module.
+
+    > However, the `register_to` is trying to put reference to the instance
+    > somewhere and that is not responsibility of the type itself, it is
+    > responsibility of its owner.
+
+    Here is the concrete case. In Gnirehtet, in case a poll event concerns a TCP
+    stream receiving some data, the TCP connection builds an IP packet and send
+    it to the client that opened this TCP stream. But when the client buffer is
+    full, it [registers itself] to the client so that the client will pull the
+    data when its buffer has space for the packet.
+
+    [registers itself]: https://github.com/Genymobile/gnirehtet/blob/v2.0/relay-rust/src/relay/tcp_connection.rs#L304
+
+    > And there I'd argue that rust does not like this because it does not
+    > really make sense. A method is supposed to take arguments and do some
+    > operation on the invocant. […]
+    >
+    > Rust is more opinionated about owners, so it makes this hard. But I think
+    > it is not really a good idea in Java either.
+
+    Calling `addSomethingListener(this)` is very (very) common in Java
+    (especially on Android): just grep `add.*Listener(this)` on any Android
+    application having UI.
