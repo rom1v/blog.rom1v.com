@@ -346,3 +346,15 @@
   date: 2013-08-29 21:54:48+02:00
   contents: |
     Très bon article, merci pour ces infos :)
+- id: 17
+  author: tuxmika
+  author-url: http://arobaseinformatique.eklablog.com
+  date: 2017-10-06 09:30:43+02:00
+  contents: |
+    Ce qui me chagrine un peu, c'est que l'on s'efforce a chiffrer ses
+    sauvegardes et que l'on met le mot de passe de la clé GPG dans un script...
+
+    beaucoup utilisent la fonction "export password" et "unset password" mais je
+    ne trouve cela pas top..
+
+    N'y a t'il pas d'autres solutions ?
