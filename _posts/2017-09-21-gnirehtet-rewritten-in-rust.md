@@ -945,6 +945,38 @@ This is a corner case, that will probably be solved in the future. In practice,
 **Rust safety guarantees are pretty strong** (at a cost of being constraining).
 
 
+### Segfault
+
+_This section has been added after the publication._
+
+There are other sources of _undefined behaviors_ (look at the [issues tagged
+_I-unsound_][unsound]).
+
+[unsound]: https://github.com/rust-lang/rust/labels/I-unsound
+
+For instance, casting a _float_ value that cannot fit into the target type is
+_undefined behavior_, which can be [propagated] to trigger a segfault:
+
+[propagated]: https://github.com/rust-lang/rust/issues/10184#issuecomment-139858153
+
+{% highlight rust %}
+#[inline(never)]
+pub fn f(ary: &[u8; 5]) -> &[u8] {
+    let idx = 1e100f64 as usize;
+    &ary[idx..]
+}
+
+fn main() {
+    println!("{}", f(&[1; 5])[0xdeadbeef]);
+}
+{% endhighlight %}
+
+```
+rustc -O ub.rs && ./ub
+Segmentation fault
+```
+
+
 ## Stats
 
 That's all for my feedbacks about the language itself.

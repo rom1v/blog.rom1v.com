@@ -1003,6 +1003,39 @@ pratique, **les garanties de sûreté de Rust sont très fortes** (au prix d'êt
 contraignantes).
 
 
+### Erreur de segmentation
+
+_Cette section a été ajoutée après la publication._
+
+Il y a d'autres sources d'_undefined behaviors_ (voir les [_issues_ taggées
+_I-unsound_][unsound]).
+
+[unsound]: https://github.com/rust-lang/rust/labels/I-unsound
+
+Par exemple, _caster_ une valeur flottante ne pouvant pas être représentée dans
+le type cible est un _undefined behavior_, qui peut être [propagé] pour
+provoquer une erreur de segmentation :
+
+[propagé]: https://github.com/rust-lang/rust/issues/10184#issuecomment-139858153
+
+{% highlight rust %}
+#[inline(never)]
+pub fn f(ary: &[u8; 5]) -> &[u8] {
+    let idx = 1e100f64 as usize;
+    &ary[idx..]
+}
+
+fn main() {
+    println!("{}", f(&[1; 5])[0xdeadbeef]);
+}
+{% endhighlight %}
+
+```
+rustc -O ub.rs && ./ub
+Erreur de segmentation
+```
+
+
 ## Stats
 
 C'est tout pour mes retours sur le langage lui-même.
