@@ -75,8 +75,8 @@ Je l'ai ensuite réécrit en Rust.
 [mio] est une _library_ d'[I/O asynchrone] pour Rust.
 
 J'ai supprimé l'interdiction d'enregistrer un _handle_ avec un ensemble
-d'intérêts vide, vu les _backends_ le supportent. Cette modification était
-nécessaire au bon fonctionnement de _Gnirehtet_ :
+d'intérêts vide, étant donné que les _backends_ le supportent. Cette
+modification était nécessaire au bon fonctionnement de _Gnirehtet_ :
  - [Allow registration with empty interest](https://github.com/carllerche/mio/pull/640) <em style="color: green;">mergé</em>
 
 Quelques opérateurs manquaient sur `mio::Ready` :

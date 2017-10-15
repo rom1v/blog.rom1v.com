@@ -13,171 +13,258 @@ permalink: cv/
 - Diplôme Universitaire de Technologie Informatique (IUT du Havre, 2005)
 
 
-## Expériences
+## Expériences professionnelles
 
-Je liste pour chaque technologie quelques expériences significatives.
-Pour les projets libres, plus de détails sont disponibles sur ma page de
-[contributions][].
+### Genymobile _(2013 → …)_
 
-[contributions]: /contrib
+#### Clone d'écran Android sur le PC
 
-### C++
+Je développe actuellement une application permettant d'afficher en direct
+l'écran d'un téléphone (ou d'une tablette) Android branché sur l'ordinateur.
 
-- Refonte complète d'une application C++/Qt (2 ans) (chez [Genymobile][])
-- Écriture d'un [wrapper C++][] pour certaines parties de [`libusb`][libusb]
-- Mécanisme d'annulation d'exécution en environnement multithread
-- Utilisation de `libqi` pour la création de l'API Android du robot [Pepper][]
-- Talk (interne) sur la gestion des ressources sans pointeurs en C++
-  ([article][nopointers])
-- [Mini-projet][meta] de métaprogrammation par templates
+J'ai pour l'instant fini un prototype qui affiche un écran 1920×1080 à 60 fps
+avec très peu de latence : [démo](http://h.rom1v.com/scrcpy.webm).
 
-[genymobile]: https://www.genymobile.com/
-[wrapper C++]: {% post_url 2017-01-12-cpp-sans-pointeurs %}#libusb-wrappers
-[libusb]: http://libusb.info/
-[pepper]: https://fr.wikipedia.org/wiki/Pepper_%28robot%29
-[nopointers]: {% post_url 2017-01-12-cpp-sans-pointeurs %}
-[meta]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
+_C, libav/ffmpeg, SDL, Java, Android._
 
 
-### C
+#### Application de _reverse tethering_
 
-- Modifications du protocole MDP du projet [Serval][] (équivalent UDP sur réseau
-  Mesh)
-- Parallélisation de [Rhizome][] pour un partage décentralisé de données
-- PoC de [mixage audio][mixpoc-github] ([article][mixpoc])
-- Projet [`delay`][delay-github] (un _pipe_ à retardement) ([article][delay])
-- Utilisation de [`libusb`][libusb] pour _forwarder_ à partir d'un pc les
-  événements HID d'une souris vers un device Android
-- [Solveur][snakesolver-c-github] de serpent-cube ([article][snakesolver-c])
+J'ai développé un outil qui permet aux devices Android d'utiliser la connexion
+du PC sur lequel ils sont branchés (reverse tethering), sans accès root.
 
-[serval]: /contrib#servalbatphone
-[rhizome]: /contrib#paralllisation-de-rhizome
-[mixpoc-github]: https://github.com/rom1v/mixpoc
-[mixpoc]: {% post_url 2013-01-29-le-mixage-audio %}
-[delay-github]: https://github.com/rom1v/delay
-[delay]: {% post_url 2014-01-20-lecture-differee-de-la-webcam-dun-raspberry-pi %}
-[snakesolver-c-github]: https://github.com/rom1v/csnakesolver
-[snakesolver-c]: {% post_url 2011-10-18-resoudre-le-cube-serpent-300-fois-plus-rapidement-en-c %}
+D'abord écrit en Java, je l'ai réimplémenté en Rust pour obtenir un binaire
+natif.
+
+Nous l'avons publié en open source :
+[gnirehtet](https://github.com/Genymobile/gnirehtet)
+([contrib]({{ site.baseurl }}/contrib/#gnirehtet)).
+
+À cette occasion, j'ai contribué à la _library_ d'I/O asynchrone que j'ai
+utilisée : [mio]({{ site.baseurl }}/contrib/#rustmio).
+
+_Java, Android, Rust._
 
 
-### Java/Android
+#### Replay d'évéments souris et clavier par USB
 
-Java est mon language maternel ;-)
+J'ai développé un outil permettant de contrôler un périphérique Android en
+utilisant une souris ou un clavier USB branché sur le PC. Il permet notamment
+d'enregistrer une séquence pouvant être rejouée sur plusieurs périphériques
+simultanément.
 
-- Développement d'une application de [_reverse tethering_][gnirehtet-contrib]
-  pour Android ([article][gnirehtet])
-- Conception et réalisation de l'API Android du robot [Pepper] (pour
-  [Aldebaran][])
-    - bindings des `promise`/`future` C++ de `libqi` en Java (à travers JNI)
-    - API Android de plus haut niveau qui expose les fonctionnalités du robot
-      avec simplicité (chaînage automatique d'appels asynchrones…)
-- Développement d'un talkie-walkie (pour une conversation à plusieurs) avec
-  [mixage audio][mix] utilisant le réseau Mesh de [Serval][]
-- Intégration de cartes IGN avec [osmdroid][] (OpenStreetMap)
-- Ajout de fonctionnalités d'exécution concurrente dans [AndroidAnnotations][]
-- Système vidéo sur set-top box
-    - modifications de la rom CyanogenMod
-    - application Android de lecture vidéo (utilisant LibVLC)
-    - compilation et intégration d'`udpxy` pour permettre la lecture d'un flux
-      UDP multicast par le lecteur natif d'Android (voir [article][udpxy])
-- Application Android de lecture vidéo provenant d'un flux UDP envoyé par une
-  caméra de Raspberry Pi (qui filmait un babyfoot), supportant à la fois le
-  lecteur natif et LibVLC, et à la fois sur `SurfaceView` et `TextureView` (pour
-  des raisons de compatibilité avec différents devices)
-- Aide à l'intégration du timeshifting vidéo dans [AOSP] (pour [ExpWay][])
-- Intégration de [ChromeCast] dans l'application Android CanalPlay (Canal+)
-- Analyse et modifications d'architecture du SDK de [FollowAnalytics][] pour
-  corriger des bugs récurrents ou aléatoires
-- Applications e-mail et Twitter pour le tableau de bord de la Renault Zoé
+À cette occasion, j'ai corrigé un [bug sur libusb]({{ site.baseurl
+}}/contrib/#libusb).
 
-[gnirehtet-contrib]: /contrib#gnirehtet
-[gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
-[Aldebaran]: https://www.ald.softbankrobotics.com/fr
-[osmdroid]: https://github.com/osmdroid/osmdroid
-[AndroidAnnotations]: /contrib#androidannotations
+J'en ai profité pour faire une présentation en interne sur la gestion des
+ressources sans pointeurs en C++, dont j'ai repris le contenu pour écrire un
+[article]({% post_url 2017-01-12-cpp-sans-pointeurs %}). J'y présente notamment
+l'API du [wrapper C++ de libusb]({% post_url 2017-01-12-cpp-sans-pointeurs
+%}#libusb-wrappers) que j'ai implémentée.
+
+_C, C++, libusb, Qt._
+
+
+#### Refonte complète d'une application C++/Qt
+
+Pendant plus de 2 ans, j'ai travaillé sur
+[Genydeploy](https://www.genymotion.com/genydeploy/), d'abord pour sa refonte
+complète (la version 3), puis pour le développement de nouvelles fonctionnalités
+(les projets présentés ci-dessus ont en fait été réalisés dans le cadre de
+Genydeploy).
+
+_C++11, Qt5, Java, Android._
+
+
+#### API Java/Android pour le robot Pepper
+
+En mission chez [Softbank Robotics](https://www.ald.softbankrobotics.com/fr)
+(anciennement Aldebaran), j'ai conçu l'API Android du robot
+[Pepper](https://fr.wikipedia.org/wiki/Pepper_%28robot%29).
+
+Pour cela, j'ai d'abord implémenté des _bindings_ Java/JNI pour exposer les
+`promise`/`future` C++ de leur _library_ [libqi] en Java. Cette partie est open
+source : [libqi-java].
+
+J'ai ensuite développé une API Android de plus haut niveau qui expose plus
+simplement les fonctionnalités du robot (chaînage automatique d'appels
+asynchrones…).
+
+[libqi]: https://github.com/aldebaran/libqi
+[libqi-java]: https://github.com/aldebaran/libqi-java/commits/5bb55a47b7b495a7a7fe31571e7be89aa843ff20
+
+_C++, Java, JNI, Android, NDK, AOSP._
+
+
+#### Système vidéo sur set-top box
+
+J'ai travaillé au développement d'un système vidéo pour set-top box Android,
+destiné à être installé dans toutes les chambres d'une chaîne d'hôtels.
+
+J'ai intégré [LibVLC](https://wiki.videolan.org/LibVLC/) dans une application
+Android pour lire des flux vidéos UDP multicast.
+
+J'ai traqué et [contourné]({{ site.baseurl }}/contrib/#vlc) un _deadlock_
+pouvant survenir lors de l'arrêt du flux UDP sur VLC.
+
+J'ai également intégré un outil permettant la lecture de flux vidéos UDP
+multicast avec le lecteur natif d'Android (voir [article]({% post_url
+2014-03-18-compiler-un-executable-pour-android %})).
+
+_C, Java, Android, NDK, AOSP, CyanogenMod, LibVLC._
+
+
+#### Système vidéo pour babyfoot
+
+Pour notre babyfoot au travail, mes collègues ont développé une application
+Android qui comptait les points automatiquement (grâce des capteurs branchés sur
+un Raspberry Pi).
+
+Je me suis occupé du système vidéo.
+
+J'ai développé un outil permettant de décaler le flux vidéo _live_ quelques
+secondes, afin de revoir les buts facilement (voir [article]({% post_url
+2014-01-20-lecture-differee-de-la-webcam-dun-raspberry-pi %})).
+
+Pour Android, j'ai développé un lecteur vidéo qui supportait à la fois le
+lecteur natif et LibVLC, et à la fois sur `SurfaceView` et `TextureView` (pour
+des raisons de compatibilité avec différentes tablettes).
+
+[`SurfaceView`]: https://developer.android.com/reference/android/view/SurfaceView.html
+[`TextureView`]: https://developer.android.com/reference/android/view/TextureView.html
+
+_C, Java, Android, Bash._
+
+
+#### ChromeCast dans CanalPlay
+
+J'ai intégré la gestion du
+[ChromeCast](https://fr.wikipedia.org/wiki/Chromecast) dans l'application
+Android
+[CanalPlay](https://play.google.com/store/apps/details?id=com.canalplus.canalplay.prod).
+
+À cette occasion, j'ai [corrigé]({{ site.baseurl }}/contrib/#googlecast) une
+petite fuite mémoire sur la _library_ de Google pour communiquer avec un ChromeCast.
+
+_Java, Android._
+
+
+#### Autres missions
+
+J'ai aussi participé à d'autres missions chez des clients :
+
+ - intégration du timeshifting vidéo dans [AOSP] pour
+   [ExpWay](http://www.expway.com/) ;
+ - analyse et modifications d'architecture du SDK de
+   [FollowAnalytics](http://followanalytics.com/) pour
+   corriger des bugs récurrents ou aléatoires ;
+ - modifications sur les applications Android et Android TV de
+   [MolotovTV](https://www.molotov.tv/).
+
 [AOSP]: https://source.android.com/
-[ExpWay]: http://www.expway.com/
-[ChromeCast]: https://fr.wikipedia.org/wiki/Chromecast
-[FollowAnalytics]: http://followanalytics.com/
-[udpxy]: {% post_url 2014-03-18-compiler-un-executable-pour-android %}
+
+_Java, Android, C++._
+
+
+### AtoS Open Source Center / SmartMobility _(2012 → 2013)_
+
+#### Application de communication sur réseau Mesh
+
+En utilisant le projet [Serval](http://www.servalproject.org/), j'ai développé
+une application Android permettant la communication entre téléphones Android
+(rootés) sans réseau mobile ni Wifi, avec les fonctionnalités suivantes :
+
+ - communication audio (talkie-walkie) à plusieurs ;
+ - messagerie textuelle ;
+ - géolocalisation sur des cartes [IGN] téléchargées intégrées avec [osmdroid]
+   (OpenStreetMap) ;
+ - partage décentralisé de fichiers.
+
+[ign]: https://www.geoportail.gouv.fr/donnees/carte-ign
+[osmdroid]: https://github.com/osmdroid/osmdroid
+
+Ce projet a été l'occasion de [contribuer]({{ site.baseurl
+}}/contrib/#servalbatphone) à _Serval_.
+
+Par ailleurs, pour implémenter le talkie-walkie à plusieurs utilisateurs, j'ai
+développé une solution simple de mixage audio, dont j'explique les principes
+dans cet [article][mix].
+
 [mix]: {% post_url 2013-01-29-le-mixage-audio %}
 
+_Java, C, Android, NDK._
 
-### Python
 
-J'utilise _Python_ de manière très occasionnelle.
+#### Applications pour tableau de bord de voiture
 
-- [SHAdow][shadow-github] (pour générer des collisions SHA1) ([article][shadow])
-- [Solveur][snakesolver-github] de serpent-cube ([article][snakesolver])
+Lors de mes premiers pas sur Android, j'ai développé des applications e-mail et
+Twitter pour la tablette intégrée au tableau de bord de la voiture [Renault
+Zoé](https://www.renault.fr/vehicules/vehicules-electriques/zoe.html).
 
-[shadow-github]: https://github.com/rom1v/shadow
-[shadow]: {% post_url 2017-03-01-shadow %}
-[snakesolver-github]: https://github.com/rom1v/snakesolver
+_Java, Android._
+
+
+### Logica _(2008 → 2012)_
+
+J'ai principalement réalisé une mission de 3 ans chez Sanofi-Aventis, pour
+développer une application Java/Flex de recherche de molécules.
+
+_Java EE, Adobe Flex, ActionScript._
+
+
+## Autres développements
+
+En dehors des langages principaux listés dans mes expériences profesionnelles,
+j'en utilise quelques autres.
+
+Je développe en _Python_ de manière très occasionnelle. J'ai par exemple écrit
+[SHAdow]({% post_url 2017-03-01-shadow %}) pour générer des fichiers différents
+ayant le même SHA-1, ou encore un [solveur de serpent-cube][snakesolver].
+
 [snakesolver]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
 
+_Bash_ est mon shell par défaut. Il m'arrive d'écrire des scripts, par exemple
+un [prompt pour git]({% post_url 2012-04-04-prompt-bash-pour-git %}) ou un outil
+de [reverse sshfs]({% post_url 2014-06-15-sshfs-inverse-rsshfs %}).
 
-### Bash
-
-_Bash_ est mon shell par défaut. Il m'arrive d'écrire des scripts, en voici
-quelques uns :
-
-- [Prompt][gitbashprompt-github] pour _git_ ([article][gitbashprompt])
-- [`rsshfs`][rsshfs-github] ([article][rsshfs])
-- Un script de récupération et d'encodage de vidéos ([article][vod])
-
-[gitbashprompt-github]: https://github.com/rom1v/gitbashprompt
-[gitbashprompt]: {% post_url 2012-04-04-prompt-bash-pour-git %}
-[rsshfs-github]: https://github.com/rom1v/rsshfs
-[rsshfs]: {% post_url 2014-06-15-sshfs-inverse-rsshfs %}
-[vod]: {% post_url 2010-04-24-aggreger-differentes-sources-de-vod-en-oggtheora %}
-
-
-### Rust
-
-J'ai réécrit [Gnirehtet en Rust].
-
-J'ai également apporté quelques contributions à [mio].
-
-[gnirehtet en Rust]: {% post_url 2017-09-21-gnirehtet-reecrit-en-rust %}
-[mio]: /contrib#rustmio
-
-
-### Linux Kernel
-
-Je participe au challenge [eudyptula][] sur mon temps libre.
-
-Pour l'instant j'ai validé les 8 premiers exercices sur 20.
+Je m'intéresse également au développement _kernel_ : je participe au challenge
+[eudyptula] sur mon temps libre _(mais avec 2 enfants, le temps libre n'existe
+pas)_. Pour l'instant, j'ai validé les 8 premiers exercices sur 20.
 
 [eudyptula]: http://eudyptula-challenge.org/
 
+Vous trouverez sans doute d'autres choses dont je n'ai pas parlé ici dans mes
+[articles] ou mes [contributions open source][contrib].
 
-## Divers
+[articles]: {{ site.baseurl }}/articles/
+[contrib]: {{ site.baseurl }}/contrib/
 
-J'utilise évidemment `git` au quotidien, mon shell est `bash` et mon éditeur
-est `vim` (sauf pour le _Java_).
 
-J'aime beaucoup les problèmes de synchronisation (mutexes, atomics, barrières
-mémoire, réordonnancement des instructions par le compilateur ou le CPU…) et les
-conséquences des [undefined behaviors][ub].
+## Mes préférences
+
+J'aime beaucoup les problèmes de multithreading et synchronisation (mutexes,
+atomics, barrières mémoire, réordonnancement des instructions par le compilateur
+ou le CPU…) et les conséquences des [undefined behaviors][ub].
 
 [ub]: {% post_url 2014-10-22-comportement-indefini-et-optimisation %}
 
-J'aime bien les casse-têtes de programmation ([1][reveng] [2][quines]
-[3][serpent]…).
+J'aime bien les casse-têtes de programmation ([1][metahanoi] [2][reveng]
+[3][quines] [4][snakesolver]…).
+
+[metahanoi]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
+[reveng]: {% post_url 2015-07-21-challenge-reverse-engineering %}
+[quines]: {% post_url 2011-11-14-programmes-auto-reproducteurs-quines %}
 
 Les problèmes faisant intervenir des mathématiques sont les plus intéressants
 (par exemple, j'ai beaucoup aimé trouver une solution pour [mixer][mix]
 plusieurs sources audio en une seule).
 
-[reveng]: {% post_url 2015-07-21-challenge-reverse-engineering %}
-[quines]: {% post_url 2011-11-14-programmes-auto-reproducteurs-quines %}
-[serpent]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
-
 J'aime moins développer des interfaces utilisateur et je suis nul en design
 graphique.
 
 Mes ordinateurs sont sous _Debian_. Je travaille sous _Linux_ (m'imposer un
-poste de travail sous _Windows_ ou _Mac_ est rédhibitoire).
+poste de travail principal sous _Windows_ ou _Mac_ est rédhibitoire).
+
 
 ## Mes lectures informatiques
 
