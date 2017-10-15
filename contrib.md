@@ -12,34 +12,34 @@ avec une description succincte.
 
 ## Mes mini-projets
 
-  * [`pluzz`](https://github.com/rom1v/pluzz) ([article][blog-pluzz])
-  * [`snakesolver`](https://github.com/rom1v/snakesolver) ([article][blog-snakesolver])
-  * [`csnakesolver`](https://github.com/rom1v/csnakesolver) ([article][blog-csnakesolver])
-  * [`gitbashprompt`](https://github.com/rom1v/gitbashprompt) ([article][blog-gitbashprompt])
-  * [`mixpoc`](https://github.com/rom1v/mixpoc) ([article][blog-mixpoc])
-  * [`rogpoc`](https://github.com/rom1v/rogpoc) ([topic](https://groups.google.com/forum/#!topic/serval-project-developers/D4Vt7nBd_7A))
-  * [`pibuf`](https://github.com/rom1v/pibuf)
-  * [`delay`](https://github.com/rom1v/delay) ([article][blog-delay])
-  * [`mdbeamer`](https://github.com/rom1v/mdbeamer) ([article][blog-mdbeamer])
-  * [`andudpxy`](https://github.com/rom1v/andudpxy)/[`andudpxy-sample`](https://github.com/rom1v/andudpxy-sample) ([article][blog-andudpxy])
-  * [`vlc-udp-deadlock`](https://github.com/rom1v/vlc-udp-deadlock) (sample pour ce [patch](https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098020.html))
-  * [`rsshfs`](https://github.com/rom1v/rsshfs) ([article][blog-rsshfs])
-  * [`AImageView`](https://github.com/rom1v/AImageView)/[`AImageViewSample`](https://github.com/rom1v/AImageViewSample) ([article][blog-aimageview])
-  * [`metahanoi`](https://github.com/rom1v/metahanoi) ([article][blog-metahanoi])
   * [`shadow`](https://github.com/rom1v/shadow) ([article][blog-shadow])
+  * [`metahanoi`](https://github.com/rom1v/metahanoi) ([article][blog-metahanoi])
+  * [`AImageView`](https://github.com/rom1v/AImageView)/[`AImageViewSample`](https://github.com/rom1v/AImageViewSample) ([article][blog-aimageview])
+  * [`rsshfs`](https://github.com/rom1v/rsshfs) ([article][blog-rsshfs])
+  * [`vlc-udp-deadlock`](https://github.com/rom1v/vlc-udp-deadlock) (sample pour ce [patch](https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098020.html))
+  * [`andudpxy`](https://github.com/rom1v/andudpxy)/[`andudpxy-sample`](https://github.com/rom1v/andudpxy-sample) ([article][blog-andudpxy])
+  * [`mdbeamer`](https://github.com/rom1v/mdbeamer) ([article][blog-mdbeamer])
+  * [`delay`](https://github.com/rom1v/delay) ([article][blog-delay])
+  * [`pibuf`](https://github.com/rom1v/pibuf)
+  * [`rogpoc`](https://github.com/rom1v/rogpoc) ([topic](https://groups.google.com/forum/#!topic/serval-project-developers/D4Vt7nBd_7A))
+  * [`mixpoc`](https://github.com/rom1v/mixpoc) ([article][blog-mixpoc])
+  * [`gitbashprompt`](https://github.com/rom1v/gitbashprompt) ([article][blog-gitbashprompt])
+  * [`csnakesolver`](https://github.com/rom1v/csnakesolver) ([article][blog-csnakesolver])
+  * [`snakesolver`](https://github.com/rom1v/snakesolver) ([article][blog-snakesolver])
+  * [`pluzz`](https://github.com/rom1v/pluzz) ([article][blog-pluzz])
 
-[blog-pluzz]: {% post_url 2010-07-06-pluzz-fr-france-televisions-lance-son-service-de-tv-de-rattrapage-non-lisible %}
-[blog-snakesolver]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
-[blog-csnakesolver]: {% post_url 2011-10-18-resoudre-le-cube-serpent-300-fois-plus-rapidement-en-c %}
-[blog-gitbashprompt]: {% post_url 2012-04-04-prompt-bash-pour-git %}
-[blog-mixpoc]: {% post_url 2013-01-29-le-mixage-audio %}
-[blog-delay]: {% post_url 2014-01-20-lecture-differee-de-la-webcam-dun-raspberry-pi %}
-[blog-mdbeamer]: {% post_url 2014-02-15-des-slides-beamer-en-markdown %}
-[blog-andudpxy]: {% post_url 2014-03-18-compiler-un-executable-pour-android %}
-[blog-rsshfs]: {% post_url 2014-06-15-sshfs-inverse-rsshfs %}
-[blog-aimageview]: {% post_url 2014-10-20-aimageview-composant-android %}
-[blog-metahanoi]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
 [blog-shadow]: {% post_url 2017-03-01-shadow %}
+[blog-metahanoi]: {% post_url 2015-03-27-executer-un-algorithme-lors-de-la-compilation-templates-c %}
+[blog-aimageview]: {% post_url 2014-10-20-aimageview-composant-android %}
+[blog-rsshfs]: {% post_url 2014-06-15-sshfs-inverse-rsshfs %}
+[blog-andudpxy]: {% post_url 2014-03-18-compiler-un-executable-pour-android %}
+[blog-mdbeamer]: {% post_url 2014-02-15-des-slides-beamer-en-markdown %}
+[blog-delay]: {% post_url 2014-01-20-lecture-differee-de-la-webcam-dun-raspberry-pi %}
+[blog-mixpoc]: {% post_url 2013-01-29-le-mixage-audio %}
+[blog-gitbashprompt]: {% post_url 2012-04-04-prompt-bash-pour-git %}
+[blog-csnakesolver]: {% post_url 2011-10-18-resoudre-le-cube-serpent-300-fois-plus-rapidement-en-c %}
+[blog-snakesolver]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
+[blog-pluzz]: {% post_url 2010-07-06-pluzz-fr-france-televisions-lance-son-service-de-tv-de-rattrapage-non-lisible %}
 
 
 ## gnirehtet
