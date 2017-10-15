@@ -59,6 +59,10 @@ Le projet est composé de deux parties :
  - une application Android (le client) ;
  - une application Java pour le PC (le serveur relais).
 
+_Depuis, [je l'ai réécrit en Rust][rust]._
+
+[rust]: {% post_url _posts/2017-09-21-gnirehtet-reecrit-en-rust %}
+
 Le client s'enregistre en tant que VPN, de manière à intercepter tout le trafic
 réseau du téléphone, sous la forme de `byte[]` de [paquets IPv4] bruts, qu'il
 transmet alors vers le serveur relais sur une connexion [TCP] (établie
