@@ -353,3 +353,13 @@
   contents: |
     Bonjour, je voudrais savoir avec quel commande l'on fait le signe biohazard
     (☣) j'ai copier le signe pour vous le faire montrer.Merci de me répondre :)
+- id: 36
+  author: ®om
+  date: 2017-10-23 13:26:14+02:00
+  contents: |
+    ```
+    $ printf '☣' | iconv -t unicodebig | xxd -p
+    2623
+    ```
+
+    Donc Ctrl+Shift+u2623.
