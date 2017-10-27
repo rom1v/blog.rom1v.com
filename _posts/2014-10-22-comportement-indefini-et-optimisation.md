@@ -24,7 +24,7 @@ ce qu'il veut. Et il ne s'en prive pas !
 
 ## Programme indéfini
 
-Par exemple, [déréférencer un pointeur NULL][undefined-deref]) est un
+Par exemple, [déréférencer un pointeur NULL][undefined-deref] est un
 _comportement indéfini_. En effet, contrairement à ce que beaucoup pensent,
 l'exécution du programme ne va pas forcément provoquer une [erreur de
 segmentation][].
