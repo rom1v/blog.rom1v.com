@@ -264,3 +264,13 @@
 
     Effectivement, j'avais un certificat d'un mois également (mais comme je
     l'avais accepté, ça fonctionnait quand même).
+- id: 25
+  author: mij
+  date: 2017-12-12 15:49:18+01:00
+  contents: |
+    Est-il possible de remplacer le nom de domaine par une ip fix, en theorie ca
+    devrait pas poser de probleme, mais je ne vois pas comment. Quand je met
+    simplement une ip dans le fichier config ca ne marche pas, à moins que j'ai
+    fais une erreur autre part...
+
+    Merci pour l'article.
