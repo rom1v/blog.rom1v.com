@@ -201,15 +201,15 @@ d'images dans les applications Android.
 [Android-Universal-Image-Loader]: https://github.com/nostra13/Android-Universal-Image-Loader
 
 J'ai corrigé un bug aspect-ratio sur les images circulaires :
- - [Make circle displayer preserve
-aspect-ratio](https://github.com/nostra13/Android-Universal-Image-Loader/pull/1257) _not merged_
+ - [Make circle displayer preserve aspect-ratio](https://github.com/nostra13/Android-Universal-Image-Loader/pull/1257) _non mergé_
 
 
 ## Android Open Source Project
 
 J'ai rapporté un [bug][loader-bug] constaté sur l'utilisation [loaders][] lors
 de la rotation d'écran, pour lequel j'ai ensuite proposé un patch :
- - [Avoid duplicate call to onLoadFinished()](https://android-review.googlesource.com/#/c/71461/) _not merged_
+ - [Avoid duplicate call to
+   onLoadFinished()](https://android-review.googlesource.com/#/c/71461/) _non mergé_
 
 [loader-bug]: https://code.google.com/p/android/issues/detail?id63179
 [loaders]: http://developer.android.com/guide/components/loaders.html
