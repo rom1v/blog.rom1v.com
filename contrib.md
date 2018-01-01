@@ -89,6 +89,63 @@ J'ai aussi ouvert quelques rapports de bugs :
 [mio]: https://docs.rs/mio/0.6.10/mio/
 [I/O asynchrone]: https://en.wikipedia.org/wiki/Asynchronous_I/O
 
+
+## VLC
+
+J'ai corrigé quelques bugs sur [VLC] :
+
+ - [demux: avformat: fix tracks initialization to prevent
+   crash](https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116037.html)
+   <em style="color: green;">mergé</em> ([`8a3958c`])
+ - [vout: snapshot: fix snapshots
+   cropping](https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116070.html)
+   <em style="color: green;">mergé</em> ([`7a46fc4`])
+ - [qt: playlist: fix stack
+   overflow](https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116098.html)
+   <em style="color: green;">mergé</em> ([`991ed98`])
+ - [mtp: fix initialization to avoid segfault on
+   close](https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116145.html)
+   <em style="color: green;">mergé</em> ([`3ff283b`])
+ - [gui/qt: bookmarks: fix psz_name
+   lifetime](https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116144.html)
+   <em style="color: green;">mergé</em> ([`ea0a32e`])
+ - [core: fix vlc_alloc() overflow
+   detection](https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116171.html)
+   <em style="color: green;">corrigé</em> (via [helpers][unsigned_helpers])
+ - [core: fix vlc_obj_alloc_common() overflow
+   detection](https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116172.html)
+   <em style="color: green;">corrigé</em> (via [helpers][unsigned_helpers])
+ - [android: Clear list filter on small search query
+   string](https://mailman.videolan.org/pipermail/android/2017-November/012398.html)
+   <em style="color: green;">mergé</em> ([`ea0a32e`])
+
+
+[vlc]: https://www.videolan.org/
+[`8a3958c`]: http://git.videolan.org/?p=vlc.git;a=commitdiff;h=8a3958ca57d641ef17d94ade001b01c5a2e4bac7
+[`7a46fc4`]: http://git.videolan.org/?p=vlc.git;a=commitdiff;h=7a46fc430b090fc6b2b32216d0d5527fcf7be68b
+[`991ed98`]: http://git.videolan.org/?p=vlc.git;a=commitdiff;h=991ed989345c28d5fced32a9a5e60f0e793fcab1
+[`3ff283b`]: http://git.videolan.org/?p=vlc.git;a=commitdiff;h=3ff283bc176b2dd2e83bb7cd7358eb2a0104124c
+[`ea0a32e`]: http://git.videolan.org/?p=vlc.git;a=commitdiff;h=ea0a32e1c1cbf3a2ad786d46b46a3d9a449ec274
+[`947cbaa`]: https://code.videolan.org/videolan/vlc-android/commit/947cbaaebd5444ffa424bbfd5383d9784f1e07de
+
+[unsigned_helpers]: https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116176.html
+
+
+Il y a quelques années, j'avais corrigé un problème de [deadlock][] pouvant
+survenir lors de l'arrêt d'un flux UDP sur le lecteur vidéo [VLC][] :
+
+ - [Avoid deadlock on UDP stop](https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098020.html) <em style="color: red;">refusé</em>
+
+_Ce patch [ne corrigeait pas la cause profonde du problème][vlc-answer]. Le
+deadlock se produit lorsque les appels rapprochés à deux fonctions surviennent
+dans un certain ordre. Mon patch empêchait le deadlock dans ce cas. Un
+développeur de VLC considère plutôt que la cause du problème est que ces deux
+fonctions ne devraient jamais être appelées dans cet ordre._
+
+[deadlock]: https://fr.wikipedia.org/wiki/Deadlock
+[vlc]: http://www.videolan.org/
+[vlc-answer]: https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098136.html
+
 ## libusb
 
 [libusb][] est une bibliothèque C pour communiquer sur USB.
@@ -96,10 +153,10 @@ J'ai aussi ouvert quelques rapports de bugs :
 J'ai corrigé un bug qui pouvait provoquer l'arrêt de l'event thread [udev][]
 lors d'un [signal][]. En particulier, il s'arrêtait à chaque fois qu'une
 [FileDialog][] [Qt][]/[QML][] était ouverte :
- - [linux_udev: Retry poll() on EINTR](https://github.com/libusb/libusb/pull/220)   <em style="color: green;">mergé</em> (cf [`commit 0a02d12`][0a02d12])
+ - [linux_udev: Retry poll() on EINTR](https://github.com/libusb/libusb/pull/220) <em style="color: green;">mergé</em> ([`0a02d12`])
  - [mail](https://sourceforge.net/p/libusb/mailman/message/35466045/)
 
-[0a02d12]: https://github.com/libusb/libusb/commit/0a02d1212bfb7ff2e9f3fc603655b0220b7d6889
+[`0a02d12`]: https://github.com/libusb/libusb/commit/0a02d1212bfb7ff2e9f3fc603655b0220b7d6889
 
 [libusb]: http://libusb.info/
 [usb]: https://en.wikipedia.org/wiki/USB
@@ -146,26 +203,6 @@ d'images dans les applications Android.
 J'ai corrigé un bug aspect-ratio sur les images circulaires :
  - [Make circle displayer preserve
 aspect-ratio](https://github.com/nostra13/Android-Universal-Image-Loader/pull/1257) _not merged_
-
-
-
-## VLC
-
-J'ai corrigé un problème de [deadlock][] pouvant survenir lors de l'arrêt d'un
-flux UDP sur le lecteur vidéo [VLC][] :
-
- - [Avoid deadlock on UDP stop](https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098020.html) <em style="color: red;">contribution refusée</em>
-
-_Mon patch [ne corrige pas la cause profonde du problème][vlc-answer]. Le
-deadlock se produit lorsque les appels rapprochés à deux fonctions surviennent
-dans un certain ordre. Mon patch empêchait le deadlock dans ce cas. Un
-développeur de VLC considère plutôt que la cause du problème est que ces deux
-fonctions ne devraient jamais être appelées dans cet ordre._
-
-[deadlock]: https://fr.wikipedia.org/wiki/Deadlock
-[vlc]: http://www.videolan.org/
-[vlc-answer]: https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098136.html
-
 
 
 ## Android Open Source Project
@@ -295,7 +332,7 @@ stockage de _Rhizome_ par-dessus _git_ :
  * [Always notify completion](https://github.com/servalproject/batphone/pull/83)
    <em style="color: green;">mergé</em>
  * [Disconnected phones don't disappear (bugfix)](https://github.com/servalproject/serval-dna/pull/65)
-  _underlying issue [fixed](https://github.com/servalproject/serval-dna/commit/c6241c6634088c6e9c60d7681e288821052be687)_
+  _cause [corrigée](https://github.com/servalproject/serval-dna/commit/c6241c6634088c6e9c60d7681e288821052be687)_
  * [ob_dup() did not preserve source position](https://github.com/servalproject/serval-dna/pull/66)
    _annulée_
 
