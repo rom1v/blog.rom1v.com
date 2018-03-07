@@ -19,13 +19,14 @@ permalink: cv/
 
 #### Clone d'écran Android sur le PC
 
-Je développe actuellement une application permettant d'afficher en direct
-l'écran d'un téléphone (ou d'une tablette) Android branché sur l'ordinateur.
+J'ai développé une application qui permet de voir et de contrôler des devices
+Android à partir du PC.
 
-J'ai pour l'instant fini un prototype qui affiche un écran 1920×1080 à 60 fps
-avec très peu de latence : [démo](http://h.rom1v.com/scrcpy.webm).
+Nous l'avons publié en open source :
+[scrcpy](https://github.com/Genymobile/scrcpy)
+([contrib]({{ site.baseurl }}/contrib/#scrcpy)).
 
-_C, libav/ffmpeg, SDL, Java, Android._
+_C, libav/FFmpeg, SDL, Java, Android._
 
 
 #### Application de _reverse tethering_

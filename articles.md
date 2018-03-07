@@ -8,6 +8,7 @@ permalink: articles/
 
 ## Développement
 
+ * <span class="post-lang">en</span> [Introducing scrcpy]({% post_url 2018-03-08-introducing-scrcpy %}) (2018)
  * [Gnirehtet réécrit en Rust]({% post_url 2017-09-21-gnirehtet-reecrit-en-rust %}) (2017)
  * <span class="post-lang">en</span> [Gnirehtet rewritten in Rust]({% post_url 2017-09-21-gnirehtet-rewritten-in-rust %}) (2017)
  * [Fusionner deux dépôts git]({% post_url 2017-07-12-fusionner-deux-depots-git %}) (2017)

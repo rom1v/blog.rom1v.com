@@ -41,6 +41,15 @@ avec une description succincte.
 [blog-snakesolver]: {% post_url 2011-09-27-resoudre-le-cube-serpent-en-python %}
 [blog-pluzz]: {% post_url 2010-07-06-pluzz-fr-france-televisions-lance-son-service-de-tv-de-rattrapage-non-lisible %}
 
+## scrcpy
+
+J'ai développé une application qui permet de voir et de contrôler des devices
+Android à partir du PC.  
+[`scrcpy`] \| [article en][blog-scrcpy]
+
+[`scrcpy`]: https://github.com/Genymobile/scrcpy
+[blog-scrcpy]: {% post_url 2018-03-08-introducing-scrcpy %}
+
 
 ## gnirehtet
 
