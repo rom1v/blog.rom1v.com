@@ -10,7 +10,9 @@ USB. It does not require any root access. It works on GNU/Linux, Windows and Mac
 OS.
 
 {: .center}
-![scrcpy](https://raw.githubusercontent.com/Genymobile/scrcpy/master/assets/screenshot-debian-600.jpg)
+[![scrcpy][screenshot]][scrcpy]
+
+[screenshot]: https://raw.githubusercontent.com/Genymobile/scrcpy/master/assets/screenshot-debian-600.jpg
 
 It focuses on:
 
