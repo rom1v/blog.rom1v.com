@@ -45,10 +45,11 @@ avec une description succincte.
 
 J'ai développé une application qui permet de voir et de contrôler des devices
 Android à partir du PC.  
-[`scrcpy`] \| [article en][blog-scrcpy]
+[`scrcpy`] \| [article en][blog-scrcpy] \| [Hacker News][scrcpy-hn]
 
 [`scrcpy`]: https://github.com/Genymobile/scrcpy
 [blog-scrcpy]: {% post_url 2018-03-08-introducing-scrcpy %}
+[scrcpy-hn]: https://news.ycombinator.com/item?id=16544977
 
 
 ## gnirehtet
