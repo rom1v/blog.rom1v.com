@@ -45,14 +45,14 @@ avec une description succincte.
 
 J'ai développé une application qui permet de voir et de contrôler des devices
 Android à partir du PC.  
-[`scrcpy`] \| [article en][blog-scrcpy] \| [LinuxFR][scrcpy-linuxfr] \| [Hacker
-News][scrcpy-hn] \| [reddit][scrcpy-reddit]
+[`scrcpy`] \| [article en][blog-scrcpy] \| [LinuxFR][scrcpy-linuxfr] \|
+[reddit][scrcpy-reddit] \| [Hacker News][scrcpy-hn]
 
 [`scrcpy`]: https://github.com/Genymobile/scrcpy
 [blog-scrcpy]: {% post_url 2018-03-08-introducing-scrcpy %}
 [scrcpy-linuxfr]: https://linuxfr.org/users/rom1v/journaux/scrcpy-une-appli-pour-afficher-et-controler-des-devices-android
-[scrcpy-hn]: https://news.ycombinator.com/item?id=16544977
 [scrcpy-reddit]: https://www.reddit.com/r/Android/comments/834zmr/introducing_scrcpy_an_app_to_display_and_control/
+[scrcpy-hn]: https://news.ycombinator.com/item?id=16544977
 
 
 ## gnirehtet
