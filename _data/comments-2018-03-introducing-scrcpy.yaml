@@ -65,3 +65,10 @@
   contents: |
     Could you make it run on older android versions like 4.3? Also can you
     please share your app on f-droid too?
+- id: 8
+  author: DaScritch
+  author-url: https://dascritch.net
+  date: 2018-03-09 11:57:36+01:00
+  contents: |
+    @cascador : utilises plutôt kconnect pour récupérer les sms vers ton ordi.
+    Tu peux même faire du cross ^C^V !
