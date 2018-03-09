@@ -72,3 +72,10 @@
   contents: |
     @cascador : utilises plutôt kconnect pour récupérer les sms vers ton ordi.
     Tu peux même faire du cross ^C^V !
+- id: 9
+  author: rayworks
+  date: 2018-03-09 13:43:40+01:00
+  contents: |
+    A great project！About one year ago, I just made a demo app to take a
+    screenshot dynamically. However,the result you achieved is what I actually
+    want.
