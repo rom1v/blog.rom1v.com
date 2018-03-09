@@ -407,6 +407,7 @@ lot (I never used _SDL_ or _libav/FFmpeg_ before).
 The resulting application works better than I initially expected, and I'm happy
 to have been able to open source it.
 
-_Discuss on [Hacker News]._
+_Discuss on [Hacker News] and [/r/Android]._
 
 [Hacker News]: https://news.ycombinator.com/item?id=16544977
+[/r/Android]: https://www.reddit.com/r/Android/comments/834zmr/introducing_scrcpy_an_app_to_display_and_control/
