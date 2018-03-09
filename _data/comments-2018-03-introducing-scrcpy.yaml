@@ -59,3 +59,9 @@
   date: 2018-03-09 09:41:32+01:00
   contents: |
     This is awesome. Love that it is a cross platform native app :)
+- id: 7
+  author: dro
+  date: 2018-03-09 11:52:40+01:00
+  contents: |
+    Could you make it run on older android versions like 4.3? Also can you
+    please share your app on f-droid too?
