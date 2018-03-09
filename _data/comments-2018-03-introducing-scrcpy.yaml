@@ -108,3 +108,11 @@
     This looks amazing!  I tried it on Windows with my V20 and the image
     displays immediately and updates quick but it does not respond to my clicks.
     :(
+- id: 14
+  author: ®om
+  date: 2018-03-09 23:31:07+01:00
+  contents: |
+    @jg, it seems that [clicks do not work with LG devices][issue18] on this
+    version.
+
+    [issue18]: https://github.com/Genymobile/scrcpy/issues/18
