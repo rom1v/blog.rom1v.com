@@ -142,3 +142,9 @@
     @Romain, nice work! Thanks for opening the source! I haven't checked the
     code yet but maybe there's an issue when connecting the phone in debugging
     mode for the first time on an untrusted computer?
+- id: 18
+  author: ®om
+  date: 2018-03-10 22:26:14+01:00
+  contents: |
+    @Seb, Thank you for reporting the problem. I didn't check yet. Please
+    open an issue on GitHub.
