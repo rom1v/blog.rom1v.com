@@ -11,4 +11,10 @@
     Bravo! Pense à soumettre ton binaire pour une inclusion dans les moreutils!
 
     <http://joeyh.name/code/moreutils/>
+- id: 2
+  author: anon
+  date: 2018-03-10 12:26:33+01:00
+  contents: |
+    N'est ce pas similaire à [vbuf] ?
 
+    [vbuf]:  http://manpages.ubuntu.com/manpages/precise/man1/vbuf.1.html
