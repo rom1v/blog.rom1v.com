@@ -116,3 +116,8 @@
     version.
 
     [issue18]: https://github.com/Genymobile/scrcpy/issues/18
+- id: 15
+  author: Louie
+  date: 2018-03-10 02:50:47+01:00
+  contents: |
+    What version of Windows is compatible? It does not work on Windows 10.
