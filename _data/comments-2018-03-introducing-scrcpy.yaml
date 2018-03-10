@@ -128,3 +128,17 @@
     Thanks for the app. Looks good and fast, but I can't get edge-swiping to
     work, which limits usability quite a bit. Likewise no pinch-zoom. Hope to
     see these in a future iteration.
+- id: 17
+  author: Seb
+  date: 2018-03-10 22:21:44+01:00
+  contents: |
+    @Louie, I don't know if it's specific to Windows 10 but the first time I
+    started the app it appeared not to work either. In my case the debugging
+    mode trust dialog appeared on my phone but nothing happened after allowing
+    the connection. Executing the app again worked but it spawned a duplicate
+    process on my computer (CTRL+ALT+DEL -> Task Manager -- didn't know which
+    one was the good one so I killed both). It appears to be working fine now.
+
+    @Romain, nice work! Thanks for opening the source! I haven't checked the
+    code yet but maybe there's an issue when connecting the phone in debugging
+    mode for the first time on an untrusted computer?
