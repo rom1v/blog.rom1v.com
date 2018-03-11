@@ -175,3 +175,8 @@
   date: 2018-03-11 07:45:00+01:00
   contents: |
     On Windows 7 32 bit. it doesn't work.
+- id: 22
+  author: Jakob
+  date: 2018-03-11 11:00:23+01:00
+  contents: |
+    Thanks, that's great! Any chance this would work in 1280x720 screens ?
