@@ -159,3 +159,14 @@
     I have been looking for something like this for a while.
 
     Thank you for contributing to the open source community.
+- id: 20
+  author: Seb
+  date: 2018-03-11 00:45:11+01:00
+  contents: |
+    @Romain,
+
+    It seems like the issue (or at least a very similar one) has already been
+    submitted (Issue #9). I've replicated the problem on another computer, so
+    I've added this info as a comment to the existing issue.
+
+    Thanks!
