@@ -170,3 +170,8 @@
     I've added this info as a comment to the existing issue.
 
     Thanks!
+- id: 21
+  author: claude
+  date: 2018-03-11 07:45:00+01:00
+  contents: |
+    On Windows 7 32 bit. it doesn't work.
