@@ -215,3 +215,10 @@
   date: 2018-03-12 16:42:34+01:00
   contents: |
     Works great !
+- id: 26
+  author: Sinan Arslan
+  date: 2018-03-12 18:43:31+01:00
+  contents: |
+    Could you please prepare a video tutorial about downloading and running
+    Scrcpy on Windows?
+    Your blog is helpful but yet not so clear.
