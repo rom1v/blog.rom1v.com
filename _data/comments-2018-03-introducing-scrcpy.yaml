@@ -180,3 +180,24 @@
   date: 2018-03-11 11:00:23+01:00
   contents: |
     Thanks, that's great! Any chance this would work in 1280x720 screens ?
+- id: 23
+  author: Dominique
+  author-url: wizedomwisdom.com
+  date: 2018-03-12 14:38:13+01:00
+  contents: |
+    Great work! Have you thought about mentioning it on
+    https://www.xda-developers.com/ ?
+
+    Other thing. I've learnt about haven't and (forgive me) I haven't tried it
+    your app yet, but from:
+
+    > It is possible to execute Java code as shell on Android, by invoking
+    > app_process from adb shell.
+
+    and given that it's possible to run adb over the network (adb connect device
+    over TCP port 5555), I'm inclined to think that it would possible to run
+    your app without having the droid physically connected over USB, which in
+    turn would make your app a really good remote support app. If you see what I
+    mean.
+
+    Dominique
