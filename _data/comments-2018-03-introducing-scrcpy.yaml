@@ -228,3 +228,14 @@
   contents: |
     Did not work with my Asus phone for more than 10 seconds max but with a Sony
     it works pretty well. The computer is Raspberry Pi 3B. Nice work!
+- id: 28
+  author: Manish
+  date: 2018-03-13 15:48:03+01:00
+  contents: |
+    First of all, a huge thanks to the developer for this solution. I've been
+    looking for something like this for a while. Most of the solutions i found
+    had a substantial lag(my 2nd Pentium made it worse).
+    But this works smoothest and startup is fast too...Thanks again!
+
+    One thing I'm unable to figure out is, how to use navigation
+    keys(Back,Home,Recents) in scrcpy, as my device have H/w keys
