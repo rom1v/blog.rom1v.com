@@ -239,3 +239,25 @@
 
     One thing I'm unable to figure out is, how to use navigation
     keys(Back,Home,Recents) in scrcpy, as my device have H/w keys
+- id: 29
+  author: Juan
+  date: 2018-03-17 14:01:02+01:00
+  contents: |
+    Congratulations for your creation. I have been looking for something similar
+    (vysor, samsung sidesync) but nothing compares to this in simplicity and
+    speed. Nothing (only adb drivers) to install on computer and phone and it
+    works, that's what I call sleek.
+
+    The new mouse shorcuts are very convenient, I like them! And for file
+    transfer I can just use the plain usb connection.
+
+    Regarding issues found: keyboard is also working with samsung keyboard.
+    Seems something google keyboard specific.
+    Also vol+ and vol- keyboard shorcuts doesn't work (on lineageos 14/samsung
+    nougat)
+
+    Keep up the good work! My whishlist: Audio routed to the computer. I'm
+    unable to help but I know that android has a mode where it behaves as a
+    player that can route audio back through usb and get play/pause/stop
+    commands. It is called (I believe) accessory mode
+    <https://source.android.com/devices/audio/usb>
