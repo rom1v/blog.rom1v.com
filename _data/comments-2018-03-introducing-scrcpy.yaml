@@ -261,3 +261,21 @@
     player that can route audio back through usb and get play/pause/stop
     commands. It is called (I believe) accessory mode
     <https://source.android.com/devices/audio/usb>
+- id: 30
+  author: ®om
+  date: 2018-03-17 17:57:55+01:00
+  contents: |
+    @Juan Thank you ;)
+
+    > Also vol+ and vol- keyboard shorcuts doesn't work
+
+    Please open an issue.
+
+    > It is called (I believe) accessory mode
+    > <https://source.android.com/devices/audio/usb>
+
+    Great suggestion! Thank you.
+
+    You can watch [issue 14] for audio support.
+
+    [issue 14]: https://github.com/Genymobile/scrcpy/issues/14
