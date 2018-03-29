@@ -297,3 +297,11 @@
   date: 2018-03-20 15:33:22+01:00
   contents: |
     Great program. Great work. Thanks for sharing it with us.
+- id: 33
+  author: Matthew B
+  date: 2018-03-28 21:36:04+02:00
+  contents: |
+    I've had a chance to try out scrcpy and I like it quite a lot. Do you know
+    if it is feasible to have the devices screen off while streaming the video
+    to the desk? I feel like this might not be possible but it would be nice for
+    conserving the device battery.
