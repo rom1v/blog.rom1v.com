@@ -305,3 +305,16 @@
     if it is feasible to have the devices screen off while streaming the video
     to the desk? I feel like this might not be possible but it would be nice for
     conserving the device battery.
+- id: 34
+  author: ®om
+  date: 2018-03-29 10:51:38+02:00
+  contents: |
+    > Do you know if it is feasible to have the devices screen off while
+    > streaming the video to the desk?
+
+    IMO, turning device screen off [is not possible][reddit-screen-off].
+
+    You could change the [brightness], though (using a wrapper script).
+
+    [reddit-screen-off]: https://www.reddit.com/r/Android/comments/834zmr/introducing_scrcpy_an_app_to_display_and_control/dvffev4/
+    [brightness]: https://github.com/Genymobile/scrcpy/issues/101
