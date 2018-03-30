@@ -318,3 +318,11 @@
 
     [reddit-screen-off]: https://www.reddit.com/r/Android/comments/834zmr/introducing_scrcpy_an_app_to_display_and_control/dvffev4/
     [brightness]: https://github.com/Genymobile/scrcpy/issues/101
+- id: 35
+  author: justinbacle
+  date: 2018-03-29 20:29:51+02:00
+  contents: |
+    Hi,
+    Love this stuff !
+    Just wanted to report that on MIUI 9.2, you need to enable both "USB
+    debugging" and "USB debugging (Security Settings)" for it to work ;) 
