@@ -332,3 +332,9 @@
   contents: |
     What I've been using since more than 6 years is the application WifiKeyboard
     :-) that's also a nice alternative!
+- id: 37
+  author: abe
+  date: 2018-04-09 16:40:10+02:00
+  contents: |
+    Hello dev. I have tried the audio branch. Great work. Please make it work
+    over adb connect. Many thanks for the project
