@@ -338,3 +338,10 @@
   contents: |
     Hello dev. I have tried the audio branch. Great work. Please make it work
     over adb connect. Many thanks for the project
+- id: 38
+  author: weak-eyes
+  date: 2018-04-10 17:43:55+02:00
+  contents: |
+    Hi, Nice piece of software.
+    I need it magnified on my linux PC but i cannot magnify it. Can you add a
+    magnification feature to scrcpy. Thank-you.
