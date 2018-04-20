@@ -284,3 +284,24 @@
   date: 2017-11-16 11:44:36+01:00
   contents: |
     Encore merci, c'est vraiment super.
+- id: 17
+  author: xdej
+  date: 2018-04-20 11:03:26+02:00
+  contents: |
+    Très joli, merci !
+
+    Pour faire passer du UDP en natif dans un cable USB, tu peux utiliser
+    <https://www.raspberrypi.org/forums/viewtopic.php?f=36&t=18916> :
+    Settings / Wireless & Networks / More / Tethering & Portable Hotspot...
+    click "USB". Puis, si on est root sur sur l'ordi, taper
+
+    {% highlight bash %}
+    while sleep 10
+    do
+        route del default gw 192.168.42.129 2> /dev/null &&
+        date
+    done
+    {% endhighlight %}
+
+    histoire de virer la route (non prioritaire) de tethering. 192.168.42.129
+    est l'IP du téléphone, affichée par `/sbin/route -n`.
