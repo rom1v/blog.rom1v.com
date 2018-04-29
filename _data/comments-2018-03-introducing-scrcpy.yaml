@@ -345,3 +345,17 @@
     Hi, Nice piece of software.
     I need it magnified on my linux PC but i cannot magnify it. Can you add a
     magnification feature to scrcpy. Thank-you.
+- id: 39
+  author: Rahul
+  date: 2018-04-29 06:20:55+02:00
+  contents: |
+    Hi,
+
+    I am getting an error while trying out your HelloWorld.java program with sleep. Its throwing an error while executing it the system.
+
+    ```
+    Exception in thread "main" java.lang.UnsatisfiedLinkError: No implementation found for long android.os.SystemClock.uptimeMillis() (tried Java_android_os_SystemClock_uptimeMillis and Java_android_os_SystemClock_uptimeMillis__)
+            at android.os.SystemClock.uptimeMillis(Native Method)
+            at android.os.SystemClock.sleep(SystemClock.java:117)
+            at HelloWorld.main(HelloWorld.java:9)
+    ```
