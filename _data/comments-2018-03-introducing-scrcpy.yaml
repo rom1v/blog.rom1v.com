@@ -359,3 +359,30 @@
             at android.os.SystemClock.sleep(SystemClock.java:117)
             at HelloWorld.main(HelloWorld.java:9)
     ```
+- id: 40
+  author: Wikotz
+  date: 2018-05-03 16:40:49+02:00
+  contents: |
+    Absolument génial! Le fonctionnement est impeccable sur un Motorola E4
+    (android 7.1.1).
+
+    J'ai connu une seule question-qui consiste à "glisser" lorsque l'écran est
+    tombé en veille.
+
+    Serait-il possible de faire appel à "glisser" à l'aide du clavier (ex:
+    CTRL+u ou F11)?
+
+    Merci et meilleurs voeux!
+
+    -----
+
+    Absolutely brilliant! Operation is flawless on a Motorola E4 (android
+    7.1.1).
+
+    I have experienced only one issue -- which involves "swiping up" when the
+    screen has dropped into standby.
+
+    Would it be possible to call "swiping up" via the keyboard (ex: CTL+u or
+    F11)?
+
+    Thank you and best wishes!
