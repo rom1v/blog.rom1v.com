@@ -281,3 +281,4 @@ poste de travail principal sous _Windows_ ou _Mac_ est rédhibitoire).
 - [Pro Git](https://git-scm.com/book/en/v2)
 - [Linux Device Drivers](https://www.amazon.com/Linux-Device-Drivers-Jonathan-Corbet/dp/0596005903/)
 - [Linux Kernel Development](https://www.amazon.com/Linux-Kernel-Development-Robert-Love/dp/0672329468/)
+- [The Linux Programming Interface](https://www.amazon.com/Linux-Programming-Interface-System-Handbook/dp/1593272200/)
