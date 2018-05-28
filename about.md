@@ -25,17 +25,16 @@ Romain Vimont (®om)
 
 ## Clé GPG
 
-[`644605F3`](http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x644605F3) (ou
-[`rom_gpg.asc`](/keys/rom_gpg.asc))
+[`rom_gpg.asc`](/keys/rom_gpg.asc)
 
-**Empreinte :** `86E4 3F4E 340B CCE1 8566 719A 72FC C14D 6446 05F3`
-
-Pour l'importer (voir [ce billet][gnupg]) :
-
-[gnupg]: {% post_url 2009-05-22-gnupg-chiffrer-et-signer-sous-ubuntu-pour-les-nuls %}
-
-    gpg --keyserver pgp.mit.edu --recv-keys 644605F3
-    gpg --fingerprint 644605F3
+```
+pub   rsa4096 2018-05-28 [SC]
+      3FB0 1B64 F83D 686E 313A  918A 03F8 A216 8775 3EFF
+sub   rsa4096 2018-05-28 [S]
+      C981 F71C E7A0 9ED4 A700  181F BE1D 6278 2B05 1E3F
+sub   rsa4096 2018-05-28 [E]
+      9872 3C0D 242E BF4E 91AC  066C 1907 2B8C 3B9F 24A2
+```
 
 ## Empreintes OTR
 
