@@ -423,3 +423,13 @@
 
     scrcpy -p $PORT &
     {% endhighlight %}
+- id: 44
+  author: ®om
+  date: 2018-06-04 21:30:01+02:00
+  contents: |
+    > FWIW, I hacked up a script to find an open port so I can connect scrcpy to
+    > multiple devices simultaneously.
+
+    FYI, _scrcpy_ should be listening on the port for about 1 second, so
+    unless you want to start several devices in the same second, you should
+    be able to run several _scrcpy_ instances without using a custom port.
