@@ -400,3 +400,26 @@
     so well. I'm actually blown away. For me on my OnePlus 3T, scrcpy works as
     well as DisplayLink. Simply incredible. Again thanks for your time and
     effort in developing this app.
+- id: 43
+  author: Elliot Nathanson
+  date: 2018-06-04 18:13:21+02:00
+  contents: |
+    This is outstanding. Can't thank you enough. FWIW, I hacked up a script to
+    find an open port so I can connect scrcpy to multiple devices
+    simultaneously.
+
+    {% highlight bash %}
+    #!/bin/bash
+
+    # find unused port
+    for PORT in $(seq 27183 65535); do
+      COUNT=$(nmap localhost -PS -p $PORT -oG - | grep -c "closed")
+
+      if [ $COUNT -ge 1 ]; then
+        break
+      fi
+
+    done
+
+    scrcpy -p $PORT &
+    {% endhighlight %}
