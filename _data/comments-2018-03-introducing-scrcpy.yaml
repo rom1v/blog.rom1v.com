@@ -433,3 +433,14 @@
     FYI, _scrcpy_ should be listening on the port for about 1 second, so
     unless you want to start several devices in the same second, you should
     be able to run several _scrcpy_ instances without using a custom port.
+- id: 45
+  author: Przemo-c
+  date: 2018-06-27 09:01:22+02:00
+  contents: |
+    Is there any chance of getting an android app of scrcpy to have
+    android->android mirror?
+
+    I'm using it to mirror Oculus Go on PC and it works great both wired and
+    wireless.
+
+    But it would be great to have it mirrored to my smartphone.
