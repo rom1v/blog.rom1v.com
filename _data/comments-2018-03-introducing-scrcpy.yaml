@@ -454,3 +454,21 @@
     the wireless traffic is unwanted.
 
     Thank you for this well-documented and clean program.
+- id: 47
+  author: Kris
+  date: 2018-07-23 15:15:26+02:00
+  contents: |
+    I went looking for a replacement to SideSync on my S9, since it isn't
+    supported and Flow is terrible by comparison.  I stumbled upon this and it
+    is fantastic!
+
+    There are a couple of things that I still miss like the notifications from
+    my phone on my PC, easy file transferring, automatic screen dimming or
+    turning off the screen completely, etc., but it is still much, much better
+    than Flow and other mirroring options.
+
+    If anyone is interested, I used Tasker to turn the brightness to zero and
+    keep the phone awake when charging when charging via USB (i.e. connected to
+    my computer) and near my computer's bluetooth address.  My S9 using scrcpy
+    actually charges faster than my S7 did using SideSync, even though SideSync
+    was able to completely turn the screen off!
