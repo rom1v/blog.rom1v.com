@@ -479,3 +479,9 @@
     Nice app. Thank you for this (and for gnirehtet too, using it daily!). Would
     be better if there was a way to add navigation bar though. I'm not really
     into keyboard shortcuts
+- id: 49
+  author: ®om
+  date: 2018-08-18 14:59:32+02:00
+  contents: |
+    @Dolly Note that BACK and HOME are also bound respectively to right- and
+    middle-click.
