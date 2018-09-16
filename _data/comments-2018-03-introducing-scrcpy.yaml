@@ -505,3 +505,11 @@
     Le support du zoom / dézoom avec par exemple ctrl+molette de la souris
     serait une fonctionnalité de la mort (désolé pour la trad de "killer
     feature" qui fait djeun's des années 1990)
+- id: 51
+  author: AdotK
+  date: 2018-09-15 19:15:28+02:00
+  contents: |
+    Hello, i am thankful for scrcpy. I can control almost every application
+    except one : Grim defender android game. Somehow this game don't
+    register any mouse clicks and keystouch. Seem like a pretty tight
+    security any help?
