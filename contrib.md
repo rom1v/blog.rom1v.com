@@ -143,21 +143,13 @@ J'ai corrigé quelques bugs sur [VLC] :
 
 [unsigned_helpers]: https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116176.html
 
+Maintenant, je travaille chez [VideoLabs] à plein temps sur VLC, donc je ne vais
+plus lister chacun de mes commits. Voir la [mailing-list] et le `git log` de
+VLC si ça vous intéresse.
 
-Il y a quelques années, j'avais corrigé un problème de [deadlock][] pouvant
-survenir lors de l'arrêt d'un flux UDP sur le lecteur vidéo [VLC][] :
+[VideoLabs]: https://videolabs.io/
+[mailing-list]: https://mailman.videolan.org/listinfo/vlc-devel
 
- - [Avoid deadlock on UDP stop](https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098020.html) <em style="color: red;">refusé</em>
-
-_Ce patch [ne corrigeait pas la cause profonde du problème][vlc-answer]. Le
-deadlock se produit lorsque les appels rapprochés à deux fonctions surviennent
-dans un certain ordre. Mon patch empêchait le deadlock dans ce cas. Un
-développeur de VLC considère plutôt que la cause du problème est que ces deux
-fonctions ne devraient jamais être appelées dans cet ordre._
-
-[deadlock]: https://fr.wikipedia.org/wiki/Deadlock
-[vlc]: http://www.videolan.org/
-[vlc-answer]: https://mailman.videolan.org/pipermail/vlc-devel/2014-May/098136.html
 
 ## libusb
 
