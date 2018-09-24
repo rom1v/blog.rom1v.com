@@ -513,3 +513,18 @@
     except one : Grim defender android game. Somehow this game don't
     register any mouse clicks and keystouch. Seem like a pretty tight
     security any help?
+- id: 52
+  author: Antonio Bray
+  date: 2018-09-24 04:26:30+02:00
+  contents: |
+    Thanks for developing this. How hardwould it be to develop an Android
+    client?  Also what would help increase low latency?   GPU assisted encoding
+    or use of H265.xx streaming?
+
+    Is this type of performance possible?
+
+    <https://lunadisplay.com/>
+
+    <https://www.youtube.com/watch?v=PDd0DT-5r20>
+
+    Thanks
