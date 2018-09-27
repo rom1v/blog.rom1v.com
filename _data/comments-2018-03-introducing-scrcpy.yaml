@@ -541,3 +541,26 @@
     Greetings,
 
     Nils
+- id: 54
+  author: ®om
+  date: 2018-09-27 08:36:23+02:00
+  contents: |
+    [@HappyUser666](#comment-50) See [#24].
+
+    [#24]: https://github.com/Genymobile/scrcpy/issues/24
+
+    [@AdotK](#comment-51) Please open an [issue] with more details
+    (device, orientation, result of `adb logcat`…). Also check open [input
+    events issues].
+
+    [issue]: https://github.com/Genymobile/scrcpy/issues
+    [input events issues]: https://github.com/Genymobile/scrcpy/issues?q=is%3Aissue+is%3Aopen+label%3A%22input+events%22
+
+    [@AntinioBray](#comment-52) The main latency is due to encoding/decoding.
+    Thus, to improve it, you need to encode and decode faster. One possibility
+    is simply to reduce the definition (`scrcpy -m800`).
+
+    [@Nils](#comment-53) See [#100]/[scrcpy-android].
+
+    [#100]: https://github.com/Genymobile/scrcpy/issues/100
+    [scrcpy-android]: https://gitlab.com/las2mile/scrcpy-android
