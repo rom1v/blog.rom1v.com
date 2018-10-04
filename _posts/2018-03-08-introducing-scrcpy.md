@@ -302,7 +302,7 @@ keys][keyset]. The remaining are handled by _text input_ events.
 [keyset]: https://github.com/Genymobile/scrcpy/blob/v1.0/app/src/convert.c#L75-L87
 
 
-### Injecting text
+### Inject text
 
 On the Android side, we may not inject text directly (injecting a [`KeyEvent`]
 created by [the relevant constructor][keyevent-ctor] does not work).
@@ -331,7 +331,7 @@ Here, `events` is initialized with an array of 4 events:
 [inject]: https://github.com/Genymobile/scrcpy/blob/v1.0/server/src/main/java/com/genymobile/scrcpy/EventController.java#L103-L107
 
 
-### Handling accented characters
+### Handle accented characters
 
 Unfortunately, the previous method only works for ASCII characters:
 
