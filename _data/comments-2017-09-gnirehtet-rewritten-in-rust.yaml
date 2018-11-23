@@ -245,3 +245,14 @@
     Calling `addSomethingListener(this)` is very (very) common in Java
     (especially on Android): just grep `add.*Listener(this)` on any Android
     application having UI.
+- id: 9
+  author: Riccardo
+  date: 2018-11-23 09:19:15+01:00
+  contents: |
+    Thanks for the post, why you end up the observer section with:
+
+    > When possible, it might be preferable to avoid it
+
+    What are the pitfalls and alternatives?
+
+    Thanks again
