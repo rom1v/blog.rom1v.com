@@ -609,3 +609,17 @@
     phone it displays correctly.
 
     Huawei Mate 20 Pro android 9.0
+- id: 59
+  author: ®om
+  date: 2018-12-04 17:31:32+01:00
+  contents: |
+    [@daddy366](#comment-56) If you have this error on devices having at least
+    Android 5 (it is expected to fail on [Android 4]), please open an [issue].
+    Also check whether `adb logcat` provide more details about the error.
+
+    [Android 4]: https://github.com/Genymobile/scrcpy/issues/98
+    [issue]: https://github.com/Genymobile/scrcpy/issues
+
+    [@Nathan](#comment-58) Maybe your lock screen [protects the screen].
+
+    [protects the screen]: https://github.com/Genymobile/scrcpy/blob/master/FAQ.md#i-get-a-black-screen-for-some-applications-like-silence
