@@ -144,8 +144,35 @@ J'ai corrigé quelques bugs sur [VLC] :
 [unsigned_helpers]: https://mailman.videolan.org/pipermail/vlc-devel/2017-November/116176.html
 
 Maintenant, je travaille chez [VideoLabs] à plein temps sur VLC, donc je ne vais
-plus lister chacun de mes commits. Voir la [mailing-list] et le `git log` de
-VLC si ça vous intéresse.
+plus lister chacun de mes commits. Voir la [mailing-list] et le `git log` de VLC
+si ça vous intéresse.
+
+Voici les principales contributions :
+
+ - [core: add atomic refcounter
+   helper](https://mailman.videolan.org/pipermail/vlc-devel/2018-July/120051.html)
+   <em style="color: green;">mergé</em> ([`618a789`])
+ - [vlc_vector: add helpers for
+   vectors](https://mailman.videolan.org/pipermail/vlc-devel/2018-October/121541.html)
+   <em style="color: green;">mergé</em> ([`983c43f`])
+ - [include: add C++ wrapper for C shared
+   resources](https://mailman.videolan.org/pipermail/vlc-devel/2018-October/121451.html)
+   <em style="color: green;">mergé</em> ([`40c6d71`])
+ - [New
+   playlist](https://mailman.videolan.org/pipermail/vlc-devel/2018-October/121452.html)
+   <em style="color: green;">mergé</em> ([`7c82c7b`] et suivants)
+ - [Media source and media
+   tree](https://mailman.videolan.org/pipermail/vlc-devel/2018-November/121907.html)
+   <em style="color: green;">mergé</em> ([`3e0cc19`] et [`8fbc2e6`])
+
+
+[`618a789`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=618a78995848158783640ffa3ef31612cfa0d106
+[`983c43f`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=983c43f05928032a14f201c506d6b9c51d0c5145
+[`40c6d71`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=40c6d71fd9f29c7007a5b1fa8c562bdff32f8f63
+[`7c82c7b`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=7c82c7bf08ac11cbe81e96d309e54a2a559f19a8
+[`3e0cc19`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=3e0cc1942a963693cf97c99a5ab1e9c6171fe6b1
+[`8fbc2e6`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=8fbc2e61bfeb0331f254b179caf177cd086845a3
+
 
 [VideoLabs]: https://videolabs.io/
 [mailing-list]: https://mailman.videolan.org/listinfo/vlc-devel
