@@ -15,7 +15,25 @@ permalink: cv/
 
 ## Expériences professionnelles
 
-### Genymobile _(2013 → …)_
+### Videolabs _(depuis 2018)_
+
+#### VLC
+
+Je participe principalement au développement du lecteur multimédia VLC
+([contrib]({{ site.baseurl }}/contrib/#vlc)).
+
+_C, C++._
+
+
+#### rav1e
+
+Je participe au développement de rav1e, l'encodeur AV1 de Mozilla/Xiph
+([contrib]({{ site.baseurl }}/contrib/#rav1e)).
+
+_Rust._
+
+
+### Genymobile _(2013 → 2018)_
 
 #### Clone d'écran Android sur le PC
 

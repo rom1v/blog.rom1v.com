@@ -158,6 +158,22 @@ Voici les principales contributions :
 [mailing-list]: https://mailman.videolan.org/listinfo/vlc-devel
 
 
+## rav1e
+
+[rav1e] est un encodeur [AV1], développé par [Mozilla]/[Xiph], écrit en Rust.
+
+Afin de pouvoir encoder une vidéo en utilisant plusieurs processeurs, je
+travaille principalement à paralléliser l'encodage en découpant les images en
+_tiles_ pouvant être encodées (presque) indépendamment (voir [#631][rav1e-631]).
+
+[rav1e-631]: https://github.com/xiph/rav1e/issues/631
+
+[rav1e]: https://github.com/xiph/rav1e
+[AV1]: https://en.wikipedia.org/wiki/AV1
+[Mozilla]: https://www.mozilla.org/
+[Xiph]: https://xiph.org/
+
+
 
 ## Rust/mio
 
