@@ -83,22 +83,6 @@ permalink: articles/
  * [Synergy : contrôlez plusieurs PC avec une seule souris et un seul clavier]({% post_url 2008-11-25-synergy-controlez-plusieurs-pc-avec-une-seule-souris-et-un-seul-clavier %}) (2008)
  * [Présentation de SSH]({% post_url 2008-08-27-presentation-de-ssh %}) (2008)
 
-## Opinions
-
- * [Anti-AdBlock et Hadopi, même combat ?]({% post_url 2013-06-13-anti-adblock-et-hadopi-meme-combat %}) (2013)
- * [Free Mobile n'est pas neutre]({% post_url 2012-10-17-free-mobile-nest-pas-neutre %}) (2012)
- * [L'argument économique contre le partage]({% post_url 2012-01-29-largument-economique-contre-le-partage %}) (2012)
- * [Comprendre le mystère de l'argent et le problème des intérêts manquants]({% post_url 2011-12-03-comprendre-le-mystere-de-largent-et-le-probleme-des-interets-manquants %}) (2011)
- * [L'abondance contre l'économie]({% post_url 2011-06-08-labondance-contre-leconomie %}) (2011)
- * [L'injustice monétaire]({% post_url 2011-05-10-linjustice-monetaire %}) (2011)
- * [Flattr est une arnaque]({% post_url 2011-04-08-flattr-est-une-arnaque %}) (2011)
- * [Dividende Universel : un enjeu majeur de société]({% post_url 2011-02-17-dividende-universel-un-enjeu-majeur-de-societe %}) (2011)
- * [LOPPSI : la censure d'État bientôt adoptée en France]({% post_url 2011-01-08-loppsi-la-censure-detat-est-adoptee-en-france %}) (2011)
- * [Piratage ou usage commun ?]({% post_url 2010-08-06-piratage-ou-usage-commun %}) (2010)
- * [Le logiciel HADOPI est impossible]({% post_url 2010-08-01-le-logiciel-hadopi-est-impossible %}) (2010)
- * [Ce qui ne va pas dans l'iPad]({% post_url 2010-06-03-ce-qui-ne-va-pas-dans-lipad %}) (2010)
- * [Brevets logiciels : patent bénéfiques que ça…]({% post_url 2009-08-12-brevets-logiciels-patent-benefiques-que-ca %}) (2009)
-
 ## Blague de geek
 
  * [apt-get install hadopi]({% post_url 2009-09-21-apt-get-install-hadopi %}) (2009)
