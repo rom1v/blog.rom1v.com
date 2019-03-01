@@ -632,3 +632,19 @@
     sold your data plus were expensive or heavily limited
 
     This has none of that and next to no delay i love it
+- id: 61
+  author: Embrion
+  date: 2019-02-28 23:53:43+01:00
+  contents: |
+    Open a while (seconds) then it closes¡¡ (Solved)
+
+    For a wile I had problem whit scrcpy usin in a motorola G4 and lubuntu
+    18.04. the problem was when I started scrcpy, and using your sugested
+    parameter (`scrcpy -m800 -b2M`), it open as suposed, but when I did click in
+    the screen it closes, afther it I did many changes in the size and bit-rate
+    and it dosen't worked, so I chosed change the kernel, so instead of continue
+    working whit linux 4.15.0-45, I walk back and change to 4.15.0-20, afther
+    that change it worked well, I supos that the problem is the driver or other
+    kind of that stuff.
+
+    good job. thanks
