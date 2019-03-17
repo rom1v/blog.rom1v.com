@@ -682,3 +682,34 @@
     la copie d'écran serait une chose intéressante.
 
     Merci encore
+- id: 64
+  author: ®om
+  date: 2019-03-17 21:12:57+01:00
+  contents: |
+    > Juste pas mal de latence dans le cas de la copie d'affichage vidéo (lag).
+
+    En Wi-Fi, c'est fort possible. Pour minimiser les problèmes, il vaut
+    mieux réduire le débit et la définition :
+
+    ```
+    scrcpy -m1024 -b2M
+    ```
+
+    > De l'instabilité aussi (ça fige).
+
+    Si ça fige que en Wi-Fi, c'est sans doute le [Head-of-line
+    blocking][hol] TCP lors de la perte d'un paquet.
+
+    Si ça fige aussi en USB et que c'est sous Windows, ça peut être un
+    problème lié à SDL 2.0.9. Voir [#423].
+
+    [hol]: https://en.wikipedia.org/wiki/Head-of-line_blocking
+    [#423]: https://github.com/Genymobile/scrcpy/issues/423
+
+    > Je pense qu'une option permettant le contrôle distant par
+    > clavier/souris sans la copie d'écran serait une chose intéressante.
+
+    Dans _scrcpy_, il n'y a pas de contrôle de la souris à proprement parler
+    (ça ne bouge pas le curseur sur le device), mais simplement l'envoi des
+    clics et des déplacements effectués sur le PC, et pour ça il faut avoir
+    la vidéo pour savoir où cliquer.
