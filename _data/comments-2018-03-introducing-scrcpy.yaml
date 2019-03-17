@@ -654,3 +654,31 @@
   contents: |
     Great work! It worked on the first try with the prebuilt server. Thank you
     very much! A lot of learning material
+- id: 63
+  author: Christian
+  date: 2019-03-16 19:12:58+01:00
+  contents: |
+    Hello,
+
+    merci pour cet utilitaire.
+
+    Je l'ai mis en oeuvre en WiFi de la manière suivante :
+    - cible Mi Box S sur moniteur 4K LG
+    - modem WiFi câble HD RED
+    - hôtes :
+      * PC Dell sous Win10
+      * PC portable HP sous Debian Stretch
+
+    Les deux cas fonctionnent. A noter qu'avec Oreo 8.1 il n'y a plus besoin de
+    faire la commande adb tcpip PORT par l'USB pour utiliser adb et scrcpy par
+    WiFI.  Juste pas mal de latence dans le cas de la copie d'affichage vidéo
+    (lag). De l'instabilité aussi (ça fige).
+
+    En l'occurrence j'ai testé cet outil pour essayer de piloter à distance ma
+    Mi Box (clavier et souris) avec mon vieux PC portable (2006) avec trackpad
+    sans acheter une airmouse chinoise à 10 ou 20 USD.  Je ne suis donc pas
+    intéressé par la copie d'écran mais uniquement par clavier et souris. Je
+    pense qu'une option permettant le contrôle distant par clavier/souris sans
+    la copie d'écran serait une chose intéressante.
+
+    Merci encore
