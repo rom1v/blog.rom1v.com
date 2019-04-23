@@ -1134,6 +1134,10 @@ a code {
     text-align: center;
 }
 
+.no-radius img {
+    border-radius: 0px;
+}
+
 .comments {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 0.8em;
