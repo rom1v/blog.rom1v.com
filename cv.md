@@ -30,6 +30,9 @@ _C, C++._
 Je participe au développement de rav1e, l'encodeur AV1 de Mozilla/Xiph
 ([contrib]({{ site.baseurl }}/contrib/#rav1e)).
 
+En particulier, j'ai ajouté le support de _tile encoding_ (voir [article]({%
+post_url 2019-04-25-implementing-tile-encoding-in-rav1e %})).
+
 _Rust._
 
 

@@ -162,11 +162,15 @@ Voici les principales contributions :
 
 [rav1e] est un encodeur [AV1], développé par [Mozilla]/[Xiph], écrit en Rust.
 
-Afin de pouvoir encoder une vidéo en utilisant plusieurs processeurs, je
-travaille principalement à paralléliser l'encodage en découpant les images en
-_tiles_ pouvant être encodées (presque) indépendamment (voir [#631][rav1e-631]).
+Afin de pouvoir encoder (et décoder) une vidéo en utilisant plusieurs
+processeurs, j'ai implémenté le _tile encoding_ ([article en][blog-rav1e]).
 
-[rav1e-631]: https://github.com/xiph/rav1e/issues/631
+ - [Tile encoding](https://github.com/xiph/rav1e/pull/1126) <em style="color:
+   green;">mergé</em>
+ - [many others](https://github.com/xiph/rav1e/pulls?q=is%3Apr+author%3Arom1v)
+
+[blog-rav1e]: {% post_url 2019-04-25-implementing-tile-encoding-in-rav1e %}
+
 
 [rav1e]: https://github.com/xiph/rav1e
 [AV1]: https://en.wikipedia.org/wiki/AV1
