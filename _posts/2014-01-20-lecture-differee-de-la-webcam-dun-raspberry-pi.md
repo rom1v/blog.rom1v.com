@@ -181,6 +181,14 @@ make && sudo make install
 
 [delay]: https://github.com/rom1v/delay
 
+Un [paquet Debian] est maintenant disponible:
+
+{% highlight bash %}
+sudo apt install delay
+{% endhighlight %}
+
+[paquet Debian]: https://packages.debian.org/sid/delay
+
 Elle permet de décaler tout ce qui arrive sur `stdin` d'un délai constant pour
 le sortir sur `stdout` :
 
