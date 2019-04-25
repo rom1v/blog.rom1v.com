@@ -68,7 +68,7 @@ The number of array items separating one pixel to the one below is called the
 The encoder often needs to process rectangular regions. For that purpose, many
 functions received a slice of the plane array and the stride value:
 
-```rust
+{% highlight rust %}
 pub fn write_forty_two(slice: &mut [u16], stride: usize) {
   for y in 0..2 {
     for x in 0..4 {
@@ -76,7 +76,7 @@ pub fn write_forty_two(slice: &mut [u16], stride: usize) {
     }
   }
 }
-```
+{% endhighlight %}
 
 This works fine, but the plane slice spans multiple rows.
 
@@ -107,7 +107,7 @@ structures (which first required to [make planes generic][#1002] after
 
 After these changes, our function could be rewritten as follow:
 
-```rust
+{% highlight rust %}
 pub fn write_forty_two<T: Pixel>(slice: &mut PlaneMutSlice<'_, T>) {
   for y in 0..2 {
     for x in 0..4 {
@@ -115,7 +115,7 @@ pub fn write_forty_two<T: Pixel>(slice: &mut PlaneMutSlice<'_, T>) {
     }
   }
 }
-```
+{% endhighlight %}
 
 
 [YUV]: https://en.wikipedia.org/wiki/YUV
@@ -138,13 +138,13 @@ So now, all the code using a raw slice and a stride value has been replaced. But
 if we look at the definition of [`PlaneMutSlice`], we see that it still borrows
 the whole plane:
 
-```rust
+{% highlight rust %}
 pub struct PlaneMutSlice<'a, T: Pixel> {
   pub plane: &'a mut Plane<T>,
   pub x: isize,
   pub y: isize
 }
-```
+{% endhighlight %}
 
 So the refactoring, in itself, does not solves the problem.
 
@@ -165,7 +165,7 @@ In memory, the matrix is stored in a single array:
 
 To do so, let's define a `ColumnMut` type, and split the raw array into columns:
 
-```rust
+{% highlight rust %}
 use std::marker::PhantomData;
 use std::ops::{Index, IndexMut};
 
@@ -201,27 +201,27 @@ pub fn columns(slice: &mut [u8], cols: usize) -> impl Iterator<Item = ColumnMut>
         phantom: PhantomData,
     })
 }
-```
+{% endhighlight %}
 
 The [`PhantomData`][phantom] is necessary to bind the lifetime (in practice,
 when we store a raw pointer, we often need a `PhantomData`).
 
 We implemented [`Index`] and [`IndexMut`] traits to provide operator `[]`:
 
-```rust
+{% highlight rust %}
 // via Index trait
 let value = column[y];
 
 // via IndexMut trait
 column[y] = value;
-```
+{% endhighlight %}
 
 The iterator returned by `columns()` yields a different column every time, so
 the borrowing rules are respected.
 
 Now, we can read from and write to a matrix via temporary column views:
 
-```rust
+{% highlight rust %}
 fn main() {
     let mut data = [1, 5, 3, 2,
                     4, 2, 1, 7,
@@ -234,7 +234,7 @@ fn main() {
                       4, 2, 1, 7,
                       5, 7, 4, 9]);
 }
-```
+{% endhighlight %}
 
 Even if the columns are interlaced in memory, from a `ColumnMut` instance, it is
 not possible to access data belonging to another column.
@@ -288,19 +288,19 @@ encoding:
 The usage of tiling views strongly favors the first choice. For example, it
 would be confusing if a bounded region could not be indexed from 0:
 
-```rust
+{% highlight rust %}
 // region starting at (64, 64)
 let row = &region[0]; // panic, out-of-bounds
 let row = &region[64]; // ok :-/
-```
+{% endhighlight %}
 
 Worse, this would not be possible at all for the second dimension:
 
-```rust
+{% highlight rust %}
 // region starting at (64, 64)
 let first_row = &region[64];
 let first_column = row[64]; // wrong, a raw slice necessarily starts at 0
-```
+{% endhighlight %}
 
 Therefore, offsets used in tiling views are relative to the tile (contrary to
 _libaom_ and AV1 specification).
