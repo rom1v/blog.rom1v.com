@@ -585,3 +585,10 @@ Rust and video encoding (I didn't even know what a tile was before I started).
 
 Big thanks to the Mozilla/Xiph/Daala team, who has been very welcoming and
 helpful, and who does amazing work!
+
+_Discuss on [r/programming], [r/rust], [r/AV1] and [Hacker News]._
+
+[r/programming]: https://www.reddit.com/r/programming/comments/bh6sq8/implementing_tile_encoding_in_rav1e_a_rust_av1/
+[r/rust]: https://www.reddit.com/r/rust/comments/bh8xnl/implementing_tile_encoding_in_rav1e_a_rust_av1/
+[r/AV1]: https://www.reddit.com/r/AV1/comments/bh8xsy/implementing_tile_encoding_in_rav1e/
+[Hacker News]: https://news.ycombinator.com/item?id=19746392
