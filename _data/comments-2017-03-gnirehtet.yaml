@@ -305,3 +305,10 @@
 
     histoire de virer la route (non prioritaire) de tethering. 192.168.42.129
     est l'IP du téléphone, affichée par `/sbin/route -n`.
+- id: 18
+  author: Bibi
+  date: 2019-04-25 16:04:50+02:00
+  contents: |
+    Bonjour, pourquoi diable dire *à la fin* de l'article en anglais qu'il
+    existe en français ?  Au début c'est plus utile. Ici on dit bien *au début*
+    qu'il existe en anglais.
