@@ -88,14 +88,10 @@ _que_ sur _Youtube_) :
 
 ## Script
 
-Le script est disponible sous licence [wtfpl][] sur ce dépôt _git_ :
-
-    git clone http://git.rom1v.com/pluzz.git
-
-(ou sur [github][]).
+Le script est disponible sous licence [wtfpl][] sur ce dépôt _git_ : [pluzz].
 
 [wtfpl]: http://sam.zoy.org/wtfpl/
-[github]: https://github.com/rom1v/pluzz
+[pluzz]: https://github.com/rom1v/pluzz
 
 Pour fonctionner, le paquet `flvstreamer` doit être installé :
 

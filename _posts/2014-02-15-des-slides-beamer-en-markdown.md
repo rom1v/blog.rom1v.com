@@ -98,19 +98,17 @@ J'ai créé une présentation d'exemple avec un thème personnalisé.
 
 Le résultat est disponible [ici][slides.pdf], mais c'est surtout la
 [source][slides.md.html] ([raw][slides.md]) qui est intéressante. Pour récupérer
-le projet et générer le pdf :
+le [projet](https://github.com/rom1v/mdbeamer) et générer le pdf :
 
-[slides.pdf]: http://dl.rom1v.com/mdbeamer/slides.pdf
-[slides.md.html]: http://dl.rom1v.com/mdbeamer/slides.md.html
-[slides.md]: http://dl.rom1v.com/mdbeamer/slides.md
+[slides.pdf]: https://dl.rom1v.com/mdbeamer/slides.pdf
+[slides.md.html]: https://dl.rom1v.com/mdbeamer/slides.md.html
+[slides.md]: https://dl.rom1v.com/mdbeamer/slides.md
 
 {% highlight bash %}
-git clone http://git.rom1v.com/mdbeamer.git
+git clone https://github.com/rom1v/mdbeamer
 cd mdbeamer
 make
 {% endhighlight %}
-
-Il est également disponible sur [github](https://github.com/rom1v/mdbeamer).
 
 Ce projet a vocation à être utilisé comme base pour mes futures présentations
 (et les vôtres si vous le désirez). Chacune d'entre elles sera sur une

@@ -27,11 +27,10 @@ initiale des disques) lors de la phase de compilation.
 
 [tours de Hanoï]: https://fr.wikipedia.org/wiki/Tours_de_Hano%C3%AF
 
-Les programmes complets décrits dans ce billet sont _gittés_ :
+Les programmes complets décrits dans ce billet sont disponibles ici:
+[metahanoi].
 
-    git clone http://git.rom1v.com/metahanoi.git
-
-(ou sur [github](https://github.com/rom1v/metahanoi.git))
+[metahanoi]: https://github.com/rom1v/metahanoi
 
 
 ## Problème des tours de Hanoï généralisé

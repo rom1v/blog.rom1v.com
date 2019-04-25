@@ -375,13 +375,11 @@ désirée.
 
 ### Sources
 
-Les sources complètes sont [gittées][git] :
-
-    git clone http://git.rom1v.com/mixpoc.git
+Les sources complètes sont [gittées][git] : [mixpoc].
 
 [git]: http://fr.wikipedia.org/wiki/Git
 
-(ou sur [github](https://github.com/rom1v/mixpoc)).
+[mixpoc]: https://github.com/rom1v/mixpoc
 
 Le projet contient :
 

@@ -37,15 +37,15 @@ connecter à notre machine _maître_.
 
 En me basant sur [la commande donnée en exemple][commande], j'ai donc écrit un
 petit script _Bash_ (`rsshfs`, licence [GPLv3][]) qui permet le _reverse
-SSHFS_ :
+SSHFS_ : [rsshfs].
 
 [commande]: https://sourceforge.net/p/fuse/mailman/message/27034864/
 [gplv3]: http://www.gnu.org/licenses/quick-guide-gplv3.fr.html
 
-(disponible également sur [github](https://github.com/rom1v/rsshfs))
+[rsshfs]: https://github.com/rom1v/rsshfs
 
 {% highlight bash %}
-git clone http://git.rom1v.com/rsshfs.git
+git clone https://github.com/rom1v/rsshfs
 cd rsshfs
 sudo install rsshfs /usr/local/bin
 {% endhighlight %}

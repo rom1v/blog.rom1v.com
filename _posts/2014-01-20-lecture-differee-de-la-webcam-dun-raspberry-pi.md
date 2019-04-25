@@ -169,17 +169,17 @@ ne semblait pas être le cas.
 
 [stackoverflow]: http://stackoverflow.com/questions/20979694/is-there-a-shell-command-to-delay-a-buffer
 
-Je l'ai donc implémentée (sous licence [GPLv3][]) :
+Je l'ai donc implémentée (sous licence [GPLv3][]) : [delay].
 
 [gplv3]: https://fr.wikipedia.org/wiki/Licence_publique_g%C3%A9n%C3%A9rale_GNU
 
 {% highlight bash %}
-git clone http://git.rom1v.com/delay.git
+git clone https://github.com/rom1v/delay
 cd delay
 make && sudo make install
 {% endhighlight %}
 
-(ou sur [github](https://github.com/rom1v/delay))
+[delay]: https://github.com/rom1v/delay
 
 Elle permet de décaler tout ce qui arrive sur `stdin` d'un délai constant pour
 le sortir sur `stdout` :

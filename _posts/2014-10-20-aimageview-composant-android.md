@@ -149,16 +149,12 @@ d'équivalent, `AImageView` est basé dessus.
 
 Le composant est disponible sous la forme d'un _project library_ (sous licence
 <del>[GNU/LGPLv3][lgpl]</del> ([plus maintenant][license-commit]) [MIT][]):
+[AImageView].
 
 [lgpl]: https://fr.wikipedia.org/wiki/Licence_publique_g%C3%A9n%C3%A9rale_limit%C3%A9e_GNU
 [license-commit]: https://github.com/rom1v/AImageView/commit/436d3085c0219495899616089918b1ddf2063307
 [mit]: https://fr.wikipedia.org/wiki/Licence_MIT
-
-{% highlight bash %}
-git clone http://git.rom1v.com/AImageView.git
-{% endhighlight %}
-
-(miroir sur [github](https://github.com/rom1v/AImageView.git))
+[AImageView]: https://github.com/rom1v/AImageView
 
 Vous pouvez le [compiler][] en fichier `.aar` grâce à la commande :
 
@@ -172,15 +168,15 @@ cd AImageView
 Il sera généré dans `library/build/outputs/aar/aimageview.aar`.
 
 J'ai aussi écrit une application de démo l'utilisant (avec tous les fichiers
-[Gradle][] qui-vont-bien) :
+[Gradle][] qui-vont-bien) : [AImageViewSample].
 
 [gradle]: https://en.wikipedia.org/wiki/Gradle
 
 {% highlight bash %}
-git clone --recursive http://git.rom1v.com/AImageViewSample.git
+git clone --recursive https://github.com/rom1v/AImageViewSample
 {% endhighlight %}
 
-(miroir sur [github](https://github.com/rom1v/AImageViewSample.git))
+[AImageViewSample]: https://github.com/rom1v/AImageViewSample
 
 {: .center}
 ![AImageViewSample]({{ site.assets }}/aimageview/AImageViewSample.jpg)
@@ -193,10 +189,10 @@ cd AImageViewSample
 {% endhighlight %}
 
 Pour ceux que le code intéresse, la classe principale est
-[`AImageView`][AImageView]. Pour l'utiliser, la partie importante est dans
+[`AImageView`][AImageView.java]. Pour l'utiliser, la partie importante est dans
 [`activity_main.xml`][activity_main.xml].
 
-[AImageView]: https://github.com/rom1v/AImageView/blob/master/library/src/main/java/com/rom1v/aimageview/AImageView.java
+[AImageView.java]: https://github.com/rom1v/AImageView/blob/master/library/src/main/java/com/rom1v/aimageview/AImageView.java
 [activity_main.xml]: https://github.com/rom1v/AImageViewSample/blob/master/app/src/main/res/layout/activity_main.xml
 
 N'hésitez pas à critiquer ou à remonter des bugs.

@@ -263,11 +263,9 @@ préféré à _C_.
 
 ## Code source
 
-Le code source est disponible sur ce dépôt _git_ :
+Le code source est disponible sur ce dépôt _git_ : [csnakesolver].
 
-    git clone http://git.rom1v.com/csnakesolver.git
-
-(ou sur [github](https://github.com/rom1v/csnakesolver)).
+[csnakesolver]: https://github.com/rom1v/csnakesolver
 
 _Par contre, désolé, cette version est beaucoup moins commentée que la version
 Python._

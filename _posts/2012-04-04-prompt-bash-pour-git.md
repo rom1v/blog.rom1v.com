@@ -110,13 +110,12 @@ En image :
 
 ## Script
 
-Le script, sous licence [WTFPL][], est disponible sur un dépôt _git_ :
+Le script, sous licence [WTFPL][], est disponible sur ce dépôt _git_ :
+[gitbashprompt].
 
 [wtfpl]: http://www.wtfpl.net/
 
-    git clone http://git.rom1v.com/gitbashprompt.git
-
-(ou sur [github](https://github.com/rom1v/gitbashprompt))
+[github]: https://github.com/rom1v/gitbashprompt
 
 Une fois cloné, éditez le fichier `~/.bashrc` pour remplacer l'initialisation de
 la variable `PS1` :

@@ -351,13 +351,11 @@ String src = UdpxyService.proxify("239.0.0.1:1234");
 ### andudpxy
 
 Je mets à disposition sous licence [GPLv3][] le projet _library_ `andudpxy`, qui
-met en œuvre ce que j'ai expliqué ici :
+met en œuvre ce que j'ai expliqué ici : [andudpxy].
 
 [gplv3]: http://www.gnu.org/licenses/quick-guide-gplv3.fr.html
 
-    git clone http://git.rom1v.com/andudpxy.git
-
-(ou sur [github](https://github.com/rom1v/andudpxy))
+[andudpxy]: https://github.com/rom1v/andudpxy
 
 Pour l'utiliser dans votre application, n'oubliez pas de référencer la _library_
 et de déclarer le service `UdpxyService` dans votre `AndroidManifest.xml` :
@@ -384,11 +382,9 @@ UdpxyService.stopUdpxy(context);
 ### andudpxy-sample
 
 J'ai également écrit une application minimale de lecture vidéo qui utilise cette
-_library_ :
+_library_ : [andudpxy-sample].
 
-    git clone http://git.rom1v.com/andudpxy-sample.git
-
-(ou sur [github](https://github.com/rom1v/andudpxy-sample))
+[andudpxy-sample]: https://github.com/rom1v/andudpxy-sample
 
 C'est toujours utile d'avoir une application d'exemple censée fonctionner ;-)
 

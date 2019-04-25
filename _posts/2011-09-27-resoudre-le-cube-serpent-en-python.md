@@ -390,8 +390,6 @@ J'espère que ça vous a amusé aussi.
 
 ## Script
 
-Le code source est disponible sur ce dépôt _git_ :
+Le code source est disponible sur ce dépôt _git_ : [snakesolver].
 
-    git clone http://git.rom1v.com/snakesolver.git
-
-(ou sur [github](https://github.com/rom1v/snakesolver)).
+[snakesolver]: https://github.com/rom1v/snakesolver
