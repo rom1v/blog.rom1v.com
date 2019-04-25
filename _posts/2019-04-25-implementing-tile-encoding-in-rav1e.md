@@ -512,8 +512,8 @@ the non-parallelized code represents a significant part).
 The (not-so-reliable) benchmark results for 2 and 4 tiles suggest that tile
 encoding represents ~90% of the whole encoding process.
 
-The speedup for 8 tiles in lower than expected, though. I don't know why, but we
-can make hypotheses.
+The speedup for 8 tiles in lower than expected, though. ~~I don't know why, but
+we can make hypotheses.~~
 
 One possible cause (suggested by [ycho]) is the difference in encoding time
 between tiles. The frame-level processing can start only once _all_ the tiles
@@ -523,9 +523,14 @@ than the others.
 The difference might also simply be explained by the fact that my laptop has 8
 CPU, so none was left for any background execution.
 
+**EDIT:** The reason is that my CPU has actually only 4 physical cores. See
+[this reddit comment][reddit-cpu-1] and [this other one][reddit-cpu-2].
+
 [perfs]: https://github.com/xiph/rav1e/pull/1126#issuecomment-484667610
 [Amdahl's law]: https://en.wikipedia.org/wiki/Amdahl%27s_law#Parallel_programs
 [ycho]: https://github.com/ycho
+[reddit-cpu-1]: https://www.reddit.com/r/programming/comments/bh6sq8/implementing_tile_encoding_in_rav1e_a_rust_av1/elrl5yo/
+[reddit-cpu-2]: https://www.reddit.com/r/rust/comments/bh8xnl/implementing_tile_encoding_in_rav1e_a_rust_av1/elrloye/
 
 
 ## Fixing bugs
