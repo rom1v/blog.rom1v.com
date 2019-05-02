@@ -11,9 +11,9 @@ langref:
 
 I spent the last few weeks at [Genymobile] developing a tool providing _reverse
 tethering_ for Android, so that devices may use the internet connection of the
-computer they are plugged in, without requiring any _root_ access (neither on
-the device nor on the computer). It works on _GNU/Linux_, _Windows_ and _Mac
-OS_.
+computer on which they are connected via USB, without requiring any _root_
+access (neither on the device nor on the computer). It works on _GNU/Linux_,
+_Windows_ and _Mac OS_.
 
 [Genymobile]: https://www.genymobile.com/
 

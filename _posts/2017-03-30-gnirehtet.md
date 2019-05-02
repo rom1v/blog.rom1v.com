@@ -13,8 +13,8 @@ langref:
 
 Durant ces dernières semaines chez [Genymobile], j'ai développé un outil de
 _reverse tethering_ pour Android, permettant aux téléphones (et aux tablettes)
-d'utiliser la connexion internet de l'ordinateur sur lequel ils sont branchés,
-sans accès _root_ (ni sur le téléphone, ni sur le PC). Il fonctionne sur
+d'utiliser la connexion internet de l'ordinateur sur lequel ils sont branchés en
+USB, sans accès _root_ (ni sur le téléphone, ni sur le PC). Il fonctionne sur
 _GNU/Linux_, _Windows_ et _Mac OS_.
 
 [Genymobile]: https://www.genymobile.com/
