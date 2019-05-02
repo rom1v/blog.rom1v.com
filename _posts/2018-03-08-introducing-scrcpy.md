@@ -27,7 +27,7 @@ Like my previous project, [_gnirehtet_], [Genymobile] accepted to open source
 it: [scrcpy].
 
 [Genymobile]: https://www.genymobile.com/
-[_gnirehtet_]: https://medium.com/genymobile/gnirehtet-reverse-tethering-android-2afacdbdaec7
+[_gnirehtet_]: {% post_url 2017-03-30-introducing-gnirehtet %}
 [scrcpy]: https://github.com/Genymobile/scrcpy
 
 You can [build, install and run][README] it.

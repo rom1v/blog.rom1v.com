@@ -9,8 +9,8 @@ langref:
   internal: true
 ---
 
-Several months ago, I introduced [Gnirehtet][medium], a reverse tethering tool
-for Android I wrote in Java.
+Several months ago, I introduced [Gnirehtet][blog-gnirehtet], a reverse
+tethering tool for Android I wrote in Java.
 
 Since then, **I rewrote it in [Rust]**.
 
@@ -21,7 +21,7 @@ and execute:
 
 _(adb must be installed)_
 
-[medium]: https://medium.com/genymobile/gnirehtet-reverse-tethering-android-2afacdbdaec7
+[blog-gnirehtet]: {% post_url 2017-03-30-introducing-gnirehtet %}
 [Rust]: https://www.rust-lang.org/
 [gnirehtet]: https://github.com/Genymobile/gnirehtet
 [release]: https://github.com/Genymobile/gnirehtet/releases/latest

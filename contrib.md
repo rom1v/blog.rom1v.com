@@ -59,13 +59,13 @@ Android à partir du PC.
 
 J'ai développé un outil qui permet aux devices Android d'utiliser la connexion
 du PC sur lequel ils sont branchés (_reverse tethering_), sans accès _root_.  
-[`gnirehtet`] \| [article fr][blog-gnirehtet] \| [article en][gnirehtet-medium]
+[`gnirehtet`] \| [article fr][blog-gnirehtet] \| [article en][blog-gnirehtet-en]
 \| [LinuxFR][gnirehtet-linuxfr] \| [reddit][gnirehtet-reddit] \|
 [Hacker News][gnirehtet-hn]
 
 [`gnirehtet`]: https://github.com/Genymobile/gnirehtet
 [blog-gnirehtet]: {% post_url 2017-03-30-gnirehtet %}
-[gnirehtet-medium]: https://medium.com/genymobile/gnirehtet-reverse-tethering-android-2afacdbdaec7
+[blog-gnirehtet-en]: {% post_url 2017-03-30-introducing-gnirehtet %}
 [gnirehtet-linuxfr]: https://linuxfr.org/users/rom1v/journaux/du-reverse-tethering-sur-android-sans-root
 [gnirehtet-reddit]: https://www.reddit.com/r/Android/comments/62lc8z/a_reverse_tethering_tool_for_android_no_root/
 [gnirehtet-hn]: https://news.ycombinator.com/item?id=14011590
