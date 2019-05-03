@@ -10,9 +10,10 @@ permalink: articles/
 
  * <span class="post-lang">en</span> [Implementing tile encoding in rav1e]({% post_url 2019-04-25-implementing-tile-encoding-in-rav1e %}) (2019)
  * <span class="post-lang">en</span> [Introducing scrcpy]({% post_url 2018-03-08-introducing-scrcpy %}) (2018)
- * [Gnirehtet réécrit en Rust]({% post_url 2017-09-21-gnirehtet-reecrit-en-rust %}) (2017)
  * <span class="post-lang">en</span> [Gnirehtet rewritten in Rust]({% post_url 2017-09-21-gnirehtet-rewritten-in-rust %}) (2017)
+ * [Gnirehtet réécrit en Rust]({% post_url 2017-09-21-gnirehtet-reecrit-en-rust %}) (2017)
  * [Fusionner deux dépôts git]({% post_url 2017-07-12-fusionner-deux-depots-git %}) (2017)
+ * <span class="post-lang">en</span> [Introducing gnirehtet]({% post_url 2017-03-30-introducing-gnirehtet %}) (2017)
  * [Gnirehtet]({% post_url 2017-03-30-gnirehtet %}) (2017)
  * [SHAdow]({% post_url 2017-03-01-shadow %}) (2017)
  * [C++ sans *pointeurs]({% post_url 2017-01-12-cpp-sans-pointeurs %}) (2017)
