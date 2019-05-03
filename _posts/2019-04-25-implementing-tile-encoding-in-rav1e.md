@@ -191,7 +191,10 @@ impl IndexMut<usize> for ColumnMut<'_> {
     }
 }
 
-pub fn columns(slice: &mut [u8], cols: usize) -> impl Iterator<Item = ColumnMut> {
+pub fn columns(
+    slice: &mut [u8],
+    cols: usize,
+) -> impl Iterator<Item = ColumnMut<'_>> {
     assert!(slice.len() % cols == 0);
     let rows = slice.len() / cols;
     (0..cols).map(move |col| ColumnMut {
