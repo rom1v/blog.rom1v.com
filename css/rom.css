@@ -1127,7 +1127,11 @@ a code {
 }
 
 .index-post-title {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.index-post-date {
+    font-size: 0.8rem;
 }
 
 .center {
