@@ -129,13 +129,19 @@ si ça vous intéresse.
 
 Voici les principales contributions :
 
- - [core: add atomic refcounter
+ - [Add atomic refcounter
    helper](https://mailman.videolan.org/pipermail/vlc-devel/2018-July/120051.html)
    <em style="color: green;">mergé</em> ([`618a789`])
+ - [Make the background worker
+   multithreaded](https://mailman.videolan.org/pipermail/vlc-devel/2018-July/120397.html)
+   <em style="color: green;">mergé</em> ([`1789d18`])
+ - [Use input thread events for
+   (pre-)parsing](https://mailman.videolan.org/pipermail/vlc-devel/2018-August/120761.html)
+   <em style="color: green;">mergé</em> ([`ee83628`] et suivants)
  - [vlc_vector: add helpers for
    vectors](https://mailman.videolan.org/pipermail/vlc-devel/2018-October/121541.html)
    <em style="color: green;">mergé</em> ([`983c43f`])
- - [include: add C++ wrapper for C shared
+ - [Add C++ wrapper for C shared
    resources](https://mailman.videolan.org/pipermail/vlc-devel/2018-October/121451.html)
    <em style="color: green;">mergé</em> ([`40c6d71`])
  - [New
@@ -147,6 +153,8 @@ Voici les principales contributions :
 
 
 [`618a789`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=618a78995848158783640ffa3ef31612cfa0d106
+[`1789d18`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=1789d18874f00ddf2ed63891aa3afc07f37877bd
+[`ee83628`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=ee83628877583f131ca11cea3718dbe6a7d6c434
 [`983c43f`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=983c43f05928032a14f201c506d6b9c51d0c5145
 [`40c6d71`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=40c6d71fd9f29c7007a5b1fa8c562bdff32f8f63
 [`7c82c7b`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=7c82c7bf08ac11cbe81e96d309e54a2a559f19a8
