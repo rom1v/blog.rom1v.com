@@ -1,4 +1,4 @@
 {% for translation in page.langref %}<span class="translation-link">
-{% capture url %}{% if translation.internal %}{{ site.baseurl }}{% endif %}{{ translation.url }}{% endcapture %}
+{% capture url %}{% unless translation.external %}{{ site.baseurl }}{% endunless %}{{ translation.url }}{% endcapture %}
 {{ site.l10n[translation.lang].translation-available | replace_first: '%url', url }}
 </span>{% endfor %}

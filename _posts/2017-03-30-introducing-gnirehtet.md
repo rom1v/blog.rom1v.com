@@ -6,7 +6,6 @@ lang: en
 langref:
 - lang: fr
   url: /2017/03/gnirehtet
-  internal: true
 ---
 
 I spent the last few weeks at [Genymobile] developing a tool providing _reverse

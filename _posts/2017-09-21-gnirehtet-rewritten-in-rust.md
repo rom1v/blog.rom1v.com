@@ -6,7 +6,6 @@ lang: en
 langref:
 - lang: fr
   url: /2017/09/gnirehtet-reecrit-en-rust
-  internal: true
 ---
 
 Several months ago, I introduced [Gnirehtet][blog-gnirehtet], a reverse

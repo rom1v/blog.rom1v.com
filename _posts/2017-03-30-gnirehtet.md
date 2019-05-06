@@ -8,7 +8,6 @@ lang: fr
 langref:
 - lang: en
   url: /2017/03/introducing-gnirehtet
-  internal: true
 ---
 
 Durant ces dernières semaines chez [Genymobile], j'ai développé un outil de

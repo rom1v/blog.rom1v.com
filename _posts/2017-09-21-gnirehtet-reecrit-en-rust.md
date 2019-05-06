@@ -8,7 +8,6 @@ lang: fr
 langref:
 - lang: en
   url: /2017/09/gnirehtet-rewritten-in-rust
-  internal: true
 ---
 
 Il y a quelques mois, j'ai présenté [Gnirehtet][blog-gnirehtet], un outil de
