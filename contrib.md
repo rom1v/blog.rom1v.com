@@ -161,6 +161,10 @@ Voici les principales contributions :
 [`3e0cc19`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=3e0cc1942a963693cf97c99a5ab1e9c6171fe6b1
 [`8fbc2e6`]: https://git.videolan.org/?p=vlc.git;a=commitdiff;h=8fbc2e61bfeb0331f254b179caf177cd086845a3
 
+J'ai écrit un [article][blog-vlc-playlist] détaillant la nouvelle playlist.
+
+[blog-vlc-playlist]: {% post_url 2019-05-21-a-new-core-playlist-for-vlc-4 %}
+
 
 [VideoLabs]: https://videolabs.io/
 [mailing-list]: https://mailman.videolan.org/listinfo/vlc-devel

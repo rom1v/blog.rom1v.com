@@ -22,6 +22,9 @@ permalink: cv/
 Je participe principalement au développement du lecteur multimédia VLC
 ([contrib]({{ site.baseurl }}/contrib/#vlc)).
 
+En particulier, j'ai implémenté la nouvelle playlist (voir [article]({%
+post_url 2019-05-21-a-new-core-playlist-for-vlc-4 %})).
+
 _C, C++._
 
 

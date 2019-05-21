@@ -8,6 +8,7 @@ permalink: articles/
 
 ## Développement
 
+ * <span class="post-lang">en</span> [A new core playlist for VLC 4]({% post_url 2019-05-21-a-new-core-playlist-for-vlc-4 %}) (2019)
  * <span class="post-lang">en</span> [Implementing tile encoding in rav1e]({% post_url 2019-04-25-implementing-tile-encoding-in-rav1e %}) (2019)
  * <span class="post-lang">en</span> [Introducing scrcpy]({% post_url 2018-03-08-introducing-scrcpy %}) (2018)
  * <span class="post-lang">en</span> [Gnirehtet rewritten in Rust]({% post_url 2017-09-21-gnirehtet-rewritten-in-rust %}) (2017)
