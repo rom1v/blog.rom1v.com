@@ -30,7 +30,7 @@ technical details.
 [remove-playlist-legacy]: https://code.videolan.org/videolan/vlc/commit/c67934b0b4fc9298cb0784c07f701392589e61b7
 
 {: .center}
-![vlc]({{ site.assets }}/vlc_playlist/vlc.png)
+![vlc](https://raw.githubusercontent.com/rom1v/blog.rom1v.com/master/assets/vlc_playlist/vlc.png)
 
 * TOC
 {:toc}
