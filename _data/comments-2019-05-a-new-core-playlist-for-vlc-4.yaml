@@ -56,3 +56,23 @@
 
     And then you went and copied C++ and Rust and called it a "vector", which
     even Bjarne Stroustrup admits was a mistake...
+- id: 5
+  author: ®om
+  date: 2019-05-22 19:56:23+02:00
+  contents: |
+    > Do you think you get much benefit from being multithreaded? Seems to
+    > add a lot of complexity.
+
+    If you can avoid multithreading here, for example if you can make your
+    playlist _live_ in your UI thread, then definitely do it.
+
+    > The type unsafe operations can be localized to just a small area of
+    > the code.
+
+    Not really localized, every access, insertion or removal will be "unsafe".
+    But IMO this is not a problem in C.
+
+    > And then you went and copied C++ and Rust and called it a "vector", which
+    > even Bjarne Stroustrup admits was a mistake...
+
+    Do you have a link quoting Stroustrup about `vector` being a mistake?
