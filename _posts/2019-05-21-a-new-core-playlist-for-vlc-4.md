@@ -123,7 +123,7 @@ struct vlc_playlist {
 [`ArrayList`]: https://docs.oracle.com/javase/10/docs/api/java/util/ArrayList.html
 
 [`vlc_vector`]: https://code.videolan.org/videolan/vlc/commit/983c43f05928032a14f201c506d6b9c51d0c5145?expanded=1
-[playlist-items]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/src/playlist/playlist.h#L54
+[playlist-items]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/src/playlist/playlist.h#L54
 
 
 ## Interaction with UI
@@ -340,9 +340,9 @@ index of the items when the request was created. It should (hopefully) almost
 always be the same as the index in the current playlist state.
 
 
-[playlist-request]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_playlist.h#L548
-[`vlc_playlist_RequestRemove`]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_playlist.h#L597
-[`on_items_removed`]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_playlist.h#L204
+[playlist-request]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_playlist.h#L548
+[`vlc_playlist_RequestRemove`]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_playlist.h#L597
+[`on_items_removed`]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_playlist.h#L204
 
 
 ## Random playback
@@ -375,7 +375,7 @@ In addition, if _loop_ is enabled:
  - an item must never be selected twice in a row (in particular, it may not be
    the last item of one cycle and the first item of the next cycle).
 
-[shuffle]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_playlist.h#L623
+[shuffle]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_playlist.h#L623
 [same random]: https://xkcd.com/221/
 
 
@@ -396,7 +396,7 @@ A D E B C D C A E B E A D C B C D B A E C E A B D C D E A B D A E C B C A D B E
 A B E C D A C B E D E D A B C D E C A B C A E B D E B D C A C A E D B D B E C A
 ```
 
-[`randomizer`]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/src/playlist/randomizer.c
+[`randomizer`]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/src/playlist/randomizer.c
 
 Here is how it works.
 
@@ -428,7 +428,7 @@ cycle (if _loop_ is disabled, there is only one cycle),
 _Let's reuse the example I wrote in the [documentation][randomizer-doc]._
 
 [Fisher-Yates]: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-[randomizer-doc]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/src/playlist/randomizer.c#L87
+[randomizer-doc]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/src/playlist/randomizer.c#L87
 
 Here is the initial state with our 5 items:
 
@@ -640,12 +640,12 @@ playlist.
 
 As a benefit, the items are locked only once to retrieved their metadata.
 
-[sort]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_playlist.h#L631
-[sort-key]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_playlist.h#L128
-[sort-order]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_playlist.h#L143
-[list of metadata]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/src/playlist/sort.c#L374
-[sorted]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/src/playlist/sort.c#L381
-[applied back]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/src/playlist/sort.c#L383
+[sort]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_playlist.h#L631
+[sort-key]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_playlist.h#L128
+[sort-order]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_playlist.h#L143
+[list of metadata]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/src/playlist/sort.c#L374
+[sorted]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/src/playlist/sort.c#L381
+[applied back]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/src/playlist/sort.c#L383
 
 
 ## Interaction with the player
@@ -675,9 +675,9 @@ Concretely, `vlc_playlist_Lock()` delegates to `vlc_player_Lock()`. In practice,
 the lock should be held only for short periods of time.
 
 [tguillem]: https://twitter.com/tguill3m
-[new player API]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_player.h
-[current media]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_player.h#L1082
-[media provider]: https://code.videolan.org/videolan/vlc/blob/051237a0ef4fe39d2f01850db28f9306dd4a7b83/include/vlc_player.h#L354
+[new player API]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_player.h
+[current media]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_player.h#L1082
+[media provider]: https://code.videolan.org/videolan/vlc/blob/519877e327bb86aba1f4861412792c63248564d6/include/vlc_player.h#L354
 [deadlocked]: https://en.wikipedia.org/wiki/Deadlock
 
 
