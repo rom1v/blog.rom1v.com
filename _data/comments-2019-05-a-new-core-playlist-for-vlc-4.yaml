@@ -35,3 +35,12 @@
     keep checking to see if they are better.  And they aren't.  VLC had
     instability issues for one version and it was fixed in 2 months, never
     happened again.  I think this was around 2014
+- id: 3
+  author: Jack Palevich
+  date: 2019-05-22 16:03:56+02:00
+  contents: |
+    Great article! I work on the queue implementation for a media player app, so
+    this article is relevant to my interests.
+
+    Do you think you get much benefit from being multithreaded? Seems to add a
+    lot of complexity.
