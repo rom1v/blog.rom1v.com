@@ -44,3 +44,15 @@
 
     Do you think you get much benefit from being multithreaded? Seems to add a
     lot of complexity.
+- id: 4
+  author: JC
+  date: 2019-05-22 16:18:53+02:00
+  contents: |
+    It blows my mind that someone would call a dynamic array that uses void
+    pointers "useless" just because it's not type safe. The type unsafe
+    operations can be localized to just a small area of the code. The surface
+    area for mistakes with this approach is probably no larger than the surface
+    area for bugs in a "type safe" macro implementation.
+
+    And then you went and copied C++ and Rust and called it a "vector", which
+    even Bjarne Stroustrup admits was a mistake...
