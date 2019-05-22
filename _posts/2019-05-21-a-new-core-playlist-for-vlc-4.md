@@ -704,4 +704,9 @@ features _(spoiler: [gapless])_.
 [modern UI]: https://www.youtube.com/watch?v=jzvC-0WCjKU&t=841
 [gapless]: https://en.wikipedia.org/wiki/Gapless_playback
 
+_Discuss on [reddit] and [Hacker News]._
+
+[reddit]: https://www.reddit.com/r/programming/comments/br7or7/a_new_core_playlist_for_vlc_4/
+[Hacker News]: https://news.ycombinator.com/item?id=19978295
+
 ---
