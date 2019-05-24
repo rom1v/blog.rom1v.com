@@ -18,3 +18,25 @@
     N'est ce pas similaire à [vbuf] ?
 
     [vbuf]:  http://manpages.ubuntu.com/manpages/precise/man1/vbuf.1.html
+- id: 3
+  author: arca
+  date: 2019-05-24 10:15:49+02:00
+  contents: |
+    Bonjour, merci pour ce tuto.
+
+    Cependant, j'ai un petit problème sur un raspberry pi zero w et une
+    picam 2.1
+
+    La commande:
+
+    {% highlight bash %}
+    raspivid -t 0 -w 1280 -h 720 -fps 24 -n -o - | omxplayer.bin /dev/stdin
+    {% endhighlight %}
+
+    renvoie `Abandon`.
+
+    Pas plus de succès avec `delay`.
+
+    `raspivid` tout seul fonctionne sans souci
+
+    Malheureusement je n'arrive pas à avancer ...
