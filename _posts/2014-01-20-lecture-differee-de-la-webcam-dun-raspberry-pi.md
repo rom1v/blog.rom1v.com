@@ -169,9 +169,7 @@ ne semblait pas être le cas.
 
 [stackoverflow]: http://stackoverflow.com/questions/20979694/is-there-a-shell-command-to-delay-a-buffer
 
-Je l'ai donc implémentée (sous licence [GPLv3][]) : [delay].
-
-[gplv3]: https://fr.wikipedia.org/wiki/Licence_publique_g%C3%A9n%C3%A9rale_GNU
+Je l'ai donc implémentée : [delay].
 
 {% highlight bash %}
 git clone https://github.com/rom1v/delay
