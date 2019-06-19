@@ -753,3 +753,14 @@
     Anyway, thank you for your work. You're closing a huge gap.
 
     Cheers, Pete
+- id: 68
+  author: ®om
+  date: 2019-06-19 09:37:22+02:00
+  contents: |
+    Thank you ;)
+
+    > Do you see a chance to lower the architectural limits below 5.0?
+
+    Unfortunately, no. See [#98].
+
+    [#98]: https://github.com/Genymobile/scrcpy/issues/98
