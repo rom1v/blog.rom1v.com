@@ -731,3 +731,25 @@
     time now), I do not need donations :)
 
     Cheers
+- id: 67
+  author: frispete
+  date: 2019-06-19 00:38:39+02:00
+  contents: |
+    Dear Romain,
+
+    thank you very much for this awesome work. I've searched a couple of
+    month ago for exactly that kind of tool, since neither any vnc nor rdp
+    based solutions are available or just fail to build.
+
+    I need this tool for my mother's smartphone. She's visually heavily
+    impaired (macula degeneration), and therefore, I've turned an old Galaxy
+    S2 into an Audiobook Reader. Unfortunately, this device is using a
+    CyanogenMod-Android version 4.4.4.
+
+    Do you see a chance to lower the architectural limits below 5.0? If you
+    can point me to the expected issues, I may be able to contribute, or at
+    least could you give me some assessment of this undertaking?
+
+    Anyway, thank you for your work. You're closing a huge gap.
+
+    Cheers, Pete
