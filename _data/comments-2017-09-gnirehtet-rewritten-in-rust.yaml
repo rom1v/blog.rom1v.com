@@ -256,3 +256,28 @@
     What are the pitfalls and alternatives?
 
     Thanks again
+- id: 10
+  author: SaO
+  date: 2019-06-20 18:40:05+02:00
+  contents: |
+    Thanks for making this available!  I was able to install it on an
+    android tablet (as such it does not come with "USB tether" option) and I
+    was able to get get wifi access from my linux laptop.  Good!
+
+    Actually I want to use your tool to do wired vnc, but I'm a network
+    newbie and I'd be most appreciative for your help on the details.
+
+    What I want is to my tablet as a vnc display for my tablet, but my work
+    place would not allow wifi/bluetooth connection so I need to use USB.
+    With gnirehtet I am able to reverse tether into the laptop.
+
+    Question:  How do I determine the address/port of the connection so I
+    can enter that info the vnc viewer?  I tried running the app "network
+    discovery" after I started the gnirehtet connection but the app could
+    not find the address.  I also run "su ifconfig -a" from terminal
+    emulator (on the tablet) but I got a dozen entries and I could not
+    figure out which is which.
+
+    I realize that this is an "off-label" use of your tool, but it would
+    extremely helpful for my work.  Your help and comments are most welcome.
+    THANKS!
