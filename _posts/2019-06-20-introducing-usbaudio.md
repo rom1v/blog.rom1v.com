@@ -54,7 +54,7 @@ usbaudio --live-caching=100
 _Note that it can also be directly captured by [OBS]:_
 
 {: .center}
-![obs]({{ site.assets }}/usbaudio/obs.png)
+![obs](https://raw.githubusercontent.com/rom1v/blog.rom1v.com/master/assets/usbaudio/obs.png)
 
 [OBS]: https://obsproject.com/
 
