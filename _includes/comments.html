@@ -19,6 +19,9 @@
             </div>
         </div>
     {% endfor %}
+    {% unless site.comments_form %}
+        <p><em>{{ site.l10n[page.lang].comments-closed }}<em></p>
+    {% endunless %}
 </div>
 {% if site.comments_form %}
 {% if page.comments_closed %}
