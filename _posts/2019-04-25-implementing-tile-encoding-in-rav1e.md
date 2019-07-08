@@ -41,7 +41,7 @@ This speeds up encoding and increases decoding frame rate.
 [![tiles][tiles]][tiles]  
 _8 tiles (4 colums × 2 rows)_
 
-[tiles]: https://raw.githubusercontent.com/rom1v/blog.rom1v.com/master/assets/rav1e_tile_encoding/tiles.jpg
+[tiles]: {{ site.assets }}/rav1e_tile_encoding/tiles.jpg
 
 
 ## Preliminary work
@@ -548,7 +548,7 @@ of my first tiled video:
 {: .center }
 [![bbb][bbb]][bbb]
 
-[bbb]: https://raw.githubusercontent.com/rom1v/blog.rom1v.com/master/assets/rav1e_tile_encoding/bbb_tiling.jpg
+[bbb]: {{ site.assets }}/rav1e_tile_encoding/bbb_tiling.jpg
 
 One of these offsets confusions had been quickly catched by [barrbrain] in
 [intra-prediction][intrabug]. I then fixed a similar problem in

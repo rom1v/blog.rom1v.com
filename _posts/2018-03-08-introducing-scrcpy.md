@@ -12,7 +12,7 @@ OS.
 {: .center}
 [![scrcpy][screenshot]][scrcpy]
 
-[screenshot]: https://raw.githubusercontent.com/Genymobile/scrcpy/master/assets/screenshot-debian-600.jpg
+[screenshot]: {{ site.assets}}/scrcpy/scrcpy.jpg
 
 It focuses on:
 
