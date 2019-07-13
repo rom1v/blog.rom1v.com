@@ -19,9 +19,11 @@ It focuses on:
  - **lightness** (native, displays only the device screen)
  - **performances** (30~60fps)
  - **quality** (1920×1080 or above)
- - **low latency** (70~100ms)
+ - **low latency** (~~70~100ms~~ [35~70ms][lowlatency])
  - **low startup time** (~1 second to display the first image)
  - **non-intrusiveness** (nothing is left installed on the device)
+
+[lowlatency]: https://github.com/Genymobile/scrcpy/pull/646
 
 Like my previous project, [_gnirehtet_], [Genymobile] accepted to open source
 it: [scrcpy].
