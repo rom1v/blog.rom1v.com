@@ -17,7 +17,7 @@ OS.
 It focuses on:
 
  - **lightness** (native, displays only the device screen)
- - **performances** (30~60fps)
+ - **performance** (30~60fps)
  - **quality** (1920×1080 or above)
  - **low latency** (~~70~100ms~~ [35~70ms][lowlatency])
  - **low startup time** (~1 second to display the first image)
