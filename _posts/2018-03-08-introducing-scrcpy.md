@@ -363,10 +363,6 @@ characters using [`KeyComposition`].
 [`KeyComposition`]: https://github.com/Genymobile/scrcpy/blob/v1.0/server/src/main/java/com/genymobile/scrcpy/KeyComposition.java
 [decompose]: https://github.com/Genymobile/scrcpy/blob/v1.0/server/src/main/java/com/genymobile/scrcpy/EventController.java#L97
 
-_EDIT: Accented characters do not work with the virtual keyboard Gboard (the
-default Google keyboard), but work with the default (AOSP) keyboard and
-SwiftKey._
-
 
 ## Set a window icon
 
