@@ -17,11 +17,8 @@ Vous pouvez consulter ma [liste de billets](/articles/).
 Romain Vimont (®om)
 
  * **E-mail :** `rom` suivi de `@rom1v.com` <code style="color:orange; font-size: 6pt">echo abc@def.ghi | sed 's/abc\|de/rom/g;s/f/1v/;s/ghi/com/'</code>
- * **Jabber :** comme le mail
  * **GitHub :** [github.com/rom1v](https://github.com/rom1v)
- * **StackOverflow :** [stackoverflow.com/…/rom1v](https://stackoverflow.com/users/1987178/rom1v)
 
-*Ne me cherchez pas sur Facebook ou Twitter, je n'y suis pas.*
 
 ## Clé GPG
 
@@ -36,10 +33,6 @@ sub   rsa4096 2018-05-28 [E]
       9872 3C0D 242E BF4E 91AC  066C 1907 2B8C 3B9F 24A2
 ```
 
-## Empreintes OTR
-
- * **~ :** `270BA6D8 70A507C2 7473668B 7D9D168A 161674B5`
- * **gm :** `39894513 08F9944F DFD8982E 9BE7F778 357641EE`
 
 ## Abonnement
 
