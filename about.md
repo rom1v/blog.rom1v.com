@@ -18,6 +18,7 @@ Romain Vimont (®om)
 
  * **E-mail :** `rom` suivi de `@rom1v.com` <code style="color:orange; font-size: 6pt">echo abc@def.ghi | sed 's/abc\|de/rom/g;s/f/1v/;s/ghi/com/'</code>
  * **GitHub :** [github.com/rom1v](https://github.com/rom1v)
+ * **PayPal :** [paypal.me/rom2v](https://paypal.me/rom2v)
 
 
 ## Clé GPG
