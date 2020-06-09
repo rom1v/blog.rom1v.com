@@ -43,6 +43,10 @@ You could either [download the release][release] or [build the app][build].
 [release]: https://github.com/rom1v/sndcpy/blob/master/README.md#get-the-app
 [build]: https://github.com/rom1v/sndcpy/blob/master/BUILD.md
 
+[VLC] must be installed on the computer.
+
+[VLC]: https://www.videolan.org/
+
 Plug an Android 10 device with USB debugging enabled, and execute:
 
 {% highlight bash %}
