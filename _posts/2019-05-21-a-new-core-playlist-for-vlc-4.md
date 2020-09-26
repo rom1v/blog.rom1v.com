@@ -155,7 +155,7 @@ The playlist API exposes the functions and callbacks providing these features.
 ### Desynchronization
 
 However, **the core playlist may not be used as a direct data source for a list
-model**. In other word, the functions of a list model must not delegate the
+model**. In other words, the functions of a list model must not delegate the
 calls to the core playlist.
 
 To understand why, let's consider a typical sequence of calls executed by a view
@@ -223,7 +223,7 @@ This implies that the UI has to manage **a copy of the playlist content**. The
 UI playlist should be considered as a remote out-of-sync view of the core
 playlist.
 
-Note that the copy must be not limited to the list of _pointers_ to playlist
+Note that the copy must not be limited to the list of _pointers_ to playlist
 items: the content which is displayed and susceptible to change asynchronously
 (media metadata, like _title_ or _duration_) must also be copied. The UI needs a
 **deep copy**; otherwise, the content could change (and be exposed) before the
@@ -548,7 +548,7 @@ the whole vector belongs to the last cycle history.
                     history range
 ```
 
-Secondly, to avoid to select `A` twice in a row (as the last item of the
+Secondly, to avoid selecting `A` twice in a row (as the last item of the
 previous cycle and the first item of the new one), the randomizer will
 immediately determine another item in the vector (say `C`) to be the first of
 the new cycle. The items that belong to the history are kept in order.
@@ -594,7 +594,7 @@ of history.
 
 The playlist calls `Next()`, the randomizer randomly selects `E`. `E`
 "disappears" from the history of the last cycle. This is a general property:
-each item may not appear more than one in the "history" (both from the last
+each item may not appear more than once in the "history" (both from the last
 and the new cycle). The history order is preserved.
 
 ```
@@ -608,7 +608,7 @@ and the new cycle). The history order is preserved.
                 range
 ```
 
-The playlist then calls `Prev()` 3 times, that yield `C`, then `A`, then `B`.
+The playlist then calls `Prev()` 3 times, that yields `C`, then `A`, then `B`.
 `next` is decremented (modulo size) on each call.
 
 ```
