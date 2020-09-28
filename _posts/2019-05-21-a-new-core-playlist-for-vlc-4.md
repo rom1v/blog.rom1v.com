@@ -363,7 +363,7 @@ enabled and disabled:
  - an item must never be selected twice (within a cycle, if _loop_ is enabled),
  - we should be able to navigate back to the previously selected items,
  - we must able to force the selection of a specific item (typically when the
-   user double-click on an item in the playlist),
+   user double-clicks on an item in the playlist),
  - insertions and removals must be taken into account at any time,
 
 In addition, if _loop_ is enabled:
