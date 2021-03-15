@@ -23,7 +23,19 @@ Romain Vimont (®om)
 
 ## Clé GPG
 
-[`rom_gpg.asc`](/keys/rom_gpg.asc)
+
+[`rom1v.asc`](/keys/rom1v.asc)
+
+```
+pub   rsa4096 2021-03-15 [C]
+      4569 58E8 5A18 5DD5 C2D1  E4E8 0C82 2B29 8461 FA03
+sub   rsa4096 2021-03-15 [S] [expires: 2024-03-14]
+      E39E 2DE6 A55F 5AA6 D8EF  B79A CA01 F46F 1868 3B3D
+sub   rsa4096 2021-03-15 [E] [expires: 2024-03-14]
+      2C86 255E 6D65 241D 8248  F1B3 F212 10AE 292B 63D1
+```
+
+L'ancienne: [`rom1v_old.asc`](/keys/rom1v_old.asc)
 
 ```
 pub   rsa4096 2018-05-28 [SC]
