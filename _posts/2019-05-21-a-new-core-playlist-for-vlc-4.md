@@ -15,7 +15,7 @@ _discovery_…
 
 For [VLC 4][fosdem], we wanted a new playlist API, containing a simple list of
 items (instead of a tree), acting as a _media provider_ for a _player_, without
-unrelated responsabilities.
+unrelated responsibilities.
 
 I [wrote it][commits-playlist] several months ago (at [Videolabs]). Now that the
 old one has been [removed][remove-playlist-legacy], it's time to give some
