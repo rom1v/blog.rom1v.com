@@ -17,6 +17,12 @@ Romain Vimont (®om)
  * **E-mail :** `rom+blog@rom1v.com`
  * **GitHub :** [github.com/rom1v](https://github.com/rom1v)
  * **Videolan :** [code.videolan.org/rom1v](https://code.videolan.org/rom1v)
+
+
+## Support my open source work
+
+ * **GitHub Sponsors :** [github.com/sponsors/rom1v](https://github.com/sponsors/rom1v)
+ * **Liberapay :** [liberapay.com/rom1v](https://liberapay.com/rom1v/)
  * **PayPal :** [paypal.me/rom2v](https://paypal.me/rom2v)
 
 
