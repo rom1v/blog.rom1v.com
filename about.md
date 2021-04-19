@@ -1,16 +1,14 @@
 ---
 layout: page
-title: À propos
+title: About
 date: 2009-01-29 16:51:00+01:00
 order: 4
 permalink: about/
 ---
 
-Ceci est mon blog personnel.
+This is my personal blog, mainly about software development.
 
-Il est principalement dédié à l'informatique et au développement logiciel.
-
-Vous pouvez consulter ma [liste de billets](/articles/).
+Here is a [list of articles](/articles/) (many are in French).
 
 ## Contact
 
@@ -21,7 +19,7 @@ Romain Vimont (®om)
  * **PayPal :** [paypal.me/rom2v](https://paypal.me/rom2v)
 
 
-## Clé GPG
+## GPG key
 
 
 [`rom1v.asc`](/keys/rom1v.asc)
@@ -35,7 +33,7 @@ sub   rsa4096 2021-03-15 [E] [expires: 2024-03-14]
       2C86 255E 6D65 241D 8248  F1B3 F212 10AE 292B 63D1
 ```
 
-L'ancienne: [`rom1v_old.asc`](/keys/rom1v_old.asc)
+The old one: [`rom1v_old.asc`](/keys/rom1v_old.asc)
 
 ```
 pub   rsa4096 2018-05-28 [SC]
@@ -47,6 +45,6 @@ sub   rsa4096 2018-05-28 [E]
 ```
 
 
-## Abonnement
+## Feed
 
 **Flux RSS :** [blog.rom1v.com/feed](/feed)
