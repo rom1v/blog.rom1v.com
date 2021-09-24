@@ -555,7 +555,7 @@ One of these offsets confusions had been quickly catched by [barrbrain] in
 [inter-prediction][interbug].
 
 But the [final boss] bug was way more sneaky: it corrupted the bitstream (so the
-encoder was unable to decode), but not always, and never the first frame. When
+decoder was unable to decode), but not always, and never the first frame. When
 an inter-frame could be decoded, it was sometimes [visually corrupted], but only
 for some videos and for some encoding parameters.
 
