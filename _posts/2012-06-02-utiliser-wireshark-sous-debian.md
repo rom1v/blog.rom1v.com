@@ -50,7 +50,7 @@ sudo tcpdump -pni eth0 -s0 -U -w - | wireshark -k -i -
 ## Utiliser dumpcap pour capturer
 
 Avec cette méthode, il faut d'abord capturer les paquets réseau et les sauver
-dans un fichier, grâce à `dumpcat` (en _root_), puis ouvrir ce fichier dans
+dans un fichier, grâce à `dumpcap` (en _root_), puis ouvrir ce fichier dans
 `wireshark` (_non-root_).
 
 Pour démarrer la capture de l'interface `eth0` dans le fichier
