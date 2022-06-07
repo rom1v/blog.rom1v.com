@@ -15,7 +15,7 @@ author:
   name: Romain Vimont
   email: rom@rom1v.com
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 defaults:
 - scope:
